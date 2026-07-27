@@ -52,9 +52,17 @@ These are planning scores, not a claim of exact search volume. Do not present th
 | 13 | Fire Water Systems | 36 | 20 | 9 | 65 | Exclude initially |
 | 14 | Dams, Rivers, Reservoirs & Resources | 20 | 28 | 11 | 59 | Later |
 
-## First implementation scope
+## Phase 1 implementation
 
-Build the shared foundation before any large-scale rollout, then develop the four first-wave hubs and their tools, guides, and references in linked workflows. The planning inventory totals 65 public pages: 7 core pages, 4 first-wave hubs, 32 tools, 14 guides, and 8 reference pages. All remain `Planned` until actually built and published.
+Phase 1 is implemented: the shared static foundation, seven core pages, the Pumps, Pressure & Pipe Flow system hub, nine working tools, three guides, and five reference pages. This produces 25 public HTML pages.
+
+The planning inventory remains 65 public pages: 7 core pages, 4 first-wave hubs, 32 tools, 14 guides, and 8 reference pages. Forty planned pages remain unimplemented. No empty future-cluster pages were published.
+
+The implemented design system is called **Hydraulic Field Bench**: deep water navy and mineral blue, limited teal and safety amber, technical drawing lines, instrument-style inputs, and operating-report results. It avoids stock imagery and generic dashboard styling.
+
+## Next implementation scope
+
+Use the completed pump cluster as the shared foundation for the Wells, Boreholes, Storage & Rainwater workflow. Confirm formulas, sources, content depth, and cross-cluster links before creating its public pages.
 
 ## Content principles
 

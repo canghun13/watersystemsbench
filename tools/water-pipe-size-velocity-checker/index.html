@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Water Pipe Size &amp; Velocity Checker | Water Systems Bench</title>
+  <meta name="description" content="Check water velocity from flow and actual pipe diameter, with an optional preliminary Hazen–Williams loss estimate.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://watersystemsbench.com/tools/water-pipe-size-velocity-checker/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Water Systems Bench">
+  <meta property="og:title" content="Water Pipe Size &amp; Velocity Checker | Water Systems Bench">
+  <meta property="og:description" content="Check water velocity from flow and actual pipe diameter, with an optional preliminary Hazen–Williams loss estimate.">
+  <meta property="og:url" content="https://watersystemsbench.com/tools/water-pipe-size-velocity-checker/">
+  <meta property="og:image" content="https://watersystemsbench.com/assets/og.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/content.css">
+  <link rel="stylesheet" href="/assets/css/calculator.css">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7FB08YPX7C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7FB08YPX7C');
+</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","@id":"https://watersystemsbench.com/tools/water-pipe-size-velocity-checker/#application","name":"Water Pipe Size & Velocity Checker","description":"Check water velocity from flow and actual pipe diameter, with an optional preliminary Hazen–Williams loss estimate.","url":"https://watersystemsbench.com/tools/water-pipe-size-velocity-checker/","applicationCategory":"EngineeringApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript"},{"@type":"BreadcrumbList","@id":"https://watersystemsbench.com/tools/water-pipe-size-velocity-checker/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://watersystemsbench.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://watersystemsbench.com/tools/"},{"@type":"ListItem","position":3,"name":"Water Pipe Size & Velocity Checker","item":"https://watersystemsbench.com/tools/water-pipe-size-velocity-checker/"}]}]}</script>
+  <script type="module" src="/assets/js/partials.js"></script>
+  <script type="module" src="/assets/js/main.js"></script>
+  <script type="module" src="/assets/js/tools/pipe-velocity.js"></script>
+</head>
+<body>
+  <div data-header-slot></div>
+  <main id="main-content">
+    <div class="page-shell">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/tools/">Tools</a></li><li><span aria-current="page">Water Pipe Size & Velocity Checker</span></li></ol></nav>
+      <header class="hero compact"><div><p class="eyebrow">Pump systems / Checker</p><h1>Water Pipe Size & Velocity Checker</h1><p class="lede">Check water velocity from flow and actual pipe diameter, with an optional preliminary Hazen–Williams loss estimate.</p></div><p class="hero-note">Preliminary planning output only. Use measured data where possible and verify manufacturer and jurisdiction-specific requirements.</p></header>
+  <p class="meta-line">Last reviewed: July 27, 2026 · SI first · US customary supported</p>
+  <div class="tool-layout"><section class="instrument-panel"><div class="panel-heading"><h2>Bench inputs</h2><span class="panel-code">INPUT / SET</span></div><form data-tool-form="velocity"><div class="field full"><label for="unitSystem">Unit system</label><select id="unitSystem" name="unitSystem" data-unit-system><option value="SI">SI — metric</option><option value="US">US customary</option></select></div><div class="field-grid"><div class="field "><label for="flow">Flow (<span data-unit-label="flow"></span>)</label><input id="flow" name="flow" data-label="Flow" type="number" value="120" data-unit-kind="flow" step="any" required></div><div class="field "><label for="diameter">Actual internal diameter (<span data-unit-label="diameter"></span>)</label><input id="diameter" name="diameter" data-label="Actual internal diameter" type="number" value="50" data-unit-kind="diameter" step="any" required></div><div class="field "><label for="length">Optional pipe length (<span data-unit-label="length"></span>)</label><input id="length" name="length" data-label="Optional pipe length" type="number" value="80" data-unit-kind="length" step="any" ></div><div class="field "><label for="cValue">Optional Hazen–Williams C</label><input id="cValue" name="cValue" data-label="Optional Hazen–Williams C" type="number" value="140"  step="any" required></div></div><p class="form-error" data-form-error role="alert"></p><div class="button-row"><button class="button" type="submit">Check velocity</button><button class="button secondary" type="reset">Reset</button></div></form></section><section class="result-panel" aria-label="Result">
+    <div class="panel-heading"><h2>Operating report</h2><span class="panel-code">RESULT / LIVE</span></div>
+    <div class="result-empty"><p>Enter the known values, then calculate to build a result summary.</p></div>
+    <div class="result-report" aria-live="polite" hidden>
+      <div class="primary-reading"><span class="reading-label"></span><span class="reading-value"></span></div>
+      <div class="result-block"><h3>Supporting calculations</h3><ul data-supporting></ul></div>
+      <div class="result-block"><h3>Interpretation</h3><p data-interpretation></p></div>
+      <p class="result-warning" data-warning></p>
+      <div class="result-actions"><button class="button small secondary" type="button" data-result-action data-copy-result disabled>Copy result</button><button class="button small secondary" type="button" data-result-action data-print-result disabled>Print result</button></div>
+    </div>
+  </section></div>
+  <div class="content-layout"><article class="article-body">
+    <h2>What this tool does</h2><p>Screen whether a candidate internal diameter creates unusually low or high velocity at the entered flow. Optional length and C-value inputs add a preliminary friction estimate.</p>
+    <h2>When to use it</h2><p>Use it before selecting a pipe size, when comparing real pipe schedules, or when checking whether a pressure-loss result is driven by velocity.</p>
+    <h2>Inputs and supported units</h2><p>Each labelled field explains the quantity it expects. Unit-system changes convert existing numeric entries once and keep calculations on a single SI internal basis. Supported shared units include L/min and GPM, metres and feet, kPa and psi, millimetres and inches, kW and hp, and °C and °F as relevant.</p>
+    <h2>Calculation or decision method</h2><div class="formula">V = Q/A, where A = πd²/4</div><p>The tool reports neutral screening language rather than treating a single velocity range as a universal legal limit.</p>
+    <h2>How to interpret the result</h2><p>Read the primary result with the supporting breakdown and warning. A plausible number is not evidence that every input, operating case or design constraint has been included.</p>
+    <div class="worked-example"><h2>Worked example</h2><p>At 120 L/min through a 50 mm internal diameter, velocity is about 1.02 m/s. The same flow through a substantially smaller ID increases both velocity and friction rapidly.</p></div>
+    <h2>Assumptions</h2><p>Steady, full circular pipe flow; the entered diameter is the actual internal diameter.</p>
+    <h2>Limitations</h2><p>The status is a screening cue. It does not consider water hammer, noise criteria, solids transport, erosion, code or manufacturer limits.</p>
+    <div class="notice"><strong>Safety and review boundary.</strong> Confirm project-specific velocity and surge criteria; do not treat this page as an approved pipe-size selector.</div>
+    <h2>Sources</h2><ul class="source-list"><li><a href="https://www.publications.usace.army.mil/Portals/76/Publications/EngineerManuals/EM_1110-1-4008.pdf" rel="noopener noreferrer">U.S. Army Corps of Engineers — EM 1110-1-4008</a></li><li><a href="https://www.westlakepipe.com/sites/default/files/PL-PS-025-CA-EN-0522.1_Sch40-Sch80-Pressure-Pipe.pdf" rel="noopener noreferrer">Westlake Pipe & Fittings — Schedule 40 and 80 PVC Pressure Pipe</a></li><li><a href="https://www.epa.gov/system/files/documents/2022-02/storm-water-management-model-users-manual-version-5.2.pdf" rel="noopener noreferrer">U.S. EPA — Storm Water Management Model User’s Manual 5.2</a></li></ul>
+    <section aria-labelledby="related-heading"><h2 id="related-heading">Continue the workflow</h2><div class="related-grid"><a href="/tools/pipe-friction-loss-calculator/">Pipe Friction Loss Calculator<br><span class="meta-line">Open next →</span></a><a href="/tools/total-dynamic-head-calculator/">Total Dynamic Head Calculator<br><span class="meta-line">Open next →</span></a><a href="/guides/how-to-size-a-water-pump/">How to Size a Water Pump<br><span class="meta-line">Open next →</span></a><a href="/reference/water-pipe-internal-diameters/">Water Pipe Internal Diameters<br><span class="meta-line">Open next →</span></a><a href="/systems/pumps-pressure-pipe/">Parent pump system workflow<br><span class="meta-line">Open next →</span></a></div></section>
+  </article><aside class="sidebar"><h2>Bench sequence</h2><ul><li><a href="/systems/pumps-pressure-pipe/">Start with the system workflow</a></li><li><a href="/guides/how-to-size-a-water-pump/">Build flow and TDH</a></li><li><a href="/reference/pump-formulas-hydraulic-terms/">Check formulas and terms</a></li><li><a href="/contact/">Report a content issue</a></li></ul></aside></div>
+    </div>
+  </main>
+  <div data-footer-slot></div>
+</body>
+</html>

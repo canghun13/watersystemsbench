@@ -1,0 +1,26 @@
+{
+  "date": "2026-07-27",
+  "pages": 25,
+  "widths": [390, 768, 1024, 1280, 1440],
+  "renderChecks": 125,
+  "toolInteractions": 9,
+  "mobileMenu": "passed",
+  "calculateAnalyze": "passed",
+  "reset": "passed",
+  "copy": "passed",
+  "print": "passed",
+  "unitSwitch": "passed",
+  "consoleErrors": 0,
+  "pageErrors": 0,
+  "assetFailures": 0,
+  "internal404s": 0,
+  "horizontalOverflows": 0,
+  "issuesFound": 5,
+  "issuesFixed": [
+    "Mobile conversion-table overflow was removed.",
+    "The copy action gained a browser-compatible fallback.",
+    "The empty result state is now hidden when a calculated report is shown.",
+    "The pipe-length field now avoids a form-controls collection property collision.",
+    "Invalid numeric entries now show the site’s inline error message and clear stale results."
+  ]
+}

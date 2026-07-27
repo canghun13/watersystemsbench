@@ -4,7 +4,31 @@
 
 ## Navigation model
 
-The information architecture follows the water-system workflow rather than isolating tools by format. Core navigation will expose Tools, Guides, Reference, About, Contact, and Privacy. Cluster hubs organize the first-wave work, and pages guide users to a relevant next system step.
+The information architecture follows the water-system workflow rather than isolating tools by format. Core navigation exposes Tools, Guides, Reference, About, Contact, and Privacy. The active Systems link leads only to the implemented Pumps, Pressure & Pipe Flow hub.
+
+## Implemented pump-system journey
+
+```text
+Required Flow
+→ Total Dynamic Head
+→ Pipe Friction Loss
+→ Pipe Velocity Check
+→ Pump Duty Point
+→ Pump Power
+→ NPSH
+→ Operating Cost
+```
+
+The implemented low-pressure journey is:
+
+```text
+Low Water Pressure Troubleshooter
+→ Pipe Friction Loss
+→ Booster Duty Point
+→ Pump or pressure-system review
+```
+
+All detail pages expose four to six task-specific links. Future systems appear only as non-linked context until implemented.
 
 ## Priority user journeys
 

@@ -7,87 +7,121 @@
 - Repository: https://github.com/canghun13/watersystemsbench
 - Default branch: main
 - Contact: [canghun13@naver.com](mailto:canghun13@naver.com)
-- GA4 measurement ID: Not provided
-- Current phase: Planning only — development not started
-- Site language and audience: English; global
-- Planned stack and deployment: static HTML/CSS/vanilla JavaScript; GitHub Pages plus Cloudflare
+- GA4 measurement ID: `G-7FB08YPX7C`
+- Current phase: Phase 1: Foundation and Pumps, Pressure & Pipe Flow cluster implemented
+- Language and audience: English; global
+- Stack and deployment: static HTML/CSS/vanilla JavaScript; GitHub Pages plus Cloudflare
+- Starting commit: `924c0a0a40e9f86656fc2cd426014ada44db1bb5`
 
 ## Current Repository State
 
-The repository contains the configured `CNAME` (`watersystemsbench.com`), this handover, and planning documentation. No site implementation exists.
-
-Current public HTML pages: 0
-Tools implemented: 0
-Guides implemented: 0
-Reference pages implemented: 0
-
-The planned 65 public HTML pages are not implemented pages and must not be reported as published.
+The repository contains a deployable static site, a generated social preview, an SVG/ICO favicon pair, shared design and interaction modules, 25 public HTML pages, repeatable QA, and current planning documentation. `CNAME` remains `watersystemsbench.com`.
 
 ## Completed Work
 
-- Established the repository documentation structure for planning and handover.
-- Recorded the project model, planned page inventory, cross-linking flows, tool standards, and operating checklist.
-- Preserved the existing CNAME and expanded the initial README without introducing site code or a GA4 placeholder.
+- Built the independent Hydraulic Field Bench design system.
+- Implemented responsive header, footer, mobile navigation, accessible focus treatment, and reusable form/report patterns.
+- Implemented 7 core pages and the Pumps, Pressure & Pipe Flow system hub.
+- Implemented 9 working tools with separate tool modules and shared unit/form utilities.
+- Implemented 3 substantial guides and 5 technical reference pages.
+- Added unique SEO metadata, canonical URLs, Open Graph data, GA4, JSON-LD, breadcrumbs, internal linking, `robots.txt`, `sitemap.xml`, and `llms.txt`.
+- Added static, navigation, calculation, and browser-result QA.
+- Added a Water Systems Bench social preview generated specifically for this design.
 
 ## Modified Files
 
+Major additions and updates include:
+
+- `index.html` and 24 routed `index.html` files
+- `assets/css/`
+- `assets/js/`
+- `assets/og.png`
+- `partials/`
+- `tools-qa/`
+- `favicon.svg` and `favicon.ico`
+- `package.json` and `package-lock.json`
+- `robots.txt`, `sitemap.xml`, and `llms.txt`
 - `README.md`
+- all planning documents in `docs/`
 - `handover.md`
-- `docs/project-plan.md`
-- `docs/page-inventory.md`
-- `docs/information-architecture.md`
-- `docs/content-and-tool-spec.md`
-- `docs/qa-and-operations.md`
 
 ## Planning Status
 
-Planning is complete enough to start a deliberate first implementation phase. The priority clusters are Pumps, Pressure & Pipe Flow; Wells, Boreholes, Storage & Rainwater; Irrigation & Sprinkler Systems; and Water Treatment & Water Quality. See [project plan](docs/project-plan.md).
+- Planned public HTML: 65
+- Implemented public HTML: 25
+- Remaining planned: 40
+- Empty or inactive future pages created: 0
+
+The Phase 1 guide and reference slugs were aligned to the implementation brief. The corresponding inventory, internal links, canonical URLs, sitemap, and `llms.txt` were updated together.
 
 ## Current Page Inventory
 
-- Planned public HTML pages: 65
-- Core pages: 7
-- First-wave cluster hubs: 4
-- Tools: 32
-- Guides: 14
-- Reference pages: 8
-- Every planned item is `Planned`.
+| Category | Implemented |
+| --- | ---: |
+| Core pages | 7 |
+| System hubs | 1 |
+| Tools | 9 |
+| Guides | 3 |
+| Reference pages | 5 |
+| Total public HTML | 25 |
 
 ## Tool Counts by Type
 
-| Type | Planned count |
+| Type | Implemented |
 | --- | ---: |
-| Calculator | 15 |
-| Planner | 6 |
-| Checker | 2 |
-| Comparator | 2 |
-| Troubleshooter | 2 |
-| Selector | 2 |
+| Calculator | 4 |
+| Checker | 1 |
 | Estimator | 1 |
-| Analyzer | 1 |
-| Simulator | 1 |
+| Comparator | 2 |
+| Troubleshooter | 1 |
+| Total | 9 |
 
 ## Test and QA Results
 
-- Documentation files created and reviewed for the required project facts and planned counts.
-- Browser QA: Not applicable — planning documentation only; no site exists.
-- No GA4 measurement ID or example tracking code was added.
+- Static QA: passed for 25 pages
+- Navigation and asset QA: passed
+- Metadata titles and descriptions: unique across all 25 pages
+- Canonical, robots meta, H1, GA4, JSON-LD, and breadcrumbs: passed on all 25 pages
+- Sitemap URLs: 25; exact parity with public HTML
+- Calculation verification: 30 independent numeric/conversion cases passed
+- Troubleshooter verification: 6 scenarios passed
+- Actual browser renders: 125 (25 pages × 390, 768, 1024, 1280, and 1440 px)
+- Tool interactions: 9 of 9 passed
+- Calculate/analyze, reset, copy, print, and relevant unit switching: passed
+- Mobile menu open/close, Escape, outside click, link-close, focus, and `aria-expanded`: passed
+- Browser console errors: 0
+- Page errors: 0
+- Asset failures: 0
+- Internal 404s: 0
+- Horizontal overflows after fixes: 0
+
+The full result is recorded in `tools-qa/browser-results.json`.
 
 ## Known Issues
 
-- There is no implementation, automated test suite, or browser QA target yet.
-- Regulatory, health, and safety source selection remains a per-page task once content is authored.
+No blocking implementation or QA issue remains from Phase 1.
+
+## Issues Found and Fixed
+
+- Removed horizontal overflow from the mobile conversion-table page.
+- Added a compatible fallback for result copying when the modern clipboard API is unavailable.
+- Hid the empty result state after a calculated report is displayed.
+- Corrected form access for an input named `length`, which conflicted with the form-controls collection property.
+- Enabled explicit inline validation instead of relying only on browser-native required-field messages.
 
 ## Remaining Risks
 
-- Calculator formulas, defaults, inputs, and safety language need engineering review before publication.
-- Legal and regulatory requirements vary by jurisdiction; the site must not imply a universal approval or design standard.
-- GA4 must remain unimplemented until a real measurement ID is supplied.
+- Calculator output remains preliminary and must be checked against actual measurements, manufacturer curves, local requirements, and qualified project review.
+- Hazen–Williams C values and representative pipe diameters are planning references, not universal product values.
+- Pump-curve comparison uses linear interpolation between user-entered points and intentionally blocks extrapolation.
+- NPSHA must be compared with current manufacturer NPSHR and an application-specific margin.
+- The browser result file records the latest actual run; refresh it whenever site behavior or layout changes.
+- Live GitHub Pages and Cloudflare propagation can occur after the `main` push.
 
 ## Next Recommended Task
 
-Define and implement the shared static site foundation and the first cluster hub only after confirming the design/content scope. Start with semantic templates, metadata conventions, responsive navigation, and the first planned workflow—not a bulk page generation pass.
+Plan and implement the Wells, Boreholes, Storage & Rainwater cluster using the completed foundation. Start by validating formulas, sources, URLs, and cross-links, then add only fully implemented pages.
 
 ## Latest Commit
 
-After any handover update, use `git log -1 --oneline` to obtain the authoritative latest commit. The final completion report for this documentation change records the resulting commit hash and push status.
+The starting commit is recorded above. The authoritative Phase 1 completion commit is the final `git rev-parse HEAD` value reported after commit and push; a Git commit cannot contain its own final hash.

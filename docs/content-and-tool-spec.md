@@ -40,6 +40,19 @@ Use SI first and support common US customary options when relevant. The baseline
 
 The planned tools may use these product patterns: Calculator, Generator, Planner, Selector, Checker, Validator, Troubleshooter, Analyzer, Comparator, Optimizer, Estimator, Simulator, Checklist Builder, and Reference Lookup. The table records the initial primary type distribution; it is not a claim that every pattern is already implemented.
 
+## Implemented Phase 1 tool types
+
+| Type | Implemented count |
+| --- | ---: |
+| Calculator | 4 |
+| Checker | 1 |
+| Estimator | 1 |
+| Comparator | 2 |
+| Troubleshooter | 1 |
+| Total | 9 |
+
+The numerical tools share SI-based conversion and form utilities while keeping each tool's calculation logic in its own JavaScript module. The low-pressure tool is rules-based and explicitly reports cause groups rather than a confirmed diagnosis.
+
 ## Safety, health, and regulatory rules
 
 - Cite authoritative primary sources for claims involving safety, health, legal requirements, or regulation.

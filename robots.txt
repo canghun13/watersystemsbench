@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://watersystemsbench.com/sitemap.xml

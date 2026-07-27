@@ -25,7 +25,20 @@ Never use forced pull, reset, clean, rebase, or force-push for routine work. Do 
 5. Push `main`.
 6. Confirm local `HEAD` and `origin/main` resolve to the same commit.
 
-## Future responsive QA viewports
+## QA commands
+
+```bash
+npm ci
+npm run generate
+npm run qa
+npm run verify:calculations
+npm run serve
+npm run qa:browser
+```
+
+The actual browser run is recorded in `tools-qa/browser-results.json`. Refresh that report only after testing every public page in a real browser.
+
+## Responsive QA viewports
 
 - 390px
 - 768px
@@ -33,7 +46,7 @@ Never use forced pull, reset, clean, rebase, or force-push for routine work. Do 
 - 1280px
 - 1440px
 
-## Required site QA once implementation begins
+## Required site QA
 
 - Broken internal and external links
 - Duplicate IDs, canonical URL, title, meta description, H1, sitemap, and robots.txt
@@ -46,4 +59,12 @@ Never use forced pull, reset, clean, rebase, or force-push for routine work. Do 
 - GA4 only after a real measurement ID is supplied
 - Accessibility of published pages
 
-Do not create a repo-specific local tool merely to force execution from one checkout location. If QA automation is added later, document its commands in the README.
+## Phase 1 result
+
+- Static and navigation QA: passed for 25 public pages
+- Calculation verification: 30 independent numeric/conversion cases and 6 troubleshooting scenarios passed
+- Browser rendering: 125 checks (25 pages × 5 widths) passed
+- Tool interactions: all 9 passed for calculate/analyze, reset, copy, print, and relevant unit switching
+- Console errors, page errors, asset failures, internal 404s, and horizontal overflows after fixes: 0
+
+Do not create a repo-specific local tool merely to force execution from one checkout location. Keep all commands relative to the repository root.

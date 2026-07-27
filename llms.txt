@@ -1,0 +1,42 @@
+# Water Systems Bench
+
+> A practical workflow hub for sizing, checking, troubleshooting and planning real-world water systems from source to use.
+
+## Current implemented cluster
+
+- [Pumps, Pressure & Pipe Flow](https://watersystemsbench.com/systems/pumps-pressure-pipe/)
+
+## Tools
+
+- [Total Dynamic Head Calculator](https://watersystemsbench.com/tools/total-dynamic-head-calculator/)
+- [Pipe Friction Loss Calculator](https://watersystemsbench.com/tools/pipe-friction-loss-calculator/)
+- [Water Pipe Size & Velocity Checker](https://watersystemsbench.com/tools/water-pipe-size-velocity-checker/)
+- [Pump Power & Efficiency Calculator](https://watersystemsbench.com/tools/pump-power-efficiency-calculator/)
+- [Booster Pump Duty Point Estimator](https://watersystemsbench.com/tools/booster-pump-duty-point-estimator/)
+- [Pump Curve Duty Point Comparator](https://watersystemsbench.com/tools/pump-curve-duty-point-comparator/)
+- [NPSH Available Calculator](https://watersystemsbench.com/tools/npsh-available-calculator/)
+- [Pump Operating Cost Comparator](https://watersystemsbench.com/tools/pump-operating-cost-comparator/)
+- [Low Water Pressure Troubleshooter](https://watersystemsbench.com/tools/low-water-pressure-troubleshooter/)
+
+## Guides
+
+- [How to Size a Water Pump](https://watersystemsbench.com/guides/how-to-size-a-water-pump/)
+- [How to Read a Pump Curve](https://watersystemsbench.com/guides/how-to-read-a-pump-curve/)
+- [How to Diagnose Low Water Pressure](https://watersystemsbench.com/guides/how-to-diagnose-low-water-pressure/)
+
+## Reference
+
+- [Water Flow, Pressure & Volume Conversions](https://watersystemsbench.com/reference/water-flow-pressure-volume-conversions/)
+- [Water Pressure & Head Conversion](https://watersystemsbench.com/reference/water-pressure-head-conversion/)
+- [Hazen–Williams C Values](https://watersystemsbench.com/reference/hazen-williams-c-values/)
+- [Water Pipe Internal Diameters](https://watersystemsbench.com/reference/water-pipe-internal-diameters/)
+- [Pump Formulas & Hydraulic Terms](https://watersystemsbench.com/reference/pump-formulas-hydraulic-terms/)
+
+## Safety and limitations
+
+The site supports preliminary planning. Outputs are not formal engineering approval, legal advice, manufacturer selection, or a universal regulatory determination. Verify measurements, applicable requirements and current manufacturer data.
+
+## Contact and source
+
+- Contact: canghun13@naver.com
+- Repository: https://github.com/canghun13/watersystemsbench

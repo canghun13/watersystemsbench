@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Water Systems Bench gauge and pipe mark">
+  <rect width="64" height="64" fill="#092b3a"/>
+  <path d="M8 45h18V31a14 14 0 0 1 28 0v14h-8V31a6 6 0 0 0-12 0v22H8z" fill="#f4f1e8"/>
+  <circle cx="40" cy="23" r="12" fill="#092b3a" stroke="#2ca6a0" stroke-width="4"/>
+  <path d="M40 23l7-5M33 28h14" stroke="#d99324" stroke-width="3" stroke-linecap="round"/>
+</svg>

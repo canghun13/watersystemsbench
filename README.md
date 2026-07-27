@@ -3,12 +3,42 @@
 **Domain:** [watersystemsbench.com](https://watersystemsbench.com)
 **Repository:** https://github.com/canghun13/watersystemsbench
 
-Water Systems Bench is an English-language, global practical workflow hub for sizing, checking, troubleshooting, and planning real-world water systems from source to use. It is planned as a connected system resource—not simply a collection of individual calculators.
+Water Systems Bench is an English-language, global practical workflow hub for sizing, checking, troubleshooting, and planning real-world water systems from source to use. It is a connected system resource—not simply a collection of individual calculators.
 
-The planned technical structure is static HTML, CSS, and vanilla JavaScript, deployed through GitHub Pages and Cloudflare. Development has not started; this repository currently contains planning and handover documentation only.
+Phase 1 implements the static site foundation and the Pumps, Pressure & Pipe Flow cluster using static HTML, CSS, and vanilla JavaScript for deployment through GitHub Pages and Cloudflare.
 
 **Official contact:** [canghun13@naver.com](mailto:canghun13@naver.com)
-**GA4 measurement ID:** Not provided. Do not add a placeholder or example measurement ID.
+**GA4 measurement ID:** `G-7FB08YPX7C`
+
+## Implemented scope
+
+- 25 public HTML pages: 7 core pages, 1 system hub, 9 tools, 3 guides, and 5 references
+- Hydraulic Field Bench design system with responsive and accessible navigation
+- SI-first calculations with common US customary units
+- Unique metadata, canonical URLs, Open Graph data, JSON-LD, breadcrumbs, GA4, sitemap, robots, and `llms.txt`
+- Repeatable static, calculation, navigation, and browser-result QA
+
+The full plan remains 65 public pages. The other 40 pages have not been created as empty or inactive pages.
+
+## Local preview and QA
+
+Requires Node.js 20 or later.
+
+```bash
+npm ci
+npm run generate
+npm run serve
+```
+
+In a second terminal:
+
+```bash
+npm run qa
+npm run verify:calculations
+npm run qa:browser
+```
+
+`npm run generate` refreshes the committed static HTML, sitemap, robots file, and `llms.txt` from the repository generator. `npm run qa:browser` validates the latest recorded actual-browser run in `tools-qa/browser-results.json`; perform a new documented browser run before updating that report.
 
 ## Start work in a new environment
 

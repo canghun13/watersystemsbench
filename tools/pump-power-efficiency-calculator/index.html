@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pump Power &amp; Efficiency Calculator | Water Systems Bench</title>
+  <meta name="description" content="Estimate hydraulic power, pump shaft power and electrical input from water flow, head and efficiencies.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://watersystemsbench.com/tools/pump-power-efficiency-calculator/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Water Systems Bench">
+  <meta property="og:title" content="Pump Power &amp; Efficiency Calculator | Water Systems Bench">
+  <meta property="og:description" content="Estimate hydraulic power, pump shaft power and electrical input from water flow, head and efficiencies.">
+  <meta property="og:url" content="https://watersystemsbench.com/tools/pump-power-efficiency-calculator/">
+  <meta property="og:image" content="https://watersystemsbench.com/assets/og.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/content.css">
+  <link rel="stylesheet" href="/assets/css/calculator.css">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7FB08YPX7C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7FB08YPX7C');
+</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","@id":"https://watersystemsbench.com/tools/pump-power-efficiency-calculator/#application","name":"Pump Power & Efficiency Calculator","description":"Estimate hydraulic power, pump shaft power and electrical input from water flow, head and efficiencies.","url":"https://watersystemsbench.com/tools/pump-power-efficiency-calculator/","applicationCategory":"EngineeringApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript"},{"@type":"BreadcrumbList","@id":"https://watersystemsbench.com/tools/pump-power-efficiency-calculator/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://watersystemsbench.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://watersystemsbench.com/tools/"},{"@type":"ListItem","position":3,"name":"Pump Power & Efficiency Calculator","item":"https://watersystemsbench.com/tools/pump-power-efficiency-calculator/"}]}]}</script>
+  <script type="module" src="/assets/js/partials.js"></script>
+  <script type="module" src="/assets/js/main.js"></script>
+  <script type="module" src="/assets/js/tools/pump-power.js"></script>
+</head>
+<body>
+  <div data-header-slot></div>
+  <main id="main-content">
+    <div class="page-shell">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/tools/">Tools</a></li><li><span aria-current="page">Pump Power & Efficiency Calculator</span></li></ol></nav>
+      <header class="hero compact"><div><p class="eyebrow">Pump systems / Calculator</p><h1>Pump Power & Efficiency Calculator</h1><p class="lede">Estimate hydraulic power, pump shaft power and electrical input from water flow, head and efficiencies.</p></div><p class="hero-note">Preliminary planning output only. Use measured data where possible and verify manufacturer and jurisdiction-specific requirements.</p></header>
+  <p class="meta-line">Last reviewed: July 27, 2026 · SI first · US customary supported</p>
+  <div class="tool-layout"><section class="instrument-panel"><div class="panel-heading"><h2>Bench inputs</h2><span class="panel-code">INPUT / SET</span></div><form data-tool-form="power"><div class="field full"><label for="unitSystem">Unit system</label><select id="unitSystem" name="unitSystem" data-unit-system><option value="SI">SI — metric</option><option value="US">US customary</option></select></div><div class="field-grid"><div class="field "><label for="flow">Flow (<span data-unit-label="flow"></span>)</label><input id="flow" name="flow" data-label="Flow" type="number" value="120" data-unit-kind="flow" step="any" required></div><div class="field "><label for="head">Total head (<span data-unit-label="head"></span>)</label><input id="head" name="head" data-label="Total head" type="number" value="50" data-unit-kind="head" step="any" required></div><div class="field "><label for="temperature">Water temperature (<span data-unit-label="temperature"></span>)</label><input id="temperature" name="temperature" data-label="Water temperature" type="number" value="20" data-unit-kind="temperature" step="any" required></div><div class="field "><label for="pumpEfficiency">Pump efficiency (%)</label><input id="pumpEfficiency" name="pumpEfficiency" data-label="Pump efficiency (%)" type="number" value="70"  step="any" required></div><div class="field "><label for="motorEfficiency">Motor efficiency (%)</label><input id="motorEfficiency" name="motorEfficiency" data-label="Motor efficiency (%)" type="number" value="90"  step="any" required></div></div><p class="form-error" data-form-error role="alert"></p><div class="button-row"><button class="button" type="submit">Calculate</button><button class="button secondary" type="reset">Reset</button></div></form></section><section class="result-panel" aria-label="Result">
+    <div class="panel-heading"><h2>Operating report</h2><span class="panel-code">RESULT / LIVE</span></div>
+    <div class="result-empty"><p>Enter the known values, then calculate to build a result summary.</p></div>
+    <div class="result-report" aria-live="polite" hidden>
+      <div class="primary-reading"><span class="reading-label"></span><span class="reading-value"></span></div>
+      <div class="result-block"><h3>Supporting calculations</h3><ul data-supporting></ul></div>
+      <div class="result-block"><h3>Interpretation</h3><p data-interpretation></p></div>
+      <p class="result-warning" data-warning></p>
+      <div class="result-actions"><button class="button small secondary" type="button" data-result-action data-copy-result disabled>Copy result</button><button class="button small secondary" type="button" data-result-action data-print-result disabled>Print result</button></div>
+    </div>
+  </section></div>
+  <div class="content-layout"><article class="article-body">
+    <h2>What this tool does</h2><p>Separate useful hydraulic power from pump-shaft and motor input power so efficiency assumptions are visible.</p>
+    <h2>When to use it</h2><p>Use it after flow and total head are defined and when a pump or scenario efficiency can be read from a manufacturer curve or measured.</p>
+    <h2>Inputs and supported units</h2><p>Each labelled field explains the quantity it expects. Unit-system changes convert existing numeric entries once and keep calculations on a single SI internal basis. Supported shared units include L/min and GPM, metres and feet, kPa and psi, millimetres and inches, kW and hp, and °C and °F as relevant.</p>
+    <h2>Calculation or decision method</h2><div class="formula">P<sub>hydraulic</sub> = ρgQH<br>P<sub>shaft</sub> = P<sub>hydraulic</sub>/η<sub>pump</sub><br>P<sub>electrical</sub> = P<sub>shaft</sub>/η<sub>motor</sub></div>
+    <h2>How to interpret the result</h2><p>Read the primary result with the supporting breakdown and warning. A plausible number is not evidence that every input, operating case or design constraint has been included.</p>
+    <div class="worked-example"><h2>Worked example</h2><p>At 120 L/min and 50 m head with 70% pump efficiency and 90% motor efficiency, estimated electrical input is about 1.56 kW.</p></div>
+    <h2>Assumptions</h2><p>Steady water flow; entered efficiencies apply at the duty point; direct drive with no additional drive loss.</p>
+    <h2>Limitations</h2><p>No motor part-load curve, service factor, starting current, drive loss or variable-speed map is included.</p>
+    <div class="notice"><strong>Safety and review boundary.</strong> Do not size the motor from this single number. Check the complete manufacturer power curve and applicable electrical requirements.</div>
+    <h2>Sources</h2><ul class="source-list"><li><a href="https://www.energy.gov/eere/iedo/articles/pumping-system-assessment-tool-user-manual" rel="noopener noreferrer">U.S. Department of Energy — Pumping System Assessment Tool User’s Manual</a></li><li><a href="https://www.energy.gov/cmei/ito/pump-systems" rel="noopener noreferrer">U.S. Department of Energy — Pump Systems</a></li><li><a href="https://www.pumps.org/resources/pump-faqs/" rel="noopener noreferrer">Hydraulic Institute — Pump FAQs</a></li></ul>
+    <section aria-labelledby="related-heading"><h2 id="related-heading">Continue the workflow</h2><div class="related-grid"><a href="/tools/total-dynamic-head-calculator/">Total Dynamic Head Calculator<br><span class="meta-line">Open next →</span></a><a href="/tools/pump-curve-duty-point-comparator/">Pump Curve Duty Point Comparator<br><span class="meta-line">Open next →</span></a><a href="/tools/pump-operating-cost-comparator/">Pump Operating Cost Comparator<br><span class="meta-line">Open next →</span></a><a href="/guides/how-to-size-a-water-pump/">How to Size a Water Pump<br><span class="meta-line">Open next →</span></a><a href="/reference/pump-formulas-hydraulic-terms/">Pump Formulas & Hydraulic Terms<br><span class="meta-line">Open next →</span></a></div></section>
+  </article><aside class="sidebar"><h2>Bench sequence</h2><ul><li><a href="/systems/pumps-pressure-pipe/">Start with the system workflow</a></li><li><a href="/guides/how-to-size-a-water-pump/">Build flow and TDH</a></li><li><a href="/reference/pump-formulas-hydraulic-terms/">Check formulas and terms</a></li><li><a href="/contact/">Report a content issue</a></li></ul></aside></div>
+    </div>
+  </main>
+  <div data-footer-slot></div>
+</body>
+</html>

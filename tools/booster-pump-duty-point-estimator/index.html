@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Booster Pump Duty Point Estimator | Water Systems Bench</title>
+  <meta name="description" content="Estimate preliminary booster flow, pressure rise and head from inlet pressure, outlet target, elevation and losses.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://watersystemsbench.com/tools/booster-pump-duty-point-estimator/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Water Systems Bench">
+  <meta property="og:title" content="Booster Pump Duty Point Estimator | Water Systems Bench">
+  <meta property="og:description" content="Estimate preliminary booster flow, pressure rise and head from inlet pressure, outlet target, elevation and losses.">
+  <meta property="og:url" content="https://watersystemsbench.com/tools/booster-pump-duty-point-estimator/">
+  <meta property="og:image" content="https://watersystemsbench.com/assets/og.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/content.css">
+  <link rel="stylesheet" href="/assets/css/calculator.css">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7FB08YPX7C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7FB08YPX7C');
+</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","@id":"https://watersystemsbench.com/tools/booster-pump-duty-point-estimator/#application","name":"Booster Pump Duty Point Estimator","description":"Estimate preliminary booster flow, pressure rise and head from inlet pressure, outlet target, elevation and losses.","url":"https://watersystemsbench.com/tools/booster-pump-duty-point-estimator/","applicationCategory":"EngineeringApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript"},{"@type":"BreadcrumbList","@id":"https://watersystemsbench.com/tools/booster-pump-duty-point-estimator/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://watersystemsbench.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://watersystemsbench.com/tools/"},{"@type":"ListItem","position":3,"name":"Booster Pump Duty Point Estimator","item":"https://watersystemsbench.com/tools/booster-pump-duty-point-estimator/"}]}]}</script>
+  <script type="module" src="/assets/js/partials.js"></script>
+  <script type="module" src="/assets/js/main.js"></script>
+  <script type="module" src="/assets/js/tools/booster-duty.js"></script>
+</head>
+<body>
+  <div data-header-slot></div>
+  <main id="main-content">
+    <div class="page-shell">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/tools/">Tools</a></li><li><span aria-current="page">Booster Pump Duty Point Estimator</span></li></ol></nav>
+      <header class="hero compact"><div><p class="eyebrow">Pump systems / Estimator</p><h1>Booster Pump Duty Point Estimator</h1><p class="lede">Estimate preliminary booster flow, pressure rise and head from inlet pressure, outlet target, elevation and losses.</p></div><p class="hero-note">Preliminary planning output only. Use measured data where possible and verify manufacturer and jurisdiction-specific requirements.</p></header>
+  <p class="meta-line">Last reviewed: July 27, 2026 · SI first · US customary supported</p>
+  <div class="tool-layout"><section class="instrument-panel"><div class="panel-heading"><h2>Bench inputs</h2><span class="panel-code">INPUT / SET</span></div><form data-tool-form="booster"><div class="field full"><label for="unitSystem">Unit system</label><select id="unitSystem" name="unitSystem" data-unit-system><option value="SI">SI — metric</option><option value="US">US customary</option></select></div><div class="field-grid"><div class="field "><label for="inletPressure">Available inlet gauge pressure (<span data-unit-label="pressure"></span>)</label><input id="inletPressure" name="inletPressure" data-label="Available inlet gauge pressure" type="number" value="220" data-unit-kind="pressure" step="any" required></div><div class="field "><label for="outletPressure">Required outlet gauge pressure (<span data-unit-label="pressure"></span>)</label><input id="outletPressure" name="outletPressure" data-label="Required outlet gauge pressure" type="number" value="300" data-unit-kind="pressure" step="any" required></div><div class="field "><label for="elevation">Elevation increase (<span data-unit-label="head"></span>)</label><input id="elevation" name="elevation" data-label="Elevation increase" type="number" value="12" data-unit-kind="head" step="any" required></div><div class="field "><label for="pipeLoss">Pipe loss (<span data-unit-label="head"></span>)</label><input id="pipeLoss" name="pipeLoss" data-label="Pipe loss" type="number" value="4" data-unit-kind="head" step="any" required></div><div class="field "><label for="equipmentLoss">Equipment loss (<span data-unit-label="head"></span>)</label><input id="equipmentLoss" name="equipmentLoss" data-label="Equipment loss" type="number" value="1" data-unit-kind="head" step="any" required></div><div class="field "><label for="flow">Required flow (<span data-unit-label="flow"></span>)</label><input id="flow" name="flow" data-label="Required flow" type="number" value="120" data-unit-kind="flow" step="any" required></div><div class="field "><label for="safety">Safety allowance (%)</label><input id="safety" name="safety" data-label="Safety allowance (%)" type="number" value="5"  step="any" required></div></div><p class="form-error" data-form-error role="alert"></p><div class="button-row"><button class="button" type="submit">Estimate duty</button><button class="button secondary" type="reset">Reset</button></div></form></section><section class="result-panel" aria-label="Result">
+    <div class="panel-heading"><h2>Operating report</h2><span class="panel-code">RESULT / LIVE</span></div>
+    <div class="result-empty"><p>Enter the known values, then calculate to build a result summary.</p></div>
+    <div class="result-report" aria-live="polite" hidden>
+      <div class="primary-reading"><span class="reading-label"></span><span class="reading-value"></span></div>
+      <div class="result-block"><h3>Supporting calculations</h3><ul data-supporting></ul></div>
+      <div class="result-block"><h3>Interpretation</h3><p data-interpretation></p></div>
+      <p class="result-warning" data-warning></p>
+      <div class="result-actions"><button class="button small secondary" type="button" data-result-action data-copy-result disabled>Copy result</button><button class="button small secondary" type="button" data-result-action data-print-result disabled>Print result</button></div>
+    </div>
+  </section></div>
+  <div class="content-layout"><article class="article-body">
+    <h2>What this tool does</h2><p>Turn a measured or credible minimum inlet pressure into a preliminary booster duty point without hiding the contributions from elevation and losses.</p>
+    <h2>When to use it</h2><p>Use it when downstream pressure is insufficient under the required flow. Test minimum and maximum inlet conditions separately.</p>
+    <h2>Inputs and supported units</h2><p>Each labelled field explains the quantity it expects. Unit-system changes convert existing numeric entries once and keep calculations on a single SI internal basis. Supported shared units include L/min and GPM, metres and feet, kPa and psi, millimetres and inches, kW and hp, and °C and °F as relevant.</p>
+    <h2>Calculation or decision method</h2><div class="formula">Required boost = outlet target + elevation head + pipe/equipment loss − inlet pressure</div><p>A user-entered allowance is applied only to a positive boost requirement. Negative results are reported as no additional boost for the entered condition.</p>
+    <h2>How to interpret the result</h2><p>Read the primary result with the supporting breakdown and warning. A plausible number is not evidence that every input, operating case or design constraint has been included.</p>
+    <div class="worked-example"><h2>Worked example</h2><p>With 220 kPa inlet, a 300 kPa outlet target, 12 m elevation, 5 m combined losses and 120 L/min duty flow, the required boost is about 247 kPa before any allowance.</p></div>
+    <h2>Assumptions</h2><p>Gauge pressures are comparable; losses apply at duty flow; inlet pressure is available while that flow is being drawn.</p>
+    <h2>Limitations</h2><p>No control strategy, tank sizing, parallel-pump staging, transient or minimum-flow analysis is included.</p>
+    <div class="notice"><strong>Safety and review boundary.</strong> Check the full inlet-pressure envelope. A booster selected from one static reading can be oversized or unable to meet dynamic demand.</div>
+    <h2>Sources</h2><ul class="source-list"><li><a href="https://datatool.pumps.org/pump-fundamentals/combined" rel="noopener noreferrer">Hydraulic Institute — Combined Pump & System Curves</a></li><li><a href="https://www.energy.gov/cmei/ito/pump-systems" rel="noopener noreferrer">U.S. Department of Energy — Pump Systems</a></li><li><a href="https://www.pumps.org/resources/pump-faqs/" rel="noopener noreferrer">Hydraulic Institute — Pump FAQs</a></li></ul>
+    <section aria-labelledby="related-heading"><h2 id="related-heading">Continue the workflow</h2><div class="related-grid"><a href="/tools/total-dynamic-head-calculator/">Total Dynamic Head Calculator<br><span class="meta-line">Open next →</span></a><a href="/tools/low-water-pressure-troubleshooter/">Low Water Pressure Troubleshooter<br><span class="meta-line">Open next →</span></a><a href="/guides/how-to-diagnose-low-water-pressure/">How to Diagnose Low Water Pressure<br><span class="meta-line">Open next →</span></a><a href="/reference/water-pressure-head-conversion/">Water Pressure & Head Conversion<br><span class="meta-line">Open next →</span></a><a href="/systems/pumps-pressure-pipe/">Parent pump system workflow<br><span class="meta-line">Open next →</span></a></div></section>
+  </article><aside class="sidebar"><h2>Bench sequence</h2><ul><li><a href="/systems/pumps-pressure-pipe/">Start with the system workflow</a></li><li><a href="/guides/how-to-size-a-water-pump/">Build flow and TDH</a></li><li><a href="/reference/pump-formulas-hydraulic-terms/">Check formulas and terms</a></li><li><a href="/contact/">Report a content issue</a></li></ul></aside></div>
+    </div>
+  </main>
+  <div data-footer-slot></div>
+</body>
+</html>

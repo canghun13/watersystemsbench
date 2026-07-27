@@ -1,0 +1,16 @@
+{
+  "name": "water-systems-bench",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate": "node tools-qa/generate-site.mjs",
+    "serve": "node tools-qa/server.mjs",
+    "qa": "node tools-qa/qa.mjs && node tools-qa/navigation-qa.mjs",
+    "verify:calculations": "node tools-qa/verify-calculations.mjs",
+    "qa:browser": "node tools-qa/browser-qa.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
