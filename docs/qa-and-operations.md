@@ -67,4 +67,18 @@ The actual browser run is recorded in `tools-qa/browser-results.json`. Refresh t
 - Tool interactions: all 17 passed, including all 8 Phase 2 tools, for calculate/analyze/simulate, reset, copy, print, invalid input and relevant unit switching
 - Console errors, page errors, asset failures, internal 404s, and horizontal overflows after fixes: 0
 
+## Irrigation pre-implementation QA contract
+
+The Irrigation & Sprinkler Systems cluster is specified but not implemented. Its independent calculation and interaction cases are in [irrigation-sprinkler-spec.md](irrigation-sprinkler-spec.md).
+
+After future implementation:
+
+- run 36 numeric/validation cases and six sprinkler troubleshooting scenarios across the seven new tools;
+- regression-test all 17 current tools and their existing cases;
+- render all 51 public pages at 390, 768, 1024, 1280 and 1440 px, for 255 page-width checks;
+- run valid calculation, SI/US switching, invalid/boundary, dynamic-mode, reset, copy and print interaction families on every new tool;
+- verify exact category counts of 7 core, 3 hubs, 24 tools, 11 guides and 6 references;
+- update sitemap only when the 11 new routes actually exist and confirm exact parity;
+- keep the current 40-page/200-render result as the actual baseline until implementation.
+
 Do not create a repo-specific local tool merely to force execution from one checkout location. Keep all commands relative to the repository root.

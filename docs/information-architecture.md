@@ -4,7 +4,7 @@
 
 ## Navigation model
 
-The information architecture follows the water-system workflow rather than isolating tools by format. Core navigation exposes Tools, Guides, Reference, About, Contact, and Privacy. The Systems menu exposes exactly the two implemented hubs: Pumps, Pressure & Pipe Flow and Wells, Storage & Rainwater.
+The information architecture follows the water-system workflow rather than isolating tools by format. Core navigation exposes Tools, Guides, Reference, About, Contact, and Privacy. The Systems menu exposes exactly the two implemented hubs: Pumps, Pressure & Pipe Flow and Wells, Storage & Rainwater. Irrigation is specification-complete but remains unlinked until its routes are implemented.
 
 ## Implemented pump-system journey
 
@@ -57,16 +57,36 @@ Rainwater Harvesting Yield Calculator
 
 The well and rainwater journeys are implemented and cross-linked to the Phase 1 pump hydraulics. Irrigation and treatment remain planned and are not exposed as inactive public links.
 
-### Irrigation system
+### Irrigation system — specification complete, implementation not started
 
 ```text
 Available Water Flow Test Calculator
 → Sprinkler Zone Capacity Planner
 → Water Pipe Size & Velocity Checker
-→ Irrigation Pump & Zone Matcher
 → Sprinkler Precipitation Rate Calculator
 → Irrigation Runtime & Water Depth Planner
+→ Observe and adjust under actual conditions
 ```
+
+Alternative branches:
+
+```text
+Drip layout
+→ Drip Irrigation Flow & Zone Calculator
+→ Irrigation Runtime & Water Depth Planner
+
+Pumped supply
+→ Total Dynamic Head Calculator
+→ Pump Curve Duty Point Comparator
+→ Irrigation Pump & Zone Matcher (single stated duty-condition screen)
+
+Weak sprinkler zone
+→ Sprinkler Low-Pressure Troubleshooter
+→ Measure flow and dynamic pressure
+→ Leak, restriction, demand, elevation or pump review
+```
+
+The future parent route is `/systems/irrigation-sprinklers/`. Do not expose it in navigation, sitemap or related links until the hub and its cluster are implemented. The complete calculation, content and QA contract is in [irrigation-sprinkler-spec.md](irrigation-sprinkler-spec.md).
 
 ### Water-treatment system
 
@@ -82,11 +102,12 @@ How to Read a Water Test Report
 
 ```text
 Low Water Pressure Troubleshooter
-→ Available Water Flow Test Calculator
 → Pipe Friction Loss Calculator
 → Booster Pump Duty Point Estimator
 → Pressure Tank Sizing Calculator when applicable
 ```
+
+After irrigation implementation, the general troubleshooter may hand off zone-specific symptoms to the Sprinkler Low-Pressure Troubleshooter. Until then no inactive irrigation link is published.
 
 ## Detail-page related-link groups
 

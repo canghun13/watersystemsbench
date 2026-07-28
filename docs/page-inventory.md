@@ -28,7 +28,7 @@ This inventory distinguishes the implemented Phase 1 and Phase 2 pages from the 
 | Privacy | Core | Sitewide | `/privacy/` | Understand data practices | Contact | Implemented | High | Reflects GA4 and current static site |
 | Pumps, Pressure & Pipe Flow | Hub | Pumps | `/systems/pumps-pressure-pipe/` | Start pump/pipe workflow | Tools 1–9; guides 1–3 | Implemented | Medium | Phase 1 system hub |
 | Wells, Boreholes, Storage & Rainwater | Hub | Wells | `/systems/wells-storage-rainwater/` | Plan source and storage | Tools 10–17; guides 4–8 | Implemented | Medium | Phase 2 system hub |
-| Irrigation & Sprinkler Systems | Hub | Irrigation | `/tools/irrigation-sprinkler/` | Plan irrigation zones | Tools 18–24; guides 9–11 | Planned | Medium | First-wave hub |
+| Irrigation & Sprinkler Systems | Hub | Irrigation | `/systems/irrigation-sprinklers/` | Plan irrigation zones | Tools 18–24; guides 9–11 | Specification complete | Medium | Implementation not started; see `docs/irrigation-sprinkler-spec.md` |
 | Water Treatment & Water Quality | Hub | Treatment | `/tools/water-treatment-quality/` | Choose treatment workflow | Tools 25–32; guides 12–14 | Planned | High | First-wave hub |
 
 ## Tools (32)
@@ -52,13 +52,13 @@ This inventory distinguishes the implemented Phase 1 and Phase 2 pages from the 
 | 15 | Rainwater Harvesting Yield Calculator | Calculator | Rainwater | `/tools/rainwater-harvesting-yield-calculator/` | Estimate harvest | 14, 16, guide 8 | Implemented | Medium | Fixed and proportional losses |
 | 16 | Rainwater Tank Days-of-Supply Simulator | Simulator | Rainwater | `/tools/rainwater-tank-days-of-supply-simulator/` | Model storage duration | 15, 14, guide 8 | Implemented | Medium | 365 daily sequential steps |
 | 17 | First Flush Diverter Sizing Calculator | Calculator | Rainwater | `/tools/first-flush-diverter-sizing-calculator/` | Estimate first flush | 15, guide 8 | Implemented | Medium | Two explicit local-rule modes |
-| 18 | Available Water Flow Test Calculator | Checker | Irrigation | `/tools/available-water-flow-test-calculator/` | Check available flow | 19, 3, guide 9 | Planned | Medium | Test method limitations visible |
-| 19 | Sprinkler Zone Capacity Planner | Planner | Irrigation | `/tools/sprinkler-zone-capacity-planner/` | Plan zones | 18, 20, guide 10 | Planned | Medium | Account for pressure losses |
-| 20 | Sprinkler Precipitation Rate Calculator | Calculator | Irrigation | `/tools/sprinkler-precipitation-rate-calculator/` | Calculate application rate | 19, 21, guide 10 | Planned | Medium | Match actual nozzle data |
-| 21 | Irrigation Runtime & Water Depth Planner | Planner | Irrigation | `/tools/irrigation-runtime-water-depth-planner/` | Plan runtime/depth | 20, 22, guide 10 | Planned | Medium | Climate and soil context needed |
-| 22 | Drip Irrigation Flow & Zone Calculator | Calculator | Irrigation | `/tools/drip-irrigation-flow-zone-calculator/` | Calculate drip zone flow | 18, 19, guide 10 | Planned | Medium | Use product emitter data |
-| 23 | Irrigation Pump & Zone Matcher | Planner | Irrigation | `/tools/irrigation-pump-zone-matcher/` | Match pump and zone | 1, 6, guide 11 | Planned | Medium | Confirm actual pump curve |
-| 24 | Sprinkler Low-Pressure Troubleshooter | Troubleshooter | Irrigation | `/tools/sprinkler-low-pressure-troubleshooter/` | Diagnose weak zone | 18, 2, guide 11 | Planned | Medium | Avoid unsafe DIY electrical work |
+| 18 | Available Water Flow Test Calculator | Checker | Irrigation | `/tools/available-water-flow-test-calculator/` | Check available flow | 19, 3, guide 9 | Specification complete | Medium | Implementation not started; repeat timed-container/meter trials |
+| 19 | Sprinkler Zone Capacity Planner | Planner | Irrigation | `/tools/sprinkler-zone-capacity-planner/` | Plan zones | 18, 20, guide 10 | Specification complete | Medium | Implementation not started; separate flow and pressure checks |
+| 20 | Sprinkler Precipitation Rate Calculator | Calculator | Irrigation | `/tools/sprinkler-precipitation-rate-calculator/` | Calculate application rate | 19, 21, guide 10 | Specification complete | Medium | Implementation not started; total-area and repeated-spacing modes |
+| 21 | Irrigation Runtime & Water Depth Planner | Planner | Irrigation | `/tools/irrigation-runtime-water-depth-planner/` | Plan runtime/depth | 20, 22, guide 10 | Specification complete | Medium | Implementation not started; efficiency, events and cycles explicit |
+| 22 | Drip Irrigation Flow & Zone Calculator | Calculator | Irrigation | `/tools/drip-irrigation-flow-zone-calculator/` | Calculate drip zone flow | 18, 19, guide 10 | Specification complete | Medium | Implementation not started; direct-count and row-layout modes |
+| 23 | Irrigation Pump & Zone Matcher | Planner | Irrigation | `/tools/irrigation-pump-zone-matcher/` | Match pump and zone | 1, 6, guide 11 | Specification complete | Medium | Implementation not started; single duty-condition screen only |
+| 24 | Sprinkler Low-Pressure Troubleshooter | Troubleshooter | Irrigation | `/tools/sprinkler-low-pressure-troubleshooter/` | Diagnose weak zone | 18, 2, guide 11 | Specification complete | Medium | Implementation not started; cause groups, not diagnosis |
 | 25 | Water Softener Sizing Calculator | Calculator | Treatment | `/tools/water-softener-sizing-calculator/` | Estimate softener size | 26, 32, guide 13 | Planned | Medium | Water test and local requirements |
 | 26 | Softener Salt & Regeneration Planner | Planner | Treatment | `/tools/softener-salt-regeneration-planner/` | Plan regeneration | 25, 32, guide 13 | Planned | Medium | Discharge constraints vary |
 | 27 | RO Recovery & Reject Water Calculator | Calculator | Treatment | `/tools/ro-recovery-reject-water-calculator/` | Estimate RO streams | 28, 32, guide 14 | Planned | High | Wastewater/discharge caveat |
@@ -80,9 +80,9 @@ This inventory distinguishes the implemented Phase 1 and Phase 2 pages from the 
 | 6 | Pressure Tank Drawdown & Pump Short Cycling | Guide | Wells | `/guides/pressure-tank-drawdown-short-cycling/` | Diagnose cycling | 12, 13 | Implemented | Medium | Electrical and pressure safety |
 | 7 | Water Storage for Demand, Outages & Refill | Guide | Wells | `/guides/water-storage-demand-outages-refill/` | Plan storage | 11, 14 | Implemented | Medium | Service reliability varies |
 | 8 | Rainwater Harvesting System Planning | Guide | Rainwater | `/guides/rainwater-harvesting-system-planning/` | Plan rainwater system | 15–17 | Implemented | High | Potable use requirements vary |
-| 9 | How to Measure Irrigation Flow and Dynamic Pressure | Guide | Irrigation | `/guides/measure-irrigation-flow-pressure/` | Test supply | 18, 3 | Planned | Medium | Safe test steps |
-| 10 | How to Split Sprinklers into Practical Zones | Guide | Irrigation | `/guides/split-sprinkler-zones/` | Zone irrigation | 19–23 | Planned | Medium | Design constraints vary |
-| 11 | How to Troubleshoot a Low-Pressure Sprinkler Zone | Guide | Irrigation | `/guides/troubleshoot-low-pressure-sprinkler-zone/` | Diagnose zone | 18, 24 | Planned | Medium | Electrical safety |
+| 9 | How to Measure Irrigation Flow and Dynamic Pressure | Guide | Irrigation | `/guides/measure-irrigation-flow-pressure/` | Test supply | 18, 3 | Specification complete | Medium | Implementation not started; safe repeatable field methods |
+| 10 | How to Split Sprinklers into Practical Zones | Guide | Irrigation | `/guides/split-sprinkler-zones/` | Zone irrigation | 19–23 | Specification complete | Medium | Implementation not started; flow, pressure and layout separated |
+| 11 | How to Troubleshoot a Low-Pressure Sprinkler Zone | Guide | Irrigation | `/guides/troubleshoot-low-pressure-sprinkler-zone/` | Diagnose zone | 18, 24 | Specification complete | Medium | Implementation not started; electrical and pressure safety |
 | 12 | How to Read a Water Test Report | Guide | Treatment | `/guides/read-water-test-report/` | Interpret report | 32, reference 7 | Planned | High | Laboratory/context limits |
 | 13 | Sediment Filter vs Carbon Filter vs Softener vs RO vs UV | Guide | Treatment | `/guides/filter-softener-ro-uv-comparison/` | Compare technologies | 25, 29, 32 | Planned | High | Health claims require sources |
 | 14 | How to Build a Water Treatment Train Without Over-Treating | Guide | Treatment | `/guides/build-water-treatment-train/` | Sequence treatment | 27–32 | Planned | High | No universal prescription |
@@ -121,3 +121,16 @@ This inventory distinguishes the implemented Phase 1 and Phase 2 pages from the 
 | Guides | 8 | 6 |
 | Reference pages | 6 | 2 |
 | Total | 40 | 25 |
+
+## Irrigation specification projection
+
+The Irrigation & Sprinkler Systems cluster is fully specified in `docs/irrigation-sprinkler-spec.md` but has no implemented public route. After a future implementation and successful QA, the projected inventory is:
+
+| Category | Projected implemented | Projected remaining |
+| --- | ---: | ---: |
+| Core pages | 7 | 0 |
+| System hubs | 3 | 1 |
+| Tools | 24 | 8 |
+| Guides | 11 | 3 |
+| Reference pages | 6 | 2 |
+| Total | 51 | 14 |

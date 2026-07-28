@@ -8,7 +8,7 @@
 - Default branch: main
 - Contact: [canghun13@naver.com](mailto:canghun13@naver.com)
 - GA4 measurement ID: `G-7FB08YPX7C`
-- Current phase: Phase 2: Wells, Boreholes, Storage & Rainwater cluster implemented
+- Current phase: Irrigation & Sprinkler Systems specification complete; implementation not started
 - Language and audience: English; global
 - Stack and deployment: static HTML/CSS/vanilla JavaScript; GitHub Pages plus Cloudflare
 - Phase 2 starting commit: `3c2b450e361a8a8ea0d351059bdef0e121b95071`
@@ -16,6 +16,39 @@
 ## Current Repository State
 
 The repository contains a deployable static site with 40 public HTML pages, two connected system hubs, 17 working tools, eight guides, six references, shared design and conversion modules, repeatable QA, current planning documents, social preview, favicons and `CNAME`.
+
+The current public implementation is unchanged. The future Irrigation & Sprinkler Systems cluster is specified in `docs/irrigation-sprinkler-spec.md`; none of its 11 routes exists yet.
+
+## Irrigation Specification Task Record
+
+- Starting branch: `main`
+- Starting commit: `a7408f57b944358232d01d3eb4c85fdca1043a5f`
+- Repository at start: 40 public HTML pages, 17 tools, eight guides and six references
+- Specification outcome: one hub, seven tools and three guides confirmed; implementation not started
+- Duplicate review: all 11 candidates have independent user tasks and search intent; zero removed and zero merged
+- Planning correction: the hub route is `/systems/irrigation-sprinklers/`, replacing the earlier planning-only route `/tools/irrigation-sprinkler/`
+- Future verification design: 36 numeric/validation cases plus six rules-based troubleshooting scenarios, 42 total
+- Future browser design: 51 pages × five widths = 255 render checks, plus the seven-tool interaction matrix
+- Source research: USDA NRCS, FAO, US EPA WaterSense, public university Extension material and official Hunter/Rain Bird technical manuals; at least two sources assigned per tool and guide
+
+Confirmed future pages:
+
+1. `/systems/irrigation-sprinklers/`
+2. `/tools/available-water-flow-test-calculator/`
+3. `/tools/sprinkler-zone-capacity-planner/`
+4. `/tools/sprinkler-precipitation-rate-calculator/`
+5. `/tools/irrigation-runtime-water-depth-planner/`
+6. `/tools/drip-irrigation-flow-zone-calculator/`
+7. `/tools/irrigation-pump-zone-matcher/`
+8. `/tools/sprinkler-low-pressure-troubleshooter/`
+9. `/guides/measure-irrigation-flow-pressure/`
+10. `/guides/split-sprinkler-zones/`
+11. `/guides/troubleshoot-low-pressure-sprinkler-zone/`
+
+Documentation created or updated:
+
+- Created `docs/irrigation-sprinkler-spec.md`.
+- Updated `docs/page-inventory.md`, `docs/information-architecture.md`, `docs/content-and-tool-spec.md`, `docs/qa-and-operations.md` and `handover.md`.
 
 ## Completed Work
 
@@ -27,6 +60,7 @@ The repository contains a deployable static site with 40 public HTML pages, two 
 - Updated home, indexes, two-system navigation, footer, internal linking, canonical metadata, JSON-LD, sitemap and `llms.txt`.
 - Preserved the exact GA4 measurement ID once per public page.
 - Expanded static, calculation and browser-result QA to the Phase 2 totals.
+- Completed the pre-implementation specification for the Irrigation & Sprinkler Systems hub, seven tools and three guides, including source mapping, duplicate-intent review, exact formulas, 42 independent future verification cases and the 51-page browser QA contract.
 
 ## Created and Modified Files
 
@@ -50,6 +84,19 @@ The repository contains a deployable static site with 40 public HTML pages, two 
 | Total public HTML | 65 | 40 | 25 |
 
 Empty or inactive future pages created: 0.
+
+### Irrigation specification projection
+
+| Category | After future irrigation implementation | Remaining then |
+| --- | ---: | ---: |
+| Core pages | 7 | 0 |
+| System hubs | 3 | 1 |
+| Tools | 24 | 8 |
+| Guides | 11 | 3 |
+| Reference pages | 6 | 2 |
+| Total public HTML | 51 | 14 |
+
+These are projections, not current implemented counts.
 
 ## Tool Counts by Type
 
@@ -78,6 +125,9 @@ Empty or inactive future pages created: 0.
 
 ## Test and QA Results
 
+- Documentation-only specification task rerun: static QA passed for the unchanged 40 public pages, including unique metadata, valid JSON-LD, exact GA4, sitemap parity, clean JavaScript and repository string scan.
+- Documentation-only specification task rerun: navigation QA passed for all 42 HTML documents examined by the existing script, with local links and assets resolved.
+- Documentation-only specification task rerun: calculation verification passed for 30 Phase 1 numeric/conversion cases, six Phase 1 troubleshooting scenarios, 30 Phase 2 numeric/decision cases and six rainwater simulator scenarios.
 - Static and navigation QA: passed for 40 public pages
 - Category counts: 7 core, 2 hubs, 17 tools, 8 guides and 6 references
 - Metadata titles and descriptions: unique across all 40 pages
@@ -108,11 +158,15 @@ The latest browser result is recorded in `tools-qa/browser-results.json`.
 - Monthly rainfall smoothing can overstate storage reliability compared with daily historical rainfall.
 - Rainwater is not automatically potable; source protection, separation, testing, treatment and local public-health requirements remain outside a quantity calculator.
 - Live GitHub Pages and Cloudflare propagation can occur after the `main` push.
+- Irrigation supply tests must distinguish static pressure, dynamic pressure and measured flow.
+- Sprinkler product flow and operating pressure must come from current manufacturer data; theoretical precipitation rate is not distribution uniformity.
+- The planned pump matcher is a single-duty-condition screen, not a pump/system curve operating-point calculation.
+- Backflow protection, cross-connections, buried utilities, controller wiring, pump service and local irrigation restrictions require applicable local and qualified review.
 
 ## Next Recommended Task
 
-Plan and implement the Irrigation & Sprinkler Systems cluster using the two completed system workflows and the established source, storage, pump and pipe links.
+Implement the Irrigation & Sprinkler Systems cluster from docs/irrigation-sprinkler-spec.md, then run full calculation, static and browser QA.
 
 ## Latest Commit
 
-The Phase 2 completion commit is the final `git rev-parse HEAD` value reported after commit and push; a Git commit cannot contain its own final hash.
+The Irrigation & Sprinkler Systems specification commit is the final `git rev-parse HEAD` value reported after commit and push; a Git commit cannot contain its own final hash.

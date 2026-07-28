@@ -56,6 +56,20 @@ The planned tools may use these product patterns: Calculator, Generator, Planner
 
 The numerical tools share SI-based conversion and form utilities while keeping each tool's calculation logic in its own JavaScript module. Shared conversion support now includes volume, horizontal catchment area, and rainfall depth. The low-pressure tool is rules-based and explicitly reports cause groups rather than a confirmed diagnosis; the rainwater simulator uses 365 sequential daily storage steps.
 
+## Irrigation specification
+
+The future Irrigation & Sprinkler Systems cluster has a complete pre-implementation contract in [irrigation-sprinkler-spec.md](irrigation-sprinkler-spec.md). It covers one hub, seven tools, three guides, a duplication review, exact SI-based formulas, validation states, 36 independent numeric/validation cases, six troubleshooting scenarios and the future browser matrix.
+
+The specification does not change the implemented tool counts. Its key product boundaries are:
+
+- measured flow is not inferred pressure or guaranteed source capacity;
+- zone capacity floors whole devices and reports flow and pressure separately;
+- precipitation rate is not distribution uniformity;
+- runtime uses a user-entered net target and efficiency rather than prescribing plant demand;
+- drip layout arithmetic is not lateral hydraulic approval;
+- the pump matcher screens one stated flow/head pair and never claims a curve operating point;
+- the sprinkler troubleshooter reports evidence-based cause groups, not a confirmed diagnosis.
+
 ## Safety, health, and regulatory rules
 
 - Cite authoritative primary sources for claims involving safety, health, legal requirements, or regulation.
