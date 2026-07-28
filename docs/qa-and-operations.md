@@ -59,12 +59,12 @@ The actual browser run is recorded in `tools-qa/browser-results.json`. Refresh t
 - GA4 only after a real measurement ID is supplied
 - Accessibility of published pages
 
-## Phase 1 result
+## Phase 1 and Phase 2 result
 
-- Static and navigation QA: passed for 25 public pages
-- Calculation verification: 30 independent numeric/conversion cases and 6 troubleshooting scenarios passed
-- Browser rendering: 125 checks (25 pages × 5 widths) passed
-- Tool interactions: all 9 passed for calculate/analyze, reset, copy, print, and relevant unit switching
+- Static and navigation QA: passed for 40 public pages
+- Calculation verification: 30 Phase 1 numeric/conversion cases, 6 troubleshooting scenarios, 30 Phase 2 numeric/decision cases and 6 simulator scenarios passed
+- Browser rendering: 200 checks (40 pages × 5 widths) passed
+- Tool interactions: all 17 passed, including all 8 Phase 2 tools, for calculate/analyze/simulate, reset, copy, print, invalid input and relevant unit switching
 - Console errors, page errors, asset failures, internal 404s, and horizontal overflows after fixes: 0
 
 Do not create a repo-specific local tool merely to force execution from one checkout location. Keep all commands relative to the repository root.

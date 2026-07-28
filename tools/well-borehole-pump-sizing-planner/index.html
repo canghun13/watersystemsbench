@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Well &amp; Borehole Pump Sizing Planner | Water Systems Bench</title>
+  <meta name="description" content="Build a preliminary well or borehole pump duty point from required flow, pumping water level, delivery elevation, pressure and losses.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://watersystemsbench.com/tools/well-borehole-pump-sizing-planner/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Water Systems Bench">
+  <meta property="og:title" content="Well &amp; Borehole Pump Sizing Planner | Water Systems Bench">
+  <meta property="og:description" content="Build a preliminary well or borehole pump duty point from required flow, pumping water level, delivery elevation, pressure and losses.">
+  <meta property="og:url" content="https://watersystemsbench.com/tools/well-borehole-pump-sizing-planner/">
+  <meta property="og:image" content="https://watersystemsbench.com/assets/og.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/content.css">
+  <link rel="stylesheet" href="/assets/css/calculator.css">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7FB08YPX7C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7FB08YPX7C');
+</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","@id":"https://watersystemsbench.com/tools/well-borehole-pump-sizing-planner/#application","name":"Well & Borehole Pump Sizing Planner","description":"Build a preliminary well or borehole pump duty point from required flow, pumping water level, delivery elevation, pressure and losses.","url":"https://watersystemsbench.com/tools/well-borehole-pump-sizing-planner/","applicationCategory":"EngineeringApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript"},{"@type":"BreadcrumbList","@id":"https://watersystemsbench.com/tools/well-borehole-pump-sizing-planner/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://watersystemsbench.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://watersystemsbench.com/tools/"},{"@type":"ListItem","position":3,"name":"Well & Borehole Pump Sizing Planner","item":"https://watersystemsbench.com/tools/well-borehole-pump-sizing-planner/"}]}]}</script>
+  <script type="module" src="/assets/js/partials.js"></script>
+  <script type="module" src="/assets/js/main.js"></script>
+  <script type="module" src="/assets/js/tools/well-pump-sizing.js"></script>
+</head>
+<body>
+  <div data-header-slot></div>
+  <main id="main-content">
+    <div class="page-shell">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/tools/">Tools</a></li><li><span aria-current="page">Well & Borehole Pump Sizing Planner</span></li></ol></nav>
+      <header class="hero compact"><div><p class="eyebrow">Wells, storage & rainwater / Planner</p><h1>Well & Borehole Pump Sizing Planner</h1><p class="lede">Build a preliminary well or borehole pump duty point from required flow, pumping water level, delivery elevation, pressure and losses.</p></div><p class="hero-note">Preliminary planning output only. Use measured data where possible and verify manufacturer and jurisdiction-specific requirements.</p></header>
+  <p class="meta-line">Last reviewed: July 28, 2026 · SI first · US customary supported</p>
+  <div class="tool-layout"><section class="instrument-panel"><div class="panel-heading"><h2>Bench inputs</h2><span class="panel-code">INPUT / SET</span></div><form data-tool-form="well-pump"><div class="field full"><label for="unitSystem">Unit system</label><select id="unitSystem" name="unitSystem" data-unit-system><option value="SI">SI — metric</option><option value="US">US customary</option></select></div><div class="field-grid"><div class="field "><label for="demand">Required flow (<span data-unit-label="flow"></span>)</label><input id="demand" name="demand" data-label="Required flow" type="number" value="45" data-unit-kind="flow" step="any" required></div><div class="field "><label for="pumpingLevel">Pumping water level below wellhead (<span data-unit-label="head"></span>)</label><input id="pumpingLevel" name="pumpingLevel" data-label="Pumping water level below wellhead" type="number" value="28" data-unit-kind="head" step="any" required></div><div class="field "><label for="pumpSetting">Pump setting depth below wellhead (<span data-unit-label="head"></span>)</label><input id="pumpSetting" name="pumpSetting" data-label="Pump setting depth below wellhead" type="number" value="42" data-unit-kind="head" step="any" required></div><div class="field "><label for="dischargeElevation">Delivery elevation above wellhead (<span data-unit-label="head"></span>)</label><input id="dischargeElevation" name="dischargeElevation" data-label="Delivery elevation above wellhead" type="number" value="6" data-unit-kind="head" step="any" required></div><div class="field "><label for="deliveryPressure">Required delivery gauge pressure (<span data-unit-label="pressure"></span>)</label><input id="deliveryPressure" name="deliveryPressure" data-label="Required delivery gauge pressure" type="number" value="240" data-unit-kind="pressure" step="any" required></div><div class="field "><label for="friction">Pipe and fitting loss (<span data-unit-label="head"></span>)</label><input id="friction" name="friction" data-label="Pipe and fitting loss" type="number" value="6" data-unit-kind="head" step="any" required></div><div class="field "><label for="equipment">Treatment / equipment loss (<span data-unit-label="head"></span>)</label><input id="equipment" name="equipment" data-label="Treatment / equipment loss" type="number" value="2" data-unit-kind="head" step="any" required></div></div><p class="form-error" data-form-error role="alert"></p><div class="button-row"><button class="button" type="submit">Build duty point</button><button class="button secondary" type="reset">Reset</button></div></form></section><section class="result-panel" aria-label="Result">
+    <div class="panel-heading"><h2>Operating report</h2><span class="panel-code">RESULT / LIVE</span></div>
+    <div class="result-empty"><p>Enter the known values, then calculate to build a result summary.</p></div>
+    <div class="result-report" aria-live="polite" hidden>
+      <div class="primary-reading"><span class="reading-label"></span><span class="reading-value"></span></div>
+      <div class="result-block"><h3>Supporting calculations</h3><ul data-supporting></ul></div>
+      <div class="result-block"><h3>Interpretation</h3><p data-interpretation></p></div>
+      <p class="result-warning" data-warning></p>
+      <div class="result-actions"><button class="button small secondary" type="button" data-result-action data-copy-result disabled>Copy result</button><button class="button small secondary" type="button" data-result-action data-print-result disabled>Print result</button></div>
+    </div>
+  </section></div>
+  <div class="content-layout"><article class="article-body">
+    <h2>What this tool does</h2><p>Turn source level and delivery requirements into one transparent flow-and-head duty point while keeping pump setting depth separate as a submergence check.</p>
+    <h2>When to use it</h2><p>Use after a representative pumping water level and sustained demand flow are known. Re-run for seasonal low water levels and other operating cases.</p>
+    <h2>Inputs and supported units</h2><p>Each labelled field explains the quantity it expects. Unit-system changes convert existing numeric entries once and keep calculations on a single SI internal basis. Supported shared units include L/min and GPM, metres and feet, kPa and psi, millimetres and inches, kW and hp, and °C and °F as relevant.</p>
+    <h2>Calculation or decision method</h2><div class="formula">TDH = pumping-level lift + discharge elevation + delivery pressure head + pipe and equipment losses</div><p>Pump setting depth is compared with pumping level to report submergence. It is not added to TDH because the energy balance starts at the pumped water surface.</p>
+    <h2>How to interpret the result</h2><p>Read the primary result with the supporting breakdown and warning. A plausible number is not evidence that every input, operating case or design constraint has been included.</p>
+    <div class="worked-example"><h2>Worked example</h2><p>At 45 L/min, a 28 m pumping level, 6 m discharge elevation, 240 kPa delivery pressure and 8 m losses produce about 66.5 m TDH. A pump set at 42 m has 14 m submergence.</p></div>
+    <h2>Assumptions</h2><p>Depths share the wellhead datum; the pumping level represents the stated flow; gauge delivery pressure and losses apply at that flow.</p>
+    <h2>Limitations</h2><p>No well recovery model, cable sizing, motor cooling, check-valve, sand, water-quality or transient analysis is included.</p>
+    <div class="notice"><strong>Safety and review boundary.</strong> Confirm sustained yield, seasonal low level, minimum submergence, electrical design and the exact manufacturer curve with qualified well and pump professionals.</div>
+    <h2>Sources</h2><ul class="source-list"><li><a href="https://pubs.usgs.gov/wsp/2220/report.pdf" rel="noopener noreferrer">U.S. Geological Survey — Basic Ground-Water Hydrology</a></li><li><a href="https://water.usgs.gov/water-basics_glossary.html" rel="noopener noreferrer">U.S. Geological Survey — Water Resources Glossary</a></li><li><a href="https://datatool.pumps.org/pump-fundamentals/combined" rel="noopener noreferrer">Hydraulic Institute — Combined Pump & System Curves</a></li></ul>
+    <section aria-labelledby="related-heading"><h2 id="related-heading">Continue the workflow</h2><div class="related-grid"><a href="/tools/well-yield-demand-checker/">Well Yield vs Demand Checker<br><span class="meta-line">Open next →</span></a><a href="/tools/total-dynamic-head-calculator/">Total Dynamic Head Calculator<br><span class="meta-line">Open next →</span></a><a href="/tools/pump-curve-duty-point-comparator/">Pump Curve Duty Point Comparator<br><span class="meta-line">Open next →</span></a><a href="/guides/complete-well-water-system-planning/">Complete Well Water System Planning<br><span class="meta-line">Open next →</span></a><a href="/systems/wells-storage-rainwater/">Parent wells and rainwater workflow<br><span class="meta-line">Open next →</span></a></div></section>
+  </article><aside class="sidebar"><h2>Bench sequence</h2><ul><li><a href="/systems/wells-storage-rainwater/">Wells, Storage & Rainwater workflow</a></li><li><a href="/guides/complete-well-water-system-planning/">Plan the connected source system</a></li><li><a href="/reference/water-demand-planning-factors/">Check demand factors</a></li><li><a href="/contact/">Report a content issue</a></li></ul></aside></div>
+    </div>
+  </main>
+  <div data-footer-slot></div>
+</body>
+</html>

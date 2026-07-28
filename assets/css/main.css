@@ -64,6 +64,13 @@ button, input, select, textarea { font: inherit; }
 .primary-nav { display: flex; align-items: center; gap: .25rem; }
 .primary-nav a { padding: .7rem .8rem; color: var(--navy-900); font: 700 .78rem/1 var(--font-mono); text-decoration: none; text-transform: uppercase; letter-spacing: .07em; border-bottom: 2px solid transparent; }
 .primary-nav a[aria-current="page"] { color: var(--teal-600); border-color: var(--teal-600); }
+.systems-menu { position: relative; }
+.systems-menu summary { padding: .7rem .8rem; color: var(--navy-900); font: 700 .78rem/1 var(--font-mono); text-transform: uppercase; letter-spacing: .07em; cursor: pointer; list-style: none; }
+.systems-menu summary::-webkit-details-marker { display: none; }
+.systems-menu summary::after { content: "▾"; margin-left: .45rem; color: var(--teal-600); }
+.systems-menu[open] summary { color: var(--teal-600); }
+.systems-menu-panel { position: absolute; right: 0; top: calc(100% + .7rem); width: 290px; padding: .45rem; border: 1px solid var(--line); background: var(--paper-2); box-shadow: var(--shadow); }
+.systems-menu-panel a { display: block; line-height: 1.35; }
 .menu-toggle { display: none; border: 1px solid var(--navy-900); background: transparent; color: var(--navy-900); padding: .6rem .75rem; align-items: center; gap: .55rem; cursor: pointer; }
 .menu-toggle-lines, .menu-toggle-lines::before, .menu-toggle-lines::after { display: block; width: 19px; height: 2px; background: currentColor; content: ""; transition: transform .2s ease, opacity .2s ease; }
 .menu-toggle-lines { position: relative; }
@@ -107,6 +114,10 @@ h3 { margin: 2rem 0 .7rem; font-size: clamp(1.18rem, 2vw, 1.55rem); }
 .bench-card a.card-link { color: var(--navy-900); font-weight: 750; text-decoration-thickness: 1px; }
 .bench-card .tag { position: absolute; right: 1rem; top: 1rem; }
 .tag { display: inline-block; padding: .32rem .48rem; border: 1px solid var(--line); color: var(--muted); background: var(--paper-2); font: 700 .65rem/1 var(--font-mono); text-transform: uppercase; letter-spacing: .06em; }
+.field-label { display: block; margin-bottom: .6rem; color: var(--navy-900); font-weight: 700; }
+.month-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: .7rem; }
+.month-grid label { color: var(--muted); font: 700 .7rem/1.2 var(--font-mono); }
+.month-grid input { width: 100%; margin-top: .3rem; }
 .flow-line { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0; margin: 2.5rem 0; counter-reset: flow; }
 .flow-line span { position: relative; min-height: 105px; padding: 2.7rem .75rem .75rem; border-top: 2px solid var(--blue-700); color: var(--navy-900); font: 700 .78rem/1.35 var(--font-mono); text-transform: uppercase; }
 .flow-line span::before { counter-increment: flow; content: "0" counter(flow); position: absolute; top: -.9rem; left: 0; width: 1.8rem; height: 1.8rem; display: grid; place-items: center; border-radius: 50%; background: var(--paper-2); border: 2px solid var(--teal-600); color: var(--navy-900); font-size: .65rem; }
@@ -132,6 +143,9 @@ h3 { margin: 2rem 0 .7rem; font-size: clamp(1.18rem, 2vw, 1.55rem); }
   .primary-nav { position: fixed; inset: 74px 0 auto; display: none; padding: 1rem; background: var(--paper-2); border-bottom: 1px solid var(--line); box-shadow: var(--shadow); }
   .primary-nav.is-open { display: grid; }
   .primary-nav a { padding: 1rem; border-bottom: 1px solid var(--line); }
+  .systems-menu summary { padding: 1rem; border-bottom: 1px solid var(--line); }
+  .systems-menu-panel { position: static; width: auto; padding: 0 0 0 1rem; border: 0; box-shadow: none; }
+  .systems-menu-panel a { font-size: .72rem; }
   .hero { grid-template-columns: 1fr; padding-top: 4rem; }
   .hero::after { width: 260px; height: 260px; opacity: .55; }
   .grid.three { grid-template-columns: 1fr 1fr; }
@@ -147,6 +161,7 @@ h3 { margin: 2rem 0 .7rem; font-size: clamp(1.18rem, 2vw, 1.55rem); }
   .wordmark-gauge i { left: 14px; }
   h1 { font-size: clamp(2.5rem, 15vw, 4.4rem); }
   .grid.two, .grid.three { grid-template-columns: 1fr; }
+  .month-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .flow-line { grid-template-columns: 1fr 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-grid > :first-child { grid-column: auto; }

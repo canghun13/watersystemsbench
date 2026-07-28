@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>First Flush Diverter Sizing Calculator | Water Systems Bench</title>
+  <meta name="description" content="Calculate first-flush diversion volume from catchment area and either a diversion depth or a stated volume-per-area rule.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://watersystemsbench.com/tools/first-flush-diverter-sizing-calculator/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Water Systems Bench">
+  <meta property="og:title" content="First Flush Diverter Sizing Calculator | Water Systems Bench">
+  <meta property="og:description" content="Calculate first-flush diversion volume from catchment area and either a diversion depth or a stated volume-per-area rule.">
+  <meta property="og:url" content="https://watersystemsbench.com/tools/first-flush-diverter-sizing-calculator/">
+  <meta property="og:image" content="https://watersystemsbench.com/assets/og.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/content.css">
+  <link rel="stylesheet" href="/assets/css/calculator.css">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7FB08YPX7C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7FB08YPX7C');
+</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","@id":"https://watersystemsbench.com/tools/first-flush-diverter-sizing-calculator/#application","name":"First Flush Diverter Sizing Calculator","description":"Calculate first-flush diversion volume from catchment area and either a diversion depth or a stated volume-per-area rule.","url":"https://watersystemsbench.com/tools/first-flush-diverter-sizing-calculator/","applicationCategory":"EngineeringApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript"},{"@type":"BreadcrumbList","@id":"https://watersystemsbench.com/tools/first-flush-diverter-sizing-calculator/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://watersystemsbench.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://watersystemsbench.com/tools/"},{"@type":"ListItem","position":3,"name":"First Flush Diverter Sizing Calculator","item":"https://watersystemsbench.com/tools/first-flush-diverter-sizing-calculator/"}]}]}</script>
+  <script type="module" src="/assets/js/partials.js"></script>
+  <script type="module" src="/assets/js/main.js"></script>
+  <script type="module" src="/assets/js/tools/first-flush.js"></script>
+</head>
+<body>
+  <div data-header-slot></div>
+  <main id="main-content">
+    <div class="page-shell">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/tools/">Tools</a></li><li><span aria-current="page">First Flush Diverter Sizing Calculator</span></li></ol></nav>
+      <header class="hero compact"><div><p class="eyebrow">Wells, storage & rainwater / Calculator</p><h1>First Flush Diverter Sizing Calculator</h1><p class="lede">Calculate first-flush diversion volume from catchment area and either a diversion depth or a stated volume-per-area rule.</p></div><p class="hero-note">Preliminary planning output only. Use measured data where possible and verify manufacturer and jurisdiction-specific requirements.</p></header>
+  <p class="meta-line">Last reviewed: July 28, 2026 · SI first · US customary supported</p>
+  <div class="tool-layout"><section class="instrument-panel"><div class="panel-heading"><h2>Bench inputs</h2><span class="panel-code">INPUT / SET</span></div><form data-tool-form="first-flush"><div class="field full"><label for="unitSystem">Unit system</label><select id="unitSystem" name="unitSystem" data-unit-system><option value="SI">SI — metric</option><option value="US">US customary</option></select></div><div class="field-grid"><div class="field "><label for="area">Horizontal catchment area (<span data-unit-label="area"></span>)</label><input id="area" name="area" data-label="Horizontal catchment area" type="number" value="150" data-unit-kind="area" step="any" required></div><div class="field full"><label for="mode">Sizing rule</label><select id="mode" name="mode"><option value="depth">Diversion depth</option><option value="rate">Volume per square metre</option></select></div><div class="field" data-depth-field><label for="depth">Diversion depth (<span data-unit-label="rainfall"></span>)</label><input id="depth" name="depth" data-label="Diversion depth" data-unit-kind="rainfall" type="number" step="any" value="0.2"></div><div class="field" data-rate-field hidden><label for="rate">Volume rule (L/m²)</label><input id="rate" name="rate" data-label="Volume rule" type="number" step="any" value="0.2"></div></div><p class="form-error" data-form-error role="alert"></p><div class="button-row"><button class="button" type="submit">Size diverter</button><button class="button secondary" type="reset">Reset</button></div></form></section><section class="result-panel" aria-label="Result">
+    <div class="panel-heading"><h2>Operating report</h2><span class="panel-code">RESULT / LIVE</span></div>
+    <div class="result-empty"><p>Enter the known values, then calculate to build a result summary.</p></div>
+    <div class="result-report" aria-live="polite" hidden>
+      <div class="primary-reading"><span class="reading-label"></span><span class="reading-value"></span></div>
+      <div class="result-block"><h3>Supporting calculations</h3><ul data-supporting></ul></div>
+      <div class="result-block"><h3>Interpretation</h3><p data-interpretation></p></div>
+      <p class="result-warning" data-warning></p>
+      <div class="result-actions"><button class="button small secondary" type="button" data-result-action data-copy-result disabled>Copy result</button><button class="button small secondary" type="button" data-result-action data-print-result disabled>Print result</button></div>
+    </div>
+  </section></div>
+  <div class="content-layout"><article class="article-body">
+    <h2>What this tool does</h2><p>Convert the project’s local first-flush criterion into an installed diversion volume without implying that one rule is universal.</p>
+    <h2>When to use it</h2><p>Use after identifying the roof area that actually drains to the tank and finding the applicable guidance for location, roof condition and end use.</p>
+    <h2>Inputs and supported units</h2><p>Each labelled field explains the quantity it expects. Unit-system changes convert existing numeric entries once and keep calculations on a single SI internal basis. Supported shared units include L/min and GPM, metres and feet, kPa and psi, millimetres and inches, kW and hp, and °C and °F as relevant.</p>
+    <h2>Calculation or decision method</h2><div class="formula">Depth mode: volume = area × diversion depth</div><div class="formula">Rule mode: volume = area × entered volume per square metre</div>
+    <h2>How to interpret the result</h2><p>Read the primary result with the supporting breakdown and warning. A plausible number is not evidence that every input, operating case or design constraint has been included.</p>
+    <div class="worked-example"><h2>Worked example</h2><p>A 150 m² roof at 0.2 mm diversion depth requires 30 L. The same result is expressed as 0.2 L/m².</p></div>
+    <h2>Assumptions</h2><p>Catchment area is horizontal plan area and one consistent local rule has been chosen.</p>
+    <h2>Limitations</h2><p>The result does not predict contaminant removal, storm reset/drain behavior, maintenance or harvest loss across a rainfall record.</p>
+    <div class="notice"><strong>Safety and review boundary.</strong> First flush can improve source control but does not make rainwater potable. Local guidance and intended end use determine the appropriate rule.</div>
+    <h2>Sources</h2><ul class="source-list"><li><a href="https://www.cdc.gov/drinking-water/about/collecting-rainwater-and-your-health-an-overview.html" rel="noopener noreferrer">U.S. CDC — Collecting Rainwater and Your Health</a></li><li><a href="https://www.yourhome.gov.au/water/rainwater" rel="noopener noreferrer">Australian Government — YourHome Rainwater Guidance</a></li></ul>
+    <section aria-labelledby="related-heading"><h2 id="related-heading">Continue the workflow</h2><div class="related-grid"><a href="/tools/rainwater-harvesting-yield-calculator/">Rainwater Harvesting Yield Calculator<br><span class="meta-line">Open next →</span></a><a href="/guides/rainwater-harvesting-system-planning/">Rainwater Harvesting System Planning<br><span class="meta-line">Open next →</span></a><a href="/tools/rainwater-tank-days-of-supply-simulator/">Rainwater Tank Days-of-Supply Simulator<br><span class="meta-line">Open next →</span></a><a href="/reference/water-flow-pressure-volume-conversions/">Water Flow, Pressure & Volume Conversions<br><span class="meta-line">Open next →</span></a><a href="/systems/wells-storage-rainwater/">Parent wells and rainwater workflow<br><span class="meta-line">Open next →</span></a></div></section>
+  </article><aside class="sidebar"><h2>Bench sequence</h2><ul><li><a href="/systems/wells-storage-rainwater/">Wells, Storage & Rainwater workflow</a></li><li><a href="/guides/complete-well-water-system-planning/">Plan the connected source system</a></li><li><a href="/reference/water-demand-planning-factors/">Check demand factors</a></li><li><a href="/contact/">Report a content issue</a></li></ul></aside></div>
+    </div>
+  </main>
+  <div data-footer-slot></div>
+</body>
+</html>

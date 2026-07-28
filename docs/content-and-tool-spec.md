@@ -40,18 +40,21 @@ Use SI first and support common US customary options when relevant. The baseline
 
 The planned tools may use these product patterns: Calculator, Generator, Planner, Selector, Checker, Validator, Troubleshooter, Analyzer, Comparator, Optimizer, Estimator, Simulator, Checklist Builder, and Reference Lookup. The table records the initial primary type distribution; it is not a claim that every pattern is already implemented.
 
-## Implemented Phase 1 tool types
+## Implemented Phase 1 and Phase 2 tool types
 
 | Type | Implemented count |
 | --- | ---: |
-| Calculator | 4 |
-| Checker | 1 |
+| Calculator | 7 |
+| Planner | 2 |
+| Checker | 2 |
 | Estimator | 1 |
 | Comparator | 2 |
 | Troubleshooter | 1 |
-| Total | 9 |
+| Analyzer | 1 |
+| Simulator | 1 |
+| Total | 17 |
 
-The numerical tools share SI-based conversion and form utilities while keeping each tool's calculation logic in its own JavaScript module. The low-pressure tool is rules-based and explicitly reports cause groups rather than a confirmed diagnosis.
+The numerical tools share SI-based conversion and form utilities while keeping each tool's calculation logic in its own JavaScript module. Shared conversion support now includes volume, horizontal catchment area, and rainfall depth. The low-pressure tool is rules-based and explicitly reports cause groups rather than a confirmed diagnosis; the rainwater simulator uses 365 sequential daily storage steps.
 
 ## Safety, health, and regulatory rules
 

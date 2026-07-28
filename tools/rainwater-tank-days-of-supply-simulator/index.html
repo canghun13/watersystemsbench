@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rainwater Tank Days-of-Supply Simulator | Water Systems Bench</title>
+  <meta name="description" content="Simulate 365 daily rainwater tank steps from monthly rainfall, catchment area, collection factor, storage capacity and daily demand.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://watersystemsbench.com/tools/rainwater-tank-days-of-supply-simulator/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Water Systems Bench">
+  <meta property="og:title" content="Rainwater Tank Days-of-Supply Simulator | Water Systems Bench">
+  <meta property="og:description" content="Simulate 365 daily rainwater tank steps from monthly rainfall, catchment area, collection factor, storage capacity and daily demand.">
+  <meta property="og:url" content="https://watersystemsbench.com/tools/rainwater-tank-days-of-supply-simulator/">
+  <meta property="og:image" content="https://watersystemsbench.com/assets/og.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/content.css">
+  <link rel="stylesheet" href="/assets/css/calculator.css">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7FB08YPX7C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7FB08YPX7C');
+</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","@id":"https://watersystemsbench.com/tools/rainwater-tank-days-of-supply-simulator/#application","name":"Rainwater Tank Days-of-Supply Simulator","description":"Simulate 365 daily rainwater tank steps from monthly rainfall, catchment area, collection factor, storage capacity and daily demand.","url":"https://watersystemsbench.com/tools/rainwater-tank-days-of-supply-simulator/","applicationCategory":"EngineeringApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript"},{"@type":"BreadcrumbList","@id":"https://watersystemsbench.com/tools/rainwater-tank-days-of-supply-simulator/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://watersystemsbench.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://watersystemsbench.com/tools/"},{"@type":"ListItem","position":3,"name":"Rainwater Tank Days-of-Supply Simulator","item":"https://watersystemsbench.com/tools/rainwater-tank-days-of-supply-simulator/"}]}]}</script>
+  <script type="module" src="/assets/js/partials.js"></script>
+  <script type="module" src="/assets/js/main.js"></script>
+  <script type="module" src="/assets/js/tools/rainwater-simulator.js"></script>
+</head>
+<body>
+  <div data-header-slot></div>
+  <main id="main-content">
+    <div class="page-shell">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/tools/">Tools</a></li><li><span aria-current="page">Rainwater Tank Days-of-Supply Simulator</span></li></ol></nav>
+      <header class="hero compact"><div><p class="eyebrow">Wells, storage & rainwater / Simulator</p><h1>Rainwater Tank Days-of-Supply Simulator</h1><p class="lede">Simulate 365 daily rainwater tank steps from monthly rainfall, catchment area, collection factor, storage capacity and daily demand.</p></div><p class="hero-note">Preliminary planning output only. Use measured data where possible and verify manufacturer and jurisdiction-specific requirements.</p></header>
+  <p class="meta-line">Last reviewed: July 28, 2026 · SI first · US customary supported</p>
+  <div class="tool-layout"><section class="instrument-panel"><div class="panel-heading"><h2>Bench inputs</h2><span class="panel-code">INPUT / SET</span></div><form data-tool-form="rain-simulator"><div class="field full"><label for="unitSystem">Unit system</label><select id="unitSystem" name="unitSystem" data-unit-system><option value="SI">SI — metric</option><option value="US">US customary</option></select></div><div class="field-grid"><div class="field "><label for="capacity">Tank capacity (<span data-unit-label="volume"></span>)</label><input id="capacity" name="capacity" data-label="Tank capacity" type="number" value="10000" data-unit-kind="volume" step="any" required></div><div class="field "><label for="initial">Initial stored volume (<span data-unit-label="volume"></span>)</label><input id="initial" name="initial" data-label="Initial stored volume" type="number" value="3000" data-unit-kind="volume" step="any" required></div><div class="field "><label for="area">Horizontal catchment area (<span data-unit-label="area"></span>)</label><input id="area" name="area" data-label="Horizontal catchment area" type="number" value="150" data-unit-kind="area" step="any" required></div><div class="field "><label for="coefficient">Combined collection factor (%)</label><input id="coefficient" name="coefficient" data-label="Combined collection factor (%)" type="number" value="80"  step="any" required></div><div class="field "><label for="dailyDemand">Daily rainwater demand (<span data-unit-label="volume"></span>)</label><input id="dailyDemand" name="dailyDemand" data-label="Daily rainwater demand" type="number" value="250" data-unit-kind="volume" step="any" required></div><div class="field full"><span class="field-label">Monthly rainfall (<span data-unit-label="rainfall"></span>)</span><div class="month-grid"><label for="rain1">1<input id="rain1" name="rain1" data-label="Month 1 rainfall" data-unit-kind="rainfall" type="number" step="any" value="65" required></label><label for="rain2">2<input id="rain2" name="rain2" data-label="Month 2 rainfall" data-unit-kind="rainfall" type="number" step="any" value="55" required></label><label for="rain3">3<input id="rain3" name="rain3" data-label="Month 3 rainfall" data-unit-kind="rainfall" type="number" step="any" value="70" required></label><label for="rain4">4<input id="rain4" name="rain4" data-label="Month 4 rainfall" data-unit-kind="rainfall" type="number" step="any" value="80" required></label><label for="rain5">5<input id="rain5" name="rain5" data-label="Month 5 rainfall" data-unit-kind="rainfall" type="number" step="any" value="90" required></label><label for="rain6">6<input id="rain6" name="rain6" data-label="Month 6 rainfall" data-unit-kind="rainfall" type="number" step="any" value="75" required></label><label for="rain7">7<input id="rain7" name="rain7" data-label="Month 7 rainfall" data-unit-kind="rainfall" type="number" step="any" value="60" required></label><label for="rain8">8<input id="rain8" name="rain8" data-label="Month 8 rainfall" data-unit-kind="rainfall" type="number" step="any" value="55" required></label><label for="rain9">9<input id="rain9" name="rain9" data-label="Month 9 rainfall" data-unit-kind="rainfall" type="number" step="any" value="70" required></label><label for="rain10">10<input id="rain10" name="rain10" data-label="Month 10 rainfall" data-unit-kind="rainfall" type="number" step="any" value="85" required></label><label for="rain11">11<input id="rain11" name="rain11" data-label="Month 11 rainfall" data-unit-kind="rainfall" type="number" step="any" value="75" required></label><label for="rain12">12<input id="rain12" name="rain12" data-label="Month 12 rainfall" data-unit-kind="rainfall" type="number" step="any" value="70" required></label></div></div></div><p class="form-error" data-form-error role="alert"></p><div class="button-row"><button class="button" type="submit">Simulate 365 days</button><button class="button secondary" type="reset">Reset</button></div></form></section><section class="result-panel" aria-label="Result">
+    <div class="panel-heading"><h2>Operating report</h2><span class="panel-code">RESULT / LIVE</span></div>
+    <div class="result-empty"><p>Enter the known values, then calculate to build a result summary.</p></div>
+    <div class="result-report" aria-live="polite" hidden>
+      <div class="primary-reading"><span class="reading-label"></span><span class="reading-value"></span></div>
+      <div class="result-block"><h3>Supporting calculations</h3><ul data-supporting></ul></div>
+      <div class="result-block"><h3>Interpretation</h3><p data-interpretation></p></div>
+      <p class="result-warning" data-warning></p>
+      <div class="result-actions"><button class="button small secondary" type="button" data-result-action data-copy-result disabled>Copy result</button><button class="button small secondary" type="button" data-result-action data-print-result disabled>Print result</button></div>
+    </div>
+  </section></div>
+  <div class="content-layout"><article class="article-body">
+    <h2>What this tool does</h2><p>Expose overflow, unmet demand, empty periods and end storage that an annual yield total cannot show.</p>
+    <h2>When to use it</h2><p>Use for comparative preliminary tank scenarios. Enter local monthly rainfall and test dry, typical and wet years; use daily historic rainfall for detailed design.</p>
+    <h2>Inputs and supported units</h2><p>Each labelled field explains the quantity it expects. Unit-system changes convert existing numeric entries once and keep calculations on a single SI internal basis. Supported shared units include L/min and GPM, metres and feet, kPa and psi, millimetres and inches, kW and hp, and °C and °F as relevant.</p>
+    <h2>Calculation or decision method</h2><div class="formula">Each day: add evenly distributed monthly inflow → spill overflow → withdraw daily demand</div><p>Reliability is the fraction of 365 days on which the complete entered daily demand is supplied.</p>
+    <h2>How to interpret the result</h2><p>Read the primary result with the supporting breakdown and warning. A plausible number is not evidence that every input, operating case or design constraint has been included.</p>
+    <div class="worked-example"><h2>Worked example</h2><p>A 10,000 L tank, 150 m² roof, 80% collection factor and 250 L/day demand can be compared across multiple monthly rainfall sequences; the monthly report identifies overflow and unmet demand.</p></div>
+    <h2>Assumptions</h2><p>Each month’s rain falls evenly across its days; demand is constant; one non-leap year is modeled; collection factor already includes runoff and system efficiency.</p>
+    <h2>Limitations</h2><p>Even rainfall distribution smooths storms and dry spells and can overstate reliability. No water-quality, pump, treatment or demand-timing model is included.</p>
+    <div class="notice"><strong>Safety and review boundary.</strong> Run multiple historical and sensitivity cases. Do not use monthly averages as a potable supply guarantee or emergency plan.</div>
+    <h2>Sources</h2><ul class="source-list"><li><a href="https://www.energy.gov/sites/default/files/2023-12/rainwater-harvesting-tool-help-guide.pdf" rel="noopener noreferrer">U.S. Department of Energy — Rainwater Harvesting Tool Help Guide</a></li><li><a href="https://www.yourhome.gov.au/water/rainwater" rel="noopener noreferrer">Australian Government — YourHome Rainwater Guidance</a></li><li><a href="https://www.cdc.gov/drinking-water/about/collecting-rainwater-and-your-health-an-overview.html" rel="noopener noreferrer">U.S. CDC — Collecting Rainwater and Your Health</a></li></ul>
+    <section aria-labelledby="related-heading"><h2 id="related-heading">Continue the workflow</h2><div class="related-grid"><a href="/tools/rainwater-harvesting-yield-calculator/">Rainwater Harvesting Yield Calculator<br><span class="meta-line">Open next →</span></a><a href="/tools/first-flush-diverter-sizing-calculator/">First Flush Diverter Sizing Calculator<br><span class="meta-line">Open next →</span></a><a href="/guides/rainwater-harvesting-system-planning/">Rainwater Harvesting System Planning<br><span class="meta-line">Open next →</span></a><a href="/tools/water-storage-tank-sizing-planner/">Water Storage Tank Sizing Planner<br><span class="meta-line">Open next →</span></a><a href="/systems/wells-storage-rainwater/">Parent wells and rainwater workflow<br><span class="meta-line">Open next →</span></a></div></section>
+  </article><aside class="sidebar"><h2>Bench sequence</h2><ul><li><a href="/systems/wells-storage-rainwater/">Wells, Storage & Rainwater workflow</a></li><li><a href="/guides/complete-well-water-system-planning/">Plan the connected source system</a></li><li><a href="/reference/water-demand-planning-factors/">Check demand factors</a></li><li><a href="/contact/">Report a content issue</a></li></ul></aside></div>
+    </div>
+  </main>
+  <div data-footer-slot></div>
+</body>
+</html>

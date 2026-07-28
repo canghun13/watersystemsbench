@@ -4,7 +4,7 @@
 
 ## Navigation model
 
-The information architecture follows the water-system workflow rather than isolating tools by format. Core navigation exposes Tools, Guides, Reference, About, Contact, and Privacy. The active Systems link leads only to the implemented Pumps, Pressure & Pipe Flow hub.
+The information architecture follows the water-system workflow rather than isolating tools by format. Core navigation exposes Tools, Guides, Reference, About, Contact, and Privacy. The Systems menu exposes exactly the two implemented hubs: Pumps, Pressure & Pipe Flow and Wells, Storage & Rainwater.
 
 ## Implemented pump-system journey
 
@@ -30,7 +30,7 @@ Low Water Pressure Troubleshooter
 
 All detail pages expose four to six task-specific links. Future systems appear only as non-linked context until implemented.
 
-## Priority user journeys
+## Implemented Phase 2 journeys
 
 ### Well and borehole system
 
@@ -51,10 +51,11 @@ Well & Borehole Pump Sizing Planner
 Rainwater Harvesting Yield Calculator
 → Rainwater Tank Days-of-Supply Simulator
 → First Flush Diverter Sizing Calculator
-→ Water Treatment Train Selector
 → Booster Pump Duty Point Estimator
-→ Irrigation or non-potable use
+→ Intended non-potable or locally approved use
 ```
+
+The well and rainwater journeys are implemented and cross-linked to the Phase 1 pump hydraulics. Irrigation and treatment remain planned and are not exposed as inactive public links.
 
 ### Irrigation system
 

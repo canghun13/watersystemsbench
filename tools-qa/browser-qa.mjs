@@ -14,10 +14,11 @@ try {
 
 const expectedWidths = [390, 768, 1024, 1280, 1440];
 const issues = [];
-if (report.pages !== 25) issues.push(`pages=${report.pages}`);
-if (report.renderChecks !== 125) issues.push(`renderChecks=${report.renderChecks}`);
+if (report.pages !== 40) issues.push(`pages=${report.pages}`);
+if (report.renderChecks !== 200) issues.push(`renderChecks=${report.renderChecks}`);
 if (JSON.stringify(report.widths) !== JSON.stringify(expectedWidths)) issues.push(`widths=${JSON.stringify(report.widths)}`);
-if (report.toolInteractions !== 9) issues.push(`toolInteractions=${report.toolInteractions}`);
+if (report.toolInteractions !== 17) issues.push(`toolInteractions=${report.toolInteractions}`);
+if (report.phase2ToolInteractions !== 8) issues.push(`phase2ToolInteractions=${report.phase2ToolInteractions}`);
 for (const key of ["mobileMenu", "calculateAnalyze", "reset", "copy", "print", "unitSwitch"]) if (report[key] !== "passed") issues.push(`${key}=${report[key]}`);
 for (const key of ["consoleErrors", "pageErrors", "assetFailures", "internal404s", "horizontalOverflows"]) if (report[key] !== 0) issues.push(`${key}=${report[key]}`);
 
@@ -25,4 +26,4 @@ if (issues.length) {
   console.error(`Browser QA report failed: ${issues.join(", ")}`);
   process.exit(1);
 }
-console.log(`Browser QA report passed: ${report.renderChecks} renders across ${report.widths.join(", ")} px; 9 tool interactions; no console, page, asset, 404 or overflow failures.`);
+console.log(`Browser QA report passed: ${report.renderChecks} renders across ${report.widths.join(", ")} px; 17 tool interactions including 8 Phase 2 tools; no console, page, asset, 404 or overflow failures.`);

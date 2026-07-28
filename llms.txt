@@ -2,9 +2,10 @@
 
 > A practical workflow hub for sizing, checking, troubleshooting and planning real-world water systems from source to use.
 
-## Current implemented cluster
+## Current implemented clusters
 
 - [Pumps, Pressure & Pipe Flow](https://watersystemsbench.com/systems/pumps-pressure-pipe/)
+- [Wells, Storage & Rainwater](https://watersystemsbench.com/systems/wells-storage-rainwater/)
 
 ## Tools
 
@@ -17,12 +18,25 @@
 - [NPSH Available Calculator](https://watersystemsbench.com/tools/npsh-available-calculator/)
 - [Pump Operating Cost Comparator](https://watersystemsbench.com/tools/pump-operating-cost-comparator/)
 - [Low Water Pressure Troubleshooter](https://watersystemsbench.com/tools/low-water-pressure-troubleshooter/)
+- [Well & Borehole Pump Sizing Planner](https://watersystemsbench.com/tools/well-borehole-pump-sizing-planner/)
+- [Well Yield vs Demand Checker](https://watersystemsbench.com/tools/well-yield-demand-checker/)
+- [Pressure Tank Sizing Calculator](https://watersystemsbench.com/tools/pressure-tank-sizing-calculator/)
+- [Pump Short-Cycling Analyzer](https://watersystemsbench.com/tools/pump-short-cycling-analyzer/)
+- [Water Storage Tank Sizing Planner](https://watersystemsbench.com/tools/water-storage-tank-sizing-planner/)
+- [Rainwater Harvesting Yield Calculator](https://watersystemsbench.com/tools/rainwater-harvesting-yield-calculator/)
+- [Rainwater Tank Days-of-Supply Simulator](https://watersystemsbench.com/tools/rainwater-tank-days-of-supply-simulator/)
+- [First Flush Diverter Sizing Calculator](https://watersystemsbench.com/tools/first-flush-diverter-sizing-calculator/)
 
 ## Guides
 
 - [How to Size a Water Pump](https://watersystemsbench.com/guides/how-to-size-a-water-pump/)
 - [How to Read a Pump Curve](https://watersystemsbench.com/guides/how-to-read-a-pump-curve/)
 - [How to Diagnose Low Water Pressure](https://watersystemsbench.com/guides/how-to-diagnose-low-water-pressure/)
+- [Well, Borehole & Tube Well Terminology](https://watersystemsbench.com/guides/well-borehole-tube-well-terminology/)
+- [Complete Well Water System Planning](https://watersystemsbench.com/guides/complete-well-water-system-planning/)
+- [Pressure Tank Drawdown & Short Cycling](https://watersystemsbench.com/guides/pressure-tank-drawdown-short-cycling/)
+- [Water Storage for Demand, Outages & Refill](https://watersystemsbench.com/guides/water-storage-demand-outages-refill/)
+- [Rainwater Harvesting System Planning](https://watersystemsbench.com/guides/rainwater-harvesting-system-planning/)
 
 ## Reference
 
@@ -31,6 +45,7 @@
 - [Hazen–Williams C Values](https://watersystemsbench.com/reference/hazen-williams-c-values/)
 - [Water Pipe Internal Diameters](https://watersystemsbench.com/reference/water-pipe-internal-diameters/)
 - [Pump Formulas & Hydraulic Terms](https://watersystemsbench.com/reference/pump-formulas-hydraulic-terms/)
+- [Water Demand Planning Factors](https://watersystemsbench.com/reference/water-demand-planning-factors/)
 
 ## Safety and limitations
 

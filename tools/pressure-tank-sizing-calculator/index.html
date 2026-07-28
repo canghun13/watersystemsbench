@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pressure Tank Sizing Calculator | Water Systems Bench</title>
+  <meta name="description" content="Estimate required pressure-tank drawdown and nominal volume from pump flow, minimum run time, precharge, cut-in and cut-out pressure.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://watersystemsbench.com/tools/pressure-tank-sizing-calculator/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Water Systems Bench">
+  <meta property="og:title" content="Pressure Tank Sizing Calculator | Water Systems Bench">
+  <meta property="og:description" content="Estimate required pressure-tank drawdown and nominal volume from pump flow, minimum run time, precharge, cut-in and cut-out pressure.">
+  <meta property="og:url" content="https://watersystemsbench.com/tools/pressure-tank-sizing-calculator/">
+  <meta property="og:image" content="https://watersystemsbench.com/assets/og.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/content.css">
+  <link rel="stylesheet" href="/assets/css/calculator.css">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7FB08YPX7C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7FB08YPX7C');
+</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","@id":"https://watersystemsbench.com/tools/pressure-tank-sizing-calculator/#application","name":"Pressure Tank Sizing Calculator","description":"Estimate required pressure-tank drawdown and nominal volume from pump flow, minimum run time, precharge, cut-in and cut-out pressure.","url":"https://watersystemsbench.com/tools/pressure-tank-sizing-calculator/","applicationCategory":"EngineeringApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript"},{"@type":"BreadcrumbList","@id":"https://watersystemsbench.com/tools/pressure-tank-sizing-calculator/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://watersystemsbench.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://watersystemsbench.com/tools/"},{"@type":"ListItem","position":3,"name":"Pressure Tank Sizing Calculator","item":"https://watersystemsbench.com/tools/pressure-tank-sizing-calculator/"}]}]}</script>
+  <script type="module" src="/assets/js/partials.js"></script>
+  <script type="module" src="/assets/js/main.js"></script>
+  <script type="module" src="/assets/js/tools/pressure-tank-sizing.js"></script>
+</head>
+<body>
+  <div data-header-slot></div>
+  <main id="main-content">
+    <div class="page-shell">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/tools/">Tools</a></li><li><span aria-current="page">Pressure Tank Sizing Calculator</span></li></ol></nav>
+      <header class="hero compact"><div><p class="eyebrow">Wells, storage & rainwater / Calculator</p><h1>Pressure Tank Sizing Calculator</h1><p class="lede">Estimate required pressure-tank drawdown and nominal volume from pump flow, minimum run time, precharge, cut-in and cut-out pressure.</p></div><p class="hero-note">Preliminary planning output only. Use measured data where possible and verify manufacturer and jurisdiction-specific requirements.</p></header>
+  <p class="meta-line">Last reviewed: July 28, 2026 · SI first · US customary supported</p>
+  <div class="tool-layout"><section class="instrument-panel"><div class="panel-heading"><h2>Bench inputs</h2><span class="panel-code">INPUT / SET</span></div><form data-tool-form="pressure-tank"><div class="field full"><label for="unitSystem">Unit system</label><select id="unitSystem" name="unitSystem" data-unit-system><option value="SI">SI — metric</option><option value="US">US customary</option></select></div><div class="field-grid"><div class="field "><label for="pumpFlow">Pump flow at cut-out (<span data-unit-label="flow"></span>)</label><input id="pumpFlow" name="pumpFlow" data-label="Pump flow at cut-out" type="number" value="40" data-unit-kind="flow" step="any" required></div><div class="field "><label for="runTime">Minimum pump run time (minutes)</label><input id="runTime" name="runTime" data-label="Minimum pump run time (minutes)" type="number" value="1"  step="any" required></div><div class="field "><label for="precharge">Tank precharge gauge pressure (<span data-unit-label="pressure"></span>)</label><input id="precharge" name="precharge" data-label="Tank precharge gauge pressure" type="number" value="193" data-unit-kind="pressure" step="any" required></div><div class="field "><label for="cutIn">Pump cut-in gauge pressure (<span data-unit-label="pressure"></span>)</label><input id="cutIn" name="cutIn" data-label="Pump cut-in gauge pressure" type="number" value="207" data-unit-kind="pressure" step="any" required></div><div class="field "><label for="cutOut">Pump cut-out gauge pressure (<span data-unit-label="pressure"></span>)</label><input id="cutOut" name="cutOut" data-label="Pump cut-out gauge pressure" type="number" value="345" data-unit-kind="pressure" step="any" required></div></div><p class="form-error" data-form-error role="alert"></p><div class="button-row"><button class="button" type="submit">Size pressure tank</button><button class="button secondary" type="reset">Reset</button></div></form></section><section class="result-panel" aria-label="Result">
+    <div class="panel-heading"><h2>Operating report</h2><span class="panel-code">RESULT / LIVE</span></div>
+    <div class="result-empty"><p>Enter the known values, then calculate to build a result summary.</p></div>
+    <div class="result-report" aria-live="polite" hidden>
+      <div class="primary-reading"><span class="reading-label"></span><span class="reading-value"></span></div>
+      <div class="result-block"><h3>Supporting calculations</h3><ul data-supporting></ul></div>
+      <div class="result-block"><h3>Interpretation</h3><p data-interpretation></p></div>
+      <p class="result-warning" data-warning></p>
+      <div class="result-actions"><button class="button small secondary" type="button" data-result-action data-copy-result disabled>Copy result</button><button class="button small secondary" type="button" data-result-action data-print-result disabled>Print result</button></div>
+    </div>
+  </section></div>
+  <div class="content-layout"><article class="article-body">
+    <h2>What this tool does</h2><p>Convert a target minimum pump run time into required drawdown, then estimate the idealized nominal precharged-tank volume at the entered settings.</p>
+    <h2>When to use it</h2><p>Use for preliminary conventional on/off pump systems. Select the actual tank from manufacturer drawdown tables at the exact pressure switch settings.</p>
+    <h2>Inputs and supported units</h2><p>Each labelled field explains the quantity it expects. Unit-system changes convert existing numeric entries once and keep calculations on a single SI internal basis. Supported shared units include L/min and GPM, metres and feet, kPa and psi, millimetres and inches, kW and hp, and °C and °F as relevant.</p>
+    <h2>Calculation or decision method</h2><div class="formula">Required drawdown = pump flow × minimum run time</div><div class="formula">Drawdown fraction = P₀(abs) × [1/P<sub>in</sub>(abs) − 1/P<sub>out</sub>(abs)]</div><p>Gauge pressures are converted to absolute by adding atmospheric pressure. The tool requires precharge &lt; cut-in &lt; cut-out.</p>
+    <h2>How to interpret the result</h2><p>Read the primary result with the supporting breakdown and warning. A plausible number is not evidence that every input, operating case or design constraint has been included.</p>
+    <div class="worked-example"><h2>Worked example</h2><p>A 40 L/min pump with a 1-minute target needs 40 L drawdown. At 193 kPa precharge and 207/345 kPa cut-in/out, the idealized fraction is about 29.5%, requiring roughly 136 L nominal volume.</p></div>
+    <h2>Assumptions</h2><p>Ideal-gas behavior, fixed atmospheric pressure and a conventional captive-air tank without thermal or bladder-volume corrections.</p>
+    <h2>Limitations</h2><p>The idealized result does not replace rated manufacturer drawdown, code rules, motor start limits or variable-speed system guidance.</p>
+    <div class="notice"><strong>Safety and review boundary.</strong> A pressure tank is a sealed pressure vessel. Isolate power and fully release water pressure before checking precharge; follow the tank and pump instructions.</div>
+    <h2>Sources</h2><ul class="source-list"><li><a href="https://www.pentair.com/content/dam/extranet/web/nam/pro-source/manuals/steel-pressure-tanks-manual.pdf" rel="noopener noreferrer">Pentair — Steel Pressure Tanks Owner’s Manual</a></li><li><a href="https://www.pumps.org/resources/pump-faqs/" rel="noopener noreferrer">Hydraulic Institute — Pump FAQs</a></li></ul>
+    <section aria-labelledby="related-heading"><h2 id="related-heading">Continue the workflow</h2><div class="related-grid"><a href="/tools/pump-short-cycling-analyzer/">Pump Short-Cycling Analyzer<br><span class="meta-line">Open next →</span></a><a href="/guides/pressure-tank-drawdown-short-cycling/">Pressure Tank Drawdown & Short Cycling<br><span class="meta-line">Open next →</span></a><a href="/tools/well-borehole-pump-sizing-planner/">Well & Borehole Pump Sizing Planner<br><span class="meta-line">Open next →</span></a><a href="/tools/low-water-pressure-troubleshooter/">Low Water Pressure Troubleshooter<br><span class="meta-line">Open next →</span></a><a href="/systems/wells-storage-rainwater/">Parent wells and rainwater workflow<br><span class="meta-line">Open next →</span></a></div></section>
+  </article><aside class="sidebar"><h2>Bench sequence</h2><ul><li><a href="/systems/wells-storage-rainwater/">Wells, Storage & Rainwater workflow</a></li><li><a href="/guides/complete-well-water-system-planning/">Plan the connected source system</a></li><li><a href="/reference/water-demand-planning-factors/">Check demand factors</a></li><li><a href="/contact/">Report a content issue</a></li></ul></aside></div>
+    </div>
+  </main>
+  <div data-footer-slot></div>
+</body>
+</html>

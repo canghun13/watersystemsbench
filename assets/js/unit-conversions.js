@@ -6,7 +6,10 @@ export const conversions = {
   diameter: { toUS: (v) => v / 25.4, toSI: (v) => v * 25.4, si: "mm", us: "in" },
   length: { toUS: (v) => v * 3.280839895, toSI: (v) => v / 3.280839895, si: "m", us: "ft" },
   temperature: { toUS: (v) => (v * 9 / 5) + 32, toSI: (v) => (v - 32) * 5 / 9, si: "°C", us: "°F" },
-  power: { toUS: (v) => v / 0.745699872, toSI: (v) => v * 0.745699872, si: "kW", us: "hp" }
+  power: { toUS: (v) => v / 0.745699872, toSI: (v) => v * 0.745699872, si: "kW", us: "hp" },
+  volume: { toUS: (v) => v / 3.785411784, toSI: (v) => v * 3.785411784, si: "L", us: "US gal" },
+  area: { toUS: (v) => v * 10.763910417, toSI: (v) => v / 10.763910417, si: "m²", us: "ft²" },
+  rainfall: { toUS: (v) => v / 25.4, toSI: (v) => v * 25.4, si: "mm", us: "in" }
 };
 
 export const toSI = (value, kind, system) => system === "US" ? conversions[kind].toSI(Number(value)) : Number(value);

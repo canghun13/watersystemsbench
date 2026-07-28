@@ -7,6 +7,7 @@ function setCurrentNav() {
     const active = target === "/" ? path === "/" : path.startsWith(target);
     if (active) link.setAttribute("aria-current", "page");
   });
+  if (path.startsWith("/systems/")) document.querySelector(".systems-menu > summary")?.setAttribute("aria-current", "page");
 }
 
 function setupMenu() {
@@ -17,6 +18,7 @@ function setupMenu() {
   const close = ({ restore = false } = {}) => {
     nav.classList.remove("is-open");
     button.setAttribute("aria-expanded", "false");
+    nav.querySelector(".systems-menu")?.removeAttribute("open");
     if (restore && previousFocus) previousFocus.focus();
   };
   const open = () => {

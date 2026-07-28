@@ -5,20 +5,20 @@
 
 Water Systems Bench is an English-language, global practical workflow hub for sizing, checking, troubleshooting, and planning real-world water systems from source to use. It is a connected system resource—not simply a collection of individual calculators.
 
-Phase 1 implements the static site foundation and the Pumps, Pressure & Pipe Flow cluster using static HTML, CSS, and vanilla JavaScript for deployment through GitHub Pages and Cloudflare.
+Phase 1 and Phase 2 implement the static site foundation plus the Pumps, Pressure & Pipe Flow and Wells, Storage & Rainwater clusters using static HTML, CSS, and vanilla JavaScript for deployment through GitHub Pages and Cloudflare.
 
 **Official contact:** [canghun13@naver.com](mailto:canghun13@naver.com)
 **GA4 measurement ID:** `G-7FB08YPX7C`
 
 ## Implemented scope
 
-- 25 public HTML pages: 7 core pages, 1 system hub, 9 tools, 3 guides, and 5 references
+- 40 public HTML pages: 7 core pages, 2 system hubs, 17 tools, 8 guides, and 6 references
 - Hydraulic Field Bench design system with responsive and accessible navigation
 - SI-first calculations with common US customary units
 - Unique metadata, canonical URLs, Open Graph data, JSON-LD, breadcrumbs, GA4, sitemap, robots, and `llms.txt`
 - Repeatable static, calculation, navigation, and browser-result QA
 
-The full plan remains 65 public pages. The other 40 pages have not been created as empty or inactive pages.
+The full plan remains 65 public pages. The other 25 pages have not been created as empty or inactive pages.
 
 ## Local preview and QA
 

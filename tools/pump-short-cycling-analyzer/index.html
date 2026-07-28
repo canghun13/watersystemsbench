@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pump Short-Cycling Analyzer | Water Systems Bench</title>
+  <meta name="description" content="Screen observed pump starts against pressure-tank drawdown, demand and pump flow with explicit zero-demand and high-demand handling.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://watersystemsbench.com/tools/pump-short-cycling-analyzer/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Water Systems Bench">
+  <meta property="og:title" content="Pump Short-Cycling Analyzer | Water Systems Bench">
+  <meta property="og:description" content="Screen observed pump starts against pressure-tank drawdown, demand and pump flow with explicit zero-demand and high-demand handling.">
+  <meta property="og:url" content="https://watersystemsbench.com/tools/pump-short-cycling-analyzer/">
+  <meta property="og:image" content="https://watersystemsbench.com/assets/og.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/content.css">
+  <link rel="stylesheet" href="/assets/css/calculator.css">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7FB08YPX7C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7FB08YPX7C');
+</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","@id":"https://watersystemsbench.com/tools/pump-short-cycling-analyzer/#application","name":"Pump Short-Cycling Analyzer","description":"Screen observed pump starts against pressure-tank drawdown, demand and pump flow with explicit zero-demand and high-demand handling.","url":"https://watersystemsbench.com/tools/pump-short-cycling-analyzer/","applicationCategory":"EngineeringApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript"},{"@type":"BreadcrumbList","@id":"https://watersystemsbench.com/tools/pump-short-cycling-analyzer/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://watersystemsbench.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://watersystemsbench.com/tools/"},{"@type":"ListItem","position":3,"name":"Pump Short-Cycling Analyzer","item":"https://watersystemsbench.com/tools/pump-short-cycling-analyzer/"}]}]}</script>
+  <script type="module" src="/assets/js/partials.js"></script>
+  <script type="module" src="/assets/js/main.js"></script>
+  <script type="module" src="/assets/js/tools/short-cycling.js"></script>
+</head>
+<body>
+  <div data-header-slot></div>
+  <main id="main-content">
+    <div class="page-shell">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/tools/">Tools</a></li><li><span aria-current="page">Pump Short-Cycling Analyzer</span></li></ol></nav>
+      <header class="hero compact"><div><p class="eyebrow">Wells, storage & rainwater / Analyzer</p><h1>Pump Short-Cycling Analyzer</h1><p class="lede">Screen observed pump starts against pressure-tank drawdown, demand and pump flow with explicit zero-demand and high-demand handling.</p></div><p class="hero-note">Preliminary planning output only. Use measured data where possible and verify manufacturer and jurisdiction-specific requirements.</p></header>
+  <p class="meta-line">Last reviewed: July 28, 2026 · SI first · US customary supported</p>
+  <div class="tool-layout"><section class="instrument-panel"><div class="panel-heading"><h2>Bench inputs</h2><span class="panel-code">INPUT / SET</span></div><form data-tool-form="short-cycling"><div class="field full"><label for="unitSystem">Unit system</label><select id="unitSystem" name="unitSystem" data-unit-system><option value="SI">SI — metric</option><option value="US">US customary</option></select></div><div class="field-grid"><div class="field "><label for="starts">Observed pump starts</label><input id="starts" name="starts" data-label="Observed pump starts" type="number" value="6"  step="any" required></div><div class="field "><label for="observation">Observation period (minutes)</label><input id="observation" name="observation" data-label="Observation period (minutes)" type="number" value="20"  step="any" required></div><div class="field "><label for="drawdown">Usable tank drawdown (<span data-unit-label="volume"></span>)</label><input id="drawdown" name="drawdown" data-label="Usable tank drawdown" type="number" value="30" data-unit-kind="volume" step="any" required></div><div class="field "><label for="demand">Demand during observation (<span data-unit-label="flow"></span>)</label><input id="demand" name="demand" data-label="Demand during observation" type="number" value="10" data-unit-kind="flow" step="any" required></div><div class="field "><label for="pumpFlow">Pump flow while running (<span data-unit-label="flow"></span>)</label><input id="pumpFlow" name="pumpFlow" data-label="Pump flow while running" type="number" value="40" data-unit-kind="flow" step="any" required></div></div><p class="form-error" data-form-error role="alert"></p><div class="button-row"><button class="button" type="submit">Analyze cycling</button><button class="button secondary" type="reset">Reset</button></div></form></section><section class="result-panel" aria-label="Result">
+    <div class="panel-heading"><h2>Operating report</h2><span class="panel-code">RESULT / LIVE</span></div>
+    <div class="result-empty"><p>Enter the known values, then calculate to build a result summary.</p></div>
+    <div class="result-report" aria-live="polite" hidden>
+      <div class="primary-reading"><span class="reading-label"></span><span class="reading-value"></span></div>
+      <div class="result-block"><h3>Supporting calculations</h3><ul data-supporting></ul></div>
+      <div class="result-block"><h3>Interpretation</h3><p data-interpretation></p></div>
+      <p class="result-warning" data-warning></p>
+      <div class="result-actions"><button class="button small secondary" type="button" data-result-action data-copy-result disabled>Copy result</button><button class="button small secondary" type="button" data-result-action data-print-result disabled>Print result</button></div>
+    </div>
+  </section></div>
+  <div class="content-layout"><article class="article-body">
+    <h2>What this tool does</h2><p>Translate an observed start count into starts per hour and compare it with a simplified pressure-tank fill-and-draw cycle.</p>
+    <h2>When to use it</h2><p>Use after safely observing pressure and start behavior. It helps organize measurements before inspecting the tank, switch, check valve, leaks or controls.</p>
+    <h2>Inputs and supported units</h2><p>Each labelled field explains the quantity it expects. Unit-system changes convert existing numeric entries once and keep calculations on a single SI internal basis. Supported shared units include L/min and GPM, metres and feet, kPa and psi, millimetres and inches, kW and hp, and °C and °F as relevant.</p>
+    <h2>Calculation or decision method</h2><div class="formula">Off-time = drawdown / demand; on-time = drawdown / (pump flow − demand)</div><p>The refill model is unavailable when demand equals or exceeds pump flow. At zero demand, repeated cycling points away from normal drawdown consumption.</p>
+    <h2>How to interpret the result</h2><p>Read the primary result with the supporting breakdown and warning. A plausible number is not evidence that every input, operating case or design constraint has been included.</p>
+    <div class="worked-example"><h2>Worked example</h2><p>Six starts in 20 minutes is 18 starts/hour. With 30 L drawdown, 10 L/min demand and 40 L/min pump flow, modeled off/on times are 3 and 1 minutes, or 15 starts/hour.</p></div>
+    <h2>Assumptions</h2><p>Constant demand and pump flow during a cycle, usable drawdown is known, and observed starts are counted consistently.</p>
+    <h2>Limitations</h2><p>The model does not diagnose bladder failure, switch chatter, air charge, a leaking check valve, variable-speed controls or motor limits.</p>
+    <div class="notice"><strong>Safety and review boundary.</strong> Do not open energized controls or work on a pressurized vessel. Use the pump/motor manufacturer’s allowable starts and service procedures.</div>
+    <h2>Sources</h2><ul class="source-list"><li><a href="https://www.pentair.com/content/dam/extranet/web/nam/pro-source/manuals/steel-pressure-tanks-manual.pdf" rel="noopener noreferrer">Pentair — Steel Pressure Tanks Owner’s Manual</a></li><li><a href="https://www.energy.gov/cmei/ito/pump-systems" rel="noopener noreferrer">U.S. Department of Energy — Pump Systems</a></li><li><a href="https://www.pumps.org/resources/pump-faqs/" rel="noopener noreferrer">Hydraulic Institute — Pump FAQs</a></li></ul>
+    <section aria-labelledby="related-heading"><h2 id="related-heading">Continue the workflow</h2><div class="related-grid"><a href="/tools/pressure-tank-sizing-calculator/">Pressure Tank Sizing Calculator<br><span class="meta-line">Open next →</span></a><a href="/guides/pressure-tank-drawdown-short-cycling/">Pressure Tank Drawdown & Short Cycling<br><span class="meta-line">Open next →</span></a><a href="/tools/low-water-pressure-troubleshooter/">Low Water Pressure Troubleshooter<br><span class="meta-line">Open next →</span></a><a href="/tools/well-yield-demand-checker/">Well Yield vs Demand Checker<br><span class="meta-line">Open next →</span></a><a href="/systems/wells-storage-rainwater/">Parent wells and rainwater workflow<br><span class="meta-line">Open next →</span></a></div></section>
+  </article><aside class="sidebar"><h2>Bench sequence</h2><ul><li><a href="/systems/wells-storage-rainwater/">Wells, Storage & Rainwater workflow</a></li><li><a href="/guides/complete-well-water-system-planning/">Plan the connected source system</a></li><li><a href="/reference/water-demand-planning-factors/">Check demand factors</a></li><li><a href="/contact/">Report a content issue</a></li></ul></aside></div>
+    </div>
+  </main>
+  <div data-footer-slot></div>
+</body>
+</html>
