@@ -190,6 +190,7 @@ This section is the authoritative current-state handover. Earlier phase and proj
 - Repository at start: clean, with local `HEAD` equal to `origin/main`.
 - Added the fourth hub at `/systems/water-treatment-quality/`, eight working tools, three guides and two references.
 - Corrected the earlier planning-only treatment hub route `/tools/water-treatment-quality/` to the system-hub convention `/systems/water-treatment-quality/`.
+- Resolved request-draft route variants to the pre-existing `docs/page-inventory.md` contract, as the request explicitly gave that inventory precedence: `/guides/how-to-read-a-water-test-report/` → `/guides/read-water-test-report/`; `/guides/water-treatment-technology-comparison/` → `/guides/filter-softener-ro-uv-comparison/`; `/guides/build-a-water-treatment-train/` → `/guides/build-water-treatment-train/`; `/reference/water-quality-parameter-glossary/` → `/reference/water-quality-glossary/`; and `/reference/water-treatment-technology-comparison-matrix/` → `/reference/water-treatment-comparison-matrix/`.
 - Current public inventory: 65 pages — 7 core, 4 system hubs, 32 tools, 14 guides and 8 references. Remaining initial planned pages: 0.
 - Updated home, system navigation, footer, indexes, cross-cluster links, canonical metadata, JSON-LD, sitemap and `llms.txt`.
 - Preserved the user-managed KittyLaunch homepage badge exactly in its original location and did not copy it to other pages.
