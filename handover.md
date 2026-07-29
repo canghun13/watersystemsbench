@@ -202,7 +202,11 @@ This section is the authoritative current-state handover. Earlier phase and proj
 - All eight treatment tools passed default calculation/selection, invalid input where applicable, reset, relevant SI/US switching, copy and print checks. The positive-microbiology selector path produced urgent safe-source/public-authority guidance.
 - Local browser failures after verification: zero console errors, page errors, asset failures, internal 404s and horizontal overflows.
 - `tools-qa/browser-results.json` records the actual current browser run.
-- Production verification remains pending until the commit is pushed and GitHub Pages/Cloudflare serves the new release.
+- Implementation commit: `f0b9cf2f0fffed80c73bc2152fe708e0c59ab420` (`Build water treatment and quality cluster`).
+- GitHub Pages deployment completed successfully for that exact commit: `https://github.com/canghun13/watersystemsbench/actions/runs/30423579476`.
+- Production verification passed after a Cloudflare cache-bypass request: homepage, treatment hub, representative softener/RO/chlorine/selector tools, water-test guide, glossary and sitemap returned HTTP 200 with current canonical/GA4/content.
+- Production sitemap contained 65 unique URLs and included the treatment hub and final glossary route.
+- Live interaction checks passed: the default softener case returned 22,190 grains; the user-entered chlorine case returned 0.1636 L with its chemical warning; the positive-microbiology selector returned an urgent validated-barrier path with alternate-safe-source and health-authority guidance.
 
 ### Next maintenance direction
 
