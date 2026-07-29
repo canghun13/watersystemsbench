@@ -182,6 +182,32 @@ The Irrigation & Sprinkler Systems specification commit is the final `git rev-pa
 - QA: static and navigation QA passed for 51 public pages; 49 irrigation numeric/validation checks and six irrigation troubleshooting scenarios passed; existing Phase 1/2 checks passed. Browser QA recorded 255 renders (51 pages × 390, 768, 1024, 1280 and 1440 px), zero horizontal overflows and zero console errors. The available-flow calculator’s 30 L/min worked example was exercised in the browser.
 - Sitemap, robots, llms.txt, home, hubs, tools/guides indexes and shared system navigation now include the implemented cluster. GA4 remains exactly `G-7FB08YPX7C`; official contact remains `canghun13@naver.com`.
 - Remaining risk: local browser verification cannot prove GitHub Pages/Cloudflare propagation before push. Verify production URLs and current manufacturer/local-requirement conditions after deployment.
+## Water Treatment & Water Quality Implementation — 2026-07-29
+
+This section is the authoritative current-state handover. Earlier phase and projection sections above are retained as release history.
+
+- Starting branch and commit: `main` at `060ebcc9789ee2bd16c57b998893e86d08099068`.
+- Repository at start: clean, with local `HEAD` equal to `origin/main`.
+- Added the fourth hub at `/systems/water-treatment-quality/`, eight working tools, three guides and two references.
+- Corrected the earlier planning-only treatment hub route `/tools/water-treatment-quality/` to the system-hub convention `/systems/water-treatment-quality/`.
+- Current public inventory: 65 pages — 7 core, 4 system hubs, 32 tools, 14 guides and 8 references. Remaining initial planned pages: 0.
+- Updated home, system navigation, footer, indexes, cross-cluster links, canonical metadata, JSON-LD, sitemap and `llms.txt`.
+- Preserved the user-managed KittyLaunch homepage badge exactly in its original location and did not copy it to other pages.
+- Added treatment calculation/decision logic for softener capacity, salt/regeneration planning, RO water balance, RO production/demand, media loading, user-entered chlorine-dose arithmetic, user-entered CT comparison and test-led treatment-train selection.
+- Chemical dose and CT tools do not choose a target. All treatment pages state that results do not establish potable safety, certified performance, regulatory compliance or an approved design.
+- Added official source mapping from EPA, CDC, NSF, WHO and USGS material.
+- Calculation QA passed: existing regressions plus 65 treatment numeric/validation checks and 15 selector scenarios.
+- Static QA passed for 65 public pages; navigation QA passed for 67 repository HTML documents.
+- Actual local browser QA passed: 65 pages × five widths = 325 render checks at 390, 768, 1024, 1280 and 1440 px.
+- All eight treatment tools passed default calculation/selection, invalid input where applicable, reset, relevant SI/US switching, copy and print checks. The positive-microbiology selector path produced urgent safe-source/public-authority guidance.
+- Local browser failures after verification: zero console errors, page errors, asset failures, internal 404s and horizontal overflows.
+- `tools-qa/browser-results.json` records the actual current browser run.
+- Production verification remains pending until the commit is pushed and GitHub Pages/Cloudflare serves the new release.
+
+### Next maintenance direction
+
+The initial 65-page scope is complete. Prefer evidence-led maintenance, indexing and usability improvements over publishing empty expansion pages. Any future cluster requires its own distinct route inventory, source/formula contract, safety boundaries and complete regression/browser QA.
+
 ## 2026-07-29
 
 - 메인 페이지 푸터 아래의 디렉토리 뱃지 영역은 사용자가 직접 관리하는 영역이므로 수정·삭제·리팩터링하지 않는다.- https://kittylaunch.com에 등록 (내가 직접함)

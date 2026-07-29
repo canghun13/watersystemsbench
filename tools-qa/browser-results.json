@@ -1,10 +1,11 @@
 {
   "date": "2026-07-29",
-  "pages": 51,
+  "pages": 65,
   "widths": [390, 768, 1024, 1280, 1440],
-  "renderChecks": 255,
-  "toolInteractions": 24,
+  "renderChecks": 325,
+  "toolInteractions": 32,
   "phase2ToolInteractions": 15,
+  "treatmentToolInteractions": 8,
   "mobileMenu": "passed",
   "calculateAnalyze": "passed",
   "reset": "passed",
@@ -20,6 +21,9 @@
   "brokenImages": 0,
   "systemsMenu": "passed",
   "firstFlushModes": "passed",
-  "issuesFound": 0,
-  "issuesFixed": []
+  "issuesFound": 2,
+  "issuesFixed": [
+    "Added optional media bed depth with geometric bed-volume output and unit conversion.",
+    "Added selector questions and rule paths for undefined service flow, existing equipment and limited service space."
+  ]
 }

@@ -16,6 +16,7 @@ import { computeRainwaterYield } from "../assets/js/tools/rainwater-yield.js";
 import { simulateRainwater } from "../assets/js/tools/rainwater-simulator.js";
 import { computeFirstFlush } from "../assets/js/tools/first-flush.js";
 import { computeDrip, computeFlowTest, computePrecipitation, computePumpZone, computeRuntime, computeZoneCapacity, diagnoseIrrigation } from "../assets/js/tools/irrigation-tools.js";
+import { computeChlorineDose, computeContactTime, computeMediaFilter, computeRoProduction, computeRoRecovery, computeSaltRegeneration, computeSoftenerSizing, selectTreatmentTrain } from "../assets/js/tools/treatment-tools.js";
 import { conversions, headToPressure, pressureToHead } from "../assets/js/unit-conversions.js";
 
 let numericCases = 0;
@@ -24,6 +25,8 @@ let phase2Cases = 0;
 let simulatorCases = 0;
 let irrigationCases = 0;
 let irrigationDiagnosticCases = 0;
+let treatmentCases = 0;
+let treatmentSelectorCases = 0;
 const failures = [];
 
 function approx(name, actual, expected, tolerance) {
@@ -53,6 +56,14 @@ function irrigationApprox(name, actual, expected, tolerance = 1e-8) {
 }
 function irrigationExact(name, actual, expected) {
   irrigationCases += 1;
+  if (actual !== expected) failures.push(`${name}: expected ${expected}, received ${actual}`);
+}
+function treatmentApprox(name, actual, expected, tolerance = 1e-8) {
+  treatmentCases += 1;
+  if (!Number.isFinite(actual) || Math.abs(actual - expected) > tolerance) failures.push(`${name}: expected ${expected} ± ${tolerance}, received ${actual}`);
+}
+function treatmentExact(name, actual, expected) {
+  treatmentCases += 1;
   if (actual !== expected) failures.push(`${name}: expected ${expected}, received ${actual}`);
 }
 
@@ -206,8 +217,134 @@ matcher = computePumpZone({ pumpFlowLpm: 85, pumpHeadM: 36, zoneFlowLpm: 80, ope
 
 for (const [name, input, expected] of [["T1", { scope: "zone", filter: "yes", leak: "no", nozzle: "no", pump: "no", dynamic: "no" }, "Zone valve/filter restriction"], ["T2", { scope: "all", filter: "no", leak: "no", nozzle: "no", pump: "no", dynamic: "yes" }, "Source-wide flow/pressure limitation"], ["T3", { scope: "zone", filter: "no", leak: "no", nozzle: "yes", pump: "no", dynamic: "no" }, "Excess zone demand"], ["T4", { scope: "one", filter: "no", leak: "no", nozzle: "no", pump: "no", dynamic: "no" }, "Individual head/nozzle obstruction"], ["T5", { scope: "zone", filter: "no", leak: "yes", nozzle: "no", pump: "no", dynamic: "no" }, "Active leak/lateral problem"], ["T6", { scope: "all", filter: "no", leak: "no", nozzle: "no", pump: "yes", dynamic: "yes" }, "Pump/source behavior"]]) { irrigationDiagnosticCases += 1; if (diagnoseIrrigation(input).cause !== expected) failures.push(`${name}: expected ${expected}.`); }
 
+// Water treatment cluster: 65 independent numeric, state, and validation checks.
+let softener = computeSoftenerSizing({ hardness: 171.18061, hardnessUnit: "mgL", dailyUseL: 1000, regenerationDays: 7, reservePercent: 20, peakFlowLpm: 40 });
+treatmentApprox("WT-S1 hardness conversion", softener.hardnessGpg, 10);
+treatmentApprox("WT-S2 daily US gallons", softener.dailyGallons, 264.17205236);
+treatmentApprox("WT-S3 daily grain load", softener.dailyGrainLoad, 2641.7205236, 1e-7);
+treatmentApprox("WT-S4 working capacity", softener.workingCapacityGrains, 18492.0436652, 1e-6);
+treatmentApprox("WT-S5 reserve capacity", softener.reserveAdjustedCapacityGrains, 22190.45239824, 1e-6);
+softener = computeSoftenerSizing({ hardness: 15, hardnessUnit: "gpg", dailyUseL: 378.5411784, regenerationDays: 5, reservePercent: 0, ironMgL: 2, ironFactorGpgPerMgL: 4, peakFlowLpm: 50 });
+treatmentApprox("WT-S6 iron allowance", softener.ironAllowanceGpg, 8);
+treatmentApprox("WT-S7 adjusted hardness", softener.adjustedHardnessGpg, 23);
+treatmentApprox("WT-S8 direct-gpg daily load", softener.dailyGrainLoad, 2300);
+let treatmentInvalid = false;
+try { computeSoftenerSizing({ hardness: 10, hardnessUnit: "gpg", dailyUseL: 1000, regenerationDays: 7, reservePercent: 10, ironMgL: 1, peakFlowLpm: 40 }); } catch { treatmentInvalid = true; }
+treatmentExact("WT-S9 iron factor required", treatmentInvalid, true);
+
+const salt = computeSaltRegeneration({ dailyGrainLoad: 3000, usableCapacityGrains: 30000, saltDoseKg: 4, reservePercent: 10, regenerationWaterL: 200, saltPricePerKg: 1.5, waterPricePerM3: 2 });
+treatmentApprox("WT-R1 service capacity", salt.serviceCapacityGrains, 27000);
+treatmentApprox("WT-R2 regeneration interval", salt.daysBetweenRegeneration, 9);
+treatmentApprox("WT-R3 monthly regenerations", salt.regenerationsPerMonth, 3.3819444444);
+treatmentApprox("WT-R4 annual regenerations", salt.regenerationsPerYear, 40.5833333333);
+treatmentApprox("WT-R5 annual salt", salt.saltKgPerYear, 162.3333333333);
+treatmentApprox("WT-R6 salt efficiency", salt.saltEfficiencyGrainsPerLb, 3401.9427751, 1e-6);
+treatmentApprox("WT-R7 annual regeneration water", salt.regenerationWaterLPerYear, 8116.6666667, 1e-7);
+treatmentApprox("WT-R8 annual salt cost", salt.annualSaltCost, 243.5);
+treatmentApprox("WT-R9 annual water cost", salt.annualWaterCost, 16.2333333333);
+
+let roBalance = computeRoRecovery({ mode: "flow", feedLpm: 10, permeateLpm: 4, operatingHours: 8, operatingDays: 30 });
+treatmentApprox("WT-RO1 recovery from flows", roBalance.recoveryPercent, 40);
+treatmentApprox("WT-RO2 reject flow", roBalance.rejectLpm, 6);
+treatmentApprox("WT-RO3 daily product", roBalance.dailyProductL, 1920);
+treatmentApprox("WT-RO4 daily reject", roBalance.dailyRejectL, 2880);
+treatmentApprox("WT-RO5 period product", roBalance.periodProductL, 57600);
+treatmentApprox("WT-RO6 period reject", roBalance.periodRejectL, 86400);
+roBalance = computeRoRecovery({ mode: "recovery", feedLpm: 10, recoveryPercent: 50, operatingHours: 24, operatingDays: 1 });
+treatmentApprox("WT-RO7 product from recovery", roBalance.productLpm, 5);
+treatmentApprox("WT-RO8 full-day product", roBalance.dailyProductL, 7200);
+treatmentInvalid = false;
+try { computeRoRecovery({ mode: "flow", feedLpm: 10, permeateLpm: 10, operatingHours: 8, operatingDays: 1 }); } catch { treatmentInvalid = true; }
+treatmentExact("WT-RO9 permeate below feed enforced", treatmentInvalid, true);
+
+let roProduction = computeRoProduction({ ratedProductionL: 2000, ratingHours: 24, actualOperatingHours: 20, temperatureFactor: .9, pressureFactor: .95, otherFactor: .98, dailyDemandL: 1200, peakDemandL: 500, peakHours: 4, usableStorageL: 600, initialStoredL: 400, reservePercent: 10 });
+treatmentApprox("WT-P1 adjusted production", roProduction.adjustedDailyProductionL, 1396.5);
+treatmentApprox("WT-P2 reserve-adjusted demand", roProduction.reserveAdjustedDemandL, 1320);
+treatmentApprox("WT-P3 daily balance", roProduction.dailyBalanceL, 76.5);
+treatmentApprox("WT-P4 peak production", roProduction.productionDuringPeakL, 232.75);
+treatmentApprox("WT-P5 peak storage need", roProduction.peakStorageNeedL, 267.25);
+treatmentApprox("WT-P6 required buffer", roProduction.requiredStorageBufferL, 267.25);
+treatmentApprox("WT-P7 storage margin", roProduction.storageMarginL, 132.75);
+treatmentExact("WT-P8 balanced status", roProduction.status, "Balanced");
+treatmentExact("WT-P9 no refill estimate", roProduction.refillHours, null);
+roProduction = computeRoProduction({ ratedProductionL: 1000, ratingHours: 24, actualOperatingHours: 24, temperatureFactor: 1, pressureFactor: 1, otherFactor: 1, dailyDemandL: 1200, peakDemandL: 0, peakHours: 0, usableStorageL: 500, reservePercent: 0 });
+treatmentExact("WT-P10 daily deficit status", roProduction.status, "Daily deficit");
+treatmentApprox("WT-P11 deficit buffer", roProduction.requiredStorageBufferL, 200);
+treatmentInvalid = false;
+try { computeRoProduction({ ratedProductionL: 1000, ratingHours: 24, actualOperatingHours: 24, temperatureFactor: 0, pressureFactor: 1, otherFactor: 1, dailyDemandL: 500, peakDemandL: 0, peakHours: 0, usableStorageL: 500, reservePercent: 0 }); } catch { treatmentInvalid = true; }
+treatmentExact("WT-P12 zero correction factor blocked", treatmentInvalid, true);
+
+let media = computeMediaFilter({ shape: "circle", flowLpm: 100, diameterM: 1, vessels: 2, bedDepthM: 1.2, backwashFlowLpm: 300, serviceLimitLpmM2: 70, backwashLimitLpmM2: 180 });
+treatmentApprox("WT-M1 circular area per vessel", media.areaPerVesselM2, .785398163397);
+treatmentApprox("WT-M2 circular total area", media.totalAreaM2, 1.570796326795);
+treatmentApprox("WT-M3 flow per vessel", media.flowPerVesselLpm, 50);
+treatmentApprox("WT-M4 service loading", media.serviceLoadingLpmM2, 63.6619772368);
+treatmentApprox("WT-M5 backwash loading", media.backwashLoadingLpmM2, 190.9859317103);
+treatmentApprox("WT-M6 service margin", media.serviceMarginLpmM2, 6.3380227632);
+treatmentApprox("WT-M7 backwash margin", media.backwashMarginLpmM2, 10.9859317103);
+treatmentApprox("WT-M8 geometric bed volume", media.bedVolumeM3, 1.8849555922);
+media = computeMediaFilter({ shape: "area", flowLpm: 80, areaM2: .5, vessels: 4 });
+treatmentApprox("WT-M9 direct total area", media.totalAreaM2, 2);
+treatmentApprox("WT-M10 direct service loading", media.serviceLoadingLpmM2, 40);
+
+let chlorine = computeChlorineDose({ waterVolumeL: 10000, targetDoseMgL: 2, existingMgL: .2, concentrationBasis: "percent", productConcentration: 10, densityKgL: 1.1 });
+treatmentApprox("WT-C1 net chlorine dose", chlorine.netDoseMgL, 1.8);
+treatmentApprox("WT-C2 active mass", chlorine.activeMassMg, 18000);
+treatmentApprox("WT-C3 percent active concentration", chlorine.activeMgPerL, 110000);
+treatmentApprox("WT-C4 solution volume", chlorine.requiredSolutionL, .1636363636);
+chlorine = computeChlorineDose({ waterVolumeL: 1000, targetDoseMgL: 1, existingMgL: 0, concentrationBasis: "mgL", productConcentration: 50000 });
+treatmentApprox("WT-C5 mg/L basis solution", chlorine.requiredSolutionL, .02);
+chlorine = computeChlorineDose({ waterVolumeL: 1000, targetDoseMgL: .5, existingMgL: 1, concentrationBasis: "mgL", productConcentration: 50000 });
+treatmentApprox("WT-C6 nonpositive addition clamp", chlorine.requiredSolutionL, 0);
+treatmentExact("WT-C7 nonpositive addition status", chlorine.status, "No positive addition calculated");
+treatmentInvalid = false;
+try { computeChlorineDose({ waterVolumeL: 1000, targetDoseMgL: 1, concentrationBasis: "percent", productConcentration: 10 }); } catch { treatmentInvalid = true; }
+treatmentExact("WT-C8 percent basis density required", treatmentInvalid, true);
+
+let contact = computeContactTime({ volumeL: 5000, flowLpm: 100, residualMgL: .5, bafflingFactor: .7, targetCt: 20 });
+treatmentApprox("WT-CT1 nominal time", contact.nominalMinutes, 50);
+treatmentApprox("WT-CT2 effective time", contact.effectiveMinutes, 35);
+treatmentApprox("WT-CT3 calculated CT", contact.ctMgMinL, 17.5);
+treatmentApprox("WT-CT4 target margin", contact.margin, -2.5);
+treatmentExact("WT-CT5 below-target status", contact.status, "Below entered target");
+contact = computeContactTime({ volumeL: 6000, flowLpm: 100, residualMgL: .5, bafflingFactor: 1 });
+treatmentApprox("WT-CT6 unbaffled time", contact.effectiveMinutes, 60);
+treatmentExact("WT-CT7 no-target status", contact.status, "No target entered");
+treatmentInvalid = false;
+try { computeContactTime({ volumeL: 5000, flowLpm: 100, residualMgL: .5, bafflingFactor: 0 }); } catch { treatmentInvalid = true; }
+treatmentExact("WT-CT8 zero baffling blocked", treatmentInvalid, true);
+
+const selectorBase = { lab: "yes", source: "well", intendedUse: "utility", sediment: "no", turbidity: "no", iron: "no", manganese: "no", chlorine: "no", tasteOdor: "no", organics: "no", hardness: "no", tds: "no", rejectLimit: "no", pH: "no", microbiology: "negative", color: "no", flowKnown: "yes", peakFlow: "normal", existingEquipment: "none", space: "available", drainage: "available" };
+for (const [name, override, expected] of [
+  ["WT-T1 no evidence", {}, "No treatment stage selected from current evidence"],
+  ["WT-T2 sediment", { sediment: "yes" }, "Sediment prefiltration"],
+  ["WT-T3 turbidity", { turbidity: "yes" }, "Media filtration or verified turbidity reduction"],
+  ["WT-T4 iron", { iron: "yes" }, "Iron/manganese media filtration"],
+  ["WT-T5 carbon", { tasteOdor: "yes" }, "Activated carbon review"],
+  ["WT-T6 hardness", { hardness: "yes" }, "Water softening review"],
+  ["WT-T7 dissolved solids", { tds: "yes" }, "Reverse osmosis or source-blending review"],
+  ["WT-T8 pH", { pH: "yes" }, "pH, alkalinity and corrosion-control review"],
+  ["WT-T9 positive microbiology", { microbiology: "positive", intendedUse: "drinking" }, "Validated disinfection barrier"],
+  ["WT-T10 rainwater", { source: "rainwater" }, "Source protection and first-flush review"],
+  ["WT-T11 surface water", { source: "surface", intendedUse: "drinking" }, "Source protection and validated multi-barrier review"],
+  ["WT-T12 final monitoring", { hardness: "yes" }, "Final monitoring and maintenance plan"]
+]) {
+  treatmentSelectorCases += 1;
+  const result = selectTreatmentTrain({ ...selectorBase, ...override });
+  if (!result.stages.includes(expected)) failures.push(`${name}: expected stage "${expected}".`);
+}
+for (const [name, override, collection, expected] of [
+  ["WT-T13 undefined flow", { flowKnown: "no" }, "tests", "Measure or define both service flow"],
+  ["WT-T14 existing equipment", { existingEquipment: "yes" }, "cautions", "Identify existing equipment"],
+  ["WT-T15 limited space", { space: "limited" }, "cautions", "Limited equipment space"]
+]) {
+  treatmentSelectorCases += 1;
+  const result = selectTreatmentTrain({ ...selectorBase, ...override });
+  if (!result[collection].some((item) => item.includes(expected))) failures.push(`${name}: expected ${collection} to include "${expected}".`);
+}
+
 if (failures.length) {
   console.error(`Calculation verification failed with ${failures.length} issue(s):\n- ${failures.join("\n- ")}`);
   process.exit(1);
 }
-console.log(`Calculation verification passed: ${numericCases} Phase 1 numeric/conversion cases, ${diagnosticCases} troubleshooting scenarios, ${phase2Cases} Phase 2 numeric/decision cases, ${simulatorCases} rainwater simulator scenarios, ${irrigationCases} irrigation numeric/validation checks and ${irrigationDiagnosticCases} irrigation troubleshooting scenarios.`);
+console.log(`Calculation verification passed: ${numericCases} Phase 1 numeric/conversion cases, ${diagnosticCases} troubleshooting scenarios, ${phase2Cases} Phase 2 numeric/decision cases, ${simulatorCases} rainwater simulator scenarios, ${irrigationCases} irrigation numeric/validation checks, ${irrigationDiagnosticCases} irrigation troubleshooting scenarios, ${treatmentCases} treatment numeric/validation checks, and ${treatmentSelectorCases} treatment selector scenarios.`);

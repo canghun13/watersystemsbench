@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chlorine Dose &amp; Solution Volume Calculator | Water Systems Bench</title>
+  <meta name="description" content="Convert a user-supplied chlorine target and verified product active concentration into active mass and solution volume without recommending a dose.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://watersystemsbench.com/tools/chlorine-dose-solution-volume-calculator/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Water Systems Bench">
+  <meta property="og:title" content="Chlorine Dose &amp; Solution Volume Calculator | Water Systems Bench">
+  <meta property="og:description" content="Convert a user-supplied chlorine target and verified product active concentration into active mass and solution volume without recommending a dose.">
+  <meta property="og:url" content="https://watersystemsbench.com/tools/chlorine-dose-solution-volume-calculator/">
+  <meta property="og:image" content="https://watersystemsbench.com/assets/og.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/content.css">
+  <link rel="stylesheet" href="/assets/css/calculator.css">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7FB08YPX7C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7FB08YPX7C');
+</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","@id":"https://watersystemsbench.com/tools/chlorine-dose-solution-volume-calculator/#application","name":"Chlorine Dose & Solution Volume Calculator","description":"Convert a user-supplied chlorine target and verified product active concentration into active mass and solution volume without recommending a dose.","url":"https://watersystemsbench.com/tools/chlorine-dose-solution-volume-calculator/","applicationCategory":"EngineeringApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript"},{"@type":"BreadcrumbList","@id":"https://watersystemsbench.com/tools/chlorine-dose-solution-volume-calculator/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://watersystemsbench.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://watersystemsbench.com/tools/"},{"@type":"ListItem","position":3,"name":"Chlorine Dose & Solution Volume Calculator","item":"https://watersystemsbench.com/tools/chlorine-dose-solution-volume-calculator/"}]}]}</script>
+  <script type="module" src="/assets/js/partials.js"></script>
+  <script type="module" src="/assets/js/main.js"></script>
+  <script type="module" src="/assets/js/tools/treatment-tools.js"></script>
+</head>
+<body>
+  <div data-header-slot></div>
+  <main id="main-content">
+    <div class="page-shell">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/tools/">Tools</a></li><li><span aria-current="page">Chlorine Dose & Solution Volume Calculator</span></li></ol></nav>
+      <header class="hero compact"><div><p class="eyebrow">Water treatment & water quality / Calculator</p><h1>Chlorine Dose & Solution Volume Calculator</h1><p class="lede">Convert a user-supplied chlorine target and verified product active concentration into active mass and solution volume without recommending a dose.</p></div><p class="hero-note">Preliminary planning output only. Use measured data where possible and verify manufacturer and jurisdiction-specific requirements.</p></header>
+  <p class="meta-line">Last reviewed: July 29, 2026 · SI first · US customary supported</p>
+  <div class="tool-layout"><section class="instrument-panel"><div class="panel-heading"><h2>Bench inputs</h2><span class="panel-code">INPUT / SET</span></div><form data-tool-form="treatment-chlorine"><div class="field full"><label for="unitSystem">Unit system</label><select id="unitSystem" name="unitSystem" data-unit-system><option value="SI">SI — metric</option><option value="US">US customary</option></select></div><div class="field-grid"><div class="field full"><label for="waterMode">Water quantity mode</label><select id="waterMode" name="waterMode"><option value="volume">Entered water volume</option><option value="flow">Flow and dosing duration</option></select></div><div class="field "><label for="waterVolume">Water volume (<span data-unit-label="volume"></span>)</label><input id="waterVolume" name="waterVolume" data-label="Water volume" type="number" value="10000" data-unit-kind="volume" step="any" required></div><div class="field "><label for="doseFlow">Dosed water flow (<span data-unit-label="flow"></span>)</label><input id="doseFlow" name="doseFlow" data-label="Dosed water flow" type="number" value="100" data-unit-kind="flow" step="any" required></div><div class="field "><label for="doseHours">Dosing duration (hours)</label><input id="doseHours" name="doseHours" data-label="Dosing duration (hours)" type="number" value="1"  step="any" required></div><div class="field "><label for="targetDose">User-supplied target dose (mg/L)</label><input id="targetDose" name="targetDose" data-label="User-supplied target dose (mg/L)" type="number" value="2"  step="any" required></div><div class="field "><label for="existing">Existing residual / concentration (mg/L)</label><input id="existing" name="existing" data-label="Existing residual / concentration (mg/L)" type="number" value="0.2"  step="any" ></div><div class="field full"><label for="concentrationBasis">Product active concentration basis</label><select id="concentrationBasis" name="concentrationBasis"><option value="percent">Percent by weight</option><option value="mgL">mg/L or user-defined active concentration</option></select></div><div class="field "><label for="productConcentration">Product active concentration</label><input id="productConcentration" name="productConcentration" data-label="Product active concentration" type="number" value="10"  step="any" required></div><div class="field "><label for="density">Product solution density (kg/L)</label><input id="density" name="density" data-label="Product solution density (kg/L)" type="number" value="1.1"  step="any" ></div></div><p class="form-error" data-form-error role="alert"></p><div class="button-row"><button class="button" type="submit">Calculate solution volume</button><button class="button secondary" type="reset">Reset</button></div></form></section><section class="result-panel" aria-label="Result">
+    <div class="panel-heading"><h2>Operating report</h2><span class="panel-code">RESULT / LIVE</span></div>
+    <div class="result-empty"><p>Enter the known values, then calculate to build a result summary.</p></div>
+    <div class="result-report" aria-live="polite" hidden>
+      <div class="primary-reading"><span class="reading-label"></span><span class="reading-value"></span></div>
+      <div class="result-block"><h3>Supporting calculations</h3><ul data-supporting></ul></div>
+      <div class="result-block"><h3>Interpretation</h3><p data-interpretation></p></div>
+      <p class="result-warning" data-warning></p>
+      <div class="result-actions"><button class="button small secondary" type="button" data-result-action data-copy-result disabled>Copy result</button><button class="button small secondary" type="button" data-result-action data-print-result disabled>Print result</button></div>
+    </div>
+  </section></div>
+  <div class="content-layout"><article class="article-body">
+    <h2>What this tool does</h2><p>Performs dose arithmetic only after the user has obtained the target dose and product basis from an applicable authority, product label or qualified design.</p>
+    <h2>When to use it</h2><p>Use only when the water volume, existing residual, target dose, available chlorine concentration and—when required—solution density are known.</p>
+    <h2>Inputs and supported units</h2><p>Each labelled field explains the quantity it expects. Unit-system changes convert existing numeric entries once and keep calculations on a single SI internal basis. Supported shared units include L/min and GPM, metres and feet, kPa and psi, millimetres and inches, kW and hp, and °C and °F as relevant.</p>
+    <h2>Calculation or decision method</h2><div class="formula">Net dose = max(0, target − existing); active mass = net dose × water volume</div><div class="formula">Solution volume = required active mass / active chlorine concentration</div>
+    <h2>How to interpret the result</h2><p>Read the primary result with the supporting breakdown and warning. A plausible number is not evidence that every input, operating case or design constraint has been included.</p>
+    <div class="worked-example"><h2>Worked example</h2><p>For 10,000 L, a user-entered target of 2 mg/L, existing 0.2 mg/L, 10% w/w product and density 1.1 kg/L, active mass is 18 g and solution volume is about 0.164 L.</p></div>
+    <h2>Assumptions</h2><p>The entered water test, flow, product concentration and manufacturer values represent the same source, use and operating condition.</p>
+    <h2>Limitations</h2><p>The result is a transparent preliminary calculation or decision screen. It does not establish contaminant removal, potable safety, product certification, regulatory compliance or an approved treatment design.</p>
+    <div class="notice"><strong>Safety and review boundary.</strong> Test water through an appropriate accredited laboratory, follow current product labels and SDS, verify certified contaminant-reduction claims in an official listing, and obtain local public-health or qualified design review where required.</div>
+    <h2>Sources</h2><ul class="source-list"><li><a href="https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=20002649.TXT" rel="noopener noreferrer">U.S. EPA — Disinfection Profiling and Benchmarking Technical Guidance</a></li><li><a href="https://www.cdc.gov/drinking-water/about/how-water-treatment-works.html" rel="noopener noreferrer">U.S. CDC — How Water Treatment Works</a></li><li><a href="https://www.who.int/teams/environment-climate-change-and-health/water-sanitation-and-health/water-safety-and-quality/drinking-water-quality-guidelines" rel="noopener noreferrer">World Health Organization — Guidelines for Drinking-water Quality</a></li></ul>
+    <section aria-labelledby="related-heading"><h2 id="related-heading">Continue the workflow</h2><div class="related-grid"><a href="/tools/disinfection-contact-time-calculator/">Disinfection Contact Time Calculator<br><span class="meta-line">Open next →</span></a><a href="/guides/build-water-treatment-train/">How to Build a Water Treatment Train Without Over-Treating<br><span class="meta-line">Open next →</span></a><a href="/reference/water-quality-glossary/">Water Quality Parameter Glossary<br><span class="meta-line">Open next →</span></a><a href="/systems/water-treatment-quality/">Water Treatment & Water Quality workflow<br><span class="meta-line">Open next →</span></a></div></section>
+  </article><aside class="sidebar"><h2>Bench sequence</h2><ul><li><a href="/systems/water-treatment-quality/">Water Treatment & Water Quality workflow</a></li><li><a href="/guides/read-water-test-report/">Read the water test first</a></li><li><a href="/tools/water-treatment-train-selector/">Build a test-led treatment path</a></li><li><a href="/contact/">Report a content issue</a></li></ul></aside></div>
+    </div>
+  </main>
+  <div data-footer-slot></div>
+</body>
+</html>

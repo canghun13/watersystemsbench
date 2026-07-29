@@ -22,7 +22,7 @@ async function walk(dir) {
 
 const allFiles = await walk(root);
 const publicHtml = allFiles.filter((path) => path.endsWith(`${sep}index.html`) || path === join(root, "index.html"));
-if (publicHtml.length !== 51) errors.push(`Expected 51 public HTML files; found ${publicHtml.length}.`);
+if (publicHtml.length !== 65) errors.push(`Expected 65 public HTML files; found ${publicHtml.length}.`);
 const categoryCounts = {
   core: publicHtml.filter((file) => !relative(root, file).includes(sep)).length + publicHtml.filter((file) => ["about", "contact", "privacy", "tools", "guides", "reference"].includes(relative(root, dirname(file)))).length,
   systems: publicHtml.filter((file) => relative(root, dirname(file)).split(sep).length === 2 && relative(root, file).startsWith(`systems${sep}`)).length,
@@ -30,7 +30,7 @@ const categoryCounts = {
   guides: publicHtml.filter((file) => relative(root, dirname(file)).split(sep).length === 2 && relative(root, file).startsWith(`guides${sep}`)).length,
   reference: publicHtml.filter((file) => relative(root, dirname(file)).split(sep).length === 2 && relative(root, file).startsWith(`reference${sep}`)).length
 };
-for (const [key, expected] of Object.entries({ core: 7, systems: 3, tools: 24, guides: 11, reference: 6 })) {
+for (const [key, expected] of Object.entries({ core: 7, systems: 4, tools: 32, guides: 14, reference: 8 })) {
   if (categoryCounts[key] !== expected) errors.push(`Expected ${expected} ${key} pages; found ${categoryCounts[key]}.`);
 }
 
@@ -81,12 +81,13 @@ for (const file of publicHtml) {
   const duplicates = ids.filter((id, index) => ids.indexOf(id) !== index);
   if (duplicates.length) errors.push(`${route}: duplicate IDs ${[...new Set(duplicates)].join(", ")}.`);
   if (/(?:href|src)="(?:|#)"/i.test(html)) errors.push(`${route}: empty or hash-only link found.`);
+  if (/coming soon/i.test(html)) errors.push(`${route}: Coming Soon content found on a public page.`);
   pageUrls.add(expectedCanonical);
 }
 
 const sitemap = await readFile(join(root, "sitemap.xml"), "utf8");
 const sitemapUrls = new Set([...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]));
-if (sitemapUrls.size !== 51) errors.push(`Sitemap contains ${sitemapUrls.size} unique URLs, expected 51.`);
+if (sitemapUrls.size !== 65) errors.push(`Sitemap contains ${sitemapUrls.size} unique URLs, expected 65.`);
 for (const url of pageUrls) if (!sitemapUrls.has(url)) errors.push(`Sitemap missing ${url}.`);
 for (const url of sitemapUrls) if (!pageUrls.has(url)) errors.push(`Sitemap contains non-public URL ${url}.`);
 
@@ -94,6 +95,35 @@ const robots = await readFile(join(root, "robots.txt"), "utf8");
 if (!robots.includes(`Sitemap: ${expectedDomain}/sitemap.xml`) || !robots.includes("Allow: /")) errors.push("robots.txt is incomplete.");
 const llms = await readFile(join(root, "llms.txt"), "utf8");
 if (!llms.includes("https://github.com/canghun13/watersystemsbench") || !llms.includes(expectedEmail)) errors.push("llms.txt lacks repository or contact.");
+if (!llms.includes("/systems/water-treatment-quality/") || !llms.includes("Chemical dose and CT tools use user-supplied targets")) errors.push("llms.txt lacks treatment workflow or safety boundary.");
+
+const home = await readFile(join(root, "index.html"), "utf8");
+const kittyMarkup = '<a href="https://kittylaunch.com/p/water-systems-bench" target="_blank" rel="noopener" style="display:inline-block;">\n      <img src="https://kittylaunch.com/api/public/badges/launch_badge.svg?theme=light&name=Water%20Systems%20Bench" alt="Water Systems Bench on KittyLaunch" data-kittylaunch-badge="1" style="margin:0 2px;height:36px;" />';
+if (!home.includes(kittyMarkup)) errors.push("Homepage user-managed KittyLaunch badge markup changed or is missing.");
+for (const file of publicHtml.filter((file) => file !== join(root, "index.html"))) {
+  if ((await readFile(file, "utf8")).includes("data-kittylaunch-badge")) {
+    errors.push("KittyLaunch badge must not be copied to other pages.");
+    break;
+  }
+}
+
+const treatmentToolRoutes = [
+  "/tools/water-softener-sizing-calculator/",
+  "/tools/softener-salt-regeneration-planner/",
+  "/tools/ro-recovery-reject-water-calculator/",
+  "/tools/ro-production-demand-planner/",
+  "/tools/media-filter-loading-rate-calculator/",
+  "/tools/chlorine-dose-solution-volume-calculator/",
+  "/tools/disinfection-contact-time-calculator/",
+  "/tools/water-treatment-train-selector/"
+];
+for (const route of treatmentToolRoutes) {
+  const html = await readFile(join(root, route.slice(1), "index.html"), "utf8");
+  if (!html.includes('data-tool-form="treatment-')) errors.push(`${route}: treatment form missing.`);
+  if (!html.includes('aria-live="polite"')) errors.push(`${route}: aria-live result missing.`);
+  if (!html.includes("<h2>Sources</h2>") || !html.includes("source-list")) errors.push(`${route}: authoritative sources missing.`);
+  if (!html.includes("Safety and review boundary") || !/potable|drinking-water|chemical|regulatory/i.test(html)) errors.push(`${route}: treatment safety boundary missing.`);
+}
 
 const syntaxFiles = allFiles.filter((path) => [".js", ".mjs"].includes(extname(path)));
 for (const file of syntaxFiles) {

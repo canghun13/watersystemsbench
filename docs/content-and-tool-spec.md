@@ -1,91 +1,72 @@
 # Content and Tool Specification
 
-## Irrigation implementation status
+## Implemented tool distribution
 
-The irrigation specification is implemented: seven forms use common SI-first conversion and result patterns, preserve physical quantity on unit changes, clear stale results on errors/reset, and expose sources, assumptions, limits and safety boundaries. Flow, pressure and water-depth outcomes remain distinct throughout the cluster.
-
-**Repository:** https://github.com/canghun13/watersystemsbench
-
-## Required content for every tool page
-
-Every implemented tool page must contain:
-
-1. Tool purpose
-2. Input definitions
-3. Supported units
-4. Calculation or decision method
-5. Result interpretation
-6. Assumptions
-7. Limitations
-8. Safety notes
-9. Practical worked example
-10. Related guides
-11. Related tools
-12. References
-13. Last reviewed date
-
-## Units
-
-Use SI first and support common US customary options when relevant. The baseline unit set is L/min, m³/h, GPM, kPa, bar, psi, mm, inch, °C, and °F. Clearly label conversions, preserve input precision appropriately, and never hide a unit change.
-
-## Planned tool types
-
-| Type | Count |
+| Primary type | Count |
 | --- | ---: |
 | Calculator | 15 |
 | Planner | 6 |
 | Checker | 2 |
-| Comparator | 2 |
+| Comparator | 3 |
 | Troubleshooter | 2 |
-| Selector | 2 |
+| Selector | 1 |
 | Estimator | 1 |
 | Analyzer | 1 |
 | Simulator | 1 |
+| Total | 32 |
 
-The planned tools may use these product patterns: Calculator, Generator, Planner, Selector, Checker, Validator, Troubleshooter, Analyzer, Comparator, Optimizer, Estimator, Simulator, Checklist Builder, and Reference Lookup. The table records the initial primary type distribution; it is not a claim that every pattern is already implemented.
+`RO Production vs Demand Planner` is a planner, not a selector. The Water Treatment Train Selector is the one implemented selector.
 
-## Implemented Phase 1 and Phase 2 tool types
+## Required tool-page content
 
-| Type | Implemented count |
-| --- | ---: |
-| Calculator | 7 |
-| Planner | 2 |
-| Checker | 2 |
-| Estimator | 1 |
-| Comparator | 2 |
-| Troubleshooter | 1 |
-| Analyzer | 1 |
-| Simulator | 1 |
-| Total | 17 |
+Every tool page contains:
 
-The numerical tools share SI-based conversion and form utilities while keeping each tool's calculation logic in its own JavaScript module. Shared conversion support now includes volume, horizontal catchment area, and rainfall depth. The low-pressure tool is rules-based and explicitly reports cause groups rather than a confirmed diagnosis; the rainwater simulator uses 365 sequential daily storage steps.
+1. Purpose and appropriate use
+2. Labelled inputs and supported units
+3. Calculation or decision method
+4. Result interpretation
+5. Assumptions and limitations
+6. Safety and regulatory boundary
+7. Worked example
+8. Related tools, guides and parent workflow
+9. Primary or authoritative references
+10. Real last-reviewed date
 
-## Irrigation specification
+## Interaction contract
 
-The future Irrigation & Sprinkler Systems cluster has a complete pre-implementation contract in [irrigation-sprinkler-spec.md](irrigation-sprinkler-spec.md). It covers one hub, seven tools, three guides, a duplication review, exact SI-based formulas, validation states, 36 independent numeric/validation cases, six troubleshooting scenarios and the future browser matrix.
+- SI is the internal calculation basis; relevant US customary units are supported.
+- Unit switching converts entered quantities once, updates visible labels and clears stale results.
+- Invalid inputs produce an inline alert and hide stale output.
+- Reset restores defaults and clears errors/results.
+- Successful output enables copy and print actions.
+- Calculations remain in testable JavaScript functions separate from DOM wiring.
+- Results expose their method and do not become unexplained black-box recommendations.
 
-The specification does not change the implemented tool counts. Its key product boundaries are:
+## Treatment-specific boundaries
 
-- measured flow is not inferred pressure or guaranteed source capacity;
-- zone capacity floors whole devices and reports flow and pressure separately;
-- precipitation rate is not distribution uniformity;
-- runtime uses a user-entered net target and efficiency rather than prescribing plant demand;
-- drip layout arithmetic is not lateral hydraulic approval;
-- the pump matcher screens one stated flow/head pair and never claims a curve operating point;
-- the sprinkler troubleshooter reports evidence-based cause groups, not a confirmed diagnosis.
+- Softener calculations distinguish tested hardness, optional user-supplied iron factor, capacity, salt setting and peak service flow.
+- RO recovery is a water balance, not a membrane-performance or product-safety claim.
+- RO production factors come from the exact system or membrane data; the tool does not invent correction factors.
+- Media service and backwash loading are compared only with user-entered product/media limits.
+- Chlorine arithmetic uses a user-entered target dose and product concentration. It does not recommend a dose.
+- Percent-by-weight chemical input requires the user to enter density.
+- CT arithmetic uses measured residual, entered baffling factor and an optional user-entered target. It does not select a compliance target.
+- The treatment-train selector returns candidate stages, testing needs and constraints. It does not prescribe a universal train or declare water potable.
+- Positive microbiological evidence triggers an urgent safe-source/public-authority message.
 
-## Safety, health, and regulatory rules
+## Safety, health and regulatory rules
 
-- Cite authoritative primary sources for claims involving safety, health, legal requirements, or regulation.
-- Identify when requirements vary by country, state, region, utility, or use case.
-- Do not present outputs as formal engineering approval, legal advice, or a regulatory determination.
-- Do not infer a legal design value the user has not provided.
-- For potable water, chemicals, and treatment decisions, state the boundary of the tool and direct users to qualified review and applicable local requirements.
+- Use primary authoritative sources for safety, health, chemical, legal and regulatory claims.
+- Identify jurisdictional and intended-use variation.
+- Never present an output as formal engineering approval, potable-water certification, legal advice or regulatory compliance.
+- Never infer a health-protection dose, CT target, contaminant limit or design value the user did not provide.
+- Direct chemical users to the current product label, SDS, PPE, ventilation and applicable qualified/local-authority guidance.
+- Direct drinking-water and health-significant results to appropriate laboratory, public-health and certified-product review.
 
-## Editorial and calculation rules
+## Editorial and QA rules
 
-- Show the method sufficiently for users to understand the result, rather than treating it as an unexplained black box.
-- Test sensible boundaries, invalid values, empty states, unit switching, reset behavior, and rounding before release.
-- Give a worked example with realistic, clearly labelled assumptions.
-- Include only 4–6 contextually useful related links, organized by user need rather than arbitrary SEO linking.
-- Record a real last-reviewed date only when the page has been reviewed; do not fabricate one in planning.
+- Use substantial original explanations, explicit units and realistic worked examples.
+- Keep related links limited to useful next steps.
+- Test normal, boundary, invalid, mode-switch, unit-switch, reset, copy and print behavior.
+- Independently verify numerical expectations and rules paths.
+- Record browser evidence only after an actual complete run.

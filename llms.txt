@@ -6,6 +6,8 @@
 
 - [Pumps, Pressure & Pipe Flow](https://watersystemsbench.com/systems/pumps-pressure-pipe/)
 - [Wells, Storage & Rainwater](https://watersystemsbench.com/systems/wells-storage-rainwater/)
+- [Irrigation & Sprinkler Systems](https://watersystemsbench.com/systems/irrigation-sprinklers/)
+- [Water Treatment & Water Quality](https://watersystemsbench.com/systems/water-treatment-quality/)
 
 ## Tools
 
@@ -33,6 +35,14 @@
 - [Drip Irrigation Flow & Zone Calculator](https://watersystemsbench.com/tools/drip-irrigation-flow-zone-calculator/)
 - [Irrigation Pump & Zone Matcher](https://watersystemsbench.com/tools/irrigation-pump-zone-matcher/)
 - [Sprinkler Low-Pressure Troubleshooter](https://watersystemsbench.com/tools/sprinkler-low-pressure-troubleshooter/)
+- [Water Softener Sizing Calculator](https://watersystemsbench.com/tools/water-softener-sizing-calculator/)
+- [Softener Salt & Regeneration Planner](https://watersystemsbench.com/tools/softener-salt-regeneration-planner/)
+- [RO Recovery & Reject Water Calculator](https://watersystemsbench.com/tools/ro-recovery-reject-water-calculator/)
+- [RO Production vs Demand Planner](https://watersystemsbench.com/tools/ro-production-demand-planner/)
+- [Media Filter Loading Rate Calculator](https://watersystemsbench.com/tools/media-filter-loading-rate-calculator/)
+- [Chlorine Dose & Solution Volume Calculator](https://watersystemsbench.com/tools/chlorine-dose-solution-volume-calculator/)
+- [Disinfection Contact Time Calculator](https://watersystemsbench.com/tools/disinfection-contact-time-calculator/)
+- [Water Treatment Train Selector](https://watersystemsbench.com/tools/water-treatment-train-selector/)
 
 ## Guides
 
@@ -47,6 +57,9 @@
 - [How to Measure Irrigation Flow and Dynamic Pressure](https://watersystemsbench.com/guides/measure-irrigation-flow-pressure/)
 - [How to Split Sprinklers into Practical Zones](https://watersystemsbench.com/guides/split-sprinkler-zones/)
 - [How to Troubleshoot a Low-Pressure Sprinkler Zone](https://watersystemsbench.com/guides/troubleshoot-low-pressure-sprinkler-zone/)
+- [How to Read a Water Test Report](https://watersystemsbench.com/guides/read-water-test-report/)
+- [Sediment Filter vs Carbon Filter vs Softener vs RO vs UV](https://watersystemsbench.com/guides/filter-softener-ro-uv-comparison/)
+- [How to Build a Water Treatment Train Without Over-Treating](https://watersystemsbench.com/guides/build-water-treatment-train/)
 
 ## Reference
 
@@ -56,10 +69,12 @@
 - [Water Pipe Internal Diameters](https://watersystemsbench.com/reference/water-pipe-internal-diameters/)
 - [Pump Formulas & Hydraulic Terms](https://watersystemsbench.com/reference/pump-formulas-hydraulic-terms/)
 - [Water Demand Planning Factors](https://watersystemsbench.com/reference/water-demand-planning-factors/)
+- [Water Quality Parameter Glossary](https://watersystemsbench.com/reference/water-quality-glossary/)
+- [Water Treatment Technology Comparison Matrix](https://watersystemsbench.com/reference/water-treatment-comparison-matrix/)
 
 ## Safety and limitations
 
-The site supports preliminary planning. Outputs are not formal engineering approval, legal advice, manufacturer selection, or a universal regulatory determination. Verify measurements, applicable requirements and current manufacturer data.
+The site supports preliminary planning. Outputs are not formal engineering approval, potable-water certification, legal advice, manufacturer selection, or a universal regulatory determination. Verify measurements, accredited laboratory results, applicable requirements, official certified-product listings and current manufacturer data. Chemical dose and CT tools use user-supplied targets and never recommend legal or health values.
 
 ## Contact and source
 

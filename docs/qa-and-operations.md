@@ -1,91 +1,65 @@
 # QA and Operations
 
-## Irrigation release evidence — 2026-07-29
+## Current release evidence — 2026-07-29
 
-- Static QA: 51 public pages, unique metadata, canonical/GA4/JSON-LD/breadcrumb parity and sitemap parity passed.
-- Calculation verification: existing regression suite plus 49 irrigation numeric/validation checks and six irrigation triage scenarios passed.
-- Local browser render QA: 51 pages × five widths = 255 checks; zero horizontal overflows and zero console errors.
-- Production verification remains a post-push responsibility: check HTTP 200, canonical, GA4, navigation and working calculators on the published domain.
+- Public pages: 65
+- Category counts: 7 core, 4 hubs, 32 tools, 14 guides and 8 references
+- Sitemap: exact 65-route parity
+- Static and navigation QA: passed
+- Calculation regression: 30 Phase 1 numeric/conversion cases, 6 general troubleshooting cases, 30 Phase 2 numeric/decision cases, 6 rainwater simulator cases, 49 irrigation numeric/validation cases and 6 irrigation troubleshooting cases
+- Treatment verification: 65 numeric/validation checks and 15 selector scenarios
+- Browser render matrix: 65 pages × 5 widths = 325 checks
+- Viewports: 390, 768, 1024, 1280 and 1440 px
+- Tool interactions: all 32 tools recorded; all 8 treatment tools exercised in the current run
+- Browser failures after verification: 0 console errors, page errors, asset failures, internal 404s and horizontal overflows
 
-**Repository:** https://github.com/canghun13/watersystemsbench
+The actual browser run is recorded in `tools-qa/browser-results.json`. Update that file only after a complete real-browser run.
 
 ## Start every task
 
-1. Confirm the current directory.
-2. Confirm the remote is `https://github.com/canghun13/watersystemsbench`.
-3. Confirm the active branch.
-4. Run `git status` and preserve uncommitted changes.
-5. Inspect the latest commit.
-6. Read `handover.md`.
-7. Check whether the local branch is current with the remote.
-8. Use `git fetch` and, only when appropriate, `git pull --ff-only`.
-9. Start implementation only with an understood repository state.
-
-Never use forced pull, reset, clean, rebase, or force-push for routine work. Do not document machine-specific paths or rely on a particular local checkout path.
-
-## Finish every task
-
-1. Inspect the actual modified files and run relevant automated checks.
-2. Run browser visual and interaction QA when a site exists.
-3. Update `handover.md` with the actual completed state.
-4. Commit the work.
-5. Push `main`.
-6. Confirm local `HEAD` and `origin/main` resolve to the same commit.
+1. Confirm the repository root, remote, active branch and latest commit.
+2. Inspect `git status` and preserve existing or unrelated work.
+3. Read `handover.md` and relevant specifications.
+4. Fetch remote state when needed and understand divergence before editing.
+5. Do not use routine force-push, destructive reset, clean or rebase.
 
 ## QA commands
 
 ```bash
-npm ci
 npm run generate
-npm run qa
 npm run verify:calculations
-npm run serve
+npm run qa
 npm run qa:browser
+npm run serve
 ```
 
-The actual browser run is recorded in `tools-qa/browser-results.json`. Refresh that report only after testing every public page in a real browser.
+`npm run qa` includes static and navigation checks.
 
-## Responsive QA viewports
+## Required release checks
 
-- 390px
-- 768px
-- 1024px
-- 1280px
-- 1440px
-
-## Required site QA
-
-- Broken internal and external links
-- Duplicate IDs, canonical URL, title, meta description, H1, sitemap, and robots.txt
+- Exact category and sitemap counts
+- Unique titles and descriptions
+- One canonical, robots directive, H1, GA4 snippet and valid JSON-LD per public page
+- Breadcrumbs and resolved internal links/assets
 - JavaScript syntax and runtime behavior
-- Browser console errors, page errors, and asset loading failures
-- Mobile navigation, horizontal overflow, and visible UI clipping
-- Calculate, reset, and unit-switching behavior
-- Formula/result verification and result interpretation
-- Contact email and mailto link
-- GA4 only after a real measurement ID is supplied
-- Accessibility of published pages
+- Formula expectations independent of implementation logic
+- Invalid, reset, mode, unit, copy and print behavior
+- Mobile navigation and all implemented system links
+- Horizontal overflow and visible clipping at all five widths
+- Console errors, page errors, broken images, missing styles/assets and internal 404s
+- Contact email, `mailto:` and fixed domain/repository values
+- Safety, potable-water, chemical and regulatory boundaries
+- Exact preservation of user-managed homepage integrations
 
-## Phase 1 and Phase 2 result
+## Production verification
 
-- Static and navigation QA: passed for 40 public pages
-- Calculation verification: 30 Phase 1 numeric/conversion cases, 6 troubleshooting scenarios, 30 Phase 2 numeric/decision cases and 6 simulator scenarios passed
-- Browser rendering: 200 checks (40 pages × 5 widths) passed
-- Tool interactions: all 17 passed, including all 8 Phase 2 tools, for calculate/analyze/simulate, reset, copy, print, invalid input and relevant unit switching
-- Console errors, page errors, asset failures, internal 404s, and horizontal overflows after fixes: 0
+After pushing `main`:
 
-## Irrigation pre-implementation QA contract
+1. Confirm local `HEAD` equals `origin/main`.
+2. Allow GitHub Pages/Cloudflare propagation where necessary.
+3. Check representative core, hub, tool, guide and reference URLs over HTTPS.
+4. Confirm HTTP 200, canonical domain, GA4 and current content.
+5. Exercise representative live calculations and the treatment selector.
+6. Confirm `sitemap.xml` exposes exactly 65 URLs.
 
-The Irrigation & Sprinkler Systems cluster is specified but not implemented. Its independent calculation and interaction cases are in [irrigation-sprinkler-spec.md](irrigation-sprinkler-spec.md).
-
-After future implementation:
-
-- run 36 numeric/validation cases and six sprinkler troubleshooting scenarios across the seven new tools;
-- regression-test all 17 current tools and their existing cases;
-- render all 51 public pages at 390, 768, 1024, 1280 and 1440 px, for 255 page-width checks;
-- run valid calculation, SI/US switching, invalid/boundary, dynamic-mode, reset, copy and print interaction families on every new tool;
-- verify exact category counts of 7 core, 3 hubs, 24 tools, 11 guides and 6 references;
-- update sitemap only when the 11 new routes actually exist and confirm exact parity;
-- keep the current 40-page/200-render result as the actual baseline until implementation.
-
-Do not create a repo-specific local tool merely to force execution from one checkout location. Keep all commands relative to the repository root.
+Do not report deployment success for a skipped or failed production check.

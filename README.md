@@ -1,40 +1,39 @@
 # Water Systems Bench
 
+Water Systems Bench is an English-language, global workflow hub for sizing, checking, troubleshooting and planning real-world water systems from source to use.
+
+- Domain: [watersystemsbench.com](https://watersystemsbench.com)
+- Repository: [github.com/canghun13/watersystemsbench](https://github.com/canghun13/watersystemsbench)
+- Contact: [canghun13@naver.com](mailto:canghun13@naver.com)
+- GA4: `G-7FB08YPX7C`
+- Stack: static HTML, CSS and vanilla JavaScript
+- Deployment: GitHub Pages with Cloudflare
+
 ## Current implementation
 
-The site now publishes 51 public HTML pages: seven core pages, three system hubs, 24 tools, 11 guides and six references. The Irrigation & Sprinkler Systems cluster provides a connected measure → zone → apply → schedule → troubleshoot workflow at `/systems/irrigation-sprinklers/`.
+The complete first-wave scope is implemented: 65 public HTML pages comprising 7 core pages, 4 connected system hubs, 32 working tools, 14 guides and 8 references.
 
-**Domain:** [watersystemsbench.com](https://watersystemsbench.com)
-**Repository:** https://github.com/canghun13/watersystemsbench
+The four workflows are:
 
-Water Systems Bench is an English-language, global practical workflow hub for sizing, checking, troubleshooting, and planning real-world water systems from source to use. It is a connected system resource—not simply a collection of individual calculators.
+1. Pumps, Pressure & Pipe Flow
+2. Wells, Storage & Rainwater
+3. Irrigation & Sprinkler Systems
+4. Water Treatment & Water Quality
 
-Phase 1 and Phase 2 implement the static site foundation plus the Pumps, Pressure & Pipe Flow and Wells, Storage & Rainwater clusters using static HTML, CSS, and vanilla JavaScript for deployment through GitHub Pages and Cloudflare.
+The Water Treatment & Water Quality cluster starts at `/systems/water-treatment-quality/`. Its eight tools use tested or user-supplied values, show their methods and limitations, and do not claim potable-water safety, regulatory compliance or an approved design.
 
-**Official contact:** [canghun13@naver.com](mailto:canghun13@naver.com)
-**GA4 measurement ID:** `G-7FB08YPX7C`
-
-## Implemented scope
-
-- 40 public HTML pages: 7 core pages, 2 system hubs, 17 tools, 8 guides, and 6 references
-- Hydraulic Field Bench design system with responsive and accessible navigation
-- SI-first calculations with common US customary units
-- Unique metadata, canonical URLs, Open Graph data, JSON-LD, breadcrumbs, GA4, sitemap, robots, and `llms.txt`
-- Repeatable static, calculation, navigation, and browser-result QA
-
-The full plan remains 65 public pages. The other 25 pages have not been created as empty or inactive pages.
+The site uses the Hydraulic Field Bench design system, SI-first calculations with common US customary units, unique metadata and canonical URLs, JSON-LD, breadcrumbs, GA4, sitemap, robots and `llms.txt`.
 
 ## Local preview and QA
 
-Requires Node.js 20 or later.
+Node.js 20 or later is required.
 
 ```bash
-npm ci
 npm run generate
 npm run serve
 ```
 
-In a second terminal:
+In another terminal:
 
 ```bash
 npm run qa
@@ -42,25 +41,13 @@ npm run verify:calculations
 npm run qa:browser
 ```
 
-`npm run generate` refreshes the committed static HTML, sitemap, robots file, and `llms.txt` from the repository generator. `npm run qa:browser` validates the latest recorded actual-browser run in `tools-qa/browser-results.json`; perform a new documented browser run before updating that report.
+`npm run generate` refreshes committed HTML and machine-readable site files. `npm run qa:browser` validates the latest recorded real-browser run in `tools-qa/browser-results.json`; update that report only after a new complete browser run.
 
-## Start work in a new environment
+## Repository workflow
 
-1. Clone the repository, or confirm the existing repository location.
-2. Confirm the remote URL is `https://github.com/canghun13/watersystemsbench`.
-3. Confirm the active branch is `main`.
-4. Run `git status` and preserve any uncommitted work.
-5. Inspect the most recent commit with `git log -1 --oneline`.
-6. Read [handover.md](handover.md) before making changes.
-7. If the local branch is behind, run `git fetch` followed by `git pull --ff-only` only when appropriate.
-8. Begin work only after the repository state is confirmed and clean or intentionally understood.
+Before changing the site, confirm the checkout, `origin`, active branch, working-tree state and latest commit, then read [handover.md](handover.md). Preserve user-managed content and unrelated changes.
 
-## Finish work
-
-1. Inspect the actual changed files and run relevant automated checks.
-2. Perform browser visual and interaction QA when a site exists.
-3. Update `handover.md` with the actual state, work completed, QA results, and next task.
-4. Commit the completed work, push `main`, and confirm local `HEAD` matches `origin/main`.
+Before finishing, inspect the diff, run relevant calculation/static/navigation/browser checks, update the operational documentation, commit, push `main`, and confirm local `HEAD` equals `origin/main`.
 
 ## Key documents
 
@@ -70,3 +57,4 @@ npm run qa:browser
 - [Information architecture](docs/information-architecture.md)
 - [Content and tool specification](docs/content-and-tool-spec.md)
 - [QA and operations](docs/qa-and-operations.md)
+- [Water treatment implementation specification](docs/water-treatment-quality-spec.md)

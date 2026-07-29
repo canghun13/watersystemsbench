@@ -9,7 +9,8 @@ export const conversions = {
   power: { toUS: (v) => v / 0.745699872, toSI: (v) => v * 0.745699872, si: "kW", us: "hp" },
   volume: { toUS: (v) => v / 3.785411784, toSI: (v) => v * 3.785411784, si: "L", us: "US gal" },
   area: { toUS: (v) => v * 10.763910417, toSI: (v) => v / 10.763910417, si: "m²", us: "ft²" },
-  rainfall: { toUS: (v) => v / 25.4, toSI: (v) => v * 25.4, si: "mm", us: "in" }
+  rainfall: { toUS: (v) => v / 25.4, toSI: (v) => v * 25.4, si: "mm", us: "in" },
+  mass: { toUS: (v) => v * 2.2046226218, toSI: (v) => v / 2.2046226218, si: "kg", us: "lb" }
 };
 
 export const toSI = (value, kind, system) => system === "US" ? conversions[kind].toSI(Number(value)) : Number(value);

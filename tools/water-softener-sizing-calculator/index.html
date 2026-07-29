@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Water Softener Sizing Calculator | Water Systems Bench</title>
+  <meta name="description" content="Estimate preliminary water-softener working capacity from tested hardness, daily use, regeneration interval, reserve, optional iron allowance and peak service flow.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://watersystemsbench.com/tools/water-softener-sizing-calculator/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Water Systems Bench">
+  <meta property="og:title" content="Water Softener Sizing Calculator | Water Systems Bench">
+  <meta property="og:description" content="Estimate preliminary water-softener working capacity from tested hardness, daily use, regeneration interval, reserve, optional iron allowance and peak service flow.">
+  <meta property="og:url" content="https://watersystemsbench.com/tools/water-softener-sizing-calculator/">
+  <meta property="og:image" content="https://watersystemsbench.com/assets/og.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/content.css">
+  <link rel="stylesheet" href="/assets/css/calculator.css">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7FB08YPX7C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7FB08YPX7C');
+</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","@id":"https://watersystemsbench.com/tools/water-softener-sizing-calculator/#application","name":"Water Softener Sizing Calculator","description":"Estimate preliminary water-softener working capacity from tested hardness, daily use, regeneration interval, reserve, optional iron allowance and peak service flow.","url":"https://watersystemsbench.com/tools/water-softener-sizing-calculator/","applicationCategory":"EngineeringApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript"},{"@type":"BreadcrumbList","@id":"https://watersystemsbench.com/tools/water-softener-sizing-calculator/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://watersystemsbench.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://watersystemsbench.com/tools/"},{"@type":"ListItem","position":3,"name":"Water Softener Sizing Calculator","item":"https://watersystemsbench.com/tools/water-softener-sizing-calculator/"}]}]}</script>
+  <script type="module" src="/assets/js/partials.js"></script>
+  <script type="module" src="/assets/js/main.js"></script>
+  <script type="module" src="/assets/js/tools/treatment-tools.js"></script>
+</head>
+<body>
+  <div data-header-slot></div>
+  <main id="main-content">
+    <div class="page-shell">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/tools/">Tools</a></li><li><span aria-current="page">Water Softener Sizing Calculator</span></li></ol></nav>
+      <header class="hero compact"><div><p class="eyebrow">Water treatment & water quality / Calculator</p><h1>Water Softener Sizing Calculator</h1><p class="lede">Estimate preliminary water-softener working capacity from tested hardness, daily use, regeneration interval, reserve, optional iron allowance and peak service flow.</p></div><p class="hero-note">Preliminary planning output only. Use measured data where possible and verify manufacturer and jurisdiction-specific requirements.</p></header>
+  <p class="meta-line">Last reviewed: July 29, 2026 · SI first · US customary supported</p>
+  <div class="tool-layout"><section class="instrument-panel"><div class="panel-heading"><h2>Bench inputs</h2><span class="panel-code">INPUT / SET</span></div><form data-tool-form="treatment-softener"><div class="field full"><label for="unitSystem">Unit system</label><select id="unitSystem" name="unitSystem" data-unit-system><option value="SI">SI — metric</option><option value="US">US customary</option></select></div><div class="field-grid"><div class="field "><label for="hardness">Water hardness</label><input id="hardness" name="hardness" data-label="Water hardness" type="number" value="171.18061"  step="any" required></div><div class="field "><label for="hardnessUnit">Hardness basis</label><select id="hardnessUnit" name="hardnessUnit"><option value="mgL">mg/L as CaCO₃</option><option value="ppm">ppm as CaCO₃</option><option value="gpg">grains per US gallon</option></select></div><div class="field "><label for="dailyUse">Daily water use (<span data-unit-label="volume"></span>)</label><input id="dailyUse" name="dailyUse" data-label="Daily water use" type="number" value="1000" data-unit-kind="volume" step="any" required></div><div class="field "><label for="regenerationDays">Desired days between regeneration</label><input id="regenerationDays" name="regenerationDays" data-label="Desired days between regeneration" type="number" value="7"  step="any" required></div><div class="field "><label for="reserve">Reserve allowance (%)</label><input id="reserve" name="reserve" data-label="Reserve allowance (%)" type="number" value="20"  step="any" required></div><div class="field "><label for="iron">Optional iron concentration (mg/L)</label><input id="iron" name="iron" data-label="Optional iron concentration (mg/L)" type="number" value=""  step="any" ></div><div class="field "><label for="ironFactor">Iron allowance factor (gpg per mg/L iron)</label><input id="ironFactor" name="ironFactor" data-label="Iron allowance factor (gpg per mg/L iron)" type="number" value=""  step="any" ><span class="hint">Enter only from selected product or authoritative technical data.</span></div><div class="field "><label for="peakFlow">Peak service flow (<span data-unit-label="flow"></span>)</label><input id="peakFlow" name="peakFlow" data-label="Peak service flow" type="number" value="40" data-unit-kind="flow" step="any" required></div></div><p class="form-error" data-form-error role="alert"></p><div class="button-row"><button class="button" type="submit">Size softener</button><button class="button secondary" type="reset">Reset</button></div></form></section><section class="result-panel" aria-label="Result">
+    <div class="panel-heading"><h2>Operating report</h2><span class="panel-code">RESULT / LIVE</span></div>
+    <div class="result-empty"><p>Enter the known values, then calculate to build a result summary.</p></div>
+    <div class="result-report" aria-live="polite" hidden>
+      <div class="primary-reading"><span class="reading-label"></span><span class="reading-value"></span></div>
+      <div class="result-block"><h3>Supporting calculations</h3><ul data-supporting></ul></div>
+      <div class="result-block"><h3>Interpretation</h3><p data-interpretation></p></div>
+      <p class="result-warning" data-warning></p>
+      <div class="result-actions"><button class="button small secondary" type="button" data-result-action data-copy-result disabled>Copy result</button><button class="button small secondary" type="button" data-result-action data-print-result disabled>Print result</button></div>
+    </div>
+  </section></div>
+  <div class="content-layout"><article class="article-body">
+    <h2>What this tool does</h2><p>Converts hardness to grains per US gallon, applies only the iron compensation factor entered by the user, and separates working capacity from reserve-adjusted capacity and service-flow review.</p>
+    <h2>When to use it</h2><p>Use after a current laboratory test and before comparing the exact manufacturer capacity at a stated salt setting and service-flow curve.</p>
+    <h2>Inputs and supported units</h2><p>Each labelled field explains the quantity it expects. Unit-system changes convert existing numeric entries once and keep calculations on a single SI internal basis. Supported shared units include L/min and GPM, metres and feet, kPa and psi, millimetres and inches, kW and hp, and °C and °F as relevant.</p>
+    <h2>Calculation or decision method</h2><div class="formula">Daily grain load = adjusted hardness (grains/US gal) × daily US gallons</div><div class="formula">Reserve-adjusted capacity = daily grain load × regeneration days × (1 + reserve)</div><p>The conversion used is 1 grain/US gal = 17.118061 mg/L as CaCO₃. Iron allowance is added only when the user supplies a factor from applicable product or technical data.</p>
+    <h2>How to interpret the result</h2><p>Read the primary result with the supporting breakdown and warning. A plausible number is not evidence that every input, operating case or design constraint has been included.</p>
+    <div class="worked-example"><h2>Worked example</h2><p>171.18061 mg/L as CaCO₃ is 10 grains/US gal. At 1,000 L/day for 7 days with 20% reserve, the preliminary reserve-adjusted capacity is about 22,190 grains before any user-entered iron allowance.</p></div>
+    <h2>Assumptions</h2><p>The entered water test, flow, product concentration and manufacturer values represent the same source, use and operating condition.</p>
+    <h2>Limitations</h2><p>The result is a transparent preliminary calculation or decision screen. It does not establish contaminant removal, potable safety, product certification, regulatory compliance or an approved treatment design.</p>
+    <div class="notice"><strong>Safety and review boundary.</strong> Test water through an appropriate accredited laboratory, follow current product labels and SDS, verify certified contaminant-reduction claims in an official listing, and obtain local public-health or qualified design review where required.</div>
+    <h2>Sources</h2><ul class="source-list"><li><a href="https://www.epa.gov/watersense/cation-exchange-water-softeners" rel="noopener noreferrer">U.S. EPA WaterSense — Cation Exchange Water Softeners</a></li><li><a href="https://www.usgs.gov/water-science-school/science/water-science-glossary" rel="noopener noreferrer">U.S. Geological Survey — Water Science Glossary</a></li><li><a href="https://www.nsf.org/consumer-resources/articles/standards-water-treatment-systems" rel="noopener noreferrer">NSF — Standards for Water Treatment Systems</a></li></ul>
+    <section aria-labelledby="related-heading"><h2 id="related-heading">Continue the workflow</h2><div class="related-grid"><a href="/tools/softener-salt-regeneration-planner/">Softener Salt & Regeneration Planner<br><span class="meta-line">Open next →</span></a><a href="/guides/read-water-test-report/">How to Read a Water Test Report<br><span class="meta-line">Open next →</span></a><a href="/reference/water-quality-glossary/">Water Quality Parameter Glossary<br><span class="meta-line">Open next →</span></a><a href="/systems/water-treatment-quality/">Water Treatment & Water Quality workflow<br><span class="meta-line">Open next →</span></a></div></section>
+  </article><aside class="sidebar"><h2>Bench sequence</h2><ul><li><a href="/systems/water-treatment-quality/">Water Treatment & Water Quality workflow</a></li><li><a href="/guides/read-water-test-report/">Read the water test first</a></li><li><a href="/tools/water-treatment-train-selector/">Build a test-led treatment path</a></li><li><a href="/contact/">Report a content issue</a></li></ul></aside></div>
+    </div>
+  </main>
+  <div data-footer-slot></div>
+</body>
+</html>
