@@ -1,5 +1,9 @@
 # Content and Tool Specification
 
+## Irrigation implementation status
+
+The irrigation specification is implemented: seven forms use common SI-first conversion and result patterns, preserve physical quantity on unit changes, clear stale results on errors/reset, and expose sources, assumptions, limits and safety boundaries. Flow, pressure and water-depth outcomes remain distinct throughout the cluster.
+
 **Repository:** https://github.com/canghun13/watersystemsbench
 
 ## Required content for every tool page

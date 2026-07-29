@@ -1,5 +1,12 @@
 # QA and Operations
 
+## Irrigation release evidence — 2026-07-29
+
+- Static QA: 51 public pages, unique metadata, canonical/GA4/JSON-LD/breadcrumb parity and sitemap parity passed.
+- Calculation verification: existing regression suite plus 49 irrigation numeric/validation checks and six irrigation triage scenarios passed.
+- Local browser render QA: 51 pages × five widths = 255 checks; zero horizontal overflows and zero console errors.
+- Production verification remains a post-push responsibility: check HTTP 200, canonical, GA4, navigation and working calculators on the published domain.
+
 **Repository:** https://github.com/canghun13/watersystemsbench
 
 ## Start every task

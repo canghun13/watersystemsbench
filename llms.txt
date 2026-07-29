@@ -26,6 +26,13 @@
 - [Rainwater Harvesting Yield Calculator](https://watersystemsbench.com/tools/rainwater-harvesting-yield-calculator/)
 - [Rainwater Tank Days-of-Supply Simulator](https://watersystemsbench.com/tools/rainwater-tank-days-of-supply-simulator/)
 - [First Flush Diverter Sizing Calculator](https://watersystemsbench.com/tools/first-flush-diverter-sizing-calculator/)
+- [Available Water Flow Test Calculator](https://watersystemsbench.com/tools/available-water-flow-test-calculator/)
+- [Sprinkler Zone Capacity Planner](https://watersystemsbench.com/tools/sprinkler-zone-capacity-planner/)
+- [Sprinkler Precipitation Rate Calculator](https://watersystemsbench.com/tools/sprinkler-precipitation-rate-calculator/)
+- [Irrigation Runtime & Water Depth Planner](https://watersystemsbench.com/tools/irrigation-runtime-water-depth-planner/)
+- [Drip Irrigation Flow & Zone Calculator](https://watersystemsbench.com/tools/drip-irrigation-flow-zone-calculator/)
+- [Irrigation Pump & Zone Matcher](https://watersystemsbench.com/tools/irrigation-pump-zone-matcher/)
+- [Sprinkler Low-Pressure Troubleshooter](https://watersystemsbench.com/tools/sprinkler-low-pressure-troubleshooter/)
 
 ## Guides
 
@@ -37,6 +44,9 @@
 - [Pressure Tank Drawdown & Short Cycling](https://watersystemsbench.com/guides/pressure-tank-drawdown-short-cycling/)
 - [Water Storage for Demand, Outages & Refill](https://watersystemsbench.com/guides/water-storage-demand-outages-refill/)
 - [Rainwater Harvesting System Planning](https://watersystemsbench.com/guides/rainwater-harvesting-system-planning/)
+- [How to Measure Irrigation Flow and Dynamic Pressure](https://watersystemsbench.com/guides/measure-irrigation-flow-pressure/)
+- [How to Split Sprinklers into Practical Zones](https://watersystemsbench.com/guides/split-sprinkler-zones/)
+- [How to Troubleshoot a Low-Pressure Sprinkler Zone](https://watersystemsbench.com/guides/troubleshoot-low-pressure-sprinkler-zone/)
 
 ## Reference
 

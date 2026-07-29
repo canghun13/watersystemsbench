@@ -1,5 +1,9 @@
 # Water Systems Bench
 
+## Current implementation
+
+The site now publishes 51 public HTML pages: seven core pages, three system hubs, 24 tools, 11 guides and six references. The Irrigation & Sprinkler Systems cluster provides a connected measure → zone → apply → schedule → troubleshoot workflow at `/systems/irrigation-sprinklers/`.
+
 **Domain:** [watersystemsbench.com](https://watersystemsbench.com)
 **Repository:** https://github.com/canghun13/watersystemsbench
 

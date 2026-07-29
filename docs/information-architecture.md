@@ -1,5 +1,9 @@
 # Information Architecture
 
+## Third implemented system hub
+
+`/systems/irrigation-sprinklers/` is now a live system hub. It connects measured supply, sprinkler-zone capacity, pipe/pump checks, precipitation, runtime, drip flow and low-pressure triage. The shared Systems menu lists Pumps, Wells/Storage/Rainwater and Irrigation/Sprinklers only; no Water Treatment route is published.
+
 **Repository:** https://github.com/canghun13/watersystemsbench
 
 ## Navigation model

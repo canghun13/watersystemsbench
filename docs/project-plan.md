@@ -1,5 +1,9 @@
 # Project Plan
 
+## Implemented irrigation release — 2026-07-29
+
+The Irrigation & Sprinkler Systems hub, seven tools and three guides are implemented. The public count is now 51 of 65 planned pages; 14 pages remain planned. This release establishes the third system hub and increases implemented tools/guides to 24/11.
+
 **Repository:** https://github.com/canghun13/watersystemsbench
 
 ## Product model

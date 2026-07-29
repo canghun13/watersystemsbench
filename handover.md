@@ -170,3 +170,15 @@ Implement the Irrigation & Sprinkler Systems cluster from docs/irrigation-sprink
 ## Latest Commit
 
 The Irrigation & Sprinkler Systems specification commit is the final `git rev-parse HEAD` value reported after commit and push; a Git commit cannot contain its own final hash.
+
+## Irrigation & Sprinkler Systems Implementation — 2026-07-29
+
+- Starting branch and commit: `main` at `277415cee32718021b209a1fbb829e0018a1cefe`; no pre-existing working-tree changes.
+- The user-managed KittyLaunch footer area was preserved: it remains untouched, in place, and without markup, asset, alt-text or whitespace changes.
+- Added the published hub `/systems/irrigation-sprinklers/`, seven working tools, and three guides. Existing header/footer navigation exposes the third system hub.
+- Actual public HTML: 51 (7 core, 3 system hubs, 24 tools, 11 guides and 6 references). Planned total remains 65; 14 pages remain unimplemented.
+- Irrigation tools: Available Water Flow Test Calculator; Sprinkler Zone Capacity Planner; Sprinkler Precipitation Rate Calculator; Irrigation Runtime & Water Depth Planner; Drip Irrigation Flow & Zone Calculator; Irrigation Pump & Zone Matcher; Sprinkler Low-Pressure Troubleshooter.
+- Added common irrigation calculation logic, SI/US conversion behavior, validation, reset/copy/print pattern, safety limits and primary technical sources. The pump matcher is explicitly a single-duty-condition screen and the troubleshooter is explicitly triage, not diagnosis.
+- QA: static and navigation QA passed for 51 public pages; 49 irrigation numeric/validation checks and six irrigation troubleshooting scenarios passed; existing Phase 1/2 checks passed. Browser QA recorded 255 renders (51 pages × 390, 768, 1024, 1280 and 1440 px), zero horizontal overflows and zero console errors. The available-flow calculator’s 30 L/min worked example was exercised in the browser.
+- Sitemap, robots, llms.txt, home, hubs, tools/guides indexes and shared system navigation now include the implemented cluster. GA4 remains exactly `G-7FB08YPX7C`; official contact remains `canghun13@naver.com`.
+- Remaining risk: local browser verification cannot prove GitHub Pages/Cloudflare propagation before push. Verify production URLs and current manufacturer/local-requirement conditions after deployment.

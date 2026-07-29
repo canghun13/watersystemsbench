@@ -1,5 +1,19 @@
 # Page Inventory
 
+## Implemented irrigation routes
+
+- `/systems/irrigation-sprinklers/`
+- `/tools/available-water-flow-test-calculator/`
+- `/tools/sprinkler-zone-capacity-planner/`
+- `/tools/sprinkler-precipitation-rate-calculator/`
+- `/tools/irrigation-runtime-water-depth-planner/`
+- `/tools/drip-irrigation-flow-zone-calculator/`
+- `/tools/irrigation-pump-zone-matcher/`
+- `/tools/sprinkler-low-pressure-troubleshooter/`
+- `/guides/measure-irrigation-flow-pressure/`
+- `/guides/split-sprinkler-zones/`
+- `/guides/troubleshoot-low-pressure-sprinkler-zone/`
+
 **Repository:** https://github.com/canghun13/watersystemsbench
 
 ## Status and conventions

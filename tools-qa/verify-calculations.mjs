@@ -15,12 +15,15 @@ import { computeStorageTank } from "../assets/js/tools/storage-tank-sizing.js";
 import { computeRainwaterYield } from "../assets/js/tools/rainwater-yield.js";
 import { simulateRainwater } from "../assets/js/tools/rainwater-simulator.js";
 import { computeFirstFlush } from "../assets/js/tools/first-flush.js";
+import { computeDrip, computeFlowTest, computePrecipitation, computePumpZone, computeRuntime, computeZoneCapacity, diagnoseIrrigation } from "../assets/js/tools/irrigation-tools.js";
 import { conversions, headToPressure, pressureToHead } from "../assets/js/unit-conversions.js";
 
 let numericCases = 0;
 let diagnosticCases = 0;
 let phase2Cases = 0;
 let simulatorCases = 0;
+let irrigationCases = 0;
+let irrigationDiagnosticCases = 0;
 const failures = [];
 
 function approx(name, actual, expected, tolerance) {
@@ -43,6 +46,14 @@ function phase2Approx(name, actual, expected, tolerance = 1e-9) {
 function simulatorApprox(name, actual, expected, tolerance = 1e-9) {
   simulatorCases += 1;
   if (!Number.isFinite(actual) || Math.abs(actual - expected) > tolerance) failures.push(`${name}: expected ${expected} ± ${tolerance}, received ${actual}`);
+}
+function irrigationApprox(name, actual, expected, tolerance = 1e-8) {
+  irrigationCases += 1;
+  if (!Number.isFinite(actual) || Math.abs(actual - expected) > tolerance) failures.push(`${name}: expected ${expected} ± ${tolerance}, received ${actual}`);
+}
+function irrigationExact(name, actual, expected) {
+  irrigationCases += 1;
+  if (actual !== expected) failures.push(`${name}: expected ${expected}, received ${actual}`);
 }
 
 // TDH: independent hand values use ρ=998.2 kg/m³ and g=9.80665 m/s².
@@ -163,8 +174,40 @@ simulatorApprox("Simulator overflow volume", simulateRainwater({ capacityL: 50, 
 simulatorApprox("Simulator one-litre daily sequence", simulateRainwater({ capacityL: 100000, initialL: 0, areaM2: 1, monthlyRainMm: monthDays, coefficient: 1, dailyDemandL: .5 }).endStorageL, 182.5);
 simulatorApprox("Simulator persistent daily deficit", simulateRainwater({ capacityL: 10, initialL: 0, areaM2: 1, monthlyRainMm: monthDays, coefficient: 1, dailyDemandL: 2 }).unmetL, 365);
 
+// Irrigation cluster: 36 independent numeric/validation checks.
+let flow = computeFlowTest({ volumeL: 10, seconds: 20 });
+irrigationApprox("A1 bucket L/min", flow.averageLpm, 30); irrigationApprox("A1 bucket L/s", flow.averageLpm / 60, .5); irrigationApprox("A1 bucket m3/h", flow.averageLpm * .06, 1.8); irrigationApprox("A1 bucket GPM", flow.averageLpm / 3.785411784, 7.9251615707);
+flow = computeFlowTest({ volumeL: 5 * 3.785411784, seconds: 40 }); irrigationApprox("A2 meter GPM", flow.averageLpm / 3.785411784, 7.5); irrigationApprox("A2 meter L/min", flow.averageLpm, 28.39058838);
+flow = computeFlowTest({ volumeL: 250, seconds: 300 }); irrigationApprox("A3 meter difference", flow.averageLpm, 50);
+flow = computeFlowTest({ volumeL: 10, seconds: 20, trials: [25, 30] }); irrigationApprox("A4 repeat average", flow.averageLpm, 24.666666667); irrigationApprox("A4 repeat spread", flow.spreadPercent, 40.54054054);
+let invalid = false; try { computeFlowTest({ volumeL: 10, seconds: 0 }); } catch { invalid = true; } irrigationExact("A5 zero seconds blocked", invalid, true);
+
+let zone = computeZoneCapacity({ availableLpm: 100, reservePercent: 10, perHeadLpm: 12 }); irrigationApprox("Z1 usable", zone.usableLpm, 90); irrigationExact("Z1 heads", zone.maxHeads, 7); irrigationApprox("Z1 unused", zone.usableLpm - zone.maxHeads * 12, 6);
+zone = computeZoneCapacity({ availableLpm: 72, reservePercent: 0, perHeadLpm: 12 }); irrigationExact("Z2 exact heads", zone.maxHeads, 6);
+zone = computeZoneCapacity({ availableLpm: 100, reservePercent: 10, perHeadLpm: 12, dynamicKPa: 350, requiredKPa: 210, lossKPa: 50, riseM: 10 }); irrigationApprox("Z3 pressure margin", zone.pressureMarginKPa, -8.0665); irrigationExact("Z3 pressure fail", zone.status, "Insufficient");
+zone = computeZoneCapacity({ availableLpm: 100, reservePercent: 10, perHeadLpm: 12, dynamicKPa: 400, requiredKPa: 210, lossKPa: 50, riseM: 10 }); irrigationApprox("Z4 pressure margin", zone.pressureMarginKPa, 41.9335); irrigationExact("Z4 pass", zone.status, "Pass");
+invalid = false; try { computeZoneCapacity({ availableLpm: 100, reservePercent: 51, perHeadLpm: 12 }); } catch { invalid = true; } irrigationExact("Z6 reserve blocked", invalid, true);
+
+let precip = computePrecipitation({ flowLpm: 120, areaM2: 4000 }); irrigationApprox("P1 mm/h", precip.mmh, 1.8); irrigationApprox("P1 in/h", precip.inchh, .07086614173);
+precip = computePrecipitation({ flowLpm: 1, xM: 4, yM: 4, layout: "rect" }); irrigationApprox("P3 rectangular", precip.mmh, 3.75);
+precip = computePrecipitation({ flowLpm: 1, xM: 4, yM: 4, layout: "tri" }); irrigationApprox("P4 triangular", precip.mmh, 4.330127019); precip = computePrecipitation({ flowLpm: 1, areaM2: 6, runtimeMin: 45 }); irrigationApprox("P5 depth", precip.appliedMm, 7.5);
+invalid = false; try { computePrecipitation({ flowLpm: 1, areaM2: 0 }); } catch { invalid = true; } irrigationExact("P6 area blocked", invalid, true);
+
+let runtime = computeRuntime({ targetMm: 20, rateMmh: 10, efficiencyPercent: 80, areaM2: 500 }); irrigationApprox("R1 gross depth", runtime.grossMm, 25); irrigationApprox("R1 runtime", runtime.totalMinutes, 150); irrigationApprox("R1 gross volume", runtime.grossVolumeL, 12500);
+runtime = computeRuntime({ targetMm: 30, rateMmh: 15, efficiencyPercent: 75, events: 3, cycles: 2 }); irrigationApprox("R2 total", runtime.totalMinutes, 160); irrigationApprox("R2 event", runtime.eventMinutes, 53.33333333); irrigationApprox("R2 cycle", runtime.cycleMinutes, 26.66666667);
+runtime = computeRuntime({ targetMm: 0, rateMmh: 10, efficiencyPercent: 80 }); irrigationExact("R3 no irrigation", runtime.totalMinutes, 0); invalid = false; try { computeRuntime({ targetMm: 1, rateMmh: 0, efficiencyPercent: 80 }); } catch { invalid = true; } irrigationExact("R5 zero rate blocked", invalid, true);
+
+let drip = computeDrip({ mode: "direct", emitters: 100, emitterLph: 4, hours: 1.5 }); irrigationApprox("D1 total L/h", drip.totalLph, 400); irrigationApprox("D1 L/min", drip.flowLpm, 6.666666667); irrigationApprox("D2 event", drip.eventL, 600);
+drip = computeDrip({ mode: "rows", emitterLph: 2, rowLengthM: 100, spacingM: .5, rows: 10, availableLpm: 50, reservePercent: 10 }); irrigationExact("D3 emitters row", drip.emittersPerRow, 201); irrigationExact("D3 total emitters", drip.totalEmitters, 2010); irrigationApprox("D3 total L/h", drip.totalLph, 4020); irrigationExact("D4 rows zone", drip.rowsPerZone, 6); irrigationExact("D4 zones", drip.requiredZones, 2);
+drip = computeDrip({ mode: "direct", emitters: 1, emitterLph: 2, availableLpm: 10 }); irrigationExact("D5 max emitters", drip.maxEmitters, 300);
+
+let matcher = computePumpZone({ pumpFlowLpm: 100, pumpHeadM: 60, zoneFlowLpm: 80, operatingKPa: 200, riseM: 10, lossM: 5, reservePercent: 10 }); irrigationApprox("M1 base head", matcher.baseHeadM, 35.39432, 1e-4); irrigationApprox("M1 adjusted flow", matcher.adjustedFlowLpm, 88); irrigationApprox("M1 adjusted head", matcher.adjustedHeadM, 38.933752, 1e-4); irrigationExact("M1 match", matcher.status, "Match");
+matcher = computePumpZone({ pumpFlowLpm: 85, pumpHeadM: 36, zoneFlowLpm: 80, operatingKPa: 200, riseM: 10, lossM: 5, reservePercent: 10 }); irrigationExact("M2 marginal", matcher.status, "Marginal"); matcher = computePumpZone({ pumpFlowLpm: 70, pumpHeadM: 60, zoneFlowLpm: 80, operatingKPa: 200, riseM: 10, lossM: 5, reservePercent: 10 }); irrigationExact("M3 flow insufficient", matcher.status, "Insufficient"); matcher = computePumpZone({ pumpFlowLpm: 100, pumpHeadM: 30, zoneFlowLpm: 80, operatingKPa: 200, riseM: 10, lossM: 5, reservePercent: 10 }); irrigationExact("M4 head insufficient", matcher.status, "Insufficient");
+
+for (const [name, input, expected] of [["T1", { scope: "zone", filter: "yes", leak: "no", nozzle: "no", pump: "no", dynamic: "no" }, "Zone valve/filter restriction"], ["T2", { scope: "all", filter: "no", leak: "no", nozzle: "no", pump: "no", dynamic: "yes" }, "Source-wide flow/pressure limitation"], ["T3", { scope: "zone", filter: "no", leak: "no", nozzle: "yes", pump: "no", dynamic: "no" }, "Excess zone demand"], ["T4", { scope: "one", filter: "no", leak: "no", nozzle: "no", pump: "no", dynamic: "no" }, "Individual head/nozzle obstruction"], ["T5", { scope: "zone", filter: "no", leak: "yes", nozzle: "no", pump: "no", dynamic: "no" }, "Active leak/lateral problem"], ["T6", { scope: "all", filter: "no", leak: "no", nozzle: "no", pump: "yes", dynamic: "yes" }, "Pump/source behavior"]]) { irrigationDiagnosticCases += 1; if (diagnoseIrrigation(input).cause !== expected) failures.push(`${name}: expected ${expected}.`); }
+
 if (failures.length) {
   console.error(`Calculation verification failed with ${failures.length} issue(s):\n- ${failures.join("\n- ")}`);
   process.exit(1);
 }
-console.log(`Calculation verification passed: ${numericCases} Phase 1 numeric/conversion cases, ${diagnosticCases} troubleshooting scenarios, ${phase2Cases} Phase 2 numeric/decision cases and ${simulatorCases} rainwater simulator scenarios.`);
+console.log(`Calculation verification passed: ${numericCases} Phase 1 numeric/conversion cases, ${diagnosticCases} troubleshooting scenarios, ${phase2Cases} Phase 2 numeric/decision cases, ${simulatorCases} rainwater simulator scenarios, ${irrigationCases} irrigation numeric/validation checks and ${irrigationDiagnosticCases} irrigation troubleshooting scenarios.`);
