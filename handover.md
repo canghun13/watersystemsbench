@@ -170,3 +170,7 @@ Implement the Irrigation & Sprinkler Systems cluster from docs/irrigation-sprink
 ## Latest Commit
 
 The Irrigation & Sprinkler Systems specification commit is the final `git rev-parse HEAD` value reported after commit and push; a Git commit cannot contain its own final hash.
+
+## 2026-07-29
+
+- 메인 페이지 푸터 아래의 디렉토리 뱃지 영역은 사용자가 직접 관리하는 영역이므로 수정·삭제·리팩터링하지 않는다.- https://kittylaunch.com에 등록 (내가 직접함)
