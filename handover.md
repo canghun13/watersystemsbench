@@ -182,3 +182,6 @@ The Irrigation & Sprinkler Systems specification commit is the final `git rev-pa
 - QA: static and navigation QA passed for 51 public pages; 49 irrigation numeric/validation checks and six irrigation troubleshooting scenarios passed; existing Phase 1/2 checks passed. Browser QA recorded 255 renders (51 pages × 390, 768, 1024, 1280 and 1440 px), zero horizontal overflows and zero console errors. The available-flow calculator’s 30 L/min worked example was exercised in the browser.
 - Sitemap, robots, llms.txt, home, hubs, tools/guides indexes and shared system navigation now include the implemented cluster. GA4 remains exactly `G-7FB08YPX7C`; official contact remains `canghun13@naver.com`.
 - Remaining risk: local browser verification cannot prove GitHub Pages/Cloudflare propagation before push. Verify production URLs and current manufacturer/local-requirement conditions after deployment.
+## 2026-07-29
+
+- 메인 페이지 푸터 아래의 디렉토리 뱃지 영역은 사용자가 직접 관리하는 영역이므로 수정·삭제·리팩터링하지 않는다.- https://kittylaunch.com에 등록 (내가 직접함)
