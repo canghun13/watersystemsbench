@@ -306,14 +306,18 @@ Home, Tools, Guides, Reference, shared Systems navigation, related workflows, si
 - Greywater is treated as non-potable wastewater. No page approves a source, use, treatment, storage method, setback, edible-crop contact, spray, indoor reuse, potable connection or local compliance.
 - Source definitions and requirements vary materially by jurisdiction. Users must preserve potable separation and the locally required sewer/septic diversion path.
 - ET, rainfall, plant factor, soil infiltration, receiving-basin volume, tariff and sewer-offset values are user inputs and require local evidence.
-- Browser QA cannot prove production propagation before push. Production verification must check the deployed commit after GitHub Pages and Cloudflare update.
+- Production propagation was verified after push against the exact implementation commit, including the new routes, representative live calculations, sitemap and protected badge block.
 - The complete user-managed homepage badge block was preserved exactly in its original location and is now protected by generator output and static QA.
 
 ### Release state
 
 - Browser evidence is recorded in `tools-qa/browser-results.json`.
-- Final implementation commit: the commit containing this section; retrieve it with `git rev-parse HEAD` after commit.
-- Production deployment and live checks: pending final `main` push at the time this handover text was written; update only with verified live evidence.
+- Implementation commit: `8ce9a59380ed95a7f0d7919316d5e916b0edcbd8` (`Add greywater reuse planning cluster`). Local `HEAD`, `origin/main` and the GitHub Pages workflow were matched to this SHA before live verification.
+- GitHub Pages deployment succeeded for that exact commit in run `https://github.com/canghun13/watersystemsbench/actions/runs/31242771928` (`pages-build-deployment #21`, 47 seconds).
+- Production verification passed for the homepage and all nine new pages: current canonical, exact GA4, expected H1/content, no broken images and no horizontal overflow.
+- Production sitemap returned HTTP 200 with 74 URLs and every new route.
+- Live default interactions matched the independently verified values: greywater supply `121.9 L/day`, irrigation demand coverage `70%`, and net annual savings `104 currency/year`.
+- The five homepage directory badges remained present in the original order with their original destinations, images, alternative text, height and inline-style values.
 
 ### Next recommended work
 
