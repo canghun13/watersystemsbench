@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laundry-to-Landscape Zone Planner | Water Systems Bench</title>
+  <meta name="description" content="Plan a whole-outlet laundry-to-landscape zone from measured load volume and user-entered minimum and maximum event volume per outlet.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://watersystemsbench.com/tools/laundry-to-landscape-zone-planner/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Water Systems Bench">
+  <meta property="og:title" content="Laundry-to-Landscape Zone Planner | Water Systems Bench">
+  <meta property="og:description" content="Plan a whole-outlet laundry-to-landscape zone from measured load volume and user-entered minimum and maximum event volume per outlet.">
+  <meta property="og:url" content="https://watersystemsbench.com/tools/laundry-to-landscape-zone-planner/">
+  <meta property="og:image" content="https://watersystemsbench.com/assets/og.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/content.css">
+  <link rel="stylesheet" href="/assets/css/calculator.css">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7FB08YPX7C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7FB08YPX7C');
+</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","@id":"https://watersystemsbench.com/tools/laundry-to-landscape-zone-planner/#application","name":"Laundry-to-Landscape Zone Planner","description":"Plan a whole-outlet laundry-to-landscape zone from measured load volume and user-entered minimum and maximum event volume per outlet.","url":"https://watersystemsbench.com/tools/laundry-to-landscape-zone-planner/","applicationCategory":"EngineeringApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript"},{"@type":"BreadcrumbList","@id":"https://watersystemsbench.com/tools/laundry-to-landscape-zone-planner/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://watersystemsbench.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://watersystemsbench.com/tools/"},{"@type":"ListItem","position":3,"name":"Laundry-to-Landscape Zone Planner","item":"https://watersystemsbench.com/tools/laundry-to-landscape-zone-planner/"}]}]}</script>
+  <script type="module" src="/assets/js/partials.js"></script>
+  <script type="module" src="/assets/js/main.js"></script>
+  <script type="module" src="/assets/js/tools/greywater-tools.js"></script>
+</head>
+<body>
+  <div data-header-slot></div>
+  <main id="main-content">
+    <div class="page-shell">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/tools/">Tools</a></li><li><span aria-current="page">Laundry-to-Landscape Zone Planner</span></li></ol></nav>
+      <header class="hero compact"><div><p class="eyebrow">Greywater reuse planning / Planner</p><h1>Laundry-to-Landscape Zone Planner</h1><p class="lede">Plan a whole-outlet laundry-to-landscape zone from measured load volume and user-entered minimum and maximum event volume per outlet.</p></div><p class="hero-note">Preliminary planning output only. Use measured data where possible and verify manufacturer and jurisdiction-specific requirements.</p></header>
+  <p class="meta-line">Last reviewed: August 8, 2026 · SI first · US customary supported</p>
+  <div class="tool-layout"><section class="instrument-panel"><div class="panel-heading"><h2>Bench inputs</h2><span class="panel-code">INPUT / SET</span></div><form data-tool-form="greywater-laundry-zone"><div class="field full"><label for="unitSystem">Unit system</label><select id="unitSystem" name="unitSystem" data-unit-system><option value="SI">SI — metric</option><option value="US">US customary</option></select></div><div class="field-grid"><div class="field "><label for="loadVolume">Measured water per laundry load (<span data-unit-label="volume"></span>)</label><input id="loadVolume" name="loadVolume" data-label="Measured water per laundry load" type="number" value="60" data-unit-kind="volume" step="any" required></div><div class="field "><label for="outlets">Proposed whole outlets</label><input id="outlets" name="outlets" data-label="Proposed whole outlets" type="number" value="4"  step="1" required></div><div class="field "><label for="minimum">User-entered minimum per outlet (<span data-unit-label="volume"></span>)</label><input id="minimum" name="minimum" data-label="User-entered minimum per outlet" type="number" value="10" data-unit-kind="volume" step="any" required></div><div class="field "><label for="maximum">User-entered maximum per outlet (<span data-unit-label="volume"></span>)</label><input id="maximum" name="maximum" data-label="User-entered maximum per outlet" type="number" value="20" data-unit-kind="volume" step="any" required></div><div class="field "><label for="loads">Laundry loads per week</label><input id="loads" name="loads" data-label="Laundry loads per week" type="number" value="4"  step="any" required></div></div><p class="form-error" data-form-error role="alert"></p><div class="button-row"><button class="button" type="submit">Plan outlets</button><button class="button secondary" type="reset">Reset</button></div></form></section><section class="result-panel" aria-label="Result">
+    <div class="panel-heading"><h2>Operating report</h2><span class="panel-code">RESULT / LIVE</span></div>
+    <div class="result-empty"><p>Enter the known values, then calculate to build a result summary.</p></div>
+    <div class="result-report" aria-live="polite" hidden>
+      <div class="primary-reading"><span class="reading-label"></span><span class="reading-value"></span></div>
+      <div class="result-block"><h3>Supporting calculations</h3><ul data-supporting></ul></div>
+      <div class="result-block"><h3>Interpretation</h3><p data-interpretation></p></div>
+      <p class="result-warning" data-warning></p>
+      <div class="result-actions"><button class="button small secondary" type="button" data-result-action data-copy-result disabled>Copy result</button><button class="button small secondary" type="button" data-result-action data-print-result disabled>Print result</button></div>
+    </div>
+  </section></div>
+  <div class="content-layout"><article class="article-body">
+    <h2>What this tool does</h2><p>Makes event volume and outlet count visible so one large laundry discharge is not confused with a smooth daily average.</p>
+    <h2>When to use it</h2><p>Use after measuring the washing machine's actual discharge and after defining a locally acceptable per-basin event range for the plants and soil.</p>
+    <h2>Inputs and supported units</h2><p>Each labelled field explains the quantity it expects. Unit-system changes convert existing numeric entries once and keep calculations on a single SI internal basis. Supported shared units include L/min and GPM, metres and feet, kPa and psi, millimetres and inches, kW and hp, and °C and °F as relevant.</p>
+    <h2>Calculation or decision method</h2><div class="formula">Volume per outlet = load volume / whole outlets<br>Minimum outlets = ceil(load / maximum target); maximum outlets = floor(load / minimum target)</div>
+    <h2>How to interpret the result</h2><p>Read the primary result with the supporting breakdown and warning. A plausible number is not evidence that every input, operating case or design constraint has been included.</p>
+    <div class="worked-example"><h2>Worked example</h2><p>A 60 L load with a user-entered 10–20 L target per outlet has a feasible range of three to six outlets; four outlets receive 15 L each.</p></div>
+    <h2>Assumptions</h2><p>Entered fixture, event, climate, soil and tariff values describe the planning case; volumes are kept on an SI internal basis.</p>
+    <h2>Limitations</h2><p>The result is a preliminary quantity or cost screen. It does not approve a source, end use, plumbing connection, treatment process, setback, storage time or irrigation method.</p>
+    <div class="notice"><strong>Safety and review boundary.</strong> Greywater is non-potable wastewater. Prevent cross-connections and human contact, preserve a safe diversion path, and follow current local health, plumbing, irrigation and environmental requirements.</div>
+    <h2>Sources</h2><ul class="source-list"><li><a href="https://www.sfpuc.gov/documents/graywater-design-manual" rel="noopener noreferrer">San Francisco Public Utilities Commission — Graywater Design Manual</a></li><li><a href="https://doh.wa.gov/community-and-environment/wastewater-management/greywater-reuse" rel="noopener noreferrer">Washington State Department of Health — Greywater Reuse</a></li><li><a href="https://www.epa.gov/watersense/water-budget-tool" rel="noopener noreferrer">U.S. EPA WaterSense — Water Budget Tool</a></li><li><a href="https://www.waterquality.gov.au/guidelines/recycled-water" rel="noopener noreferrer">Australian Government — Australian Guidelines for Water Recycling</a></li></ul>
+    <section aria-labelledby="related-heading"><h2 id="related-heading">Continue the workflow</h2><div class="related-grid"><a href="/tools/greywater-surge-basin-checker/">Greywater Surge & Basin Checker<br><span class="meta-line">Open next →</span></a><a href="/guides/plan-home-greywater-reuse-system/">How to Plan a Home Greywater Reuse System<br><span class="meta-line">Open next →</span></a><a href="/guides/troubleshoot-greywater-irrigation/">How to Troubleshoot Greywater Irrigation<br><span class="meta-line">Open next →</span></a><a href="/systems/greywater-reuse/">Greywater Reuse Planning workflow<br><span class="meta-line">Open next →</span></a></div></section>
+  </article><aside class="sidebar"><h2>Bench sequence</h2><ul><li><a href="/systems/greywater-reuse/">Greywater Reuse Planning workflow</a></li><li><a href="/guides/plan-home-greywater-reuse-system/">Plan source, use and diversion</a></li><li><a href="/reference/greywater-source-use-screening/">Screen source and end use</a></li><li><a href="/contact/">Report a content issue</a></li></ul></aside></div>
+    </div>
+  </main>
+  <div data-footer-slot></div>
+</body>
+</html>

@@ -2,12 +2,13 @@
 
 ## Navigation model
 
-The site follows a water-system workflow instead of separating resources only by format. Primary navigation exposes Home, Tools, Guides, Reference and a Systems menu. The Systems menu contains exactly four implemented hubs:
+The site follows a water-system workflow instead of separating resources only by format. Primary navigation exposes Home, Tools, Guides, Reference and a Systems menu. The Systems menu contains exactly five implemented hubs:
 
 - Pumps, Pressure & Pipe Flow
 - Wells, Storage & Rainwater
 - Irrigation & Sprinkler Systems
 - Water Treatment & Water Quality
+- Greywater Reuse Planning
 
 About, Contact and Privacy remain available through project navigation. No inactive future system is linked.
 
@@ -56,6 +57,20 @@ Representative sample and laboratory report
 → Hydraulic, storage, backwash and reject constraints
 → Follow-up monitoring and maintenance
 ```
+
+### Greywater reuse planning
+
+```text
+Allowed wastewater source
+→ Measured daily and event volume
+→ Allowed non-potable end use
+→ ET and rainfall-based demand
+→ Whole-outlet event distribution
+→ Receiving-basin capacity
+→ Diversion, observation and maintenance
+```
+
+The greywater hub is `/systems/greywater-reuse/`. The workflow never treats greywater as potable and does not infer a locally permitted source, use, storage method, setback or plumbing connection.
 
 The treatment hub is `/systems/water-treatment-quality/`. The obsolete planning-only `/tools/water-treatment-quality/` route must not be introduced.
 

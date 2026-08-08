@@ -17,6 +17,7 @@ import { simulateRainwater } from "../assets/js/tools/rainwater-simulator.js";
 import { computeFirstFlush } from "../assets/js/tools/first-flush.js";
 import { computeDrip, computeFlowTest, computePrecipitation, computePumpZone, computeRuntime, computeZoneCapacity, diagnoseIrrigation } from "../assets/js/tools/irrigation-tools.js";
 import { computeChlorineDose, computeContactTime, computeMediaFilter, computeRoProduction, computeRoRecovery, computeSaltRegeneration, computeSoftenerSizing, selectTreatmentTrain } from "../assets/js/tools/treatment-tools.js";
+import { computeGreywaterSupply, computeIrrigationMatch, computeLaundryZone, computeSurgeBasin, computeReuseSavings } from "../assets/js/tools/greywater-tools.js";
 import { conversions, headToPressure, pressureToHead } from "../assets/js/unit-conversions.js";
 
 let numericCases = 0;
@@ -27,6 +28,7 @@ let irrigationCases = 0;
 let irrigationDiagnosticCases = 0;
 let treatmentCases = 0;
 let treatmentSelectorCases = 0;
+let greywaterCases = 0;
 const failures = [];
 
 function approx(name, actual, expected, tolerance) {
@@ -65,6 +67,20 @@ function treatmentApprox(name, actual, expected, tolerance = 1e-8) {
 function treatmentExact(name, actual, expected) {
   treatmentCases += 1;
   if (actual !== expected) failures.push(`${name}: expected ${expected}, received ${actual}`);
+}
+function greywaterApprox(name, actual, expected, tolerance = 1e-8) {
+  greywaterCases += 1;
+  if (!Number.isFinite(actual) || Math.abs(actual - expected) > tolerance) failures.push(`${name}: expected ${expected} ± ${tolerance}, received ${actual}`);
+}
+function greywaterExact(name, actual, expected) {
+  greywaterCases += 1;
+  if (actual !== expected) failures.push(`${name}: expected ${expected}, received ${actual}`);
+}
+function greywaterThrows(name, calculation) {
+  greywaterCases += 1;
+  let threw = false;
+  try { calculation(); } catch { threw = true; }
+  if (!threw) failures.push(`${name}: expected validation error.`);
 }
 
 // TDH: independent hand values use ρ=998.2 kg/m³ and g=9.80665 m/s².
@@ -343,8 +359,68 @@ for (const [name, override, collection, expected] of [
   if (!result[collection].some((item) => item.includes(expected))) failures.push(`${name}: expected ${collection} to include "${expected}".`);
 }
 
+// Greywater cluster: independent hand calculations, SI/US equivalence, boundaries and invalid states.
+let greywater = computeGreywaterSupply({ occupants: 2, showerFlowLpm: 8, showerMinutesPerPerson: 6, bathLPerDay: 0, laundryLPerLoad: 55, loadsPerWeek: 4, basinLPerPersonDay: 8, capturePercent: 85 });
+greywaterApprox("GW-S1 shower daily", greywater.showerLPerDay, 96);
+greywaterApprox("GW-S2 laundry daily", greywater.laundryLPerDay, 220 / 7);
+greywaterApprox("GW-S3 basin daily", greywater.basinLPerDay, 16);
+greywaterApprox("GW-S4 raw daily", greywater.rawLPerDay, 143.4285714286);
+greywaterApprox("GW-S5 usable daily", greywater.usableLPerDay, 121.9142857143);
+greywaterApprox("GW-S6 weekly", greywater.weeklyL, 853.4);
+greywater = computeGreywaterSupply({ occupants: 1, showerFlowLpm: 0, showerMinutesPerPerson: 0, bathLPerDay: 0, laundryLPerLoad: 40, loadsPerWeek: 7, basinLPerPersonDay: 0, capturePercent: 100 });
+greywaterApprox("GW-S7 laundry-only boundary", greywater.usableLPerDay, 40);
+greywaterApprox("GW-S8 US gallon source equivalence", computeGreywaterSupply({ occupants: 1, showerFlowLpm: 3.785411784, showerMinutesPerPerson: 1, bathLPerDay: 0, laundryLPerLoad: 0, loadsPerWeek: 0, basinLPerPersonDay: 0, capturePercent: 100 }).usableLPerDay, 3.785411784);
+greywaterThrows("GW-S9 zero total rejected", () => computeGreywaterSupply({ occupants: 1, showerFlowLpm: 0, showerMinutesPerPerson: 0, bathLPerDay: 0, laundryLPerLoad: 0, loadsPerWeek: 0, basinLPerPersonDay: 0, capturePercent: 100 }));
+greywaterThrows("GW-S10 negative source rejected", () => computeGreywaterSupply({ occupants: 1, showerFlowLpm: -1, showerMinutesPerPerson: 1, bathLPerDay: 0, laundryLPerLoad: 0, loadsPerWeek: 0, basinLPerPersonDay: 0, capturePercent: 100 }));
+greywaterThrows("GW-S11 unrealistic occupants rejected", () => computeGreywaterSupply({ occupants: 101, showerFlowLpm: 1, showerMinutesPerPerson: 1, bathLPerDay: 0, laundryLPerLoad: 0, loadsPerWeek: 0, basinLPerPersonDay: 0, capturePercent: 100 }));
+
+let match = computeIrrigationMatch({ supplyLPerDay: 150, etoMmWeek: 35, rainfallMmWeek: 2, plantFactor: .4, areaM2: 100, irrigationEfficiencyPercent: 80 });
+greywaterApprox("GW-I1 net depth", match.netDepthMmWeek, 12);
+greywaterApprox("GW-I2 gross depth", match.grossDepthMmWeek, 15);
+greywaterApprox("GW-I3 demand", match.demandLWeek, 1500);
+greywaterApprox("GW-I4 supply", match.supplyLWeek, 1050);
+greywaterApprox("GW-I5 coverage", match.coveragePercent, 70);
+greywaterApprox("GW-I6 balance", match.balanceLWeek, -450);
+greywaterApprox("GW-I7 supported area", match.supportedAreaM2, 70);
+match = computeIrrigationMatch({ supplyLPerDay: 100, etoMmWeek: 5, rainfallMmWeek: 10, plantFactor: .5, areaM2: 100, irrigationEfficiencyPercent: 80 });
+greywaterApprox("GW-I8 rain boundary demand", match.demandLWeek, 0);
+greywaterExact("GW-I9 rain boundary coverage", match.coveragePercent, 100);
+greywaterThrows("GW-I10 zero efficiency rejected", () => computeIrrigationMatch({ supplyLPerDay: 100, etoMmWeek: 10, rainfallMmWeek: 0, plantFactor: .5, areaM2: 100, irrigationEfficiencyPercent: 0 }));
+greywaterThrows("GW-I11 unreasonable plant factor rejected", () => computeIrrigationMatch({ supplyLPerDay: 100, etoMmWeek: 10, rainfallMmWeek: 0, plantFactor: 2, areaM2: 100, irrigationEfficiencyPercent: 80 }));
+
+let greywaterZone = computeLaundryZone({ loadVolumeL: 60, outletCount: 4, minimumLPerOutlet: 10, maximumLPerOutlet: 20, loadsPerWeek: 4 });
+greywaterApprox("GW-L1 per outlet", greywaterZone.perOutletL, 15);
+greywaterExact("GW-L2 minimum outlets", greywaterZone.minimumOutlets, 3);
+greywaterExact("GW-L3 maximum outlets", greywaterZone.maximumOutlets, 6);
+greywaterExact("GW-L4 target status", greywaterZone.status, "Within entered target");
+greywaterApprox("GW-L5 weekly per outlet", greywaterZone.weeklyLPerOutlet, 60);
+greywaterZone = computeLaundryZone({ loadVolumeL: 60, outletCount: 2, minimumLPerOutlet: 10, maximumLPerOutlet: 20, loadsPerWeek: 0 });
+greywaterExact("GW-L6 high outlet status", greywaterZone.status, "Above entered target");
+greywaterThrows("GW-L7 invalid target combination", () => computeLaundryZone({ loadVolumeL: 60, outletCount: 4, minimumLPerOutlet: 20, maximumLPerOutlet: 10, loadsPerWeek: 4 }));
+greywaterThrows("GW-L8 fractional outlet rejected", () => computeLaundryZone({ loadVolumeL: 60, outletCount: 4.5, minimumLPerOutlet: 10, maximumLPerOutlet: 20, loadsPerWeek: 4 }));
+
+const surge = computeSurgeBasin({ eventVolumeL: 60, outletCount: 4, basinAreaM2: .25, basinDepthM: .1, voidPercent: 30, infiltrationMmHour: 15, drainHours: 2, deliveryPercent: 90 });
+greywaterApprox("GW-B1 delivered", surge.deliveredL, 54);
+greywaterApprox("GW-B2 void capacity", surge.storageL, 30);
+greywaterApprox("GW-B3 infiltration", surge.infiltrationL, 30);
+greywaterApprox("GW-B4 acceptance", surge.acceptanceL, 60);
+greywaterApprox("GW-B5 margin", surge.marginL, 6);
+greywaterExact("GW-B6 status", surge.status, "Entered capacity covers event");
+greywaterExact("GW-B7 zero infiltration accepted", computeSurgeBasin({ eventVolumeL: 60, outletCount: 4, basinAreaM2: .25, basinDepthM: .1, voidPercent: 30, infiltrationMmHour: 0, drainHours: 2, deliveryPercent: 90 }).status, "Entered capacity shortfall");
+greywaterThrows("GW-B8 negative infiltration rejected", () => computeSurgeBasin({ eventVolumeL: 60, outletCount: 4, basinAreaM2: .25, basinDepthM: .1, voidPercent: 30, infiltrationMmHour: -1, drainHours: 2, deliveryPercent: 90 }));
+
+const savings = computeReuseSavings({ dailyReuseL: 150, activeDays: 240, waterTariff: 2.5, sewerTariff: 3, sewerOffsetPercent: 50, annualOperatingCost: 40, installedCost: 1200 });
+greywaterApprox("GW-E1 annual volume", savings.annualReuseM3, 36);
+greywaterApprox("GW-E2 water savings", savings.avoidedWaterCost, 90);
+greywaterApprox("GW-E3 sewer savings", savings.avoidedSewerCost, 54);
+greywaterApprox("GW-E4 gross savings", savings.grossAnnualSavings, 144);
+greywaterApprox("GW-E5 net savings", savings.netAnnualSavings, 104);
+greywaterApprox("GW-E6 payback", savings.simplePaybackYears, 1200 / 104);
+greywaterExact("GW-E7 no positive payback", computeReuseSavings({ dailyReuseL: 1, activeDays: 1, waterTariff: 0, sewerTariff: 0, sewerOffsetPercent: 0, annualOperatingCost: 10, installedCost: 100 }).simplePaybackYears, null);
+greywaterThrows("GW-E8 invalid active days", () => computeReuseSavings({ dailyReuseL: 10, activeDays: 367, waterTariff: 1, sewerTariff: 1, sewerOffsetPercent: 100, annualOperatingCost: 0, installedCost: 0 }));
+
 if (failures.length) {
   console.error(`Calculation verification failed with ${failures.length} issue(s):\n- ${failures.join("\n- ")}`);
   process.exit(1);
 }
-console.log(`Calculation verification passed: ${numericCases} Phase 1 numeric/conversion cases, ${diagnosticCases} troubleshooting scenarios, ${phase2Cases} Phase 2 numeric/decision cases, ${simulatorCases} rainwater simulator scenarios, ${irrigationCases} irrigation numeric/validation checks, ${irrigationDiagnosticCases} irrigation troubleshooting scenarios, ${treatmentCases} treatment numeric/validation checks, and ${treatmentSelectorCases} treatment selector scenarios.`);
+console.log(`Calculation verification passed: ${numericCases} Phase 1 numeric/conversion cases, ${diagnosticCases} troubleshooting scenarios, ${phase2Cases} Phase 2 numeric/decision cases, ${simulatorCases} rainwater simulator scenarios, ${irrigationCases} irrigation numeric/validation checks, ${irrigationDiagnosticCases} irrigation troubleshooting scenarios, ${treatmentCases} treatment numeric/validation checks, ${treatmentSelectorCases} treatment selector scenarios, and ${greywaterCases} greywater numeric/validation checks.`);

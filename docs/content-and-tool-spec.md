@@ -4,16 +4,16 @@
 
 | Primary type | Count |
 | --- | ---: |
-| Calculator | 15 |
-| Planner | 6 |
-| Checker | 2 |
+| Calculator | 17 |
+| Planner | 8 |
+| Checker | 3 |
 | Comparator | 3 |
 | Troubleshooter | 2 |
 | Selector | 1 |
 | Estimator | 1 |
 | Analyzer | 1 |
 | Simulator | 1 |
-| Total | 32 |
+| Total | 37 |
 
 `RO Production vs Demand Planner` is a planner, not a selector. The Water Treatment Train Selector is the one implemented selector.
 
@@ -53,6 +53,15 @@ Every tool page contains:
 - CT arithmetic uses measured residual, entered baffling factor and an optional user-entered target. It does not select a compliance target.
 - The treatment-train selector returns candidate stages, testing needs and constraints. It does not prescribe a universal train or declare water potable.
 - Positive microbiological evidence triggers an urgent safe-source/public-authority message.
+
+## Greywater-specific boundaries
+
+- Household source volume is measured or entered explicitly; the tools do not assume that every sink, appliance or wastewater source is allowed.
+- Irrigation demand uses entered local ET, effective rainfall, plant factor, area and efficiency rather than a universal climate default.
+- Laundry distribution preserves short event volume and whole outlets instead of smoothing the load into a daily average.
+- Receiving-basin checks use entered void volume, field infiltration and drain-down time; they do not determine soil suitability, groundwater separation, setbacks or permit compliance.
+- Economics uses local water/sewer tariffs, user-entered sewer offset and operating cost; no price, rebate or utility rule is invented.
+- No tool approves indoor reuse, spray, edible-crop contact, storage, treatment, potable use or a plumbing cross-connection.
 
 ## Safety, health and regulatory rules
 

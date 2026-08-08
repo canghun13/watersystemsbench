@@ -1,16 +1,17 @@
 # QA and Operations
 
-## Current release evidence — 2026-07-29
+## Current release evidence — 2026-08-08
 
-- Public pages: 65
-- Category counts: 7 core, 4 hubs, 32 tools, 14 guides and 8 references
-- Sitemap: exact 65-route parity
+- Public pages: 74
+- Category counts: 7 core, 5 hubs, 37 tools, 16 guides and 9 references
+- Sitemap: exact 74-route parity
 - Static and navigation QA: passed
 - Calculation regression: 30 Phase 1 numeric/conversion cases, 6 general troubleshooting cases, 30 Phase 2 numeric/decision cases, 6 rainwater simulator cases, 49 irrigation numeric/validation cases and 6 irrigation troubleshooting cases
 - Treatment verification: 65 numeric/validation checks and 15 selector scenarios
-- Browser render matrix: 65 pages × 5 widths = 325 checks
+- Greywater verification: 46 independent numeric, unit-equivalence, boundary and validation checks
+- Browser render matrix: 74 pages × 5 widths = 370 checks
 - Viewports: 390, 768, 1024, 1280 and 1440 px
-- Tool interactions: all 32 tools recorded; all 8 treatment tools exercised in the current run
+- Tool interactions: 37 tools covered by regression; all 5 new greywater tools exercised for normal, invalid, recovery, reset, copy, print and unit-switch behavior
 - Browser failures after verification: 0 console errors, page errors, asset failures, internal 404s and horizontal overflows
 
 The actual browser run is recorded in `tools-qa/browser-results.json`. Update that file only after a complete real-browser run.
@@ -60,6 +61,6 @@ After pushing `main`:
 3. Check representative core, hub, tool, guide and reference URLs over HTTPS.
 4. Confirm HTTP 200, canonical domain, GA4 and current content.
 5. Exercise representative live calculations and the treatment selector.
-6. Confirm `sitemap.xml` exposes exactly 65 URLs.
+6. Confirm `sitemap.xml` exposes exactly 74 URLs.
 
 Do not report deployment success for a skipped or failed production check.

@@ -8,6 +8,7 @@
 - [Wells, Storage & Rainwater](https://watersystemsbench.com/systems/wells-storage-rainwater/)
 - [Irrigation & Sprinkler Systems](https://watersystemsbench.com/systems/irrigation-sprinklers/)
 - [Water Treatment & Water Quality](https://watersystemsbench.com/systems/water-treatment-quality/)
+- [Greywater Reuse Planning](https://watersystemsbench.com/systems/greywater-reuse/)
 
 ## Tools
 
@@ -43,6 +44,11 @@
 - [Chlorine Dose & Solution Volume Calculator](https://watersystemsbench.com/tools/chlorine-dose-solution-volume-calculator/)
 - [Disinfection Contact Time Calculator](https://watersystemsbench.com/tools/disinfection-contact-time-calculator/)
 - [Water Treatment Train Selector](https://watersystemsbench.com/tools/water-treatment-train-selector/)
+- [Greywater Supply Calculator](https://watersystemsbench.com/tools/greywater-supply-calculator/)
+- [Greywater Irrigation Demand Planner](https://watersystemsbench.com/tools/greywater-irrigation-demand-planner/)
+- [Laundry-to-Landscape Zone Planner](https://watersystemsbench.com/tools/laundry-to-landscape-zone-planner/)
+- [Greywater Surge & Basin Checker](https://watersystemsbench.com/tools/greywater-surge-basin-checker/)
+- [Greywater Reuse Savings Calculator](https://watersystemsbench.com/tools/greywater-reuse-savings-calculator/)
 
 ## Guides
 
@@ -60,6 +66,8 @@
 - [How to Read a Water Test Report](https://watersystemsbench.com/guides/read-water-test-report/)
 - [Sediment Filter vs Carbon Filter vs Softener vs RO vs UV](https://watersystemsbench.com/guides/filter-softener-ro-uv-comparison/)
 - [How to Build a Water Treatment Train Without Over-Treating](https://watersystemsbench.com/guides/build-water-treatment-train/)
+- [How to Plan a Home Greywater Reuse System](https://watersystemsbench.com/guides/plan-home-greywater-reuse-system/)
+- [How to Troubleshoot Greywater Irrigation](https://watersystemsbench.com/guides/troubleshoot-greywater-irrigation/)
 
 ## Reference
 
@@ -71,10 +79,11 @@
 - [Water Demand Planning Factors](https://watersystemsbench.com/reference/water-demand-planning-factors/)
 - [Water Quality Parameter Glossary](https://watersystemsbench.com/reference/water-quality-glossary/)
 - [Water Treatment Technology Comparison Matrix](https://watersystemsbench.com/reference/water-treatment-comparison-matrix/)
+- [Greywater Source & Use Screening Reference](https://watersystemsbench.com/reference/greywater-source-use-screening/)
 
 ## Safety and limitations
 
-The site supports preliminary planning. Outputs are not formal engineering approval, potable-water certification, legal advice, manufacturer selection, or a universal regulatory determination. Verify measurements, accredited laboratory results, applicable requirements, official certified-product listings and current manufacturer data. Chemical dose and CT tools use user-supplied targets and never recommend legal or health values.
+The site supports preliminary planning. Outputs are not formal engineering approval, potable-water certification, legal advice, manufacturer selection, or a universal regulatory determination. Verify measurements, accredited laboratory results, applicable requirements, official certified-product listings and current manufacturer data. Chemical dose and CT tools use user-supplied targets and never recommend legal or health values. Greywater tools never approve a source, potable use, plumbing connection, storage method, setback or jurisdictional compliance.
 
 ## Contact and source
 

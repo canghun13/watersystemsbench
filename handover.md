@@ -8,7 +8,7 @@
 - Default branch: main
 - Contact: [canghun13@naver.com](mailto:canghun13@naver.com)
 - GA4 measurement ID: `G-7FB08YPX7C`
-- Current phase: Irrigation & Sprinkler Systems specification complete; implementation not started
+- Current phase: Greywater Reuse Planning expansion implemented and QA complete; production verification follows the final `main` push
 - Language and audience: English; global
 - Stack and deployment: static HTML/CSS/vanilla JavaScript; GitHub Pages plus Cloudflare
 - Phase 2 starting commit: `3c2b450e361a8a8ea0d351059bdef0e121b95071`
@@ -226,3 +226,95 @@ The initial 65-page scope is complete. Prefer evidence-led maintenance, indexing
 ## 2026-08-06
 
 - 메인 페이지 푸터 아래의 디렉토리 뱃지 영역은 사용자가 직접 관리하는 영역이므로 수정·삭제·리팩터링하지 않는다.- https://boostdomainrating.com/ 에 등록 (내가 직접함)
+
+## Greywater Reuse Planning Expansion — 2026-08-08
+
+This section is the authoritative current-state handover. Earlier planning and release sections are retained as history.
+
+### Repository and starting state
+
+- Repository: https://github.com/canghun13/watersystemsbench
+- Starting branch: `main`
+- Starting commit: `afd187a310a4f1e0ebdc4a9c9ef17684a5601fd1`
+- Starting status: clean; local `HEAD` equal to `origin/main`
+- Starting inventory: 65 public pages — 7 core, 4 system hubs, 32 tools, 14 guides and 8 references
+- Protected user-managed area: the complete homepage directory-badge block below the footer, containing KittyLaunch, SellWithBoost, Twelve Tools, Findly and BoostDomainRating
+
+### Candidate research and final decision
+
+Seven substantive candidates were compared using public search results, repeated calculator/how-to intent, free-tool quality, site overlap and the required 40/35/25 scoring model:
+
+| Candidate | Monetization / 40 | Demand / 35 | Gap / 25 | Total | Decision |
+| --- | ---: | ---: | ---: | ---: | --- |
+| Greywater reuse planning | 34 | 29 | 21 | 84 | Selected |
+| Water loss and leakage | 36 | 31 | 16 | 83 | Rejected for this release: household and utility users split the workflow; AWWA provides a strong free audit tool |
+| Septic systems | 35 | 30 | 14 | 79 | Rejected: strong jurisdiction dependence and current free calculator competition |
+| Stormwater drainage | 37 | 31 | 10 | 78 | Rejected: dense engineering-tool competition and high permit-design misuse risk |
+| Commercial building water systems | 34 | 28 | 10 | 72 | Rejected: licensed code-table dependence and strong current competition |
+| Pond / reservoir management | 31 | 25 | 15 | 71 | Rejected: weaker connected workflow and topical fit |
+| Wastewater pump stations | 29 | 21 | 17 | 67 | Rejected: narrower professional demand and overlap with existing pump/TDH/friction tools |
+
+Greywater was selected because it fills the missing household wastewater → allowed non-potable reuse bridge between the existing rainwater, irrigation and treatment clusters. Searches exposed independent intent for source-volume estimation, ET-based irrigation matching, laundry-to-landscape distribution, surge/infiltration checking and savings/payback. Current competing calculators generally combine assumptions into one broad estimate or serve one regional scenario; Water Systems Bench now provides a product-neutral, connected and transparent workflow.
+
+Primary research and technical sources include San Francisco Public Utilities Commission, Washington State Department of Health, US EPA WaterSense, US EPA's non-potable reuse calculator methods and the Australian Guidelines for Water Recycling. Regional examples are not presented as global rules.
+
+The detailed candidate record, competitor review and tool contracts are in `docs/greywater-reuse-expansion.md`.
+
+Operational principle retained: `Insufficient long-term analytics is not currently a blocker for validated aggressive expansion.`
+
+### Implemented cluster
+
+- Hub: `/systems/greywater-reuse/`
+- Tools:
+  1. `/tools/greywater-supply-calculator/` — Calculator
+  2. `/tools/greywater-irrigation-demand-planner/` — Planner
+  3. `/tools/laundry-to-landscape-zone-planner/` — Planner
+  4. `/tools/greywater-surge-basin-checker/` — Checker
+  5. `/tools/greywater-reuse-savings-calculator/` — Calculator
+- Guides:
+  1. `/guides/plan-home-greywater-reuse-system/`
+  2. `/guides/troubleshoot-greywater-irrigation/`
+- Reference: `/reference/greywater-source-use-screening/`
+
+The cluster adds nine public pages. Final inventory is 74 public pages — 7 core, 5 system hubs, 37 tools, 16 guides and 9 references. Tool distribution is 17 calculators, 8 planners, 3 checkers, 3 comparators, 2 troubleshooters, 1 selector, 1 estimator, 1 analyzer and 1 simulator.
+
+Home, Tools, Guides, Reference, shared Systems navigation, related workflows, sitemap, `llms.txt`, generator registry, calculation/static/browser QA and project documentation include the new routes. The existing Hydraulic Field Bench design is reused without a new design system.
+
+### Calculation and decision verification
+
+- New greywater verification: 46 independent numeric, SI/US-equivalence, boundary and invalid-state checks passed.
+- Existing regression passed unchanged: 30 Phase 1 numeric/conversion cases, 6 general troubleshooting scenarios, 30 Phase 2 numeric/decision cases, 6 rainwater simulator scenarios, 49 irrigation numeric/validation checks, 6 irrigation troubleshooting scenarios, 65 treatment numeric/validation checks and 15 treatment selector scenarios.
+- New browser interactions passed for all five tools: default result, invalid input, stale-result removal, invalid → valid recovery, reset, copy, print, SI/US switch and repeated switch after reset.
+
+### Static and browser QA
+
+- Static QA: passed for 74 public pages with unique metadata, exact canonical, robots, one H1, exact GA4, valid JSON-LD/BreadcrumbList, sitemap parity, clean JavaScript and repository string scan.
+- Navigation QA: passed for 76 repository HTML documents with all local links and assets resolved.
+- Sitemap: 74 unique public URLs; exact parity with public HTML.
+- Actual browser render matrix: 74 pages × 5 widths = 370 checks at 390, 768, 1024, 1280 and 1440 px.
+- Browser results: zero console errors, page errors, asset failures, internal 404s, horizontal overflows, unlabelled controls and broken images.
+- Mobile menu and the fifth Systems entry passed; representative desktop result layout passed visual inspection.
+
+### Problems found and fixed
+
+- The shared unit-system closure did not resynchronize after native form reset. A later second unit switch could apply the wrong conversion direction. Reset now synchronizes the internal unit state; repeated SI → US → reset → US behavior passed.
+- Shared numeric validation combined minimum and non-zero wording, producing an inaccurate boundary message. Minimum and greater-than-zero errors are now separated and browser-verified.
+- Port 4173 was occupied by another local project during QA. A unique local port was used; this was an environment conflict, not a site defect.
+
+### Safety and remaining risks
+
+- Greywater is treated as non-potable wastewater. No page approves a source, use, treatment, storage method, setback, edible-crop contact, spray, indoor reuse, potable connection or local compliance.
+- Source definitions and requirements vary materially by jurisdiction. Users must preserve potable separation and the locally required sewer/septic diversion path.
+- ET, rainfall, plant factor, soil infiltration, receiving-basin volume, tariff and sewer-offset values are user inputs and require local evidence.
+- Browser QA cannot prove production propagation before push. Production verification must check the deployed commit after GitHub Pages and Cloudflare update.
+- The complete user-managed homepage badge block was preserved exactly in its original location and is now protected by generator output and static QA.
+
+### Release state
+
+- Browser evidence is recorded in `tools-qa/browser-results.json`.
+- Final implementation commit: the commit containing this section; retrieve it with `git rev-parse HEAD` after commit.
+- Production deployment and live checks: pending final `main` push at the time this handover text was written; update only with verified live evidence.
+
+### Next recommended work
+
+Monitor indexing and query evidence for the greywater routes, then compare Water Loss & Leakage against the remaining rejected candidates before another expansion. Do not publish a new cluster without repeating duplicate review, source/formula contracts and complete regression/browser QA.

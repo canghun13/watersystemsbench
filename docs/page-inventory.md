@@ -2,16 +2,16 @@
 
 ## Status
 
-All 65 pages in the initial plan are implemented.
+All 65 pages in the initial plan remain implemented. The validated Greywater Reuse Planning expansion adds nine public pages.
 
 | Category | Implemented | Remaining |
 | --- | ---: | ---: |
 | Core pages | 7 | 0 |
-| System hubs | 4 | 0 |
-| Tools | 32 | 0 |
-| Guides | 14 | 0 |
-| References | 8 | 0 |
-| Total public HTML | 65 | 0 |
+| System hubs | 5 | 0 |
+| Tools | 37 | 0 |
+| Guides | 16 | 0 |
+| References | 9 | 0 |
+| Total public HTML | 74 | 0 |
 
 The authoritative Water Treatment & Water Quality hub is `/systems/water-treatment-quality/`. This corrects the earlier planning-only `/tools/water-treatment-quality/` route and aligns the cluster with the other system hubs.
 
@@ -31,6 +31,7 @@ The authoritative Water Treatment & Water Quality hub is `/systems/water-treatme
 - `/systems/wells-storage-rainwater/`
 - `/systems/irrigation-sprinklers/`
 - `/systems/water-treatment-quality/`
+- `/systems/greywater-reuse/`
 
 ## Tools
 
@@ -78,6 +79,14 @@ The authoritative Water Treatment & Water Quality hub is `/systems/water-treatme
 - `/tools/disinfection-contact-time-calculator/`
 - `/tools/water-treatment-train-selector/`
 
+### Greywater reuse planning
+
+- `/tools/greywater-supply-calculator/`
+- `/tools/greywater-irrigation-demand-planner/`
+- `/tools/laundry-to-landscape-zone-planner/`
+- `/tools/greywater-surge-basin-checker/`
+- `/tools/greywater-reuse-savings-calculator/`
+
 ## Guides
 
 - `/guides/how-to-size-a-water-pump/`
@@ -94,6 +103,8 @@ The authoritative Water Treatment & Water Quality hub is `/systems/water-treatme
 - `/guides/read-water-test-report/`
 - `/guides/filter-softener-ro-uv-comparison/`
 - `/guides/build-water-treatment-train/`
+- `/guides/plan-home-greywater-reuse-system/`
+- `/guides/troubleshoot-greywater-irrigation/`
 
 ## References
 
@@ -105,5 +116,6 @@ The authoritative Water Treatment & Water Quality hub is `/systems/water-treatme
 - `/reference/water-demand-planning-factors/`
 - `/reference/water-quality-glossary/`
 - `/reference/water-treatment-comparison-matrix/`
+- `/reference/greywater-source-use-screening/`
 
 Each public route must remain unique in sitemap, canonical metadata and generated navigation. Future routes require a distinct user task, implemented content and full QA; do not publish empty pages.

@@ -11,16 +11,19 @@ Water Systems Bench is an English-language, global workflow hub for sizing, chec
 
 ## Current implementation
 
-The complete first-wave scope is implemented: 65 public HTML pages comprising 7 core pages, 4 connected system hubs, 32 working tools, 14 guides and 8 references.
+The complete first-wave scope and one validated expansion cluster are implemented: 74 public HTML pages comprising 7 core pages, 5 connected system hubs, 37 working tools, 16 guides and 9 references.
 
-The four workflows are:
+The five workflows are:
 
 1. Pumps, Pressure & Pipe Flow
 2. Wells, Storage & Rainwater
 3. Irrigation & Sprinkler Systems
 4. Water Treatment & Water Quality
+5. Greywater Reuse Planning
 
 The Water Treatment & Water Quality cluster starts at `/systems/water-treatment-quality/`. Its eight tools use tested or user-supplied values, show their methods and limitations, and do not claim potable-water safety, regulatory compliance or an approved design.
+
+The Greywater Reuse Planning cluster starts at `/systems/greywater-reuse/`. Its five tools connect measured household supply, ET-based landscape demand, laundry event distribution, receiving-basin capacity and user-entered economics without approving a source, end use, potable connection or local compliance.
 
 The site uses the Hydraulic Field Bench design system, SI-first calculations with common US customary units, unique metadata and canonical URLs, JSON-LD, breadcrumbs, GA4, sitemap, robots and `llms.txt`.
 
@@ -58,3 +61,4 @@ Before finishing, inspect the diff, run relevant calculation/static/navigation/b
 - [Content and tool specification](docs/content-and-tool-spec.md)
 - [QA and operations](docs/qa-and-operations.md)
 - [Water treatment implementation specification](docs/water-treatment-quality-spec.md)
+- [Greywater expansion research and specification](docs/greywater-reuse-expansion.md)

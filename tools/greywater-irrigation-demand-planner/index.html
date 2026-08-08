@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Greywater Irrigation Demand Planner | Water Systems Bench</title>
+  <meta name="description" content="Compare daily greywater supply with ET, rainfall, plant-factor, area and irrigation-efficiency demand.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://watersystemsbench.com/tools/greywater-irrigation-demand-planner/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Water Systems Bench">
+  <meta property="og:title" content="Greywater Irrigation Demand Planner | Water Systems Bench">
+  <meta property="og:description" content="Compare daily greywater supply with ET, rainfall, plant-factor, area and irrigation-efficiency demand.">
+  <meta property="og:url" content="https://watersystemsbench.com/tools/greywater-irrigation-demand-planner/">
+  <meta property="og:image" content="https://watersystemsbench.com/assets/og.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/content.css">
+  <link rel="stylesheet" href="/assets/css/calculator.css">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7FB08YPX7C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7FB08YPX7C');
+</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","@id":"https://watersystemsbench.com/tools/greywater-irrigation-demand-planner/#application","name":"Greywater Irrigation Demand Planner","description":"Compare daily greywater supply with ET, rainfall, plant-factor, area and irrigation-efficiency demand.","url":"https://watersystemsbench.com/tools/greywater-irrigation-demand-planner/","applicationCategory":"EngineeringApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript"},{"@type":"BreadcrumbList","@id":"https://watersystemsbench.com/tools/greywater-irrigation-demand-planner/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://watersystemsbench.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://watersystemsbench.com/tools/"},{"@type":"ListItem","position":3,"name":"Greywater Irrigation Demand Planner","item":"https://watersystemsbench.com/tools/greywater-irrigation-demand-planner/"}]}]}</script>
+  <script type="module" src="/assets/js/partials.js"></script>
+  <script type="module" src="/assets/js/main.js"></script>
+  <script type="module" src="/assets/js/tools/greywater-tools.js"></script>
+</head>
+<body>
+  <div data-header-slot></div>
+  <main id="main-content">
+    <div class="page-shell">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/tools/">Tools</a></li><li><span aria-current="page">Greywater Irrigation Demand Planner</span></li></ol></nav>
+      <header class="hero compact"><div><p class="eyebrow">Greywater reuse planning / Planner</p><h1>Greywater Irrigation Demand Planner</h1><p class="lede">Compare daily greywater supply with ET, rainfall, plant-factor, area and irrigation-efficiency demand.</p></div><p class="hero-note">Preliminary planning output only. Use measured data where possible and verify manufacturer and jurisdiction-specific requirements.</p></header>
+  <p class="meta-line">Last reviewed: August 8, 2026 · SI first · US customary supported</p>
+  <div class="tool-layout"><section class="instrument-panel"><div class="panel-heading"><h2>Bench inputs</h2><span class="panel-code">INPUT / SET</span></div><form data-tool-form="greywater-irrigation"><div class="field full"><label for="unitSystem">Unit system</label><select id="unitSystem" name="unitSystem" data-unit-system><option value="SI">SI — metric</option><option value="US">US customary</option></select></div><div class="field-grid"><div class="field "><label for="supply">Usable greywater supply per day (<span data-unit-label="volume"></span>)</label><input id="supply" name="supply" data-label="Usable greywater supply per day" type="number" value="150" data-unit-kind="volume" step="any" required></div><div class="field "><label for="eto">Reference ET per week (<span data-unit-label="rainfall"></span>)</label><input id="eto" name="eto" data-label="Reference ET per week" type="number" value="35" data-unit-kind="rainfall" step="any" required></div><div class="field "><label for="rainfall">Effective rainfall per week (<span data-unit-label="rainfall"></span>)</label><input id="rainfall" name="rainfall" data-label="Effective rainfall per week" type="number" value="2" data-unit-kind="rainfall" step="any" required></div><div class="field "><label for="plantFactor">Plant factor</label><input id="plantFactor" name="plantFactor" data-label="Plant factor" type="number" value="0.4"  step="any" required></div><div class="field "><label for="area">Irrigated hydrozone area (<span data-unit-label="area"></span>)</label><input id="area" name="area" data-label="Irrigated hydrozone area" type="number" value="100" data-unit-kind="area" step="any" required></div><div class="field "><label for="efficiency">Irrigation efficiency (%)</label><input id="efficiency" name="efficiency" data-label="Irrigation efficiency (%)" type="number" value="80"  step="any" required></div></div><p class="form-error" data-form-error role="alert"></p><div class="button-row"><button class="button" type="submit">Match supply and demand</button><button class="button secondary" type="reset">Reset</button></div></form></section><section class="result-panel" aria-label="Result">
+    <div class="panel-heading"><h2>Operating report</h2><span class="panel-code">RESULT / LIVE</span></div>
+    <div class="result-empty"><p>Enter the known values, then calculate to build a result summary.</p></div>
+    <div class="result-report" aria-live="polite" hidden>
+      <div class="primary-reading"><span class="reading-label"></span><span class="reading-value"></span></div>
+      <div class="result-block"><h3>Supporting calculations</h3><ul data-supporting></ul></div>
+      <div class="result-block"><h3>Interpretation</h3><p data-interpretation></p></div>
+      <p class="result-warning" data-warning></p>
+      <div class="result-actions"><button class="button small secondary" type="button" data-result-action data-copy-result disabled>Copy result</button><button class="button small secondary" type="button" data-result-action data-print-result disabled>Print result</button></div>
+    </div>
+  </section></div>
+  <div class="content-layout"><article class="article-body">
+    <h2>What this tool does</h2><p>Shows whether the entered reusable supply covers a site-specific weekly landscape demand and how much area that supply can support.</p>
+    <h2>When to use it</h2><p>Use after estimating supply and obtaining local reference ET, effective rainfall and a defensible plant factor for one hydrozone.</p>
+    <h2>Inputs and supported units</h2><p>Each labelled field explains the quantity it expects. Unit-system changes convert existing numeric entries once and keep calculations on a single SI internal basis. Supported shared units include L/min and GPM, metres and feet, kPa and psi, millimetres and inches, kW and hp, and °C and °F as relevant.</p>
+    <h2>Calculation or decision method</h2><div class="formula">Gross demand = max(0, ETo × plant factor − effective rainfall) × area / irrigation efficiency</div><p>One millimetre over one square metre equals one litre. EPA's water-budget method likewise treats climate, plant type, area, rainfall and efficiency as separate inputs.</p>
+    <h2>How to interpret the result</h2><p>Read the primary result with the supporting breakdown and warning. A plausible number is not evidence that every input, operating case or design constraint has been included.</p>
+    <div class="worked-example"><h2>Worked example</h2><p>150 L/day over 100 m² with 35 mm/week ETo, plant factor 0.4, 2 mm effective rain and 80% efficiency supplies about 70% of the 1,500 L/week gross demand.</p></div>
+    <h2>Assumptions</h2><p>Entered fixture, event, climate, soil and tariff values describe the planning case; volumes are kept on an SI internal basis.</p>
+    <h2>Limitations</h2><p>The result is a preliminary quantity or cost screen. It does not approve a source, end use, plumbing connection, treatment process, setback, storage time or irrigation method.</p>
+    <div class="notice"><strong>Safety and review boundary.</strong> Greywater is non-potable wastewater. Prevent cross-connections and human contact, preserve a safe diversion path, and follow current local health, plumbing, irrigation and environmental requirements.</div>
+    <h2>Sources</h2><ul class="source-list"><li><a href="https://www.sfpuc.gov/documents/graywater-design-manual" rel="noopener noreferrer">San Francisco Public Utilities Commission — Graywater Design Manual</a></li><li><a href="https://doh.wa.gov/community-and-environment/wastewater-management/greywater-reuse" rel="noopener noreferrer">Washington State Department of Health — Greywater Reuse</a></li><li><a href="https://www.epa.gov/watersense/water-budget-tool" rel="noopener noreferrer">U.S. EPA WaterSense — Water Budget Tool</a></li><li><a href="https://www.waterquality.gov.au/guidelines/recycled-water" rel="noopener noreferrer">Australian Government — Australian Guidelines for Water Recycling</a></li></ul>
+    <section aria-labelledby="related-heading"><h2 id="related-heading">Continue the workflow</h2><div class="related-grid"><a href="/tools/greywater-supply-calculator/">Greywater Supply Calculator<br><span class="meta-line">Open next →</span></a><a href="/tools/laundry-to-landscape-zone-planner/">Laundry-to-Landscape Zone Planner<br><span class="meta-line">Open next →</span></a><a href="/tools/irrigation-runtime-water-depth-planner/">Irrigation Runtime & Water Depth Planner<br><span class="meta-line">Open next →</span></a><a href="/systems/greywater-reuse/">Greywater Reuse Planning workflow<br><span class="meta-line">Open next →</span></a></div></section>
+  </article><aside class="sidebar"><h2>Bench sequence</h2><ul><li><a href="/systems/greywater-reuse/">Greywater Reuse Planning workflow</a></li><li><a href="/guides/plan-home-greywater-reuse-system/">Plan source, use and diversion</a></li><li><a href="/reference/greywater-source-use-screening/">Screen source and end use</a></li><li><a href="/contact/">Report a content issue</a></li></ul></aside></div>
+    </div>
+  </main>
+  <div data-footer-slot></div>
+</body>
+</html>

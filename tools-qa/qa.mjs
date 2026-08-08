@@ -22,7 +22,7 @@ async function walk(dir) {
 
 const allFiles = await walk(root);
 const publicHtml = allFiles.filter((path) => path.endsWith(`${sep}index.html`) || path === join(root, "index.html"));
-if (publicHtml.length !== 65) errors.push(`Expected 65 public HTML files; found ${publicHtml.length}.`);
+if (publicHtml.length !== 74) errors.push(`Expected 74 public HTML files; found ${publicHtml.length}.`);
 const categoryCounts = {
   core: publicHtml.filter((file) => !relative(root, file).includes(sep)).length + publicHtml.filter((file) => ["about", "contact", "privacy", "tools", "guides", "reference"].includes(relative(root, dirname(file)))).length,
   systems: publicHtml.filter((file) => relative(root, dirname(file)).split(sep).length === 2 && relative(root, file).startsWith(`systems${sep}`)).length,
@@ -30,7 +30,7 @@ const categoryCounts = {
   guides: publicHtml.filter((file) => relative(root, dirname(file)).split(sep).length === 2 && relative(root, file).startsWith(`guides${sep}`)).length,
   reference: publicHtml.filter((file) => relative(root, dirname(file)).split(sep).length === 2 && relative(root, file).startsWith(`reference${sep}`)).length
 };
-for (const [key, expected] of Object.entries({ core: 7, systems: 4, tools: 32, guides: 14, reference: 8 })) {
+for (const [key, expected] of Object.entries({ core: 7, systems: 5, tools: 37, guides: 16, reference: 9 })) {
   if (categoryCounts[key] !== expected) errors.push(`Expected ${expected} ${key} pages; found ${categoryCounts[key]}.`);
 }
 
@@ -87,7 +87,7 @@ for (const file of publicHtml) {
 
 const sitemap = await readFile(join(root, "sitemap.xml"), "utf8");
 const sitemapUrls = new Set([...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]));
-if (sitemapUrls.size !== 65) errors.push(`Sitemap contains ${sitemapUrls.size} unique URLs, expected 65.`);
+if (sitemapUrls.size !== 74) errors.push(`Sitemap contains ${sitemapUrls.size} unique URLs, expected 74.`);
 for (const url of pageUrls) if (!sitemapUrls.has(url)) errors.push(`Sitemap missing ${url}.`);
 for (const url of sitemapUrls) if (!pageUrls.has(url)) errors.push(`Sitemap contains non-public URL ${url}.`);
 
@@ -96,10 +96,27 @@ if (!robots.includes(`Sitemap: ${expectedDomain}/sitemap.xml`) || !robots.includ
 const llms = await readFile(join(root, "llms.txt"), "utf8");
 if (!llms.includes("https://github.com/canghun13/watersystemsbench") || !llms.includes(expectedEmail)) errors.push("llms.txt lacks repository or contact.");
 if (!llms.includes("/systems/water-treatment-quality/") || !llms.includes("Chemical dose and CT tools use user-supplied targets")) errors.push("llms.txt lacks treatment workflow or safety boundary.");
+if (!llms.includes("/systems/greywater-reuse/") || !llms.includes("Greywater tools never approve a source")) errors.push("llms.txt lacks greywater workflow or safety boundary.");
 
 const home = await readFile(join(root, "index.html"), "utf8");
-const kittyMarkup = '<a href="https://kittylaunch.com/p/water-systems-bench" target="_blank" rel="noopener" style="display:inline-block;">\n      <img src="https://kittylaunch.com/api/public/badges/launch_badge.svg?theme=light&name=Water%20Systems%20Bench" alt="Water Systems Bench on KittyLaunch" data-kittylaunch-badge="1" style="margin:0 2px;height:36px;" />';
-if (!home.includes(kittyMarkup)) errors.push("Homepage user-managed KittyLaunch badge markup changed or is missing.");
+const userManagedBadgeBlock = `<div class="page-shell" style="padding:30px 0;text-align:center;">
+    <a href="https://kittylaunch.com/p/water-systems-bench" target="_blank" rel="noopener" style="display:inline-block;margin:0 2px;">
+      <img src="https://kittylaunch.com/api/public/badges/launch_badge.svg?theme=light&name=Water%20Systems%20Bench" alt="Water Systems Bench on KittyLaunch" data-kittylaunch-badge="1" style="margin:0 2px;height:36px;" />
+    </a>
+    <a href="https://sellwithboost.com" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin:0 2px;">
+    \t<img src="https://sellwithboost.com/badge/listing.svg" alt="Listed on Sell With boost" style="height: 36px; width: auto;" />
+    </a>
+    <a href="https://twelve.tools" target="_blank" style="display:inline-block;margin:0 2px;">
+      <img src="https://twelve.tools/badge0-white.svg" alt="Featured on Twelve Tools" height="36px">
+    </a>
+    <a href="https://findly.tools/watersystemsbench?utm_source=watersystemsbench" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin:0 2px;">
+      <img src="https://findly.tools/badges/findly-tools-badge-light.svg" alt="Featured on Findly.tools" height="36px" />
+    </a>
+    <a href="https://boostdomainrating.com/item/watersystemsbench.com?utm_source=badge" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin:0 2px;">
+    \t<img src="https://boostdomainrating.com/api/badge/watersystemsbench.com" alt="Water Systems Bench - Domain Rating" style="height: 36px; width: auto;"/>
+    </a>
+  </div>`;
+if (!home.includes(userManagedBadgeBlock)) errors.push("Homepage user-managed directory badge block changed or is missing.");
 for (const file of publicHtml.filter((file) => file !== join(root, "index.html"))) {
   if ((await readFile(file, "utf8")).includes("data-kittylaunch-badge")) {
     errors.push("KittyLaunch badge must not be copied to other pages.");
@@ -123,6 +140,21 @@ for (const route of treatmentToolRoutes) {
   if (!html.includes('aria-live="polite"')) errors.push(`${route}: aria-live result missing.`);
   if (!html.includes("<h2>Sources</h2>") || !html.includes("source-list")) errors.push(`${route}: authoritative sources missing.`);
   if (!html.includes("Safety and review boundary") || !/potable|drinking-water|chemical|regulatory/i.test(html)) errors.push(`${route}: treatment safety boundary missing.`);
+}
+
+const greywaterToolRoutes = [
+  "/tools/greywater-supply-calculator/",
+  "/tools/greywater-irrigation-demand-planner/",
+  "/tools/laundry-to-landscape-zone-planner/",
+  "/tools/greywater-surge-basin-checker/",
+  "/tools/greywater-reuse-savings-calculator/"
+];
+for (const route of greywaterToolRoutes) {
+  const html = await readFile(join(root, route.slice(1), "index.html"), "utf8");
+  if (!html.includes('data-tool-form="greywater-')) errors.push(`${route}: greywater form missing.`);
+  if (!html.includes('aria-live="polite"')) errors.push(`${route}: aria-live result missing.`);
+  if (!html.includes("<h2>Sources</h2>") || !html.includes("source-list")) errors.push(`${route}: authoritative sources missing.`);
+  if (!html.includes("Safety and review boundary") || !/non-potable|wastewater|cross-connection|local/i.test(html)) errors.push(`${route}: greywater safety boundary missing.`);
 }
 
 const syntaxFiles = allFiles.filter((path) => [".js", ".mjs"].includes(extname(path)));

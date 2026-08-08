@@ -1,11 +1,12 @@
 {
-  "date": "2026-07-29",
-  "pages": 65,
+  "date": "2026-08-08",
+  "pages": 74,
   "widths": [390, 768, 1024, 1280, 1440],
-  "renderChecks": 325,
-  "toolInteractions": 32,
+  "renderChecks": 370,
+  "toolInteractions": 37,
   "phase2ToolInteractions": 15,
   "treatmentToolInteractions": 8,
+  "greywaterToolInteractions": 5,
   "mobileMenu": "passed",
   "calculateAnalyze": "passed",
   "reset": "passed",
@@ -23,7 +24,7 @@
   "firstFlushModes": "passed",
   "issuesFound": 2,
   "issuesFixed": [
-    "Added optional media bed depth with geometric bed-volume output and unit conversion.",
-    "Added selector questions and rule paths for undefined service flow, existing equipment and limited service space."
+    "Synchronized the shared unit-system state after form reset so repeated SI/US switching cannot apply the wrong conversion direction.",
+    "Corrected shared numeric validation wording so minimum boundaries are described accurately."
   ]
 }

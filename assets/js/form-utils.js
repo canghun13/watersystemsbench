@@ -6,7 +6,8 @@ export function numberValue(form, name, { min = 0, max = Number.POSITIVE_INFINIT
   if (raw === "" || raw == null) throw new Error(`${field?.dataset.label || name} is required.`);
   const value = Number(raw);
   if (!Number.isFinite(value)) throw new Error(`${field?.dataset.label || name} must be a valid number.`);
-  if (value < min || (!allowZero && value === 0)) throw new Error(`${field?.dataset.label || name} must be ${allowZero ? `at least ${min}` : `greater than ${min}`}.`);
+  if (value < min) throw new Error(`${field?.dataset.label || name} must be at least ${min}.`);
+  if (!allowZero && value === 0) throw new Error(`${field?.dataset.label || name} must be greater than zero.`);
   if (value > max) throw new Error(`${field?.dataset.label || name} is outside the supported range.`);
   return value;
 }
@@ -102,5 +103,8 @@ export function setupUnitSystem(form) {
     current = next;
     applyUnitLabels(form, current);
     clearResult(form);
+  });
+  form.addEventListener("reset", () => {
+    requestAnimationFrame(() => { current = select.value; });
   });
 }

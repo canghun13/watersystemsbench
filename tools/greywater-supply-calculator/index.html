@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Greywater Supply Calculator | Water Systems Bench</title>
+  <meta name="description" content="Estimate daily and weekly greywater supply from measured shower, bath, laundry and bathroom-basin use in SI or US units.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://watersystemsbench.com/tools/greywater-supply-calculator/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Water Systems Bench">
+  <meta property="og:title" content="Greywater Supply Calculator | Water Systems Bench">
+  <meta property="og:description" content="Estimate daily and weekly greywater supply from measured shower, bath, laundry and bathroom-basin use in SI or US units.">
+  <meta property="og:url" content="https://watersystemsbench.com/tools/greywater-supply-calculator/">
+  <meta property="og:image" content="https://watersystemsbench.com/assets/og.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/content.css">
+  <link rel="stylesheet" href="/assets/css/calculator.css">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7FB08YPX7C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7FB08YPX7C');
+</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","@id":"https://watersystemsbench.com/tools/greywater-supply-calculator/#application","name":"Greywater Supply Calculator","description":"Estimate daily and weekly greywater supply from measured shower, bath, laundry and bathroom-basin use in SI or US units.","url":"https://watersystemsbench.com/tools/greywater-supply-calculator/","applicationCategory":"EngineeringApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript"},{"@type":"BreadcrumbList","@id":"https://watersystemsbench.com/tools/greywater-supply-calculator/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://watersystemsbench.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://watersystemsbench.com/tools/"},{"@type":"ListItem","position":3,"name":"Greywater Supply Calculator","item":"https://watersystemsbench.com/tools/greywater-supply-calculator/"}]}]}</script>
+  <script type="module" src="/assets/js/partials.js"></script>
+  <script type="module" src="/assets/js/main.js"></script>
+  <script type="module" src="/assets/js/tools/greywater-tools.js"></script>
+</head>
+<body>
+  <div data-header-slot></div>
+  <main id="main-content">
+    <div class="page-shell">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/tools/">Tools</a></li><li><span aria-current="page">Greywater Supply Calculator</span></li></ol></nav>
+      <header class="hero compact"><div><p class="eyebrow">Greywater reuse planning / Calculator</p><h1>Greywater Supply Calculator</h1><p class="lede">Estimate daily and weekly greywater supply from measured shower, bath, laundry and bathroom-basin use in SI or US units.</p></div><p class="hero-note">Preliminary planning output only. Use measured data where possible and verify manufacturer and jurisdiction-specific requirements.</p></header>
+  <p class="meta-line">Last reviewed: August 8, 2026 · SI first · US customary supported</p>
+  <div class="tool-layout"><section class="instrument-panel"><div class="panel-heading"><h2>Bench inputs</h2><span class="panel-code">INPUT / SET</span></div><form data-tool-form="greywater-supply"><div class="field full"><label for="unitSystem">Unit system</label><select id="unitSystem" name="unitSystem" data-unit-system><option value="SI">SI — metric</option><option value="US">US customary</option></select></div><div class="field-grid"><div class="field "><label for="occupants">Occupants</label><input id="occupants" name="occupants" data-label="Occupants" type="number" value="2"  step="1" required></div><div class="field "><label for="showerFlow">Measured shower flow (<span data-unit-label="flow"></span>)</label><input id="showerFlow" name="showerFlow" data-label="Measured shower flow" type="number" value="8" data-unit-kind="flow" step="any" required></div><div class="field "><label for="showerMinutes">Shower minutes per person per day</label><input id="showerMinutes" name="showerMinutes" data-label="Shower minutes per person per day" type="number" value="6"  step="any" required></div><div class="field "><label for="bathVolume">Bath water per day (<span data-unit-label="volume"></span>)</label><input id="bathVolume" name="bathVolume" data-label="Bath water per day" type="number" value="0" data-unit-kind="volume" step="any" required></div><div class="field "><label for="laundryVolume">Water per laundry load (<span data-unit-label="volume"></span>)</label><input id="laundryVolume" name="laundryVolume" data-label="Water per laundry load" type="number" value="55" data-unit-kind="volume" step="any" required></div><div class="field "><label for="loadsPerWeek">Laundry loads per week</label><input id="loadsPerWeek" name="loadsPerWeek" data-label="Laundry loads per week" type="number" value="4"  step="any" required></div><div class="field "><label for="basinVolume">Bathroom-basin water per person per day (<span data-unit-label="volume"></span>)</label><input id="basinVolume" name="basinVolume" data-label="Bathroom-basin water per person per day" type="number" value="8" data-unit-kind="volume" step="any" required></div><div class="field "><label for="capture">Usable capture factor (%)</label><input id="capture" name="capture" data-label="Usable capture factor (%)" type="number" value="85"  step="any" required></div></div><p class="form-error" data-form-error role="alert"></p><div class="button-row"><button class="button" type="submit">Estimate supply</button><button class="button secondary" type="reset">Reset</button></div></form></section><section class="result-panel" aria-label="Result">
+    <div class="panel-heading"><h2>Operating report</h2><span class="panel-code">RESULT / LIVE</span></div>
+    <div class="result-empty"><p>Enter the known values, then calculate to build a result summary.</p></div>
+    <div class="result-report" aria-live="polite" hidden>
+      <div class="primary-reading"><span class="reading-label"></span><span class="reading-value"></span></div>
+      <div class="result-block"><h3>Supporting calculations</h3><ul data-supporting></ul></div>
+      <div class="result-block"><h3>Interpretation</h3><p data-interpretation></p></div>
+      <p class="result-warning" data-warning></p>
+      <div class="result-actions"><button class="button small secondary" type="button" data-result-action data-copy-result disabled>Copy result</button><button class="button small secondary" type="button" data-result-action data-print-result disabled>Print result</button></div>
+    </div>
+  </section></div>
+  <div class="content-layout"><article class="article-body">
+    <h2>What this tool does</h2><p>Builds a source-by-source water balance and applies one explicit capture factor instead of hiding household defaults.</p>
+    <h2>When to use it</h2><p>Use before choosing an irrigation area, outlet layout or treatment system. Measure actual fixture flow, appliance volume and cycles where possible.</p>
+    <h2>Inputs and supported units</h2><p>Each labelled field explains the quantity it expects. Unit-system changes convert existing numeric entries once and keep calculations on a single SI internal basis. Supported shared units include L/min and GPM, metres and feet, kPa and psi, millimetres and inches, kW and hp, and °C and °F as relevant.</p>
+    <h2>Calculation or decision method</h2><div class="formula">Usable supply = (shower + bath + laundry + bathroom-basin volume) × capture factor</div><p>Toilets are excluded. Kitchen sources are not assumed acceptable because definitions and risk controls vary by jurisdiction.</p>
+    <h2>How to interpret the result</h2><p>Read the primary result with the supporting breakdown and warning. A plausible number is not evidence that every input, operating case or design constraint has been included.</p>
+    <div class="worked-example"><h2>Worked example</h2><p>Two people using 8 L/min showers for six minutes each, four 55 L laundry loads per week and 8 L/person/day at bathroom basins generate about 143.4 L/day before a capture factor.</p></div>
+    <h2>Assumptions</h2><p>Entered fixture, event, climate, soil and tariff values describe the planning case; volumes are kept on an SI internal basis.</p>
+    <h2>Limitations</h2><p>The result is a preliminary quantity or cost screen. It does not approve a source, end use, plumbing connection, treatment process, setback, storage time or irrigation method.</p>
+    <div class="notice"><strong>Safety and review boundary.</strong> Greywater is non-potable wastewater. Prevent cross-connections and human contact, preserve a safe diversion path, and follow current local health, plumbing, irrigation and environmental requirements.</div>
+    <h2>Sources</h2><ul class="source-list"><li><a href="https://www.sfpuc.gov/documents/graywater-design-manual" rel="noopener noreferrer">San Francisco Public Utilities Commission — Graywater Design Manual</a></li><li><a href="https://doh.wa.gov/community-and-environment/wastewater-management/greywater-reuse" rel="noopener noreferrer">Washington State Department of Health — Greywater Reuse</a></li><li><a href="https://www.epa.gov/watersense/water-budget-tool" rel="noopener noreferrer">U.S. EPA WaterSense — Water Budget Tool</a></li><li><a href="https://www.waterquality.gov.au/guidelines/recycled-water" rel="noopener noreferrer">Australian Government — Australian Guidelines for Water Recycling</a></li></ul>
+    <section aria-labelledby="related-heading"><h2 id="related-heading">Continue the workflow</h2><div class="related-grid"><a href="/tools/greywater-irrigation-demand-planner/">Greywater Irrigation Demand Planner<br><span class="meta-line">Open next →</span></a><a href="/guides/plan-home-greywater-reuse-system/">How to Plan a Home Greywater Reuse System<br><span class="meta-line">Open next →</span></a><a href="/reference/greywater-source-use-screening/">Greywater Source & Use Screening Reference<br><span class="meta-line">Open next →</span></a><a href="/systems/greywater-reuse/">Greywater Reuse Planning workflow<br><span class="meta-line">Open next →</span></a></div></section>
+  </article><aside class="sidebar"><h2>Bench sequence</h2><ul><li><a href="/systems/greywater-reuse/">Greywater Reuse Planning workflow</a></li><li><a href="/guides/plan-home-greywater-reuse-system/">Plan source, use and diversion</a></li><li><a href="/reference/greywater-source-use-screening/">Screen source and end use</a></li><li><a href="/contact/">Report a content issue</a></li></ul></aside></div>
+    </div>
+  </main>
+  <div data-footer-slot></div>
+</body>
+</html>

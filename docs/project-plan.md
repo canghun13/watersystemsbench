@@ -31,6 +31,12 @@ Source
 
 Every workflow should lead from evidence to a calculation or decision, then to interpretation, verification and the next system step.
 
+## Validated expansion — 2026-08-08
+
+Greywater Reuse Planning was selected after comparing seven candidate clusters for monetization, public search-demand signals and competitive gap. It adds one hub, five tools, two guides and one reference, bringing the public total to 74 pages. The candidate evidence and route contracts are recorded in `docs/greywater-reuse-expansion.md`.
+
+The expansion connects household non-potable wastewater generation to existing irrigation, treatment and source-conservation workflows while preserving explicit local health and plumbing gates.
+
 ## Technical and editorial model
 
 - English-language, global audience
@@ -46,7 +52,7 @@ Every workflow should lead from evidence to a calculation or decision, then to i
 
 The initial plan ranked clusters using search suitability, publicly observable demand evidence and competitive opportunity. These planning scores are directional and are not presented as verified search volume.
 
-The first wave is now complete. Any second-wave expansion—such as stormwater and flooding, building water management, wastewater or process water—must be justified by indexing, usage, query, error and maintenance evidence. Do not publish empty future routes.
+The first wave and greywater expansion are complete. Any further expansion—such as water loss, stormwater, building water management, wastewater or process water—must repeat evidence-led candidate comparison, duplicate review, source/formula contracts and complete QA. Do not publish empty future routes.
 
 ## Release principle
 
