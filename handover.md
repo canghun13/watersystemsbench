@@ -337,3 +337,42 @@ This section is the authoritative handover for the responsive-table correction.
 - Implementation commit: `27b61d6623d587f7b4e1765ce29743a66c0068ed` (`Fix responsive greywater screening tables`).
 - Remote and deployment verification: local `HEAD` and `origin/main` matched this SHA after push. GitHub Pages run `https://github.com/canghun13/watersystemsbench/actions/runs/31243752925` (`pages-build-deployment #23`) completed successfully in 37 seconds.
 - Production 390px verification: `/reference/greywater-source-use-screening/` served both labelled wrappers. The Source table was 760px inside a 333px scrollable wrapper; the End-use table was 700px inside a 333px scrollable wrapper. Both rightmost headers were fully visible after internal scroll, page horizontal overflow was zero, cell/header clipping was zero and the browser reported zero console warnings or errors.
+
+## Second expansion review — 2026-08-08
+
+This section records the strict GO/NO-GO review for a second cluster after Greywater Reuse Planning.
+
+- Repository and starting state: `https://github.com/canghun13/watersystemsbench`, clean `main` at `753fa8c0b5426f38b8c1ad1b9e8555c2929adee3`, equal to `origin/main` after fetch and fast-forward check.
+- Starting inventory: 74 public pages — 7 core, 5 system hubs, 37 tools, 16 guides and 9 references; sitemap count 74.
+- Purpose: determine whether a second strong cluster exists that does not overlap Greywater Reuse Planning or the four earlier system clusters. Insufficient long-term analytics was not treated as a blocker, but the GO gates were not lowered.
+- Protected area: the complete user-managed homepage badge block containing KittyLaunch, SellWithBoost, Twelve Tools, Findly and BoostDomainRating remained untouched.
+
+Nine candidates were checked against live search results, current free tools, the current page/tool inventory and the required scoring model:
+
+| Candidate | Monetization /40 | Demand /35 | Gap /25 | Total | Gate result |
+| --- | ---: | ---: | ---: | ---: | --- |
+| Water loss / leakage | 35 | 31 | 8 | 74 | FAIL D and E |
+| Commercial building water demand / distribution | 38 | 31 | 4 | 73 | FAIL D, E and F |
+| Stormwater / site drainage | 37 | 32 | 4 | 73 | FAIL D, E and F |
+| Septic systems | 35 | 30 | 6 | 71 | FAIL D and F |
+| Cooling-tower water management | 36 | 29 | 4 | 69 | FAIL B, D and F |
+| Construction dewatering | 35 | 26 | 7 | 68 | FAIL D, E and F |
+| Livestock / stockwater systems | 32 | 27 | 8 | 67 | FAIL B, D, E and F |
+| Wastewater pump stations | 33 | 25 | 7 | 65 | FAIL B, D, E and F |
+| Pond / small-reservoir management | 31 | 25 | 7 | 63 | FAIL B, D, E and F |
+
+Demand signals were real: repeated water-audit, fixture-unit, runoff/detention, septic sizing, cooling-tower balance, dewatering, stockwater, lift-station and pond equipment queries were found. The decisive competition evidence included AWWA's free Water Audit Software, EPA's National Stormwater Calculator and SWMM, USDA/NRCS stockwater workbooks, integrated septic/dewatering/cooling-tower calculators, and mature WSFU, lift-station and pond calculators.
+
+The closest candidate was Water Loss / Leakage. It has strong utility demand and monetization adjacency, but AWWA already provides the authoritative free audit workflow. Removing that duplicate leaves a household cluster that materially repackages the site's existing flow, pressure, cost and troubleshooting tools. Livestock / stockwater had a plausible new audience, but its apparent tools mostly reassemble existing demand, storage, pipe, TDH and pump logic around local standards.
+
+Final decision: **NO-GO**. No candidate passed all mandatory gates A–G. No sufficiently strong non-overlapping second cluster was found, so no implementation contract or production cluster was created.
+
+- New public pages: 0
+- Production HTML/CSS/JavaScript/generator changes: none
+- Sitemap changed: no; remains 74 URLs
+- Public page inventory changed: no; remains 74 pages
+- Responsive table implementation and `.table-scroll` contract: unchanged
+- Detailed research, competitor URLs, candidate reasoning, gates and revisit conditions: `docs/second-expansion-review.md`
+- Revisit only after query/user evidence exposes four independent non-overlapping tools, a demonstrable gap against current free tools, stable source methods and a full A–G gate pass.
+
+Documentation-only verification passed after the review: all existing calculation suites passed (including 46 greywater checks); static QA passed for 74 public pages; navigation QA passed for 76 repository HTML documents; and the recorded browser report passed 370 renders, 37 tool interactions and 19 responsive-table checks with zero console, page, asset, 404, overflow or table-clipping failures. Production artifact hashes, public-page count and sitemap count remained unchanged. The exact documentation commit is the commit containing this section and must be verified against `origin/main` in the final delivery.
