@@ -5,6 +5,9 @@
 .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2.5rem; background: var(--white); font-size: .92rem; }
 .article-body th, .article-body td { padding: .75rem; border: 1px solid var(--line); text-align: left; vertical-align: top; }
 .article-body th { background: var(--navy-900); color: var(--white); font-family: var(--font-mono); font-size: .75rem; letter-spacing: .03em; }
+.table-scroll { width: 100%; max-width: 100%; margin: 1.5rem 0 2.5rem; overflow-x: auto; overscroll-behavior-x: contain; border: 1px solid var(--line); background: var(--white); }
+.table-scroll > table { width: 100%; min-width: var(--table-min-width, 680px); margin: 0; }
+.table-scroll:focus-visible { outline: 3px solid var(--teal-600); outline-offset: 3px; }
 .article-body code, .formula { font-family: var(--font-mono); }
 .formula { margin: 1.3rem 0; padding: 1rem; border: 1px solid var(--line); border-left: 4px solid var(--teal-600); background: var(--paper); overflow-x: auto; }
 .sidebar { position: sticky; top: 96px; padding: 1.2rem; border-top: 4px solid var(--teal-600); background: var(--navy-900); color: #d8e4e8; }
@@ -18,5 +21,5 @@
 .related-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1px; margin-top: 1.5rem; border: 1px solid var(--line); background: var(--line); }
 .related-grid a { display: block; min-height: 100px; padding: 1rem; background: var(--white); color: var(--navy-900); font-weight: 700; }
 @media (max-width: 880px) { .content-layout { grid-template-columns: 1fr; } .sidebar { position: static; } }
-@media (max-width: 560px) { .article-body table { display: block; overflow-x: auto; } .related-grid { grid-template-columns: 1fr; } }
+@media (max-width: 560px) { .article-body table { display: block; overflow-x: auto; } .table-scroll > table { display: table; overflow: visible; } .related-grid { grid-template-columns: 1fr; } }
 @media print { .site-header, .site-footer, .breadcrumbs, .sidebar, .related-grid, .hero-actions { display: none !important; } body { background: white; } .page-shell { max-width: none; padding: 0; } }

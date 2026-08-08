@@ -157,6 +157,16 @@ for (const route of greywaterToolRoutes) {
   if (!html.includes("Safety and review boundary") || !/non-potable|wastewater|cross-connection|local/i.test(html)) errors.push(`${route}: greywater safety boundary missing.`);
 }
 
+const greywaterScreening = await readFile(join(root, "reference", "greywater-source-use-screening", "index.html"), "utf8");
+for (const [label, minWidth] of [["Source screening", "760px"], ["End-use screening", "700px"]]) {
+  const wrapper = `<div class="table-scroll" role="region" aria-label="${label} table" tabindex="0" style="--table-min-width: ${minWidth};"><table>`;
+  if (!greywaterScreening.includes(wrapper)) errors.push(`/reference/greywater-source-use-screening/: ${label} must use its labelled, keyboard-focusable responsive table wrapper.`);
+}
+const contentCss = await readFile(join(root, "assets", "css", "content.css"), "utf8");
+if (!contentCss.includes(".table-scroll { width: 100%; max-width: 100%;") || !contentCss.includes("overflow-x: auto") || !contentCss.includes(".table-scroll > table { width: 100%; min-width: var(--table-min-width, 680px);")) {
+  errors.push("Responsive table wrapper CSS must retain an internal horizontal scroll area and a readable minimum table width.");
+}
+
 const syntaxFiles = allFiles.filter((path) => [".js", ".mjs"].includes(extname(path)));
 for (const file of syntaxFiles) {
   const check = spawnSync(process.execPath, ["--check", file], { encoding: "utf8" });

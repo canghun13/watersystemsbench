@@ -21,11 +21,13 @@ if (report.toolInteractions !== 37) issues.push(`toolInteractions=${report.toolI
 if (report.phase2ToolInteractions !== 15) issues.push(`phase2ToolInteractions=${report.phase2ToolInteractions}`);
 if (report.treatmentToolInteractions !== 8) issues.push(`treatmentToolInteractions=${report.treatmentToolInteractions}`);
 if (report.greywaterToolInteractions !== 5) issues.push(`greywaterToolInteractions=${report.greywaterToolInteractions}`);
+if (report.responsiveTableChecks < 19) issues.push(`responsiveTableChecks=${report.responsiveTableChecks}`);
 for (const key of ["mobileMenu", "calculateAnalyze", "reset", "copy", "print", "unitSwitch"]) if (report[key] !== "passed") issues.push(`${key}=${report[key]}`);
-for (const key of ["consoleErrors", "pageErrors", "assetFailures", "internal404s", "horizontalOverflows"]) if (report[key] !== 0) issues.push(`${key}=${report[key]}`);
+for (const key of ["consoleErrors", "pageErrors", "assetFailures", "internal404s", "horizontalOverflows", "tableClippingFailures"]) if (report[key] !== 0) issues.push(`${key}=${report[key]}`);
+if (report.tableScrollAccess !== "passed") issues.push(`tableScrollAccess=${report.tableScrollAccess}`);
 
 if (issues.length) {
   console.error(`Browser QA report failed: ${issues.join(", ")}`);
   process.exit(1);
 }
-console.log(`Browser QA report passed: ${report.renderChecks} renders across ${report.widths.join(", ")} px; 37 tool interactions including 5 greywater tools; no console, page, asset, 404 or overflow failures.`);
+console.log(`Browser QA report passed: ${report.renderChecks} renders across ${report.widths.join(", ")} px; 37 tool interactions including 5 greywater tools; ${report.responsiveTableChecks} responsive-table checks; no console, page, asset, 404, overflow or table-clipping failures.`);

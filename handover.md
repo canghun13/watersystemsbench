@@ -322,3 +322,16 @@ Home, Tools, Guides, Reference, shared Systems navigation, related workflows, si
 ### Next recommended work
 
 Monitor indexing and query evidence for the greywater routes, then compare Water Loss & Leakage against the remaining rejected candidates before another expansion. Do not publish a new cluster without repeating duplicate review, source/formula contracts and complete regression/browser QA.
+
+## Greywater screening-table mobile fix — 2026-08-08
+
+This section is the authoritative handover for the responsive-table correction.
+
+- Starting branch and commit: `main` at `e1efc3464e8242142e9b4b0c1a32e06626284021`; the local tree was clean and equal to `origin/main` after `fetch` and `pull --ff-only`.
+- Reported production defect: at a 390px-class viewport, the Source screening and End-use screening tables on `/reference/greywater-source-use-screening/` could compress long cells and make the rightmost column difficult to reach or appear clipped.
+- Cause: the generated page used bare tables. The mobile rule made the table itself a scroll container, but did not preserve a content minimum width or expose a dedicated, labelled scroll region. Existing browser QA checked only document-level horizontal overflow, so an internally constrained table could pass while remaining hard to read.
+- Fix: the generator now wraps only the two affected tables in keyboard-focusable `role="region"` table wrappers with descriptive labels. The wrapper is constrained to the article width and owns `overflow-x: auto`; the Source table keeps a 760px readable width and the End-use table keeps a 700px readable width. The contained table remains a real table, and the rest of the Hydraulic Field Bench layout is unchanged.
+- Regression guard: static QA now requires both generated labelled wrappers and the CSS contract. Browser-report QA now requires 19 responsive-table checks, explicit internal-scroll access and zero table-clipping failures. The check permits intentional wrapper scrolling but fails clipping, hidden/unscrollable columns and page-level overflow.
+- Local browser QA: Source and End-use screening passed at 390, 768, 1024, 1280 and 1440px. At 390px the page had zero horizontal overflow; both wrappers stayed within the main content area; cells and headers had zero clipping; the Source and End-use rightmost headers became fully visible after internal horizontal scroll. Representative table pages were also checked at mobile and desktop widths with no regression.
+- Local runtime QA: console errors, page errors and failed page assets were zero for the corrected page.
+- Production deployment and final commit: pending the final `main` push; update this line only with verified remote and live evidence.

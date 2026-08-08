@@ -18,13 +18,19 @@
   "assetFailures": 0,
   "internal404s": 0,
   "horizontalOverflows": 0,
+  "responsiveTableChecks": 19,
+  "responsiveTableWidths": [390, 768, 1024, 1280, 1440],
+  "responsiveTableRegressionPages": 7,
+  "tableScrollAccess": "passed",
+  "tableClippingFailures": 0,
   "unlabelledControls": 0,
   "brokenImages": 0,
   "systemsMenu": "passed",
   "firstFlushModes": "passed",
-  "issuesFound": 2,
+  "issuesFound": 3,
   "issuesFixed": [
     "Synchronized the shared unit-system state after form reset so repeated SI/US switching cannot apply the wrong conversion direction.",
-    "Corrected shared numeric validation wording so minimum boundaries are described accurately."
+    "Corrected shared numeric validation wording so minimum boundaries are described accurately.",
+    "Wrapped the two greywater screening tables in labelled internal scroll regions with readable minimum table widths so mobile columns cannot be compressed or clipped."
   ]
 }
