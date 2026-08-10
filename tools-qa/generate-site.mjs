@@ -59,7 +59,7 @@ const sources = {
   ,auRecycling: ["Australian Government — Australian Guidelines for Water Recycling", "https://www.waterquality.gov.au/guidelines/recycled-water"]
 };
 
-const toolLinks = [
+const pumpToolLinks = [
   ["/tools/total-dynamic-head-calculator/", "Total Dynamic Head Calculator", "Combine elevation, pressure and losses."],
   ["/tools/pipe-friction-loss-calculator/", "Pipe Friction Loss Calculator", "Compare Hazen–Williams and Darcy–Weisbach."],
   ["/tools/water-pipe-size-velocity-checker/", "Water Pipe Size & Velocity Checker", "Screen velocity using actual internal diameter."],
@@ -70,6 +70,8 @@ const toolLinks = [
   ["/tools/pump-operating-cost-comparator/", "Pump Operating Cost Comparator", "Compare energy and annual cost scenarios."],
   ["/tools/low-water-pressure-troubleshooter/", "Low Water Pressure Troubleshooter", "Prioritize measurements and likely cause groups."]
 ];
+
+const toolLinks = [...pumpToolLinks];
 
 const guideLinks = [
   ["/guides/how-to-size-a-water-pump/", "How to Size a Water Pump", "Build a duty point from flow and total dynamic head."],
@@ -178,6 +180,29 @@ function cardGrid(items, label = "Open") {
   return `<div class="grid three">${items.map(([href, title, text], index) => `<article class="bench-card" data-step="${String(index + 1).padStart(2, "0")}"><h3>${title}</h3><p>${text}</p><a class="card-link" href="${href}">${label} →</a></article>`).join("")}</div>`;
 }
 
+function toolType(title) {
+  if (title.includes("Matcher")) return "Comparator";
+  return ["Calculator", "Planner", "Checker", "Comparator", "Estimator", "Troubleshooter", "Analyzer", "Simulator", "Selector"].find((type) => title.includes(type)) || "Tool";
+}
+
+function toolFinder() {
+  const groups = [
+    ["pumps", "Pumps, pressure & pipe flow", pumpToolLinks],
+    ["wells", "Wells, storage & rainwater", phase2ToolLinks],
+    ["irrigation", "Irrigation & sprinklers", irrigationToolLinks],
+    ["treatment", "Water treatment & quality", treatmentToolLinks],
+    ["greywater", "Greywater reuse", greywaterToolLinks]
+  ];
+  let step = 0;
+  const cards = groups.flatMap(([system, systemLabel, items]) => items.map(([href, title, text]) => {
+    step += 1;
+    const type = toolType(title);
+    return `<article class="bench-card" data-step="${String(step).padStart(2, "0")}" data-tool-card data-system="${system}" data-type="${type.toLowerCase()}" data-search="${esc(`${title} ${text} ${systemLabel} ${type}`.toLowerCase())}"><div class="tool-card-meta"><span class="tag">${systemLabel}</span><span class="tag">${type}</span></div><h3>${title}</h3><p>${text}</p><a class="card-link" href="${href}">Use tool →</a></article>`;
+  })).join("");
+  const types = ["Calculator", "Planner", "Checker", "Comparator", "Estimator", "Troubleshooter", "Analyzer", "Simulator", "Selector"];
+  return `<section class="section tool-finder" data-tool-finder aria-labelledby="tool-finder-heading"><div class="section-heading"><p class="eyebrow">Find the next calculation</p><h2 id="tool-finder-heading">Filter 37 working tools</h2><p class="lede">Search by task, narrow to one water-system workflow, or choose the kind of decision you need to make.</p></div><form class="tool-finder-controls" data-tool-filters><div><label for="toolSearch">Search tools</label><input id="toolSearch" type="search" autocomplete="off" aria-describedby="toolSearchHint" data-tool-search><span class="filter-hint" id="toolSearchHint">Try pressure, rainwater or cost.</span></div><div><label for="toolSystem">System</label><select id="toolSystem" data-tool-system><option value="all">All systems</option>${groups.map(([value, label]) => `<option value="${value}">${label}</option>`).join("")}</select></div><div><label for="toolType">Tool type</label><select id="toolType" data-tool-type><option value="all">All tool types</option>${types.map((type) => `<option value="${type.toLowerCase()}">${type}</option>`).join("")}</select></div><button class="button secondary small" type="reset">Clear filters</button><p class="tool-finder-count" data-tool-count role="status" aria-live="polite">Showing all 37 tools.</p></form><div class="grid three" data-tool-results>${cards}</div><p class="notice" data-tool-empty hidden><strong>No matching tools.</strong> Clear a filter or try a broader task such as flow, pressure, storage or treatment.</p></section>`;
+}
+
 function breadcrumbs(items) {
   return `<nav class="breadcrumbs" aria-label="Breadcrumb"><ol>${items.map(([name, href], index) => `<li>${index === items.length - 1 ? `<span aria-current="page">${name}</span>` : `<a href="${href}">${name}</a>`}</li>`).join("")}</ol></nav>`;
 }
@@ -269,12 +294,18 @@ function pageTemplate(page) {
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="stylesheet" href="/assets/css/content.css">
-${page.toolScript ? '  <link rel="stylesheet" href="/assets/css/calculator.css">' : ""}
+${[
+  page.toolScript ? '  <link rel="stylesheet" href="/assets/css/calculator.css">' : "",
+  page.pageStyle ? `  <link rel="stylesheet" href="${page.pageStyle}">` : ""
+].filter(Boolean).join("\n")}
   ${ga4}
   <script type="application/ld+json">${schemaFor(page)}</script>
   <script type="module" src="/assets/js/partials.js"></script>
   <script type="module" src="/assets/js/main.js"></script>
-${page.toolScript ? `  <script type="module" src="${page.toolScript}"></script>` : ""}
+${[
+  page.toolScript ? `  <script type="module" src="${page.toolScript}"></script>` : "",
+  page.pageScript ? `  <script type="module" src="${page.pageScript}"></script>` : ""
+].filter(Boolean).join("\n")}
 </head>
 <body>
   <div data-header-slot></div>
@@ -791,7 +822,8 @@ function hubBody(kind) {
   const isGuides = kind === "Guides";
   const items = isTools ? toolLinks : isGuides ? guideLinks : referenceLinks;
   const description = isTools ? "Working calculators, planners, checks, selectors and troubleshooting across pump, well, storage, irrigation, greywater and treatment systems." : isGuides ? "Field-oriented explanations that connect source measurements, laboratory evidence, formulas and the next useful tool." : "Conversion tables, formulas, water-quality terms, reuse screening, technology comparisons and hydraulic data used across five workflows.";
-  return `${hero(`${kind} index`, kind, description, "Every linked resource is implemented. The initial plan and validated greywater expansion contain no inactive or empty future pages.")}<p class="meta-line">Updated: August 8, 2026 · ${items.length} published ${kind.toLowerCase()}</p><section class="section">${cardGrid(items, isTools ? "Use tool" : "Read")}</section><section class="section"><div class="notice"><strong>Practical boundary.</strong> These resources support preliminary decisions and transparent checking. They do not replace laboratory testing, manufacturer data, certified product claims, local requirements or project-specific professional review.</div></section>`;
+  const updated = isTools ? "August 10, 2026" : "August 8, 2026";
+  return `${hero(`${kind} index`, kind, description, "Every linked resource is implemented. The initial plan and validated greywater expansion contain no inactive or empty future pages.")}<p class="meta-line">Updated: ${updated} · ${items.length} published ${kind.toLowerCase()}</p>${isTools ? toolFinder() : `<section class="section">${cardGrid(items, "Read")}</section>`}<section class="section"><div class="notice"><strong>Practical boundary.</strong> These resources support preliminary decisions and transparent checking. They do not replace laboratory testing, manufacturer data, certified product claims, local requirements or project-specific professional review.</div></section>`;
 }
 
 const systemBody = `${hero("System hub / Phase 1", "Pumps, Pressure & Pipe Flow", "Build the duty point in the right order: required flow, static head, delivery pressure, pipe loss, pump curve, power, suction conditions and operating cost.", "Measured values describe the present system. Estimated values describe a planning assumption. Label both before comparing equipment.", '<div class="hero-actions"><a class="button" href="/tools/total-dynamic-head-calculator/">Start with total dynamic head</a><a class="button secondary" href="/guides/how-to-size-a-water-pump/">Read the sizing workflow</a></div>')}
@@ -1209,7 +1241,7 @@ const privacyBody = `${hero("Site information", "Privacy", "A plain-language sum
 
 const pages = [
   { path: "/", title: "Water Systems Bench | Pumps, Reuse & Treatment", h1: "Plan the water path. Check the duty point.", description: "Practical pump, well, storage, irrigation, greywater-reuse and water-treatment tools for connected water-system planning.", schemaType: "WebPage", crumbs: [["Home", "/"]], body: homeBody, dateModified: "2026-08-08" },
-  { path: "/tools/", title: "Water System Tools | Water Systems Bench", h1: "Tools", description: "Use 37 working tools for pump hydraulics, wells, storage, rainwater, irrigation, greywater reuse and water treatment.", schemaType: "CollectionPage", crumbs: [["Home", "/"], ["Tools", "/tools/"]], body: hubBody("Tools"), dateModified: "2026-08-08" },
+  { path: "/tools/", title: "Water System Tools | Water Systems Bench", h1: "Tools", description: "Use 37 working tools for pump hydraulics, wells, storage, rainwater, irrigation, greywater reuse and water treatment.", schemaType: "CollectionPage", crumbs: [["Home", "/"], ["Tools", "/tools/"]], body: hubBody("Tools"), pageStyle: "/assets/css/tool-finder.css", pageScript: "/assets/js/tool-finder.js", dateModified: "2026-08-10" },
   { path: "/guides/", title: "Water System Guides | Water Systems Bench", h1: "Guides", description: "Read 16 practical guides for pump, well, storage, rainwater, irrigation, greywater and water-treatment planning.", schemaType: "CollectionPage", crumbs: [["Home", "/"], ["Guides", "/guides/"]], body: hubBody("Guides"), dateModified: "2026-08-08" },
   { path: "/reference/", title: "Water System Reference | Water Systems Bench", h1: "Reference", description: "Check water conversions, demand factors, greywater source screening, water-quality terms, pipe values and hydraulic formulas.", schemaType: "CollectionPage", crumbs: [["Home", "/"], ["Reference", "/reference/"]], body: hubBody("Reference"), dateModified: "2026-08-08" },
   { path: "/about/", title: "About | Water Systems Bench", h1: "About Water Systems Bench", description: "Learn the purpose, editorial approach and technical structure of Water Systems Bench.", schemaType: "AboutPage", crumbs: [["Home", "/"], ["About", "/about/"]], body: aboutBody, dateModified: "2026-08-08" },

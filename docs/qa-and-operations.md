@@ -1,6 +1,6 @@
 # QA and Operations
 
-## Current release evidence — 2026-08-08
+## Current release evidence — 2026-08-10
 
 - Public pages: 74
 - Category counts: 7 core, 5 hubs, 37 tools, 16 guides and 9 references
@@ -12,6 +12,7 @@
 - Browser render matrix: 74 pages × 5 widths = 370 checks
 - Viewports: 390, 768, 1024, 1280 and 1440 px
 - Tool interactions: 37 tools covered by regression; all 5 new greywater tools exercised for normal, invalid, recovery, reset, copy, print and unit-switch behavior
+- Tools hub finder: 25 checks across all five widths covering search, system, type, combined filters, empty state and reset
 - Browser failures after verification: 0 console errors, page errors, asset failures, internal 404s and horizontal overflows
 
 The actual browser run is recorded in `tools-qa/browser-results.json`. Update that file only after a complete real-browser run.
@@ -46,6 +47,7 @@ npm run serve
 - Formula expectations independent of implementation logic
 - Invalid, reset, mode, unit, copy and print behavior
 - Mobile navigation and all implemented system links
+- Tools hub search, system/type filters, live result count, empty state and reset
 - Horizontal overflow and visible clipping at all five widths
 - Console errors, page errors, broken images, missing styles/assets and internal 404s
 - Contact email, `mailto:` and fixed domain/repository values

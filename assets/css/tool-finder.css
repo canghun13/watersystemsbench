@@ -1,0 +1,81 @@
+.tool-finder-controls {
+  display: grid;
+  grid-template-columns: minmax(220px, 1.5fr) repeat(2, minmax(180px, 1fr)) auto;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, .88);
+  box-shadow: var(--shadow);
+  align-items: end;
+}
+
+.tool-finder-controls label {
+  display: block;
+  margin-bottom: .4rem;
+  color: var(--navy-900);
+  font: 700 .75rem/1.35 var(--font-mono);
+}
+
+.tool-finder-controls input,
+.tool-finder-controls select {
+  width: 100%;
+  min-height: 44px;
+  padding: .68rem .72rem;
+  border: 1px solid #8ca3ad;
+  border-radius: 0;
+  background: var(--paper-2);
+  color: var(--ink);
+}
+
+.filter-hint {
+  display: block;
+  margin-top: .35rem;
+  color: var(--muted);
+  font-size: .76rem;
+}
+
+.tool-finder-controls .button {
+  min-height: 44px;
+  white-space: nowrap;
+}
+
+.tool-finder-count {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--muted);
+  font: 700 .74rem/1.5 var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+
+.tool-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem;
+  margin-bottom: 1.35rem;
+}
+
+.tool-finder .bench-card::before {
+  margin-bottom: .9rem;
+}
+
+.tool-finder .bench-card .tag {
+  position: static;
+}
+
+.tool-finder [data-tool-card][hidden] {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .tool-finder-controls {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .tool-finder-controls {
+    grid-template-columns: 1fr;
+  }
+}

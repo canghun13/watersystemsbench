@@ -376,3 +376,53 @@ Final decision: **NO-GO**. No candidate passed all mandatory gates A–G. No suf
 - Revisit only after query/user evidence exposes four independent non-overlapping tools, a demonstrable gap against current free tools, stable source methods and a full A–G gate pass.
 
 Documentation-only verification passed after the review: all existing calculation suites passed (including 46 greywater checks); static QA passed for 74 public pages; navigation QA passed for 76 repository HTML documents; and the recorded browser report passed 370 renders, 37 tool interactions and 19 responsive-table checks with zero console, page, asset, 404, overflow or table-clipping failures. Production artifact hashes, public-page count and sitemap count remained unchanged. The exact documentation commit is the commit containing this section and must be verified against `origin/main` in the final delivery.
+
+## Tools hub discovery improvement — 2026-08-10
+
+This section is the authoritative record for the latest-state reassessment and the one selected maintenance task.
+
+### Current state and evidence
+
+- Repository: `https://github.com/canghun13/watersystemsbench`
+- Starting branch and commit: clean `main` at `b4823c61f2994ca7a9dfb81c4660eec28b0a6f6e`, equal to `origin/main` after fetch and `pull --ff-only`
+- Starting inventory: 74 public pages — 7 core, 5 system hubs, 37 tools, 16 guides and 9 references; sitemap count 74
+- Live evidence before implementation: the homepage and `/tools/` served current canonical metadata and GA4. The Tools hub exposed all 37 cards in one sequence with zero search or filter controls and no system headings. At 390px its document height was approximately 10,417px.
+- Repository evidence: every tool already had a valid route and short task description, but `hubBody("Tools")` rendered the complete `toolLinks` array as one undifferentiated card grid.
+- QA evidence: all calculation suites passed; after the documented generate step, static QA passed for 74 pages, navigation QA passed for 76 HTML documents and the existing browser report passed. No calculation, broken-link, metadata, table or runtime defect outranked the discovery gap.
+- GSC and GA4 reporting data were not accessible in this environment. No traffic, query, impression, CTR or engagement numbers were invented or used. SERP evidence was not needed for the selected UX task.
+- Protected area: the complete user-managed homepage badge block containing KittyLaunch, SellWithBoost, Twelve Tools, Findly and BoostDomainRating was not changed, moved, restyled or copied.
+
+### Candidate work
+
+| Candidate | Impact /30 | Evidence /25 | User value /20 | Search value /15 | Efficiency /10 | Total /100 | Gate result |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| Add task, system and type filtering to the 37-tool hub | 27 | 25 | 19 | 7 | 9 | 87 | PASS A–F; selected |
+| Align homepage H1 and entry copy more literally with all five workflows | 20 | 16 | 14 | 11 | 9 | 70 | FAIL B/C; current cards and description already expose all workflows, with no query evidence for a rewrite |
+| Reinforce Greywater search intent and internal links | 23 | 9 | 16 | 13 | 7 | 68 | FAIL B/F; the cluster was only two days old and already has connected hub, tool, guide and reference links |
+| Add more cross-tool next-step links | 18 | 17 | 14 | 7 | 8 | 64 | FAIL A/F; all tool, guide and reference detail pages already expose a related workflow section |
+| Revise calculator results or formulas | 23 | 12 | 18 | 4 | 6 | 63 | FAIL A/B; all independent numeric, validation and troubleshooting suites passed and no incorrect result was reproduced |
+| Revisit a second new production cluster | 22 | 13 | 15 | 10 | 3 | 63 | FAIL B/F; the immediately preceding nine-candidate review was NO-GO and no new contradictory evidence exists |
+| Make the badge-block static check line-ending independent | 11 | 22 | 4 | 1 | 9 | 47 | FAIL C; the documented generate-first workflow produces the expected byte contract and production output is unaffected |
+
+### Decision and gates
+
+Final decision: **GO — add task, system and tool-type discovery controls to `/tools/`.**
+
+- Gate A — real opportunity: passed; 37 live cards formed a 10,417px mobile catalogue with no way to narrow it.
+- Gate B — evidence: passed; live DOM/viewport evidence and generator structure independently showed the same gap.
+- Gate C — material benefit: passed; one search or filter reduces the choice set from 37 to a relevant subset, with a visible count and recoverable empty state.
+- Gate D — non-trivial: passed; the task adds accessible interaction, classification, responsive layout, state handling and regression coverage rather than decorative copy.
+- Gate E — safe scope: passed; one existing hub and dedicated assets change, with no formulas, public routes, sitemap count, shared navigation or user-managed integrations changed.
+- Gate F — not already done: passed; neither live HTML nor source contained equivalent discovery controls.
+
+### Implementation and verification
+
+- The generator now classifies all 37 tools into the five implemented systems and nine existing tool types. The Irrigation Pump & Zone Matcher remains part of the existing Comparator category.
+- `/tools/` now has an accessible search field, System selector, Tool type selector, clear action, live result count and explicit no-results recovery message. Static HTML still contains all cards and links when JavaScript is unavailable.
+- Dedicated `assets/js/tool-finder.js` and `assets/css/tool-finder.css` are loaded only by `/tools/`; common site CSS and JavaScript are unchanged.
+- Static QA now requires the finder assets, accessible status/empty-state contract, exactly 37 classified cards, one known system and one known type per card. Browser-report QA requires at least 20 finder checks.
+- Calculation verification passed unchanged: 30 Phase 1 numeric/conversion cases, 6 general troubleshooting scenarios, 30 Phase 2 numeric/decision cases, 6 rainwater simulator scenarios, 49 irrigation numeric/validation checks, 6 irrigation troubleshooting scenarios, 65 treatment numeric/validation checks, 15 selector scenarios and 46 greywater checks.
+- Static QA passed for 74 public pages. Navigation QA passed for 76 repository HTML documents. Sitemap remains exactly 74 URLs.
+- Actual local browser regression passed: 74 pages × 5 widths = 370 renders at 390, 768, 1024, 1280 and 1440px, with zero H1, horizontal-overflow, broken-image or unlabelled-control failures and zero browser warnings/errors.
+- Finder QA passed 25 state checks across the five widths: initial 37, `pressure` search 13, Treatment system 8, Treatment + Planner 2 and reset 37. A zero-result combination exposed the recovery message. Mobile and desktop visual inspection passed.
+- Remaining release steps at the time this section was written: final diff review, commit, push, exact `origin/main` match and production verification of `/tools/` after deployment.

@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-08",
+  "date": "2026-08-10",
   "pages": 74,
   "widths": [390, 768, 1024, 1280, 1440],
   "renderChecks": 370,
@@ -7,6 +7,13 @@
   "phase2ToolInteractions": 15,
   "treatmentToolInteractions": 8,
   "greywaterToolInteractions": 5,
+  "toolInteractionBaselineDate": "2026-08-08",
+  "toolFinderChecks": 25,
+  "toolFinderSearch": "passed",
+  "toolFinderSystem": "passed",
+  "toolFinderType": "passed",
+  "toolFinderEmptyState": "passed",
+  "toolFinderReset": "passed",
   "mobileMenu": "passed",
   "calculateAnalyze": "passed",
   "reset": "passed",
@@ -27,10 +34,11 @@
   "brokenImages": 0,
   "systemsMenu": "passed",
   "firstFlushModes": "passed",
-  "issuesFound": 3,
+  "issuesFound": 4,
   "issuesFixed": [
     "Synchronized the shared unit-system state after form reset so repeated SI/US switching cannot apply the wrong conversion direction.",
     "Corrected shared numeric validation wording so minimum boundaries are described accurately.",
-    "Wrapped the two greywater screening tables in labelled internal scroll regions with readable minimum table widths so mobile columns cannot be compressed or clipped."
+    "Wrapped the two greywater screening tables in labelled internal scroll regions with readable minimum table widths so mobile columns cannot be compressed or clipped.",
+    "Added search, system and tool-type filtering with a live result count, empty state and reset to the 37-card Tools hub."
   ]
 }

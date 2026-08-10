@@ -124,6 +124,23 @@ for (const file of publicHtml.filter((file) => file !== join(root, "index.html")
   }
 }
 
+const toolsHub = await readFile(join(root, "tools", "index.html"), "utf8");
+for (const marker of [
+  'href="/assets/css/tool-finder.css"',
+  'src="/assets/js/tool-finder.js"',
+  "data-tool-finder",
+  "data-tool-search",
+  "data-tool-system",
+  "data-tool-type",
+  'data-tool-count role="status" aria-live="polite"',
+  "data-tool-empty hidden"
+]) {
+  if (!toolsHub.includes(marker)) errors.push(`/tools/: finder contract is missing ${marker}.`);
+}
+if ((toolsHub.match(/data-tool-card(?:\s|>)/g) || []).length !== 37) errors.push("/tools/: finder must contain exactly 37 tool cards.");
+if ((toolsHub.match(/data-system="(?:pumps|wells|irrigation|treatment|greywater)"/g) || []).length !== 37) errors.push("/tools/: every tool card must have one known system filter value.");
+if ((toolsHub.match(/data-type="(?:calculator|planner|checker|comparator|estimator|troubleshooter|analyzer|simulator|selector)"/g) || []).length !== 37) errors.push("/tools/: every tool card must have one known tool-type filter value.");
+
 const treatmentToolRoutes = [
   "/tools/water-softener-sizing-calculator/",
   "/tools/softener-salt-regeneration-planner/",
