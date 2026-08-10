@@ -432,3 +432,23 @@ Final decision: **GO — add task, system and tool-type discovery controls to `/
 - Production `sitemap.xml` returned HTTP 200 with exactly 74 URLs and `/tools/` last modified on `2026-08-10`; no route was added or removed.
 - The five user-managed homepage badges remained in the original order with the original destinations, alternative text and 36px heights. The homepage retained one KittyLaunch marker, exact canonical, exact GA4 and zero horizontal overflow.
 - The documentation verification commit is the commit containing this release-state update; its exact SHA must be matched to `origin/main` in the final delivery.
+
+## Tool Finder and workflow visual regression fix — 2026-08-10
+
+This section is the authoritative local implementation record for the two UI regressions reproduced on the production site.
+
+- Starting state: clean `main` at `3933e23b8b6496123c05eb044271b5e65b5faf0e`, equal to `origin/main` after fetch.
+- Reproduced Tool Finder defect: at 1440px and 390px, the search control on `/tools/` rendered as a visually empty rectangle because its only usage example sat below the field. That extra hint row also made the search column taller than both selects and the clear button.
+- Reproduced workflow defect: the shared `.flow-line span:not(:last-child)::after` rule added an arrow glyph to every non-final step. At wrapped row ends this became an especially conspicuous repeated arrowhead on the homepage, Water Treatment hub and Greywater hub.
+- Source fix: `toolFinder()` now places `Search pressure, rainwater, cost...` inside the search input. The dedicated finder CSS uses one 44px control height, a larger desktop search column, equal medium select columns, an intrinsic-width desktop action, two tablet columns and one mobile column. The obsolete external hint was removed.
+- Shared workflow fix: the single common arrow pseudo-element rule was removed from `assets/css/main.css`. Numbered circles, connector lines, labels, order and responsive wrapping remain unchanged across every `.flow-line` user.
+- QA guard: static QA now requires the visible search prompt while continuing to reject actual temporary content markers. Browser-report QA requires the responsive finder toolbar to pass and the workflow arrow-glyph count to remain zero.
+- Generated output: 74 public pages were regenerated from `tools-qa/generate-site.mjs`; only `/tools/index.html` changed. Sitemap URLs, dates, formulas, tools, metadata, navigation, homepage design, colors and badges did not change.
+- Local automated verification passed: static QA for 74 pages, navigation QA for 76 HTML documents and every calculation/validation suite passed unchanged.
+- Actual browser regression passed at 390, 768, 1024, 1280 and 1440px: 74 pages × 5 widths = 370 renders, with zero horizontal overflow, broken images, unlabelled controls, missing H1s, console errors or workflow arrow glyphs.
+- Finder geometry: all four controls measured exactly 44px high. Desktop controls shared one baseline with search wider than two equal selects and the button sized to content; 768px used two equal columns; 390px used one 293px column with no clipping.
+- Finder behavior: initial 37; `pressure` search 13; Greywater system 5; Planner type 8; Greywater + Planner 2; combined `laundry` search 1; explicit zero-result state 0; reset restored all 37.
+- Greywater table regression stayed intact at all five widths. At 390px, the Source table remained 760px inside a 333px labelled scroll wrapper and the End-use table remained 700px inside a 333px labelled scroll wrapper, with no document overflow.
+- Direct before/after browser screenshots were recorded at 1440px and 390px for `/tools/`, the homepage workflow, the Water Treatment sequence and the Greywater workflow.
+- Protected area: the five user-managed homepage badges (KittyLaunch, SellWithBoost, Twelve Tools, Findly and BoostDomainRating) and the greywater screening-table implementation were not changed.
+- The implementation commit is the commit containing this section with message `Fix tool finder and workflow visuals`; deployment and production verification are recorded in the follow-up release-state entry after GitHub Pages completes.

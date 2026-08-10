@@ -121,7 +121,6 @@ h3 { margin: 2rem 0 .7rem; font-size: clamp(1.18rem, 2vw, 1.55rem); }
 .flow-line { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0; margin: 2.5rem 0; counter-reset: flow; }
 .flow-line span { position: relative; min-height: 105px; padding: 2.7rem .75rem .75rem; border-top: 2px solid var(--blue-700); color: var(--navy-900); font: 700 .78rem/1.35 var(--font-mono); text-transform: uppercase; }
 .flow-line span::before { counter-increment: flow; content: "0" counter(flow); position: absolute; top: -.9rem; left: 0; width: 1.8rem; height: 1.8rem; display: grid; place-items: center; border-radius: 50%; background: var(--paper-2); border: 2px solid var(--teal-600); color: var(--navy-900); font-size: .65rem; }
-.flow-line span:not(:last-child)::after { content: "→"; position: absolute; right: -.4rem; top: -.9rem; color: var(--blue-700); }
 .notice { margin: 2rem 0; padding: 1.2rem 1.3rem; border-left: 4px solid var(--amber-600); background: var(--amber-100); }
 .notice strong { color: var(--navy-900); }
 .meta-line { color: var(--muted); font: 700 .74rem/1.5 var(--font-mono); text-transform: uppercase; letter-spacing: .05em; }

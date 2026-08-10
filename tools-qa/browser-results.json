@@ -14,6 +14,12 @@
   "toolFinderType": "passed",
   "toolFinderEmptyState": "passed",
   "toolFinderReset": "passed",
+  "toolFinderResponsiveToolbar": "passed",
+  "toolFinderSearchCount": 13,
+  "toolFinderSystemCount": 5,
+  "toolFinderTypeCount": 8,
+  "toolFinderCombinedCount": 2,
+  "workflowArrowGlyphs": 0,
   "mobileMenu": "passed",
   "calculateAnalyze": "passed",
   "reset": "passed",
@@ -34,11 +40,13 @@
   "brokenImages": 0,
   "systemsMenu": "passed",
   "firstFlushModes": "passed",
-  "issuesFound": 4,
+  "issuesFound": 6,
   "issuesFixed": [
     "Synchronized the shared unit-system state after form reset so repeated SI/US switching cannot apply the wrong conversion direction.",
     "Corrected shared numeric validation wording so minimum boundaries are described accurately.",
     "Wrapped the two greywater screening tables in labelled internal scroll regions with readable minimum table widths so mobile columns cannot be compressed or clipped.",
-    "Added search, system and tool-type filtering with a live result count, empty state and reset to the 37-card Tools hub."
+    "Added search, system and tool-type filtering with a live result count, empty state and reset to the 37-card Tools hub.",
+    "Made the Tools hub search field self-explanatory and aligned all finder controls into one responsive toolbar.",
+    "Removed repeated arrow glyphs from the shared numbered workflow sequence while retaining connectors, numbering and wrapping."
   ]
 }

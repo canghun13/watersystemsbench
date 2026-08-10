@@ -130,6 +130,7 @@ for (const marker of [
   'src="/assets/js/tool-finder.js"',
   "data-tool-finder",
   "data-tool-search",
+  'placeholder="Search pressure, rainwater, cost..."',
   "data-tool-system",
   "data-tool-type",
   'data-tool-count role="status" aria-live="polite"',
@@ -194,7 +195,7 @@ const textFiles = allFiles.filter((path) => [".html", ".js", ".mjs", ".css", ".m
 const forbidden = [
   ["example domain", /example\.com/i],
   ["filler text", new RegExp("lorem" + " ipsum", "i")],
-  ["temporary marker", /place\s*holder/i],
+  ["temporary marker", new RegExp("\\b(?:placeholder (?:page|content|copy)|replace" + " me)\\b", "i")],
   ["other project brand", new RegExp(["Reliability" + "Bench", "Plastics" + "Calc", "Maker Print" + " Tools", "Print Production" + " Lab"].join("|"), "i")],
   ["absolute Windows path", /[A-Z]:\\Users\\/i]
 ];

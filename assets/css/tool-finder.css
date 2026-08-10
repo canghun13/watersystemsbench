@@ -1,6 +1,6 @@
 .tool-finder-controls {
   display: grid;
-  grid-template-columns: minmax(220px, 1.5fr) repeat(2, minmax(180px, 1fr)) auto;
+  grid-template-columns: minmax(300px, 1.6fr) repeat(2, minmax(190px, 1fr)) max-content;
   gap: 1rem;
   margin: 1.5rem 0;
   padding: 1.25rem;
@@ -8,6 +8,10 @@
   background: rgba(255, 255, 255, .88);
   box-shadow: var(--shadow);
   align-items: end;
+}
+
+.tool-finder-controls > div {
+  min-width: 0;
 }
 
 .tool-finder-controls label {
@@ -20,7 +24,7 @@
 .tool-finder-controls input,
 .tool-finder-controls select {
   width: 100%;
-  min-height: 44px;
+  height: 44px;
   padding: .68rem .72rem;
   border: 1px solid #8ca3ad;
   border-radius: 0;
@@ -28,15 +32,14 @@
   color: var(--ink);
 }
 
-.filter-hint {
-  display: block;
-  margin-top: .35rem;
-  color: var(--muted);
-  font-size: .76rem;
+.tool-finder-controls input::placeholder {
+  color: #5f747d;
+  opacity: 1;
 }
 
 .tool-finder-controls .button {
-  min-height: 44px;
+  height: 44px;
+  padding-inline: 1rem;
   white-space: nowrap;
 }
 
