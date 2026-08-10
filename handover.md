@@ -452,3 +452,13 @@ This section is the authoritative local implementation record for the two UI reg
 - Direct before/after browser screenshots were recorded at 1440px and 390px for `/tools/`, the homepage workflow, the Water Treatment sequence and the Greywater workflow.
 - Protected area: the five user-managed homepage badges (KittyLaunch, SellWithBoost, Twelve Tools, Findly and BoostDomainRating) and the greywater screening-table implementation were not changed.
 - The implementation commit is the commit containing this section with message `Fix tool finder and workflow visuals`; deployment and production verification are recorded in the follow-up release-state entry after GitHub Pages completes.
+
+### Deployment and production verification
+
+- Implementation commit: `b24576d7313deb082139594210bcabf5b3a2123f` (`Fix tool finder and workflow visuals`). Local `HEAD` and `origin/main` matched after push.
+- GitHub Pages deployment succeeded for that exact SHA in `pages-build-deployment #28`: `https://github.com/canghun13/watersystemsbench/actions/runs/31351364660` (1 minute 6 seconds; build, status report and deploy all successful).
+- Production Tool Finder passed at 390px and 1440px. The prompt text was present, all controls were 44px high, desktop controls shared the same top baseline, the 390px toolbar used one full-width column and neither viewport had horizontal overflow.
+- Production finder behavior matched local verification: search 13, Greywater system 5, Greywater + Planner 2, explicit zero-result state 0 and reset 37.
+- Production workflow verification returned zero generated arrow glyphs for the homepage 6-step flow, Water Treatment 9-step sequence and Greywater 7-step workflow at 390px; 1440px visual and computed-style checks also passed.
+- Production greywater screening-table regression remained intact at 390px: labelled 333px wrappers retained 760px and 700px internal table widths with zero document overflow.
+- Production after screenshots at 390px and 1440px replaced the local after captures for all four affected pages. The final documentation commit is the commit containing this release-state entry and must match `origin/main` in the final delivery.
