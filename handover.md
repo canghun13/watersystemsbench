@@ -425,4 +425,10 @@ Final decision: **GO — add task, system and tool-type discovery controls to `/
 - Static QA passed for 74 public pages. Navigation QA passed for 76 repository HTML documents. Sitemap remains exactly 74 URLs.
 - Actual local browser regression passed: 74 pages × 5 widths = 370 renders at 390, 768, 1024, 1280 and 1440px, with zero H1, horizontal-overflow, broken-image or unlabelled-control failures and zero browser warnings/errors.
 - Finder QA passed 25 state checks across the five widths: initial 37, `pressure` search 13, Treatment system 8, Treatment + Planner 2 and reset 37. A zero-result combination exposed the recovery message. Mobile and desktop visual inspection passed.
-- Remaining release steps at the time this section was written: final diff review, commit, push, exact `origin/main` match and production verification of `/tools/` after deployment.
+- Implementation commit: `190a194087562edf5b8c10f64e740393abe72b26` (`Improve tools hub discovery`). Local `HEAD`, `origin/main` and `git ls-remote` matched this SHA after the implementation push.
+- GitHub Pages deployment succeeded for the implementation commit in run `https://github.com/canghun13/watersystemsbench/actions/runs/31348431801` (`pages-build-deployment #26`, 43 seconds).
+- Production verification passed after deployment: `/tools/` returned HTTP 200 with the exact canonical and GA4, 37 classified cards, the dedicated finder CSS/JavaScript and no horizontal overflow or browser warnings/errors at 390px.
+- Live finder interaction matched local evidence: initial 37, `pressure` search 13, Treatment system 8, Treatment + Planner 2 and reset 37.
+- Production `sitemap.xml` returned HTTP 200 with exactly 74 URLs and `/tools/` last modified on `2026-08-10`; no route was added or removed.
+- The five user-managed homepage badges remained in the original order with the original destinations, alternative text and 36px heights. The homepage retained one KittyLaunch marker, exact canonical, exact GA4 and zero horizontal overflow.
+- The documentation verification commit is the commit containing this release-state update; its exact SHA must be matched to `origin/main` in the final delivery.
