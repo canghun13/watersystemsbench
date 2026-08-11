@@ -501,4 +501,10 @@ This section is the authoritative implementation and QA record for the latest st
 
 ### Deployment record
 
-- Implementation commit, GitHub Pages run and production verification are recorded below after the deployment completes.
+- Implementation commit: `44c66b2db2b939424e61072b17edf8bc757c5474` (`Build vehicle wash water reclaim cluster`). Local `HEAD` and `origin/main` matched after push.
+- GitHub Pages deployment succeeded for that exact SHA in `pages build and deployment` run `https://github.com/canghun13/watersystemsbench/actions/runs/31454323861`; the run completed at `2026-08-11T03:05:47Z`.
+- Production HTTP verification passed for the homepage, system hub, all five new tools, retrofit guide, stream-map reference and Tools hub. Every checked page returned 200 with its exact canonical, exact GA4 and a release-specific marker.
+- Production `sitemap.xml` returned 200 with exactly 83 URLs and the new system hub.
+- Live 390px browser verification passed all five new tool calculations, Vehicle Wash Finder filtering (5 of 42), the hub and the stream map. The stream map retained a 760px table inside a 333px labelled wrapper; document overflow and console errors were zero.
+- The production homepage retained exactly one instance of each protected KittyLaunch, SellWithBoost, Twelve Tools, Findly and BoostDomainRating badge and had zero horizontal overflow.
+- The final documentation commit is the commit containing this completed deployment record; it must match `origin/main` in the final delivery.
