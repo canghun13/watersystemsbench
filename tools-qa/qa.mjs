@@ -22,7 +22,7 @@ async function walk(dir) {
 
 const allFiles = await walk(root);
 const publicHtml = allFiles.filter((path) => path.endsWith(`${sep}index.html`) || path === join(root, "index.html"));
-if (publicHtml.length !== 74) errors.push(`Expected 74 public HTML files; found ${publicHtml.length}.`);
+if (publicHtml.length !== 83) errors.push(`Expected 83 public HTML files; found ${publicHtml.length}.`);
 const categoryCounts = {
   core: publicHtml.filter((file) => !relative(root, file).includes(sep)).length + publicHtml.filter((file) => ["about", "contact", "privacy", "tools", "guides", "reference"].includes(relative(root, dirname(file)))).length,
   systems: publicHtml.filter((file) => relative(root, dirname(file)).split(sep).length === 2 && relative(root, file).startsWith(`systems${sep}`)).length,
@@ -30,7 +30,7 @@ const categoryCounts = {
   guides: publicHtml.filter((file) => relative(root, dirname(file)).split(sep).length === 2 && relative(root, file).startsWith(`guides${sep}`)).length,
   reference: publicHtml.filter((file) => relative(root, dirname(file)).split(sep).length === 2 && relative(root, file).startsWith(`reference${sep}`)).length
 };
-for (const [key, expected] of Object.entries({ core: 7, systems: 5, tools: 37, guides: 16, reference: 9 })) {
+for (const [key, expected] of Object.entries({ core: 7, systems: 6, tools: 42, guides: 18, reference: 10 })) {
   if (categoryCounts[key] !== expected) errors.push(`Expected ${expected} ${key} pages; found ${categoryCounts[key]}.`);
 }
 
@@ -87,7 +87,7 @@ for (const file of publicHtml) {
 
 const sitemap = await readFile(join(root, "sitemap.xml"), "utf8");
 const sitemapUrls = new Set([...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]));
-if (sitemapUrls.size !== 74) errors.push(`Sitemap contains ${sitemapUrls.size} unique URLs, expected 74.`);
+if (sitemapUrls.size !== 83) errors.push(`Sitemap contains ${sitemapUrls.size} unique URLs, expected 83.`);
 for (const url of pageUrls) if (!sitemapUrls.has(url)) errors.push(`Sitemap missing ${url}.`);
 for (const url of sitemapUrls) if (!pageUrls.has(url)) errors.push(`Sitemap contains non-public URL ${url}.`);
 
@@ -97,6 +97,7 @@ const llms = await readFile(join(root, "llms.txt"), "utf8");
 if (!llms.includes("https://github.com/canghun13/watersystemsbench") || !llms.includes(expectedEmail)) errors.push("llms.txt lacks repository or contact.");
 if (!llms.includes("/systems/water-treatment-quality/") || !llms.includes("Chemical dose and CT tools use user-supplied targets")) errors.push("llms.txt lacks treatment workflow or safety boundary.");
 if (!llms.includes("/systems/greywater-reuse/") || !llms.includes("Greywater tools never approve a source")) errors.push("llms.txt lacks greywater workflow or safety boundary.");
+if (!llms.includes("/systems/vehicle-wash-water-reclaim/") || !llms.includes("Vehicle-wash tools never select treatment")) errors.push("llms.txt lacks vehicle-wash workflow or safety boundary.");
 
 const home = await readFile(join(root, "index.html"), "utf8");
 const userManagedBadgeBlock = `<div class="page-shell" style="padding:30px 0;text-align:center;">
@@ -130,7 +131,7 @@ for (const marker of [
   'src="/assets/js/tool-finder.js"',
   "data-tool-finder",
   "data-tool-search",
-  'placeholder="Search pressure, rainwater, cost..."',
+  'placeholder="Search pressure, reclaim, cost..."',
   "data-tool-system",
   "data-tool-type",
   'data-tool-count role="status" aria-live="polite"',
@@ -138,9 +139,9 @@ for (const marker of [
 ]) {
   if (!toolsHub.includes(marker)) errors.push(`/tools/: finder contract is missing ${marker}.`);
 }
-if ((toolsHub.match(/data-tool-card(?:\s|>)/g) || []).length !== 37) errors.push("/tools/: finder must contain exactly 37 tool cards.");
-if ((toolsHub.match(/data-system="(?:pumps|wells|irrigation|treatment|greywater)"/g) || []).length !== 37) errors.push("/tools/: every tool card must have one known system filter value.");
-if ((toolsHub.match(/data-type="(?:calculator|planner|checker|comparator|estimator|troubleshooter|analyzer|simulator|selector)"/g) || []).length !== 37) errors.push("/tools/: every tool card must have one known tool-type filter value.");
+if ((toolsHub.match(/data-tool-card(?:\s|>)/g) || []).length !== 42) errors.push("/tools/: finder must contain exactly 42 tool cards.");
+if ((toolsHub.match(/data-system="(?:pumps|wells|irrigation|treatment|greywater|vehicle-wash)"/g) || []).length !== 42) errors.push("/tools/: every tool card must have one known system filter value.");
+if ((toolsHub.match(/data-type="(?:calculator|planner|checker|comparator|estimator|troubleshooter|analyzer|simulator|selector)"/g) || []).length !== 42) errors.push("/tools/: every tool card must have one known tool-type filter value.");
 
 const treatmentToolRoutes = [
   "/tools/water-softener-sizing-calculator/",
@@ -173,6 +174,26 @@ for (const route of greywaterToolRoutes) {
   if (!html.includes('aria-live="polite"')) errors.push(`${route}: aria-live result missing.`);
   if (!html.includes("<h2>Sources</h2>") || !html.includes("source-list")) errors.push(`${route}: authoritative sources missing.`);
   if (!html.includes("Safety and review boundary") || !/non-potable|wastewater|cross-connection|local/i.test(html)) errors.push(`${route}: greywater safety boundary missing.`);
+}
+
+const vehicleWashToolRoutes = [
+  "/tools/vehicle-wash-water-use-audit-calculator/",
+  "/tools/wash-water-reclaim-balance-planner/",
+  "/tools/reclaim-buffer-tank-simulator/",
+  "/tools/spot-free-rinse-ro-production-planner/",
+  "/tools/vehicle-wash-reclaim-savings-calculator/"
+];
+for (const route of vehicleWashToolRoutes) {
+  const html = await readFile(join(root, route.slice(1), "index.html"), "utf8");
+  if (!html.includes('data-tool-form="vehicle-wash-')) errors.push(`${route}: vehicle-wash form missing.`);
+  if (!html.includes('aria-live="polite"')) errors.push(`${route}: aria-live result missing.`);
+  if (!html.includes("<h2>Sources</h2>") || !html.includes("source-list")) errors.push(`${route}: authoritative sources missing.`);
+  if (!html.includes("Safety and review boundary") || !/wastewater|discharge|cross-connection|treatment/i.test(html)) errors.push(`${route}: vehicle-wash safety boundary missing.`);
+}
+
+const vehicleWashStreamMap = await readFile(join(root, "reference", "vehicle-wash-water-stream-map", "index.html"), "utf8");
+if (!vehicleWashStreamMap.includes('<div class="table-scroll" role="region" aria-label="Vehicle wash water stream map" tabindex="0" style="--table-min-width: 760px;"><table>')) {
+  errors.push("/reference/vehicle-wash-water-stream-map/: stream map must use its labelled, keyboard-focusable responsive table wrapper.");
 }
 
 const greywaterScreening = await readFile(join(root, "reference", "greywater-source-use-screening", "index.html"), "utf8");

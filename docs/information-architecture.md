@@ -2,13 +2,14 @@
 
 ## Navigation model
 
-The site follows a water-system workflow instead of separating resources only by format. Primary navigation exposes Home, Tools, Guides, Reference and a Systems menu. The Systems menu contains exactly five implemented hubs:
+The site follows a water-system workflow instead of separating resources only by format. Primary navigation exposes Home, Tools, Guides, Reference and a Systems menu. The Systems menu contains exactly six implemented hubs:
 
 - Pumps, Pressure & Pipe Flow
 - Wells, Storage & Rainwater
 - Irrigation & Sprinkler Systems
 - Water Treatment & Water Quality
 - Greywater Reuse Planning
+- Vehicle Wash Water Reclaim Planning
 
 About, Contact and Privacy remain available through project navigation. No inactive future system is linked.
 
@@ -71,6 +72,21 @@ Allowed wastewater source
 ```
 
 The greywater hub is `/systems/greywater-reuse/`. The workflow never treats greywater as potable and does not infer a locally permitted source, use, storage method, setback or plumbing connection.
+
+### Vehicle wash water reclaim planning
+
+```text
+Matching meter and vehicle interval
+→ Per-vehicle fresh-water baseline
+→ Fresh / reclaim / spot-free / loss stream map
+→ Reclaim quantity balance
+→ Peak buffer and delayed return
+→ Spot-free RO production and storage
+→ Water/sewer economics
+→ Repeat metering and maintenance
+```
+
+The vehicle-wash hub is `/systems/vehicle-wash-water-reclaim/`. Its tools are non-potable process-water quantity and economics screens; they do not select treatment, establish reclaimed-water quality or authorize reject, backwash, sludge or wastewater discharge.
 
 The treatment hub is `/systems/water-treatment-quality/`. The obsolete planning-only `/tools/water-treatment-quality/` route must not be introduced.
 

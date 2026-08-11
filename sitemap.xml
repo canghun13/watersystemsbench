@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://watersystemsbench.com/</loc><lastmod>2026-08-08</lastmod></url>
-  <url><loc>https://watersystemsbench.com/tools/</loc><lastmod>2026-08-10</lastmod></url>
-  <url><loc>https://watersystemsbench.com/guides/</loc><lastmod>2026-08-08</lastmod></url>
-  <url><loc>https://watersystemsbench.com/reference/</loc><lastmod>2026-08-08</lastmod></url>
+  <url><loc>https://watersystemsbench.com/</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://watersystemsbench.com/tools/</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://watersystemsbench.com/guides/</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://watersystemsbench.com/reference/</loc><lastmod>2026-08-11</lastmod></url>
   <url><loc>https://watersystemsbench.com/about/</loc><lastmod>2026-08-08</lastmod></url>
   <url><loc>https://watersystemsbench.com/contact/</loc><lastmod>2026-07-29</lastmod></url>
   <url><loc>https://watersystemsbench.com/privacy/</loc><lastmod>2026-07-29</lastmod></url>
@@ -12,6 +12,7 @@
   <url><loc>https://watersystemsbench.com/systems/irrigation-sprinklers/</loc><lastmod>2026-08-08</lastmod></url>
   <url><loc>https://watersystemsbench.com/systems/water-treatment-quality/</loc><lastmod>2026-08-08</lastmod></url>
   <url><loc>https://watersystemsbench.com/systems/greywater-reuse/</loc><lastmod>2026-08-08</lastmod></url>
+  <url><loc>https://watersystemsbench.com/systems/vehicle-wash-water-reclaim/</loc><lastmod>2026-08-11</lastmod></url>
   <url><loc>https://watersystemsbench.com/tools/total-dynamic-head-calculator/</loc><lastmod>2026-07-29</lastmod></url>
   <url><loc>https://watersystemsbench.com/tools/pipe-friction-loss-calculator/</loc><lastmod>2026-07-29</lastmod></url>
   <url><loc>https://watersystemsbench.com/tools/water-pipe-size-velocity-checker/</loc><lastmod>2026-07-29</lastmod></url>
@@ -49,6 +50,11 @@
   <url><loc>https://watersystemsbench.com/tools/laundry-to-landscape-zone-planner/</loc><lastmod>2026-08-08</lastmod></url>
   <url><loc>https://watersystemsbench.com/tools/greywater-surge-basin-checker/</loc><lastmod>2026-08-08</lastmod></url>
   <url><loc>https://watersystemsbench.com/tools/greywater-reuse-savings-calculator/</loc><lastmod>2026-08-08</lastmod></url>
+  <url><loc>https://watersystemsbench.com/tools/vehicle-wash-water-use-audit-calculator/</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://watersystemsbench.com/tools/wash-water-reclaim-balance-planner/</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://watersystemsbench.com/tools/reclaim-buffer-tank-simulator/</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://watersystemsbench.com/tools/spot-free-rinse-ro-production-planner/</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://watersystemsbench.com/tools/vehicle-wash-reclaim-savings-calculator/</loc><lastmod>2026-08-11</lastmod></url>
   <url><loc>https://watersystemsbench.com/guides/how-to-size-a-water-pump/</loc><lastmod>2026-07-29</lastmod></url>
   <url><loc>https://watersystemsbench.com/guides/how-to-read-a-pump-curve/</loc><lastmod>2026-07-29</lastmod></url>
   <url><loc>https://watersystemsbench.com/guides/how-to-diagnose-low-water-pressure/</loc><lastmod>2026-07-29</lastmod></url>
@@ -65,6 +71,8 @@
   <url><loc>https://watersystemsbench.com/guides/build-water-treatment-train/</loc><lastmod>2026-07-29</lastmod></url>
   <url><loc>https://watersystemsbench.com/guides/plan-home-greywater-reuse-system/</loc><lastmod>2026-08-08</lastmod></url>
   <url><loc>https://watersystemsbench.com/guides/troubleshoot-greywater-irrigation/</loc><lastmod>2026-08-08</lastmod></url>
+  <url><loc>https://watersystemsbench.com/guides/meter-vehicle-wash-water-use/</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://watersystemsbench.com/guides/plan-vehicle-wash-water-reclaim-retrofit/</loc><lastmod>2026-08-11</lastmod></url>
   <url><loc>https://watersystemsbench.com/reference/water-flow-pressure-volume-conversions/</loc><lastmod>2026-07-29</lastmod></url>
   <url><loc>https://watersystemsbench.com/reference/water-pressure-head-conversion/</loc><lastmod>2026-07-29</lastmod></url>
   <url><loc>https://watersystemsbench.com/reference/hazen-williams-c-values/</loc><lastmod>2026-07-29</lastmod></url>
@@ -74,4 +82,5 @@
   <url><loc>https://watersystemsbench.com/reference/water-quality-glossary/</loc><lastmod>2026-07-29</lastmod></url>
   <url><loc>https://watersystemsbench.com/reference/water-treatment-comparison-matrix/</loc><lastmod>2026-07-29</lastmod></url>
   <url><loc>https://watersystemsbench.com/reference/greywater-source-use-screening/</loc><lastmod>2026-08-08</lastmod></url>
+  <url><loc>https://watersystemsbench.com/reference/vehicle-wash-water-stream-map/</loc><lastmod>2026-08-11</lastmod></url>
 </urlset>

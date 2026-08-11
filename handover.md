@@ -462,3 +462,43 @@ This section is the authoritative local implementation record for the two UI reg
 - Production workflow verification returned zero generated arrow glyphs for the homepage 6-step flow, Water Treatment 9-step sequence and Greywater 7-step workflow at 390px; 1440px visual and computed-style checks also passed.
 - Production greywater screening-table regression remained intact at 390px: labelled 333px wrappers retained 760px and 700px internal table widths with zero document overflow.
 - Production after screenshots at 390px and 1440px replaced the local after captures for all four affected pages. The final documentation commit is the commit containing this release-state entry and must match `origin/main` in the final delivery.
+
+## Vehicle Wash Water Reclaim cluster — 2026-08-11
+
+This section is the authoritative implementation and QA record for the latest strict new-cluster discovery cycle.
+
+### Discovery decision
+
+- Starting state: clean `main` at `2d5130e679b4467da5ab9f1471c51db40fd24727`, equal to fetched `origin/main` and the remote `main` ref.
+- Starting inventory: 74 public pages — 7 core, 5 system hubs, 37 tools, 16 guides and 9 references.
+- Thirteen new families were investigated against current search results, free tools, primary sources, the repository inventory and mandatory gates A–I: professional vehicle-wash reclaim, hydronic heating, RV water systems, domestic hot-water recirculation, aquarium water management, pool/spa circulation, hydroponic nutrient water, boiler make-up/blowdown/condensate, water-heater performance, pressure-washer hydraulics, brewing water chemistry, mobile-food water/wastewater and seasonal winterization.
+- Full candidate scoring, intent bundles, competitor evidence, failure reasons and source URLs are in `docs/new-cluster-discovery-2026-08-11.md`.
+- Final decision: **GO — Vehicle Wash Water Reclaim Planning**. It passed every gate with a distinct professional process-water user, more than seven connected intent bundles, five independent repeat-use tools, an authoritative-method/open-workflow gap, a coherent meter-to-monitor sequence, user-entered data only and a clearly bounded quantity/economics scope.
+- The main opening is not an absence of published data. EPA, DOE and the International Carwash Association publish useful estimating ranges, balances and study evidence, while current free results are fragmented among PDFs, equipment sales material and single-purpose consumer calculators. The implemented cluster connects those decisions without selecting treatment or approving reuse/discharge.
+
+### Public implementation
+
+- New system hub: `/systems/vehicle-wash-water-reclaim/`.
+- New tools: `/tools/vehicle-wash-water-use-audit-calculator/`, `/tools/wash-water-reclaim-balance-planner/`, `/tools/reclaim-buffer-tank-simulator/`, `/tools/spot-free-rinse-ro-production-planner/` and `/tools/vehicle-wash-reclaim-savings-calculator/`.
+- New guides: `/guides/meter-vehicle-wash-water-use/` and `/guides/plan-vehicle-wash-water-reclaim-retrofit/`.
+- New reference: `/reference/vehicle-wash-water-stream-map/`, with a labelled, keyboard-focusable 760px internal table surface for narrow screens.
+- The five calculation engines live in `assets/js/tools/vehicle-wash-tools.js`. They cover metered per-vehicle use, fresh/reclaim/discharge mass balance, a minute-step peak buffer simulation with return delay/reserve/overflow/shortfall, spot-free RO production/feed/reject/peak storage and water/sewer/operating-cost savings with simple payback.
+- The Tools Finder now classifies 42 cards across six systems. The homepage, shared system navigation, Tools/Guides/Reference hubs, sitemap, `llms.txt`, metadata and inventory documentation expose the new workflow.
+- The exact five-tool implementation contract, formulas, inputs, units, validation, worked examples, sources, boundaries and QA matrix are in `docs/vehicle-wash-water-reclaim-expansion.md`.
+- Safety boundary: the cluster estimates quantities and economics only. It never selects treatment, declares reclaimed-water quality, approves cross-connections/exposure or authorizes wastewater, RO reject, backwash, purge or sludge routing.
+- Protected area: the complete homepage badge block containing KittyLaunch, SellWithBoost, Twelve Tools, Findly and BoostDomainRating remains present in its original order and markup contract.
+
+### Local verification
+
+- Generated inventory: 83 public pages — 7 core, 6 system hubs, 42 tools, 18 guides and 10 references; sitemap parity 83.
+- Static QA passed unique metadata, canonical/robots/Open Graph, JSON-LD, exact GA4, sitemap parity, tool contracts, responsive tables, JavaScript syntax and repository string scans.
+- Navigation QA passed 85 repository HTML documents with all local links and assets resolved.
+- Calculation QA passed all prior suites plus 65 independent vehicle-wash numeric, conservation, unit-equivalence, boundary and invalid-state checks.
+- Actual in-app browser QA passed 83 pages at 390, 768, 1024, 1280 and 1440px (415 renders), all 42 tool calculations, five vehicle-wash invalid-input/stale-result checks, shared SI/US conversion, reset, copy feedback and print action, mobile navigation and 25 Tool Finder checks.
+- Vehicle-wash Finder evidence: `reclaim` search 5, Vehicle Wash system 5, Simulator type 2, Vehicle Wash + Simulator 1, explicit empty state 0 and reset 42.
+- Responsive-table evidence: 15 checks across the five widths; at 390px the new stream map retained a 760px table inside a 333px labelled internal-scroll region. Document overflow, table clipping, broken images, console errors, page errors, failed assets and internal 404s were all zero.
+- Representative 390px vehicle-wash hub and normal desktop stream-map layouts passed direct visual inspection.
+
+### Deployment record
+
+- Implementation commit, GitHub Pages run and production verification are recorded below after the deployment completes.

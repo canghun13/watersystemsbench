@@ -11,19 +11,22 @@ Water Systems Bench is an English-language, global workflow hub for sizing, chec
 
 ## Current implementation
 
-The complete first-wave scope and one validated expansion cluster are implemented: 74 public HTML pages comprising 7 core pages, 5 connected system hubs, 37 working tools, 16 guides and 9 references.
+The complete first-wave scope and two validated expansion clusters are implemented: 83 public HTML pages comprising 7 core pages, 6 connected system hubs, 42 working tools, 18 guides and 10 references.
 
-The five workflows are:
+The six workflows are:
 
 1. Pumps, Pressure & Pipe Flow
 2. Wells, Storage & Rainwater
 3. Irrigation & Sprinkler Systems
 4. Water Treatment & Water Quality
 5. Greywater Reuse Planning
+6. Vehicle Wash Water Reclaim Planning
 
 The Water Treatment & Water Quality cluster starts at `/systems/water-treatment-quality/`. Its eight tools use tested or user-supplied values, show their methods and limitations, and do not claim potable-water safety, regulatory compliance or an approved design.
 
 The Greywater Reuse Planning cluster starts at `/systems/greywater-reuse/`. Its five tools connect measured household supply, ET-based landscape demand, laundry event distribution, receiving-basin capacity and user-entered economics without approving a source, end use, potable connection or local compliance.
+
+The Vehicle Wash Water Reclaim Planning cluster starts at `/systems/vehicle-wash-water-reclaim/`. Its five tools connect a matching meter/vehicle baseline, process-stream balance, delayed peak buffer, spot-free RO production and facility economics without selecting treatment or approving reclaimed-water quality or discharge.
 
 The site uses the Hydraulic Field Bench design system, SI-first calculations with common US customary units, unique metadata and canonical URLs, JSON-LD, breadcrumbs, GA4, sitemap, robots and `llms.txt`.
 
@@ -62,3 +65,5 @@ Before finishing, inspect the diff, run relevant calculation/static/navigation/b
 - [QA and operations](docs/qa-and-operations.md)
 - [Water treatment implementation specification](docs/water-treatment-quality-spec.md)
 - [Greywater expansion research and specification](docs/greywater-reuse-expansion.md)
+- [New cluster discovery](docs/new-cluster-discovery-2026-08-11.md)
+- [Vehicle wash reclaim expansion specification](docs/vehicle-wash-water-reclaim-expansion.md)

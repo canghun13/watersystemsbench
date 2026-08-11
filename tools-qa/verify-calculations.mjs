@@ -18,6 +18,7 @@ import { computeFirstFlush } from "../assets/js/tools/first-flush.js";
 import { computeDrip, computeFlowTest, computePrecipitation, computePumpZone, computeRuntime, computeZoneCapacity, diagnoseIrrigation } from "../assets/js/tools/irrigation-tools.js";
 import { computeChlorineDose, computeContactTime, computeMediaFilter, computeRoProduction, computeRoRecovery, computeSaltRegeneration, computeSoftenerSizing, selectTreatmentTrain } from "../assets/js/tools/treatment-tools.js";
 import { computeGreywaterSupply, computeIrrigationMatch, computeLaundryZone, computeSurgeBasin, computeReuseSavings } from "../assets/js/tools/greywater-tools.js";
+import { computeReclaimBalance, computeReclaimBuffer, computeSpotFreeRo, computeVehicleWashAudit, computeVehicleWashSavings } from "../assets/js/tools/vehicle-wash-tools.js";
 import { conversions, headToPressure, pressureToHead } from "../assets/js/unit-conversions.js";
 
 let numericCases = 0;
@@ -29,6 +30,7 @@ let irrigationDiagnosticCases = 0;
 let treatmentCases = 0;
 let treatmentSelectorCases = 0;
 let greywaterCases = 0;
+let vehicleWashCases = 0;
 const failures = [];
 
 function approx(name, actual, expected, tolerance) {
@@ -78,6 +80,20 @@ function greywaterExact(name, actual, expected) {
 }
 function greywaterThrows(name, calculation) {
   greywaterCases += 1;
+  let threw = false;
+  try { calculation(); } catch { threw = true; }
+  if (!threw) failures.push(`${name}: expected validation error.`);
+}
+function vehicleWashApprox(name, actual, expected, tolerance = 1e-8) {
+  vehicleWashCases += 1;
+  if (!Number.isFinite(actual) || Math.abs(actual - expected) > tolerance) failures.push(`${name}: expected ${expected} ± ${tolerance}, received ${actual}`);
+}
+function vehicleWashExact(name, actual, expected) {
+  vehicleWashCases += 1;
+  if (actual !== expected) failures.push(`${name}: expected ${expected}, received ${actual}`);
+}
+function vehicleWashThrows(name, calculation) {
+  vehicleWashCases += 1;
   let threw = false;
   try { calculation(); } catch { threw = true; }
   if (!threw) failures.push(`${name}: expected validation error.`);
@@ -419,8 +435,88 @@ greywaterApprox("GW-E6 payback", savings.simplePaybackYears, 1200 / 104);
 greywaterExact("GW-E7 no positive payback", computeReuseSavings({ dailyReuseL: 1, activeDays: 1, waterTariff: 0, sewerTariff: 0, sewerOffsetPercent: 0, annualOperatingCost: 10, installedCost: 100 }).simplePaybackYears, null);
 greywaterThrows("GW-E8 invalid active days", () => computeReuseSavings({ dailyReuseL: 10, activeDays: 367, waterTariff: 1, sewerTariff: 1, sewerOffsetPercent: 100, annualOperatingCost: 0, installedCost: 0 }));
 
+// Vehicle-wash cluster: independent meter, mass-balance, minute simulation, RO and economic reference cases.
+let washAudit = computeVehicleWashAudit({ startMeterL: 100000, endMeterL: 115000, vehicles: 300, intervalDays: 5, operatingDays: 300 });
+vehicleWashApprox("VW-A1 interval use", washAudit.intervalUseL, 15000);
+vehicleWashApprox("VW-A2 per vehicle", washAudit.litresPerVehicle, 50);
+vehicleWashApprox("VW-A3 daily use", washAudit.litresPerDay, 3000);
+vehicleWashApprox("VW-A4 annual litres", washAudit.annualL, 900000);
+vehicleWashApprox("VW-A5 annual cubic metres", washAudit.annualM3, 900);
+washAudit = computeVehicleWashAudit({ startMeterL: 0, endMeterL: 378.5411784, vehicles: 10, intervalDays: 1, operatingDays: 1 });
+vehicleWashApprox("VW-A6 US-volume equivalence", washAudit.litresPerVehicle, 37.85411784);
+vehicleWashThrows("VW-A7 reversed meter rejected", () => computeVehicleWashAudit({ startMeterL: 100, endMeterL: 99, vehicles: 1, intervalDays: 1, operatingDays: 1 }));
+vehicleWashThrows("VW-A8 zero vehicles rejected", () => computeVehicleWashAudit({ startMeterL: 0, endMeterL: 1, vehicles: 0, intervalDays: 1, operatingDays: 1 }));
+vehicleWashThrows("VW-A9 fractional vehicles rejected", () => computeVehicleWashAudit({ startMeterL: 0, endMeterL: 1, vehicles: 1.5, intervalDays: 1, operatingDays: 1 }));
+vehicleWashThrows("VW-A10 367 operating days rejected", () => computeVehicleWashAudit({ startMeterL: 0, endMeterL: 1, vehicles: 1, intervalDays: 1, operatingDays: 367 }));
+
+let reclaimBalance = computeReclaimBalance({ grossAppliedL: 180, spotFreeL: 20, carryoutL: 30, collectionPercent: 90, recoveryPercent: 80, vehiclesPerDay: 120 });
+vehicleWashApprox("VW-M1 collectable", reclaimBalance.collectableL, 150);
+vehicleWashApprox("VW-M2 potential recovered", reclaimBalance.potentialRecoveredL, 108);
+vehicleWashApprox("VW-M3 eligible demand", reclaimBalance.reclaimEligibleL, 160);
+vehicleWashApprox("VW-M4 reclaimed", reclaimBalance.reclaimedL, 108);
+vehicleWashApprox("VW-M5 fresh", reclaimBalance.freshL, 72);
+vehicleWashApprox("VW-M6 discharge", reclaimBalance.dischargeL, 42);
+vehicleWashApprox("VW-M7 reclaim share", reclaimBalance.reclaimSharePercent, 60);
+vehicleWashApprox("VW-M8 daily fresh", reclaimBalance.dailyFreshL, 8640);
+vehicleWashApprox("VW-M9 daily reclaimed", reclaimBalance.dailyReclaimedL, 12960);
+vehicleWashApprox("VW-M10 daily discharge", reclaimBalance.dailyDischargeL, 5040);
+reclaimBalance = computeReclaimBalance({ grossAppliedL: 100, spotFreeL: 40, carryoutL: 0, collectionPercent: 100, recoveryPercent: 100, vehiclesPerDay: 1 });
+vehicleWashApprox("VW-M11 reclaim capped by eligible steps", reclaimBalance.reclaimedL, 60);
+vehicleWashApprox("VW-M12 capped-case discharge", reclaimBalance.dischargeL, 40);
+vehicleWashExact("VW-M13 zero recovery fresh", computeReclaimBalance({ grossAppliedL: 100, spotFreeL: 10, carryoutL: 5, collectionPercent: 100, recoveryPercent: 0, vehiclesPerDay: 1 }).freshL, 100);
+vehicleWashThrows("VW-M14 spot-free above gross rejected", () => computeReclaimBalance({ grossAppliedL: 100, spotFreeL: 101, carryoutL: 0, collectionPercent: 100, recoveryPercent: 100, vehiclesPerDay: 1 }));
+vehicleWashThrows("VW-M15 carryout equal to gross rejected", () => computeReclaimBalance({ grossAppliedL: 100, spotFreeL: 0, carryoutL: 100, collectionPercent: 100, recoveryPercent: 100, vehiclesPerDay: 1 }));
+
+let buffer = computeReclaimBuffer({ vehiclesPerHour: 12, peakHours: 4, demandPerVehicleL: 100, returnPerVehicleL: 90, delayMinutes: 20, tankVolumeL: 5000, startingVolumeL: 3000, reserveL: 500 });
+vehicleWashExact("VW-B1 simulated minutes", buffer.minutes, 240);
+vehicleWashApprox("VW-B2 demand per minute", buffer.demandPerMinuteL, 20);
+vehicleWashApprox("VW-B3 return per minute", buffer.returnPerMinuteL, 18);
+vehicleWashApprox("VW-B4 ending storage", buffer.endingStoredL, 2160);
+vehicleWashApprox("VW-B5 minimum storage", buffer.minimumStoredL, 2160);
+vehicleWashApprox("VW-B6 reserve margin", buffer.reserveMarginL, 1660);
+vehicleWashApprox("VW-B7 no shortfall", buffer.shortfallL, 0);
+vehicleWashApprox("VW-B8 no overflow", buffer.overflowL, 0);
+vehicleWashExact("VW-B9 covered status", buffer.status, "Peak window covered");
+buffer = computeReclaimBuffer({ vehiclesPerHour: 60, peakHours: 1, demandPerVehicleL: 10, returnPerVehicleL: 0, delayMinutes: 0, tankVolumeL: 100, startingVolumeL: 50, reserveL: 10 });
+vehicleWashApprox("VW-B10 reserve-limited shortfall", buffer.shortfallL, 560);
+vehicleWashExact("VW-B11 shortfall status", buffer.status, "Peak reclaim shortfall");
+buffer = computeReclaimBuffer({ vehiclesPerHour: 1, peakHours: 1, demandPerVehicleL: 1, returnPerVehicleL: 100, delayMinutes: 0, tankVolumeL: 100, startingVolumeL: 100, reserveL: 0 });
+vehicleWashApprox("VW-B12 overflow conservation", buffer.overflowL, 99, 1e-7);
+vehicleWashThrows("VW-B13 start above tank rejected", () => computeReclaimBuffer({ vehiclesPerHour: 1, peakHours: 1, demandPerVehicleL: 1, returnPerVehicleL: 1, delayMinutes: 0, tankVolumeL: 100, startingVolumeL: 101, reserveL: 0 }));
+vehicleWashThrows("VW-B14 reserve equal to tank rejected", () => computeReclaimBuffer({ vehiclesPerHour: 1, peakHours: 1, demandPerVehicleL: 1, returnPerVehicleL: 1, delayMinutes: 0, tankVolumeL: 100, startingVolumeL: 50, reserveL: 100 }));
+
+let spotFree = computeSpotFreeRo({ vehiclesPerDay: 120, rinsePerVehicleL: 15, ratedRateLh: 120, productionHours: 18, availabilityPercent: 90, recoveryPercent: 50, peakVehiclesPerHour: 12, peakHours: 4, usableStorageL: 800 });
+vehicleWashApprox("VW-R1 daily demand", spotFree.dailyDemandL, 1800);
+vehicleWashApprox("VW-R2 effective rate", spotFree.effectiveRateLh, 108);
+vehicleWashApprox("VW-R3 daily production", spotFree.dailyProductionL, 1944);
+vehicleWashApprox("VW-R4 daily balance", spotFree.dailyBalanceL, 144);
+vehicleWashApprox("VW-R5 feed", spotFree.feedL, 3888);
+vehicleWashApprox("VW-R6 reject", spotFree.rejectL, 1944);
+vehicleWashApprox("VW-R7 peak demand", spotFree.peakDemandL, 720);
+vehicleWashApprox("VW-R8 concurrent production", spotFree.peakConcurrentProductionL, 432);
+vehicleWashApprox("VW-R9 storage required", spotFree.peakStorageRequiredL, 288);
+vehicleWashApprox("VW-R10 storage margin", spotFree.storageMarginL, 512);
+vehicleWashExact("VW-R11 covered status", spotFree.status, "Daily and peak case covered");
+vehicleWashExact("VW-R12 100-percent recovery reject", computeSpotFreeRo({ vehiclesPerDay: 1, rinsePerVehicleL: 1, ratedRateLh: 1, productionHours: 1, availabilityPercent: 100, recoveryPercent: 100, peakVehiclesPerHour: 1, peakHours: 1, usableStorageL: 1 }).rejectL, 0);
+vehicleWashExact("VW-R13 daily shortfall status", computeSpotFreeRo({ vehiclesPerDay: 100, rinsePerVehicleL: 10, ratedRateLh: 10, productionHours: 1, availabilityPercent: 100, recoveryPercent: 50, peakVehiclesPerHour: 1, peakHours: 1, usableStorageL: 100 }).status, "Daily production shortfall");
+vehicleWashExact("VW-R14 peak shortfall status", computeSpotFreeRo({ vehiclesPerDay: 1, rinsePerVehicleL: 10, ratedRateLh: 10, productionHours: 24, availabilityPercent: 100, recoveryPercent: 50, peakVehiclesPerHour: 100, peakHours: 1, usableStorageL: 0 }).status, "Peak storage shortfall");
+vehicleWashThrows("VW-R15 zero recovery rejected", () => computeSpotFreeRo({ vehiclesPerDay: 1, rinsePerVehicleL: 1, ratedRateLh: 1, productionHours: 1, availabilityPercent: 100, recoveryPercent: 0, peakVehiclesPerHour: 1, peakHours: 1, usableStorageL: 0 }));
+vehicleWashThrows("VW-R16 production beyond 24 hours rejected", () => computeSpotFreeRo({ vehiclesPerDay: 1, rinsePerVehicleL: 1, ratedRateLh: 1, productionHours: 25, availabilityPercent: 100, recoveryPercent: 50, peakVehiclesPerHour: 1, peakHours: 1, usableStorageL: 0 }));
+
+let washSavings = computeVehicleWashSavings({ baselineFreshL: 180, proposedFreshL: 72, baselineSewerL: 150, proposedSewerL: 42, vehiclesPerDay: 120, operatingDays: 300, waterTariff: 2.5, sewerTariff: 3, annualOperatingCost: 3500, installedCost: 45000 });
+vehicleWashApprox("VW-E1 annual fresh saved", washSavings.annualFreshSavedM3, 3888);
+vehicleWashApprox("VW-E2 annual sewer saved", washSavings.annualSewerSavedM3, 3888);
+vehicleWashApprox("VW-E3 avoided water cost", washSavings.avoidedWaterCost, 9720);
+vehicleWashApprox("VW-E4 avoided sewer cost", washSavings.avoidedSewerCost, 11664);
+vehicleWashApprox("VW-E5 gross savings", washSavings.grossAnnualSavings, 21384);
+vehicleWashApprox("VW-E6 net savings", washSavings.netAnnualSavings, 17884);
+vehicleWashApprox("VW-E7 simple payback", washSavings.simplePaybackYears, 45000 / 17884);
+vehicleWashExact("VW-E8 zero capex no payback", computeVehicleWashSavings({ baselineFreshL: 1, proposedFreshL: 0, baselineSewerL: 1, proposedSewerL: 0, vehiclesPerDay: 1, operatingDays: 1, waterTariff: 1, sewerTariff: 1, annualOperatingCost: 0, installedCost: 0 }).simplePaybackYears, null);
+vehicleWashExact("VW-E9 negative savings no payback", computeVehicleWashSavings({ baselineFreshL: 1, proposedFreshL: 2, baselineSewerL: 1, proposedSewerL: 2, vehiclesPerDay: 1, operatingDays: 1, waterTariff: 1, sewerTariff: 1, annualOperatingCost: 0, installedCost: 100 }).simplePaybackYears, null);
+vehicleWashThrows("VW-E10 367 days rejected", () => computeVehicleWashSavings({ baselineFreshL: 1, proposedFreshL: 0, baselineSewerL: 1, proposedSewerL: 0, vehiclesPerDay: 1, operatingDays: 367, waterTariff: 1, sewerTariff: 1, annualOperatingCost: 0, installedCost: 0 }));
+
 if (failures.length) {
   console.error(`Calculation verification failed with ${failures.length} issue(s):\n- ${failures.join("\n- ")}`);
   process.exit(1);
 }
-console.log(`Calculation verification passed: ${numericCases} Phase 1 numeric/conversion cases, ${diagnosticCases} troubleshooting scenarios, ${phase2Cases} Phase 2 numeric/decision cases, ${simulatorCases} rainwater simulator scenarios, ${irrigationCases} irrigation numeric/validation checks, ${irrigationDiagnosticCases} irrigation troubleshooting scenarios, ${treatmentCases} treatment numeric/validation checks, ${treatmentSelectorCases} treatment selector scenarios, and ${greywaterCases} greywater numeric/validation checks.`);
+console.log(`Calculation verification passed: ${numericCases} Phase 1 numeric/conversion cases, ${diagnosticCases} troubleshooting scenarios, ${phase2Cases} Phase 2 numeric/decision cases, ${simulatorCases} rainwater simulator scenarios, ${irrigationCases} irrigation numeric/validation checks, ${irrigationDiagnosticCases} irrigation troubleshooting scenarios, ${treatmentCases} treatment numeric/validation checks, ${treatmentSelectorCases} treatment selector scenarios, ${greywaterCases} greywater numeric/validation checks, and ${vehicleWashCases} vehicle-wash numeric/validation checks.`);

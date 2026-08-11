@@ -2,16 +2,16 @@
 
 ## Status
 
-All 65 pages in the initial plan remain implemented. The validated Greywater Reuse Planning expansion adds nine public pages.
+All 65 pages in the initial plan remain implemented. Greywater Reuse Planning and Vehicle Wash Water Reclaim Planning each add nine validated public pages.
 
 | Category | Implemented | Remaining |
 | --- | ---: | ---: |
 | Core pages | 7 | 0 |
-| System hubs | 5 | 0 |
-| Tools | 37 | 0 |
-| Guides | 16 | 0 |
-| References | 9 | 0 |
-| Total public HTML | 74 | 0 |
+| System hubs | 6 | 0 |
+| Tools | 42 | 0 |
+| Guides | 18 | 0 |
+| References | 10 | 0 |
+| Total public HTML | 83 | 0 |
 
 The authoritative Water Treatment & Water Quality hub is `/systems/water-treatment-quality/`. This corrects the earlier planning-only `/tools/water-treatment-quality/` route and aligns the cluster with the other system hubs.
 
@@ -32,6 +32,7 @@ The authoritative Water Treatment & Water Quality hub is `/systems/water-treatme
 - `/systems/irrigation-sprinklers/`
 - `/systems/water-treatment-quality/`
 - `/systems/greywater-reuse/`
+- `/systems/vehicle-wash-water-reclaim/`
 
 ## Tools
 
@@ -87,6 +88,14 @@ The authoritative Water Treatment & Water Quality hub is `/systems/water-treatme
 - `/tools/greywater-surge-basin-checker/`
 - `/tools/greywater-reuse-savings-calculator/`
 
+### Vehicle wash water reclaim planning
+
+- `/tools/vehicle-wash-water-use-audit-calculator/`
+- `/tools/wash-water-reclaim-balance-planner/`
+- `/tools/reclaim-buffer-tank-simulator/`
+- `/tools/spot-free-rinse-ro-production-planner/`
+- `/tools/vehicle-wash-reclaim-savings-calculator/`
+
 ## Guides
 
 - `/guides/how-to-size-a-water-pump/`
@@ -105,6 +114,8 @@ The authoritative Water Treatment & Water Quality hub is `/systems/water-treatme
 - `/guides/build-water-treatment-train/`
 - `/guides/plan-home-greywater-reuse-system/`
 - `/guides/troubleshoot-greywater-irrigation/`
+- `/guides/meter-vehicle-wash-water-use/`
+- `/guides/plan-vehicle-wash-water-reclaim-retrofit/`
 
 ## References
 
@@ -117,5 +128,6 @@ The authoritative Water Treatment & Water Quality hub is `/systems/water-treatme
 - `/reference/water-quality-glossary/`
 - `/reference/water-treatment-comparison-matrix/`
 - `/reference/greywater-source-use-screening/`
+- `/reference/vehicle-wash-water-stream-map/`
 
 Each public route must remain unique in sitemap, canonical metadata and generated navigation. Future routes require a distinct user task, implemented content and full QA; do not publish empty pages.

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vehicle Wash Water Use Audit Calculator | Water Systems Bench</title>
+  <meta name="description" content="Calculate metered fresh-water use per vehicle, daily demand and annual demand for a professional vehicle wash in SI or US units.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://watersystemsbench.com/tools/vehicle-wash-water-use-audit-calculator/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Water Systems Bench">
+  <meta property="og:title" content="Vehicle Wash Water Use Audit Calculator | Water Systems Bench">
+  <meta property="og:description" content="Calculate metered fresh-water use per vehicle, daily demand and annual demand for a professional vehicle wash in SI or US units.">
+  <meta property="og:url" content="https://watersystemsbench.com/tools/vehicle-wash-water-use-audit-calculator/">
+  <meta property="og:image" content="https://watersystemsbench.com/assets/og.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/content.css">
+  <link rel="stylesheet" href="/assets/css/calculator.css">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7FB08YPX7C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7FB08YPX7C');
+</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","@id":"https://watersystemsbench.com/tools/vehicle-wash-water-use-audit-calculator/#application","name":"Vehicle Wash Water Use Audit Calculator","description":"Calculate metered fresh-water use per vehicle, daily demand and annual demand for a professional vehicle wash in SI or US units.","url":"https://watersystemsbench.com/tools/vehicle-wash-water-use-audit-calculator/","applicationCategory":"EngineeringApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript"},{"@type":"BreadcrumbList","@id":"https://watersystemsbench.com/tools/vehicle-wash-water-use-audit-calculator/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://watersystemsbench.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://watersystemsbench.com/tools/"},{"@type":"ListItem","position":3,"name":"Vehicle Wash Water Use Audit Calculator","item":"https://watersystemsbench.com/tools/vehicle-wash-water-use-audit-calculator/"}]}]}</script>
+  <script type="module" src="/assets/js/partials.js"></script>
+  <script type="module" src="/assets/js/main.js"></script>
+  <script type="module" src="/assets/js/tools/vehicle-wash-tools.js"></script>
+</head>
+<body>
+  <div data-header-slot></div>
+  <main id="main-content">
+    <div class="page-shell">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/tools/">Tools</a></li><li><span aria-current="page">Vehicle Wash Water Use Audit Calculator</span></li></ol></nav>
+      <header class="hero compact"><div><p class="eyebrow">Vehicle wash water reclaim planning / Calculator</p><h1>Vehicle Wash Water Use Audit Calculator</h1><p class="lede">Calculate metered fresh-water use per vehicle, daily demand and annual demand for a professional vehicle wash in SI or US units.</p></div><p class="hero-note">Preliminary planning output only. Use measured data where possible and verify manufacturer and jurisdiction-specific requirements.</p></header>
+  <p class="meta-line">Last reviewed: August 11, 2026 · SI first · US customary supported</p>
+  <div class="tool-layout"><section class="instrument-panel"><div class="panel-heading"><h2>Bench inputs</h2><span class="panel-code">INPUT / SET</span></div><form data-tool-form="vehicle-wash-audit"><div class="field full"><label for="unitSystem">Unit system</label><select id="unitSystem" name="unitSystem" data-unit-system><option value="SI">SI — metric</option><option value="US">US customary</option></select></div><div class="field-grid"><div class="field "><label for="startMeter">Starting meter reading (<span data-unit-label="volume"></span>)</label><input id="startMeter" name="startMeter" data-label="Starting meter reading" type="number" value="100000" data-unit-kind="volume" step="any" required></div><div class="field "><label for="endMeter">Ending meter reading (<span data-unit-label="volume"></span>)</label><input id="endMeter" name="endMeter" data-label="Ending meter reading" type="number" value="115000" data-unit-kind="volume" step="any" required></div><div class="field "><label for="vehicles">Vehicles washed in interval</label><input id="vehicles" name="vehicles" data-label="Vehicles washed in interval" type="number" value="300"  step="1" required></div><div class="field "><label for="intervalDays">Interval length (days)</label><input id="intervalDays" name="intervalDays" data-label="Interval length (days)" type="number" value="5"  step="any" required></div><div class="field "><label for="operatingDays">Operating days per year</label><input id="operatingDays" name="operatingDays" data-label="Operating days per year" type="number" value="300"  step="1" required></div></div><p class="form-error" data-form-error role="alert"></p><div class="button-row"><button class="button" type="submit">Calculate baseline</button><button class="button secondary" type="reset">Reset</button></div></form></section><section class="result-panel" aria-label="Result">
+    <div class="panel-heading"><h2>Operating report</h2><span class="panel-code">RESULT / LIVE</span></div>
+    <div class="result-empty"><p>Enter the known values, then calculate to build a result summary.</p></div>
+    <div class="result-report" aria-live="polite" hidden>
+      <div class="primary-reading"><span class="reading-label"></span><span class="reading-value"></span></div>
+      <div class="result-block"><h3>Supporting calculations</h3><ul data-supporting></ul></div>
+      <div class="result-block"><h3>Interpretation</h3><p data-interpretation></p></div>
+      <p class="result-warning" data-warning></p>
+      <div class="result-actions"><button class="button small secondary" type="button" data-result-action data-copy-result disabled>Copy result</button><button class="button small secondary" type="button" data-result-action data-print-result disabled>Print result</button></div>
+    </div>
+  </section></div>
+  <div class="content-layout"><article class="article-body">
+    <h2>What this tool does</h2><p>Turns a comparable meter interval and verified vehicle count into an operator baseline that can be repeated before and after equipment or reclaim changes.</p>
+    <h2>When to use it</h2><p>Use after recording a dedicated or defensibly isolated water-meter interval and the vehicles processed during the same period.</p>
+    <h2>Inputs and supported units</h2><p>Each labelled field explains the quantity it expects. Unit-system changes convert existing numeric entries once and keep calculations on a single SI internal basis. Supported shared units include L/min and GPM, metres and feet, kPa and psi, millimetres and inches, kW and hp, and °C and °F as relevant.</p>
+    <h2>Calculation or decision method</h2><div class="formula">Fresh water per vehicle = (ending meter − starting meter) / vehicles<br>Annual use = interval use / interval days × operating days</div>
+    <h2>How to interpret the result</h2><p>Read the primary result with the supporting breakdown and warning. A plausible number is not evidence that every input, operating case or design constraint has been included.</p>
+    <div class="worked-example"><h2>Worked example</h2><p>A 15,000 L meter increase across 300 vehicles in five days equals 50 L/vehicle, 3,000 L/day and 900 m³ across 300 operating days.</p></div>
+    <h2>Assumptions</h2><p>Steady representative operating periods; user-entered meter, equipment, tariff and operating data; volumes are quantity balances rather than water-quality claims.</p>
+    <h2>Limitations</h2><p>No treatment technology, discharge route, oil-water separation, chemical compatibility, permit condition or manufacturer package is selected or approved.</p>
+    <div class="notice"><strong>Safety and review boundary.</strong> Vehicle-wash wastewater can contain sediment, detergents, oils, metals and other contaminants. Keep reclaimed water non-potable, prevent cross-connections and exposure, and verify current equipment, sewer, environmental and workplace requirements.</div>
+    <h2>Sources</h2><ul class="source-list"><li><a href="https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1018SSR.TXT" rel="noopener noreferrer">U.S. EPA WaterSense at Work — Vehicle Washes</a></li><li><a href="https://www.energy.gov/cmei/femp/estimating-methods-determining-end-use-water-consumption" rel="noopener noreferrer">U.S. Department of Energy — Vehicle Wash Water-Use Estimating Methods</a></li><li><a href="https://www.carwash.org/hubfs/Pulse%20and%20Research/Water%2BUse%2C%2BEvaporation%2Band%2BCarryout%2Bin%2BProfessional%2BCar%2BWashes.pdf" rel="noopener noreferrer">International Carwash Association — Water Use, Evaporation and Carryout</a></li><li><a href="https://www.energy.gov/sites/prod/files/2020/11/f80/handbook-water-evaluation-tools.pdf" rel="noopener noreferrer">U.S. Department of Energy — Handbook of Water Use and Conservation</a></li></ul>
+    <section aria-labelledby="related-heading"><h2 id="related-heading">Continue the workflow</h2><div class="related-grid"><a href="/tools/wash-water-reclaim-balance-planner/">Wash Water Reclaim Balance Planner<br><span class="meta-line">Open next →</span></a><a href="/guides/meter-vehicle-wash-water-use/">How to Meter Vehicle Wash Water Use<br><span class="meta-line">Open next →</span></a><a href="/reference/vehicle-wash-water-stream-map/">Vehicle Wash Water Stream Map<br><span class="meta-line">Open next →</span></a><a href="/systems/vehicle-wash-water-reclaim/">Vehicle Wash Water Reclaim workflow<br><span class="meta-line">Open next →</span></a></div></section>
+  </article><aside class="sidebar"><h2>Bench sequence</h2><ul><li><a href="/systems/vehicle-wash-water-reclaim/">Vehicle Wash Water Reclaim workflow</a></li><li><a href="/guides/meter-vehicle-wash-water-use/">Meter the baseline first</a></li><li><a href="/reference/vehicle-wash-water-stream-map/">Map each water stream</a></li><li><a href="/contact/">Report a content issue</a></li></ul></aside></div>
+    </div>
+  </main>
+  <div data-footer-slot></div>
+</body>
+</html>

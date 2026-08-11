@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wash Water Reclaim Balance Planner | Water Systems Bench</title>
+  <meta name="description" content="Plan fresh, reclaimed, carryout and remaining discharge volumes from measured wash demand and entered recovery performance.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://watersystemsbench.com/tools/wash-water-reclaim-balance-planner/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Water Systems Bench">
+  <meta property="og:title" content="Wash Water Reclaim Balance Planner | Water Systems Bench">
+  <meta property="og:description" content="Plan fresh, reclaimed, carryout and remaining discharge volumes from measured wash demand and entered recovery performance.">
+  <meta property="og:url" content="https://watersystemsbench.com/tools/wash-water-reclaim-balance-planner/">
+  <meta property="og:image" content="https://watersystemsbench.com/assets/og.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/content.css">
+  <link rel="stylesheet" href="/assets/css/calculator.css">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7FB08YPX7C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7FB08YPX7C');
+</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","@id":"https://watersystemsbench.com/tools/wash-water-reclaim-balance-planner/#application","name":"Wash Water Reclaim Balance Planner","description":"Plan fresh, reclaimed, carryout and remaining discharge volumes from measured wash demand and entered recovery performance.","url":"https://watersystemsbench.com/tools/wash-water-reclaim-balance-planner/","applicationCategory":"EngineeringApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript"},{"@type":"BreadcrumbList","@id":"https://watersystemsbench.com/tools/wash-water-reclaim-balance-planner/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://watersystemsbench.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://watersystemsbench.com/tools/"},{"@type":"ListItem","position":3,"name":"Wash Water Reclaim Balance Planner","item":"https://watersystemsbench.com/tools/wash-water-reclaim-balance-planner/"}]}]}</script>
+  <script type="module" src="/assets/js/partials.js"></script>
+  <script type="module" src="/assets/js/main.js"></script>
+  <script type="module" src="/assets/js/tools/vehicle-wash-tools.js"></script>
+</head>
+<body>
+  <div data-header-slot></div>
+  <main id="main-content">
+    <div class="page-shell">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/tools/">Tools</a></li><li><span aria-current="page">Wash Water Reclaim Balance Planner</span></li></ol></nav>
+      <header class="hero compact"><div><p class="eyebrow">Vehicle wash water reclaim planning / Planner</p><h1>Wash Water Reclaim Balance Planner</h1><p class="lede">Plan fresh, reclaimed, carryout and remaining discharge volumes from measured wash demand and entered recovery performance.</p></div><p class="hero-note">Preliminary planning output only. Use measured data where possible and verify manufacturer and jurisdiction-specific requirements.</p></header>
+  <p class="meta-line">Last reviewed: August 11, 2026 · SI first · US customary supported</p>
+  <div class="tool-layout"><section class="instrument-panel"><div class="panel-heading"><h2>Bench inputs</h2><span class="panel-code">INPUT / SET</span></div><form data-tool-form="vehicle-wash-balance"><div class="field full"><label for="unitSystem">Unit system</label><select id="unitSystem" name="unitSystem" data-unit-system><option value="SI">SI — metric</option><option value="US">US customary</option></select></div><div class="field-grid"><div class="field "><label for="gross">Gross applied water per vehicle (<span data-unit-label="volume"></span>)</label><input id="gross" name="gross" data-label="Gross applied water per vehicle" type="number" value="180" data-unit-kind="volume" step="any" required></div><div class="field "><label for="spotFree">Fresh-only spot-free rinse per vehicle (<span data-unit-label="volume"></span>)</label><input id="spotFree" name="spotFree" data-label="Fresh-only spot-free rinse per vehicle" type="number" value="20" data-unit-kind="volume" step="any" required></div><div class="field "><label for="carryout">Carryout / evaporation per vehicle (<span data-unit-label="volume"></span>)</label><input id="carryout" name="carryout" data-label="Carryout / evaporation per vehicle" type="number" value="30" data-unit-kind="volume" step="any" required></div><div class="field "><label for="collection">Collection efficiency (%)</label><input id="collection" name="collection" data-label="Collection efficiency (%)" type="number" value="90"  step="any" required></div><div class="field "><label for="recovery">Treatment recovery (%)</label><input id="recovery" name="recovery" data-label="Treatment recovery (%)" type="number" value="80"  step="any" required></div><div class="field "><label for="vehicles">Vehicles per operating day</label><input id="vehicles" name="vehicles" data-label="Vehicles per operating day" type="number" value="120"  step="1" required></div></div><p class="form-error" data-form-error role="alert"></p><div class="button-row"><button class="button" type="submit">Plan water balance</button><button class="button secondary" type="reset">Reset</button></div></form></section><section class="result-panel" aria-label="Result">
+    <div class="panel-heading"><h2>Operating report</h2><span class="panel-code">RESULT / LIVE</span></div>
+    <div class="result-empty"><p>Enter the known values, then calculate to build a result summary.</p></div>
+    <div class="result-report" aria-live="polite" hidden>
+      <div class="primary-reading"><span class="reading-label"></span><span class="reading-value"></span></div>
+      <div class="result-block"><h3>Supporting calculations</h3><ul data-supporting></ul></div>
+      <div class="result-block"><h3>Interpretation</h3><p data-interpretation></p></div>
+      <p class="result-warning" data-warning></p>
+      <div class="result-actions"><button class="button small secondary" type="button" data-result-action data-copy-result disabled>Copy result</button><button class="button small secondary" type="button" data-result-action data-print-result disabled>Print result</button></div>
+    </div>
+  </section></div>
+  <div class="content-layout"><article class="article-body">
+    <h2>What this tool does</h2><p>Separates gross applied water from non-recoverable carryout, collection efficiency, treatment recovery and the fresh-only spot-free stream.</p>
+    <h2>When to use it</h2><p>Use after measuring or estimating gross applied water per vehicle and obtaining current recovery information from the proposed reclaim equipment.</p>
+    <h2>Inputs and supported units</h2><p>Each labelled field explains the quantity it expects. Unit-system changes convert existing numeric entries once and keep calculations on a single SI internal basis. Supported shared units include L/min and GPM, metres and feet, kPa and psi, millimetres and inches, kW and hp, and °C and °F as relevant.</p>
+    <h2>Calculation or decision method</h2><div class="formula">Potential recovered = (gross applied − carryout) × collection × treatment recovery<br>Reclaim used = min(potential recovered, gross applied − fresh-only spot-free demand)</div>
+    <h2>How to interpret the result</h2><p>Read the primary result with the supporting breakdown and warning. A plausible number is not evidence that every input, operating case or design constraint has been included.</p>
+    <div class="worked-example"><h2>Worked example</h2><p>At 180 L applied, 20 L spot-free, 30 L carryout, 90% collection and 80% treatment recovery, 108 L/vehicle can return as reclaim and fresh requirement is 72 L/vehicle.</p></div>
+    <h2>Assumptions</h2><p>Steady representative operating periods; user-entered meter, equipment, tariff and operating data; volumes are quantity balances rather than water-quality claims.</p>
+    <h2>Limitations</h2><p>No treatment technology, discharge route, oil-water separation, chemical compatibility, permit condition or manufacturer package is selected or approved.</p>
+    <div class="notice"><strong>Safety and review boundary.</strong> Vehicle-wash wastewater can contain sediment, detergents, oils, metals and other contaminants. Keep reclaimed water non-potable, prevent cross-connections and exposure, and verify current equipment, sewer, environmental and workplace requirements.</div>
+    <h2>Sources</h2><ul class="source-list"><li><a href="https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1018SSR.TXT" rel="noopener noreferrer">U.S. EPA WaterSense at Work — Vehicle Washes</a></li><li><a href="https://www.energy.gov/cmei/femp/estimating-methods-determining-end-use-water-consumption" rel="noopener noreferrer">U.S. Department of Energy — Vehicle Wash Water-Use Estimating Methods</a></li><li><a href="https://www.carwash.org/hubfs/Pulse%20and%20Research/Water%2BUse%2C%2BEvaporation%2Band%2BCarryout%2Bin%2BProfessional%2BCar%2BWashes.pdf" rel="noopener noreferrer">International Carwash Association — Water Use, Evaporation and Carryout</a></li><li><a href="https://www.energy.gov/sites/prod/files/2020/11/f80/handbook-water-evaluation-tools.pdf" rel="noopener noreferrer">U.S. Department of Energy — Handbook of Water Use and Conservation</a></li></ul>
+    <section aria-labelledby="related-heading"><h2 id="related-heading">Continue the workflow</h2><div class="related-grid"><a href="/tools/vehicle-wash-water-use-audit-calculator/">Vehicle Wash Water Use Audit Calculator<br><span class="meta-line">Open next →</span></a><a href="/tools/reclaim-buffer-tank-simulator/">Reclaim Buffer Tank Simulator<br><span class="meta-line">Open next →</span></a><a href="/reference/vehicle-wash-water-stream-map/">Vehicle Wash Water Stream Map<br><span class="meta-line">Open next →</span></a><a href="/systems/vehicle-wash-water-reclaim/">Vehicle Wash Water Reclaim workflow<br><span class="meta-line">Open next →</span></a></div></section>
+  </article><aside class="sidebar"><h2>Bench sequence</h2><ul><li><a href="/systems/vehicle-wash-water-reclaim/">Vehicle Wash Water Reclaim workflow</a></li><li><a href="/guides/meter-vehicle-wash-water-use/">Meter the baseline first</a></li><li><a href="/reference/vehicle-wash-water-stream-map/">Map each water stream</a></li><li><a href="/contact/">Report a content issue</a></li></ul></aside></div>
+    </div>
+  </main>
+  <div data-footer-slot></div>
+</body>
+</html>
