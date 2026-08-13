@@ -23,6 +23,12 @@ if (report.treatmentToolInteractions !== 8) issues.push(`treatmentToolInteractio
 if (report.greywaterToolInteractions !== 5) issues.push(`greywaterToolInteractions=${report.greywaterToolInteractions}`);
 if (report.vehicleWashToolInteractions !== 5) issues.push(`vehicleWashToolInteractions=${report.vehicleWashToolInteractions}`);
 if (report.vehicleWashInvalidStateChecks !== 5) issues.push(`vehicleWashInvalidStateChecks=${report.vehicleWashInvalidStateChecks}`);
+if (report.analyticsBlocking !== "passed") issues.push(`analyticsBlocking=${report.analyticsBlocking}`);
+if (report.analyticsRequestsIntercepted !== 415) issues.push(`analyticsRequestsIntercepted=${report.analyticsRequestsIntercepted}`);
+if (report.analyticsRequestsCompleted !== 0) issues.push(`analyticsRequestsCompleted=${report.analyticsRequestsCompleted}`);
+if (report.analyticsInteractionRequestsIntercepted < 42) issues.push(`analyticsInteractionRequestsIntercepted=${report.analyticsInteractionRequestsIntercepted}`);
+if (report.analyticsInteractionRequestsCompleted !== 0) issues.push(`analyticsInteractionRequestsCompleted=${report.analyticsInteractionRequestsCompleted}`);
+if (report.analyticsObservationBaseline !== "2026-08-13") issues.push(`analyticsObservationBaseline=${report.analyticsObservationBaseline}`);
 if (report.toolFinderChecks < 20) issues.push(`toolFinderChecks=${report.toolFinderChecks}`);
 if (report.toolFinderResponsiveToolbar !== "passed") issues.push(`toolFinderResponsiveToolbar=${report.toolFinderResponsiveToolbar}`);
 if (report.workflowArrowGlyphs !== 0) issues.push(`workflowArrowGlyphs=${report.workflowArrowGlyphs}`);
@@ -35,4 +41,4 @@ if (issues.length) {
   console.error(`Browser QA report failed: ${issues.join(", ")}`);
   process.exit(1);
 }
-console.log(`Browser QA report passed: ${report.renderChecks} renders across ${report.widths.join(", ")} px; 42 tool interactions including 5 greywater and 5 vehicle-wash tools; ${report.toolFinderChecks} tool-finder checks; ${report.responsiveTableChecks} responsive-table checks; no workflow arrow glyphs, console, page, asset, 404, overflow or table-clipping failures.`);
+console.log(`Browser QA report passed: ${report.renderChecks} renders across ${report.widths.join(", ")} px; ${report.analyticsRequestsIntercepted} render requests plus ${report.analyticsInteractionRequestsIntercepted} interaction requests intercepted and 0 completed; 42 tool interactions including 5 greywater and 5 vehicle-wash tools; ${report.toolFinderChecks} tool-finder checks; ${report.responsiveTableChecks} responsive-table checks; no workflow arrow glyphs, console, page, asset, 404, overflow or table-clipping failures.`);

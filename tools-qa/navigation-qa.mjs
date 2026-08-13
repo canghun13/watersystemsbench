@@ -1,6 +1,7 @@
 import { readFile, readdir, stat } from "node:fs/promises";
 import { dirname, join, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
+import { isPublicRouteHtml, isRuntimeFragmentHtml } from "./public-boundary.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const errors = [];
@@ -21,7 +22,10 @@ async function exists(path) {
 }
 
 const files = await walk(root);
-const htmlFiles = files.filter((path) => path.endsWith(".html"));
+const publicHtml = files.filter(isPublicRouteHtml);
+const runtimeFragments = files.filter(isRuntimeFragmentHtml);
+const htmlFiles = [...publicHtml, ...runtimeFragments];
+if (publicHtml.length !== 83) errors.push(`Expected 83 public HTML pages; found ${publicHtml.length}.`);
 for (const file of htmlFiles) {
   const html = await readFile(file, "utf8");
   for (const match of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
@@ -47,4 +51,4 @@ if (errors.length) {
   console.error(`Navigation QA failed with ${errors.length} issue(s):\n- ${errors.join("\n- ")}`);
   process.exit(1);
 }
-console.log(`Navigation QA passed: ${htmlFiles.length} HTML documents, local links and assets resolved.`);
+console.log(`Navigation QA passed: ${publicHtml.length} public HTML pages and ${runtimeFragments.length} runtime fragments; local links and assets resolved without treating development docs as public routes.`);

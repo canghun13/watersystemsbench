@@ -49,6 +49,10 @@ npm run qa:browser
 
 `npm run generate` refreshes committed HTML and machine-readable site files. `npm run qa:browser` validates the latest recorded real-browser run in `tools-qa/browser-results.json`; update that report only after a new complete browser run.
 
+The local QA server replaces requests to the six approved analytics hosts with a local no-op response and records intercepted/completed counts. This keeps automated QA out of GA4 while the committed production pages retain `G-7FB08YPX7C` unchanged.
+
+GitHub Pages uses `_config.yml` as the production publication boundary. Repository documentation, planning files, QA tooling and package metadata remain available in Git but are excluded from the deployed artifact; the 83 public routes and their runtime assets remain published.
+
 ## Repository workflow
 
 Before changing the site, confirm the checkout, `origin`, active branch, working-tree state and latest commit, then read [handover.md](handover.md). Preserve user-managed content and unrelated changes.

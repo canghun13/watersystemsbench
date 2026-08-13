@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-11",
+  "date": "2026-08-13",
   "pages": 83,
   "widths": [390, 768, 1024, 1280, 1440],
   "renderChecks": 415,
@@ -9,7 +9,21 @@
   "greywaterToolInteractions": 5,
   "vehicleWashToolInteractions": 5,
   "vehicleWashInvalidStateChecks": 5,
-  "toolInteractionBaselineDate": "2026-08-11",
+  "toolInteractionBaselineDate": "2026-08-13",
+  "analyticsBlocking": "passed",
+  "analyticsHosts": [
+    "www.googletagmanager.com",
+    "googletagmanager.com",
+    "www.google-analytics.com",
+    "google-analytics.com",
+    "analytics.google.com",
+    "stats.g.doubleclick.net"
+  ],
+  "analyticsRequestsIntercepted": 415,
+  "analyticsRequestsCompleted": 0,
+  "analyticsInteractionRequestsIntercepted": 56,
+  "analyticsInteractionRequestsCompleted": 0,
+  "analyticsObservationBaseline": "2026-08-13",
   "toolFinderChecks": 25,
   "toolFinderSearch": "passed",
   "toolFinderSystem": "passed",
@@ -42,6 +56,9 @@
   "brokenImages": 0,
   "systemsMenu": "passed",
   "firstFlushModes": "passed",
-  "issuesFound": 0,
-  "issuesFixed": []
+  "issuesFound": 2,
+  "issuesFixed": [
+    "Added an explicit GitHub Pages production boundary that excludes repository documentation and development-only files while retaining all 83 public routes.",
+    "Added a QA-only analytics guard that intercepts the six approved analytics hosts while leaving the production GA4 tag unchanged."
+  ]
 }

@@ -2,6 +2,7 @@ import { readFile, readdir, stat } from "node:fs/promises";
 import { dirname, extname, join, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
+import { isPublicRouteHtml } from "./public-boundary.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const expectedDomain = "https://watersystemsbench.com";
@@ -21,7 +22,7 @@ async function walk(dir) {
 }
 
 const allFiles = await walk(root);
-const publicHtml = allFiles.filter((path) => path.endsWith(`${sep}index.html`) || path === join(root, "index.html"));
+const publicHtml = allFiles.filter(isPublicRouteHtml);
 if (publicHtml.length !== 83) errors.push(`Expected 83 public HTML files; found ${publicHtml.length}.`);
 const categoryCounts = {
   core: publicHtml.filter((file) => !relative(root, file).includes(sep)).length + publicHtml.filter((file) => ["about", "contact", "privacy", "tools", "guides", "reference"].includes(relative(root, dirname(file)))).length,
@@ -82,6 +83,7 @@ for (const file of publicHtml) {
   if (duplicates.length) errors.push(`${route}: duplicate IDs ${[...new Set(duplicates)].join(", ")}.`);
   if (/(?:href|src)="(?:|#)"/i.test(html)) errors.push(`${route}: empty or hash-only link found.`);
   if (/coming soon/i.test(html)) errors.push(`${route}: Coming Soon content found on a public page.`);
+  if (/(?:href|src)=["']\/docs(?:\/|["'])/i.test(html)) errors.push(`${route}: development-only /docs/ link found.`);
   pageUrls.add(expectedCanonical);
 }
 
@@ -98,6 +100,7 @@ if (!llms.includes("https://github.com/canghun13/watersystemsbench") || !llms.in
 if (!llms.includes("/systems/water-treatment-quality/") || !llms.includes("Chemical dose and CT tools use user-supplied targets")) errors.push("llms.txt lacks treatment workflow or safety boundary.");
 if (!llms.includes("/systems/greywater-reuse/") || !llms.includes("Greywater tools never approve a source")) errors.push("llms.txt lacks greywater workflow or safety boundary.");
 if (!llms.includes("/systems/vehicle-wash-water-reclaim/") || !llms.includes("Vehicle-wash tools never select treatment")) errors.push("llms.txt lacks vehicle-wash workflow or safety boundary.");
+if (/watersystemsbench\.com\/docs\//i.test(llms)) errors.push("llms.txt must not expose development-only /docs/ URLs.");
 
 const home = await readFile(join(root, "index.html"), "utf8");
 const userManagedBadgeBlock = `<div class="page-shell" style="padding:30px 0;text-align:center;">

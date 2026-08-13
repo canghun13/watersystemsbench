@@ -508,3 +508,40 @@ This section is the authoritative implementation and QA record for the latest st
 - Live 390px browser verification passed all five new tool calculations, Vehicle Wash Finder filtering (5 of 42), the hub and the stream map. The stream map retained a 760px table inside a 333px labelled wrapper; document overflow and console errors were zero.
 - The production homepage retained exactly one instance of each protected KittyLaunch, SellWithBoost, Twelve Tools, Findly and BoostDomainRating badge and had zero horizontal overflow.
 - The final documentation commit is the commit containing this completed deployment record; it must match `origin/main` in the final delivery.
+
+## Production documentation boundary and QA analytics isolation — 2026-08-13
+
+This section is the authoritative implementation, QA and release record for preventing repository-only documentation from being published and preventing automated browser QA from contaminating GA4.
+
+### Starting evidence and root cause
+
+- Starting state: clean `main` at `129628268982be886f086259aefdfc135f1912e5`, equal to fetched `origin/main` and the remote `main` ref.
+- The repository still contains 83 public pages: 7 core pages, 6 system hubs, 42 tools, 18 guides and 10 references. The sitemap also contained exactly 83 public URLs and no `/docs/` URL.
+- User-provided Search Console evidence showed repository planning pages receiving search impressions, including the page inventory with up to 39 impressions in the reported period. Treat those figures as externally supplied evidence rather than repository-generated telemetry.
+- Before the fix, `/docs/page-inventory.html`, `/docs/information-architecture.html` and `/docs/project-plan.html` each returned HTTP 200 from production and exposed internal planning content.
+- Root cause: GitHub Pages built directly from `main` with Jekyll defaults and no explicit publication boundary. Markdown under the tracked `docs/` directory was therefore converted and published even though those routes were absent from the sitemap and public navigation. A `robots.txt` rule alone would not remove the content or change its HTTP status.
+- Previous automated browser QA loaded the production GA4 script on every local page render. Existing GA data may therefore include QA traffic and must not be treated as a clean historical baseline.
+
+### Production and QA boundaries
+
+- `_config.yml` now excludes `docs`, `tools-qa`, repository metadata, package metadata, `README.md` and `handover.md` from the GitHub Pages artifact. The tracked documentation and full Git history remain intact.
+- The publication-boundary QA verifies the explicit Jekyll excludes, exactly 83 allowlisted public HTML routes, no public link to `/docs/`, no docs entry in `sitemap.xml` or `llms.txt`, and no repository-only file in the simulated production artifact.
+- The production pages retain the exact GA4 property `G-7FB08YPX7C`. No analytics tag, site content, visual design, tool, formula, system cluster or badge block was removed or changed.
+- The local QA server rewrites only analytics script requests whose hostname exactly matches one of six approved hosts: `www.googletagmanager.com`, `googletagmanager.com`, `www.google-analytics.com`, `google-analytics.com`, `analytics.google.com` or `stats.g.doubleclick.net`.
+- Analytics requests are replaced by a local no-op response and counted. Ordinary Google, documentation and unrelated network hosts are not blocked. A shared standard-Playwright route helper uses the same exact-host classifier for future runners.
+- The clean GA observation baseline starts on `2026-08-13` after this boundary is deployed. Pre-baseline analytics remain potentially contaminated by automated QA.
+
+### Local verification
+
+- Generation retained exactly 83 public pages. Publication-boundary, analytics-isolation, static and navigation QA passed; navigation now checks 83 public route documents plus the two runtime HTML partials rather than treating repository docs as public pages.
+- Calculation QA passed unchanged, including all 65 vehicle-wash numeric, conservation, unit-equivalence, boundary and invalid-state checks.
+- Actual in-app browser regression passed 83 pages at 390, 768, 1024, 1280 and 1440px: 415 renders with zero navigation, missing-H1, overflow, broken-image, workflow-arrow or responsive-table failures.
+- During the 415-render matrix, 415 analytics loader requests were intercepted and zero completed. During interaction QA, 56 additional analytics loader requests were intercepted and zero completed.
+- All 42 tool calculations passed. The five vehicle-wash tools passed invalid-input blocking and stale-result removal; shared SI/US conversion, reset, copy feedback and print action passed.
+- Tool Finder passed `reclaim` search 5, Vehicle Wash system 5, Simulator type 2, Vehicle Wash + Simulator 1, explicit zero-result state 0 and reset 42. At 390px all four controls were 44px high with no horizontal overflow. Mobile navigation opened and exposed all public system links.
+- The three responsive table surfaces passed at all five widths. At 390px the greywater tables remained 760px and 700px inside 333px labelled scroll regions; the vehicle-wash stream map remained 760px inside a 333px labelled scroll region.
+- The homepage retained visible KittyLaunch, SellWithBoost, Twelve Tools, Findly and BoostDomainRating badges. Browser console errors, page errors, asset failures, internal 404s, document overflows and table-clipping failures were zero.
+
+### Deployment record
+
+- Implementation commit, GitHub Pages run and post-deployment production verification are recorded below after the release completes.
