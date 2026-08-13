@@ -544,4 +544,11 @@ This section is the authoritative implementation, QA and release record for prev
 
 ### Deployment record
 
-- Implementation commit, GitHub Pages run and post-deployment production verification are recorded below after the release completes.
+- Implementation commit: `e54a765292b5588262b235c02cea65117c343671` (`Block production docs and isolate QA analytics`). It was pushed to `main` and matched the remote `main` ref.
+- GitHub Pages deployment succeeded for that exact SHA in `pages build and deployment` run `https://github.com/canghun13/watersystemsbench/actions/runs/31676098842`; the run completed successfully at `2026-08-13T07:02:39Z`.
+- Production verification used cache-bypassing HTTP source requests without executing client JavaScript, so the verification itself did not send GA events.
+- `/docs/page-inventory.html`, `/docs/information-architecture.html` and `/docs/project-plan.html` each returned HTTP 404 both with and without a cache-busting query. No internal planning marker was present in any returned body.
+- The homepage, `/tools/` and `/systems/vehicle-wash-water-reclaim/` returned HTTP 200 and retained exact GA4 `G-7FB08YPX7C`. The Tools page retained 42 classified cards and no `/docs/` link.
+- Production `sitemap.xml` returned HTTP 200 with exactly 83 URLs and zero `/docs/` URLs.
+- The homepage retained exactly one link for each protected KittyLaunch, SellWithBoost, Twelve Tools, Findly and BoostDomainRating badge destination.
+- The final documentation commit is the commit containing this completed release record; it must match `origin/main` after the follow-up deployment succeeds.
