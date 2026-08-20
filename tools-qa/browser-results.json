@@ -60,5 +60,14 @@
   "issuesFixed": [
     "Added an explicit GitHub Pages production boundary that excludes repository documentation and development-only files while retaining all 83 public routes.",
     "Added a QA-only analytics guard that intercepts the six approved analytics hosts while leaving the production GA4 tag unchanged."
-  ]
+  ],
+  "targetedUpgradeDate": "2026-08-20",
+  "targetedUpgradePage": "/tools/available-water-flow-test-calculator/",
+  "targetedUpgradeWidths": [390, 768, 1024, 1280, 1440],
+  "targetedUpgradeRenderChecks": 5,
+  "targetedUpgradeInteractionScenarios": 8,
+  "targetedUpgradeResult": "passed",
+  "targetedUpgradeAnalyticsRequestsIntercepted": 11,
+  "targetedUpgradeAnalyticsRequestsCompleted": 0,
+  "targetedUpgradeRuntimeFailures": 0
 }

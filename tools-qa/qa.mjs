@@ -146,6 +146,23 @@ if ((toolsHub.match(/data-tool-card(?:\s|>)/g) || []).length !== 42) errors.push
 if ((toolsHub.match(/data-system="(?:pumps|wells|irrigation|treatment|greywater|vehicle-wash)"/g) || []).length !== 42) errors.push("/tools/: every tool card must have one known system filter value.");
 if ((toolsHub.match(/data-type="(?:calculator|planner|checker|comparator|estimator|troubleshooter|analyzer|simulator|selector)"/g) || []).length !== 42) errors.push("/tools/: every tool card must have one known tool-type filter value.");
 
+const availableFlowTest = await readFile(join(root, "tools", "available-water-flow-test-calculator", "index.html"), "utf8");
+for (const marker of [
+  "Run a reliable bucket flow test",
+  "Use a water meter difference",
+  "Interpret the measured flow",
+  "Bucket / container fill test",
+  "Water meter volume difference",
+  "use the same volume for every repeat trial",
+  "less than about 10 seconds",
+  "not an automatic design allowance"
+]) {
+  if (!availableFlowTest.includes(marker)) errors.push(`/tools/available-water-flow-test-calculator/: measurement workflow is missing ${marker}.`);
+}
+if (!availableFlowTest.includes('<link rel="canonical" href="https://watersystemsbench.com/tools/available-water-flow-test-calculator/">') || !availableFlowTest.includes("<h1>Available Water Flow Test Calculator</h1>")) {
+  errors.push("/tools/available-water-flow-test-calculator/: canonical URL and established H1 must remain unchanged.");
+}
+
 const treatmentToolRoutes = [
   "/tools/water-softener-sizing-calculator/",
   "/tools/softener-salt-regeneration-planner/",

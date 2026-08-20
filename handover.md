@@ -604,3 +604,70 @@ Final decision: **NO-GO — no genuinely new workflow cluster clears the expansi
 - No full calculation or browser regression was run because production artifacts did not change. Documentation consistency, production-diff boundary, sitemap count and Git synchronization are the required checks for this NO-GO cycle.
 - Next observation point: reopen Commercial Ice only if measured search/user evidence reveals a missing repeat decision beyond current demand/bin calculators and DOE/EPA audit methods; reopen Maple only if four independent operational decisions emerge without splitting one mass balance or duplicating Cornell.
 - The final documentation commit is the commit containing this section and the discovery document; verify it against `origin/main` in final delivery.
+
+## Search-signal existing-page upgrade — 2026-08-20
+
+This section is the authoritative implementation and local-QA record for the search-led maintenance task. No new workflow cluster or public URL was created.
+
+### Start state and data boundary
+
+- Repository: `https://github.com/canghun13/watersystemsbench`
+- Starting state: clean `main` at `413fb8ff57af0b5579c092d204c053f4c9b9f23c`, equal to fetched `origin/main` and the remote main ref after a safe fast-forward.
+- Starting inventory: 83 public pages — 7 core pages, 6 system hubs, 42 tools, 18 guides and 10 references; sitemap count 83.
+- The complete current `handover.md`, recent discovery/expansion records, public inventory, generator, QA contracts, sitemap and the two priority pages were reviewed before selection.
+- Search Console was not signed in within the available browser, and no GA4 or Bing reporting connector was available. No click, impression, position, CTR or engagement number was invented. Candidate priority used the user-provided latest search observations plus a fresh SERP review on 2026-08-20.
+- User-provided signal: `/tools/available-water-flow-test-calculator/` had the site's strongest recent impression signal across `water flow rate test`, `bucket flow test`, `water flow test`, `irrigation flow test`, `reticulation flow test` and `water flow rate calculator`. `/guides/well-borehole-tube-well-terminology/` had exact `tube well borehole` variants approaching first-page positions.
+- Protected boundaries retained: production `/docs/` exclusion, QA analytics isolation, production GA4 `G-7FB08YPX7C`, Tool Finder, workflow-arrow removal, Greywater responsive tables, Vehicle Wash, and the complete KittyLaunch, SellWithBoost, Twelve Tools, Findly and BoostDomainRating homepage badge block.
+
+### Candidate comparison
+
+Scores use Search evidence 30 + Ranking opportunity 20 + User-value improvement 20 + Intent gap 15 + Implementation ROI 15.
+
+| Candidate | Existing URL | Search evidence /30 | Ranking opportunity /20 | User value /20 | Intent gap /15 | ROI /15 | Total | Gate result |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| Available Water Flow Test intent and measurement workflow | `/tools/available-water-flow-test-calculator/` | 30 | 16 | 20 | 14 | 15 | **95** | PASS A–G; selected |
+| Well / borehole / tube-well terminology distinctions | `/guides/well-borehole-tube-well-terminology/` | 27 | 19 | 17 | 13 | 14 | **90** | PASS A–G; valuable, but lower immediate task completion than the selected tool |
+| Irrigation flow and dynamic-pressure field guide | `/guides/measure-irrigation-flow-pressure/` | 16 | 10 | 15 | 4 | 10 | **55** | FAIL A/C; no URL-specific signal was available and its eight-step method already answers the practical sequence |
+| Sprinkler Zone Capacity Planner alignment | `/tools/sprinkler-zone-capacity-planner/` | 14 | 10 | 17 | 4 | 9 | **54** | FAIL A/C; related external intent exists, but no page-specific signal or material current-page deficiency was demonstrated |
+
+The terminology guide remains a strong observation candidate because live results were mainly government FAQs, broad technology explanations, encyclopedic definitions and technical PDFs. A direct construction/usage comparison could help, but the selected tool had the stronger site signal and a more immediate measurement-to-decision gap.
+
+For flow-test queries, the current SERP included dedicated bucket-test calculators, irrigation retailers, video instructions and field questions. The strongest competitor combined a container picker, stopwatch, step sequence, repeat advice, flow/pressure distinction and zone next step in one interaction. Water Systems Bench already had the more transparent raw-flow calculation and repeat-test spread, but the page exposed only generic field labels and generic result guidance. It did not tell the user which test point represents the project, how bucket and meter modes differ, why every repeat must use the same volume/condition, why very short fills magnify timing error, or how the raw number differs from a design allowance.
+
+### Decision and implementation
+
+Final decision: **GO — upgrade the existing Available Water Flow Test Calculator.** All mandatory gates A–G passed. The URL, title, H1, canonical, calculation formula and unit conversions remain unchanged.
+
+- The description now matches both bucket/container and meter-test intent without keyword repetition.
+- Measurement-method choices now say `Bucket / container fill test` and `Water meter volume difference`.
+- Inline help explains container volume versus meter difference, one common volume for repeat trials and comparable test conditions.
+- The article now provides a four-step bucket procedure, meter start/end procedure, actual-connection-point guidance, faucet/hose/takeoff limitations, short-fill timing guidance, repeat-spread interpretation, dynamic-pressure separation and the explicit raw-flow → deliberate reserve → zone-planning handoff.
+- The worked example now carries three comparable times instead of ending at one arithmetic result.
+- The related workflow now leads first to the measurement guide, then the zone planner, Irrigation hub and pressure troubleshooter.
+- Formula changes: none. `Flow = volume / time`, SI/US conversion and repeat-spread calculation are unchanged.
+- New public pages: 0. Public count remains 83. Sitemap count remains 83; only the selected URL's legitimate `lastmod` changed to `2026-08-20`.
+
+Files changed for the implementation and evidence contract:
+
+- `tools-qa/generate-site.mjs`
+- `tools/available-water-flow-test-calculator/index.html`
+- `sitemap.xml`
+- `tools-qa/qa.mjs`
+- `tools-qa/browser-results.json`
+- `tools-qa/browser-qa.mjs`
+- `handover.md`
+
+### Local verification
+
+- Calculation regression passed unchanged: all pump/pressure/pipe, well/storage/rainwater, irrigation, treatment, greywater and vehicle-wash suites, including 49 irrigation numeric/validation checks and 6 irrigation troubleshooting scenarios.
+- Static QA passed for 83 pages, including the selected page's unchanged H1/canonical and eight new measurement-workflow markers. Navigation QA passed 83 public pages plus 2 runtime fragments.
+- Publish-boundary QA passed with 83 allowlisted public routes and repository `docs/`, `tools-qa` and planning files excluded. Sitemap contains 83 URLs and zero `/docs/` URLs.
+- Analytics QA passed. Production source retains `G-7FB08YPX7C`; targeted local browser QA intercepted 11 analytics loader requests and completed 0.
+- The pre-existing full browser baseline remains 415 renders (83 pages × 390, 768, 1024, 1280 and 1440px), 42 tool interactions and zero recorded console, page, asset, 404, overflow or table-clipping failures.
+- New targeted real-browser QA passed the selected page at 390, 768, 1024, 1280 and 1440px. Each width had zero document, H1, header, result-panel or primary-reading clipping/overflow. Form, result, long help text, article, related links, sidebar, footer and responsive navigation were visually inspected.
+- Eight targeted interaction scenarios passed: normal three-trial SI result (`30.05 L/min`), equivalent US result (`7.94 GPM`), zero-time validation, valid → invalid stale-result clearing, invalid → valid recovery, reset, copy and print. The mobile menu opened; controls remained labelled; broken images and browser warnings/errors were zero.
+- Related local pages returned HTTP 200: homepage, Tools hub, Irrigation hub, measurement guide and Sprinkler Zone Capacity Planner.
+
+### Deployment checkpoint
+
+The implementation commit is the commit containing this local-QA record. After it reaches `main`, verify the Pages deployment and the live selected page at all required widths, plus the related hub and homepage/protected UI. Record the exact implementation SHA, live results, final documentation SHA, `origin/main` equality and clean worktree in the follow-up release entry.

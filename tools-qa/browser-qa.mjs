@@ -36,9 +36,18 @@ if (report.responsiveTableChecks < 15) issues.push(`responsiveTableChecks=${repo
 for (const key of ["mobileMenu", "calculateAnalyze", "reset", "copy", "print", "unitSwitch"]) if (report[key] !== "passed") issues.push(`${key}=${report[key]}`);
 for (const key of ["consoleErrors", "pageErrors", "assetFailures", "internal404s", "horizontalOverflows", "tableClippingFailures"]) if (report[key] !== 0) issues.push(`${key}=${report[key]}`);
 if (report.tableScrollAccess !== "passed") issues.push(`tableScrollAccess=${report.tableScrollAccess}`);
+if (report.targetedUpgradeDate !== "2026-08-20") issues.push(`targetedUpgradeDate=${report.targetedUpgradeDate}`);
+if (report.targetedUpgradePage !== "/tools/available-water-flow-test-calculator/") issues.push(`targetedUpgradePage=${report.targetedUpgradePage}`);
+if (JSON.stringify(report.targetedUpgradeWidths) !== JSON.stringify(expectedWidths)) issues.push(`targetedUpgradeWidths=${JSON.stringify(report.targetedUpgradeWidths)}`);
+if (report.targetedUpgradeRenderChecks !== 5) issues.push(`targetedUpgradeRenderChecks=${report.targetedUpgradeRenderChecks}`);
+if (report.targetedUpgradeInteractionScenarios !== 8) issues.push(`targetedUpgradeInteractionScenarios=${report.targetedUpgradeInteractionScenarios}`);
+if (report.targetedUpgradeResult !== "passed") issues.push(`targetedUpgradeResult=${report.targetedUpgradeResult}`);
+if (report.targetedUpgradeAnalyticsRequestsIntercepted !== 11) issues.push(`targetedUpgradeAnalyticsRequestsIntercepted=${report.targetedUpgradeAnalyticsRequestsIntercepted}`);
+if (report.targetedUpgradeAnalyticsRequestsCompleted !== 0) issues.push(`targetedUpgradeAnalyticsRequestsCompleted=${report.targetedUpgradeAnalyticsRequestsCompleted}`);
+if (report.targetedUpgradeRuntimeFailures !== 0) issues.push(`targetedUpgradeRuntimeFailures=${report.targetedUpgradeRuntimeFailures}`);
 
 if (issues.length) {
   console.error(`Browser QA report failed: ${issues.join(", ")}`);
   process.exit(1);
 }
-console.log(`Browser QA report passed: ${report.renderChecks} renders across ${report.widths.join(", ")} px; ${report.analyticsRequestsIntercepted} render requests plus ${report.analyticsInteractionRequestsIntercepted} interaction requests intercepted and 0 completed; 42 tool interactions including 5 greywater and 5 vehicle-wash tools; ${report.toolFinderChecks} tool-finder checks; ${report.responsiveTableChecks} responsive-table checks; no workflow arrow glyphs, console, page, asset, 404, overflow or table-clipping failures.`);
+console.log(`Browser QA report passed: ${report.renderChecks} baseline renders plus ${report.targetedUpgradeRenderChecks} targeted Available Flow renders across ${report.widths.join(", ")} px; ${report.targetedUpgradeInteractionScenarios} targeted interaction scenarios; ${report.targetedUpgradeAnalyticsRequestsIntercepted} targeted analytics requests intercepted and 0 completed; no targeted runtime or overflow failures.`);
