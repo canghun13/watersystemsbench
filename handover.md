@@ -668,6 +668,14 @@ Files changed for the implementation and evidence contract:
 - Eight targeted interaction scenarios passed: normal three-trial SI result (`30.05 L/min`), equivalent US result (`7.94 GPM`), zero-time validation, valid → invalid stale-result clearing, invalid → valid recovery, reset, copy and print. The mobile menu opened; controls remained labelled; broken images and browser warnings/errors were zero.
 - Related local pages returned HTTP 200: homepage, Tools hub, Irrigation hub, measurement guide and Sprinkler Zone Capacity Planner.
 
-### Deployment checkpoint
+### Release and live verification
 
-The implementation commit is the commit containing this local-QA record. After it reaches `main`, verify the Pages deployment and the live selected page at all required widths, plus the related hub and homepage/protected UI. Record the exact implementation SHA, live results, final documentation SHA, `origin/main` equality and clean worktree in the follow-up release entry.
+- Implementation commit: `4e60b13d49bf83626d6e8d29f5f4b1da0d41a0a0` (`Improve available water flow test guidance`). It was pushed to `main`; `git ls-remote origin refs/heads/main`, local `HEAD` and fetched `origin/main` all matched that SHA before this follow-up documentation commit.
+- GitHub Pages run `32369496319` deployed the exact implementation SHA successfully on 2026-08-20: `https://github.com/canghun13/watersystemsbench/actions/runs/32369496319`.
+- A cache-bypassing live HTTP check returned 200 for the selected tool, Tools hub, Irrigation hub, measurement guide, homepage and sitemap. The selected live HTML contained `Run a reliable bucket flow test`, the established canonical, production GA4 and the upgraded content.
+- Live `sitemap.xml` contained 83 URLs, zero public `/docs/` routes and the selected route's `2026-08-20` last-modified date. `/docs/page-inventory.html`, `/docs/information-architecture.html` and `/docs/project-plan.html` each returned 404.
+- The live homepage retained the exact KittyLaunch, SellWithBoost, Twelve Tools, Findly and BoostDomainRating badge targets/assets.
+- Mobile and visual behavior was verified in the real browser against the exact deployed artifacts locally at 390, 768, 1024, 1280 and 1440px; the live-domain verification used non-executing HTTP retrieval so automated production verification did not create GA4 traffic. Combined evidence was exact deployed SHA + successful Pages run + live updated source + five-width browser render of that same source revision.
+- Browser-automation analytics completed requests: 0. Console warnings/errors, page errors, asset failures, internal 404s, overflow and clipping on the targeted browser run: 0.
+- Final public count: 83. Final sitemap count: 83. New URLs: 0.
+- The final documentation commit is the commit containing this release entry. Verify it against `origin/main` and a clean working tree in the final delivery.
