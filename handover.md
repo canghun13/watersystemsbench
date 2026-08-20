@@ -552,3 +552,55 @@ This section is the authoritative implementation, QA and release record for prev
 - Production `sitemap.xml` returned HTTP 200 with exactly 83 URLs and zero `/docs/` URLs.
 - The homepage retained exactly one link for each protected KittyLaunch, SellWithBoost, Twelve Tools, Findly and BoostDomainRating badge destination.
 - The final documentation commit is the commit containing this completed release record; it must match `origin/main` after the follow-up deployment succeeds.
+
+## New Workflow Cluster Discovery — 2026-08-20
+
+This section is the authoritative handover for the strict post–Vehicle Wash expansion search. Full candidate contracts, scores, long-tail groups, competitor URLs, Tool-independence tables and Gate A–I evidence are in `docs/workflow-cluster-discovery-2026-08-20.md`.
+
+### Start state and exclusion boundary
+
+- Repository: https://github.com/canghun13/watersystemsbench
+- Starting state: clean `main` at `6cf4e45368ddb0ddbe0101149cd0bc99bb6353c2`, equal to fetched `origin/main` and the remote `main` ref.
+- Starting inventory: 83 public pages — 7 core pages, 6 system hubs, 42 tools, 18 guides and 10 references; sitemap count 83.
+- All previous discovery/review documents were read in full before research. The exclusion list contained Greywater and Vehicle Wash plus 21 prior NO-GO families: water loss/leakage, commercial building distribution, stormwater/site drainage, septic, cooling tower, construction dewatering, livestock/stockwater, wastewater pump stations, pond/reservoir, hydronics, RV water, domestic hot-water recirculation, aquarium, pool/spa, hydroponics, steam boiler/condensate, water heaters, pressure washers, brewing water, mobile food units and winterization/drain-down.
+- No excluded family was renamed, narrowed or counted as new. No RECONSIDERATION was opened because current external evidence did not overturn a prior conclusion.
+
+### New candidates and external evidence
+
+Thirteen genuinely new families were researched through calculator, sizing, planner, audit, capacity, water-use, storage, cost, performance, maintenance and troubleshooting query groups. No search-volume, CPC, keyword-difficulty, GSC or GA4 numbers were available or invented.
+
+| Candidate | Monetization /40 | Demand /35 | Gap /25 | Total | Gate result |
+| --- | ---: | ---: | ---: | ---: | --- |
+| Commercial ice-machine water and capacity planning | 36 | 30 | 10 | 76 | FAIL G |
+| Dust-suppression water logistics | 36 | 28 | 8 | 72 | FAIL G, H, I |
+| Maple sap concentration and sugarhouse water balance | 30 | 23 | 17 | 70 | FAIL E, G |
+| Resort/backyard snowmaking water supply | 34 | 25 | 10 | 69 | FAIL E, H, I |
+| Commercial laundry process-water efficiency | 35 | 27 | 6 | 68 | FAIL F, G |
+| Pure-water window/solar-panel cleaning | 35 | 29 | 4 | 68 | FAIL A, F, G |
+| Concrete batching and wash-water control | 37 | 26 | 4 | 67 | FAIL G, H, I |
+| Winery process-water and seasonal wastewater | 34 | 24 | 8 | 66 | FAIL H, I |
+| Abrasive-waterjet utilities and consumables | 37 | 27 | 2 | 66 | FAIL G, H |
+| Laboratory purified-water demand/distribution | 35 | 26 | 4 | 65 | FAIL F, G, I |
+| Commercial warewashing water/booster planning | 36 | 28 | 1 | 65 | FAIL G, H, I |
+| Hydro-vac water and spoil logistics | 35 | 22 | 6 | 63 | FAIL A, H, I |
+| Pottery/ceramics studio wash-water capture | 24 | 18 | 18 | 60 | FAIL C, E, H, I |
+
+The strongest SERP evidence included DOE, ENERGY STAR and EPA commercial ice-machine methods; interactive ice demand/bin competitors; connected dust-control water/truck/ROI calculators; WSU, USU and the North American Maple Manual; Cornell's authoritative Maple calculator suite; free snowmaking nozzle/pressure calculators; EPA commercial-laundry methods; current RO/DI window-cleaning selectors; FHWA concrete moisture worksheets; winery water/wastewater production calculators; OEM waterjet calculators; lab DI planners; public warewashing hot-water worksheets; and a current hydro-vac slurry calculator.
+
+### Top-three deep validation and decision
+
+- **Commercial ice machines (76):** real workflow and seven long-tail groups; four plausible tools exist for measured demand, production/bin simulation, water-use audit and operating-cost comparison. Mandatory Gate G failed because current free calculators already connect demand, operating-condition correction and bin sizing, while DOE/EPA publish the remaining audit/replacement equations. WSB would improve presentation, not fill a missing decision.
+- **Dust suppression (72):** real area → application → tanker → refill → cost workflow with seven intent groups. Integrated free vendor tools already cover water, trucks, labour and ROI; safe application rates/additives remain site- and permit-specific. Gates G, H and I failed.
+- **Maple sap processing (70):** real Brix → RO → evaporation → storage workflow with eight intent groups. Yield and RO concentration merge into one mass balance, evaporator water-off is too thin, and only three robust tools remain. Cornell already supplies authoritative density/pricing/business calculators. Gates E and G failed.
+- Independent-site reasons—vendor neutrality, no login, SI/US support, transparent interpretation and connected next actions—were explicitly tested. None overcame the blocking competition, Tool-depth, maintenance or safety evidence.
+
+Final decision: **NO-GO — no genuinely new workflow cluster clears the expansion bar.**
+
+### Change and verification boundary
+
+- Allowed documentation changes only: `docs/workflow-cluster-discovery-2026-08-20.md` and this handover section.
+- Production HTML/CSS/JavaScript/generator changes: 0. New public pages: 0. Sitemap change: 0; it remains 83 URLs.
+- Existing GA4, QA analytics blocking, production `/docs/` exclusion, Tool Finder, workflow arrow removal, Greywater tables, Vehicle Wash cluster and all five protected homepage badges are untouched.
+- No full calculation or browser regression was run because production artifacts did not change. Documentation consistency, production-diff boundary, sitemap count and Git synchronization are the required checks for this NO-GO cycle.
+- Next observation point: reopen Commercial Ice only if measured search/user evidence reveals a missing repeat decision beyond current demand/bin calculators and DOE/EPA audit methods; reopen Maple only if four independent operational decisions emerge without splitting one mass balance or duplicating Cornell.
+- The final documentation commit is the commit containing this section and the discovery document; verify it against `origin/main` in final delivery.
