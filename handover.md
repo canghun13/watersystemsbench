@@ -715,5 +715,11 @@ Files changed for the implementation and evidence contract:
 
 ### Release
 
-- Production implementation commit and GitHub Pages run: pending release step below.
-- Live verification must confirm HTTP 200 and current content for homepage, hub, all five tools, guide, reference and sitemap; 390px behavior and the five protected homepage badges must remain intact.
+- Production implementation commit: `8e921f6b876ba27c855cdd2874ac0fd42ed31e56` (`Build metal finishing rinse water cluster`). It was pushed to `main`; `git ls-remote`, local `HEAD` and fetched `origin/main` matched before this final documentation commit.
+- GitHub Pages run `32727378843` deployed that exact SHA successfully: `https://github.com/canghun13/watersystemsbench/actions/runs/32727378843`.
+- Cache-bypassing live HTTP checks returned 200 for homepage, Tools hub, new hub, all five new tools, guide, reference, sitemap and the new JavaScript asset. Every HTML check retained GA4 `G-7FB08YPX7C`; sitemap contained exactly 91 URLs; the asset exposed the new countercurrent calculation.
+- Live 390px browser verification passed the new hub, all five tools, guide and reference. Default results were 50 L/load, 1 L/h drag-out, 63.2 L/h ideal countercurrent flow, 45 L/load from the sample log and 10,100 currency/year net savings. Page overflow, broken images and console warnings/errors were 0.
+- The live reference retained an 820px table inside a 333px labelled `.table-scroll` region with `overflow-x:auto`; the last column remained horizontally accessible and document overflow was 0.
+- The live homepage retained all five protected KittyLaunch, SellWithBoost, Twelve Tools, Findly and BoostDomainRating targets/assets.
+- Final public count: 91. Final sitemap count: 91. New public URLs: 8.
+- The final documentation commit is the commit containing this release update; verify it against `origin/main` and a clean working tree in the final delivery.
