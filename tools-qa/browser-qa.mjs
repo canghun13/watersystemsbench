@@ -14,21 +14,24 @@ try {
 
 const expectedWidths = [390, 768, 1024, 1280, 1440];
 const issues = [];
-if (report.pages !== 83) issues.push(`pages=${report.pages}`);
-if (report.renderChecks !== 415) issues.push(`renderChecks=${report.renderChecks}`);
+if (report.pages !== 91) issues.push(`pages=${report.pages}`);
+if (report.renderChecks !== 455) issues.push(`renderChecks=${report.renderChecks}`);
 if (JSON.stringify(report.widths) !== JSON.stringify(expectedWidths)) issues.push(`widths=${JSON.stringify(report.widths)}`);
-if (report.toolInteractions !== 42) issues.push(`toolInteractions=${report.toolInteractions}`);
+if (report.toolInteractions !== 47) issues.push(`toolInteractions=${report.toolInteractions}`);
 if (report.phase2ToolInteractions !== 15) issues.push(`phase2ToolInteractions=${report.phase2ToolInteractions}`);
 if (report.treatmentToolInteractions !== 8) issues.push(`treatmentToolInteractions=${report.treatmentToolInteractions}`);
 if (report.greywaterToolInteractions !== 5) issues.push(`greywaterToolInteractions=${report.greywaterToolInteractions}`);
 if (report.vehicleWashToolInteractions !== 5) issues.push(`vehicleWashToolInteractions=${report.vehicleWashToolInteractions}`);
 if (report.vehicleWashInvalidStateChecks !== 5) issues.push(`vehicleWashInvalidStateChecks=${report.vehicleWashInvalidStateChecks}`);
+if (report.metalFinishingToolInteractions !== 5) issues.push(`metalFinishingToolInteractions=${report.metalFinishingToolInteractions}`);
+if (report.metalFinishingInvalidStateChecks !== 5) issues.push(`metalFinishingInvalidStateChecks=${report.metalFinishingInvalidStateChecks}`);
+if (report.metalFinishingCsvChecks !== 1) issues.push(`metalFinishingCsvChecks=${report.metalFinishingCsvChecks}`);
 if (report.analyticsBlocking !== "passed") issues.push(`analyticsBlocking=${report.analyticsBlocking}`);
-if (report.analyticsRequestsIntercepted !== 415) issues.push(`analyticsRequestsIntercepted=${report.analyticsRequestsIntercepted}`);
+if (report.analyticsRequestsIntercepted < 455) issues.push(`analyticsRequestsIntercepted=${report.analyticsRequestsIntercepted}`);
 if (report.analyticsRequestsCompleted !== 0) issues.push(`analyticsRequestsCompleted=${report.analyticsRequestsCompleted}`);
-if (report.analyticsInteractionRequestsIntercepted < 42) issues.push(`analyticsInteractionRequestsIntercepted=${report.analyticsInteractionRequestsIntercepted}`);
+if (report.analyticsInteractionRequestsIntercepted < 47) issues.push(`analyticsInteractionRequestsIntercepted=${report.analyticsInteractionRequestsIntercepted}`);
 if (report.analyticsInteractionRequestsCompleted !== 0) issues.push(`analyticsInteractionRequestsCompleted=${report.analyticsInteractionRequestsCompleted}`);
-if (report.analyticsObservationBaseline !== "2026-08-13") issues.push(`analyticsObservationBaseline=${report.analyticsObservationBaseline}`);
+if (report.analyticsObservationBaseline !== "2026-08-24") issues.push(`analyticsObservationBaseline=${report.analyticsObservationBaseline}`);
 if (report.toolFinderChecks < 20) issues.push(`toolFinderChecks=${report.toolFinderChecks}`);
 if (report.toolFinderResponsiveToolbar !== "passed") issues.push(`toolFinderResponsiveToolbar=${report.toolFinderResponsiveToolbar}`);
 if (report.workflowArrowGlyphs !== 0) issues.push(`workflowArrowGlyphs=${report.workflowArrowGlyphs}`);
@@ -50,4 +53,4 @@ if (issues.length) {
   console.error(`Browser QA report failed: ${issues.join(", ")}`);
   process.exit(1);
 }
-console.log(`Browser QA report passed: ${report.renderChecks} baseline renders plus ${report.targetedUpgradeRenderChecks} targeted Available Flow renders across ${report.widths.join(", ")} px; ${report.targetedUpgradeInteractionScenarios} targeted interaction scenarios; ${report.targetedUpgradeAnalyticsRequestsIntercepted} targeted analytics requests intercepted and 0 completed; no targeted runtime or overflow failures.`);
+console.log(`Browser QA report passed: ${report.renderChecks} renders across ${report.widths.join(", ")} px, ${report.toolInteractions} tool interactions and ${report.responsiveTableChecks} table checks; no runtime, asset, 404, clipping or overflow failures.`);

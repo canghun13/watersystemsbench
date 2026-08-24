@@ -10,6 +10,7 @@ The site follows a water-system workflow instead of separating resources only by
 - Water Treatment & Water Quality
 - Greywater Reuse Planning
 - Vehicle Wash Water Reclaim Planning
+- Metal Finishing Rinse Water Optimization
 
 About, Contact and Privacy remain available through project navigation. No inactive future system is linked.
 
@@ -87,6 +88,8 @@ Matching meter and vehicle interval
 ```
 
 The vehicle-wash hub is `/systems/vehicle-wash-water-reclaim/`. Its tools are non-potable process-water quantity and economics screens; they do not select treatment, establish reclaimed-water quality or authorize reject, backwash, sludge or wastewater discharge.
+
+The metal-finishing hub is `/systems/metal-finishing-rinse-water/`. Its workflow is meter baseline → drag-out measurement → countercurrent stage comparison → conductivity/flow-log verification → economics. It is limited to quantity and operational comparison and never sets chemistry, rinse acceptance, exposure or discharge requirements.
 
 The treatment hub is `/systems/water-treatment-quality/`. The obsolete planning-only `/tools/water-treatment-quality/` route must not be introduced.
 

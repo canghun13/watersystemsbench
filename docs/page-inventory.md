@@ -2,16 +2,16 @@
 
 ## Status
 
-All 65 pages in the initial plan remain implemented. Greywater Reuse Planning and Vehicle Wash Water Reclaim Planning each add nine validated public pages.
+All 65 pages in the initial plan remain implemented. Greywater Reuse Planning and Vehicle Wash Water Reclaim Planning each add nine validated pages; Metal Finishing Rinse Water Optimization adds eight.
 
 | Category | Implemented | Remaining |
 | --- | ---: | ---: |
 | Core pages | 7 | 0 |
-| System hubs | 6 | 0 |
-| Tools | 42 | 0 |
-| Guides | 18 | 0 |
-| References | 10 | 0 |
-| Total public HTML | 83 | 0 |
+| System hubs | 7 | 0 |
+| Tools | 47 | 0 |
+| Guides | 19 | 0 |
+| References | 11 | 0 |
+| Total public HTML | 91 | 0 |
 
 The authoritative Water Treatment & Water Quality hub is `/systems/water-treatment-quality/`. This corrects the earlier planning-only `/tools/water-treatment-quality/` route and aligns the cluster with the other system hubs.
 
@@ -33,6 +33,7 @@ The authoritative Water Treatment & Water Quality hub is `/systems/water-treatme
 - `/systems/water-treatment-quality/`
 - `/systems/greywater-reuse/`
 - `/systems/vehicle-wash-water-reclaim/`
+- `/systems/metal-finishing-rinse-water/`
 
 ## Tools
 
@@ -96,6 +97,14 @@ The authoritative Water Treatment & Water Quality hub is `/systems/water-treatme
 - `/tools/spot-free-rinse-ro-production-planner/`
 - `/tools/vehicle-wash-reclaim-savings-calculator/`
 
+### Metal finishing rinse water optimization
+
+- `/tools/metal-finishing-rinse-water-audit-calculator/`
+- `/tools/plating-drag-out-loss-estimator/`
+- `/tools/countercurrent-rinse-flow-planner/`
+- `/tools/rinse-conductivity-log-analyzer/`
+- `/tools/rinse-water-savings-payback-comparator/`
+
 ## Guides
 
 - `/guides/how-to-size-a-water-pump/`
@@ -116,6 +125,7 @@ The authoritative Water Treatment & Water Quality hub is `/systems/water-treatme
 - `/guides/troubleshoot-greywater-irrigation/`
 - `/guides/meter-vehicle-wash-water-use/`
 - `/guides/plan-vehicle-wash-water-reclaim-retrofit/`
+- `/guides/reduce-metal-finishing-rinse-water/`
 
 ## References
 
@@ -129,5 +139,6 @@ The authoritative Water Treatment & Water Quality hub is `/systems/water-treatme
 - `/reference/water-treatment-comparison-matrix/`
 - `/reference/greywater-source-use-screening/`
 - `/reference/vehicle-wash-water-stream-map/`
+- `/reference/metal-finishing-rinse-control-methods/`
 
 Each public route must remain unique in sitemap, canonical metadata and generated navigation. Future routes require a distinct user task, implemented content and full QA; do not publish empty pages.

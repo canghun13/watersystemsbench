@@ -25,7 +25,7 @@ const files = await walk(root);
 const publicHtml = files.filter(isPublicRouteHtml);
 const runtimeFragments = files.filter(isRuntimeFragmentHtml);
 const htmlFiles = [...publicHtml, ...runtimeFragments];
-if (publicHtml.length !== 83) errors.push(`Expected 83 public HTML pages; found ${publicHtml.length}.`);
+if (publicHtml.length !== 91) errors.push(`Expected 91 public HTML pages; found ${publicHtml.length}.`);
 for (const file of htmlFiles) {
   const html = await readFile(file, "utf8");
   for (const match of html.matchAll(/(?:href|src)="([^"]+)"/g)) {

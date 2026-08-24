@@ -19,6 +19,7 @@ import { computeDrip, computeFlowTest, computePrecipitation, computePumpZone, co
 import { computeChlorineDose, computeContactTime, computeMediaFilter, computeRoProduction, computeRoRecovery, computeSaltRegeneration, computeSoftenerSizing, selectTreatmentTrain } from "../assets/js/tools/treatment-tools.js";
 import { computeGreywaterSupply, computeIrrigationMatch, computeLaundryZone, computeSurgeBasin, computeReuseSavings } from "../assets/js/tools/greywater-tools.js";
 import { computeReclaimBalance, computeReclaimBuffer, computeSpotFreeRo, computeVehicleWashAudit, computeVehicleWashSavings } from "../assets/js/tools/vehicle-wash-tools.js";
+import { computeCountercurrentRinse, computeDragOut, computeRinseAudit, computeRinseLog, computeRinseSavings, parseRinseLog } from "../assets/js/tools/metal-finishing-tools.js";
 import { conversions, headToPressure, pressureToHead } from "../assets/js/unit-conversions.js";
 
 let numericCases = 0;
@@ -31,6 +32,7 @@ let treatmentCases = 0;
 let treatmentSelectorCases = 0;
 let greywaterCases = 0;
 let vehicleWashCases = 0;
+let metalCases = 0;
 const failures = [];
 
 function approx(name, actual, expected, tolerance) {
@@ -78,6 +80,9 @@ function greywaterExact(name, actual, expected) {
   greywaterCases += 1;
   if (actual !== expected) failures.push(`${name}: expected ${expected}, received ${actual}`);
 }
+function metalApprox(name, actual, expected, tolerance = 1e-8) { metalCases += 1; if (!Number.isFinite(actual) || Math.abs(actual - expected) > tolerance) failures.push(`${name}: expected ${expected}, received ${actual}`); }
+function metalExact(name, actual, expected) { metalCases += 1; if (actual !== expected) failures.push(`${name}: expected ${expected}, received ${actual}`); }
+function metalThrows(name, fn) { metalCases += 1; let threw = false; try { fn(); } catch { threw = true; } if (!threw) failures.push(`${name}: expected error`); }
 function greywaterThrows(name, calculation) {
   greywaterCases += 1;
   let threw = false;
@@ -515,8 +520,38 @@ vehicleWashExact("VW-E8 zero capex no payback", computeVehicleWashSavings({ base
 vehicleWashExact("VW-E9 negative savings no payback", computeVehicleWashSavings({ baselineFreshL: 1, proposedFreshL: 2, baselineSewerL: 1, proposedSewerL: 2, vehiclesPerDay: 1, operatingDays: 1, waterTariff: 1, sewerTariff: 1, annualOperatingCost: 0, installedCost: 100 }).simplePaybackYears, null);
 vehicleWashThrows("VW-E10 367 days rejected", () => computeVehicleWashSavings({ baselineFreshL: 1, proposedFreshL: 0, baselineSewerL: 1, proposedSewerL: 0, vehiclesPerDay: 1, operatingDays: 367, waterTariff: 1, sewerTariff: 1, annualOperatingCost: 0, installedCost: 0 }));
 
+const rinseAudit = computeRinseAudit({ startMeterL: 50000, endMeterL: 60000, intervalHours: 8, loads: 200, hoursPerDay: 8, daysPerYear: 250, combinedTariff: 5.5 });
+metalApprox("MF-A1 interval", rinseAudit.intervalL, 10000); metalApprox("MF-A2 per load", rinseAudit.litresPerLoad, 50); metalApprox("MF-A3 hourly", rinseAudit.litresPerHour, 1250); metalApprox("MF-A4 annual", rinseAudit.annualM3, 2500); metalApprox("MF-A5 cost", rinseAudit.annualUtilityCost, 13750);
+metalApprox("MF-A6 US equivalence", computeRinseAudit({ startMeterL: 0, endMeterL: 378.5411784, intervalHours: 1, loads: 10, hoursPerDay: 1, daysPerYear: 1, combinedTariff: 0 }).litresPerLoad, 37.85411784);
+metalThrows("MF-A7 reversed meter", () => computeRinseAudit({ startMeterL: 2, endMeterL: 1, intervalHours: 1, loads: 1, hoursPerDay: 1, daysPerYear: 1, combinedTariff: 0 }));
+metalThrows("MF-A8 zero loads", () => computeRinseAudit({ startMeterL: 0, endMeterL: 1, intervalHours: 1, loads: 0, hoursPerDay: 1, daysPerYear: 1, combinedTariff: 0 }));
+metalThrows("MF-A9 invalid days", () => computeRinseAudit({ startMeterL: 0, endMeterL: 1, intervalHours: 1, loads: 1, hoursPerDay: 1, daysPerYear: 367, combinedTariff: 0 }));
+
+const drag = computeDragOut({ retainedMlPerLoad: 40, loadsPerHour: 25, concentrationGPerL: 100, valuePerKg: 12, shiftHours: 8 });
+metalApprox("MF-D1 flow", drag.dragOutLh, 1); metalApprox("MF-D2 solution shift", drag.solutionPerShiftL, 8); metalApprox("MF-D3 mass hourly", drag.massKgH, .1); metalApprox("MF-D4 mass shift", drag.massPerShiftKg, .8); metalApprox("MF-D5 value", drag.valuePerShift, 9.6);
+metalExact("MF-D6 zero concentration", computeDragOut({ retainedMlPerLoad: 1, loadsPerHour: 1, concentrationGPerL: 0, valuePerKg: 0, shiftHours: 1 }).massKgH, 0);
+metalThrows("MF-D7 negative retention", () => computeDragOut({ retainedMlPerLoad: -1, loadsPerHour: 1, concentrationGPerL: 0, valuePerKg: 0, shiftHours: 1 }));
+metalThrows("MF-D8 long shift", () => computeDragOut({ retainedMlPerLoad: 1, loadsPerHour: 1, concentrationGPerL: 0, valuePerKg: 0, shiftHours: 25 }));
+
+const counter = computeCountercurrentRinse({ dragOutLh: 1, dilutionRatio: 1000, stages: 2 });
+metalApprox("MF-C1 counterflow", counter.requiredFlowLh, 2 * Math.sqrt(1000)); metalApprox("MF-C2 one stage", counter.oneStageFlowLh, 1000); metalApprox("MF-C3 reduction", counter.reductionLh, 1000 - 2 * Math.sqrt(1000));
+metalExact("MF-C4 one-stage zero reduction", computeCountercurrentRinse({ dragOutLh: 1, dilutionRatio: 10, stages: 1 }).reductionPercent, 0);
+metalApprox("MF-C5 high four-stage", computeCountercurrentRinse({ dragOutLh: 100, dilutionRatio: 1000000, stages: 4 }).requiredFlowLh, 400 * Math.pow(1000000, .25));
+metalThrows("MF-C6 ratio boundary", () => computeCountercurrentRinse({ dragOutLh: 1, dilutionRatio: 1, stages: 2 })); metalThrows("MF-C7 fractional stages", () => computeCountercurrentRinse({ dragOutLh: 1, dilutionRatio: 10, stages: 2.5 })); metalThrows("MF-C8 fifth stage", () => computeCountercurrentRinse({ dragOutLh: 1, dilutionRatio: 10, stages: 5 }));
+
+const parsed = parseRinseLog("minutes,flow,conductivity,loads\n60,5,400,10\n30,5,800,0");
+metalExact("MF-L1 parsed rows", parsed.length, 2); const log = computeRinseLog({ rows: parsed, alertConductivity: 600 });
+metalApprox("MF-L2 total water", log.totalWaterL, 450); metalApprox("MF-L3 water per load", log.litresPerLoad, 45); metalApprox("MF-L4 idle water", log.idleWaterL, 150); metalExact("MF-L5 excursions", log.excursions, 1); metalExact("MF-L6 peak", log.peakConductivity, 800);
+metalExact("MF-L7 tab input", parseRinseLog("1\t2\t3\t4").length, 1); metalThrows("MF-L8 empty log", () => parseRinseLog("")); metalThrows("MF-L9 malformed row", () => parseRinseLog("1,2,3")); metalThrows("MF-L10 zero production", () => computeRinseLog({ rows: [{ minutes: 1, flowLpm: 1, conductivity: 1, loads: 0 }], alertConductivity: 1 }));
+
+const economics = computeRinseSavings({ baselineLh: 1000, proposedLh: 100, hoursPerDay: 8, daysPerYear: 250, waterTariff: 2.5, sewerTariff: 3, treatmentCost: 1.5, annualOperatingCost: 2500, installedCost: 30000 });
+metalApprox("MF-E1 water", economics.annualSavedM3, 1800); metalApprox("MF-E2 gross", economics.grossAnnualSavings, 12600); metalApprox("MF-E3 net", economics.netAnnualSavings, 10100); metalApprox("MF-E4 payback", economics.paybackYears, 30000 / 10100);
+metalExact("MF-E5 no capex payback", computeRinseSavings({ baselineLh: 1, proposedLh: 0, hoursPerDay: 1, daysPerYear: 1, waterTariff: 1, sewerTariff: 0, treatmentCost: 0, annualOperatingCost: 0, installedCost: 0 }).paybackYears, null);
+metalExact("MF-E6 negative net", computeRinseSavings({ baselineLh: 1, proposedLh: 0, hoursPerDay: 1, daysPerYear: 1, waterTariff: 0, sewerTariff: 0, treatmentCost: 0, annualOperatingCost: 1, installedCost: 1 }).paybackYears, null);
+metalThrows("MF-E7 proposed above baseline", () => computeRinseSavings({ baselineLh: 1, proposedLh: 2, hoursPerDay: 1, daysPerYear: 1, waterTariff: 0, sewerTariff: 0, treatmentCost: 0, annualOperatingCost: 0, installedCost: 0 })); metalThrows("MF-E8 negative cost", () => computeRinseSavings({ baselineLh: 1, proposedLh: 0, hoursPerDay: 1, daysPerYear: 1, waterTariff: -1, sewerTariff: 0, treatmentCost: 0, annualOperatingCost: 0, installedCost: 0 }));
+
 if (failures.length) {
   console.error(`Calculation verification failed with ${failures.length} issue(s):\n- ${failures.join("\n- ")}`);
   process.exit(1);
 }
-console.log(`Calculation verification passed: ${numericCases} Phase 1 numeric/conversion cases, ${diagnosticCases} troubleshooting scenarios, ${phase2Cases} Phase 2 numeric/decision cases, ${simulatorCases} rainwater simulator scenarios, ${irrigationCases} irrigation numeric/validation checks, ${irrigationDiagnosticCases} irrigation troubleshooting scenarios, ${treatmentCases} treatment numeric/validation checks, ${treatmentSelectorCases} treatment selector scenarios, ${greywaterCases} greywater numeric/validation checks, and ${vehicleWashCases} vehicle-wash numeric/validation checks.`);
+console.log(`Calculation verification passed: ${numericCases} Phase 1 numeric/conversion cases, ${diagnosticCases} troubleshooting scenarios, ${phase2Cases} Phase 2 numeric/decision cases, ${simulatorCases} rainwater simulator scenarios, ${irrigationCases} irrigation numeric/validation checks, ${irrigationDiagnosticCases} irrigation troubleshooting scenarios, ${treatmentCases} treatment numeric/validation checks, ${treatmentSelectorCases} treatment selector scenarios, ${greywaterCases} greywater numeric/validation checks, ${vehicleWashCases} vehicle-wash numeric/validation checks, and ${metalCases} metal-finishing numeric/validation checks.`);

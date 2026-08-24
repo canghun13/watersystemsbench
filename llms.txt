@@ -10,6 +10,7 @@
 - [Water Treatment & Water Quality](https://watersystemsbench.com/systems/water-treatment-quality/)
 - [Greywater Reuse Planning](https://watersystemsbench.com/systems/greywater-reuse/)
 - [Vehicle Wash Water Reclaim Planning](https://watersystemsbench.com/systems/vehicle-wash-water-reclaim/)
+- [Metal Finishing Rinse Water Optimization](https://watersystemsbench.com/systems/metal-finishing-rinse-water/)
 
 ## Tools
 
@@ -55,6 +56,11 @@
 - [Reclaim Buffer Tank Simulator](https://watersystemsbench.com/tools/reclaim-buffer-tank-simulator/)
 - [Spot-Free Rinse RO Production Planner](https://watersystemsbench.com/tools/spot-free-rinse-ro-production-planner/)
 - [Vehicle Wash Reclaim Savings Calculator](https://watersystemsbench.com/tools/vehicle-wash-reclaim-savings-calculator/)
+- [Metal Finishing Rinse Water Audit Calculator](https://watersystemsbench.com/tools/metal-finishing-rinse-water-audit-calculator/)
+- [Plating Drag-Out Loss Estimator](https://watersystemsbench.com/tools/plating-drag-out-loss-estimator/)
+- [Countercurrent Rinse Flow Planner](https://watersystemsbench.com/tools/countercurrent-rinse-flow-planner/)
+- [Rinse Conductivity Log Analyzer](https://watersystemsbench.com/tools/rinse-conductivity-log-analyzer/)
+- [Rinse Water Savings & Payback Comparator](https://watersystemsbench.com/tools/rinse-water-savings-payback-comparator/)
 
 ## Guides
 
@@ -76,6 +82,7 @@
 - [How to Troubleshoot Greywater Irrigation](https://watersystemsbench.com/guides/troubleshoot-greywater-irrigation/)
 - [How to Meter Vehicle Wash Water Use](https://watersystemsbench.com/guides/meter-vehicle-wash-water-use/)
 - [How to Plan a Vehicle Wash Water Reclaim Retrofit](https://watersystemsbench.com/guides/plan-vehicle-wash-water-reclaim-retrofit/)
+- [How to Reduce Metal Finishing Rinse Water](https://watersystemsbench.com/guides/reduce-metal-finishing-rinse-water/)
 
 ## Reference
 
@@ -89,10 +96,11 @@
 - [Water Treatment Technology Comparison Matrix](https://watersystemsbench.com/reference/water-treatment-comparison-matrix/)
 - [Greywater Source & Use Screening Reference](https://watersystemsbench.com/reference/greywater-source-use-screening/)
 - [Vehicle Wash Water Stream Map](https://watersystemsbench.com/reference/vehicle-wash-water-stream-map/)
+- [Metal Finishing Rinse Control Methods](https://watersystemsbench.com/reference/metal-finishing-rinse-control-methods/)
 
 ## Safety and limitations
 
-The site supports preliminary planning. Outputs are not formal engineering approval, potable-water certification, legal advice, manufacturer selection, or a universal regulatory determination. Verify measurements, accredited laboratory results, applicable requirements, official certified-product listings and current manufacturer data. Chemical dose and CT tools use user-supplied targets and never recommend legal or health values. Greywater tools never approve a source, potable use, plumbing connection, storage method, setback or jurisdictional compliance. Vehicle-wash tools never select treatment, approve reclaimed-water quality, or authorize wastewater, reject, backwash or sludge discharge.
+The site supports preliminary planning. Outputs are not formal engineering approval, potable-water certification, legal advice, manufacturer selection, or a universal regulatory determination. Verify measurements, accredited laboratory results, applicable requirements, official certified-product listings and current manufacturer data. Chemical dose and CT tools use user-supplied targets and never recommend legal or health values. Greywater tools never approve a source, potable use, plumbing connection, storage method, setback or jurisdictional compliance. Vehicle-wash tools never select treatment, approve reclaimed-water quality, or authorize wastewater, reject, backwash or sludge discharge. Metal-finishing tools never set chemistry, rinse acceptance, exposure or discharge limits.
 
 ## Contact and source
 

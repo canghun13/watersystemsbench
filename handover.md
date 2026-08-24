@@ -679,3 +679,41 @@ Files changed for the implementation and evidence contract:
 - Browser-automation analytics completed requests: 0. Console warnings/errors, page errors, asset failures, internal 404s, overflow and clipping on the targeted browser run: 0.
 - Final public count: 83. Final sitemap count: 83. New URLs: 0.
 - The final documentation commit is the commit containing this release entry. Verify it against `origin/main` and a clean working tree in the final delivery.
+
+## Aggressive new workflow cluster expansion — 2026-08-24
+
+### Start and discovery
+
+- Repository: `https://github.com/canghun13/watersystemsbench`; clean `main` started at `f912ab32f97354b184b33984ec1d80ca31f420ef`, equal to `origin/main` after fetch.
+- Starting inventory: 83 public pages — 7 core, 6 hubs, 42 tools, 18 guides and 10 references. Greywater and Vehicle Wash were the two previously implemented expansion clusters.
+- The complete prior exclusion set was reconstructed as 36 families (2 implemented, 34 rejected) before fresh research. Thirty-six genuinely new families were then screened; eight serious candidates were scored and the Top 5 received Gate A–K review. Full evidence is in `docs/workflow-cluster-discovery-2026-08-24.md`.
+- Top scores: Metal Finishing Rinse Water Optimization 91; Liquid-Ring Vacuum Seal Water 88; Bulk-Water/Cistern Logistics 82; Stone-Fabrication Recycle 79; Pumping-Test/Well Rehabilitation 77; Commercial Humidification 77; Irrigation Salinity/Sodicity 71; Water-Main Flushing/Disinfection 71.
+- Final decision: **GO — Metal Finishing Rinse Water Optimization.** It alone combined five independent repeat-use tools, official EPA methods, a coherent audit-to-verification workflow, client-side feasibility, current-search opportunity and a responsible boundary. Liquid-ring vacuum was not selected because final thermal/cavitation inputs remain OEM-specific. Strong current suites eliminated well analysis, salinity management and main flushing.
+
+### Implementation
+
+- Contract: `docs/metal-finishing-rinse-water-expansion.md`.
+- New hub: `/systems/metal-finishing-rinse-water/`.
+- New tools: Metal Finishing Rinse Water Audit Calculator; Plating Drag-Out Loss Estimator; Countercurrent Rinse Flow Planner; Rinse Conductivity Log Analyzer; Rinse Water Savings & Payback Comparator.
+- New guide: `/guides/reduce-metal-finishing-rinse-water/`.
+- New reference: `/reference/metal-finishing-rinse-control-methods/`, using the established responsive `.table-scroll` wrapper.
+- The local CSV analyzer reads a selected file only in the browser. No upload, account, backend, product database or regional limit table was introduced.
+- Final generated inventory: 91 public pages — 7 core, 7 hubs, 47 tools, 19 guides and 11 references; sitemap parity 91. Tool Finder now classifies 47 cards across seven systems.
+- Homepage, header/footer navigation, Tools/Guides/Reference hubs, sitemap, `llms.txt`, inventory and information architecture expose the workflow. The production `/docs/` boundary remains unchanged.
+- Preserved exactly: GA4 source tag and QA analytics blocker, Tool Finder behavior, workflow-arrow fix, Greywater table behavior, all previous calculations and the complete KittyLaunch, SellWithBoost, Twelve Tools, Findly and BoostDomainRating badge block.
+
+### Verification
+
+- Calculation verification passed all established suites plus **43 new independent metal-finishing numeric/validation checks** covering SI, US equivalence, zero/negative/boundary cases, high cases, invalid combinations and log parsing.
+- Publish-boundary, analytics, static and navigation QA passed: 91 public pages, 2 runtime fragments, unique metadata, valid JSON-LD, exact `G-7FB08YPX7C`, clean JS, complete local links/assets and 91 sitemap URLs.
+- Actual in-app browser regression passed **455/455 renders**: 91 pages × 390, 768, 1024, 1280 and 1440px. Every width passed 91/91 with document overflow 0, critical clipping 0, inaccessible table overflow 0, missing H1 0 and broken images 0.
+- Responsive tables were checked on 11 pages across five widths (55 checks). Intended table-level or `.table-scroll` scrolling remained accessible; table clipping failures were 0. The new reference at 390px retained its readable 820px table inside the content-width scroll region.
+- All 47 tools produced a valid default operating report. The five new tools passed valid → invalid stale clearing, error → recovery and reset; shared SI/US conversion, copy feedback/clipboard, print and the CSV file-selection path passed.
+- Tool Finder passed `rinse` search 6, Metal Finishing system 5, Metal Finishing + Analyzer 1 and reset 47. At 390px all four controls were 44px high, document overflow was 0 and the mobile Systems menu exposed seven links.
+- Console warnings/errors 0; page errors 0; failed assets 0; internal 404s 0; horizontal overflow 0; table clipping 0. QA intercepted 611 analytics-loader requests and completed 0.
+- Browser QA found and fixed one stale-result edge: native textarea validation could bypass the shared error handler. Removing the native `required` attribute lets the parser report an empty log and clear the previous result.
+
+### Release
+
+- Production implementation commit and GitHub Pages run: pending release step below.
+- Live verification must confirm HTTP 200 and current content for homepage, hub, all five tools, guide, reference and sitemap; 390px behavior and the five protected homepage badges must remain intact.

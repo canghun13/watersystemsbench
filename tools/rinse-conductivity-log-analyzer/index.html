@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rinse Conductivity Log Analyzer | Water Systems Bench</title>
+  <meta name="description" content="Analyze local rinse-flow, conductivity and production log rows for water per load, idle flow and alert excursions.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://watersystemsbench.com/tools/rinse-conductivity-log-analyzer/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Water Systems Bench">
+  <meta property="og:title" content="Rinse Conductivity Log Analyzer | Water Systems Bench">
+  <meta property="og:description" content="Analyze local rinse-flow, conductivity and production log rows for water per load, idle flow and alert excursions.">
+  <meta property="og:url" content="https://watersystemsbench.com/tools/rinse-conductivity-log-analyzer/">
+  <meta property="og:image" content="https://watersystemsbench.com/assets/og.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/content.css">
+  <link rel="stylesheet" href="/assets/css/calculator.css">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7FB08YPX7C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7FB08YPX7C');
+</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","@id":"https://watersystemsbench.com/tools/rinse-conductivity-log-analyzer/#application","name":"Rinse Conductivity Log Analyzer","description":"Analyze local rinse-flow, conductivity and production log rows for water per load, idle flow and alert excursions.","url":"https://watersystemsbench.com/tools/rinse-conductivity-log-analyzer/","applicationCategory":"EngineeringApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript"},{"@type":"BreadcrumbList","@id":"https://watersystemsbench.com/tools/rinse-conductivity-log-analyzer/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://watersystemsbench.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://watersystemsbench.com/tools/"},{"@type":"ListItem","position":3,"name":"Rinse Conductivity Log Analyzer","item":"https://watersystemsbench.com/tools/rinse-conductivity-log-analyzer/"}]}]}</script>
+  <script type="module" src="/assets/js/partials.js"></script>
+  <script type="module" src="/assets/js/main.js"></script>
+  <script type="module" src="/assets/js/tools/metal-finishing-tools.js"></script>
+</head>
+<body>
+  <div data-header-slot></div>
+  <main id="main-content">
+    <div class="page-shell">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/tools/">Tools</a></li><li><span aria-current="page">Rinse Conductivity Log Analyzer</span></li></ol></nav>
+      <header class="hero compact"><div><p class="eyebrow">Metal finishing rinse water optimization / Analyzer</p><h1>Rinse Conductivity Log Analyzer</h1><p class="lede">Analyze local rinse-flow, conductivity and production log rows for water per load, idle flow and alert excursions.</p></div><p class="hero-note">Preliminary planning output only. Use measured data where possible and verify manufacturer and jurisdiction-specific requirements.</p></header>
+  <p class="meta-line">Last reviewed: August 24, 2026 · SI first · US customary supported</p>
+  <div class="tool-layout"><section class="instrument-panel"><div class="panel-heading"><h2>Bench inputs</h2><span class="panel-code">INPUT / SET</span></div><form data-tool-form="metal-finishing-log"><div class="field full"><label for="unitSystem">Unit system</label><select id="unitSystem" name="unitSystem" data-unit-system><option value="SI">SI — metric</option><option value="US">US customary</option></select></div><div class="field-grid"><div class="field full"><label for="logFile">Local CSV file (optional)</label><input id="logFile" name="logFile" type="file" accept=".csv,.txt,text/csv,text/plain"><span class="hint">Read locally only; selecting a file replaces the text below.</span></div><div class="field full"><label for="logText">minutes, flow, conductivity, loads</label><textarea id="logText" name="logText" rows="7">minutes,flow,conductivity,loads
+60,5,400,10
+30,5,800,0</textarea></div><div class="field "><label for="alert">User-entered conductivity alert (µS/cm)</label><input id="alert" name="alert" data-label="User-entered conductivity alert (µS/cm)" type="number" value="600"  step="any" required></div></div><p class="form-error" data-form-error role="alert"></p><div class="button-row"><button class="button" type="submit">Analyze log</button><button class="button secondary" type="reset">Reset</button></div></form></section><section class="result-panel" aria-label="Result">
+    <div class="panel-heading"><h2>Operating report</h2><span class="panel-code">RESULT / LIVE</span></div>
+    <div class="result-empty"><p>Enter the known values, then calculate to build a result summary.</p></div>
+    <div class="result-report" aria-live="polite" hidden>
+      <div class="primary-reading"><span class="reading-label"></span><span class="reading-value"></span></div>
+      <div class="result-block"><h3>Supporting calculations</h3><ul data-supporting></ul></div>
+      <div class="result-block"><h3>Interpretation</h3><p data-interpretation></p></div>
+      <p class="result-warning" data-warning></p>
+      <div class="result-actions"><button class="button small secondary" type="button" data-result-action data-copy-result disabled>Copy result</button><button class="button small secondary" type="button" data-result-action data-print-result disabled>Print result</button></div>
+    </div>
+  </section></div>
+  <div class="content-layout"><article class="article-body">
+    <h2>What this tool does</h2><p>Connects an operating change to a local verification record without uploading process data.</p>
+    <h2>When to use it</h2><p>Use with comparable timestamp intervals exported or transcribed as minutes, flow, conductivity and loads.</p>
+    <h2>Inputs and supported units</h2><p>Each labelled field explains the quantity it expects. Unit-system changes convert existing numeric entries once and keep calculations on a single SI internal basis. Supported shared units include L/min and GPM, metres and feet, kPa and psi, millimetres and inches, kW and hp, and °C and °F as relevant.</p>
+    <h2>Calculation or decision method</h2><div class="formula">Water = Σ(minutes × flow)<br>Water/load = total water ÷ total loads</div><p>Rows above the user-entered conductivity alert are counted; no universal limit is supplied.</p>
+    <h2>How to interpret the result</h2><p>Read the primary result with the supporting breakdown and warning. A plausible number is not evidence that every input, operating case or design constraint has been included.</p>
+    <div class="worked-example"><h2>Worked example</h2><p>Rows of 60,5,400,10 and 30,5,800,0 total 450 L, 45 L/load, 150 L idle water and one excursion at a 600 µS/cm alert.</p></div>
+    <h2>Assumptions</h2><p>Representative production, matched meter and load boundaries, user-entered process targets and tariffs, and stable conditions during each comparison.</p>
+    <h2>Limitations</h2><p>No bath chemistry, final rinse acceptance, discharge limit, treatment package, permit condition or worker exposure control is selected or approved.</p>
+    <div class="notice"><strong>Safety and review boundary.</strong> Metal-finishing solutions and wastewater may be corrosive, toxic or regulated. Follow SDS, PPE, ventilation, spill, wastewater, electrical and local authority requirements; use qualified industrial review.</div>
+    <h2>Sources</h2><ul class="source-list"><li><a href="https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30004KLA.TXT" rel="noopener noreferrer">U.S. EPA — Pollution Prevention for Metal Finishing</a></li><li><a href="https://www.epa.gov/sites/default/files/2015-10/documents/metal-finishing_dd_1983.pdf" rel="noopener noreferrer">U.S. EPA — Metal Finishing Development Document</a></li><li><a href="https://www.epa.gov/sites/default/files/2015-11/documents/mp-m_dd_2003.pdf" rel="noopener noreferrer">U.S. EPA — Metal Products and Machinery Development Document</a></li><li><a href="https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P100YFAU.txt" rel="noopener noreferrer">U.S. EPA — Conductivity Control for Rinse Water</a></li></ul>
+    <section aria-labelledby="related-heading"><h2 id="related-heading">Continue the workflow</h2><div class="related-grid"><a href="/tools/countercurrent-rinse-flow-planner/">Countercurrent Rinse Flow Planner<br><span class="meta-line">Open next →</span></a><a href="/tools/rinse-water-savings-payback-comparator/">Rinse Water Savings & Payback Comparator<br><span class="meta-line">Open next →</span></a><a href="/guides/reduce-metal-finishing-rinse-water/">How to Reduce Metal Finishing Rinse Water<br><span class="meta-line">Open next →</span></a><a href="/systems/metal-finishing-rinse-water/">Metal finishing rinse workflow<br><span class="meta-line">Open next →</span></a></div></section>
+  </article><aside class="sidebar"><h2>Bench sequence</h2><ul><li><a href="/systems/metal-finishing-rinse-water/">Metal Finishing Rinse Water workflow</a></li><li><a href="/guides/reduce-metal-finishing-rinse-water/">Reduce rinse water in sequence</a></li><li><a href="/reference/metal-finishing-rinse-control-methods/">Compare rinse-control methods</a></li><li><a href="/contact/">Report a content issue</a></li></ul></aside></div>
+    </div>
+  </main>
+  <div data-footer-slot></div>
+</body>
+</html>
