@@ -1,0 +1,4 @@
+minutes,pH,temperature,conductivity,do,orp,turbidity,depthToWater,flow
+0,7.01,15.0,500,4.0,120,5.0,4.05,0.25
+5,7.03,15.1,505,3.9,122,4.8,4.06,0.25
+10,7.02,15.1,503,3.9,121,4.9,4.06,0.24

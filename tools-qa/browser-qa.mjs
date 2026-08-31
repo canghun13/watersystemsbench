@@ -51,6 +51,18 @@ if (report.targetedUpgradeResult !== "passed") issues.push(`targetedUpgradeResul
 if (report.targetedUpgradeAnalyticsRequestsIntercepted !== 11) issues.push(`targetedUpgradeAnalyticsRequestsIntercepted=${report.targetedUpgradeAnalyticsRequestsIntercepted}`);
 if (report.targetedUpgradeAnalyticsRequestsCompleted !== 0) issues.push(`targetedUpgradeAnalyticsRequestsCompleted=${report.targetedUpgradeAnalyticsRequestsCompleted}`);
 if (report.targetedUpgradeRuntimeFailures !== 0) issues.push(`targetedUpgradeRuntimeFailures=${report.targetedUpgradeRuntimeFailures}`);
+if (report.targetedUiFixDate !== "2026-08-31") issues.push(`targetedUiFixDate=${report.targetedUiFixDate}`);
+if (report.buttonStatePages !== 4) issues.push(`buttonStatePages=${report.buttonStatePages}`);
+if (report.buttonStateResult !== "passed") issues.push(`buttonStateResult=${report.buttonStateResult}`);
+if (report.buttonHoverContrastRatio < 4.5) issues.push(`buttonHoverContrastRatio=${report.buttonHoverContrastRatio}`);
+for (const key of ["buttonFocusVisible", "buttonActiveContract", "buttonDisabledContract"]) if (report[key] !== "passed") issues.push(`${key}=${report[key]}`);
+if (JSON.stringify(report.stabilizationLayoutWidths) !== JSON.stringify(expectedWidths)) issues.push(`stabilizationLayoutWidths=${JSON.stringify(report.stabilizationLayoutWidths)}`);
+if (report.stabilizationLayoutRenderChecks !== 5) issues.push(`stabilizationLayoutRenderChecks=${report.stabilizationLayoutRenderChecks}`);
+for (const key of ["stabilizationDesktopAlignment", "stabilizationMobileSingleColumn", "stabilizationCsvOverflowRegression", "stabilizationFunctionalResult", "freshBrowserMatrix"]) if (report[key] !== "passed") issues.push(`${key}=${report[key]}`);
+if (report.stabilizationFunctionalScenarios !== 9) issues.push(`stabilizationFunctionalScenarios=${report.stabilizationFunctionalScenarios}`);
+if (report.freshToolInteractions !== 51) issues.push(`freshToolInteractions=${report.freshToolInteractions}`);
+if (report.freshToolResets !== 51) issues.push(`freshToolResets=${report.freshToolResets}`);
+if (report.freshUnitSwitches !== 46) issues.push(`freshUnitSwitches=${report.freshUnitSwitches}`);
 
 if (issues.length) {
   console.error(`Browser QA report failed: ${issues.join(", ")}`);

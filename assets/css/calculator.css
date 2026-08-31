@@ -31,6 +31,13 @@
 .comparison-table th { background: var(--navy-900); color: var(--white); }
 .scenario-group { margin: 1rem 0; padding: 1rem; border: 1px solid var(--line); background: rgba(220,234,240,.35); }
 .scenario-group legend { padding: 0 .4rem; color: var(--navy-900); font: 800 .78rem/1 var(--font-mono); }
+.stabilization-criteria-group { min-width: 0; margin: 0; padding: 1rem; border: 1px solid var(--line); background: rgba(220,234,240,.2); }
+.stabilization-criteria-group > legend { margin: 0; padding: 0 .4rem; color: var(--navy-900); font: 800 .78rem/1 var(--font-mono); }
+.stabilization-criteria-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.stabilization-criteria-grid .field { display: grid; grid-template-rows: minmax(3.25rem, auto) auto; align-content: start; }
+.stabilization-criteria-grid .field label { margin: 0 0 .35rem; }
+.stabilization-window-grid { grid-template-columns: minmax(0, calc((100% - 1rem) / 2)); }
 @media (max-width: 900px) { .tool-layout { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .stabilization-criteria-grid, .stabilization-window-grid { grid-template-columns: 1fr; } .stabilization-criteria-grid .field { display: block; } }
 @media (max-width: 560px) { .field-grid { grid-template-columns: 1fr; } .field.full { grid-column: auto; } }
 @media print { .instrument-panel, .result-actions, .tool-explainer { display: none !important; } .tool-layout { display: block; border: 0; box-shadow: none; } .result-panel { border: 0; padding: 0; } }

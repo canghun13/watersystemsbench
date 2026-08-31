@@ -245,6 +245,17 @@ const stabilizationHtml = await readFile(join(root, "tools", "groundwater-stabil
 for (const marker of ["Read in this browser only", "no row is silently skipped", "user-entered absolute and relative stabilization criteria", "authorize collection or disposal"]) {
   if (!stabilizationHtml.toLowerCase().includes(marker.toLowerCase())) errors.push(`/tools/groundwater-stabilization-log-analyzer/: missing ${marker}.`);
 }
+for (const marker of ["Comparison window", "Water-quality stability limits", "Hydraulic stability limits", "stabilization-criteria-grid"]) {
+  if (!stabilizationHtml.includes(marker)) errors.push(`/tools/groundwater-stabilization-log-analyzer/: missing grouped threshold marker ${marker}.`);
+}
+const mainCss = await readFile(join(root, "assets", "css", "main.css"), "utf8");
+for (const marker of [".button.secondary:hover { background: var(--navy-800)", ".button:active, .button.secondary:active", ".button.secondary:disabled:hover"]) {
+  if (!mainCss.includes(marker)) errors.push(`Shared button state contract missing: ${marker}.`);
+}
+const calculatorCss = await readFile(join(root, "assets", "css", "calculator.css"), "utf8");
+for (const marker of [".stabilization-criteria-grid", "grid-template-rows: minmax(3.25rem, auto)", "@media (max-width: 900px) { .stabilization-criteria-grid"]) {
+  if (!calculatorCss.includes(marker)) errors.push(`Stabilization layout contract missing: ${marker}.`);
+}
 const monitoringReference = await readFile(join(root, "reference", "groundwater-low-flow-field-parameters", "index.html"), "utf8");
 if (!monitoringReference.includes('<div class="table-scroll" role="region" aria-label="Groundwater low-flow field parameters table" tabindex="0" style="--table-min-width: 860px;"><table>')) {
   errors.push("/reference/groundwater-low-flow-field-parameters/: parameter table must use its labelled, keyboard-focusable responsive table wrapper.");

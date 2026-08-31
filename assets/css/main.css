@@ -94,11 +94,13 @@ h3 { margin: 2rem 0 .7rem; font-size: clamp(1.18rem, 2vw, 1.55rem); }
 .hero-note { border-left: 3px solid var(--amber-600); padding: .25rem 0 .25rem 1.15rem; color: var(--muted); }
 .hero-actions, .button-row { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.6rem; }
 .button { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: .75rem 1rem; border: 1px solid var(--navy-900); background: var(--navy-900); color: var(--white); text-decoration: none; font: 700 .78rem/1 var(--font-mono); text-transform: uppercase; letter-spacing: .06em; cursor: pointer; }
-.button:hover { background: var(--teal-600); border-color: var(--teal-600); color: var(--white); }
+.button:hover { background: var(--navy-800); border-color: var(--navy-800); color: var(--white); }
 .button.secondary { background: transparent; color: var(--navy-900); }
-.button.secondary:hover { color: var(--white); }
+.button.secondary:hover { background: var(--navy-800); border-color: var(--navy-800); color: var(--white); }
+.button:active, .button.secondary:active { background: var(--navy-950); border-color: var(--navy-950); color: var(--white); }
 .button.small { min-height: 38px; padding: .55rem .75rem; font-size: .72rem; }
-.button:disabled { opacity: .45; cursor: not-allowed; }
+.button:disabled, .button:disabled:hover, .button:disabled:active { background: var(--navy-900); border-color: var(--navy-900); color: var(--white); opacity: .45; cursor: not-allowed; }
+.button.secondary:disabled, .button.secondary:disabled:hover, .button.secondary:disabled:active { background: transparent; border-color: var(--navy-900); color: var(--navy-900); }
 
 .status-strip { margin: 1rem 0 4rem; padding: .8rem 1rem; display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; border-block: 1px solid var(--line); background: rgba(255,255,255,.4); font: 700 .74rem/1.5 var(--font-mono); text-transform: uppercase; letter-spacing: .06em; }
 .status-strip span::before { content: "●"; margin-right: .55rem; color: var(--teal-600); }
