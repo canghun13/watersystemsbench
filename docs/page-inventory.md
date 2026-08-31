@@ -2,16 +2,16 @@
 
 ## Status
 
-All 65 pages in the initial plan remain implemented. Greywater Reuse Planning and Vehicle Wash Water Reclaim Planning each add nine validated pages; Metal Finishing Rinse Water Optimization adds eight.
+All 65 pages in the initial plan remain implemented. Greywater Reuse Planning and Vehicle Wash Water Reclaim Planning each add nine validated pages; Metal Finishing Rinse Water Optimization adds eight; Monitoring Well Purging & Low-Flow Sampling adds seven.
 
 | Category | Implemented | Remaining |
 | --- | ---: | ---: |
 | Core pages | 7 | 0 |
-| System hubs | 7 | 0 |
-| Tools | 47 | 0 |
-| Guides | 19 | 0 |
-| References | 11 | 0 |
-| Total public HTML | 91 | 0 |
+| System hubs | 8 | 0 |
+| Tools | 51 | 0 |
+| Guides | 20 | 0 |
+| References | 12 | 0 |
+| Total public HTML | 98 | 0 |
 
 The authoritative Water Treatment & Water Quality hub is `/systems/water-treatment-quality/`. This corrects the earlier planning-only `/tools/water-treatment-quality/` route and aligns the cluster with the other system hubs.
 
@@ -34,6 +34,7 @@ The authoritative Water Treatment & Water Quality hub is `/systems/water-treatme
 - `/systems/greywater-reuse/`
 - `/systems/vehicle-wash-water-reclaim/`
 - `/systems/metal-finishing-rinse-water/`
+- `/systems/monitoring-well-sampling/`
 
 ## Tools
 
@@ -105,6 +106,13 @@ The authoritative Water Treatment & Water Quality hub is `/systems/water-treatme
 - `/tools/rinse-conductivity-log-analyzer/`
 - `/tools/rinse-water-savings-payback-comparator/`
 
+### Monitoring well purging and low-flow sampling
+
+- `/tools/monitoring-well-purge-volume-calculator/`
+- `/tools/low-flow-sampling-setup-checker/`
+- `/tools/low-flow-equipment-volume-reading-interval-planner/`
+- `/tools/groundwater-stabilization-log-analyzer/`
+
 ## Guides
 
 - `/guides/how-to-size-a-water-pump/`
@@ -126,6 +134,7 @@ The authoritative Water Treatment & Water Quality hub is `/systems/water-treatme
 - `/guides/meter-vehicle-wash-water-use/`
 - `/guides/plan-vehicle-wash-water-reclaim-retrofit/`
 - `/guides/reduce-metal-finishing-rinse-water/`
+- `/guides/plan-monitoring-well-purging-low-flow-sampling/`
 
 ## References
 
@@ -140,5 +149,6 @@ The authoritative Water Treatment & Water Quality hub is `/systems/water-treatme
 - `/reference/greywater-source-use-screening/`
 - `/reference/vehicle-wash-water-stream-map/`
 - `/reference/metal-finishing-rinse-control-methods/`
+- `/reference/groundwater-low-flow-field-parameters/`
 
 Each public route must remain unique in sitemap, canonical metadata and generated navigation. Future routes require a distinct user task, implemented content and full QA; do not publish empty pages.

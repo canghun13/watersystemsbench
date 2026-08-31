@@ -20,6 +20,7 @@ import { computeChlorineDose, computeContactTime, computeMediaFilter, computeRoP
 import { computeGreywaterSupply, computeIrrigationMatch, computeLaundryZone, computeSurgeBasin, computeReuseSavings } from "../assets/js/tools/greywater-tools.js";
 import { computeReclaimBalance, computeReclaimBuffer, computeSpotFreeRo, computeVehicleWashAudit, computeVehicleWashSavings } from "../assets/js/tools/vehicle-wash-tools.js";
 import { computeCountercurrentRinse, computeDragOut, computeRinseAudit, computeRinseLog, computeRinseSavings, parseRinseLog } from "../assets/js/tools/metal-finishing-tools.js";
+import { analyzeStabilization, checkLowFlowSetup, computeEquipmentInterval, computePurgeVolume, parseStabilizationLog } from "../assets/js/tools/monitoring-well-tools.js";
 import { conversions, headToPressure, pressureToHead } from "../assets/js/unit-conversions.js";
 
 let numericCases = 0;
@@ -33,6 +34,7 @@ let treatmentSelectorCases = 0;
 let greywaterCases = 0;
 let vehicleWashCases = 0;
 let metalCases = 0;
+let monitoringWellCases = 0;
 const failures = [];
 
 function approx(name, actual, expected, tolerance) {
@@ -83,6 +85,9 @@ function greywaterExact(name, actual, expected) {
 function metalApprox(name, actual, expected, tolerance = 1e-8) { metalCases += 1; if (!Number.isFinite(actual) || Math.abs(actual - expected) > tolerance) failures.push(`${name}: expected ${expected}, received ${actual}`); }
 function metalExact(name, actual, expected) { metalCases += 1; if (actual !== expected) failures.push(`${name}: expected ${expected}, received ${actual}`); }
 function metalThrows(name, fn) { metalCases += 1; let threw = false; try { fn(); } catch { threw = true; } if (!threw) failures.push(`${name}: expected error`); }
+function monitoringWellApprox(name, actual, expected, tolerance = 1e-8) { monitoringWellCases += 1; if (!Number.isFinite(actual) || Math.abs(actual - expected) > tolerance) failures.push(`${name}: expected ${expected}, received ${actual}`); }
+function monitoringWellExact(name, actual, expected) { monitoringWellCases += 1; if (actual !== expected) failures.push(`${name}: expected ${expected}, received ${actual}`); }
+function monitoringWellThrows(name, fn) { monitoringWellCases += 1; let threw = false; try { fn(); } catch { threw = true; } if (!threw) failures.push(`${name}: expected error`); }
 function greywaterThrows(name, calculation) {
   greywaterCases += 1;
   let threw = false;
@@ -550,8 +555,31 @@ metalExact("MF-E5 no capex payback", computeRinseSavings({ baselineLh: 1, propos
 metalExact("MF-E6 negative net", computeRinseSavings({ baselineLh: 1, proposedLh: 0, hoursPerDay: 1, daysPerYear: 1, waterTariff: 0, sewerTariff: 0, treatmentCost: 0, annualOperatingCost: 1, installedCost: 1 }).paybackYears, null);
 metalThrows("MF-E7 proposed above baseline", () => computeRinseSavings({ baselineLh: 1, proposedLh: 2, hoursPerDay: 1, daysPerYear: 1, waterTariff: 0, sewerTariff: 0, treatmentCost: 0, annualOperatingCost: 0, installedCost: 0 })); metalThrows("MF-E8 negative cost", () => computeRinseSavings({ baselineLh: 1, proposedLh: 0, hoursPerDay: 1, daysPerYear: 1, waterTariff: -1, sewerTariff: 0, treatmentCost: 0, annualOperatingCost: 0, installedCost: 0 }));
 
+const purge = computePurgeVolume({ internalDiameterMm: 50, totalDepthM: 12, depthToWaterM: 4, purgeMultiplier: 3, flowLpm: 1, containerCapacityL: 20 });
+monitoringWellApprox("MW-P1 water column", purge.waterColumnM, 8); monitoringWellApprox("MW-P2 one well volume", purge.wellVolumeL, Math.PI * 5); monitoringWellApprox("MW-P3 target volume", purge.targetVolumeL, Math.PI * 15); monitoringWellApprox("MW-P4 time", purge.purgeTimeMinutes, Math.PI * 15); monitoringWellExact("MW-P5 containers", purge.containers, 3);
+monitoringWellThrows("MW-P6 water level beyond bottom", () => computePurgeVolume({ internalDiameterMm: 50, totalDepthM: 4, depthToWaterM: 4, purgeMultiplier: 1, flowLpm: 1, containerCapacityL: 1 }));
+monitoringWellThrows("MW-P7 zero flow", () => computePurgeVolume({ internalDiameterMm: 50, totalDepthM: 4, depthToWaterM: 1, purgeMultiplier: 1, flowLpm: 0, containerCapacityL: 1 }));
+
+let setup = checkLowFlowSetup({ screenTopM: 10, screenBottomM: 13, intakeDepthM: 11.5, initialWaterDepthM: 4, stabilizedWaterDepthM: 4.08, flowLpm: .25, maximumDrawdownM: .1, maximumFlowLpm: .5 });
+monitoringWellApprox("MW-S1 drawdown", setup.drawdownM, .08); monitoringWellApprox("MW-S2 submerged head", setup.submergedHeadM, 7.42); monitoringWellExact("MW-S3 setup met", setup.criteriaMet, true);
+setup = checkLowFlowSetup({ screenTopM: 10, screenBottomM: 13, intakeDepthM: 9, initialWaterDepthM: 4, stabilizedWaterDepthM: 4.2, flowLpm: .6, maximumDrawdownM: .1, maximumFlowLpm: .5 });
+monitoringWellExact("MW-S4 intake check", setup.intakeInsideScreen, false); monitoringWellExact("MW-S5 drawdown check", setup.drawdownWithinEnteredLimit, false); monitoringWellExact("MW-S6 flow check", setup.flowWithinEnteredLimit, false); monitoringWellExact("MW-S7 setup not met", setup.criteriaMet, false);
+monitoringWellThrows("MW-S8 reversed screen", () => checkLowFlowSetup({ screenTopM: 13, screenBottomM: 10, intakeDepthM: 11, initialWaterDepthM: 4, stabilizedWaterDepthM: 4.1, flowLpm: .2, maximumDrawdownM: .2, maximumFlowLpm: .5 }));
+
+let interval = computeEquipmentInterval({ tubingInternalDiameterMm: 6, tubingLengthM: 20, pumpVolumeMl: 100, flowCellVolumeMl: 250, otherVolumeMl: 50, exchanges: 1, flowLpm: .25, plannedIntervalMinutes: 5 });
+monitoringWellApprox("MW-E1 tubing volume", interval.tubingVolumeL, Math.PI * .18); monitoringWellApprox("MW-E2 equipment volume", interval.totalEquipmentVolumeL, Math.PI * .18 + .4); monitoringWellApprox("MW-E3 interval", interval.minimumIntervalMinutes, (Math.PI * .18 + .4) / .25); monitoringWellExact("MW-E4 planned pass", interval.intervalMeetsEnteredExchange, true);
+interval = computeEquipmentInterval({ tubingInternalDiameterMm: 6, tubingLengthM: 20, pumpVolumeMl: 100, flowCellVolumeMl: 250, otherVolumeMl: 50, exchanges: 2, flowLpm: .25, plannedIntervalMinutes: 5 });
+monitoringWellExact("MW-E5 planned fail", interval.intervalMeetsEnteredExchange, false); monitoringWellThrows("MW-E6 negative chamber", () => computeEquipmentInterval({ tubingInternalDiameterMm: 6, tubingLengthM: 20, pumpVolumeMl: -1, flowCellVolumeMl: 0, otherVolumeMl: 0, exchanges: 1, flowLpm: .25, plannedIntervalMinutes: 5 }));
+
+const stabilizationRows = parseStabilizationLog("minutes,pH,temperature,conductivity,do,orp,turbidity,depthToWater,flow\n0,7.01,15.0,500,4.0,120,5.0,4.05,0.25\n5,7.03,15.1,505,3.9,122,4.8,4.06,0.25\n10,7.02,15.1,503,3.9,121,4.9,4.06,0.24");
+monitoringWellExact("MW-L1 parsed rows", stabilizationRows.length, 3);
+const stabilization = analyzeStabilization({ rows: stabilizationRows, consecutiveReadings: 3, criteria: { pH: .1, temperature: 3, conductivity: 3, dissolvedOxygen: 10, orp: 10, turbidity: 10, depthToWater: .05, flow: .05 } });
+monitoringWellApprox("MW-L2 pH range", stabilization.metrics.pH, .02); monitoringWellApprox("MW-L3 conductivity relative range", stabilization.metrics.conductivity, 5 / (1508 / 3) * 100); monitoringWellApprox("MW-L4 purge integration", stabilization.purgeVolumeL, 2.5); monitoringWellExact("MW-L5 criteria met", stabilization.criteriaMet, true);
+monitoringWellExact("MW-L6 strict failed parameter", analyzeStabilization({ rows: stabilizationRows, consecutiveReadings: 3, criteria: { pH: .01, temperature: 3, conductivity: 3, dissolvedOxygen: 10, orp: 10, turbidity: 10, depthToWater: .05, flow: .05 } }).criteriaMet, false);
+monitoringWellThrows("MW-L7 malformed row", () => parseStabilizationLog("0,7,15")); monitoringWellThrows("MW-L8 non-increasing time", () => parseStabilizationLog("0,7,15,500,4,120,5,4,.2\n0,7,15,500,4,120,5,4,.2")); monitoringWellThrows("MW-L9 insufficient window", () => analyzeStabilization({ rows: stabilizationRows, consecutiveReadings: 4, criteria: { pH: 1, temperature: 1, conductivity: 1, dissolvedOxygen: 1, orp: 1, turbidity: 1, depthToWater: 1, flow: 1 } }));
+
 if (failures.length) {
   console.error(`Calculation verification failed with ${failures.length} issue(s):\n- ${failures.join("\n- ")}`);
   process.exit(1);
 }
-console.log(`Calculation verification passed: ${numericCases} Phase 1 numeric/conversion cases, ${diagnosticCases} troubleshooting scenarios, ${phase2Cases} Phase 2 numeric/decision cases, ${simulatorCases} rainwater simulator scenarios, ${irrigationCases} irrigation numeric/validation checks, ${irrigationDiagnosticCases} irrigation troubleshooting scenarios, ${treatmentCases} treatment numeric/validation checks, ${treatmentSelectorCases} treatment selector scenarios, ${greywaterCases} greywater numeric/validation checks, ${vehicleWashCases} vehicle-wash numeric/validation checks, and ${metalCases} metal-finishing numeric/validation checks.`);
+console.log(`Calculation verification passed: ${numericCases} Phase 1 numeric/conversion cases, ${diagnosticCases} troubleshooting scenarios, ${phase2Cases} Phase 2 numeric/decision cases, ${simulatorCases} rainwater simulator scenarios, ${irrigationCases} irrigation numeric/validation checks, ${irrigationDiagnosticCases} irrigation troubleshooting scenarios, ${treatmentCases} treatment numeric/validation checks, ${treatmentSelectorCases} treatment selector scenarios, ${greywaterCases} greywater numeric/validation checks, ${vehicleWashCases} vehicle-wash numeric/validation checks, ${metalCases} metal-finishing numeric/validation checks, and ${monitoringWellCases} monitoring-well numeric/validation checks.`);

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Low-Flow Sampling Setup Checker | Water Systems Bench</title>
+  <meta name="description" content="Check pump-intake placement, screen and water-level geometry, drawdown and measured flow against user-entered field limits.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://watersystemsbench.com/tools/low-flow-sampling-setup-checker/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Water Systems Bench">
+  <meta property="og:title" content="Low-Flow Sampling Setup Checker | Water Systems Bench">
+  <meta property="og:description" content="Check pump-intake placement, screen and water-level geometry, drawdown and measured flow against user-entered field limits.">
+  <meta property="og:url" content="https://watersystemsbench.com/tools/low-flow-sampling-setup-checker/">
+  <meta property="og:image" content="https://watersystemsbench.com/assets/og.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/content.css">
+  <link rel="stylesheet" href="/assets/css/calculator.css">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7FB08YPX7C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7FB08YPX7C');
+</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","@id":"https://watersystemsbench.com/tools/low-flow-sampling-setup-checker/#application","name":"Low-Flow Sampling Setup Checker","description":"Check pump-intake placement, screen and water-level geometry, drawdown and measured flow against user-entered field limits.","url":"https://watersystemsbench.com/tools/low-flow-sampling-setup-checker/","applicationCategory":"EngineeringApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript"},{"@type":"BreadcrumbList","@id":"https://watersystemsbench.com/tools/low-flow-sampling-setup-checker/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://watersystemsbench.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://watersystemsbench.com/tools/"},{"@type":"ListItem","position":3,"name":"Low-Flow Sampling Setup Checker","item":"https://watersystemsbench.com/tools/low-flow-sampling-setup-checker/"}]}]}</script>
+  <script type="module" src="/assets/js/partials.js"></script>
+  <script type="module" src="/assets/js/main.js"></script>
+  <script type="module" src="/assets/js/tools/monitoring-well-tools.js"></script>
+</head>
+<body>
+  <div data-header-slot></div>
+  <main id="main-content">
+    <div class="page-shell">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/tools/">Tools</a></li><li><span aria-current="page">Low-Flow Sampling Setup Checker</span></li></ol></nav>
+      <header class="hero compact"><div><p class="eyebrow">Monitoring well purging and low-flow sampling / Checker</p><h1>Low-Flow Sampling Setup Checker</h1><p class="lede">Check pump-intake placement, screen and water-level geometry, drawdown and measured flow against user-entered field limits.</p></div><p class="hero-note">Preliminary planning output only. Use measured data where possible and verify manufacturer and jurisdiction-specific requirements.</p></header>
+  <p class="meta-line">Last reviewed: August 31, 2026 · SI first · US customary supported</p>
+  <div class="tool-layout"><section class="instrument-panel"><div class="panel-heading"><h2>Bench inputs</h2><span class="panel-code">INPUT / SET</span></div><form data-tool-form="monitoring-well-setup"><div class="field full"><label for="unitSystem">Unit system</label><select id="unitSystem" name="unitSystem" data-unit-system><option value="SI">SI — metric</option><option value="US">US customary</option></select></div><div class="field-grid"><div class="field "><label for="screenTop">Screen top depth (<span data-unit-label="length"></span>)</label><input id="screenTop" name="screenTop" data-label="Screen top depth" type="number" value="10" data-unit-kind="length" step="any" required></div><div class="field "><label for="screenBottom">Screen bottom depth (<span data-unit-label="length"></span>)</label><input id="screenBottom" name="screenBottom" data-label="Screen bottom depth" type="number" value="13" data-unit-kind="length" step="any" required></div><div class="field "><label for="intakeDepth">Pump intake depth (<span data-unit-label="length"></span>)</label><input id="intakeDepth" name="intakeDepth" data-label="Pump intake depth" type="number" value="11.5" data-unit-kind="length" step="any" required></div><div class="field "><label for="initialWater">Initial depth to water (<span data-unit-label="length"></span>)</label><input id="initialWater" name="initialWater" data-label="Initial depth to water" type="number" value="4" data-unit-kind="length" step="any" required></div><div class="field "><label for="stabilizedWater">Stabilized depth to water (<span data-unit-label="length"></span>)</label><input id="stabilizedWater" name="stabilizedWater" data-label="Stabilized depth to water" type="number" value="4.08" data-unit-kind="length" step="any" required></div><div class="field "><label for="flow">Measured flow (<span data-unit-label="flow"></span>)</label><input id="flow" name="flow" data-label="Measured flow" type="number" value="0.25" data-unit-kind="flow" step="any" required></div><div class="field "><label for="maxDrawdown">Entered maximum drawdown (<span data-unit-label="length"></span>)</label><input id="maxDrawdown" name="maxDrawdown" data-label="Entered maximum drawdown" type="number" value="0.1" data-unit-kind="length" step="any" required></div><div class="field "><label for="maxFlow">Entered maximum flow (<span data-unit-label="flow"></span>)</label><input id="maxFlow" name="maxFlow" data-label="Entered maximum flow" type="number" value="0.5" data-unit-kind="flow" step="any" required></div></div><p class="form-error" data-form-error role="alert"></p><div class="button-row"><button class="button" type="submit">Check setup</button><button class="button secondary" type="reset">Reset</button></div></form></section><section class="result-panel" aria-label="Result">
+    <div class="panel-heading"><h2>Operating report</h2><span class="panel-code">RESULT / LIVE</span></div>
+    <div class="result-empty"><p>Enter the known values, then calculate to build a result summary.</p></div>
+    <div class="result-report" aria-live="polite" hidden>
+      <div class="primary-reading"><span class="reading-label"></span><span class="reading-value"></span></div>
+      <div class="result-block"><h3>Supporting calculations</h3><ul data-supporting></ul></div>
+      <div class="result-block"><h3>Interpretation</h3><p data-interpretation></p></div>
+      <p class="result-warning" data-warning></p>
+      <div class="result-actions"><button class="button small secondary" type="button" data-result-action data-copy-result disabled>Copy result</button><button class="button small secondary" type="button" data-result-action data-print-result disabled>Print result</button></div>
+    </div>
+  </section></div>
+  <div class="content-layout"><article class="article-body">
+    <h2>What this tool does</h2><p>Makes setup conflicts visible before a field team treats a numeric stabilization result as sufficient evidence.</p>
+    <h2>When to use it</h2><p>Use with surveyed well-construction data, measured initial and stabilized water levels, and limits copied from the approved site plan.</p>
+    <h2>Inputs and supported units</h2><p>Each labelled field explains the quantity it expects. Unit-system changes convert existing numeric entries once and keep calculations on a single SI internal basis. Supported shared units include L/min and GPM, metres and feet, kPa and psi, millimetres and inches, kW and hp, and °C and °F as relevant.</p>
+    <h2>Calculation or decision method</h2><div class="formula">Drawdown = stabilized depth to water − initial depth to water<br>Submerged head over intake = intake depth − stabilized depth to water</div>
+    <h2>How to interpret the result</h2><p>Read the primary result with the supporting breakdown and warning. A plausible number is not evidence that every input, operating case or design constraint has been included.</p>
+    <div class="worked-example"><h2>Worked example</h2><p>For a 10–13 m screen, an intake at 11.5 m, initial water at 4 m and stabilized water at 4.08 m, drawdown is 0.08 m and 7.42 m of water remains over the intake.</p></div>
+    <h2>Assumptions</h2><p>Well construction, water levels, equipment dimensions, flow and field readings are site-specific measurements entered in consistent units. All comparison criteria are supplied by the user from the governing plan or authority.</p>
+    <h2>Limitations</h2><p>These tools calculate geometry, displacement and numeric variation only. They do not select a sampling method, prove sample representativeness, establish laboratory requirements or authorize collection or disposal.</p>
+    <div class="notice"><strong>Safety and review boundary.</strong> Follow the approved sampling and health-and-safety plans. Treat unknown groundwater and purge water as potentially contaminated; use qualified field staff, calibrated instruments, required PPE and lawful containment and disposal.</div>
+    <h2>Sources</h2><ul class="source-list"><li><a href="https://www.epa.gov/sites/default/files/2017-10/documents/eqasop-gw4.pdf" rel="noopener noreferrer">U.S. EPA — Groundwater Sampling Operating Procedure (EQASOP-GW4)</a></li><li><a href="https://www.epa.gov/remedytech/low-flow-minimal-drawdown-ground-water-sampling-procedures" rel="noopener noreferrer">U.S. EPA — Low-Flow (Minimal Drawdown) Ground-Water Sampling Procedures</a></li><li><a href="https://www.usgs.gov/centers/new-england-water-science-center/science/purge-analyzer-tool-pat-assess-optimal-pumping" rel="noopener noreferrer">U.S. Geological Survey — Purge Analyzer Tool (PAT)</a></li></ul>
+    <section aria-labelledby="related-heading"><h2 id="related-heading">Continue the workflow</h2><div class="related-grid"><a href="/tools/low-flow-equipment-volume-reading-interval-planner/">Low-Flow Equipment Volume & Reading Interval Planner<br><span class="meta-line">Open next →</span></a><a href="/tools/groundwater-stabilization-log-analyzer/">Groundwater Stabilization Log Analyzer<br><span class="meta-line">Open next →</span></a><a href="/guides/plan-monitoring-well-purging-low-flow-sampling/">How to Plan Monitoring-Well Purging & Low-Flow Sampling<br><span class="meta-line">Open next →</span></a><a href="/systems/monitoring-well-sampling/">Monitoring well sampling workflow<br><span class="meta-line">Open next →</span></a></div></section>
+  </article><aside class="sidebar"><h2>Bench sequence</h2><ul><li><a href="/systems/wells-storage-rainwater/">Wells, Storage & Rainwater workflow</a></li><li><a href="/guides/complete-well-water-system-planning/">Plan the connected source system</a></li><li><a href="/reference/water-demand-planning-factors/">Check demand factors</a></li><li><a href="/contact/">Report a content issue</a></li></ul></aside></div>
+    </div>
+  </main>
+  <div data-footer-slot></div>
+</body>
+</html>

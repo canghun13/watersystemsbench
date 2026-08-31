@@ -14,10 +14,10 @@ try {
 
 const expectedWidths = [390, 768, 1024, 1280, 1440];
 const issues = [];
-if (report.pages !== 91) issues.push(`pages=${report.pages}`);
-if (report.renderChecks !== 455) issues.push(`renderChecks=${report.renderChecks}`);
+if (report.pages !== 98) issues.push(`pages=${report.pages}`);
+if (report.renderChecks !== 490) issues.push(`renderChecks=${report.renderChecks}`);
 if (JSON.stringify(report.widths) !== JSON.stringify(expectedWidths)) issues.push(`widths=${JSON.stringify(report.widths)}`);
-if (report.toolInteractions !== 47) issues.push(`toolInteractions=${report.toolInteractions}`);
+if (report.toolInteractions !== 51) issues.push(`toolInteractions=${report.toolInteractions}`);
 if (report.phase2ToolInteractions !== 15) issues.push(`phase2ToolInteractions=${report.phase2ToolInteractions}`);
 if (report.treatmentToolInteractions !== 8) issues.push(`treatmentToolInteractions=${report.treatmentToolInteractions}`);
 if (report.greywaterToolInteractions !== 5) issues.push(`greywaterToolInteractions=${report.greywaterToolInteractions}`);
@@ -26,12 +26,15 @@ if (report.vehicleWashInvalidStateChecks !== 5) issues.push(`vehicleWashInvalidS
 if (report.metalFinishingToolInteractions !== 5) issues.push(`metalFinishingToolInteractions=${report.metalFinishingToolInteractions}`);
 if (report.metalFinishingInvalidStateChecks !== 5) issues.push(`metalFinishingInvalidStateChecks=${report.metalFinishingInvalidStateChecks}`);
 if (report.metalFinishingCsvChecks !== 1) issues.push(`metalFinishingCsvChecks=${report.metalFinishingCsvChecks}`);
+if (report.monitoringWellToolInteractions !== 4) issues.push(`monitoringWellToolInteractions=${report.monitoringWellToolInteractions}`);
+if (report.monitoringWellInvalidStateChecks !== 4) issues.push(`monitoringWellInvalidStateChecks=${report.monitoringWellInvalidStateChecks}`);
+if (report.monitoringWellCsvChecks !== 2) issues.push(`monitoringWellCsvChecks=${report.monitoringWellCsvChecks}`);
 if (report.analyticsBlocking !== "passed") issues.push(`analyticsBlocking=${report.analyticsBlocking}`);
-if (report.analyticsRequestsIntercepted < 455) issues.push(`analyticsRequestsIntercepted=${report.analyticsRequestsIntercepted}`);
+if (report.analyticsRequestsIntercepted < 490) issues.push(`analyticsRequestsIntercepted=${report.analyticsRequestsIntercepted}`);
 if (report.analyticsRequestsCompleted !== 0) issues.push(`analyticsRequestsCompleted=${report.analyticsRequestsCompleted}`);
-if (report.analyticsInteractionRequestsIntercepted < 47) issues.push(`analyticsInteractionRequestsIntercepted=${report.analyticsInteractionRequestsIntercepted}`);
+if (report.analyticsInteractionRequestsIntercepted < 51) issues.push(`analyticsInteractionRequestsIntercepted=${report.analyticsInteractionRequestsIntercepted}`);
 if (report.analyticsInteractionRequestsCompleted !== 0) issues.push(`analyticsInteractionRequestsCompleted=${report.analyticsInteractionRequestsCompleted}`);
-if (report.analyticsObservationBaseline !== "2026-08-24") issues.push(`analyticsObservationBaseline=${report.analyticsObservationBaseline}`);
+if (report.analyticsObservationBaseline !== "2026-08-31") issues.push(`analyticsObservationBaseline=${report.analyticsObservationBaseline}`);
 if (report.toolFinderChecks < 20) issues.push(`toolFinderChecks=${report.toolFinderChecks}`);
 if (report.toolFinderResponsiveToolbar !== "passed") issues.push(`toolFinderResponsiveToolbar=${report.toolFinderResponsiveToolbar}`);
 if (report.workflowArrowGlyphs !== 0) issues.push(`workflowArrowGlyphs=${report.workflowArrowGlyphs}`);

@@ -11,6 +11,7 @@
 - [Greywater Reuse Planning](https://watersystemsbench.com/systems/greywater-reuse/)
 - [Vehicle Wash Water Reclaim Planning](https://watersystemsbench.com/systems/vehicle-wash-water-reclaim/)
 - [Metal Finishing Rinse Water Optimization](https://watersystemsbench.com/systems/metal-finishing-rinse-water/)
+- [Monitoring Well Purging & Low-Flow Sampling](https://watersystemsbench.com/systems/monitoring-well-sampling/)
 
 ## Tools
 
@@ -61,6 +62,10 @@
 - [Countercurrent Rinse Flow Planner](https://watersystemsbench.com/tools/countercurrent-rinse-flow-planner/)
 - [Rinse Conductivity Log Analyzer](https://watersystemsbench.com/tools/rinse-conductivity-log-analyzer/)
 - [Rinse Water Savings & Payback Comparator](https://watersystemsbench.com/tools/rinse-water-savings-payback-comparator/)
+- [Monitoring Well Purge Volume & Time Calculator](https://watersystemsbench.com/tools/monitoring-well-purge-volume-calculator/)
+- [Low-Flow Sampling Setup Checker](https://watersystemsbench.com/tools/low-flow-sampling-setup-checker/)
+- [Low-Flow Equipment Volume & Reading Interval Planner](https://watersystemsbench.com/tools/low-flow-equipment-volume-reading-interval-planner/)
+- [Groundwater Stabilization Log Analyzer](https://watersystemsbench.com/tools/groundwater-stabilization-log-analyzer/)
 
 ## Guides
 
@@ -83,6 +88,7 @@
 - [How to Meter Vehicle Wash Water Use](https://watersystemsbench.com/guides/meter-vehicle-wash-water-use/)
 - [How to Plan a Vehicle Wash Water Reclaim Retrofit](https://watersystemsbench.com/guides/plan-vehicle-wash-water-reclaim-retrofit/)
 - [How to Reduce Metal Finishing Rinse Water](https://watersystemsbench.com/guides/reduce-metal-finishing-rinse-water/)
+- [How to Plan Monitoring-Well Purging & Low-Flow Sampling](https://watersystemsbench.com/guides/plan-monitoring-well-purging-low-flow-sampling/)
 
 ## Reference
 
@@ -97,10 +103,11 @@
 - [Greywater Source & Use Screening Reference](https://watersystemsbench.com/reference/greywater-source-use-screening/)
 - [Vehicle Wash Water Stream Map](https://watersystemsbench.com/reference/vehicle-wash-water-stream-map/)
 - [Metal Finishing Rinse Control Methods](https://watersystemsbench.com/reference/metal-finishing-rinse-control-methods/)
+- [Groundwater Low-Flow Field Parameters](https://watersystemsbench.com/reference/groundwater-low-flow-field-parameters/)
 
 ## Safety and limitations
 
-The site supports preliminary planning. Outputs are not formal engineering approval, potable-water certification, legal advice, manufacturer selection, or a universal regulatory determination. Verify measurements, accredited laboratory results, applicable requirements, official certified-product listings and current manufacturer data. Chemical dose and CT tools use user-supplied targets and never recommend legal or health values. Greywater tools never approve a source, potable use, plumbing connection, storage method, setback or jurisdictional compliance. Vehicle-wash tools never select treatment, approve reclaimed-water quality, or authorize wastewater, reject, backwash or sludge discharge. Metal-finishing tools never set chemistry, rinse acceptance, exposure or discharge limits.
+The site supports preliminary planning. Outputs are not formal engineering approval, sampling authorization, potable-water certification, legal advice, manufacturer selection, or a universal regulatory determination. Verify measurements, accredited laboratory results, applicable requirements, official certified-product listings and current manufacturer data. Chemical dose and CT tools use user-supplied targets and never recommend legal or health values. Greywater tools never approve a source, potable use, plumbing connection, storage method, setback or jurisdictional compliance. Vehicle-wash tools never select treatment, approve reclaimed-water quality, or authorize wastewater, reject, backwash or sludge discharge. Metal-finishing tools never set chemistry, rinse acceptance, exposure or discharge limits. Monitoring-well tools never select a sampling method, establish representativeness, authorize sample collection or approve purge-water disposal.
 
 ## Contact and source
 

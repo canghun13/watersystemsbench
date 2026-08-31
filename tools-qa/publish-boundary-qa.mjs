@@ -19,7 +19,7 @@ const excluded = new Set([...config.matchAll(/^\s+-\s+(.+?)\s*$/gm)].map((match)
 const requiredExcludes = new Set([...developmentOnlyRoots, ...developmentOnlyFiles]);
 
 for (const entry of requiredExcludes) if (!excluded.has(entry)) errors.push(`_config.yml must exclude ${entry}.`);
-if (publicHtml.length !== 91) errors.push(`Production inventory must contain 91 public route HTML files; found ${publicHtml.length}.`);
+if (publicHtml.length !== 98) errors.push(`Production inventory must contain 98 public route HTML files; found ${publicHtml.length}.`);
 
 for (const file of publicHtml) {
   const html = await readFile(file, "utf8");
@@ -48,4 +48,4 @@ if (errors.length) {
   console.error(`Publish-boundary QA failed with ${errors.length} issue(s):\n- ${errors.join("\n- ")}`);
   process.exit(1);
 }
-console.log(`Publish-boundary QA passed: 91 public pages retained; docs, tools-qa, repository planning files and Git metadata excluded from the Jekyll production artifact.`);
+console.log(`Publish-boundary QA passed: 98 public pages retained; docs, tools-qa, repository planning files and Git metadata excluded from the Jekyll production artifact.`);

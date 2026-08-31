@@ -23,7 +23,7 @@ async function walk(dir) {
 
 const allFiles = await walk(root);
 const publicHtml = allFiles.filter(isPublicRouteHtml);
-if (publicHtml.length !== 91) errors.push(`Expected 91 public HTML files; found ${publicHtml.length}.`);
+if (publicHtml.length !== 98) errors.push(`Expected 98 public HTML files; found ${publicHtml.length}.`);
 const categoryCounts = {
   core: publicHtml.filter((file) => !relative(root, file).includes(sep)).length + publicHtml.filter((file) => ["about", "contact", "privacy", "tools", "guides", "reference"].includes(relative(root, dirname(file)))).length,
   systems: publicHtml.filter((file) => relative(root, dirname(file)).split(sep).length === 2 && relative(root, file).startsWith(`systems${sep}`)).length,
@@ -31,7 +31,7 @@ const categoryCounts = {
   guides: publicHtml.filter((file) => relative(root, dirname(file)).split(sep).length === 2 && relative(root, file).startsWith(`guides${sep}`)).length,
   reference: publicHtml.filter((file) => relative(root, dirname(file)).split(sep).length === 2 && relative(root, file).startsWith(`reference${sep}`)).length
 };
-for (const [key, expected] of Object.entries({ core: 7, systems: 7, tools: 47, guides: 19, reference: 11 })) {
+for (const [key, expected] of Object.entries({ core: 7, systems: 8, tools: 51, guides: 20, reference: 12 })) {
   if (categoryCounts[key] !== expected) errors.push(`Expected ${expected} ${key} pages; found ${categoryCounts[key]}.`);
 }
 
@@ -89,7 +89,7 @@ for (const file of publicHtml) {
 
 const sitemap = await readFile(join(root, "sitemap.xml"), "utf8");
 const sitemapUrls = new Set([...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]));
-if (sitemapUrls.size !== 91) errors.push(`Sitemap contains ${sitemapUrls.size} unique URLs, expected 91.`);
+if (sitemapUrls.size !== 98) errors.push(`Sitemap contains ${sitemapUrls.size} unique URLs, expected 98.`);
 for (const url of pageUrls) if (!sitemapUrls.has(url)) errors.push(`Sitemap missing ${url}.`);
 for (const url of sitemapUrls) if (!pageUrls.has(url)) errors.push(`Sitemap contains non-public URL ${url}.`);
 
@@ -101,6 +101,7 @@ if (!llms.includes("/systems/water-treatment-quality/") || !llms.includes("Chemi
 if (!llms.includes("/systems/greywater-reuse/") || !llms.includes("Greywater tools never approve a source")) errors.push("llms.txt lacks greywater workflow or safety boundary.");
 if (!llms.includes("/systems/vehicle-wash-water-reclaim/") || !llms.includes("Vehicle-wash tools never select treatment")) errors.push("llms.txt lacks vehicle-wash workflow or safety boundary.");
 if (!llms.includes("/systems/metal-finishing-rinse-water/") || !llms.includes("Metal-finishing tools never set chemistry")) errors.push("llms.txt lacks metal-finishing workflow or safety boundary.");
+if (!llms.includes("/systems/monitoring-well-sampling/") || !llms.includes("Monitoring-well tools never select a sampling method")) errors.push("llms.txt lacks monitoring-well workflow or safety boundary.");
 if (/watersystemsbench\.com\/docs\//i.test(llms)) errors.push("llms.txt must not expose development-only /docs/ URLs.");
 
 const home = await readFile(join(root, "index.html"), "utf8");
@@ -143,9 +144,9 @@ for (const marker of [
 ]) {
   if (!toolsHub.includes(marker)) errors.push(`/tools/: finder contract is missing ${marker}.`);
 }
-if ((toolsHub.match(/data-tool-card(?:\s|>)/g) || []).length !== 47) errors.push("/tools/: finder must contain exactly 47 tool cards.");
-if ((toolsHub.match(/data-system="(?:pumps|wells|irrigation|treatment|greywater|vehicle-wash|metal-finishing)"/g) || []).length !== 47) errors.push("/tools/: every tool card must have one known system filter value.");
-if ((toolsHub.match(/data-type="(?:calculator|planner|checker|comparator|estimator|troubleshooter|analyzer|simulator|selector)"/g) || []).length !== 47) errors.push("/tools/: every tool card must have one known tool-type filter value.");
+if ((toolsHub.match(/data-tool-card(?:\s|>)/g) || []).length !== 51) errors.push("/tools/: finder must contain exactly 51 tool cards.");
+if ((toolsHub.match(/data-system="(?:pumps|wells|irrigation|treatment|greywater|vehicle-wash|metal-finishing|monitoring-well)"/g) || []).length !== 51) errors.push("/tools/: every tool card must have one known system filter value.");
+if ((toolsHub.match(/data-type="(?:calculator|planner|checker|comparator|estimator|troubleshooter|analyzer|simulator|selector)"/g) || []).length !== 51) errors.push("/tools/: every tool card must have one known tool-type filter value.");
 
 const availableFlowTest = await readFile(join(root, "tools", "available-water-flow-test-calculator", "index.html"), "utf8");
 for (const marker of [
@@ -225,6 +226,28 @@ for (const [label, minWidth] of [["Source screening", "760px"], ["End-use screen
 const contentCss = await readFile(join(root, "assets", "css", "content.css"), "utf8");
 if (!contentCss.includes(".table-scroll { width: 100%; max-width: 100%;") || !contentCss.includes("overflow-x: auto") || !contentCss.includes(".table-scroll > table { width: 100%; min-width: var(--table-min-width, 680px);")) {
   errors.push("Responsive table wrapper CSS must retain an internal horizontal scroll area and a readable minimum table width.");
+}
+
+const monitoringWellToolRoutes = [
+  "/tools/monitoring-well-purge-volume-calculator/",
+  "/tools/low-flow-sampling-setup-checker/",
+  "/tools/low-flow-equipment-volume-reading-interval-planner/",
+  "/tools/groundwater-stabilization-log-analyzer/"
+];
+for (const route of monitoringWellToolRoutes) {
+  const html = await readFile(join(root, route.slice(1), "index.html"), "utf8");
+  if (!html.includes('data-tool-form="monitoring-well-')) errors.push(`${route}: monitoring-well form missing.`);
+  if (!html.includes('aria-live="polite"')) errors.push(`${route}: aria-live result missing.`);
+  if (!html.includes("<h2>Sources</h2>") || !html.includes("source-list")) errors.push(`${route}: authoritative sources missing.`);
+  if (!html.includes("Safety and review boundary") || !/sampling|representative|purge water|contaminated/i.test(html)) errors.push(`${route}: monitoring-well safety boundary missing.`);
+}
+const stabilizationHtml = await readFile(join(root, "tools", "groundwater-stabilization-log-analyzer", "index.html"), "utf8");
+for (const marker of ["Read in this browser only", "no row is silently skipped", "user-entered absolute and relative stabilization criteria", "authorize collection or disposal"]) {
+  if (!stabilizationHtml.toLowerCase().includes(marker.toLowerCase())) errors.push(`/tools/groundwater-stabilization-log-analyzer/: missing ${marker}.`);
+}
+const monitoringReference = await readFile(join(root, "reference", "groundwater-low-flow-field-parameters", "index.html"), "utf8");
+if (!monitoringReference.includes('<div class="table-scroll" role="region" aria-label="Groundwater low-flow field parameters table" tabindex="0" style="--table-min-width: 860px;"><table>')) {
+  errors.push("/reference/groundwater-low-flow-field-parameters/: parameter table must use its labelled, keyboard-focusable responsive table wrapper.");
 }
 
 const syntaxFiles = allFiles.filter((path) => [".js", ".mjs"].includes(extname(path)));

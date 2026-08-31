@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Low-Flow Equipment Volume &amp; Reading Interval Planner | Water Systems Bench</title>
+  <meta name="description" content="Calculate tubing, pump, flow-cell and other equipment volume, then compare a planned reading interval with user-entered volume exchanges.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://watersystemsbench.com/tools/low-flow-equipment-volume-reading-interval-planner/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Water Systems Bench">
+  <meta property="og:title" content="Low-Flow Equipment Volume &amp; Reading Interval Planner | Water Systems Bench">
+  <meta property="og:description" content="Calculate tubing, pump, flow-cell and other equipment volume, then compare a planned reading interval with user-entered volume exchanges.">
+  <meta property="og:url" content="https://watersystemsbench.com/tools/low-flow-equipment-volume-reading-interval-planner/">
+  <meta property="og:image" content="https://watersystemsbench.com/assets/og.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/content.css">
+  <link rel="stylesheet" href="/assets/css/calculator.css">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7FB08YPX7C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7FB08YPX7C');
+</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","@id":"https://watersystemsbench.com/tools/low-flow-equipment-volume-reading-interval-planner/#application","name":"Low-Flow Equipment Volume & Reading Interval Planner","description":"Calculate tubing, pump, flow-cell and other equipment volume, then compare a planned reading interval with user-entered volume exchanges.","url":"https://watersystemsbench.com/tools/low-flow-equipment-volume-reading-interval-planner/","applicationCategory":"EngineeringApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript"},{"@type":"BreadcrumbList","@id":"https://watersystemsbench.com/tools/low-flow-equipment-volume-reading-interval-planner/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://watersystemsbench.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://watersystemsbench.com/tools/"},{"@type":"ListItem","position":3,"name":"Low-Flow Equipment Volume & Reading Interval Planner","item":"https://watersystemsbench.com/tools/low-flow-equipment-volume-reading-interval-planner/"}]}]}</script>
+  <script type="module" src="/assets/js/partials.js"></script>
+  <script type="module" src="/assets/js/main.js"></script>
+  <script type="module" src="/assets/js/tools/monitoring-well-tools.js"></script>
+</head>
+<body>
+  <div data-header-slot></div>
+  <main id="main-content">
+    <div class="page-shell">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/tools/">Tools</a></li><li><span aria-current="page">Low-Flow Equipment Volume & Reading Interval Planner</span></li></ol></nav>
+      <header class="hero compact"><div><p class="eyebrow">Monitoring well purging and low-flow sampling / Planner</p><h1>Low-Flow Equipment Volume & Reading Interval Planner</h1><p class="lede">Calculate tubing, pump, flow-cell and other equipment volume, then compare a planned reading interval with user-entered volume exchanges.</p></div><p class="hero-note">Preliminary planning output only. Use measured data where possible and verify manufacturer and jurisdiction-specific requirements.</p></header>
+  <p class="meta-line">Last reviewed: August 31, 2026 · SI first · US customary supported</p>
+  <div class="tool-layout"><section class="instrument-panel"><div class="panel-heading"><h2>Bench inputs</h2><span class="panel-code">INPUT / SET</span></div><form data-tool-form="monitoring-well-equipment"><div class="field full"><label for="unitSystem">Unit system</label><select id="unitSystem" name="unitSystem" data-unit-system><option value="SI">SI — metric</option><option value="US">US customary</option></select></div><div class="field-grid"><div class="field "><label for="tubingDiameter">Tubing internal diameter (<span data-unit-label="diameter"></span>)</label><input id="tubingDiameter" name="tubingDiameter" data-label="Tubing internal diameter" type="number" value="6" data-unit-kind="diameter" step="any" required></div><div class="field "><label for="tubingLength">Wetted tubing length (<span data-unit-label="length"></span>)</label><input id="tubingLength" name="tubingLength" data-label="Wetted tubing length" type="number" value="20" data-unit-kind="length" step="any" required></div><div class="field "><label for="pumpVolume">Pump or chamber volume (mL)</label><input id="pumpVolume" name="pumpVolume" data-label="Pump or chamber volume (mL)" type="number" value="100"  step="any" required></div><div class="field "><label for="flowCellVolume">Flow-cell volume (mL)</label><input id="flowCellVolume" name="flowCellVolume" data-label="Flow-cell volume (mL)" type="number" value="250"  step="any" required></div><div class="field "><label for="otherVolume">Other wetted volume (mL)</label><input id="otherVolume" name="otherVolume" data-label="Other wetted volume (mL)" type="number" value="50"  step="any" required></div><div class="field "><label for="exchanges">Entered volume exchanges</label><input id="exchanges" name="exchanges" data-label="Entered volume exchanges" type="number" value="1"  step="any" required></div><div class="field "><label for="flow">Measured flow (<span data-unit-label="flow"></span>)</label><input id="flow" name="flow" data-label="Measured flow" type="number" value="0.25" data-unit-kind="flow" step="any" required></div><div class="field "><label for="plannedInterval">Planned reading interval (minutes)</label><input id="plannedInterval" name="plannedInterval" data-label="Planned reading interval (minutes)" type="number" value="5"  step="any" required></div></div><p class="form-error" data-form-error role="alert"></p><div class="button-row"><button class="button" type="submit">Plan reading interval</button><button class="button secondary" type="reset">Reset</button></div></form></section><section class="result-panel" aria-label="Result">
+    <div class="panel-heading"><h2>Operating report</h2><span class="panel-code">RESULT / LIVE</span></div>
+    <div class="result-empty"><p>Enter the known values, then calculate to build a result summary.</p></div>
+    <div class="result-report" aria-live="polite" hidden>
+      <div class="primary-reading"><span class="reading-label"></span><span class="reading-value"></span></div>
+      <div class="result-block"><h3>Supporting calculations</h3><ul data-supporting></ul></div>
+      <div class="result-block"><h3>Interpretation</h3><p data-interpretation></p></div>
+      <p class="result-warning" data-warning></p>
+      <div class="result-actions"><button class="button small secondary" type="button" data-result-action data-copy-result disabled>Copy result</button><button class="button small secondary" type="button" data-result-action data-print-result disabled>Print result</button></div>
+    </div>
+  </section></div>
+  <div class="content-layout"><article class="article-body">
+    <h2>What this tool does</h2><p>Prevents readings from being scheduled faster than the entered flow can displace the measured equipment volume.</p>
+    <h2>When to use it</h2><p>Use after measuring internal tubing diameter and length and obtaining wetted volumes for the installed pump, chamber and flow cell.</p>
+    <h2>Inputs and supported units</h2><p>Each labelled field explains the quantity it expects. Unit-system changes convert existing numeric entries once and keep calculations on a single SI internal basis. Supported shared units include L/min and GPM, metres and feet, kPa and psi, millimetres and inches, kW and hp, and °C and °F as relevant.</p>
+    <h2>Calculation or decision method</h2><div class="formula">Tubing volume = π × (inside diameter ÷ 2)² × length<br>Minimum interval = total equipment volume × entered exchanges ÷ flow</div>
+    <h2>How to interpret the result</h2><p>Read the primary result with the supporting breakdown and warning. A plausible number is not evidence that every input, operating case or design constraint has been included.</p>
+    <div class="worked-example"><h2>Worked example</h2><p>For 6 mm ID tubing over 20 m plus 100, 250 and 50 mL components, total equipment volume is about 0.97 L and one exchange takes about 3.86 minutes at 0.25 L/min.</p></div>
+    <h2>Assumptions</h2><p>Well construction, water levels, equipment dimensions, flow and field readings are site-specific measurements entered in consistent units. All comparison criteria are supplied by the user from the governing plan or authority.</p>
+    <h2>Limitations</h2><p>These tools calculate geometry, displacement and numeric variation only. They do not select a sampling method, prove sample representativeness, establish laboratory requirements or authorize collection or disposal.</p>
+    <div class="notice"><strong>Safety and review boundary.</strong> Follow the approved sampling and health-and-safety plans. Treat unknown groundwater and purge water as potentially contaminated; use qualified field staff, calibrated instruments, required PPE and lawful containment and disposal.</div>
+    <h2>Sources</h2><ul class="source-list"><li><a href="https://www.epa.gov/sites/default/files/2017-10/documents/eqasop-gw4.pdf" rel="noopener noreferrer">U.S. EPA — Groundwater Sampling Operating Procedure (EQASOP-GW4)</a></li><li><a href="https://www.epa.gov/remedytech/low-flow-minimal-drawdown-ground-water-sampling-procedures" rel="noopener noreferrer">U.S. EPA — Low-Flow (Minimal Drawdown) Ground-Water Sampling Procedures</a></li><li><a href="https://www.usgs.gov/centers/new-england-water-science-center/science/purge-analyzer-tool-pat-assess-optimal-pumping" rel="noopener noreferrer">U.S. Geological Survey — Purge Analyzer Tool (PAT)</a></li></ul>
+    <section aria-labelledby="related-heading"><h2 id="related-heading">Continue the workflow</h2><div class="related-grid"><a href="/tools/low-flow-sampling-setup-checker/">Low-Flow Sampling Setup Checker<br><span class="meta-line">Open next →</span></a><a href="/tools/groundwater-stabilization-log-analyzer/">Groundwater Stabilization Log Analyzer<br><span class="meta-line">Open next →</span></a><a href="/reference/groundwater-low-flow-field-parameters/">Groundwater Low-Flow Field Parameters<br><span class="meta-line">Open next →</span></a><a href="/systems/monitoring-well-sampling/">Monitoring well sampling workflow<br><span class="meta-line">Open next →</span></a></div></section>
+  </article><aside class="sidebar"><h2>Bench sequence</h2><ul><li><a href="/systems/wells-storage-rainwater/">Wells, Storage & Rainwater workflow</a></li><li><a href="/guides/complete-well-water-system-planning/">Plan the connected source system</a></li><li><a href="/reference/water-demand-planning-factors/">Check demand factors</a></li><li><a href="/contact/">Report a content issue</a></li></ul></aside></div>
+    </div>
+  </main>
+  <div data-footer-slot></div>
+</body>
+</html>
