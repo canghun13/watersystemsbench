@@ -8,7 +8,7 @@
 - Default branch: main
 - Contact: [canghun13@naver.com](mailto:canghun13@naver.com)
 - GA4 measurement ID: `G-7FB08YPX7C`
-- Current phase: Monitoring Well Purging & Low-Flow Sampling expansion implemented, QA complete and live on production; final documentation commit pending
+- Current phase: Shared button-state and Groundwater Stabilization Analyzer layout correction implemented, QA complete and live on production; final documentation commit pending
 - Language and audience: English; global
 - Stack and deployment: static HTML/CSS/vanilla JavaScript; GitHub Pages plus Cloudflare
 - Phase 2 starting commit: `3c2b450e361a8a8ea0d351059bdef0e121b95071`
@@ -17,7 +17,7 @@
 
 The repository contains a deployed static site with 98 public HTML pages: seven core pages, eight connected system hubs, 51 working tools, 20 guides and 12 references, plus shared design and conversion modules, repeatable QA, current discovery/expansion records, social preview, favicons and `CNAME`.
 
-The latest validated expansion is Monitoring Well Purging & Low-Flow Sampling. Development documents remain excluded from the production artifact and `/docs/` returns 404.
+The latest validated expansion is Monitoring Well Purging & Low-Flow Sampling. The latest production correction fixes shared button-state contrast and groups/aligned thresholds in its Groundwater Stabilization Log Analyzer without changing the 98-page inventory, any algorithm or any public URL. Development documents remain excluded from the production artifact and `/docs/` returns 404.
 
 ## Irrigation Specification Task Record
 
@@ -764,3 +764,31 @@ Files changed for the implementation and evidence contract:
 - The live homepage retained all five protected badge targets. The live analyzer at 390px produced `MET` from its default record with zero document overflow and no browser console errors.
 - Final public count: 98. Final sitemap count: 98. New public URLs: 7.
 - The final documentation commit is the commit containing this release entry. Verify it against `origin/main` and a clean working tree in the final delivery.
+
+## Shared button states and stabilization analyzer layout — 2026-08-31
+
+### Scope and implementation
+
+- Starting point: clean `main` at `c21225f5c7f08cd5d663d21abbfdc30b34ad9e47`, equal to fetched `origin/main` and the actual remote branch.
+- The production hover defect was reproduced on a generated result action: `.button:hover` supplied a teal background, but the later equal-specificity `.button.secondary` rule restored a transparent background; `.button.secondary:hover` then supplied only white text. The actual state was therefore transparent/white.
+- Shared normal, hover, focus-visible, active and disabled contracts now use explicit foreground, background and border pairs. Hover uses white on `--navy-800` (`#123e50`) at a measured 11.47:1 contrast ratio; active uses `--navy-950`; disabled secondary buttons remain transparent with navy text and border.
+- The Groundwater Stabilization Log Analyzer thresholds are now grouped semantically as **Comparison window**, **Water-quality stability limits** and **Hydraulic stability limits**. Desktop pairs align at 1024, 1280 and 1440px; 390 and 768px use one column. The existing 390px CSV label/help wrapping fix remains intact.
+- The analyzer algorithm, defaults, parser, unit conversions, result wording and JavaScript were not changed. No public URL, inventory, sitemap or discovery surface changed.
+- Protected areas are byte-unchanged from the starting commit: homepage badge block, Tool Finder assets, workflow-arrow implementation, responsive content-table CSS and sitemap. GA4 remains exactly `G-7FB08YPX7C`; production `/docs/` exposure remains absent.
+
+### Verification
+
+- Calculation verification passed all established suites, including all 30 monitoring-well numeric/validation checks. Publish-boundary, analytics, static and navigation QA passed at 98 public pages, 51 tools and 98 sitemap URLs.
+- Fresh in-app browser regression completed **490/490 renders**: 98 pages × 390, 768, 1024, 1280 and 1440px. Console errors, missing H1s, broken images, unlabelled form controls, horizontal overflow and responsive-table failures were 0; 25 responsive table checks passed.
+- All 51 tools produced a valid default result and cleared it on reset; 46 applicable tools passed SI→US unit switching. Tool Finder passed search, system, type, combined and reset scenarios, and its 390px mobile menu opened correctly.
+- Shared button states passed on Low-Flow Sampling Setup Checker, Groundwater Stabilization Log Analyzer, Monitoring Well Purge Volume & Time Calculator and the older Total Dynamic Head Calculator. Normal, hover, keyboard focus-visible and disabled states were measured in the browser; active and disabled selectors are enforced by static QA.
+- The analyzer passed default valid output, invalid insufficient-window handling with stale-result clearing, error recovery, reset, malformed CSV upload, valid CSV upload, copy/clipboard, print and unit-switch scenarios. Desktop paired input `y` coordinates were identical at 1024/1280/1440; 390/768 were single-column with no document overflow.
+- The isolated QA server intercepted 555 approved Google Analytics loader requests and completed 0 Analytics requests. The exact approved-host blocker and production GA source tag remain unchanged.
+
+### Release and live verification
+
+- Implementation commit: `6f0548ae067719bee7692862fcd01d923a62a143` (`Fix shared button hover and stabilization form layout`).
+- GitHub Pages run `33373393822` deployed that exact implementation SHA successfully: `https://github.com/canghun13/watersystemsbench/actions/runs/33373393822`.
+- Cache-bypassing live HTTP checks returned 200 for the homepage and both target tools; all retained GA4 `G-7FB08YPX7C`. Live sitemap returned 200 with 98 URLs and `/docs/` returned 404.
+- Live browser verification measured the result-button hover as white on `rgb(18, 62, 80)` and the low-flow setup result remained `MET`. The live analyzer showed aligned two-column threshold pairs at 1024px, one-column groups at 390px, default `MET`, zero horizontal overflow and zero console errors.
+- Final public count: 98. Final tool count: 51. New public URLs: 0. The final documentation commit is the commit containing this entry; verify it against `origin/main` and a clean working tree in the final delivery.
