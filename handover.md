@@ -8,16 +8,16 @@
 - Default branch: main
 - Contact: [canghun13@naver.com](mailto:canghun13@naver.com)
 - GA4 measurement ID: `G-7FB08YPX7C`
-- Current phase: Greywater Reuse Planning expansion implemented and QA complete; production verification follows the final `main` push
+- Current phase: Monitoring Well Purging & Low-Flow Sampling expansion implemented, QA complete and live on production; final documentation commit pending
 - Language and audience: English; global
 - Stack and deployment: static HTML/CSS/vanilla JavaScript; GitHub Pages plus Cloudflare
 - Phase 2 starting commit: `3c2b450e361a8a8ea0d351059bdef0e121b95071`
 
 ## Current Repository State
 
-The repository contains a deployable static site with 40 public HTML pages, two connected system hubs, 17 working tools, eight guides, six references, shared design and conversion modules, repeatable QA, current planning documents, social preview, favicons and `CNAME`.
+The repository contains a deployed static site with 98 public HTML pages: seven core pages, eight connected system hubs, 51 working tools, 20 guides and 12 references, plus shared design and conversion modules, repeatable QA, current discovery/expansion records, social preview, favicons and `CNAME`.
 
-The current public implementation is unchanged. The future Irrigation & Sprinkler Systems cluster is specified in `docs/irrigation-sprinkler-spec.md`; none of its 11 routes exists yet.
+The latest validated expansion is Monitoring Well Purging & Low-Flow Sampling. Development documents remain excluded from the production artifact and `/docs/` returns 404.
 
 ## Irrigation Specification Task Record
 
@@ -723,3 +723,44 @@ Files changed for the implementation and evidence contract:
 - The live homepage retained all five protected KittyLaunch, SellWithBoost, Twelve Tools, Findly and BoostDomainRating targets/assets.
 - Final public count: 91. Final sitemap count: 91. New public URLs: 8.
 - The final documentation commit is the commit containing this release update; verify it against `origin/main` and a clean working tree in the final delivery.
+
+## Monitoring well purging and low-flow sampling expansion — 2026-08-31
+
+### Start and discovery
+
+- Repository: `https://github.com/canghun13/watersystemsbench`, branch `main`.
+- The first local inspection found `413fb8ff57af0b5579c092d204c053f4c9b9f23c`; a fetch showed the actual remote at `66c3c255b4ac0b1f7459067be47d990812cc24ab`, five commits ahead. The worktree was clean and was fast-forwarded before discovery or implementation.
+- Starting inventory: 91 public pages — 7 core, 7 hubs, 47 tools, 19 guides and 11 references.
+- The exclusion union contained 72 previously reviewed workflow families, including implemented Greywater, Vehicle Wash and Metal Finishing clusters. Forty-five genuinely new families were screened, ten were shortlisted and five received full Gate A–K validation. Evidence and scoring are recorded in `docs/workflow-cluster-discovery-2026-08-31.md`.
+- Top scores: Monitoring Well Purging & Low-Flow Sampling 94; Earthwork Soil Moisture Conditioning 87; Water-Miscible Metalworking-Fluid Sump Management 84; Ice-Rink Resurfacing Water/Energy 81; Portable Sanitation & Restroom-Trailer Operations 81.
+- Final decision: **GO — Monitoring Well Purging & Low-Flow Sampling.** It provided four independent repeat-use field decisions, primary EPA/USGS methods, a cohesive setup-to-record workflow and a clear free-tool gap. The boundary remains numeric preparation and comparison, never method selection or sampling authorization.
+
+### Implementation
+
+- Contract: `docs/monitoring-well-sampling-expansion.md`.
+- New hub: `/systems/monitoring-well-sampling/`.
+- New tools: Monitoring Well Purge Volume & Time Calculator; Low-Flow Sampling Setup Checker; Low-Flow Equipment Volume & Reading Interval Planner; Groundwater Stabilization Log Analyzer.
+- New guide: `/guides/plan-monitoring-well-purging-low-flow-sampling/`.
+- New reference: `/reference/groundwater-low-flow-field-parameters/`, with a labelled, keyboard-focusable responsive `.table-scroll` wrapper.
+- The stabilization analyzer accepts pasted text or a locally selected CSV with the exact columns `minutes,pH,temperature,conductivity,do,orp,turbidity,depthToWater,flow`. It validates every row, requires strictly increasing time, skips nothing silently, integrates volume using the preceding flow and reports only whether user-entered criteria are met.
+- Final inventory: 98 public pages — 7 core, 8 hubs, 51 tools, 20 guides and 12 references. Sitemap parity is 98; Tool Finder exposes 51 cards across eight systems.
+- Homepage, header/footer, Tools/Guides/Reference hubs, sitemap, `llms.txt` and page inventory expose the new workflow. The protected KittyLaunch, SellWithBoost, Twelve Tools, Findly and BoostDomainRating badge block is unchanged.
+
+### Verification
+
+- Independent calculation verification passed all prior suites plus **30 monitoring-well numeric and validation checks** for well geometry, purge time, whole containers, setup conflicts, equipment displacement, reading intervals, strict parsing, absolute/relative ranges, integration and invalid windows.
+- Publish-boundary, analytics, static and navigation QA passed: 98 public pages, 2 runtime fragments, unique metadata, valid JSON-LD, exact `G-7FB08YPX7C`, complete local assets/links, 98 sitemap URLs and zero production `/docs/` routes.
+- In-app browser regression completed **490 renders**: 98 pages × 390, 768, 1024, 1280 and 1440px. H1/title failures, workflow-arrow glyphs, broken images, table clipping and final document overflow were 0.
+- All 51 tools produced a valid default result and cleared it on reset. The four new tools passed invalid-state clearing; the local CSV analyzer passed valid and malformed input; SI/US conversion, result copy, Tool Finder search/system/type/empty/reset behavior and the mobile menu passed.
+- Browser QA intercepted 651 analytics loader requests through the QA guard and completed 0 analytics requests. Console warnings/errors were 0.
+- One responsive defect was found and fixed: the unbroken CSV schema label caused a 157px overflow on the analyzer at 390px. The visible label was shortened and the schema moved to wrapping help text; the final document overflow was 0.
+
+### Release and live verification
+
+- Implementation commit: `a1ef168cb14a5a93fa40f61377d1d865ac4e239a` (`Build monitoring well sampling cluster`). It was pushed to `main`; local `HEAD`, fetched `origin/main` and `git ls-remote origin refs/heads/main` all matched.
+- GitHub Pages run `33355455250` deployed that exact SHA successfully: `https://github.com/canghun13/watersystemsbench/actions/runs/33355455250`.
+- Live HTTP checks returned 200 for the new hub, four tools, guide and reference. Every new HTML route had one H1, the exact canonical URL and production GA4 ID.
+- Live `sitemap.xml` contained 98 URLs and zero `/docs/` URLs; `https://watersystemsbench.com/docs/` returned 404.
+- The live homepage retained all five protected badge targets. The live analyzer at 390px produced `MET` from its default record with zero document overflow and no browser console errors.
+- Final public count: 98. Final sitemap count: 98. New public URLs: 7.
+- The final documentation commit is the commit containing this release entry. Verify it against `origin/main` and a clean working tree in the final delivery.
