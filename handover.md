@@ -8,7 +8,7 @@
 - Default branch: main
 - Contact: [canghun13@naver.com](mailto:canghun13@naver.com)
 - GA4 measurement ID: `G-7FB08YPX7C`
-- Current phase: Shared button-state and Groundwater Stabilization Analyzer layout correction implemented, QA complete and live on production; final documentation commit pending
+- Current phase: Monitoring Well targeted indexability/discovery audit complete; no site-side defect found and no production change made
 - Language and audience: English; global
 - Stack and deployment: static HTML/CSS/vanilla JavaScript; GitHub Pages plus Cloudflare
 - Phase 2 starting commit: `3c2b450e361a8a8ea0d351059bdef0e121b95071`
@@ -792,3 +792,38 @@ Files changed for the implementation and evidence contract:
 - Cache-bypassing live HTTP checks returned 200 for the homepage and both target tools; all retained GA4 `G-7FB08YPX7C`. Live sitemap returned 200 with 98 URLs and `/docs/` returned 404.
 - Live browser verification measured the result-button hover as white on `rgb(18, 62, 80)` and the low-flow setup result remained `MET`. The live analyzer showed aligned two-column threshold pairs at 1024px, one-column groups at 390px, default `MET`, zero horizontal overflow and zero console errors.
 - Final public count: 98. Final tool count: 51. New public URLs: 0. The final documentation commit is the commit containing this entry; verify it against `origin/main` and a clean working tree in the final delivery.
+
+## Monitoring Well targeted indexability and discovery audit — 2026-09-18
+
+### Start and scope
+
+- Repository: `https://github.com/canghun13/watersystemsbench`, branch `main`.
+- Starting commit: `6307d8f2f8d64477ee85262c12417548e795d3f3`; local `HEAD`, fetched `origin/main` and actual remote `main` matched, and the worktree was clean.
+- Starting and final inventory: 98 public pages — 7 core, 8 hubs, 51 tools, 20 guides and 12 references. Sitemap count: 98.
+- User-provided GSC observation: six Monitoring Well URLs remained `Discovered - currently not indexed` / effectively uncrawled for about two weeks, while `/tools/low-flow-equipment-volume-reading-interval-planner/` had a known search signal. No authenticated Search Console access was used and no unavailable GSC values were inferred.
+- Group A targets: `/systems/monitoring-well-sampling/`; `/tools/monitoring-well-purge-volume-calculator/`; `/tools/low-flow-sampling-setup-checker/`; `/tools/groundwater-stabilization-log-analyzer/`; `/guides/plan-monitoring-well-purging-low-flow-sampling/`; `/reference/groundwater-low-flow-field-parameters/`.
+- Controls: the same-cluster equipment-volume/reading-interval planner plus `/systems/irrigation-sprinklers/`, `/tools/available-water-flow-test-calculator/`, `/tools/water-softener-sizing-calculator/`, `/guides/how-to-size-a-water-pump/` and `/reference/water-pressure-head-conversion/`.
+- Full evidence: `docs/monitoring-well-indexability-audit-2026-09-18.md`.
+
+### Findings and classification
+
+- All 12 target/control pages returned live 200 to normal and Googlebot user agents with byte-identical HTML between UAs. All 12 non-slash forms returned one expected 301 to the trailing-slash canonical; HTTP and HTTPS `www` hub variants canonicalized to HTTPS apex.
+- Live robots allowed all crawling; every page had `index,follow`, no `X-Robots-Tag` and an exact HTTPS apex self-canonical.
+- Sitemap XML parsed as 98 unique, well-formed canonical URLs with all seven Monitoring Well pages exactly once and no duplicates. Repository and live bytes matched for all 12 pages, robots and sitemap.
+- Initial HTML contains each H1, core copy, tool form where applicable, primary static links, canonical and valid JSON-LD. The homepage, Monitoring Well hub and type indexes provide literal anchors; all six targets are non-orphaned at static depth 1–2, equal to or shallower than controls.
+- Titles, H1s, introductions, input sets, methods and outputs are independently purposeful. No thin placeholder, renamed duplicate shell, broken schema URL, registry/HTML mismatch or stale generated artifact was found.
+- Classification for all six targets: **Type 4 — No defect found / Google crawl scheduling**. Gates A–C failed because no site-side defect or control divergence exists; Gate D was not reached.
+
+### Changes, QA and decision
+
+- Production HTML changes: 0.
+- Production CSS changes: 0.
+- Production JS changes: 0.
+- Generator changes: 0.
+- Sitemap changes: 0.
+- Documentation-only changes: the targeted audit record and this handover entry.
+- Targeted live probes passed 12/12 normal-UA responses, 12/12 Googlebot-UA responses, 12/12 slash redirects, 12/12 canonical/meta/schema checks and exact repository/live parity for the 12 pages plus robots and sitemap.
+- Publish-boundary, analytics, static and navigation QA passed at 98 public pages and 98 sitemap URLs. Live `/docs/page-inventory.html`, `/docs/information-architecture.html` and `/docs/project-plan.html` each returned 404.
+- The analytics blocker remains intact; direct live HTTP probes did not execute page JavaScript and completed zero Analytics requests. The live homepage retained KittyLaunch, SellWithBoost, Twelve Tools, Findly and BoostDomainRating. No full-site browser/render regression was run because production artifacts did not change.
+- Final decision: **NO-CHANGE — no site-side defect found; continue observation.** Reopen only on a concrete fetch/render/canonical/robots/sitemap/static-link or deployment-parity failure, not on persistence of crawl scheduling alone.
+- Audit documentation commit: the commit containing this entry. Confirm its exact SHA against local `HEAD`, fetched `origin/main` and actual remote `main` after push; the final delivery records that equality and a clean working tree.
