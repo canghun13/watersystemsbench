@@ -30,5 +30,7 @@ if (finder) {
 
   form.addEventListener("input", update);
   form.addEventListener("change", update);
-  form.addEventListener("reset", () => queueMicrotask(update));
+  // A native reset event runs before the controls' default values are restored.
+  // Recompute on the next frame, after that default action has completed.
+  form.addEventListener("reset", () => requestAnimationFrame(update));
 }

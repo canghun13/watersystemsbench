@@ -8,7 +8,7 @@
 - Default branch: main
 - Contact: [canghun13@naver.com](mailto:canghun13@naver.com)
 - GA4 measurement ID: `G-7FB08YPX7C`
-- Current phase: Monitoring Well targeted indexability/discovery audit complete; no site-side defect found and no production change made
+- Current phase: October 1 weekly growth review; Tool Finder native-reset defect corrected and locally verified, release verification in progress
 - Language and audience: English; global
 - Stack and deployment: static HTML/CSS/vanilla JavaScript; GitHub Pages plus Cloudflare
 - Phase 2 starting commit: `3c2b450e361a8a8ea0d351059bdef0e121b95071`
@@ -17,7 +17,7 @@
 
 The repository contains a deployed static site with 98 public HTML pages: seven core pages, eight connected system hubs, 51 working tools, 20 guides and 12 references, plus shared design and conversion modules, repeatable QA, current discovery/expansion records, social preview, favicons and `CNAME`.
 
-The latest validated expansion is Monitoring Well Purging & Low-Flow Sampling. The latest production correction fixes shared button-state contrast and groups/aligned thresholds in its Groundwater Stabilization Log Analyzer without changing the 98-page inventory, any algorithm or any public URL. Development documents remain excluded from the production artifact and `/docs/` returns 404.
+The latest validated expansion is Monitoring Well Purging & Low-Flow Sampling. The October 1 correction fixes Tool Finder native reset ordering without changing the 98-page inventory, calculations, public URLs, shared styles or protected badges. The prior shared-button and stabilization-form corrections remain intact. Development documents remain excluded from the production artifact and `/docs/` returns 404.
 
 ## Irrigation Specification Task Record
 
@@ -827,3 +827,41 @@ Files changed for the implementation and evidence contract:
 - The analytics blocker remains intact; direct live HTTP probes did not execute page JavaScript and completed zero Analytics requests. The live homepage retained KittyLaunch, SellWithBoost, Twelve Tools, Findly and BoostDomainRating. No full-site browser/render regression was run because production artifacts did not change.
 - Final decision: **NO-CHANGE — no site-side defect found; continue observation.** Reopen only on a concrete fetch/render/canonical/robots/sitemap/static-link or deployment-parity failure, not on persistence of crawl scheduling alone.
 - Audit documentation commit: the commit containing this entry. Confirm its exact SHA against local `HEAD`, fetched `origin/main` and actual remote `main` after push; the final delivery records that equality and a clean working tree.
+
+## Weekly Growth / Search Review — 2026-10-01
+
+### Repository and reports
+
+- Repository/branch: `canghun13/watersystemsbench`, `main`. Start local HEAD, fetched `origin/main` and actual remote main: `5ae45dfca4aac3e480f5454955d51f6cfafca13b`; ahead/behind 0/0; clean tree; no sync required.
+- Current-session reports only: October 1 GSC Performance and Coverage ZIPs, Bing PageTrafficReport and KeywordReport CSVs, and `보고서_개요.csv`. All were usable during initial analysis; no older attachment or directory search was substituted. Raw reports are not committed.
+- GSC chart range July 26–September 28: 6 clicks / 1,110 impressions / 0.541% CTR / impression-weighted rounded daily position 41.703. Latest seven days September 22–28: 1 click / 75 impressions versus September 15–21: 1 / 90; impressions -16.67%, clicks flat, weighted position 22.933 versus 29.138. This small, mix-sensitive comparison is not durable-growth proof.
+- Coverage through September 21: 33 discovered-not-indexed URLs, unchanged since August 29. Crawled-not-indexed and validation status are unavailable; `1970-01-01` crawl cells are placeholders/unavailable. Do not reopen the Monitoring Well audit merely because its six Group A URLs remain queued.
+- GA4 September 3–30: 213 active users; first-user organic Bing 11, Google 3, DuckDuckGo 5; session organic Bing 14, Google 3, DuckDuckGo 5. Direct 186 and September 17's 116 new users are not proven user demand or proven bots. Small ChatGPT/KittyLaunch/Twelve Tools referrals remain secondary evidence.
+- Bing page aggregate: 486 impressions / 16 clicks, period unavailable. Keyword aggregate: 389 / 16; different aggregation, not additive. One malformed quote/comma keyword row was parsed by its trailing numeric cells without altering the source.
+- Page/query/GA4/Bing weekly movement is unavailable without matched dated exports. GSC page/query tables differ from chart aggregation and do not provide a joined query-by-page attribution.
+
+### Decision and bounded implementation
+
+- **FIX — Tool Finder native Clear filters restored fields but left stale cards/count.**
+- Search review identified the rinse-water guide as the strongest growth candidate (87/100): 90 GSC impressions at position 7.84; related rinse-control query 64 impressions at 8.8; missing control-selection and quality/production verification detail. Pipe ID reference (57) and treatment guide (64) have weaker freshly demonstrated gaps.
+- Initial guide upgrade was drafted locally, then deferred and entirely reverted before any commit/deployment when fresh native-browser regression found the higher-priority defect. **No guide, metadata, generator or sitemap changes were released.** Future work may reassess that real opportunity; do not credit this session with guide improvements.
+- Actual defect reproduction: select Metal Finishing, search `conductivity`, see one card; click Clear filters; fields restore to empty/all but cards/count remain 1. A later input event restores 51. Independent reproduction confirmed the native path; live production JS contained the old scheduling primitive before release.
+- Root cause/fix: reset microtask recomputed before the browser's native default reset completed. Change only `assets/js/tool-finder.js` to `requestAnimationFrame(update)` after that default action. Matching logic, catalog and CSS are unchanged.
+- Expansion branch not entered because Priority A applies. No full new-cluster exclusion audit, 40-family screen or expansion NO-GO is claimed. A later expansion must still use the required broad funnel; low traffic alone is not a HOLD reason.
+- Public inventory and sitemap remain 98 (7 core, 8 hubs, 51 tools, 20 guides, 12 references). Analytics blocker, `_config.yml` publication exclusion, KittyLaunch/SellWithBoost/Twelve Tools/Findly/BoostDomainRating block and all existing tool math remain unchanged.
+
+### Fresh QA and operation
+
+- Static/navigation/publish-boundary/analytics QA passed at 98 public pages plus 2 runtime fragments. Existing calculation verifier passed 391 cases/scenarios; 8 additional targeted numeric/log assertions passed.
+- `tools-qa/weekly-growth-qa.mjs` is a separate targeted runner, not a replacement for historical `browser-results.json`. Use the configured bundled Node/Playwright runtime via `NODE_PATH` and already installed Chrome; do not install dependencies or reset the environment. Start the existing guarded server on port 4187, then run this file. Optional `WSB_QA_BASE`, `WSB_QA_REPORT` and `WSB_QA_IMAGES` choose the target and artifact location.
+- Local fresh QA: nine pages × five widths (390/768/1024/1280/1440) = 45 renders, 75 geometry snapshots, 31 interaction entries. Finder native-click/keyboard/programmatic reset passes across all widths. Relevant tools pass run/result/Copy/Reset/refill/re-run/unit round trip, local CSV/error recovery and print hook/media checks; no native print-dialog claim.
+- Actual screenshots inspected at 390/1280 for Finder, stabilization criteria and button focus/hover. No runtime, internal HTTP, unexpected request, document overflow, off-screen selected-control or initial header/H1 overlap failures. Server intercepted 45 Analytics scripts; completed Analytics requests 0.
+- `tools-qa/weekly-growth-live-qa.mjs` performs non-executing exact-content HTTP/canonical/GA4/sitemap/robots/docs-boundary probes. Production browser QA must install the existing exact-six-host blocker before the first navigation; it must not remove GA4 from production or block general Google hosts.
+- Weekly decision/evidence record: `docs/weekly-growth-review-2026-10-01.md`. Development docs and QA outputs remain excluded from production.
+- Implementation commit is the commit containing this entry. Exact deployment/live evidence will be added after successful push and Pages verification.
+
+### Next state — maximum three
+
+1. Reassess the deferred rinse-water guide with matched GSC windows and query/page attribution; no guide change occurred this week.
+2. Watch for concrete fetch/render/indexability failures; the existing Monitoring Well discovered queue alone does not reopen its audit.
+3. Obtain comparable GA4/Bing periods and classify the Direct spike if evidence permits; broad expansion discovery is conditional on technical health and lack of a higher-ROI existing upgrade.
