@@ -36,7 +36,7 @@ try {
   assert.equal((sitemap.text.match(/<loc>/g) || []).length, 98); assert.ok(!sitemap.text.includes("/docs/"));
   assert.equal(hash(sitemap.text), hash(await readFile(join(root, "sitemap.xml"), "utf8")));
   const robots = await get("/robots.txt"); assert.equal(robots.response.status, 200); assert.ok(robots.text.includes("Allow: /")); assert.ok(robots.text.includes(`${domain}/sitemap.xml`));
-  for (const path of ["/docs/", "/docs/weekly-growth-review-2026-10-01", "/docs/weekly-growth-review-2026-10-01.html", "/docs/weekly-growth-review-2026-10-01.md", "/handover.html", "/tools-qa/weekly-growth-qa.mjs"]) assert.equal((await get(path)).response.status, 404, path);
+  for (const path of ["/docs/", "/docs/weekly-growth-review-2026-10-01", "/docs/weekly-growth-review-2026-10-01.html", "/docs/weekly-growth-review-2026-10-01.md", "/docs/page-inventory.html", "/docs/information-architecture.html", "/docs/project-plan.html", "/docs/metal-finishing-rinse-water-expansion.html", "/handover.html", "/tools-qa/weekly-growth-qa.mjs"]) assert.equal((await get(path)).response.status, 404, path);
   const bot = await get("/tools/", { headers: { "User-Agent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" } });
   assert.equal(bot.response.status, 200); assert.equal(hash(bot.text), hash(await readFile(join(root, "tools/index.html"), "utf8")));
   results.result = "passed";

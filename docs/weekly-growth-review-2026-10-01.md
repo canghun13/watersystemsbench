@@ -155,7 +155,15 @@ A current topic search also found first-party vendor conductivity-controller/rin
 
 ### Release state
 
-Exact-SHA Pages and live checks pending. Complete this section after deployment; do not label local-only evidence production PASS.
+- Implementation commit: `8a77095df78874587a87a09dd16bc4722c57cf1a`, pushed successfully to main; local/fetched-origin/actual remote all matched immediately after push.
+- Exact-SHA GitHub Pages deployment succeeded in [run 36834304063](https://github.com/canghun13/watersystemsbench/actions/runs/36834304063), completed October 1 at `2026-10-01T08:07:27Z`.
+- Fresh production browser report: `tools-qa/weekly-growth-production-results.json`; 45 renders, 75 geometry snapshots and 31 interaction entries across the same five widths. All 15 native-click/keyboard/programmatic Finder reset scenarios pass. Relevant tool run/result/Copy/Reset/refill/re-run/unit and print-hook/media scenarios pass. No runtime, internal HTTP, unexpected request or selected-layout failures.
+- Production route blocker was installed before navigation: 45 Analytics scripts intercepted, **0 completed**. An additional desktop toolbar capture/native reset check intercepted 1, completed 0. The production GA4 tag is unchanged.
+- Actual production screenshots inspected: 390px Finder with restored 51-card count, 1280px card layout, and a close desktop toolbar capture confirming readable reset controls and restored count. Protected controls were inspected in the local fresh matrix and also executed against production.
+- Non-executing production HTTP report: `tools-qa/weekly-growth-live-results.json`, **21/21 expected responses and content checks passed**. HTTP→HTTPS 301, public routes 200, exact local/live content hashes, self-canonical/indexable metadata, one GA4 config, unchanged 98-URL sitemap and open robots all pass. Normal and Googlebot Tool Finder HTML match.
+- `/docs/`, new weekly report extension variants, existing page-inventory/information-architecture/project-plan/metal-expansion HTML, handover HTML and the QA runner all return 404. Home retains all five protected badge names/links.
+- Deployed Finder JS SHA-256: `39e8a72a7b786d9850fda1086b1dc142cad06ae8ca0d40de05bf4ada3c426b03`. The guide's unchanged hash is `6799a221fb91d6c54ebf50a5c2efae244e28b80a91944abc867039178b5cbd9a`; sitemap is `60f7eb2412f73ea6cd28953bf384b3db34b8e038d0e37fa6764645a49212061e`.
+- Final release-record commit is the commit containing this evidence plus production QA outputs. It changes development-only files, not production artifacts; verify its follow-up Pages run and final local/origin/actual remote equality in final delivery. No indexing or traffic lift is claimed.
 
 ## Next state — maximum three
 

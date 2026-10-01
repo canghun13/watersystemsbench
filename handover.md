@@ -8,7 +8,7 @@
 - Default branch: main
 - Contact: [canghun13@naver.com](mailto:canghun13@naver.com)
 - GA4 measurement ID: `G-7FB08YPX7C`
-- Current phase: October 1 weekly growth review; Tool Finder native-reset defect corrected and locally verified, release verification in progress
+- Current phase: October 1 weekly growth review complete; Tool Finder native-reset defect corrected, deployed and verified on production
 - Language and audience: English; global
 - Stack and deployment: static HTML/CSS/vanilla JavaScript; GitHub Pages plus Cloudflare
 - Phase 2 starting commit: `3c2b450e361a8a8ea0d351059bdef0e121b95071`
@@ -858,7 +858,11 @@ Files changed for the implementation and evidence contract:
 - Actual screenshots inspected at 390/1280 for Finder, stabilization criteria and button focus/hover. No runtime, internal HTTP, unexpected request, document overflow, off-screen selected-control or initial header/H1 overlap failures. Server intercepted 45 Analytics scripts; completed Analytics requests 0.
 - `tools-qa/weekly-growth-live-qa.mjs` performs non-executing exact-content HTTP/canonical/GA4/sitemap/robots/docs-boundary probes. Production browser QA must install the existing exact-six-host blocker before the first navigation; it must not remove GA4 from production or block general Google hosts.
 - Weekly decision/evidence record: `docs/weekly-growth-review-2026-10-01.md`. Development docs and QA outputs remain excluded from production.
-- Implementation commit is the commit containing this entry. Exact deployment/live evidence will be added after successful push and Pages verification.
+- Implementation commit: `8a77095df78874587a87a09dd16bc4722c57cf1a`, pushed to main. GitHub Pages [run 36834304063](https://github.com/canghun13/watersystemsbench/actions/runs/36834304063) deployed that exact SHA successfully at `2026-10-01T08:07:27Z`.
+- Production browser report `tools-qa/weekly-growth-production-results.json` passes 45 renders/75 geometry snapshots/31 interactions across all five widths. Native-click/keyboard/programmatic Finder resets restore all 51 cards/count; related tool scenarios pass. Actual production mobile and desktop screenshots were inspected. Analytics intercepted 45/completed 0; an extra desktop toolbar native-reset capture intercepted 1/completed 0.
+- Production HTTP report `tools-qa/weekly-growth-live-results.json` passes 21/21 expected responses/content checks: HTTP→HTTPS 301, public 200s, exact JS/HTML/sitemap parity, canonical/index permission, normal/Googlebot parity, unchanged GA4 and badges. New weekly-doc variants, legacy development-doc HTML, `/docs/`, handover and QA runner all return 404.
+- Live JS SHA-256 `39e8a72a7b786d9850fda1086b1dc142cad06ae8ca0d40de05bf4ada3c426b03`; unchanged rinse guide `6799a221fb91d6c54ebf50a5c2efae244e28b80a91944abc867039178b5cbd9a`; unchanged sitemap `60f7eb2412f73ea6cd28953bf384b3db34b8e038d0e37fa6764645a49212061e`.
+- Final release-record commit is the commit containing this evidence and production QA outputs. Only development-only files differ from the deployed implementation; final delivery must verify its follow-up Pages run, equal local HEAD/fetched `origin/main`/actual remote main, 0/0 ahead/behind and clean tree. No search lift or changed indexing state is claimed.
 
 ### Next state — maximum three
 

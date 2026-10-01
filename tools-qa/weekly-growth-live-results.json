@@ -1,0 +1,155 @@
+{
+  "date": "2026-10-01",
+  "checkedAt": "2026-10-01T08:10:25.793Z",
+  "requests": [
+    {
+      "url": "http://watersystemsbench.com/",
+      "status": 301,
+      "finalUrl": "http://watersystemsbench.com/",
+      "sha256": "6aaad3365c30c4f8d2504e569527e588d33eeae66dd7045bcfeef7413820db2a",
+      "xRobots": null
+    },
+    {
+      "url": "https://watersystemsbench.com/",
+      "status": 200,
+      "finalUrl": "https://watersystemsbench.com/",
+      "sha256": "ab5e048ae2bd7f883ef1e55cbf8e02b8a116503a2ac9731a01a742625664b945",
+      "xRobots": null
+    },
+    {
+      "url": "https://watersystemsbench.com/tools/",
+      "status": 200,
+      "finalUrl": "https://watersystemsbench.com/tools/",
+      "sha256": "579b53e63cdbca8da62e9146f41d9c33f55b39c72ae7ceab24d818b050b9b646",
+      "xRobots": null
+    },
+    {
+      "url": "https://watersystemsbench.com/guides/reduce-metal-finishing-rinse-water/",
+      "status": 200,
+      "finalUrl": "https://watersystemsbench.com/guides/reduce-metal-finishing-rinse-water/",
+      "sha256": "6799a221fb91d6c54ebf50a5c2efae244e28b80a91944abc867039178b5cbd9a",
+      "xRobots": null
+    },
+    {
+      "url": "https://watersystemsbench.com/tools/rinse-conductivity-log-analyzer/",
+      "status": 200,
+      "finalUrl": "https://watersystemsbench.com/tools/rinse-conductivity-log-analyzer/",
+      "sha256": "9ae3320f3c0b6577df6d967556b1566d0d44e55610b43183c1edcef668ccda98",
+      "xRobots": null
+    },
+    {
+      "url": "https://watersystemsbench.com/tools/countercurrent-rinse-flow-planner/",
+      "status": 200,
+      "finalUrl": "https://watersystemsbench.com/tools/countercurrent-rinse-flow-planner/",
+      "sha256": "48f8a063230ae93962588fd9042cb31f55feae1d9f234aa23593018d72948c74",
+      "xRobots": null
+    },
+    {
+      "url": "https://watersystemsbench.com/tools/groundwater-stabilization-log-analyzer/",
+      "status": 200,
+      "finalUrl": "https://watersystemsbench.com/tools/groundwater-stabilization-log-analyzer/",
+      "sha256": "0119a620d34f4b0669b1dc0fb5358b6f7136ad1856e0c1dd4ae21ac52167dfe5",
+      "xRobots": null
+    },
+    {
+      "url": "https://watersystemsbench.com/assets/js/tool-finder.js",
+      "status": 200,
+      "finalUrl": "https://watersystemsbench.com/assets/js/tool-finder.js",
+      "sha256": "39e8a72a7b786d9850fda1086b1dc142cad06ae8ca0d40de05bf4ada3c426b03",
+      "xRobots": null
+    },
+    {
+      "url": "https://watersystemsbench.com/sitemap.xml",
+      "status": 200,
+      "finalUrl": "https://watersystemsbench.com/sitemap.xml",
+      "sha256": "60f7eb2412f73ea6cd28953bf384b3db34b8e038d0e37fa6764645a49212061e",
+      "xRobots": null
+    },
+    {
+      "url": "https://watersystemsbench.com/robots.txt",
+      "status": 200,
+      "finalUrl": "https://watersystemsbench.com/robots.txt",
+      "sha256": "cd1297b5802fa103eecc971a7640e8b0066ce1385750940c67ad8ed465afdb42",
+      "xRobots": null
+    },
+    {
+      "url": "https://watersystemsbench.com/docs/",
+      "status": 404,
+      "finalUrl": "https://watersystemsbench.com/docs/",
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "xRobots": null
+    },
+    {
+      "url": "https://watersystemsbench.com/docs/weekly-growth-review-2026-10-01",
+      "status": 404,
+      "finalUrl": "https://watersystemsbench.com/docs/weekly-growth-review-2026-10-01",
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "xRobots": null
+    },
+    {
+      "url": "https://watersystemsbench.com/docs/weekly-growth-review-2026-10-01.html",
+      "status": 404,
+      "finalUrl": "https://watersystemsbench.com/docs/weekly-growth-review-2026-10-01.html",
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "xRobots": null
+    },
+    {
+      "url": "https://watersystemsbench.com/docs/weekly-growth-review-2026-10-01.md",
+      "status": 404,
+      "finalUrl": "https://watersystemsbench.com/docs/weekly-growth-review-2026-10-01.md",
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "xRobots": null
+    },
+    {
+      "url": "https://watersystemsbench.com/docs/page-inventory.html",
+      "status": 404,
+      "finalUrl": "https://watersystemsbench.com/docs/page-inventory.html",
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "xRobots": null
+    },
+    {
+      "url": "https://watersystemsbench.com/docs/information-architecture.html",
+      "status": 404,
+      "finalUrl": "https://watersystemsbench.com/docs/information-architecture.html",
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "xRobots": null
+    },
+    {
+      "url": "https://watersystemsbench.com/docs/project-plan.html",
+      "status": 404,
+      "finalUrl": "https://watersystemsbench.com/docs/project-plan.html",
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "xRobots": null
+    },
+    {
+      "url": "https://watersystemsbench.com/docs/metal-finishing-rinse-water-expansion.html",
+      "status": 404,
+      "finalUrl": "https://watersystemsbench.com/docs/metal-finishing-rinse-water-expansion.html",
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "xRobots": null
+    },
+    {
+      "url": "https://watersystemsbench.com/handover.html",
+      "status": 404,
+      "finalUrl": "https://watersystemsbench.com/handover.html",
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "xRobots": null
+    },
+    {
+      "url": "https://watersystemsbench.com/tools-qa/weekly-growth-qa.mjs",
+      "status": 404,
+      "finalUrl": "https://watersystemsbench.com/tools-qa/weekly-growth-qa.mjs",
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "xRobots": null
+    },
+    {
+      "url": "https://watersystemsbench.com/tools/",
+      "status": 200,
+      "finalUrl": "https://watersystemsbench.com/tools/",
+      "sha256": "579b53e63cdbca8da62e9146f41d9c33f55b39c72ae7ceab24d818b050b9b646",
+      "xRobots": null
+    }
+  ],
+  "analyticsExecuted": 0,
+  "result": "passed"
+}
