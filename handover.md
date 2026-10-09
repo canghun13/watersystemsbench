@@ -8,7 +8,7 @@
 - Default branch: main
 - Contact: [canghun13@naver.com](mailto:canghun13@naver.com)
 - GA4 measurement ID: `G-7FB08YPX7C`
-- Current phase: October 9 search-led rinse-guide upgrade implemented; release verification recorded in the latest weekly entry
+- Current phase: October 9 search-led rinse-guide upgrade deployed and verified on production
 - Language and audience: English; global
 - Stack and deployment: static HTML/CSS/vanilla JavaScript; GitHub Pages plus Cloudflare
 - Phase 2 starting commit: `3c2b450e361a8a8ea0d351059bdef0e121b95071`
@@ -885,6 +885,10 @@ Files changed for the implementation and evidence contract:
 - Protected unchanged: all five homepage badges and exact markup/order/styles/location; Tool Finder and reset correction; `.table-scroll`/minimum widths; shared CSS/JS; navigation/footer; all calculation engines; GA4; exact-six-host QA blocker; production `/docs/` exclusion.
 - Fresh release QA, exact implementation commit and deployment results are recorded below after verification. Historical `browser-results.json` and October 1 evidence remain unchanged. Current reports use dated filenames, not overwrite/relabel old browser evidence.
 - Local final QA passes: all 391 existing cases; 9 targeted numeric/log assertions; all 98-page static/publish/analytics and 100-document navigation checks; Chrome 154, 75 renders (15 pages × five widths), 105 geometry snapshots, 31 interactions, 60 content assertions and 20 table checks. Actual guide 390/1280 and Greywater rightmost-column 390 screenshots inspected. Runtime/request/404/overflow/clipping/broken-image failures 0; server Analytics intercepted 75 / completed 0. Print hook/media verified, not native print dialog. Report: `tools-qa/weekly-growth-2026-10-09-local-results.json`.
+- Implementation commit `314a0ed7486c711fb4448c6eeedb557c13cbbc3c` was pushed and matched actual remote/fetched origin/local HEAD. Exact-SHA GitHub Pages [run 37929716217](https://github.com/canghun13/watersystemsbench/actions/runs/37929716217) completed successfully at `2026-10-09T12:24:17Z`. Old content during the build was transient, not a persistent Cloudflare mismatch.
+- Live HTTP **25/25 passed**: exact guide/other checked HTML/JS/sitemap parity, public 200s, canonical/index permission/GA4, normal/Googlebot parity, sitemap 98, unchanged homepage badge source, legacy/new development-doc variants 404. Guide SHA-256 `654d10b8ab907d6f87300499a59298c07b9ff074f23279ada1cafa217f0dd744`. Report: `tools-qa/weekly-growth-2026-10-09-live-results.json`.
+- Fresh production Chrome **75 renders/105 geometry snapshots/31 interactions/20 table checks** pass at 390/768/1024/1280/1440. Actual production guide mobile/desktop and both Greywater rightmost-column mobile screenshots inspected. Runtime/request/404/overflow/clipping/broken-image failures 0; production Analytics intercepted 75 / completed 0 before navigation. Report: `tools-qa/weekly-growth-2026-10-09-production-results.json`.
+- Final release-record commit is the commit containing this completed evidence and dated reports. Development-only follow-up, no further production change; verify its successful Pages run and equal local/origin/actual remote main, 0/0 ahead/behind and clean status. No ranking or indexing improvement caused by this deployment is claimed.
 
 ### Next state — maximum three
 
