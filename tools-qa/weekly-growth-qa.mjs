@@ -21,11 +21,14 @@ const paths = [guide, "/reference/metal-finishing-rinse-control-methods/",
   "/tools/rinse-conductivity-log-analyzer/", "/tools/countercurrent-rinse-flow-planner/",
   "/tools/metal-finishing-rinse-water-audit-calculator/",
   "/tools/groundwater-stabilization-log-analyzer/", "/tools/available-water-flow-test-calculator/",
-  "/tools/", "/guides/plan-home-greywater-reuse-system/"];
-const report = { date: "2026-10-01", base, production, widths, paths, renderChecks: 0,
+  "/tools/", "/guides/plan-home-greywater-reuse-system/", "/",
+  "/systems/metal-finishing-rinse-water/", "/reference/greywater-source-use-screening/",
+  "/reference/water-pipe-internal-diameters/", "/guides/build-water-treatment-train/",
+  "/guides/well-borehole-tube-well-terminology/"];
+const report = { date: process.env.WSB_QA_DATE || "2026-10-09", base, production, widths, paths, renderChecks: 0,
   interactions: [], geometry: [], screenshots: [], consoleErrors: [], pageErrors: [],
   assetFailures: [], internalHttpFailures: [], unexpectedRequestFailures: [], analytics: { intercepted: 0, completed: 0 },
-  decisionFixtures: 0, contentAssertions: 0 };
+  decisionFixtures: 0, contentAssertions: 0, tableChecks: 0 };
 
 // Verify the example with actual unchanged calculation functions, not just arithmetic in prose.
 const input = { startMeterL: 0, intervalHours: 8, loads: 200, hoursPerDay: 8, daysPerYear: 250, combinedTariff: 0 };
@@ -34,11 +37,12 @@ const proposed = computeRinseAudit({ ...input, endMeterL: 1440 });
 assert.equal(baseline.litresPerLoad, 40);
 assert.equal(proposed.litresPerLoad, 7.2);
 assert.equal(baseline.litresPerHour - proposed.litresPerHour, 820);
+assert.equal((8000 - 1440) * 250 / 1000, 1640); // Independent annual-volume example.
 assert.equal(computeRinseAudit({ ...input, endMeterL: 1440, loads: 100 }).litresPerLoad, 14.4);
 assert.throws(() => computeRinseAudit({ ...input, endMeterL: 1440, loads: 0 }));
 const log = computeRinseLog({ rows: parseRinseLog(await readFile(join(root, "tools-qa/fixtures/rinse-log.csv"), "utf8")), alertConductivity: 600 });
 assert.equal(log.totalWaterL, 450); assert.equal(log.idleWaterL, 150); assert.equal(log.excursions, 1);
-report.decisionFixtures = 8;
+report.decisionFixtures = 9;
 
 if (imageDir) await mkdir(imageDir, { recursive: true });
 const browser = await chromium.launch({ channel: process.env.WSB_QA_BROWSER || "chrome", headless: true });
@@ -74,14 +78,40 @@ async function geometry(path, width, state) {
     const labels = [...document.querySelectorAll("label, legend")].filter(visible).map(element => ({ text: element.textContent.trim(), box: box(element) }));
     const controls = [...document.querySelectorAll(".stabilization-criteria-grid input")].map(element => ({ id: element.id, box: box(element) }));
     const header = box(document.querySelector(".site-header")); const h1 = box(document.querySelector("h1"));
-    const tables = [...document.querySelectorAll("main table")].map(element => ({ width: element.scrollWidth, parentWidth: element.parentElement.clientWidth, overflow: getComputedStyle(element.parentElement).overflowX }));
-    return { scrollWidth: document.documentElement.scrollWidth, clientWidth: document.documentElement.clientWidth, offenders, labels, controls, header, h1, tables };
+    const brokenImages = [...document.images].filter(element => !element.complete || element.naturalWidth === 0).map(element => element.currentSrc || element.src);
+    const tables = [...document.querySelectorAll("main table")].map(element => {
+      const wrapper = element.closest(".table-scroll");
+      const owner = wrapper || (["auto", "scroll"].includes(getComputedStyle(element).overflowX) ? element : element.parentElement);
+      const last = element.querySelector("tr:last-child > :last-child");
+      const before = owner.scrollLeft;
+      owner.scrollLeft = owner.scrollWidth;
+      const bounds = owner.getBoundingClientRect(); const lastBounds = last?.getBoundingClientRect();
+      const lastColumnAccessible = !!lastBounds && lastBounds.right <= bounds.right + 2 && lastBounds.right > bounds.left;
+      const clippedCells = [...element.querySelectorAll("th,td")].filter(cell => {
+        const style = getComputedStyle(cell);
+        return (["hidden", "clip"].includes(style.overflowX) && cell.scrollWidth > cell.clientWidth + 1)
+          || (["hidden", "clip"].includes(style.overflowY) && cell.scrollHeight > cell.clientHeight + 1);
+      }).length;
+      const result = { width: element.scrollWidth, tableClientWidth: element.clientWidth,
+        parentWidth: owner.clientWidth, ownerScrollWidth: owner.scrollWidth, overflow: getComputedStyle(owner).overflowX,
+        labelled: !!wrapper?.getAttribute("aria-label"), lastColumnAccessible, clippedCells,
+        ownerWithinPage: bounds.left >= -1 && bounds.right <= innerWidth + 1 };
+      owner.scrollLeft = before; return result;
+    });
+    return { scrollWidth: document.documentElement.scrollWidth, clientWidth: document.documentElement.clientWidth, offenders, labels, controls, header, h1, tables, brokenImages };
   });
   assert.ok(result.scrollWidth <= result.clientWidth + 1, `${path} ${width} document overflow`);
   assert.deepEqual(result.offenders, [], `${path} ${width} off-screen text/control`);
+  assert.deepEqual(result.brokenImages, [], `${path} ${width} broken images`);
   // Once a tool scrolls to its controls/results, an off-screen H1 is expected.
   if (state === "initial") assert.ok(result.h1.y >= result.header.bottom - 1, `${path} header/H1 overlap`);
-  for (const table of result.tables) if (table.width > table.parentWidth + 1) assert.ok(["auto", "scroll"].includes(table.overflow), "table must remain scroll-accessible");
+  for (const table of result.tables) {
+    if (table.width > table.parentWidth + 1) assert.ok(["auto", "scroll"].includes(table.overflow), "table must remain scroll-accessible");
+    assert.ok(table.ownerWithinPage, `${path} table scroll surface outside page`);
+    assert.ok(table.lastColumnAccessible, `${path} rightmost column cannot be reached`);
+    assert.equal(table.clippedCells, 0, `${path} clipped table cells`);
+    report.tableChecks++;
+  }
   if (path.includes("groundwater-stabilization")) {
     const quality = result.controls.filter(item => ["phCriterion", "temperatureCriterion", "conductivityCriterion", "doCriterion", "orpCriterion", "turbidityCriterion"].includes(item.id));
     if (width > 900) {
@@ -109,8 +139,9 @@ async function runTool(path, width) {
   await page.locator("[data-copy-result]").click();
   await page.waitForFunction(() => document.querySelector("[data-copy-result]").textContent === "Copied");
   assert.ok((await page.evaluate(() => navigator.clipboard.readText())).length > 20);
+  const printCallsBefore = await page.evaluate(() => window.__qaPrintCalls);
   await page.locator("[data-print-result]").click();
-  assert.ok(await page.evaluate(() => window.__qaPrintCalls > 0));
+  assert.equal(await page.evaluate(() => window.__qaPrintCalls), printCallsBefore + 1);
   await page.emulateMedia({ media: "print" }); assert.ok(await page.locator(".result-report").isVisible()); await page.emulateMedia({ media: "screen" });
   await page.locator('button[type="reset"]').click();
   await page.locator(".result-report[hidden]").waitFor({ state: "attached" });
@@ -150,9 +181,25 @@ try {
       assert.equal(await page.locator('link[rel="canonical"]').getAttribute("href"), `https://watersystemsbench.com${guide}`);
       const content = await page.locator("article").innerText();
       for (const marker of ["Control flow to production", "Verify with logs", "40 L/load", "7.2 L/load", "820 L/h"]) { assert.ok(content.includes(marker), marker); report.contentAssertions++; }
+      for (const marker of ["Understand the conductivity control loop", "deadband or hysteresis", "Check signal quality and failure response",
+        "duration, not cumulative clock time", "Excursion count is not excursion duration", "14.4 L/load", "1,640 m³/year"]) {
+        assert.ok(content.includes(marker), marker); report.contentAssertions++;
+      }
+      if (imageDir) {
+        await shot(`rinse-guide-top-${width}`, true);
+        await page.getByRole("heading", { name: "5. Control flow to production", exact: true }).scrollIntoViewIfNeeded();
+        await shot(`rinse-guide-controls-${width}`);
+      }
       if (width === 390) {
         const toggle = page.locator(".menu-toggle"); await toggle.click(); assert.equal(await toggle.getAttribute("aria-expanded"), "true"); await page.locator('#primary-nav a[href="/tools/"]').waitFor({ state: "visible" }); await toggle.click();
         report.interactions.push({ path, width, mobileMenu: "pass" });
+      }
+    }
+    if (path === "/reference/greywater-source-use-screening/" && imageDir && width === 390) {
+      for (const label of ["Source screening table", "End-use screening table"]) {
+        const tableRegion = page.getByRole("region", { name: label });
+        await tableRegion.scrollIntoViewIfNeeded(); await tableRegion.evaluate(element => { element.scrollLeft = element.scrollWidth; });
+        await shot(`greywater-${label.split(" ")[0].toLowerCase()}-rightmost-390`);
       }
     }
     if (path.startsWith("/tools/") && path !== "/tools/") await runTool(path, width);
@@ -187,4 +234,4 @@ try {
   report.result = "passed";
 } catch (error) { report.result = "failed"; report.failure = error.stack; process.exitCode = 1; }
 finally { await browser.close(); await writeFile(output, `${JSON.stringify(report, null, 2)}\n`); }
-console.log(JSON.stringify({ result: report.result, renders: report.renderChecks, interactions: report.interactions.length, contentAssertions: report.contentAssertions, decisionFixtures: report.decisionFixtures, analytics: report.analytics, serverAnalytics: report.serverAnalytics, failure: report.failure, output }, null, 2));
+console.log(JSON.stringify({ result: report.result, renders: report.renderChecks, interactions: report.interactions.length, contentAssertions: report.contentAssertions, decisionFixtures: report.decisionFixtures, tableChecks: report.tableChecks, analytics: report.analytics, serverAnalytics: report.serverAnalytics, failure: report.failure, output }, null, 2));

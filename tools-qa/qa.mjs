@@ -105,6 +105,19 @@ if (!llms.includes("/systems/monitoring-well-sampling/") || !llms.includes("Moni
 if (/watersystemsbench\.com\/docs\//i.test(llms)) errors.push("llms.txt must not expose development-only /docs/ URLs.");
 
 const home = await readFile(join(root, "index.html"), "utf8");
+const rinseGuide = await readFile(join(root, "guides/reduce-metal-finishing-rinse-water/index.html"), "utf8");
+for (const marker of [
+  "How to Reduce Metal Finishing Rinse Water",
+  "5a. Understand the conductivity control loop", "deadband or hysteresis",
+  "5b. Check signal quality and failure response", "6a. Use the log analyzer within its limits",
+  "duration, not cumulative clock time", "Excursion count is not excursion duration",
+  "6b. Investigate before reducing flow further", "independent process checks",
+  "14.4 L/load", "1,640 m³/year", '"dateModified":"2026-10-09"',
+  'href="/reference/metal-finishing-rinse-control-methods/"',
+  'href="/tools/rinse-water-savings-payback-comparator/"'
+]) {
+  if (!rinseGuide.includes(marker)) errors.push(`Rinse guide verification workflow missing: ${marker}.`);
+}
 const userManagedBadgeBlock = `<div class="page-shell" style="padding:30px 0;text-align:center;">
     <a href="https://kittylaunch.com/p/water-systems-bench" target="_blank" rel="noopener" style="display:inline-block;margin:0 2px;">
       <img src="https://kittylaunch.com/api/public/badges/launch_badge.svg?theme=light&name=Water%20Systems%20Bench" alt="Water Systems Bench on KittyLaunch" data-kittylaunch-badge="1" style="margin:0 2px;height:36px;" />

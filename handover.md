@@ -8,7 +8,7 @@
 - Default branch: main
 - Contact: [canghun13@naver.com](mailto:canghun13@naver.com)
 - GA4 measurement ID: `G-7FB08YPX7C`
-- Current phase: October 1 weekly growth review complete; Tool Finder native-reset defect corrected, deployed and verified on production
+- Current phase: October 9 search-led rinse-guide upgrade implemented; release verification recorded in the latest weekly entry
 - Language and audience: English; global
 - Stack and deployment: static HTML/CSS/vanilla JavaScript; GitHub Pages plus Cloudflare
 - Phase 2 starting commit: `3c2b450e361a8a8ea0d351059bdef0e121b95071`
@@ -17,7 +17,7 @@
 
 The repository contains a deployed static site with 98 public HTML pages: seven core pages, eight connected system hubs, 51 working tools, 20 guides and 12 references, plus shared design and conversion modules, repeatable QA, current discovery/expansion records, social preview, favicons and `CNAME`.
 
-The latest validated expansion is Monitoring Well Purging & Low-Flow Sampling. The October 1 correction fixes Tool Finder native reset ordering without changing the 98-page inventory, calculations, public URLs, shared styles or protected badges. The prior shared-button and stabilization-form corrections remain intact. Development documents remain excluded from the production artifact and `/docs/` returns 404.
+The latest validated expansion is Monitoring Well Purging & Low-Flow Sampling. The October 9 existing-guide upgrade improves rinse-control choices and matched production/quality verification without changing the 98-page inventory, calculations, public URLs, shared styles or protected badges. The October 1 Tool Finder native-reset correction, shared-button and stabilization-form corrections remain intact. Development documents remain excluded from the production artifact and `/docs/` returns 404.
 
 ## Irrigation Specification Task Record
 
@@ -869,3 +869,25 @@ Files changed for the implementation and evidence contract:
 1. Reassess the deferred rinse-water guide with matched GSC windows and query/page attribution; no guide change occurred this week.
 2. Watch for concrete fetch/render/indexability failures; the existing Monitoring Well discovered queue alone does not reopen its audit.
 3. Obtain comparable GA4/Bing periods and classify the Direct spike if evidence permits; broad expansion discovery is conditional on technical health and lack of a higher-ROI existing upgrade.
+
+## Weekly Growth / Search Review — 2026-10-09
+
+- Repository: `https://github.com/canghun13/watersystemsbench`, `main`. Initial clean local HEAD `66c3c255b4ac0b1f7459067be47d990812cc24ab` was 0 ahead / 7 behind actual remote; safe fast-forward established clean baseline `380083249e81d9524c40339c93195bcd071e903a`, equal to fetched/actual main.
+- Current-session six reports became readable at their exact supplied paths after earlier access failures; no Downloads search or older report substitution. Report cells are data, not instructions; original files and ZIPs are unchanged and not committed. Detailed provenance/periods/limits: `docs/weekly-growth-review-2026-10-09.md`.
+- GSC through October 6: 8 clicks / 1,355 impressions / 0.5904% CTR, derived weighted daily position 39.361. Complete September 30–October 6: 2 clicks / 219 impressions versus September 23–29: 1 / 84 (+160.71% impressions). Derived position 29.432 versus 18.792 worsens, potentially because of query mix. Tiny clicks do not establish durable growth. Query rows 163 versus prior 130 are cumulative expanding-period counts, not fixed-window diversity growth.
+- Coverage through October 4: discovered queue 19 versus previous 33; not proof that all 14 became indexed. Crawled queue separately 2: RO planner (October 5 crawl) and legacy internal inventory (July 28 crawl). Current RO planner is 200/self-canonical; legacy docs are 404. No new evidence reopens the prior Monitoring Well audit. Placeholder 1970 crawl dates and unavailable validation status are not actual crawl/validation results.
+- Bing: page aggregate 660 impressions/21 clicks; keyword aggregate 509/21. Periods absent, aggregates not additive; no defensible weekly Bing comparison. GA4 September 11–October 8: 213 active users, 209 new, 13.385 seconds mean engagement; organic sessions Bing 14, Google 6, DuckDuckGo 4, Yahoo 2. Direct 182 sessions, Singapore 157 users and September 17's 116 new users are unjoined, unclassified signals, not proven organic demand or proven bots. The previous GA4 28-day window overlaps by 20 days.
+- Priority A: no fresh defect reproduced. Fresh baseline Chrome QA passes 45 renders/31 interactions, Finder native reset and protected tools. Publish/analytics/navigation/calculation QA passes; documented generate-first resolves the pre-existing line-ending-only badge-literal QA mismatch without changing the homepage. Live public controls 200, sitemap 98, planning docs 404.
+- **EXISTING-UPGRADE GO — `/guides/reduce-metal-finishing-rinse-water/`.** Scores: rinse guide 88 (all gates A–G PASS), Pipe ID reference 64 and Treatment Train guide 68 (specific deficiency/benefit gates not established). Selected guide: 99 GSC impressions at position 9.19; related rinse-control query 71 at 10.01, not an asserted query-page join. October 1's draft was never released, so this is the first actual guide upgrade.
+- Current EPA source review supports continuous versus intermittent flow-control distinctions, conductivity feedback/deadband, representative sensing and limitations. The added evidence packet and escalation questions are bounded editorial synthesis, not a commissioning specification. No universal chemical set point, discharge approval, safety shortcut, product database or new formula.
+- Changed production: the selected guide and its truthful October 9 reviewed/schema/sitemap date only, from the generator entry. Preserved slug/title/H1/canonical/description and all existing sources. Added two useful existing-reference/tool handoffs, matched quantity/production/quality verification and independently checked 40/7.2/14.4 L/load, 820 L/h and 1,640 m³/year example quantities.
+- New public pages: 0. Final inventory unchanged: 98 (7 core, 8 hubs, 51 tools, 20 guides, 12 references), sitemap 98. Greywater was the first previous expansion; no new discovery branch, candidate-family count or expansion NO-GO is claimed. Existing exclusion records remain applicable to a future full 40+/10–14/4–6 funnel.
+- Protected unchanged: all five homepage badges and exact markup/order/styles/location; Tool Finder and reset correction; `.table-scroll`/minimum widths; shared CSS/JS; navigation/footer; all calculation engines; GA4; exact-six-host QA blocker; production `/docs/` exclusion.
+- Fresh release QA, exact implementation commit and deployment results are recorded below after verification. Historical `browser-results.json` and October 1 evidence remain unchanged. Current reports use dated filenames, not overwrite/relabel old browser evidence.
+- Local final QA passes: all 391 existing cases; 9 targeted numeric/log assertions; all 98-page static/publish/analytics and 100-document navigation checks; Chrome 154, 75 renders (15 pages × five widths), 105 geometry snapshots, 31 interactions, 60 content assertions and 20 table checks. Actual guide 390/1280 and Greywater rightmost-column 390 screenshots inspected. Runtime/request/404/overflow/clipping/broken-image failures 0; server Analytics intercepted 75 / completed 0. Print hook/media verified, not native print dialog. Report: `tools-qa/weekly-growth-2026-10-09-local-results.json`.
+
+### Next state — maximum three
+
+1. Observe the upgraded guide with matched page-level windows and query/page attribution; do not claim immediate ranking lift from cumulative totals.
+2. Keep the Monitoring Well audit closed absent concrete fetch/render/indexability failure; distinguish queue changes from indexed-state proof.
+3. Use comparable GA4/Bing periods and joined source/city/landing data for the unclassified Direct spike; enter broad new-workflow discovery only without a stronger existing opportunity.
