@@ -1,0 +1,16 @@
+/* Laboratory-only layout; shared buttons, tables and stabilization styles stay unchanged. */
+.lab-group { min-width: 0; }
+.lab-group[hidden] { display: none; }
+.lab-group > legend { max-width: 100%; line-height: 1.5; }
+.lab-group .field label { overflow-wrap: anywhere; }
+.lab-input-record { margin: 0 0 .8rem; white-space: pre-wrap; overflow-wrap: anywhere; font: .76rem/1.5 var(--font-mono); }
+.lab-record-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .7fr); gap: .6rem 1rem; font-size: .85rem; }
+.lab-record-grid dt { font-weight: 700; }
+.lab-record-grid dd { margin: 0; align-self: start; }
+.lab-record-wide { grid-column: 1 / -1; }
+.result-panel, .result-report, .result-block { min-width: 0; }
+.result-block .table-scroll { margin-block: .75rem; }
+.result-block table { border-collapse: collapse; font-size: .8rem; }
+.result-block th, .result-block td { padding: .6rem; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+.result-block th { color: var(--white); background: var(--navy-900); }
+@media print { .result-report[hidden], .result-empty, .content-layout { display: none !important; } .tool-layout:not(:has(.result-report:not([hidden]))) { display: none; } .lab-input-record { white-space: pre-wrap; } .result-block .table-scroll { overflow: visible; } .result-block table { min-width: 0; width: 100%; font-size: 8pt; } }

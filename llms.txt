@@ -12,6 +12,7 @@
 - [Vehicle Wash Water Reclaim Planning](https://watersystemsbench.com/systems/vehicle-wash-water-reclaim/)
 - [Metal Finishing Rinse Water Optimization](https://watersystemsbench.com/systems/metal-finishing-rinse-water/)
 - [Monitoring Well Purging & Low-Flow Sampling](https://watersystemsbench.com/systems/monitoring-well-sampling/)
+- [Water Laboratory Calculations & QA](https://watersystemsbench.com/systems/water-laboratory-qa/)
 
 ## Tools
 
@@ -66,6 +67,10 @@
 - [Low-Flow Sampling Setup Checker](https://watersystemsbench.com/tools/low-flow-sampling-setup-checker/)
 - [Low-Flow Equipment Volume & Reading Interval Planner](https://watersystemsbench.com/tools/low-flow-equipment-volume-reading-interval-planner/)
 - [Groundwater Stabilization Log Analyzer](https://watersystemsbench.com/tools/groundwater-stabilization-log-analyzer/)
+- [BOD Seed Correction & Bottle Analyzer](https://watersystemsbench.com/tools/bod-seed-correction-bottle-analyzer/)
+- [TSS & VSS Gravimetric Calculator](https://watersystemsbench.com/tools/tss-vss-gravimetric-calculator/)
+- [Water Duplicate RPD Batch Checker](https://watersystemsbench.com/tools/water-duplicate-rpd-batch-checker/)
+- [Matrix Spike Recovery Calculator](https://watersystemsbench.com/tools/matrix-spike-recovery-calculator/)
 
 ## Guides
 
@@ -89,6 +94,7 @@
 - [How to Plan a Vehicle Wash Water Reclaim Retrofit](https://watersystemsbench.com/guides/plan-vehicle-wash-water-reclaim-retrofit/)
 - [How to Reduce Metal Finishing Rinse Water](https://watersystemsbench.com/guides/reduce-metal-finishing-rinse-water/)
 - [How to Plan Monitoring-Well Purging & Low-Flow Sampling](https://watersystemsbench.com/guides/plan-monitoring-well-purging-low-flow-sampling/)
+- [How to Review Water Laboratory Calculations](https://watersystemsbench.com/guides/review-water-laboratory-calculations/)
 
 ## Reference
 
@@ -104,6 +110,7 @@
 - [Vehicle Wash Water Stream Map](https://watersystemsbench.com/reference/vehicle-wash-water-stream-map/)
 - [Metal Finishing Rinse Control Methods](https://watersystemsbench.com/reference/metal-finishing-rinse-control-methods/)
 - [Groundwater Low-Flow Field Parameters](https://watersystemsbench.com/reference/groundwater-low-flow-field-parameters/)
+- [Water Laboratory QC Calculation Bases](https://watersystemsbench.com/reference/water-laboratory-qc-calculation-bases/)
 
 ## Safety and limitations
 

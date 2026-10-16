@@ -2,7 +2,7 @@
 
 ## Navigation model
 
-The site follows a water-system workflow instead of separating resources only by format. Primary navigation exposes Home, Tools, Guides, Reference and a Systems menu. The Systems menu contains exactly six implemented hubs:
+The site follows a water-system workflow instead of separating resources only by format. Primary navigation exposes Home, Tools, Guides, Reference and a Systems menu. The Systems menu contains exactly nine implemented hubs:
 
 - Pumps, Pressure & Pipe Flow
 - Wells, Storage & Rainwater
@@ -11,6 +11,8 @@ The site follows a water-system workflow instead of separating resources only by
 - Greywater Reuse Planning
 - Vehicle Wash Water Reclaim Planning
 - Metal Finishing Rinse Water Optimization
+- Monitoring Well Purging & Low-Flow Sampling
+- Water Laboratory Calculations & QA
 
 About, Contact and Privacy remain available through project navigation. No inactive future system is linked.
 
@@ -92,6 +94,10 @@ The vehicle-wash hub is `/systems/vehicle-wash-water-reclaim/`. Its tools are no
 The metal-finishing hub is `/systems/metal-finishing-rinse-water/`. Its workflow is meter baseline → drag-out measurement → countercurrent stage comparison → conductivity/flow-log verification → economics. It is limited to quantity and operational comparison and never sets chemistry, rinse acceptance, exposure or discharge requirements.
 
 The treatment hub is `/systems/water-treatment-quality/`. The obsolete planning-only `/tools/water-treatment-quality/` route must not be introduced.
+
+### Water laboratory calculations and QA
+
+The laboratory hub is `/systems/water-laboratory-qa/`: identify sample and method → reconcile units/dilution basis → reduce DO or gravimetric observations → review duplicate precision and spike recovery → retain a qualified review packet. It does not duplicate field stabilization, household treatment selection or activated-sludge process control. Four independent tools and their supporting guide/reference use local data only. No result approves an analysis, method, report, discharge or potable use.
 
 ## Treatment branches
 

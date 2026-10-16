@@ -11,9 +11,9 @@ Water Systems Bench is an English-language, global workflow hub for sizing, chec
 
 ## Current implementation
 
-The complete first-wave scope and two validated expansion clusters are implemented: 83 public HTML pages comprising 7 core pages, 6 connected system hubs, 42 working tools, 18 guides and 10 references.
+The initial scope and validated expansions are implemented: 105 public HTML pages comprising 7 core pages, 9 connected system hubs, 55 working tools, 21 guides and 13 references.
 
-The six workflows are:
+The nine workflows are:
 
 1. Pumps, Pressure & Pipe Flow
 2. Wells, Storage & Rainwater
@@ -21,6 +21,9 @@ The six workflows are:
 4. Water Treatment & Water Quality
 5. Greywater Reuse Planning
 6. Vehicle Wash Water Reclaim Planning
+7. Metal Finishing Rinse Water Optimization
+8. Monitoring Well Purging & Low-Flow Sampling
+9. Water Laboratory Calculations & QA
 
 The Water Treatment & Water Quality cluster starts at `/systems/water-treatment-quality/`. Its eight tools use tested or user-supplied values, show their methods and limitations, and do not claim potable-water safety, regulatory compliance or an approved design.
 
@@ -47,11 +50,11 @@ npm run verify:calculations
 npm run qa:browser
 ```
 
-`npm run generate` refreshes committed HTML and machine-readable site files. `npm run qa:browser` validates the latest recorded real-browser run in `tools-qa/browser-results.json`; update that report only after a new complete browser run.
+`npm run generate` refreshes committed HTML and machine-readable site files. `npm run qa:browser` runs the current 105-page Chrome matrix and laboratory interactions against the local server (default port4173; override with `WSB_QA_BASE`). Use the already configured Node/Playwright runtime through `NODE_PATH` and installed Chrome; do not install or reset the environment. `WSB_QA_REPORT` and `WSB_QA_IMAGES` select output locations. The old `browser-results.json` remains historical evidence and its validator is available as `npm run qa:browser:historical`; passing that validator is not a fresh browser run.
 
 The local QA server replaces requests to the six approved analytics hosts with a local no-op response and records intercepted/completed counts. This keeps automated QA out of GA4 while the committed production pages retain `G-7FB08YPX7C` unchanged.
 
-GitHub Pages uses `_config.yml` as the production publication boundary. Repository documentation, planning files, QA tooling and package metadata remain available in Git but are excluded from the deployed artifact; the 83 public routes and their runtime assets remain published.
+GitHub Pages uses `_config.yml` as the production publication boundary. Repository documentation, planning files, QA tooling and package metadata remain available in Git but are excluded from the deployed artifact; the 105 public routes and their runtime assets remain published.
 
 ## Repository workflow
 

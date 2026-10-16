@@ -63,6 +63,10 @@ After pushing `main`:
 3. Check representative core, hub, tool, guide and reference URLs over HTTPS.
 4. Confirm HTTP 200, canonical domain, GA4 and current content.
 5. Exercise representative live calculations and the treatment selector.
-6. Confirm `sitemap.xml` exposes exactly 74 URLs.
+6. Confirm `sitemap.xml` exposes exactly 105 URLs.
 
 Do not report deployment success for a skipped or failed production check.
+
+## October 16 laboratory release QA
+
+Current runner: `tools-qa/water-laboratory-browser-qa.mjs` (`npm run qa:browser`). It performs a fresh105-page ×390/768/1024/1280/1440 render matrix, all55 default tool results/resets, and the new four-tool interaction matrix. Historical `browser-results.json` and October weekly reports are not relabelled as this release. New numerical/basis fixtures are in `verify-water-laboratory.mjs`; `verify:calculations` runs the original391 plus these new assertions. Use existing bundled Node/Playwright and installed Chrome, with no installation. Set `WSB_QA_BASE` for a nondefault local port or production and dated `WSB_QA_REPORT` / `WSB_QA_IMAGES` locations. The exact-host Analytics blocker is installed before browser navigation. Native print dialogs are not claimed: the runner verifies the handler and print media. Publication excludes remain unchanged; laboratory docs and QA must return404 in production.

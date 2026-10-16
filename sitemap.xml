@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://watersystemsbench.com/</loc><lastmod>2026-08-31</lastmod></url>
-  <url><loc>https://watersystemsbench.com/tools/</loc><lastmod>2026-08-31</lastmod></url>
-  <url><loc>https://watersystemsbench.com/guides/</loc><lastmod>2026-08-31</lastmod></url>
-  <url><loc>https://watersystemsbench.com/reference/</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://watersystemsbench.com/</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://watersystemsbench.com/tools/</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://watersystemsbench.com/guides/</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://watersystemsbench.com/reference/</loc><lastmod>2026-10-16</lastmod></url>
   <url><loc>https://watersystemsbench.com/about/</loc><lastmod>2026-08-08</lastmod></url>
   <url><loc>https://watersystemsbench.com/contact/</loc><lastmod>2026-07-29</lastmod></url>
   <url><loc>https://watersystemsbench.com/privacy/</loc><lastmod>2026-07-29</lastmod></url>
@@ -98,4 +98,11 @@
   <url><loc>https://watersystemsbench.com/reference/greywater-source-use-screening/</loc><lastmod>2026-08-08</lastmod></url>
   <url><loc>https://watersystemsbench.com/reference/vehicle-wash-water-stream-map/</loc><lastmod>2026-08-11</lastmod></url>
   <url><loc>https://watersystemsbench.com/reference/groundwater-low-flow-field-parameters/</loc><lastmod>2026-08-31</lastmod></url>
+  <url><loc>https://watersystemsbench.com/systems/water-laboratory-qa/</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://watersystemsbench.com/tools/bod-seed-correction-bottle-analyzer/</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://watersystemsbench.com/tools/tss-vss-gravimetric-calculator/</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://watersystemsbench.com/tools/water-duplicate-rpd-batch-checker/</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://watersystemsbench.com/tools/matrix-spike-recovery-calculator/</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://watersystemsbench.com/guides/review-water-laboratory-calculations/</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://watersystemsbench.com/reference/water-laboratory-qc-calculation-bases/</loc><lastmod>2026-10-16</lastmod></url>
 </urlset>

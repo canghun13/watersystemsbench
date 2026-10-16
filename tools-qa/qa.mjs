@@ -23,7 +23,7 @@ async function walk(dir) {
 
 const allFiles = await walk(root);
 const publicHtml = allFiles.filter(isPublicRouteHtml);
-if (publicHtml.length !== 98) errors.push(`Expected 98 public HTML files; found ${publicHtml.length}.`);
+if (publicHtml.length !== 105) errors.push(`Expected 105 public HTML files; found ${publicHtml.length}.`);
 const categoryCounts = {
   core: publicHtml.filter((file) => !relative(root, file).includes(sep)).length + publicHtml.filter((file) => ["about", "contact", "privacy", "tools", "guides", "reference"].includes(relative(root, dirname(file)))).length,
   systems: publicHtml.filter((file) => relative(root, dirname(file)).split(sep).length === 2 && relative(root, file).startsWith(`systems${sep}`)).length,
@@ -31,7 +31,7 @@ const categoryCounts = {
   guides: publicHtml.filter((file) => relative(root, dirname(file)).split(sep).length === 2 && relative(root, file).startsWith(`guides${sep}`)).length,
   reference: publicHtml.filter((file) => relative(root, dirname(file)).split(sep).length === 2 && relative(root, file).startsWith(`reference${sep}`)).length
 };
-for (const [key, expected] of Object.entries({ core: 7, systems: 8, tools: 51, guides: 20, reference: 12 })) {
+for (const [key, expected] of Object.entries({ core: 7, systems: 9, tools: 55, guides: 21, reference: 13 })) {
   if (categoryCounts[key] !== expected) errors.push(`Expected ${expected} ${key} pages; found ${categoryCounts[key]}.`);
 }
 
@@ -89,7 +89,7 @@ for (const file of publicHtml) {
 
 const sitemap = await readFile(join(root, "sitemap.xml"), "utf8");
 const sitemapUrls = new Set([...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]));
-if (sitemapUrls.size !== 98) errors.push(`Sitemap contains ${sitemapUrls.size} unique URLs, expected 98.`);
+if (sitemapUrls.size !== 105) errors.push(`Sitemap contains ${sitemapUrls.size} unique URLs, expected 105.`);
 for (const url of pageUrls) if (!sitemapUrls.has(url)) errors.push(`Sitemap missing ${url}.`);
 for (const url of sitemapUrls) if (!pageUrls.has(url)) errors.push(`Sitemap contains non-public URL ${url}.`);
 
@@ -105,6 +105,13 @@ if (!llms.includes("/systems/monitoring-well-sampling/") || !llms.includes("Moni
 if (/watersystemsbench\.com\/docs\//i.test(llms)) errors.push("llms.txt must not expose development-only /docs/ URLs.");
 
 const home = await readFile(join(root, "index.html"), "utf8");
+for (const [slug, kind] of [["bod-seed-correction-bottle-analyzer", "lab-bod"], ["tss-vss-gravimetric-calculator", "lab-solids"], ["water-duplicate-rpd-batch-checker", "lab-rpd"], ["matrix-spike-recovery-calculator", "lab-spike"]]) {
+  const html = await readFile(join(root, "tools", slug, "index.html"), "utf8");
+  for (const marker of [`data-tool-form="${kind}"`, '/assets/js/tools/water-laboratory-tools.js', '/assets/css/water-laboratory.css', "What this tool does", "Calculation or decision method", "Worked example", "Assumptions", "Limitations", "Sources", "data-copy-result", "data-print-result", "Numeric review only", "October 16, 2026"]) {
+    if (!html.includes(marker)) errors.push(`${slug}: missing laboratory contract ${marker}.`);
+  }
+}
+if (!llms.includes("/systems/water-laboratory-qa/")) errors.push("Laboratory workflow is missing from llms.txt.");
 const rinseGuide = await readFile(join(root, "guides/reduce-metal-finishing-rinse-water/index.html"), "utf8");
 for (const marker of [
   "How to Reduce Metal Finishing Rinse Water",
@@ -163,9 +170,9 @@ for (const marker of [
 ]) {
   if (!toolsHub.includes(marker)) errors.push(`/tools/: finder contract is missing ${marker}.`);
 }
-if ((toolsHub.match(/data-tool-card(?:\s|>)/g) || []).length !== 51) errors.push("/tools/: finder must contain exactly 51 tool cards.");
-if ((toolsHub.match(/data-system="(?:pumps|wells|irrigation|treatment|greywater|vehicle-wash|metal-finishing|monitoring-well)"/g) || []).length !== 51) errors.push("/tools/: every tool card must have one known system filter value.");
-if ((toolsHub.match(/data-type="(?:calculator|planner|checker|comparator|estimator|troubleshooter|analyzer|simulator|selector)"/g) || []).length !== 51) errors.push("/tools/: every tool card must have one known tool-type filter value.");
+if ((toolsHub.match(/data-tool-card(?:\s|>)/g) || []).length !== 55) errors.push("/tools/: finder must contain exactly 55 tool cards.");
+if ((toolsHub.match(/data-system="(?:pumps|wells|irrigation|treatment|greywater|vehicle-wash|metal-finishing|monitoring-well|water-laboratory)"/g) || []).length !== 55) errors.push("/tools/: every tool card must have one known system filter value.");
+if ((toolsHub.match(/data-type="(?:calculator|planner|checker|comparator|estimator|troubleshooter|analyzer|simulator|selector)"/g) || []).length !== 55) errors.push("/tools/: every tool card must have one known tool-type filter value.");
 
 const availableFlowTest = await readFile(join(root, "tools", "available-water-flow-test-calculator", "index.html"), "utf8");
 for (const marker of [
