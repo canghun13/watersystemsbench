@@ -8,14 +8,14 @@
 - Default branch: main
 - Contact: [canghun13@naver.com](mailto:canghun13@naver.com)
 - GA4 measurement ID: `G-7FB08YPX7C`
-- Current phase: October 16 new Water Laboratory Calculations & QA cluster — implementation complete, release verification in progress
+- Current phase: October 16 new Water Laboratory Calculations & QA cluster — deployed and production-verified
 - Language and audience: English; global
 - Stack and deployment: static HTML/CSS/vanilla JavaScript; GitHub Pages plus Cloudflare
 - Phase 2 starting commit: `3c2b450e361a8a8ea0d351059bdef0e121b95071`
 
 ## Current Repository State
 
-The repository now contains 105 public HTML pages: seven core pages, nine connected system hubs, 55 working tools, 21 guides and 13 references. The seven new Water Laboratory Calculations & QA pages are under release verification; the prior deployed inventory was 98. Shared design, repeatable QA, current discovery/expansion records, social preview, favicons and `CNAME` remain in place.
+The repository now contains 105 deployed public HTML pages: seven core pages, nine connected system hubs, 55 working tools, 21 guides and 13 references. Seven Water Laboratory Calculations & QA pages were added to the prior98-page inventory. Shared design, repeatable QA, current discovery/expansion records, social preview, favicons and `CNAME` remain in place.
 
 The latest selected expansion is Water Laboratory Calculations & QA, following Monitoring Well Purging & Low-Flow Sampling. The earlier October16 terminology upgrade and October9 rinse-guide upgrade remain unchanged. All previous calculation engines, shared styles, Finder correction, button/stabilization fixes, protected badges and production `/docs/` exclusion are preserved. New laboratory-only assets and discovery/navigation entries add the seven routes; no existing URL is renamed.
 
@@ -28,7 +28,11 @@ The latest selected expansion is Water Laboratory Calculations & QA, following M
 - Added `/systems/water-laboratory-qa/`, `/tools/bod-seed-correction-bottle-analyzer/`, `/tools/tss-vss-gravimetric-calculator/`, `/tools/water-duplicate-rpd-batch-checker/`, `/tools/matrix-spike-recovery-calculator/`, `/guides/review-water-laboratory-calculations/`, `/reference/water-laboratory-qc-calculation-bases/`.
 - Integration:105 public pages,55 tools,9 hubs; home/index/Finder/navigation/sitemap/llms and inventory docs updated. Existing calculation engines, shared styles, Tool Finder engine, two prior upgraded guides, five homepage badges, production GA4 and exact-six-host QA blocker remain unchanged. `/docs/` and development artifacts remain excluded from production.
 - Local QA:391 original +102 independent new assertions; static/navigation/publish/Analytics105-page checks; fresh Chrome full525 renders/55 defaults/55 resets/25 interactions/132 tables, plus final laboratory-only35 renders/4 defaults/4 resets/25 interactions/37 tables after minor laboratory-only polish. Five widths390–1440. No browser errors; Analytics completed0 (559 full +69 supplemental intercepted locally). Clipboard and print-media tested; native print dialog not tested.
-- Records: `docs/workflow-cluster-discovery-2026-10-16.md`, `docs/water-laboratory-qa-expansion.md` and new dated local QA JSONs. Production verification and implementation SHA will be recorded after deployment; do not treat local results as production results.
+- Implementation commit: `d658500f7d33dd0fe98f06247d90eb44dcc7041f`, pushed to main. Exact-SHA Pages run `38860459446` succeeded at2026-10-16T06:19:05Z: https://github.com/canghun13/watersystemsbench/actions/runs/38860459446.
+- Production source/HTTP verification:41 requests passed, including all7 new routes, core indexes, protected earlier guides/stabilization tool, runtime assets and partials; local/live hashes, canonical/indexability,105-URL sitemap, Googlebot parity and13 development/docs404 checks. Analytics execution0. Evidence: `tools-qa/water-laboratory-2026-10-16-live-results.json`.
+- Production Chrome smoke:35 renders (7 new pages ×5 widths),4 defaults/4 resets,25 interaction entries,37 table checks. Zero recorded console/page/request/internal-HTTP errors; Analytics69 intercepted,0 completed. Desktop/mobile hub, four tool reports and rightmost reference columns visually reviewed. Evidence: `tools-qa/water-laboratory-2026-10-16-production-results.json`. This is an actual production smoke, not a claimed production525-page matrix.
+- Records: `docs/workflow-cluster-discovery-2026-10-16.md`, `docs/water-laboratory-qa-expansion.md`, local/final-local/live/production dated QA JSONs. This release-record commit changes only excluded documentation and QA evidence, not public runtime files; verify its exact-SHA Pages run and final clean equal refs at handoff.
+- Next review, at most3: new-route discovery/indexing and query coverage in GSC; long-tail impressions for the4 specific laboratory jobs; any real user calculation/basis/CSV issues. Rankings, indexing and traffic gains are not yet established. No recurring automation created.
 
 ## Irrigation Specification Task Record
 

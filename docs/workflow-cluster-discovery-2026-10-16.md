@@ -96,7 +96,7 @@ Score components: demand/long tail 30; interactive gap 20; independent breadth 2
 | Suspended-sediment records | 23+14+16+9+8+5+3 | 78 | Credible software gap, but sparse concentration interpolation and rating uncertainty need deeper method scope |
 | Sonde calibration/records | 23+15+13+10+8+5+3 | 77 | Cleaning/drift correction should be one transparent record workflow, not four weak pages |
 
-The three weaker finalists are not declared permanently impossible. Current evidence supports selecting the strongest one now, not lowering the four-tool gate to ship them as well.
+The four other finalists are not declared permanently impossible. Current evidence supports selecting the strongest one now, not lowering the four-tool gate to ship them as well.
 
 ### Selected competitor inspection and long-tail response
 
@@ -169,4 +169,14 @@ Local verification completed before the implementation commit:
 - Actual browser interactions covered invalid input and recovery, stale-result clearing, reset/refill, clipboard output with input records, print invocation and print-media layout, local valid/malformed CSV, unit round trips, all BOD/spike modes, Finder filter/search/clear, nine-system menu, protected stabilization controls and the greywater reference table. Native OS print-dialog operation was not tested.
 - Desktop/mobile screenshots were visually reviewed. Inputs, results and rightmost table columns remain accessible; input records and demonstration-only criteria are explicit. These tools do not certify laboratory results or choose regulatory limits.
 
-Evidence: `tools-qa/water-laboratory-2026-10-16-local-results.json` and `tools-qa/water-laboratory-2026-10-16-final-local-results.json`. The historical browser report is untouched. Production release verification is pending; no ranking, indexing or traffic gain is claimed.
+Evidence: `tools-qa/water-laboratory-2026-10-16-local-results.json` and `tools-qa/water-laboratory-2026-10-16-final-local-results.json`. The historical browser report is untouched.
+
+### Production release — completed
+
+- Implementation `d658500f7d33dd0fe98f06247d90eb44dcc7041f` pushed to `main`. Its exact-SHA [Pages run38860459446](https://github.com/canghun13/watersystemsbench/actions/runs/38860459446) completed successfully at2026-10-16T06:19:05Z.
+- Live source/HTTP runner passed41 requests:7 new pages plus protected/core routes; asset/partial parity; canonical/indexable metadata and exact GA4 source;105 sitemap entries with honest dates;3 Googlebot comparisons;13 development/docs404 checks; HTTP→HTTPS redirect. This runner never executes Analytics. Evidence: `tools-qa/water-laboratory-2026-10-16-live-results.json`.
+- Actual production Chrome smoke completed before06:21:01Z:7 new routes ×5 widths=35 renders;4 default calculations/4 resets;25 interaction entries;37 table checks, including existing Finder, stabilization controls, navigation and greywater table protection. Console/page/request/internal-HTTP error lists are empty. Exact-host blocker intercepted69 Analytics requests, completed0. Evidence: `tools-qa/water-laboratory-2026-10-16-production-results.json`.
+- Production screenshots of the hub, each tool report and the reference's rightmost columns were visually reviewed at390/1280. All inputs/results remain accessible. The production smoke is not described as a production-wide525-render test; that broader matrix was local.
+- [Live cluster hub](https://watersystemsbench.com/systems/water-laboratory-qa/). No ranking, indexing or traffic gain is claimed. Weekly metric/WoW and existing-page candidate selection were not rerun: the user explicitly requested a separate external-first expansion after the completed October16 weekly upgrade.
+
+Final release-record changes are excluded documentation/QA evidence only. The final handoff verifies the release-record commit's Pages run and equality of local HEAD, fetched origin/main and directly queried remote main, with0/0 ahead/behind and clean working tree. Follow-up observations: discovery/indexing, specific long-tail impressions, real calculation/basis/CSV feedback (not an automatic monitor).
