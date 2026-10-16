@@ -8,7 +8,7 @@
 - Default branch: main
 - Contact: [canghun13@naver.com](mailto:canghun13@naver.com)
 - GA4 measurement ID: `G-7FB08YPX7C`
-- Current phase: October 16 search-led well-terminology guide upgrade locally verified; release verification in progress
+- Current phase: October 16 well-terminology guide upgrade deployed and verified on production
 - Language and audience: English; global
 - Stack and deployment: static HTML/CSS/vanilla JavaScript; GitHub Pages plus Cloudflare
 - Phase 2 starting commit: `3c2b450e361a8a8ea0d351059bdef0e121b95071`
@@ -909,7 +909,10 @@ Files changed for the implementation and evidence contract:
 - Latest source review: USGS well information, BGS records and FAO well terminology/completion guidance. The older USGS PDF fetch returned 403; alternate accessible primary sources support the additions. No full-PDF review or universal historical limits claimed. Expansion branch not entered because the bounded existing opportunity is stronger; no full exclusion audit/40-family funnel or expansion NO-GO claimed.
 - Final local QA: 391 existing cases; 18 targeted arithmetic/unit/geometry assertions; 98-page static/publication/analytics and 100-document navigation pass. Chrome 17 pages × five widths = 85 renders, 125 geometry snapshots, 42 interactions, 120 content assertions and 25 table checks. Actual new-guide 390/1280 and rightmost table-column 390 screenshots inspected; 740px table inside 348px labelled region. Runtime/request/404/overflow/clipping/broken-image failures 0; matrix Analytics intercepted 85/completed 0. Print hook/media verified, not native dialog.
 - Dated baseline/local outputs: `tools-qa/weekly-growth-2026-10-16-baseline-results.json` and `tools-qa/weekly-growth-2026-10-16-local-results.json`; older QA evidence is not overwritten. New guide hash `22993ed68268f22d5b384f0fc6eded59a6b3b6ebff5913857d70651a0bb4ed42`; sitemap `4f22f9d9769d546e0dd3a42f0f46667cd9b5977976e97a19748d830c4cd9f9d3`. The rinse-guide hash stays `654d10b8ab907d6f87300499a59298c07b9ff074f23279ada1cafa217f0dd744`.
-- Implementation commit is the commit containing this entry. Add exact-SHA Pages and actual-domain QA evidence after deployment; final delivery must verify equal local/origin/actual main, 0/0 ahead/behind and clean tree. Inventory/sitemap remain 98 (7 core, 8 hubs, 51 tools, 20 guides, 12 references).
+- Implementation commit: `135a0a8a7df04b77a831ba854098c3663c2834cb`, pushed to main and matched local/fetched/actual main. Exact-SHA Pages [run 38837438659](https://github.com/canghun13/watersystemsbench/actions/runs/38837438659) succeeded at `2026-10-16T01:53:03Z`.
+- Production browser passes 85 renders/125 geometry snapshots/42 interactions/120 content assertions/18 numeric-unit assertions/25 table checks across all five widths. Actual desktop guide, mobile comparison and protected Greywater rightmost-column screenshots inspected; no runtime/request/HTTP/overflow/clipping/broken-image failures. Analytics intercepted 85/completed 0, blocker applied before navigation. Report: `tools-qa/weekly-growth-2026-10-16-production-results.json`.
+- Production HTTP/content **29/29 passed**: HTTPS/canonical/index permissions/GA4; exact new guide/other checked source/sitemap parity; normal/Googlebot match; 98 sitemap URLs, selected October 16 and preserved rinse October 9 dates; legacy/new docs, handover and QA routes 404. Report: `tools-qa/weekly-growth-2026-10-16-live-results.json`. Guide/sitemap hashes equal the local hashes above; all five badge blocks and 97 other HTML pages remain unchanged.
+- Final release-record commit is the commit containing this evidence and dated production reports. Development-only follow-up, not another production change. Final delivery must verify its Pages success, equal local/origin/actual main, 0/0 ahead/behind and clean tree. Inventory remains 98 (7 core, 8 hubs, 51 tools, 20 guides, 12 references); no ranking/indexing lift claimed.
 
 ### Next state — maximum three
 

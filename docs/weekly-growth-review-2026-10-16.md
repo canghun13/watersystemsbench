@@ -138,7 +138,14 @@ The useful comparison is a bounded synthesis of differing terminology and the ex
 
 ### Release
 
-Pending exact implementation commit, successful Pages deployment and actual-domain verification. Do not label local-only evidence production PASS.
+- Implementation commit: `135a0a8a7df04b77a831ba854098c3663c2834cb`, pushed to main; local/fetched-origin/actual remote matched immediately after push.
+- Exact-SHA GitHub Pages [run 38837438659](https://github.com/canghun13/watersystemsbench/actions/runs/38837438659) completed successfully at `2026-10-16T01:53:03Z`.
+- Actual-domain Chrome matrix **85/85 renders**, **125 geometry snapshots**, **42 interactions**, **120 content assertions**, **18 arithmetic/unit/geometry assertions** and **25 table checks** pass at 390/768/1024/1280/1440px. New guide, both downstream well tools and the protected controls behave as locally verified; the worked example, invalid-state clearing and recovery pass on production.
+- Actual production 1280px guide, 390px comparison rightmost column and existing Greywater rightmost-column screenshot were directly inspected. No console/page/request/internal HTTP, checked overflow/clipping or broken-image failures. Print handler/media only, not native print dialog.
+- Production exact-six-host route blocker was installed before navigation; Analytics intercepted **85 / completed 0**. Production GA4 is retained. No general Google-domain blocking or user-managed integration change.
+- Non-executing HTTP/content probes **29/29 passed**: HTTP→HTTPS 301; checked public 200s; exact local/live HTML/JS/sitemap parity; correct canonical/index permission/GA4; normal/Googlebot guide parity; 98-URL sitemap with only the selected guide's October 16 date and preserved October 9 rinse date.
+- Legacy/new weekly-doc extension variants, `/docs/`, handover and QA runner remain 404. Exact home source parity preserves all five protected badges. Deployed guide/sitemap hashes match the local final hashes above; the rinse guide remains unchanged.
+- Production evidence: `tools-qa/weekly-growth-2026-10-16-production-results.json` and `tools-qa/weekly-growth-2026-10-16-live-results.json`. Final release-record commit is the commit containing this evidence; only development-only files differ from the implementation. Verify its follow-up Pages run and equal local/origin/actual remote SHA with clean tree in final delivery. No search or indexing lift is claimed.
 
 ## Next state — maximum three
 
