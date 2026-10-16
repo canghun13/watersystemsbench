@@ -7,6 +7,8 @@ import { resolve, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { installPlaywrightAnalyticsBlock, isAnalyticsUrl } from "./analytics-blocker.mjs";
 import { computeRinseAudit, computeRinseLog, parseRinseLog } from "../assets/js/tools/metal-finishing-tools.js";
+import { computeWellPumpDuty } from "../assets/js/tools/well-pump-sizing.js";
+import { toSI } from "../assets/js/unit-conversions.js";
 
 const require = createRequire(import.meta.url);
 const { chromium } = require("playwright");
@@ -16,6 +18,7 @@ const production = new URL(base).hostname === "watersystemsbench.com";
 const output = resolve(process.env.WSB_QA_REPORT || join(root, "tools-qa/weekly-growth-local-results.json"));
 const imageDir = process.env.WSB_QA_IMAGES;
 const guide = "/guides/reduce-metal-finishing-rinse-water/";
+const terminologyGuide = "/guides/well-borehole-tube-well-terminology/";
 const widths = [390, 768, 1024, 1280, 1440];
 const paths = [guide, "/reference/metal-finishing-rinse-control-methods/",
   "/tools/rinse-conductivity-log-analyzer/", "/tools/countercurrent-rinse-flow-planner/",
@@ -24,7 +27,7 @@ const paths = [guide, "/reference/metal-finishing-rinse-control-methods/",
   "/tools/", "/guides/plan-home-greywater-reuse-system/", "/",
   "/systems/metal-finishing-rinse-water/", "/reference/greywater-source-use-screening/",
   "/reference/water-pipe-internal-diameters/", "/guides/build-water-treatment-train/",
-  "/guides/well-borehole-tube-well-terminology/"];
+  terminologyGuide, "/tools/well-borehole-pump-sizing-planner/", "/tools/well-yield-demand-checker/"];
 const report = { date: process.env.WSB_QA_DATE || "2026-10-09", base, production, widths, paths, renderChecks: 0,
   interactions: [], geometry: [], screenshots: [], consoleErrors: [], pageErrors: [],
   assetFailures: [], internalHttpFailures: [], unexpectedRequestFailures: [], analytics: { intercepted: 0, completed: 0 },
@@ -43,6 +46,16 @@ assert.throws(() => computeRinseAudit({ ...input, endMeterL: 1440, loads: 0 }));
 const log = computeRinseLog({ rows: parseRinseLog(await readFile(join(root, "tools-qa/fixtures/rinse-log.csv"), "utf8")), alertConductivity: 600 });
 assert.equal(log.totalWaterL, 450); assert.equal(log.idleWaterL, 150); assert.equal(log.excursions, 1);
 report.decisionFixtures = 9;
+// Literal expected quantities are independent of the production calculation.
+assert.equal(26 - 12, 14); assert.equal(35 - 26, 9);
+const wellCase = { demandLpm: 20, pumpingLevelM: 26, dischargeElevationM: 5, deliveryKPa: 0, frictionM: 0, equipmentM: 0, pumpSettingM: 35 };
+const well = computeWellPumpDuty(wellCase);
+assert.equal(well.staticLiftM, 31); assert.equal(well.submergenceM, 9); assert.equal(well.totalHeadM, 31);
+const equivalentUs = computeWellPumpDuty({ ...wellCase, pumpingLevelM: toSI(85.3018372703412, "head", "US"), dischargeElevationM: toSI(16.4041994750656, "head", "US"), pumpSettingM: toSI(114.829396325459, "head", "US") });
+assert.ok(Math.abs(equivalentUs.staticLiftM - 31) < 1e-9); assert.ok(Math.abs(equivalentUs.submergenceM - 9) < 1e-9);
+assert.throws(() => computeWellPumpDuty({ ...wellCase, pumpSettingM: 26 }));
+assert.throws(() => computeWellPumpDuty({ ...wellCase, pumpSettingM: 25 }));
+report.decisionFixtures += 9;
 
 if (imageDir) await mkdir(imageDir, { recursive: true });
 const browser = await chromium.launch({ channel: process.env.WSB_QA_BROWSER || "chrome", headless: true });
@@ -176,6 +189,23 @@ try {
   if (!production) await fetch(`${base}/__qa__/analytics-reset`, { method: "POST" });
   for (const path of paths) for (const width of widths) {
     await open(path, width); await geometry(path, width, "initial"); report.renderChecks++;
+    if (path === terminologyGuide) {
+      assert.equal(await page.locator("h1").innerText(), "Well, Borehole & Tube Well Terminology");
+      assert.equal(await page.locator('link[rel="canonical"]').getAttribute("href"), `https://watersystemsbench.com${terminologyGuide}`);
+      const content = await page.locator("article").innerText();
+      for (const marker of ["not three mutually exclusive", "Separate the name from construction", "no single worldwide depth", "same reference before subtracting", "Do not substitute total depth", "14 m", "9 m", "31 m", "not a test protocol", "not proof of sustainable yield", "Missing values remain unknown", "Well Yield vs Demand Checker"]) {
+        assert.ok(content.includes(marker), marker); report.contentAssertions++;
+      }
+      const region = page.getByRole("region", { name: "Well, borehole and tube-well comparison", exact: true });
+      assert.equal(await region.getAttribute("tabindex"), "0");
+      assert.equal(await region.locator("tbody tr").count(), 3);
+      if (imageDir) {
+        await shot(`terminology-guide-full-${width}`, true);
+        await region.scrollIntoViewIfNeeded(); await region.evaluate(element => { element.scrollLeft = element.scrollWidth; });
+        await shot(`terminology-comparison-rightmost-${width}`);
+        await region.evaluate(element => { element.scrollLeft = 0; });
+      }
+    }
     if (path === guide) {
       assert.equal(await page.locator("h1").innerText(), "How to Reduce Metal Finishing Rinse Water");
       assert.equal(await page.locator('link[rel="canonical"]').getAttribute("href"), `https://watersystemsbench.com${guide}`);
@@ -203,6 +233,20 @@ try {
       }
     }
     if (path.startsWith("/tools/") && path !== "/tools/") await runTool(path, width);
+    if (path === "/tools/well-borehole-pump-sizing-planner/" && width === 1280) {
+      for (const [id, value] of Object.entries({ demand: 20, pumpingLevel: 26, dischargeElevation: 5, deliveryPressure: 0, friction: 0, equipment: 0, pumpSetting: 35 })) await page.locator(`#${id}`).fill(String(value));
+      await page.locator('button[type="submit"]').click();
+      await page.locator(".result-report:not([hidden])").waitFor();
+      assert.match(await page.locator(".reading-value").innerText(), /31\s*m/);
+      assert.match(await page.locator("[data-supporting]").innerText(), /9\s*m/);
+      await page.locator("#pumpSetting").fill("26"); await page.locator('button[type="submit"]').click();
+      assert.ok((await page.locator("[data-form-error]").innerText()).length > 0);
+      assert.equal(await page.locator(".result-report").isHidden(), true);
+      await page.locator("#pumpSetting").fill("35"); await page.locator('button[type="submit"]').click();
+      await page.locator(".result-report:not([hidden])").waitFor();
+      assert.match(await page.locator(".reading-value").innerText(), /31\s*m/);
+      report.interactions.push({ path, width, terminologyExample: "pass", invalidIntakeClearsResult: "pass", recovery: "pass" });
+    }
     if (path === "/tools/") {
       await page.locator("#toolSystem").selectOption("metal-finishing");
       assert.equal(await page.locator("[data-tool-card]:visible").count(), 5);

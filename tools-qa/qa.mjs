@@ -118,6 +118,12 @@ for (const marker of [
 ]) {
   if (!rinseGuide.includes(marker)) errors.push(`Rinse guide verification workflow missing: ${marker}.`);
 }
+const terminologyGuide = await readFile(join(root, "guides/well-borehole-tube-well-terminology/index.html"), "utf8");
+for (const marker of ["not three mutually exclusive", "Separate the name from construction", "no single worldwide depth", "Do not substitute total depth", "14 m", "9 m", "31 m", "not a test protocol", "Missing values remain unknown", '"dateModified":"2026-10-16"']) {
+  if (!terminologyGuide.includes(marker)) errors.push(`Terminology guide decision support missing: ${marker}.`);
+}
+if (!terminologyGuide.includes('<div class="table-scroll" role="region" aria-label="Well, borehole and tube-well comparison" tabindex="0" style="--table-min-width: 740px;"><table>')) errors.push("Terminology comparison must retain labelled keyboard-accessible internal scrolling.");
+
 const userManagedBadgeBlock = `<div class="page-shell" style="padding:30px 0;text-align:center;">
     <a href="https://kittylaunch.com/p/water-systems-bench" target="_blank" rel="noopener" style="display:inline-block;margin:0 2px;">
       <img src="https://kittylaunch.com/api/public/badges/launch_badge.svg?theme=light&name=Water%20Systems%20Bench" alt="Water Systems Bench on KittyLaunch" data-kittylaunch-badge="1" style="margin:0 2px;height:36px;" />

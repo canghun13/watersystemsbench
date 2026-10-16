@@ -8,7 +8,7 @@
 - Default branch: main
 - Contact: [canghun13@naver.com](mailto:canghun13@naver.com)
 - GA4 measurement ID: `G-7FB08YPX7C`
-- Current phase: October 9 search-led rinse-guide upgrade deployed and verified on production
+- Current phase: October 16 search-led well-terminology guide upgrade locally verified; release verification in progress
 - Language and audience: English; global
 - Stack and deployment: static HTML/CSS/vanilla JavaScript; GitHub Pages plus Cloudflare
 - Phase 2 starting commit: `3c2b450e361a8a8ea0d351059bdef0e121b95071`
@@ -17,7 +17,7 @@
 
 The repository contains a deployed static site with 98 public HTML pages: seven core pages, eight connected system hubs, 51 working tools, 20 guides and 12 references, plus shared design and conversion modules, repeatable QA, current discovery/expansion records, social preview, favicons and `CNAME`.
 
-The latest validated expansion is Monitoring Well Purging & Low-Flow Sampling. The October 9 existing-guide upgrade improves rinse-control choices and matched production/quality verification without changing the 98-page inventory, calculations, public URLs, shared styles or protected badges. The October 1 Tool Finder native-reset correction, shared-button and stabilization-form corrections remain intact. Development documents remain excluded from the production artifact and `/docs/` returns 404.
+The latest validated expansion is Monitoring Well Purging & Low-Flow Sampling. The October 16 existing-guide upgrade clarifies well/borehole/tube-well overlap and translates a well record into distinct planning quantities. The October 9 rinse-guide upgrade, October 1 Finder correction, shared-button and stabilization-form corrections remain intact. Inventory, calculation engines, public URLs, shared styles, protected badges and production `/docs/` exclusion are unchanged.
 
 ## Irrigation Specification Task Record
 
@@ -895,3 +895,24 @@ Files changed for the implementation and evidence contract:
 1. Observe the upgraded guide with matched page-level windows and query/page attribution; do not claim immediate ranking lift from cumulative totals.
 2. Keep the Monitoring Well audit closed absent concrete fetch/render/indexability failure; distinguish queue changes from indexed-state proof.
 3. Use comparable GA4/Bing periods and joined source/city/landing data for the unclassified Direct spike; enter broad new-workflow discovery only without a stronger existing opportunity.
+
+## Weekly Growth / Search Review — 2026-10-16
+
+- Start clean local/cached main: `380083249e81d9524c40339c93195bcd071e903a`; actual remote `4757117241a46e5d056957333103033c4aa53aa6`, 0 ahead/2 behind. Safe fast-forward preserved the October 9 work and established that clean analysis baseline. No install, reset, stash or rebase.
+- Current-session six reports only: October 16 GSC Performance, two Coverage ZIPs, Bing page/keyword CSVs and GA4 overview. All accessible at the supplied locations; no directory scan, older raw-data substitution or raw-report commit. Periods/limits/candidates/source review: `docs/weekly-growth-review-2026-10-16.md`.
+- GSC July 26–October 13: 10 clicks/1,534 impressions/0.6519% CTR/derived weighted position 37.253. Complete October 7–13: 2/179 versus September 30–October 6: 2/219; impressions -18.26%, clicks flat, derived position 21.300 versus 29.432. Current export reproduces the previous 7-day window exactly. No page/query daily join; cumulative increases are not weekly page/query lift.
+- Coverage through October 12: discovered 19, unchanged since September 22; crawled 1, only legacy `/docs/page-inventory.html` last crawled July 28 and currently 404. RO planner leaving that issue is not indexed-state proof. Placeholder 1970 dates/absent validation remain unavailable. No new evidence reopens the Monitoring Well audit.
+- GA4 September 18–October 15: 130 active/127 new users, mean engagement 23.115 seconds, 508 events. Organic sessions Bing 18, Google 5, DuckDuckGo 3, Yahoo 2; Direct 98 sessions and Singapore 66 users are unjoined/unclassified, not proven bots or organic success. Prior window overlaps 21 days and includes September 17's 116-new-user spike, now outside the window. Bing page 841/30, keyword 620/30; unknown periods prohibit weekly rates.
+- No Priority A defect: fresh static/publication/analytics/navigation and 75-render baseline pass. Initial five external badge failures were `ERR_NETWORK_ACCESS_DENIED`; identical network-authorized QA passes, not a website defect. Existing badges/blocker unchanged.
+- **EXISTING-UPGRADE GO — `/guides/well-borehole-tube-well-terminology/`**, 84/100, gates A–G pass. GSC 69 impressions/14.83 plus near-first-page naming variants and Bing 29/5.69; inspected missing direct overlap comparison and quantity-to-tool handoff. Pipe ID reference (71) and Pressure Tank tool (71) lack equally clear fresh gaps. August 20's terminology opportunity was deferred, not implemented; the actual October 9 rinse upgrade is not repeated.
+- Scope: one guide, its generator entry/optional comparison markup and October 16 reviewed/schema/sitemap date. Preserve title/H1/canonical/description and 97 other HTML pages. Compare regional labels without global depth rules; distinguish construction, water levels, total depth and intake. Example drawdown 14 m, submergence 9 m, static lift 31 m is arithmetic, not installation/test/sustainable-yield criteria. No new tools, formulas, runtime JS, CSS, navigation or badge changes.
+- Latest source review: USGS well information, BGS records and FAO well terminology/completion guidance. The older USGS PDF fetch returned 403; alternate accessible primary sources support the additions. No full-PDF review or universal historical limits claimed. Expansion branch not entered because the bounded existing opportunity is stronger; no full exclusion audit/40-family funnel or expansion NO-GO claimed.
+- Final local QA: 391 existing cases; 18 targeted arithmetic/unit/geometry assertions; 98-page static/publication/analytics and 100-document navigation pass. Chrome 17 pages × five widths = 85 renders, 125 geometry snapshots, 42 interactions, 120 content assertions and 25 table checks. Actual new-guide 390/1280 and rightmost table-column 390 screenshots inspected; 740px table inside 348px labelled region. Runtime/request/404/overflow/clipping/broken-image failures 0; matrix Analytics intercepted 85/completed 0. Print hook/media verified, not native dialog.
+- Dated baseline/local outputs: `tools-qa/weekly-growth-2026-10-16-baseline-results.json` and `tools-qa/weekly-growth-2026-10-16-local-results.json`; older QA evidence is not overwritten. New guide hash `22993ed68268f22d5b384f0fc6eded59a6b3b6ebff5913857d70651a0bb4ed42`; sitemap `4f22f9d9769d546e0dd3a42f0f46667cd9b5977976e97a19748d830c4cd9f9d3`. The rinse-guide hash stays `654d10b8ab907d6f87300499a59298c07b9ff074f23279ada1cafa217f0dd744`.
+- Implementation commit is the commit containing this entry. Add exact-SHA Pages and actual-domain QA evidence after deployment; final delivery must verify equal local/origin/actual main, 0/0 ahead/behind and clean tree. Inventory/sitemap remain 98 (7 core, 8 hubs, 51 tools, 20 guides, 12 references).
+
+### Next state — maximum three
+
+1. Observe the terminology upgrade with matched post-release page/query windows; no immediate or cumulative ranking attribution.
+2. Observe the October 9 rinse upgrade and Monitoring Well queue without repeat edits/audits absent concrete new failure.
+3. Obtain dated Bing periods and joined GA4 source/city/landing evidence before interpreting rolling differences or Direct/Singapore traffic.
