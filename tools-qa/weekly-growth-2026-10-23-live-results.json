@@ -1,6 +1,6 @@
 {
   "date": "2026-10-23",
-  "checkedAt": "2026-10-23T08:05:18.708Z",
+  "checkedAt": "2026-10-23T08:12:53.787Z",
   "baseline": "1a7bbd6e25711483cfb0ab87d7b81b8c6d7c5a67",
   "scope": {
     "changedPublicHtml": [
@@ -150,7 +150,7 @@
     {
       "path": "/assets/css/pressure-tank.css",
       "status": 200,
-      "sha256": "377a96381c41e32543649d9d7abdca33966583a80d0039e5e27fe9a3bd03a4b1",
+      "sha256": "2fd8105f82a65c1764ef49b118151038642f5af15e0ef8102cd1487159b28c1f",
       "xRobots": null
     },
     {

@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-23",
+  "base": "https://watersystemsbench.com",
+  "scope": "Final page-only print-header supplement; not another full interaction matrix",
+  "checks": [
+    {
+      "width": 390,
+      "heroHeight": 32,
+      "circleDisplay": "none",
+      "viewport": 390,
+      "inputRecord": true,
+      "title": true,
+      "printHook": true
+    },
+    {
+      "width": 768,
+      "heroHeight": 32,
+      "circleDisplay": "none",
+      "viewport": 768,
+      "inputRecord": true,
+      "title": true,
+      "printHook": true
+    },
+    {
+      "width": 1024,
+      "heroHeight": 32,
+      "circleDisplay": "none",
+      "viewport": 1024,
+      "inputRecord": true,
+      "title": true,
+      "printHook": true
+    },
+    {
+      "width": 1280,
+      "heroHeight": 32,
+      "circleDisplay": "none",
+      "viewport": 1280,
+      "inputRecord": true,
+      "title": true,
+      "printHook": true
+    },
+    {
+      "width": 1440,
+      "heroHeight": 32,
+      "circleDisplay": "none",
+      "viewport": 1440,
+      "inputRecord": true,
+      "title": true,
+      "printHook": true
+    }
+  ],
+  "errors": [],
+  "analytics": {
+    "intercepted": 5,
+    "completed": 0
+  },
+  "complete": true
+}
