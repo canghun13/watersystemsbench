@@ -105,6 +105,10 @@ if (!llms.includes("/systems/monitoring-well-sampling/") || !llms.includes("Moni
 if (/watersystemsbench\.com\/docs\//i.test(llms)) errors.push("llms.txt must not expose development-only /docs/ URLs.");
 
 const home = await readFile(join(root, "index.html"), "utf8");
+const pressureTankHtml = await readFile(join(root, "tools", "pressure-tank-sizing-calculator", "index.html"), "utf8");
+for (const marker of ['name="compareMode"', 'name="ratedDrawdown"', 'name="ratingBasis"', 'data-rating-fields hidden disabled', "Compare rated drawdown, not nominal capacity", "no simultaneous outlet demand", "October 23, 2026"]) {
+  if (!pressureTankHtml.includes(marker)) errors.push(`Pressure-tank rating comparison contract missing: ${marker}.`);
+}
 for (const [slug, kind] of [["bod-seed-correction-bottle-analyzer", "lab-bod"], ["tss-vss-gravimetric-calculator", "lab-solids"], ["water-duplicate-rpd-batch-checker", "lab-rpd"], ["matrix-spike-recovery-calculator", "lab-spike"]]) {
   const html = await readFile(join(root, "tools", slug, "index.html"), "utf8");
   for (const marker of [`data-tool-form="${kind}"`, '/assets/js/tools/water-laboratory-tools.js', '/assets/css/water-laboratory.css', "What this tool does", "Calculation or decision method", "Worked example", "Assumptions", "Limitations", "Sources", "data-copy-result", "data-print-result", "Numeric review only", "October 16, 2026"]) {

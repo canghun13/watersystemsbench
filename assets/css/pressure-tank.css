@@ -1,0 +1,8 @@
+/* Loaded only by the pressure-tank sizing page. */
+[data-rating-fields] { min-width: 0; }
+[data-rating-fields] > legend { max-width: 100%; line-height: 1.4; }
+@media print {
+  .content-layout, .result-empty, .hero-note { display: none !important; }
+  .tool-layout:not(:has(.result-report:not([hidden]))) { display: none; }
+  .result-block, .result-warning { break-inside: avoid; }
+}

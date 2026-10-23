@@ -1,0 +1,2752 @@
+{
+  "date": "2026-10-23",
+  "base": "http://127.0.0.1:4197",
+  "scope": "Pressure-tank upgrade plus protected controls, not a full-site render matrix",
+  "widths": [
+    390,
+    768,
+    1024,
+    1280,
+    1440
+  ],
+  "paths": [
+    "/tools/pressure-tank-sizing-calculator/",
+    "/tools/pump-short-cycling-analyzer/",
+    "/guides/pressure-tank-drawdown-short-cycling/",
+    "/tools/",
+    "/tools/groundwater-stabilization-log-analyzer/",
+    "/reference/greywater-source-use-screening/",
+    "/tools/water-duplicate-rpd-batch-checker/",
+    "/systems/water-laboratory-qa/",
+    "/guides/well-borehole-tube-well-terminology/",
+    "/guides/reduce-metal-finishing-rinse-water/",
+    "/",
+    "/reference/water-pipe-internal-diameters/"
+  ],
+  "renders": 60,
+  "geometry": [
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 390,
+      "state": "initial",
+      "documentWidth": 390,
+      "viewport": 390,
+      "h1": {
+        "x": 20,
+        "y": 217.640625,
+        "right": 370,
+        "bottom": 304.015625,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pump-short-cycling-analyzer/",
+      "width": 390,
+      "state": "initial",
+      "documentWidth": 390,
+      "viewport": 390,
+      "h1": {
+        "x": 20,
+        "y": 200.796875,
+        "right": 370,
+        "bottom": 287.171875,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/guides/pressure-tank-drawdown-short-cycling/",
+      "width": 390,
+      "state": "initial",
+      "documentWidth": 390,
+      "viewport": 390,
+      "h1": {
+        "x": 20,
+        "y": 224.15625,
+        "right": 370,
+        "bottom": 353.71875,
+        "width": 350,
+        "height": 129.5625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/",
+      "width": 390,
+      "state": "initial",
+      "documentWidth": 390,
+      "viewport": 390,
+      "h1": {
+        "x": 20,
+        "y": 200.796875,
+        "right": 370,
+        "bottom": 243.984375,
+        "width": 350,
+        "height": 43.1875
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 390,
+      "state": "initial",
+      "documentWidth": 390,
+      "viewport": 390,
+      "h1": {
+        "x": 20,
+        "y": 241,
+        "right": 370,
+        "bottom": 370.5625,
+        "width": 350,
+        "height": 129.5625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/reference/greywater-source-use-screening/",
+      "width": 390,
+      "state": "initial",
+      "documentWidth": 390,
+      "viewport": 390,
+      "h1": {
+        "x": 20,
+        "y": 224.15625,
+        "right": 370,
+        "bottom": 310.53125,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "offenders": [],
+      "tables": [
+        {
+          "accessible": true,
+          "within": true
+        },
+        {
+          "accessible": true,
+          "within": true
+        }
+      ],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "width": 390,
+      "state": "initial",
+      "documentWidth": 390,
+      "viewport": 390,
+      "h1": {
+        "x": 20,
+        "y": 200.796875,
+        "right": 370,
+        "bottom": 287.171875,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/systems/water-laboratory-qa/",
+      "width": 390,
+      "state": "initial",
+      "documentWidth": 390,
+      "viewport": 390,
+      "h1": {
+        "x": 20,
+        "y": 200.796875,
+        "right": 370,
+        "bottom": 287.171875,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/guides/well-borehole-tube-well-terminology/",
+      "width": 390,
+      "state": "initial",
+      "documentWidth": 390,
+      "viewport": 390,
+      "h1": {
+        "x": 20,
+        "y": 224.15625,
+        "right": 370,
+        "bottom": 310.53125,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "offenders": [],
+      "tables": [
+        {
+          "accessible": true,
+          "within": true
+        }
+      ],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/guides/reduce-metal-finishing-rinse-water/",
+      "width": 390,
+      "state": "initial",
+      "documentWidth": 390,
+      "viewport": 390,
+      "h1": {
+        "x": 20,
+        "y": 224.15625,
+        "right": 370,
+        "bottom": 310.53125,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/",
+      "width": 390,
+      "state": "initial",
+      "documentWidth": 390,
+      "viewport": 390,
+      "h1": {
+        "x": 20,
+        "y": 200.796875,
+        "right": 370,
+        "bottom": 287.171875,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/reference/water-pipe-internal-diameters/",
+      "width": 390,
+      "state": "initial",
+      "documentWidth": 390,
+      "viewport": 390,
+      "h1": {
+        "x": 20,
+        "y": 224.15625,
+        "right": 370,
+        "bottom": 353.71875,
+        "width": 350,
+        "height": 129.5625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "offenders": [],
+      "tables": [
+        {
+          "accessible": true,
+          "within": true
+        }
+      ],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 390,
+      "state": "default",
+      "documentWidth": 390,
+      "viewport": 390,
+      "h1": {
+        "x": 20,
+        "y": -922.359375,
+        "right": 370,
+        "bottom": -835.984375,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 390,
+      "state": "below-target",
+      "documentWidth": 390,
+      "viewport": 390,
+      "h1": {
+        "x": 20,
+        "y": -1465.359375,
+        "right": 370,
+        "bottom": -1378.984375,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 390,
+      "state": "above-target",
+      "documentWidth": 390,
+      "viewport": 390,
+      "h1": {
+        "x": 20,
+        "y": -1465.359375,
+        "right": 370,
+        "bottom": -1378.984375,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pump-short-cycling-analyzer/",
+      "width": 390,
+      "state": "protected-result",
+      "documentWidth": 390,
+      "viewport": 390,
+      "h1": {
+        "x": 20,
+        "y": -748.203125,
+        "right": 370,
+        "bottom": -661.828125,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "width": 390,
+      "state": "protected-result",
+      "documentWidth": 390,
+      "viewport": 390,
+      "h1": {
+        "x": 20,
+        "y": -1237.203125,
+        "right": 370,
+        "bottom": -1150.828125,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "offenders": [],
+      "tables": [
+        {
+          "accessible": true,
+          "within": true
+        }
+      ],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 768,
+      "state": "initial",
+      "documentWidth": 768,
+      "viewport": 768,
+      "h1": {
+        "x": 20,
+        "y": 208.796875,
+        "right": 748,
+        "bottom": 254.40625,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pump-short-cycling-analyzer/",
+      "width": 768,
+      "state": "initial",
+      "documentWidth": 768,
+      "viewport": 768,
+      "h1": {
+        "x": 20,
+        "y": 208.796875,
+        "right": 748,
+        "bottom": 254.40625,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/guides/pressure-tank-drawdown-short-cycling/",
+      "width": 768,
+      "state": "initial",
+      "documentWidth": 768,
+      "viewport": 768,
+      "h1": {
+        "x": 20,
+        "y": 208.796875,
+        "right": 748,
+        "bottom": 254.40625,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/",
+      "width": 768,
+      "state": "initial",
+      "documentWidth": 768,
+      "viewport": 768,
+      "h1": {
+        "x": 20,
+        "y": 208.796875,
+        "right": 748,
+        "bottom": 254.40625,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 768,
+      "state": "initial",
+      "documentWidth": 768,
+      "viewport": 768,
+      "h1": {
+        "x": 20,
+        "y": 208.796875,
+        "right": 748,
+        "bottom": 254.40625,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/reference/greywater-source-use-screening/",
+      "width": 768,
+      "state": "initial",
+      "documentWidth": 768,
+      "viewport": 768,
+      "h1": {
+        "x": 20,
+        "y": 208.796875,
+        "right": 748,
+        "bottom": 254.40625,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [
+        {
+          "accessible": true,
+          "within": true
+        },
+        {
+          "accessible": true,
+          "within": true
+        }
+      ],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "width": 768,
+      "state": "initial",
+      "documentWidth": 768,
+      "viewport": 768,
+      "h1": {
+        "x": 20,
+        "y": 208.796875,
+        "right": 748,
+        "bottom": 254.40625,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/systems/water-laboratory-qa/",
+      "width": 768,
+      "state": "initial",
+      "documentWidth": 768,
+      "viewport": 768,
+      "h1": {
+        "x": 20,
+        "y": 208.796875,
+        "right": 748,
+        "bottom": 254.40625,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/guides/well-borehole-tube-well-terminology/",
+      "width": 768,
+      "state": "initial",
+      "documentWidth": 768,
+      "viewport": 768,
+      "h1": {
+        "x": 20,
+        "y": 208.796875,
+        "right": 748,
+        "bottom": 254.40625,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [
+        {
+          "accessible": true,
+          "within": true
+        }
+      ],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/guides/reduce-metal-finishing-rinse-water/",
+      "width": 768,
+      "state": "initial",
+      "documentWidth": 768,
+      "viewport": 768,
+      "h1": {
+        "x": 20,
+        "y": 208.796875,
+        "right": 748,
+        "bottom": 254.40625,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/",
+      "width": 768,
+      "state": "initial",
+      "documentWidth": 768,
+      "viewport": 768,
+      "h1": {
+        "x": 20,
+        "y": 208.796875,
+        "right": 748,
+        "bottom": 254.40625,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/reference/water-pipe-internal-diameters/",
+      "width": 768,
+      "state": "initial",
+      "documentWidth": 768,
+      "viewport": 768,
+      "h1": {
+        "x": 20,
+        "y": 208.796875,
+        "right": 748,
+        "bottom": 254.40625,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [
+        {
+          "accessible": true,
+          "within": true
+        }
+      ],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 768,
+      "state": "default",
+      "documentWidth": 768,
+      "viewport": 768,
+      "h1": {
+        "x": 20,
+        "y": -551.203125,
+        "right": 748,
+        "bottom": -505.59375,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 768,
+      "state": "below-target",
+      "documentWidth": 768,
+      "viewport": 768,
+      "h1": {
+        "x": 20,
+        "y": -590.203125,
+        "right": 748,
+        "bottom": -544.59375,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 768,
+      "state": "above-target",
+      "documentWidth": 768,
+      "viewport": 768,
+      "h1": {
+        "x": 20,
+        "y": -590.203125,
+        "right": 748,
+        "bottom": -544.59375,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pump-short-cycling-analyzer/",
+      "width": 768,
+      "state": "protected-result",
+      "documentWidth": 768,
+      "viewport": 768,
+      "h1": {
+        "x": 20,
+        "y": -422.203125,
+        "right": 748,
+        "bottom": -376.59375,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "width": 768,
+      "state": "protected-result",
+      "documentWidth": 768,
+      "viewport": 768,
+      "h1": {
+        "x": 20,
+        "y": -894.203125,
+        "right": 748,
+        "bottom": -848.59375,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [
+        {
+          "accessible": true,
+          "within": true
+        }
+      ],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 1024,
+      "state": "initial",
+      "documentWidth": 1024,
+      "viewport": 1024,
+      "h1": {
+        "x": 20,
+        "y": 247.1875,
+        "right": 628.046875,
+        "bottom": 368.8125,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pump-short-cycling-analyzer/",
+      "width": 1024,
+      "state": "initial",
+      "documentWidth": 1024,
+      "viewport": 1024,
+      "h1": {
+        "x": 20,
+        "y": 247.1875,
+        "right": 628.046875,
+        "bottom": 308,
+        "width": 608.046875,
+        "height": 60.8125
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/guides/pressure-tank-drawdown-short-cycling/",
+      "width": 1024,
+      "state": "initial",
+      "documentWidth": 1024,
+      "viewport": 1024,
+      "h1": {
+        "x": 20,
+        "y": 247.1875,
+        "right": 628.046875,
+        "bottom": 368.8125,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/",
+      "width": 1024,
+      "state": "initial",
+      "documentWidth": 1024,
+      "viewport": 1024,
+      "h1": {
+        "x": 20,
+        "y": 247.1875,
+        "right": 628.046875,
+        "bottom": 308,
+        "width": 608.046875,
+        "height": 60.8125
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 1024,
+      "state": "initial",
+      "documentWidth": 1024,
+      "viewport": 1024,
+      "h1": {
+        "x": 20,
+        "y": 247.1875,
+        "right": 628.046875,
+        "bottom": 368.8125,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/reference/greywater-source-use-screening/",
+      "width": 1024,
+      "state": "initial",
+      "documentWidth": 1024,
+      "viewport": 1024,
+      "h1": {
+        "x": 20,
+        "y": 247.1875,
+        "right": 628.046875,
+        "bottom": 368.8125,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [
+        {
+          "accessible": true,
+          "within": true
+        },
+        {
+          "accessible": true,
+          "within": true
+        }
+      ],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "width": 1024,
+      "state": "initial",
+      "documentWidth": 1024,
+      "viewport": 1024,
+      "h1": {
+        "x": 20,
+        "y": 247.1875,
+        "right": 628.046875,
+        "bottom": 368.8125,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/systems/water-laboratory-qa/",
+      "width": 1024,
+      "state": "initial",
+      "documentWidth": 1024,
+      "viewport": 1024,
+      "h1": {
+        "x": 20,
+        "y": 247.1875,
+        "right": 628.046875,
+        "bottom": 368.8125,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/guides/well-borehole-tube-well-terminology/",
+      "width": 1024,
+      "state": "initial",
+      "documentWidth": 1024,
+      "viewport": 1024,
+      "h1": {
+        "x": 20,
+        "y": 247.1875,
+        "right": 628.046875,
+        "bottom": 368.8125,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [
+        {
+          "accessible": true,
+          "within": true
+        }
+      ],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/guides/reduce-metal-finishing-rinse-water/",
+      "width": 1024,
+      "state": "initial",
+      "documentWidth": 1024,
+      "viewport": 1024,
+      "h1": {
+        "x": 20,
+        "y": 247.1875,
+        "right": 628.046875,
+        "bottom": 368.8125,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/",
+      "width": 1024,
+      "state": "initial",
+      "documentWidth": 1024,
+      "viewport": 1024,
+      "h1": {
+        "x": 20,
+        "y": 247.1875,
+        "right": 628.046875,
+        "bottom": 368.8125,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/reference/water-pipe-internal-diameters/",
+      "width": 1024,
+      "state": "initial",
+      "documentWidth": 1024,
+      "viewport": 1024,
+      "h1": {
+        "x": 20,
+        "y": 247.1875,
+        "right": 628.046875,
+        "bottom": 368.8125,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [
+        {
+          "accessible": true,
+          "within": true
+        }
+      ],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 1024,
+      "state": "default",
+      "documentWidth": 1024,
+      "viewport": 1024,
+      "h1": {
+        "x": 20,
+        "y": -538.8125,
+        "right": 628.046875,
+        "bottom": -417.1875,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 1024,
+      "state": "below-target",
+      "documentWidth": 1024,
+      "viewport": 1024,
+      "h1": {
+        "x": 20,
+        "y": -1018.8125,
+        "right": 628.046875,
+        "bottom": -897.1875,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 1024,
+      "state": "above-target",
+      "documentWidth": 1024,
+      "viewport": 1024,
+      "h1": {
+        "x": 20,
+        "y": -1018.8125,
+        "right": 628.046875,
+        "bottom": -897.1875,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pump-short-cycling-analyzer/",
+      "width": 1024,
+      "state": "protected-result",
+      "documentWidth": 1024,
+      "viewport": 1024,
+      "h1": {
+        "x": 20,
+        "y": -311.8125,
+        "right": 628.046875,
+        "bottom": -251,
+        "width": 608.046875,
+        "height": 60.8125
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "width": 1024,
+      "state": "protected-result",
+      "documentWidth": 1024,
+      "viewport": 1024,
+      "h1": {
+        "x": 20,
+        "y": -957.8125,
+        "right": 628.046875,
+        "bottom": -836.1875,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [
+        {
+          "accessible": true,
+          "within": true
+        }
+      ],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 1280,
+      "state": "initial",
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "h1": {
+        "x": 60,
+        "y": 272.796875,
+        "right": 773.921875,
+        "bottom": 424.859375,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pump-short-cycling-analyzer/",
+      "width": 1280,
+      "state": "initial",
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "h1": {
+        "x": 60,
+        "y": 272.796875,
+        "right": 773.921875,
+        "bottom": 424.859375,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/guides/pressure-tank-drawdown-short-cycling/",
+      "width": 1280,
+      "state": "initial",
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "h1": {
+        "x": 60,
+        "y": 272.796875,
+        "right": 773.921875,
+        "bottom": 424.859375,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/",
+      "width": 1280,
+      "state": "initial",
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "h1": {
+        "x": 60,
+        "y": 272.796875,
+        "right": 773.921875,
+        "bottom": 348.828125,
+        "width": 713.921875,
+        "height": 76.03125
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 1280,
+      "state": "initial",
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "h1": {
+        "x": 60,
+        "y": 272.796875,
+        "right": 773.921875,
+        "bottom": 424.859375,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/reference/greywater-source-use-screening/",
+      "width": 1280,
+      "state": "initial",
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "h1": {
+        "x": 60,
+        "y": 272.796875,
+        "right": 773.921875,
+        "bottom": 424.859375,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [
+        {
+          "accessible": true,
+          "within": true
+        },
+        {
+          "accessible": true,
+          "within": true
+        }
+      ],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "width": 1280,
+      "state": "initial",
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "h1": {
+        "x": 60,
+        "y": 272.796875,
+        "right": 773.921875,
+        "bottom": 424.859375,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/systems/water-laboratory-qa/",
+      "width": 1280,
+      "state": "initial",
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "h1": {
+        "x": 60,
+        "y": 272.796875,
+        "right": 773.921875,
+        "bottom": 424.859375,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/guides/well-borehole-tube-well-terminology/",
+      "width": 1280,
+      "state": "initial",
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "h1": {
+        "x": 60,
+        "y": 272.796875,
+        "right": 773.921875,
+        "bottom": 424.859375,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [
+        {
+          "accessible": true,
+          "within": true
+        }
+      ],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/guides/reduce-metal-finishing-rinse-water/",
+      "width": 1280,
+      "state": "initial",
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "h1": {
+        "x": 60,
+        "y": 272.796875,
+        "right": 773.921875,
+        "bottom": 424.859375,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/",
+      "width": 1280,
+      "state": "initial",
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "h1": {
+        "x": 60,
+        "y": 272.796875,
+        "right": 773.921875,
+        "bottom": 424.859375,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/reference/water-pipe-internal-diameters/",
+      "width": 1280,
+      "state": "initial",
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "h1": {
+        "x": 60,
+        "y": 272.796875,
+        "right": 773.921875,
+        "bottom": 424.859375,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [
+        {
+          "accessible": true,
+          "within": true
+        }
+      ],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 1280,
+      "state": "default",
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "h1": {
+        "x": 60,
+        "y": -550.203125,
+        "right": 773.921875,
+        "bottom": -398.140625,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 1280,
+      "state": "below-target",
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "h1": {
+        "x": 60,
+        "y": -988.203125,
+        "right": 773.921875,
+        "bottom": -836.140625,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 1280,
+      "state": "above-target",
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "h1": {
+        "x": 60,
+        "y": -988.203125,
+        "right": 773.921875,
+        "bottom": -836.140625,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pump-short-cycling-analyzer/",
+      "width": 1280,
+      "state": "protected-result",
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "h1": {
+        "x": 60,
+        "y": -421.203125,
+        "right": 773.921875,
+        "bottom": -269.140625,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "width": 1280,
+      "state": "protected-result",
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "h1": {
+        "x": 60,
+        "y": -887.203125,
+        "right": 773.921875,
+        "bottom": -735.140625,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [
+        {
+          "accessible": true,
+          "within": true
+        }
+      ],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 1440,
+      "state": "initial",
+      "documentWidth": 1440,
+      "viewport": 1440,
+      "h1": {
+        "x": 140,
+        "y": 280.796875,
+        "right": 851.8125,
+        "bottom": 451.859375,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pump-short-cycling-analyzer/",
+      "width": 1440,
+      "state": "initial",
+      "documentWidth": 1440,
+      "viewport": 1440,
+      "h1": {
+        "x": 140,
+        "y": 280.796875,
+        "right": 851.8125,
+        "bottom": 451.859375,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/guides/pressure-tank-drawdown-short-cycling/",
+      "width": 1440,
+      "state": "initial",
+      "documentWidth": 1440,
+      "viewport": 1440,
+      "h1": {
+        "x": 140,
+        "y": 280.796875,
+        "right": 851.8125,
+        "bottom": 451.859375,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/",
+      "width": 1440,
+      "state": "initial",
+      "documentWidth": 1440,
+      "viewport": 1440,
+      "h1": {
+        "x": 140,
+        "y": 280.796875,
+        "right": 851.8125,
+        "bottom": 366.328125,
+        "width": 711.8125,
+        "height": 85.53125
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 1440,
+      "state": "initial",
+      "documentWidth": 1440,
+      "viewport": 1440,
+      "h1": {
+        "x": 140,
+        "y": 280.796875,
+        "right": 851.8125,
+        "bottom": 537.390625,
+        "width": 711.8125,
+        "height": 256.59375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/reference/greywater-source-use-screening/",
+      "width": 1440,
+      "state": "initial",
+      "documentWidth": 1440,
+      "viewport": 1440,
+      "h1": {
+        "x": 140,
+        "y": 280.796875,
+        "right": 851.8125,
+        "bottom": 451.859375,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [
+        {
+          "accessible": true,
+          "within": true
+        },
+        {
+          "accessible": true,
+          "within": true
+        }
+      ],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "width": 1440,
+      "state": "initial",
+      "documentWidth": 1440,
+      "viewport": 1440,
+      "h1": {
+        "x": 140,
+        "y": 280.796875,
+        "right": 851.8125,
+        "bottom": 451.859375,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/systems/water-laboratory-qa/",
+      "width": 1440,
+      "state": "initial",
+      "documentWidth": 1440,
+      "viewport": 1440,
+      "h1": {
+        "x": 140,
+        "y": 280.796875,
+        "right": 851.8125,
+        "bottom": 451.859375,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/guides/well-borehole-tube-well-terminology/",
+      "width": 1440,
+      "state": "initial",
+      "documentWidth": 1440,
+      "viewport": 1440,
+      "h1": {
+        "x": 140,
+        "y": 280.796875,
+        "right": 851.8125,
+        "bottom": 451.859375,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [
+        {
+          "accessible": true,
+          "within": true
+        }
+      ],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/guides/reduce-metal-finishing-rinse-water/",
+      "width": 1440,
+      "state": "initial",
+      "documentWidth": 1440,
+      "viewport": 1440,
+      "h1": {
+        "x": 140,
+        "y": 280.796875,
+        "right": 851.8125,
+        "bottom": 451.859375,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/",
+      "width": 1440,
+      "state": "initial",
+      "documentWidth": 1440,
+      "viewport": 1440,
+      "h1": {
+        "x": 140,
+        "y": 280.796875,
+        "right": 851.8125,
+        "bottom": 451.859375,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/reference/water-pipe-internal-diameters/",
+      "width": 1440,
+      "state": "initial",
+      "documentWidth": 1440,
+      "viewport": 1440,
+      "h1": {
+        "x": 140,
+        "y": 280.796875,
+        "right": 851.8125,
+        "bottom": 537.390625,
+        "width": 711.8125,
+        "height": 256.59375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [
+        {
+          "accessible": true,
+          "within": true
+        }
+      ],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 1440,
+      "state": "default",
+      "documentWidth": 1440,
+      "viewport": 1440,
+      "h1": {
+        "x": 140,
+        "y": -569.203125,
+        "right": 851.8125,
+        "bottom": -398.140625,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 1440,
+      "state": "below-target",
+      "documentWidth": 1440,
+      "viewport": 1440,
+      "h1": {
+        "x": 140,
+        "y": -1062.203125,
+        "right": 851.8125,
+        "bottom": -891.140625,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 1440,
+      "state": "above-target",
+      "documentWidth": 1440,
+      "viewport": 1440,
+      "h1": {
+        "x": 140,
+        "y": -1062.203125,
+        "right": 851.8125,
+        "bottom": -891.140625,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pump-short-cycling-analyzer/",
+      "width": 1440,
+      "state": "protected-result",
+      "documentWidth": 1440,
+      "viewport": 1440,
+      "h1": {
+        "x": 140,
+        "y": -440.203125,
+        "right": 851.8125,
+        "bottom": -269.140625,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "width": 1440,
+      "state": "protected-result",
+      "documentWidth": 1440,
+      "viewport": 1440,
+      "h1": {
+        "x": 140,
+        "y": -906.203125,
+        "right": 851.8125,
+        "bottom": -735.140625,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "offenders": [],
+      "tables": [
+        {
+          "accessible": true,
+          "within": true
+        }
+      ],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/reference/greywater-source-use-screening/",
+      "width": 390,
+      "state": "rightmost-column",
+      "documentWidth": 390,
+      "viewport": 390,
+      "h1": {
+        "x": 20,
+        "y": 222.15625,
+        "right": 370,
+        "bottom": 308.53125,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "offenders": [],
+      "tables": [
+        {
+          "accessible": true,
+          "within": true
+        },
+        {
+          "accessible": true,
+          "within": true
+        }
+      ],
+      "unlabelled": [],
+      "broken": []
+    },
+    {
+      "path": "/guides/well-borehole-tube-well-terminology/",
+      "width": 390,
+      "state": "rightmost-column",
+      "documentWidth": 390,
+      "viewport": 390,
+      "h1": {
+        "x": 20,
+        "y": 213.15625,
+        "right": 370,
+        "bottom": 299.53125,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "offenders": [],
+      "tables": [
+        {
+          "accessible": true,
+          "within": true
+        }
+      ],
+      "unlabelled": [],
+      "broken": []
+    }
+  ],
+  "interactions": [
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 390,
+      "requirement": true,
+      "unconfirmedRejected": true,
+      "below": true,
+      "above": true,
+      "equality": true,
+      "pressureReconfirmation": true,
+      "invalidAndRecovery": true,
+      "disabledIgnored": true,
+      "staleCleared": true,
+      "clipboardInputRecord": true,
+      "printHookAndMedia": true,
+      "siUsRoundtrip": true,
+      "resetAndRefill": true,
+      "conversionAfterReset": true,
+      "hover": true
+    },
+    {
+      "path": "/tools/",
+      "width": 390,
+      "nativeReset": 55
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 390,
+      "alignment": true,
+      "default": true
+    },
+    {
+      "path": "/tools/pump-short-cycling-analyzer/",
+      "width": 390,
+      "defaultAndReset": true
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "width": 390,
+      "defaultAndReset": true
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 768,
+      "requirement": true,
+      "unconfirmedRejected": true,
+      "below": true,
+      "above": true,
+      "equality": true,
+      "pressureReconfirmation": true,
+      "invalidAndRecovery": true,
+      "disabledIgnored": true,
+      "staleCleared": true,
+      "clipboardInputRecord": true,
+      "printHookAndMedia": true,
+      "siUsRoundtrip": true,
+      "resetAndRefill": true,
+      "conversionAfterReset": true,
+      "hover": true
+    },
+    {
+      "path": "/tools/",
+      "width": 768,
+      "nativeReset": 55
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 768,
+      "alignment": true,
+      "default": true
+    },
+    {
+      "path": "/tools/pump-short-cycling-analyzer/",
+      "width": 768,
+      "defaultAndReset": true
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "width": 768,
+      "defaultAndReset": true
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 1024,
+      "requirement": true,
+      "unconfirmedRejected": true,
+      "below": true,
+      "above": true,
+      "equality": true,
+      "pressureReconfirmation": true,
+      "invalidAndRecovery": true,
+      "disabledIgnored": true,
+      "staleCleared": true,
+      "clipboardInputRecord": true,
+      "printHookAndMedia": true,
+      "siUsRoundtrip": true,
+      "resetAndRefill": true,
+      "conversionAfterReset": true,
+      "hover": true
+    },
+    {
+      "path": "/tools/",
+      "width": 1024,
+      "nativeReset": 55
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 1024,
+      "alignment": true,
+      "default": true
+    },
+    {
+      "path": "/tools/pump-short-cycling-analyzer/",
+      "width": 1024,
+      "defaultAndReset": true
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "width": 1024,
+      "defaultAndReset": true
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 1280,
+      "requirement": true,
+      "unconfirmedRejected": true,
+      "below": true,
+      "above": true,
+      "equality": true,
+      "pressureReconfirmation": true,
+      "invalidAndRecovery": true,
+      "disabledIgnored": true,
+      "staleCleared": true,
+      "clipboardInputRecord": true,
+      "printHookAndMedia": true,
+      "siUsRoundtrip": true,
+      "resetAndRefill": true,
+      "conversionAfterReset": true,
+      "hover": true
+    },
+    {
+      "path": "/tools/",
+      "width": 1280,
+      "nativeReset": 55
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 1280,
+      "alignment": true,
+      "default": true
+    },
+    {
+      "path": "/tools/pump-short-cycling-analyzer/",
+      "width": 1280,
+      "defaultAndReset": true
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "width": 1280,
+      "defaultAndReset": true
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 1440,
+      "requirement": true,
+      "unconfirmedRejected": true,
+      "below": true,
+      "above": true,
+      "equality": true,
+      "pressureReconfirmation": true,
+      "invalidAndRecovery": true,
+      "disabledIgnored": true,
+      "staleCleared": true,
+      "clipboardInputRecord": true,
+      "printHookAndMedia": true,
+      "siUsRoundtrip": true,
+      "resetAndRefill": true,
+      "conversionAfterReset": true,
+      "hover": true
+    },
+    {
+      "path": "/tools/",
+      "width": 1440,
+      "nativeReset": 55
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 1440,
+      "alignment": true,
+      "default": true
+    },
+    {
+      "path": "/tools/pump-short-cycling-analyzer/",
+      "width": 1440,
+      "defaultAndReset": true
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "width": 1440,
+      "defaultAndReset": true
+    }
+  ],
+  "tableChecks": 28,
+  "screenshots": [
+    "390-requirement.png",
+    "390-comparison-form.png",
+    "390-rating-fields.png",
+    "390-comparison-result.png",
+    "1280-requirement.png",
+    "1280-comparison-form.png",
+    "1280-rating-fields.png",
+    "1280-comparison-result.png",
+    "1280-print-summary.png"
+  ],
+  "consoleErrors": [],
+  "pageErrors": [],
+  "requestFailures": [],
+  "internalHttpFailures": [],
+  "analytics": {
+    "intercepted": 0,
+    "completed": 0
+  },
+  "complete": true,
+  "browser": "155.0.8059.85",
+  "serverAnalytics": {
+    "analyticsBlocking": "passed",
+    "analyticsHosts": [
+      "www.googletagmanager.com",
+      "googletagmanager.com",
+      "www.google-analytics.com",
+      "google-analytics.com",
+      "analytics.google.com",
+      "stats.g.doubleclick.net"
+    ],
+    "analyticsRequestsIntercepted": 88,
+    "analyticsRequestsCompleted": 0,
+    "targets": {
+      "https://www.googletagmanager.com/gtag/js?id=G-7FB08YPX7C": 88
+    }
+  }
+}
