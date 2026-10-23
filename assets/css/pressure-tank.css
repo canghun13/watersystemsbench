@@ -3,6 +3,9 @@
 [data-rating-fields] > legend { max-width: 100%; line-height: 1.4; }
 @media print {
   .content-layout, .result-empty, .hero-note { display: none !important; }
+  .hero { display: block; padding: 0; margin: 0; }
+  .hero::after, .hero .eyebrow, .hero .lede { display: none; }
+  .hero.compact h1 { margin: 0 0 .5rem; font-size: 20pt; line-height: 1.2; }
   .tool-layout:not(:has(.result-report:not([hidden]))) { display: none; }
   .result-block, .result-warning { break-inside: avoid; }
 }

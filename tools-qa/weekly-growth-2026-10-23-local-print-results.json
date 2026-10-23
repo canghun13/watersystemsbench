@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-23",
+  "base": "http://127.0.0.1:4197",
+  "scope": "Final page-only print-header supplement; not another full interaction matrix",
+  "checks": [
+    {
+      "width": 390,
+      "heroHeight": 32,
+      "circleDisplay": "none",
+      "viewport": 390,
+      "inputRecord": true,
+      "title": true,
+      "printHook": true
+    },
+    {
+      "width": 768,
+      "heroHeight": 32,
+      "circleDisplay": "none",
+      "viewport": 768,
+      "inputRecord": true,
+      "title": true,
+      "printHook": true
+    },
+    {
+      "width": 1024,
+      "heroHeight": 32,
+      "circleDisplay": "none",
+      "viewport": 1024,
+      "inputRecord": true,
+      "title": true,
+      "printHook": true
+    },
+    {
+      "width": 1280,
+      "heroHeight": 32,
+      "circleDisplay": "none",
+      "viewport": 1280,
+      "inputRecord": true,
+      "title": true,
+      "printHook": true
+    },
+    {
+      "width": 1440,
+      "heroHeight": 32,
+      "circleDisplay": "none",
+      "viewport": 1440,
+      "inputRecord": true,
+      "title": true,
+      "printHook": true
+    }
+  ],
+  "errors": [],
+  "analytics": {
+    "intercepted": 0,
+    "completed": 0
+  },
+  "complete": true,
+  "serverAnalytics": {
+    "analyticsBlocking": "passed",
+    "analyticsHosts": [
+      "www.googletagmanager.com",
+      "googletagmanager.com",
+      "www.google-analytics.com",
+      "google-analytics.com",
+      "analytics.google.com",
+      "stats.g.doubleclick.net"
+    ],
+    "analyticsRequestsIntercepted": 5,
+    "analyticsRequestsCompleted": 0,
+    "targets": {
+      "https://www.googletagmanager.com/gtag/js?id=G-7FB08YPX7C": 5
+    }
+  }
+}
