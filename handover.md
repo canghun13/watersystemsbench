@@ -8,14 +8,14 @@
 - Default branch: main
 - Contact: [canghun13@naver.com](mailto:canghun13@naver.com)
 - GA4 measurement ID: `G-7FB08YPX7C`
-- Current phase: October 30 weekly expansion — Rainfall Records & Gauge Networks implemented and locally verified; deployment pending
+- Current phase: October 30 weekly expansion — Rainfall Records & Gauge Networks deployed and production-verified
 - Language and audience: English; global
 - Stack and deployment: static HTML/CSS/vanilla JavaScript; GitHub Pages plus Cloudflare
 - Phase 2 starting commit: `3c2b450e361a8a8ea0d351059bdef0e121b95071`
 
 ## Current Repository State
 
-The repository now contains112 locally implemented public HTML pages: seven core pages, ten connected system hubs,59 working tools,22 guides and14 references. Production remains105 until the October30 deployment evidence below confirms the seven new routes. Shared design, repeatable QA, social preview, favicons and `CNAME` remain in place.
+The repository now contains112 deployed public HTML pages: seven core pages, ten connected system hubs,59 working tools,22 guides and14 references. The October30 expansion adds seven routes to the prior105. Shared design, repeatable QA, social preview, favicons and `CNAME` remain in place.
 
 The latest selected expansion is Rainfall Records & Gauge Networks, following Water Laboratory Calculations & QA. The October23 pressure-tank, October16 terminology and October9 rinse-guide upgrades remain unchanged. Original engines/shared styles/Finder, button/stabilization fixes, five badges and production `/docs/` exclusion are preserved. Rainfall-only assets and discovery/navigation entries add seven routes; no existing URL is renamed.
 
@@ -26,7 +26,9 @@ The latest selected expansion is Rainfall Records & Gauge Networks, following Wa
 - Priority A no new reproduced defect; three existing candidates Pipe ID72, Pump Curve71, Pressure Tank67 remain observe. Actual external-first expansion:157 exclusions→40 fresh jobs/120 seeds→12 comparisons→5 deep finalists. Seeds are not120 executed searches. Google/Naver, Reddit, specialist forums, Stack Overflow, YouTube, primary methods and actual competitors checked; no invented KD/volume/document counts.
 - GO Rainfall Records & Gauge Networks86:four independent repeat-use jobs, not a unit/reverse/thin fourth. Four tools plus hub, guide, reference. Strict local CSV/file handling, reset/gap/NA retention, censored events, paired split, no missing-weight redistribution, full export, bounded preview and input-context copy/print. Controls have no native names; initial Analyze disabled until mounted. Printing includes actual bounded source values and hides uncomputed/errors; native OS dialog/PDF pagination not claimed.
 - Local QA702 independent assertions;112-page static/navigation/publish/Analytics passes. Final Chrome156.0.8078.74 full560 renders,59 defaults/resets,46 unit switches,615 geometry snapshots,39 interaction entries,165 tables,83 screenshots; source157 stable. Error lists empty. Local server Analytics617 intercepted/0 completed. Actual new-page five-width galleries and readable reports/print images reviewed. Scope101 existing public pages/38 protected files/exact badges preserved; only four old discovery indexes and append-only runtime navigation changed.
-- Deployment and production verification pending. Records:`docs/weekly-growth-review-2026-10-30.md`, discovery/spec and dated local/scope QA JSON. Final commit, exact-SHA Pages, source/HTTP and actual browser evidence must be filled before claiming completion.
+- Implementation:`1cd117edd3322c655126307fe1407cc8f3fe0152`, pushed to main. Exact-SHA Pages run41022944464 succeeded at2026-10-30T07:55:03Z: https://github.com/canghun13/watersystemsbench/actions/runs/41022944464. Actual production55 HTTP/source checks pass, including all7 new pages, canonical/indexability, normal/Googlebot parity, source hashes, sitemap112 and14 docs/development404 paths.
+- Production Chrome156.0.8078.74 passed15 new/protected pages ×5 widths=75 renders,130 geometry snapshots,39 interaction entries,80 tables,83 screenshots;157 source fingerprints stable. Error lists empty; Analytics132 intercepted/0 completed. All new tools exercised across5 widths; protected Finder/stabilization/pressure controls, real downloads/clipboard, print media, native fallback and edge cases pass. Actual production hub, mobile reports, guide/reference and readable print screenshots inspected. This is not a claimed full560-render production matrix or OS print/PDF pagination test.
+- Records:`docs/weekly-growth-review-2026-10-30.md`, discovery/spec and dated local/scope/live/production QA JSON. Follow-up release-record commit changes excluded documentation/QA only; public sources remain the tested implementation. Verify that final commit's exact-SHA Pages success, clean tree and equal local/fetched/actual main at handoff. No search/indexing lift is attributed to this launch.
 - Next3:matched rainfall post-launch discovery/query windows; observe laboratory/pressure without redundant audits; obtain dated Bing and joined GA4 evidence. No automation created.
 
 ## Weekly Growth / Search Review — 2026-10-23

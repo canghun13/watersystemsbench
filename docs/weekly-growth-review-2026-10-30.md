@@ -1,6 +1,6 @@
 # Weekly Growth / Search Review —2026-10-30
 
-Working release record: **EXPANSION GO — Rainfall Records & Gauge Networks**. Local implementation and final560-render QA pass. Deployment and production verification remain pending below; a GO decision is not deployment proof.
+Completed release record: **EXPANSION GO — Rainfall Records & Gauge Networks**. Four independent tools and seven new pages are implemented, deployed and production-verified. Exact-SHA deployment and separate local/production evidence are recorded below.
 
 ## 1. Repository
 
@@ -25,7 +25,7 @@ All six accessible. Export date October30 is not the common endpoint of all meas
 
 ## 3. Current inventory
 
-Baseline105 public HTML =7 core +9 hubs +55 tools +21 guides +13 references. Local implementation112 =7 core +10 hubs +59 tools +22 guides +14 references; sitemap112. Two runtime HTML partials are not public content pages. New pages7; new cluster1; new independent tools4. Production remains the previous release until the exact-SHA deployment below is verified.
+Baseline105 public HTML =7 core +9 hubs +55 tools +21 guides +13 references. Implemented and production-verified112 =7 core +10 hubs +59 tools +22 guides +14 references; sitemap112. Two runtime HTML partials are not public content pages. New pages7; new cluster1; new independent tools4.
 
 Current tool-type counts, read from generated Finder cards:24 calculators,12 planners,6 checkers,4 comparators,2 troubleshooters,1 selector,2 estimators,6 analyzers,2 simulators =59. No empty future routes or renamed old pages.
 
@@ -85,7 +85,7 @@ Baseline live14 non-executing requests:7 representative public pages plus robots
 
 Coverage is a separate snapshot through October23: discovered18 versus previous19; crawled2 versus3. Greywater source/use reference leaves the discovered issue; laboratory reference leaves the crawled issue. Neither departure proves indexing. Current crawled rows are Short Cycling (last crawl August5) and legacy internal inventory (July28), whose live route is404. All18 discovered last-crawl1970 dates remain unavailable placeholders; validation status unavailable. No blanket title, canonical, sitemap-date or internal-link rewrite is justified by queue persistence.
 
-Current fresh112-page static/publication/Analytics/navigation checks pass, including unique metadata, schema, sitemap parity and exact production GA4. Existing544 independent assertions remain intact;158 new rainfall assertions give **702 total**. Original assets/formulas/Finder/shared styles are unchanged by the release guard; old101 detail pages are identical, with only four existing discovery indexes updated. The exact homepage badge wrapper/suffix remains unchanged; only one new system link is added to each runtime navigation partial.
+Current fresh112-page static/publication/Analytics/navigation checks pass, including unique metadata, schema, sitemap parity and exact production GA4. Existing544 independent assertions remain intact;158 new rainfall assertions give **702 total**. Original assets/formulas/Finder/shared styles are unchanged by the release guard;101 other existing public pages are identical, with only four existing discovery indexes updated. The exact homepage badge wrapper/suffix remains unchanged; only one new system link is added to each runtime navigation partial.
 
 ## 7. Existing growth candidates —maximum3
 
@@ -118,7 +118,7 @@ Launch tails focus on counter-reset CSV, event dry-gap/missing boundaries, paire
 - Added four actual tools, hub, substantial record-review guide and basis/missing-data reference. Dedicated `rainfall-records-tools.js`, `rainfall-records.css` and generator registry factory; no new dependency/backend/API.
 - Local paste/file review; strict calendars/CSV; explicit mm/in source basis; missing/reset/gap retention; censored events; chosen paired split; incomplete spatial coverage; full CSV export and100-row preview. Counter→event transfer preserves an initial skipped-window gap as an explicit unknown anchor, not rainfall.500-point plots retain actual points/endpoints without mislabelling an exactly500-point record.
 - New form controls use IDs but no native control names, and Analyze is initially disabled until local handlers mount. Even script-off/failure cannot turn CSV/configuration into a normal named form submission. Copy/print include record context/URL; copy retains full input, print identifies its bounded preview. No native print-dialog/PDF-pagination assertion.
-- Home/Finder/Guides/Reference discovery,10-system runtime navigation,112-entry sitemap/llms and current project inventories updated. Original titles/H1/canonicals/slugs and101 old detail pages unchanged; only four discovery-index review dates change. Pressure Tank October23, terminology October16 and rinse October9 dates remain truthful.
+- Home/Finder/Guides/Reference discovery,10-system runtime navigation,112-entry sitemap/llms and current project inventories updated. Original titles/H1/canonicals/slugs and101 other existing public pages unchanged; only four discovery-index review dates change. Pressure Tank October23, terminology October16 and rinse October9 dates remain truthful.
 - Preserved old engines/shared CSS/JS, Finder reset, stabilization alignment, responsive table contracts, exact five badges, GA4 and publication exclusions. No raw exports/screenshots committed into public routes.
 
 ## 11. QA
@@ -129,11 +129,17 @@ Initial local draft QA found grid intrinsic-width expansion after a new result t
 
 Final local Chrome156.0.8078.74 run passed after the print refinement:112 pages ×5 widths=560 renders,59 defaults,59 resets,46 applicable unit switches,615 geometry snapshots,39 interaction entries,165 table checks and83 screenshots. All console/page/request/internal-HTTP error lists empty. All157 source fingerprints unchanged during the run. Local server Analytics617 intercepted/0 completed; direct Playwright Analytics0/0 because local HTML uses the guarded server loader. Evidence:`tools-qa/weekly-growth-2026-10-30-local-results.json`.
 
-Actual five-width galleries of all seven new pages, readable desktop result viewports and four complete print-media reports were inspected. Titles, stacked/paired fields, contrast, result units, chart labels, tables and bounded actual CSV print inputs remain readable. Geometry is supplementary evidence, not the visual review itself. Existing historical reports are not relabelled. The runner guards the exact six Analytics hosts before navigation, with service workers blocked. No new browser/software installation or environment reset. Production checks are pending deployment below.
+Actual five-width galleries of all seven new pages, readable desktop result viewports, complete guide/reference pages, four complete desktop print-media reports and mobile print examples were inspected. Eight supplementary local screenshots show the four actual tables scrolled to their rightmost columns at390/1280. Titles, stacked/paired fields, contrast, result units, chart labels, tables and bounded actual CSV print inputs remain readable. Geometry is supplementary evidence, not the visual review itself. Existing historical reports are not relabelled. The runner guards the exact six Analytics hosts before navigation, with service workers blocked. No new browser/software installation or environment reset.
+
+Actual-domain Chrome run passed15 new/protected pages ×5 widths=75 renders,130 geometry snapshots,39 interaction entries,80 table checks and83 screenshots. This focused run does not claim full-site default/unit regression; that was the local560-render run. All157 source fingerprints stable, all four error lists empty. Analytics132 intercepted/0 completed. Detailed cases include all four new tools at every width, Finder/stabilization/pressure protections, real clipboard/downloads, print source values/uncomputed/error states, concurrent/repeated files, first-gap transfer,500/501 plot boundaries, script-off native serialization0 and10-system mobile menu. Production hub, all four mobile result viewports, complete guide/reference and readable double-mass/areal print reports were actually inspected. Evidence:`tools-qa/weekly-growth-2026-10-30-production-results.json`.
 
 ## 12. Deployment
 
-**Pending** successful final local verification, implementation commit/push, exact-SHA Pages success and actual-domain source/browser QA. Do not infer deployment from local112-page output or a successful push alone.
+Implementation commit:`1cd117edd3322c655126307fe1407cc8f3fe0152`, pushed to main and verified against actual remote main. Exact-SHA GitHub Pages run[41022944464](https://github.com/canghun13/watersystemsbench/actions/runs/41022944464) completed successfully at2026-10-30T07:55:03Z.
+
+Actual-domain non-executing release runner passed55 requests:17 public HTML,9 assets/partials/machine files,14 normal/Googlebot responses for the7 new routes, HTTP→HTTPS apex301 and14 docs/development404. Local/live normalized source hashes, canonical/indexability, GA4 source retention, sitemap112 and protected old-file/badge/date scope all pass. Analytics execution0. Evidence:`tools-qa/weekly-growth-2026-10-30-live-results.json`; expected implementation SHA is recorded, not inferred from HTTP content alone.
+
+Actual production browser verification also passed as scoped above. Follow-up commit stores only excluded documentation and QA records; no public source changes after the tested implementation. Its own Pages run and final clean equal local/fetched/actual main must be checked at handoff. No claim of post-launch search impact: all attached data predates publication.
 
 ## 13. Next state —maximum3
 

@@ -1,0 +1,5000 @@
+{
+  "date": "2026-10-30",
+  "base": "https://watersystemsbench.com",
+  "scope": "15-page new-cluster/protected render matrix plus interactions",
+  "widths": [
+    390,
+    768,
+    1024,
+    1280,
+    1440
+  ],
+  "renders": 75,
+  "defaults": 0,
+  "resets": 0,
+  "unitSwitches": 0,
+  "tables": 80,
+  "geometry": [
+    {
+      "path": "/systems/rainfall-records-gauge-networks/",
+      "width": 390,
+      "state": "initial",
+      "doc": 390,
+      "viewport": 390,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 200.796875,
+        "right": 370,
+        "bottom": 287.171875,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/rainfall-counter-to-increments-analyzer/",
+      "width": 390,
+      "state": "initial",
+      "doc": 390,
+      "viewport": 390,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 224.15625,
+        "right": 370,
+        "bottom": 310.53125,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/rainfall-event-separator/",
+      "width": 390,
+      "state": "initial",
+      "doc": 390,
+      "viewport": 390,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 200.796875,
+        "right": 370,
+        "bottom": 287.171875,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/rain-gauge-double-mass-checker/",
+      "width": 390,
+      "state": "initial",
+      "doc": 390,
+      "viewport": 390,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 200.796875,
+        "right": 370,
+        "bottom": 287.171875,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/areal-rainfall-series-calculator/",
+      "width": 390,
+      "state": "initial",
+      "doc": 390,
+      "viewport": 390,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 200.796875,
+        "right": 370,
+        "bottom": 287.171875,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/guides/review-rainfall-records-before-analysis/",
+      "width": 390,
+      "state": "initial",
+      "doc": 390,
+      "viewport": 390,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 224.15625,
+        "right": 370,
+        "bottom": 310.53125,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/reference/rainfall-record-bases-and-missing-data/",
+      "width": 390,
+      "state": "initial",
+      "doc": 390,
+      "viewport": 390,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 224.15625,
+        "right": 370,
+        "bottom": 310.53125,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 820,
+          "owner": 348,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/",
+      "width": 390,
+      "state": "initial",
+      "doc": 390,
+      "viewport": 390,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 200.796875,
+        "right": 370,
+        "bottom": 287.171875,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/",
+      "width": 390,
+      "state": "initial",
+      "doc": 390,
+      "viewport": 390,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 200.796875,
+        "right": 370,
+        "bottom": 243.984375,
+        "width": 350,
+        "height": 43.1875
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/systems/wells-storage-rainwater/",
+      "width": 390,
+      "state": "initial",
+      "doc": 390,
+      "viewport": 390,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 200.796875,
+        "right": 370,
+        "bottom": 287.171875,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/reference/greywater-source-use-screening/",
+      "width": 390,
+      "state": "initial",
+      "doc": 390,
+      "viewport": 390,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 224.15625,
+        "right": 370,
+        "bottom": 310.53125,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 348,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        },
+        {
+          "width": 700,
+          "owner": 348,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/guides/well-borehole-tube-well-terminology/",
+      "width": 390,
+      "state": "initial",
+      "doc": 390,
+      "viewport": 390,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 224.15625,
+        "right": 370,
+        "bottom": 310.53125,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 740,
+          "owner": 348,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 390,
+      "state": "initial",
+      "doc": 390,
+      "viewport": 390,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 217.640625,
+        "right": 370,
+        "bottom": 304.015625,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 390,
+      "state": "initial",
+      "doc": 390,
+      "viewport": 390,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 241,
+        "right": 370,
+        "bottom": 370.5625,
+        "width": 350,
+        "height": 129.5625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "width": 390,
+      "state": "initial",
+      "doc": 390,
+      "viewport": 390,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 200.796875,
+        "right": 370,
+        "bottom": 287.171875,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/systems/rainfall-records-gauge-networks/",
+      "width": 768,
+      "state": "initial",
+      "doc": 768,
+      "viewport": 768,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 208.796875,
+        "right": 748,
+        "bottom": 254.40625,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/rainfall-counter-to-increments-analyzer/",
+      "width": 768,
+      "state": "initial",
+      "doc": 768,
+      "viewport": 768,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 208.796875,
+        "right": 748,
+        "bottom": 254.40625,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/rainfall-event-separator/",
+      "width": 768,
+      "state": "initial",
+      "doc": 768,
+      "viewport": 768,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 208.796875,
+        "right": 748,
+        "bottom": 254.40625,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/rain-gauge-double-mass-checker/",
+      "width": 768,
+      "state": "initial",
+      "doc": 768,
+      "viewport": 768,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 208.796875,
+        "right": 748,
+        "bottom": 254.40625,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/areal-rainfall-series-calculator/",
+      "width": 768,
+      "state": "initial",
+      "doc": 768,
+      "viewport": 768,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 208.796875,
+        "right": 748,
+        "bottom": 254.40625,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/guides/review-rainfall-records-before-analysis/",
+      "width": 768,
+      "state": "initial",
+      "doc": 768,
+      "viewport": 768,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 208.796875,
+        "right": 748,
+        "bottom": 254.40625,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/reference/rainfall-record-bases-and-missing-data/",
+      "width": 768,
+      "state": "initial",
+      "doc": 768,
+      "viewport": 768,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 208.796875,
+        "right": 748,
+        "bottom": 254.40625,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 820,
+          "owner": 726,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/",
+      "width": 768,
+      "state": "initial",
+      "doc": 768,
+      "viewport": 768,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 208.796875,
+        "right": 748,
+        "bottom": 254.40625,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/",
+      "width": 768,
+      "state": "initial",
+      "doc": 768,
+      "viewport": 768,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 208.796875,
+        "right": 748,
+        "bottom": 254.40625,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/systems/wells-storage-rainwater/",
+      "width": 768,
+      "state": "initial",
+      "doc": 768,
+      "viewport": 768,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 208.796875,
+        "right": 748,
+        "bottom": 254.40625,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/reference/greywater-source-use-screening/",
+      "width": 768,
+      "state": "initial",
+      "doc": 768,
+      "viewport": 768,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 208.796875,
+        "right": 748,
+        "bottom": 254.40625,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 726,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        },
+        {
+          "width": 726,
+          "owner": 726,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/guides/well-borehole-tube-well-terminology/",
+      "width": 768,
+      "state": "initial",
+      "doc": 768,
+      "viewport": 768,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 208.796875,
+        "right": 748,
+        "bottom": 254.40625,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 740,
+          "owner": 726,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 768,
+      "state": "initial",
+      "doc": 768,
+      "viewport": 768,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 208.796875,
+        "right": 748,
+        "bottom": 254.40625,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 768,
+      "state": "initial",
+      "doc": 768,
+      "viewport": 768,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 208.796875,
+        "right": 748,
+        "bottom": 254.40625,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "width": 768,
+      "state": "initial",
+      "doc": 768,
+      "viewport": 768,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 208.796875,
+        "right": 748,
+        "bottom": 254.40625,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/systems/rainfall-records-gauge-networks/",
+      "width": 1024,
+      "state": "initial",
+      "doc": 1024,
+      "viewport": 1024,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 247.1875,
+        "right": 628.046875,
+        "bottom": 368.8125,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/rainfall-counter-to-increments-analyzer/",
+      "width": 1024,
+      "state": "initial",
+      "doc": 1024,
+      "viewport": 1024,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 247.1875,
+        "right": 628.046875,
+        "bottom": 368.8125,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/rainfall-event-separator/",
+      "width": 1024,
+      "state": "initial",
+      "doc": 1024,
+      "viewport": 1024,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 247.1875,
+        "right": 628.046875,
+        "bottom": 368.8125,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/rain-gauge-double-mass-checker/",
+      "width": 1024,
+      "state": "initial",
+      "doc": 1024,
+      "viewport": 1024,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 247.1875,
+        "right": 628.046875,
+        "bottom": 368.8125,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/areal-rainfall-series-calculator/",
+      "width": 1024,
+      "state": "initial",
+      "doc": 1024,
+      "viewport": 1024,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 247.1875,
+        "right": 628.046875,
+        "bottom": 308,
+        "width": 608.046875,
+        "height": 60.8125
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/guides/review-rainfall-records-before-analysis/",
+      "width": 1024,
+      "state": "initial",
+      "doc": 1024,
+      "viewport": 1024,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 247.1875,
+        "right": 628.046875,
+        "bottom": 368.8125,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/reference/rainfall-record-bases-and-missing-data/",
+      "width": 1024,
+      "state": "initial",
+      "doc": 1024,
+      "viewport": 1024,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 247.1875,
+        "right": 628.046875,
+        "bottom": 368.8125,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 820,
+          "owner": 631,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/",
+      "width": 1024,
+      "state": "initial",
+      "doc": 1024,
+      "viewport": 1024,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 247.1875,
+        "right": 628.046875,
+        "bottom": 368.8125,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/",
+      "width": 1024,
+      "state": "initial",
+      "doc": 1024,
+      "viewport": 1024,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 247.1875,
+        "right": 628.046875,
+        "bottom": 308,
+        "width": 608.046875,
+        "height": 60.8125
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/systems/wells-storage-rainwater/",
+      "width": 1024,
+      "state": "initial",
+      "doc": 1024,
+      "viewport": 1024,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 247.1875,
+        "right": 628.046875,
+        "bottom": 308,
+        "width": 608.046875,
+        "height": 60.8125
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/reference/greywater-source-use-screening/",
+      "width": 1024,
+      "state": "initial",
+      "doc": 1024,
+      "viewport": 1024,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 247.1875,
+        "right": 628.046875,
+        "bottom": 368.8125,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 631,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        },
+        {
+          "width": 700,
+          "owner": 631,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/guides/well-borehole-tube-well-terminology/",
+      "width": 1024,
+      "state": "initial",
+      "doc": 1024,
+      "viewport": 1024,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 247.1875,
+        "right": 628.046875,
+        "bottom": 368.8125,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 740,
+          "owner": 631,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 1024,
+      "state": "initial",
+      "doc": 1024,
+      "viewport": 1024,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 247.1875,
+        "right": 628.046875,
+        "bottom": 368.8125,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 1024,
+      "state": "initial",
+      "doc": 1024,
+      "viewport": 1024,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 247.1875,
+        "right": 628.046875,
+        "bottom": 368.8125,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "width": 1024,
+      "state": "initial",
+      "doc": 1024,
+      "viewport": 1024,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 247.1875,
+        "right": 628.046875,
+        "bottom": 368.8125,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/systems/rainfall-records-gauge-networks/",
+      "width": 1280,
+      "state": "initial",
+      "doc": 1280,
+      "viewport": 1280,
+      "h1s": 1,
+      "h1": {
+        "x": 60,
+        "y": 272.796875,
+        "right": 773.921875,
+        "bottom": 424.859375,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/rainfall-counter-to-increments-analyzer/",
+      "width": 1280,
+      "state": "initial",
+      "doc": 1280,
+      "viewport": 1280,
+      "h1s": 1,
+      "h1": {
+        "x": 60,
+        "y": 272.796875,
+        "right": 773.921875,
+        "bottom": 424.859375,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/rainfall-event-separator/",
+      "width": 1280,
+      "state": "initial",
+      "doc": 1280,
+      "viewport": 1280,
+      "h1s": 1,
+      "h1": {
+        "x": 60,
+        "y": 272.796875,
+        "right": 773.921875,
+        "bottom": 424.859375,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/rain-gauge-double-mass-checker/",
+      "width": 1280,
+      "state": "initial",
+      "doc": 1280,
+      "viewport": 1280,
+      "h1s": 1,
+      "h1": {
+        "x": 60,
+        "y": 272.796875,
+        "right": 773.921875,
+        "bottom": 424.859375,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/areal-rainfall-series-calculator/",
+      "width": 1280,
+      "state": "initial",
+      "doc": 1280,
+      "viewport": 1280,
+      "h1s": 1,
+      "h1": {
+        "x": 60,
+        "y": 272.796875,
+        "right": 773.921875,
+        "bottom": 424.859375,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/guides/review-rainfall-records-before-analysis/",
+      "width": 1280,
+      "state": "initial",
+      "doc": 1280,
+      "viewport": 1280,
+      "h1s": 1,
+      "h1": {
+        "x": 60,
+        "y": 272.796875,
+        "right": 773.921875,
+        "bottom": 424.859375,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/reference/rainfall-record-bases-and-missing-data/",
+      "width": 1280,
+      "state": "initial",
+      "doc": 1280,
+      "viewport": 1280,
+      "h1s": 1,
+      "h1": {
+        "x": 60,
+        "y": 272.796875,
+        "right": 773.921875,
+        "bottom": 424.859375,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 820,
+          "owner": 791,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/",
+      "width": 1280,
+      "state": "initial",
+      "doc": 1280,
+      "viewport": 1280,
+      "h1s": 1,
+      "h1": {
+        "x": 60,
+        "y": 272.796875,
+        "right": 773.921875,
+        "bottom": 424.859375,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/",
+      "width": 1280,
+      "state": "initial",
+      "doc": 1280,
+      "viewport": 1280,
+      "h1s": 1,
+      "h1": {
+        "x": 60,
+        "y": 272.796875,
+        "right": 773.921875,
+        "bottom": 348.828125,
+        "width": 713.921875,
+        "height": 76.03125
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/systems/wells-storage-rainwater/",
+      "width": 1280,
+      "state": "initial",
+      "doc": 1280,
+      "viewport": 1280,
+      "h1s": 1,
+      "h1": {
+        "x": 60,
+        "y": 272.796875,
+        "right": 773.921875,
+        "bottom": 348.828125,
+        "width": 713.921875,
+        "height": 76.03125
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/reference/greywater-source-use-screening/",
+      "width": 1280,
+      "state": "initial",
+      "doc": 1280,
+      "viewport": 1280,
+      "h1s": 1,
+      "h1": {
+        "x": 60,
+        "y": 272.796875,
+        "right": 773.921875,
+        "bottom": 424.859375,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 791,
+          "owner": 791,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        },
+        {
+          "width": 791,
+          "owner": 791,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/guides/well-borehole-tube-well-terminology/",
+      "width": 1280,
+      "state": "initial",
+      "doc": 1280,
+      "viewport": 1280,
+      "h1s": 1,
+      "h1": {
+        "x": 60,
+        "y": 272.796875,
+        "right": 773.921875,
+        "bottom": 424.859375,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 791,
+          "owner": 791,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 1280,
+      "state": "initial",
+      "doc": 1280,
+      "viewport": 1280,
+      "h1s": 1,
+      "h1": {
+        "x": 60,
+        "y": 272.796875,
+        "right": 773.921875,
+        "bottom": 424.859375,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 1280,
+      "state": "initial",
+      "doc": 1280,
+      "viewport": 1280,
+      "h1s": 1,
+      "h1": {
+        "x": 60,
+        "y": 272.796875,
+        "right": 773.921875,
+        "bottom": 424.859375,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "width": 1280,
+      "state": "initial",
+      "doc": 1280,
+      "viewport": 1280,
+      "h1s": 1,
+      "h1": {
+        "x": 60,
+        "y": 272.796875,
+        "right": 773.921875,
+        "bottom": 424.859375,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/systems/rainfall-records-gauge-networks/",
+      "width": 1440,
+      "state": "initial",
+      "doc": 1440,
+      "viewport": 1440,
+      "h1s": 1,
+      "h1": {
+        "x": 140,
+        "y": 280.796875,
+        "right": 851.8125,
+        "bottom": 451.859375,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/rainfall-counter-to-increments-analyzer/",
+      "width": 1440,
+      "state": "initial",
+      "doc": 1440,
+      "viewport": 1440,
+      "h1s": 1,
+      "h1": {
+        "x": 140,
+        "y": 280.796875,
+        "right": 851.8125,
+        "bottom": 451.859375,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/rainfall-event-separator/",
+      "width": 1440,
+      "state": "initial",
+      "doc": 1440,
+      "viewport": 1440,
+      "h1s": 1,
+      "h1": {
+        "x": 140,
+        "y": 280.796875,
+        "right": 851.8125,
+        "bottom": 451.859375,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/rain-gauge-double-mass-checker/",
+      "width": 1440,
+      "state": "initial",
+      "doc": 1440,
+      "viewport": 1440,
+      "h1s": 1,
+      "h1": {
+        "x": 140,
+        "y": 280.796875,
+        "right": 851.8125,
+        "bottom": 451.859375,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/areal-rainfall-series-calculator/",
+      "width": 1440,
+      "state": "initial",
+      "doc": 1440,
+      "viewport": 1440,
+      "h1s": 1,
+      "h1": {
+        "x": 140,
+        "y": 280.796875,
+        "right": 851.8125,
+        "bottom": 451.859375,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/guides/review-rainfall-records-before-analysis/",
+      "width": 1440,
+      "state": "initial",
+      "doc": 1440,
+      "viewport": 1440,
+      "h1s": 1,
+      "h1": {
+        "x": 140,
+        "y": 280.796875,
+        "right": 851.8125,
+        "bottom": 451.859375,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/reference/rainfall-record-bases-and-missing-data/",
+      "width": 1440,
+      "state": "initial",
+      "doc": 1440,
+      "viewport": 1440,
+      "h1s": 1,
+      "h1": {
+        "x": 140,
+        "y": 280.796875,
+        "right": 851.8125,
+        "bottom": 451.859375,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 820,
+          "owner": 788,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/",
+      "width": 1440,
+      "state": "initial",
+      "doc": 1440,
+      "viewport": 1440,
+      "h1s": 1,
+      "h1": {
+        "x": 140,
+        "y": 280.796875,
+        "right": 851.8125,
+        "bottom": 451.859375,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/",
+      "width": 1440,
+      "state": "initial",
+      "doc": 1440,
+      "viewport": 1440,
+      "h1s": 1,
+      "h1": {
+        "x": 140,
+        "y": 280.796875,
+        "right": 851.8125,
+        "bottom": 366.328125,
+        "width": 711.8125,
+        "height": 85.53125
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/systems/wells-storage-rainwater/",
+      "width": 1440,
+      "state": "initial",
+      "doc": 1440,
+      "viewport": 1440,
+      "h1s": 1,
+      "h1": {
+        "x": 140,
+        "y": 280.796875,
+        "right": 851.8125,
+        "bottom": 451.859375,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/reference/greywater-source-use-screening/",
+      "width": 1440,
+      "state": "initial",
+      "doc": 1440,
+      "viewport": 1440,
+      "h1s": 1,
+      "h1": {
+        "x": 140,
+        "y": 280.796875,
+        "right": 851.8125,
+        "bottom": 451.859375,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 788,
+          "owner": 788,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        },
+        {
+          "width": 788,
+          "owner": 788,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/guides/well-borehole-tube-well-terminology/",
+      "width": 1440,
+      "state": "initial",
+      "doc": 1440,
+      "viewport": 1440,
+      "h1s": 1,
+      "h1": {
+        "x": 140,
+        "y": 280.796875,
+        "right": 851.8125,
+        "bottom": 451.859375,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 788,
+          "owner": 788,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 1440,
+      "state": "initial",
+      "doc": 1440,
+      "viewport": 1440,
+      "h1s": 1,
+      "h1": {
+        "x": 140,
+        "y": 280.796875,
+        "right": 851.8125,
+        "bottom": 451.859375,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 1440,
+      "state": "initial",
+      "doc": 1440,
+      "viewport": 1440,
+      "h1s": 1,
+      "h1": {
+        "x": 140,
+        "y": 280.796875,
+        "right": 851.8125,
+        "bottom": 537.390625,
+        "width": 711.8125,
+        "height": 256.59375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "width": 1440,
+      "state": "initial",
+      "doc": 1440,
+      "viewport": 1440,
+      "h1s": 1,
+      "h1": {
+        "x": 140,
+        "y": 280.796875,
+        "right": 851.8125,
+        "bottom": 451.859375,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/rainfall-counter-to-increments-analyzer/",
+      "width": 390,
+      "state": "new-default-result",
+      "doc": 390,
+      "viewport": 390,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": -1323.84375,
+        "right": 370,
+        "bottom": -1237.46875,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 308,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/rainfall-counter-to-increments-analyzer/",
+      "width": 390,
+      "state": "result-rightmost-column",
+      "doc": 390,
+      "viewport": 390,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": -1755.84375,
+        "right": 370,
+        "bottom": -1669.46875,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 308,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/rainfall-event-separator/",
+      "width": 390,
+      "state": "new-default-result",
+      "doc": 390,
+      "viewport": 390,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": -1485.203125,
+        "right": 370,
+        "bottom": -1398.828125,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 308,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/rainfall-event-separator/",
+      "width": 390,
+      "state": "result-rightmost-column",
+      "doc": 390,
+      "viewport": 390,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": -1976.203125,
+        "right": 370,
+        "bottom": -1889.828125,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 308,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/rain-gauge-double-mass-checker/",
+      "width": 390,
+      "state": "new-default-result",
+      "doc": 390,
+      "viewport": 390,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": -1344.203125,
+        "right": 370,
+        "bottom": -1257.828125,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 308,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/rain-gauge-double-mass-checker/",
+      "width": 390,
+      "state": "result-rightmost-column",
+      "doc": 390,
+      "viewport": 390,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": -1834.203125,
+        "right": 370,
+        "bottom": -1747.828125,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 308,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/areal-rainfall-series-calculator/",
+      "width": 390,
+      "state": "new-default-result",
+      "doc": 390,
+      "viewport": 390,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": -1780.203125,
+        "right": 370,
+        "bottom": -1693.828125,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 308,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/areal-rainfall-series-calculator/",
+      "width": 390,
+      "state": "result-rightmost-column",
+      "doc": 390,
+      "viewport": 390,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": -2270.203125,
+        "right": 370,
+        "bottom": -2183.828125,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 308,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/reference/greywater-source-use-screening/",
+      "width": 390,
+      "state": "protected-table-rightmost",
+      "doc": 390,
+      "viewport": 390,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 224.15625,
+        "right": 370,
+        "bottom": 310.53125,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 348,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        },
+        {
+          "width": 700,
+          "owner": 348,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/guides/well-borehole-tube-well-terminology/",
+      "width": 390,
+      "state": "protected-table-rightmost",
+      "doc": 390,
+      "viewport": 390,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 224.15625,
+        "right": 370,
+        "bottom": 310.53125,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 740,
+          "owner": 348,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/reference/rainfall-record-bases-and-missing-data/",
+      "width": 390,
+      "state": "protected-table-rightmost",
+      "doc": 390,
+      "viewport": 390,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 224.15625,
+        "right": 370,
+        "bottom": 310.53125,
+        "width": 350,
+        "height": 86.375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 67,
+        "width": 390,
+        "height": 67
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 820,
+          "owner": 348,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/rainfall-counter-to-increments-analyzer/",
+      "width": 768,
+      "state": "new-default-result",
+      "doc": 768,
+      "viewport": 768,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": -843.203125,
+        "right": 748,
+        "bottom": -797.59375,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 678,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/rainfall-counter-to-increments-analyzer/",
+      "width": 768,
+      "state": "result-rightmost-column",
+      "doc": 768,
+      "viewport": 768,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": -1253.203125,
+        "right": 748,
+        "bottom": -1207.59375,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 678,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/rainfall-event-separator/",
+      "width": 768,
+      "state": "new-default-result",
+      "doc": 768,
+      "viewport": 768,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": -976.203125,
+        "right": 748,
+        "bottom": -930.59375,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 678,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/rainfall-event-separator/",
+      "width": 768,
+      "state": "result-rightmost-column",
+      "doc": 768,
+      "viewport": 768,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": -1385.203125,
+        "right": 748,
+        "bottom": -1339.59375,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 678,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/rain-gauge-double-mass-checker/",
+      "width": 768,
+      "state": "new-default-result",
+      "doc": 768,
+      "viewport": 768,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": -867.203125,
+        "right": 748,
+        "bottom": -821.59375,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 678,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/rain-gauge-double-mass-checker/",
+      "width": 768,
+      "state": "result-rightmost-column",
+      "doc": 768,
+      "viewport": 768,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": -1276.203125,
+        "right": 748,
+        "bottom": -1230.59375,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 678,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/areal-rainfall-series-calculator/",
+      "width": 768,
+      "state": "new-default-result",
+      "doc": 768,
+      "viewport": 768,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": -1264.203125,
+        "right": 748,
+        "bottom": -1218.59375,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 678,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/areal-rainfall-series-calculator/",
+      "width": 768,
+      "state": "result-rightmost-column",
+      "doc": 768,
+      "viewport": 768,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": -1673.203125,
+        "right": 748,
+        "bottom": -1627.59375,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 678,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/reference/greywater-source-use-screening/",
+      "width": 768,
+      "state": "protected-table-rightmost",
+      "doc": 768,
+      "viewport": 768,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 208.796875,
+        "right": 748,
+        "bottom": 254.40625,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 726,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        },
+        {
+          "width": 726,
+          "owner": 726,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/guides/well-borehole-tube-well-terminology/",
+      "width": 768,
+      "state": "protected-table-rightmost",
+      "doc": 768,
+      "viewport": 768,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 208.796875,
+        "right": 748,
+        "bottom": 254.40625,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 740,
+          "owner": 726,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/reference/rainfall-record-bases-and-missing-data/",
+      "width": 768,
+      "state": "protected-table-rightmost",
+      "doc": 768,
+      "viewport": 768,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 208.796875,
+        "right": 748,
+        "bottom": 254.40625,
+        "width": 728,
+        "height": 45.609375
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 768,
+        "bottom": 75,
+        "width": 768,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 820,
+          "owner": 726,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/rainfall-counter-to-increments-analyzer/",
+      "width": 1024,
+      "state": "new-default-result",
+      "doc": 1024,
+      "viewport": 1024,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": -854.8125,
+        "right": 628.046875,
+        "bottom": -733.1875,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 373,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/rainfall-counter-to-increments-analyzer/",
+      "width": 1024,
+      "state": "result-rightmost-column",
+      "doc": 1024,
+      "viewport": 1024,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": -249.8125,
+        "right": 628.046875,
+        "bottom": -128.1875,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 373,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/rainfall-event-separator/",
+      "width": 1024,
+      "state": "new-default-result",
+      "doc": 1024,
+      "viewport": 1024,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": -1037.8125,
+        "right": 628.046875,
+        "bottom": -916.1875,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 373,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/rainfall-event-separator/",
+      "width": 1024,
+      "state": "result-rightmost-column",
+      "doc": 1024,
+      "viewport": 1024,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": -280.8125,
+        "right": 628.046875,
+        "bottom": -159.1875,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 373,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/rain-gauge-double-mass-checker/",
+      "width": 1024,
+      "state": "new-default-result",
+      "doc": 1024,
+      "viewport": 1024,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": -877.8125,
+        "right": 628.046875,
+        "bottom": -756.1875,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 373,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/rain-gauge-double-mass-checker/",
+      "width": 1024,
+      "state": "result-rightmost-column",
+      "doc": 1024,
+      "viewport": 1024,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": -249.8125,
+        "right": 628.046875,
+        "bottom": -128.1875,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 373,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/areal-rainfall-series-calculator/",
+      "width": 1024,
+      "state": "new-default-result",
+      "doc": 1024,
+      "viewport": 1024,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": -1273.8125,
+        "right": 628.046875,
+        "bottom": -1213,
+        "width": 608.046875,
+        "height": 60.8125
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 373,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/areal-rainfall-series-calculator/",
+      "width": 1024,
+      "state": "result-rightmost-column",
+      "doc": 1024,
+      "viewport": 1024,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": -188.8125,
+        "right": 628.046875,
+        "bottom": -128,
+        "width": 608.046875,
+        "height": 60.8125
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 373,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/reference/greywater-source-use-screening/",
+      "width": 1024,
+      "state": "protected-table-rightmost",
+      "doc": 1024,
+      "viewport": 1024,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 247.1875,
+        "right": 628.046875,
+        "bottom": 368.8125,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 631,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        },
+        {
+          "width": 700,
+          "owner": 631,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/guides/well-borehole-tube-well-terminology/",
+      "width": 1024,
+      "state": "protected-table-rightmost",
+      "doc": 1024,
+      "viewport": 1024,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 247.1875,
+        "right": 628.046875,
+        "bottom": 368.8125,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 740,
+          "owner": 631,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/reference/rainfall-record-bases-and-missing-data/",
+      "width": 1024,
+      "state": "protected-table-rightmost",
+      "doc": 1024,
+      "viewport": 1024,
+      "h1s": 1,
+      "h1": {
+        "x": 20,
+        "y": 247.1875,
+        "right": 628.046875,
+        "bottom": 368.8125,
+        "width": 608.046875,
+        "height": 121.625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1024,
+        "bottom": 75,
+        "width": 1024,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 820,
+          "owner": 631,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/rainfall-counter-to-increments-analyzer/",
+      "width": 1280,
+      "state": "new-default-result",
+      "doc": 1280,
+      "viewport": 1280,
+      "h1s": 1,
+      "h1": {
+        "x": 60,
+        "y": -883.203125,
+        "right": 773.921875,
+        "bottom": -731.140625,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 448,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/rainfall-counter-to-increments-analyzer/",
+      "width": 1280,
+      "state": "result-rightmost-column",
+      "doc": 1280,
+      "viewport": 1280,
+      "h1s": 1,
+      "h1": {
+        "x": 60,
+        "y": -297.203125,
+        "right": 773.921875,
+        "bottom": -145.140625,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 448,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/rainfall-event-separator/",
+      "width": 1280,
+      "state": "new-default-result",
+      "doc": 1280,
+      "viewport": 1280,
+      "h1s": 1,
+      "h1": {
+        "x": 60,
+        "y": -1051.203125,
+        "right": 773.921875,
+        "bottom": -899.140625,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 448,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/rainfall-event-separator/",
+      "width": 1280,
+      "state": "result-rightmost-column",
+      "doc": 1280,
+      "viewport": 1280,
+      "h1s": 1,
+      "h1": {
+        "x": 60,
+        "y": -333.203125,
+        "right": 773.921875,
+        "bottom": -181.140625,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 448,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/rain-gauge-double-mass-checker/",
+      "width": 1280,
+      "state": "new-default-result",
+      "doc": 1280,
+      "viewport": 1280,
+      "h1s": 1,
+      "h1": {
+        "x": 60,
+        "y": -886.203125,
+        "right": 773.921875,
+        "bottom": -734.140625,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 448,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/rain-gauge-double-mass-checker/",
+      "width": 1280,
+      "state": "result-rightmost-column",
+      "doc": 1280,
+      "viewport": 1280,
+      "h1s": 1,
+      "h1": {
+        "x": 60,
+        "y": -297.203125,
+        "right": 773.921875,
+        "bottom": -145.140625,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 448,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/areal-rainfall-series-calculator/",
+      "width": 1280,
+      "state": "new-default-result",
+      "doc": 1280,
+      "viewport": 1280,
+      "h1s": 1,
+      "h1": {
+        "x": 60,
+        "y": -1343.203125,
+        "right": 773.921875,
+        "bottom": -1191.140625,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 448,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/areal-rainfall-series-calculator/",
+      "width": 1280,
+      "state": "result-rightmost-column",
+      "doc": 1280,
+      "viewport": 1280,
+      "h1s": 1,
+      "h1": {
+        "x": 60,
+        "y": -297.203125,
+        "right": 773.921875,
+        "bottom": -145.140625,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 448,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/reference/greywater-source-use-screening/",
+      "width": 1280,
+      "state": "protected-table-rightmost",
+      "doc": 1280,
+      "viewport": 1280,
+      "h1s": 1,
+      "h1": {
+        "x": 60,
+        "y": 272.796875,
+        "right": 773.921875,
+        "bottom": 424.859375,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 791,
+          "owner": 791,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        },
+        {
+          "width": 791,
+          "owner": 791,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/guides/well-borehole-tube-well-terminology/",
+      "width": 1280,
+      "state": "protected-table-rightmost",
+      "doc": 1280,
+      "viewport": 1280,
+      "h1s": 1,
+      "h1": {
+        "x": 60,
+        "y": 272.796875,
+        "right": 773.921875,
+        "bottom": 424.859375,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 791,
+          "owner": 791,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/reference/rainfall-record-bases-and-missing-data/",
+      "width": 1280,
+      "state": "protected-table-rightmost",
+      "doc": 1280,
+      "viewport": 1280,
+      "h1s": 1,
+      "h1": {
+        "x": 60,
+        "y": 272.796875,
+        "right": 773.921875,
+        "bottom": 424.859375,
+        "width": 713.921875,
+        "height": 152.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 75,
+        "width": 1280,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 820,
+          "owner": 791,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/rainfall-counter-to-increments-analyzer/",
+      "width": 1440,
+      "state": "new-default-result",
+      "doc": 1440,
+      "viewport": 1440,
+      "h1s": 1,
+      "h1": {
+        "x": 140,
+        "y": -902.203125,
+        "right": 851.8125,
+        "bottom": -731.140625,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 448,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/rainfall-counter-to-increments-analyzer/",
+      "width": 1440,
+      "state": "result-rightmost-column",
+      "doc": 1440,
+      "viewport": 1440,
+      "h1s": 1,
+      "h1": {
+        "x": 140,
+        "y": -316.203125,
+        "right": 851.8125,
+        "bottom": -145.140625,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 448,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/rainfall-event-separator/",
+      "width": 1440,
+      "state": "new-default-result",
+      "doc": 1440,
+      "viewport": 1440,
+      "h1s": 1,
+      "h1": {
+        "x": 140,
+        "y": -1070.203125,
+        "right": 851.8125,
+        "bottom": -899.140625,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 448,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/rainfall-event-separator/",
+      "width": 1440,
+      "state": "result-rightmost-column",
+      "doc": 1440,
+      "viewport": 1440,
+      "h1s": 1,
+      "h1": {
+        "x": 140,
+        "y": -352.203125,
+        "right": 851.8125,
+        "bottom": -181.140625,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 448,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/rain-gauge-double-mass-checker/",
+      "width": 1440,
+      "state": "new-default-result",
+      "doc": 1440,
+      "viewport": 1440,
+      "h1s": 1,
+      "h1": {
+        "x": 140,
+        "y": -905.203125,
+        "right": 851.8125,
+        "bottom": -734.140625,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 448,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/rain-gauge-double-mass-checker/",
+      "width": 1440,
+      "state": "result-rightmost-column",
+      "doc": 1440,
+      "viewport": 1440,
+      "h1s": 1,
+      "h1": {
+        "x": 140,
+        "y": -316.203125,
+        "right": 851.8125,
+        "bottom": -145.140625,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 448,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/areal-rainfall-series-calculator/",
+      "width": 1440,
+      "state": "new-default-result",
+      "doc": 1440,
+      "viewport": 1440,
+      "h1s": 1,
+      "h1": {
+        "x": 140,
+        "y": -1362.203125,
+        "right": 851.8125,
+        "bottom": -1191.140625,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 448,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/tools/areal-rainfall-series-calculator/",
+      "width": 1440,
+      "state": "result-rightmost-column",
+      "doc": 1440,
+      "viewport": 1440,
+      "h1s": 1,
+      "h1": {
+        "x": 140,
+        "y": -316.203125,
+        "right": 851.8125,
+        "bottom": -145.140625,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 760,
+          "owner": 448,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/reference/greywater-source-use-screening/",
+      "width": 1440,
+      "state": "protected-table-rightmost",
+      "doc": 1440,
+      "viewport": 1440,
+      "h1s": 1,
+      "h1": {
+        "x": 140,
+        "y": 280.796875,
+        "right": 851.8125,
+        "bottom": 451.859375,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 788,
+          "owner": 788,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        },
+        {
+          "width": 788,
+          "owner": 788,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/guides/well-borehole-tube-well-terminology/",
+      "width": 1440,
+      "state": "protected-table-rightmost",
+      "doc": 1440,
+      "viewport": 1440,
+      "h1s": 1,
+      "h1": {
+        "x": 140,
+        "y": 280.796875,
+        "right": 851.8125,
+        "bottom": 451.859375,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 788,
+          "owner": 788,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    },
+    {
+      "path": "/reference/rainfall-record-bases-and-missing-data/",
+      "width": 1440,
+      "state": "protected-table-rightmost",
+      "doc": 1440,
+      "viewport": 1440,
+      "h1s": 1,
+      "h1": {
+        "x": 140,
+        "y": 280.796875,
+        "right": 851.8125,
+        "bottom": 451.859375,
+        "width": 711.8125,
+        "height": 171.0625
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 1440,
+        "bottom": 75,
+        "width": 1440,
+        "height": 75
+      },
+      "badControls": [],
+      "unlabeled": [],
+      "tables": [
+        {
+          "width": 820,
+          "owner": 788,
+          "accessible": true,
+          "within": true,
+          "overflow": "auto"
+        }
+      ],
+      "broken": []
+    }
+  ],
+  "interactions": [
+    {
+      "path": "/tools/rainfall-counter-to-increments-analyzer/",
+      "width": 390,
+      "normal": true,
+      "download": true,
+      "rightmost": true,
+      "fullClipboard": true,
+      "printHookAndMedia": true,
+      "invalidRecovery": true,
+      "stale": true,
+      "sourceUnit": true,
+      "resetRefill": true,
+      "malformedFileRecovery": true,
+      "repeatedFile": true,
+      "hover": true
+    },
+    {
+      "path": "/tools/rainfall-event-separator/",
+      "width": 390,
+      "normal": true,
+      "download": true,
+      "rightmost": true,
+      "fullClipboard": true,
+      "printHookAndMedia": true,
+      "invalidRecovery": true,
+      "stale": true,
+      "sourceUnit": true,
+      "resetRefill": true,
+      "malformedFileRecovery": true,
+      "repeatedFile": true,
+      "hover": true
+    },
+    {
+      "path": "/tools/rain-gauge-double-mass-checker/",
+      "width": 390,
+      "normal": true,
+      "download": true,
+      "rightmost": true,
+      "fullClipboard": true,
+      "printHookAndMedia": true,
+      "invalidRecovery": true,
+      "stale": true,
+      "sourceUnit": true,
+      "resetRefill": true,
+      "malformedFileRecovery": true,
+      "repeatedFile": true,
+      "hover": true
+    },
+    {
+      "path": "/tools/areal-rainfall-series-calculator/",
+      "width": 390,
+      "normal": true,
+      "download": true,
+      "rightmost": true,
+      "fullClipboard": true,
+      "printHookAndMedia": true,
+      "invalidRecovery": true,
+      "stale": true,
+      "sourceUnit": true,
+      "resetRefill": true,
+      "malformedFileRecovery": true,
+      "repeatedFile": true,
+      "hover": true
+    },
+    {
+      "path": "/tools/",
+      "width": 390,
+      "rainSystem": 4,
+      "analyzer": 2,
+      "empty": true,
+      "nativeReset": 59
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 390,
+      "alignment": true,
+      "default": true
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 390,
+      "originalDefault": true,
+      "matchedRating": true,
+      "editRevokesConfirmation": true
+    },
+    {
+      "path": "/tools/rainfall-counter-to-increments-analyzer/",
+      "width": 768,
+      "normal": true,
+      "download": true,
+      "rightmost": true,
+      "fullClipboard": true,
+      "printHookAndMedia": true,
+      "invalidRecovery": true,
+      "stale": true,
+      "sourceUnit": true,
+      "resetRefill": true,
+      "malformedFileRecovery": true,
+      "repeatedFile": true,
+      "hover": true
+    },
+    {
+      "path": "/tools/rainfall-event-separator/",
+      "width": 768,
+      "normal": true,
+      "download": true,
+      "rightmost": true,
+      "fullClipboard": true,
+      "printHookAndMedia": true,
+      "invalidRecovery": true,
+      "stale": true,
+      "sourceUnit": true,
+      "resetRefill": true,
+      "malformedFileRecovery": true,
+      "repeatedFile": true,
+      "hover": true
+    },
+    {
+      "path": "/tools/rain-gauge-double-mass-checker/",
+      "width": 768,
+      "normal": true,
+      "download": true,
+      "rightmost": true,
+      "fullClipboard": true,
+      "printHookAndMedia": true,
+      "invalidRecovery": true,
+      "stale": true,
+      "sourceUnit": true,
+      "resetRefill": true,
+      "malformedFileRecovery": true,
+      "repeatedFile": true,
+      "hover": true
+    },
+    {
+      "path": "/tools/areal-rainfall-series-calculator/",
+      "width": 768,
+      "normal": true,
+      "download": true,
+      "rightmost": true,
+      "fullClipboard": true,
+      "printHookAndMedia": true,
+      "invalidRecovery": true,
+      "stale": true,
+      "sourceUnit": true,
+      "resetRefill": true,
+      "malformedFileRecovery": true,
+      "repeatedFile": true,
+      "hover": true
+    },
+    {
+      "path": "/tools/",
+      "width": 768,
+      "rainSystem": 4,
+      "analyzer": 2,
+      "empty": true,
+      "nativeReset": 59
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 768,
+      "alignment": true,
+      "default": true
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 768,
+      "originalDefault": true,
+      "matchedRating": true,
+      "editRevokesConfirmation": true
+    },
+    {
+      "path": "/tools/rainfall-counter-to-increments-analyzer/",
+      "width": 1024,
+      "normal": true,
+      "download": true,
+      "rightmost": true,
+      "fullClipboard": true,
+      "printHookAndMedia": true,
+      "invalidRecovery": true,
+      "stale": true,
+      "sourceUnit": true,
+      "resetRefill": true,
+      "malformedFileRecovery": true,
+      "repeatedFile": true,
+      "hover": true
+    },
+    {
+      "path": "/tools/rainfall-event-separator/",
+      "width": 1024,
+      "normal": true,
+      "download": true,
+      "rightmost": true,
+      "fullClipboard": true,
+      "printHookAndMedia": true,
+      "invalidRecovery": true,
+      "stale": true,
+      "sourceUnit": true,
+      "resetRefill": true,
+      "malformedFileRecovery": true,
+      "repeatedFile": true,
+      "hover": true
+    },
+    {
+      "path": "/tools/rain-gauge-double-mass-checker/",
+      "width": 1024,
+      "normal": true,
+      "download": true,
+      "rightmost": true,
+      "fullClipboard": true,
+      "printHookAndMedia": true,
+      "invalidRecovery": true,
+      "stale": true,
+      "sourceUnit": true,
+      "resetRefill": true,
+      "malformedFileRecovery": true,
+      "repeatedFile": true,
+      "hover": true
+    },
+    {
+      "path": "/tools/areal-rainfall-series-calculator/",
+      "width": 1024,
+      "normal": true,
+      "download": true,
+      "rightmost": true,
+      "fullClipboard": true,
+      "printHookAndMedia": true,
+      "invalidRecovery": true,
+      "stale": true,
+      "sourceUnit": true,
+      "resetRefill": true,
+      "malformedFileRecovery": true,
+      "repeatedFile": true,
+      "hover": true
+    },
+    {
+      "path": "/tools/",
+      "width": 1024,
+      "rainSystem": 4,
+      "analyzer": 2,
+      "empty": true,
+      "nativeReset": 59
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 1024,
+      "alignment": true,
+      "default": true
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 1024,
+      "originalDefault": true,
+      "matchedRating": true,
+      "editRevokesConfirmation": true
+    },
+    {
+      "path": "/tools/rainfall-counter-to-increments-analyzer/",
+      "width": 1280,
+      "normal": true,
+      "download": true,
+      "rightmost": true,
+      "fullClipboard": true,
+      "printHookAndMedia": true,
+      "invalidRecovery": true,
+      "stale": true,
+      "sourceUnit": true,
+      "resetRefill": true,
+      "malformedFileRecovery": true,
+      "repeatedFile": true,
+      "hover": true
+    },
+    {
+      "path": "/tools/rainfall-event-separator/",
+      "width": 1280,
+      "normal": true,
+      "download": true,
+      "rightmost": true,
+      "fullClipboard": true,
+      "printHookAndMedia": true,
+      "invalidRecovery": true,
+      "stale": true,
+      "sourceUnit": true,
+      "resetRefill": true,
+      "malformedFileRecovery": true,
+      "repeatedFile": true,
+      "hover": true
+    },
+    {
+      "path": "/tools/rain-gauge-double-mass-checker/",
+      "width": 1280,
+      "normal": true,
+      "download": true,
+      "rightmost": true,
+      "fullClipboard": true,
+      "printHookAndMedia": true,
+      "invalidRecovery": true,
+      "stale": true,
+      "sourceUnit": true,
+      "resetRefill": true,
+      "malformedFileRecovery": true,
+      "repeatedFile": true,
+      "hover": true
+    },
+    {
+      "path": "/tools/areal-rainfall-series-calculator/",
+      "width": 1280,
+      "normal": true,
+      "download": true,
+      "rightmost": true,
+      "fullClipboard": true,
+      "printHookAndMedia": true,
+      "invalidRecovery": true,
+      "stale": true,
+      "sourceUnit": true,
+      "resetRefill": true,
+      "malformedFileRecovery": true,
+      "repeatedFile": true,
+      "hover": true
+    },
+    {
+      "path": "/tools/",
+      "width": 1280,
+      "rainSystem": 4,
+      "analyzer": 2,
+      "empty": true,
+      "nativeReset": 59
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 1280,
+      "alignment": true,
+      "default": true
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 1280,
+      "originalDefault": true,
+      "matchedRating": true,
+      "editRevokesConfirmation": true
+    },
+    {
+      "path": "/tools/rainfall-counter-to-increments-analyzer/",
+      "width": 1440,
+      "normal": true,
+      "download": true,
+      "rightmost": true,
+      "fullClipboard": true,
+      "printHookAndMedia": true,
+      "invalidRecovery": true,
+      "stale": true,
+      "sourceUnit": true,
+      "resetRefill": true,
+      "malformedFileRecovery": true,
+      "repeatedFile": true,
+      "hover": true
+    },
+    {
+      "path": "/tools/rainfall-event-separator/",
+      "width": 1440,
+      "normal": true,
+      "download": true,
+      "rightmost": true,
+      "fullClipboard": true,
+      "printHookAndMedia": true,
+      "invalidRecovery": true,
+      "stale": true,
+      "sourceUnit": true,
+      "resetRefill": true,
+      "malformedFileRecovery": true,
+      "repeatedFile": true,
+      "hover": true
+    },
+    {
+      "path": "/tools/rain-gauge-double-mass-checker/",
+      "width": 1440,
+      "normal": true,
+      "download": true,
+      "rightmost": true,
+      "fullClipboard": true,
+      "printHookAndMedia": true,
+      "invalidRecovery": true,
+      "stale": true,
+      "sourceUnit": true,
+      "resetRefill": true,
+      "malformedFileRecovery": true,
+      "repeatedFile": true,
+      "hover": true
+    },
+    {
+      "path": "/tools/areal-rainfall-series-calculator/",
+      "width": 1440,
+      "normal": true,
+      "download": true,
+      "rightmost": true,
+      "fullClipboard": true,
+      "printHookAndMedia": true,
+      "invalidRecovery": true,
+      "stale": true,
+      "sourceUnit": true,
+      "resetRefill": true,
+      "malformedFileRecovery": true,
+      "repeatedFile": true,
+      "hover": true
+    },
+    {
+      "path": "/tools/",
+      "width": 1440,
+      "rainSystem": 4,
+      "analyzer": 2,
+      "empty": true,
+      "nativeReset": 59
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 1440,
+      "alignment": true,
+      "default": true
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 1440,
+      "originalDefault": true,
+      "matchedRating": true,
+      "editRevokesConfirmation": true
+    },
+    {
+      "path": "rainfall integration",
+      "pendingReadReset": true,
+      "oversizedFileClearsResult": true,
+      "counterToEventTransfer": true,
+      "initialGapTransferCoverage": "1/5=20%",
+      "concurrentNetworkFiles": true,
+      "previewLimit": 100,
+      "exportedRows": 125
+    },
+    {
+      "path": "/tools/rain-gauge-double-mass-checker/",
+      "width": 390,
+      "exact500NotThinned": true,
+      "largerPlot500OriginalPoints": true,
+      "full501RowsExported": true
+    },
+    {
+      "path": "rainfall native fallback",
+      "scriptingDisabled": true,
+      "fourAnalyzeButtonsDisabled": true,
+      "fourNoticesVisible": true,
+      "nativeSerializedEntries": 0
+    },
+    {
+      "path": "/systems/rainfall-records-gauge-networks/",
+      "width": 390,
+      "tenSystemMobileMenu": true
+    }
+  ],
+  "screenshots": [
+    "390-systems-rainfall-records-gauge-networks-initial.png",
+    "390-tools-rainfall-counter-to-increments-analyzer-initial.png",
+    "390-tools-rainfall-event-separator-initial.png",
+    "390-tools-rain-gauge-double-mass-checker-initial.png",
+    "390-tools-areal-rainfall-series-calculator-initial.png",
+    "390-guides-review-rainfall-records-before-analysis-initial.png",
+    "390-reference-rainfall-record-bases-and-missing-data-initial.png",
+    "768-systems-rainfall-records-gauge-networks-initial.png",
+    "768-tools-rainfall-counter-to-increments-analyzer-initial.png",
+    "768-tools-rainfall-event-separator-initial.png",
+    "768-tools-rain-gauge-double-mass-checker-initial.png",
+    "768-tools-areal-rainfall-series-calculator-initial.png",
+    "768-guides-review-rainfall-records-before-analysis-initial.png",
+    "768-reference-rainfall-record-bases-and-missing-data-initial.png",
+    "1024-systems-rainfall-records-gauge-networks-initial.png",
+    "1024-tools-rainfall-counter-to-increments-analyzer-initial.png",
+    "1024-tools-rainfall-event-separator-initial.png",
+    "1024-tools-rain-gauge-double-mass-checker-initial.png",
+    "1024-tools-areal-rainfall-series-calculator-initial.png",
+    "1024-guides-review-rainfall-records-before-analysis-initial.png",
+    "1024-reference-rainfall-record-bases-and-missing-data-initial.png",
+    "1280-systems-rainfall-records-gauge-networks-initial.png",
+    "1280-tools-rainfall-counter-to-increments-analyzer-initial.png",
+    "1280-tools-rainfall-event-separator-initial.png",
+    "1280-tools-rain-gauge-double-mass-checker-initial.png",
+    "1280-tools-areal-rainfall-series-calculator-initial.png",
+    "1280-guides-review-rainfall-records-before-analysis-initial.png",
+    "1280-reference-rainfall-record-bases-and-missing-data-initial.png",
+    "1440-systems-rainfall-records-gauge-networks-initial.png",
+    "1440-tools-rainfall-counter-to-increments-analyzer-initial.png",
+    "1440-tools-rainfall-event-separator-initial.png",
+    "1440-tools-rain-gauge-double-mass-checker-initial.png",
+    "1440-tools-areal-rainfall-series-calculator-initial.png",
+    "1440-guides-review-rainfall-records-before-analysis-initial.png",
+    "1440-reference-rainfall-record-bases-and-missing-data-initial.png",
+    "390-rain-tool-1-result.png",
+    "390-rain-tool-1-rightmost.png",
+    "390-rain-tool-1-print.png",
+    "390-rain-tool-2-result.png",
+    "390-rain-tool-2-rightmost.png",
+    "390-rain-tool-2-print.png",
+    "390-rain-tool-3-result.png",
+    "390-rain-tool-3-rightmost.png",
+    "390-rain-tool-3-print.png",
+    "390-rain-tool-4-result.png",
+    "390-rain-tool-4-rightmost.png",
+    "390-rain-tool-4-print.png",
+    "768-rain-tool-1-result.png",
+    "768-rain-tool-1-rightmost.png",
+    "768-rain-tool-2-result.png",
+    "768-rain-tool-2-rightmost.png",
+    "768-rain-tool-3-result.png",
+    "768-rain-tool-3-rightmost.png",
+    "768-rain-tool-4-result.png",
+    "768-rain-tool-4-rightmost.png",
+    "1024-rain-tool-1-result.png",
+    "1024-rain-tool-1-rightmost.png",
+    "1024-rain-tool-2-result.png",
+    "1024-rain-tool-2-rightmost.png",
+    "1024-rain-tool-3-result.png",
+    "1024-rain-tool-3-rightmost.png",
+    "1024-rain-tool-4-result.png",
+    "1024-rain-tool-4-rightmost.png",
+    "1280-rain-tool-1-result.png",
+    "1280-rain-tool-1-rightmost.png",
+    "1280-rain-tool-1-print.png",
+    "1280-rain-tool-2-result.png",
+    "1280-rain-tool-2-rightmost.png",
+    "1280-rain-tool-2-print.png",
+    "1280-rain-tool-3-result.png",
+    "1280-rain-tool-3-rightmost.png",
+    "1280-rain-tool-3-print.png",
+    "1280-rain-tool-4-result.png",
+    "1280-rain-tool-4-rightmost.png",
+    "1280-rain-tool-4-print.png",
+    "1440-rain-tool-1-result.png",
+    "1440-rain-tool-1-rightmost.png",
+    "1440-rain-tool-2-result.png",
+    "1440-rain-tool-2-rightmost.png",
+    "1440-rain-tool-3-result.png",
+    "1440-rain-tool-3-rightmost.png",
+    "1440-rain-tool-4-result.png",
+    "1440-rain-tool-4-rightmost.png"
+  ],
+  "consoleErrors": [],
+  "pageErrors": [],
+  "requestFailures": [],
+  "internalHttpFailures": [],
+  "analytics": {
+    "intercepted": 132,
+    "completed": 0
+  },
+  "complete": true,
+  "sourceHashes": {
+    "index.html": "751c1649c39ada56e1868947d1817dc44c1358a76cef31ad631e70bb20b92f1e",
+    "tools/index.html": "00f81a8f3e2054185518a4bf57b1e8dbd333c5db7df1b0d8aed1abc28b4de64b",
+    "guides/index.html": "1fe10262dbfa6043fca413b0c6ed7759897502adda78efc5d20f6aa0f46cb4b4",
+    "reference/index.html": "a83ab7dee00474b19eb7f8028c578cebcbd59c4e597ebc4d6f36bcd53f1d748b",
+    "about/index.html": "04a714206a37460abc3f04c04859f03204d913decd2c41df10b8ecf973f8b57b",
+    "contact/index.html": "a44d7b8eb251b3683b67defe79d9a5dd083d63453036b870753d741f439d3681",
+    "privacy/index.html": "859bfe473e8f26d8fe9d238c70ee94fed3d78588db3c703fac3a68c70565c325",
+    "systems/pumps-pressure-pipe/index.html": "08170694b7f665422b616cacf6d21124507d6504ccea59b269a7e240595efca8",
+    "systems/wells-storage-rainwater/index.html": "a4a44f1759344a2d18eb67095fab433d6f1a88b11c08e82feec80c697259e128",
+    "systems/irrigation-sprinklers/index.html": "98bd22e5b6bff79b8f4d7ba55385d3100d0dcaabf10122b8a89dc06cfde21135",
+    "systems/water-treatment-quality/index.html": "6972041506d688339b8c1c480d55f07093473ef8667231f9249f1ceb4b0cb602",
+    "systems/greywater-reuse/index.html": "c9888701f3420a0f21749c5373c740a33ad19c121ee935d1dd6a2eac734be933",
+    "systems/vehicle-wash-water-reclaim/index.html": "7ad275143d12dc4261abea953c9d3aa6c64dd510247b1cdbe6e9aa2d726c1829",
+    "systems/metal-finishing-rinse-water/index.html": "7a240bcfad06bc2c49f6443f4a2a727df52e49a22ba52d36648fa30d1224b6de",
+    "systems/monitoring-well-sampling/index.html": "871cfdb56e2668725e41863eaf2752448a3893684470d05cb4ec145b5aac8bf2",
+    "tools/total-dynamic-head-calculator/index.html": "21024ba01fbed0668e581c8b48cb67fe68a924329d21a99eb0160364727aca30",
+    "tools/pipe-friction-loss-calculator/index.html": "ac684b60c10cbc779c0a46ba22f36555ec1af3a7a8e3c7597fbd39a23cacba29",
+    "tools/water-pipe-size-velocity-checker/index.html": "3d2cd2fa11257464640eedbe8ba63e50c12e47b31163a07a073be6b15a8bb49d",
+    "tools/pump-power-efficiency-calculator/index.html": "7cca23f0cae3894cc4d36fb177358638adcfdd1ed45964f6e3553a827f46f7e1",
+    "tools/booster-pump-duty-point-estimator/index.html": "ba67bc78caa8dc2f4cbd1420495a8f147d395d0fd4465b7703c06bef26992413",
+    "tools/pump-curve-duty-point-comparator/index.html": "d646da26eda6ab8d558bad42eb17635fd6b4ec59d4f479db352d0dcf5cec09f5",
+    "tools/npsh-available-calculator/index.html": "a9b5736517d57564af84a5c711125cc8fe6d4d0d3576ce8a8efc61fc15b43d93",
+    "tools/pump-operating-cost-comparator/index.html": "7e96d76dd5a8902ade282648246783a61d8edde6f1ad03fd17ddb4aeaf39fc84",
+    "tools/low-water-pressure-troubleshooter/index.html": "852a35f312f5c4234280961193b4cd3cb04219f891cb732a54f006970aca6648",
+    "tools/well-borehole-pump-sizing-planner/index.html": "e874f92e586a30cce6d676f864feb39d35843284669e54ec6a04963cdb587368",
+    "tools/well-yield-demand-checker/index.html": "0c43c3a43b72a5383abafc52cd0c35d70d6cf00fb94fbc89f03625fff02108a4",
+    "tools/pressure-tank-sizing-calculator/index.html": "4112a39bae1de7d128bd1eb1676a97f139971f7d7a9f57aa3382b8bd8e4320f4",
+    "tools/pump-short-cycling-analyzer/index.html": "eb8d26fd75ec07622a9dc3d99076f7af75ef70e9e9f1ffa66822b1bc1fd6856a",
+    "tools/water-storage-tank-sizing-planner/index.html": "2954d6a3f797210086a336e121a5373dfb72de3bafde08df5db0fddc47dfa156",
+    "tools/rainwater-harvesting-yield-calculator/index.html": "590861e0588e96dc829c6f72f9e9c7e90f6dbbb5dba747f82d3062c9ad9f4cf6",
+    "tools/rainwater-tank-days-of-supply-simulator/index.html": "bb02dab0ceba3e1aa25055a700075c6e627c065fb91218a85d9018c74a4cf55d",
+    "tools/first-flush-diverter-sizing-calculator/index.html": "4176b59c6e995acb66178ea1497ddd3fb667b630a192a0b17bb9bb5ecb759629",
+    "tools/metal-finishing-rinse-water-audit-calculator/index.html": "434895c9f1c5af6daeba64749f2a77995a926907de8db406b154f3f9c2baa959",
+    "tools/plating-drag-out-loss-estimator/index.html": "2e4077c6ac9c985f48ff96e088b78b9674d1864593723b3e793f97eff9017bfa",
+    "tools/countercurrent-rinse-flow-planner/index.html": "48f8a063230ae93962588fd9042cb31f55feae1d9f234aa23593018d72948c74",
+    "tools/rinse-conductivity-log-analyzer/index.html": "9ae3320f3c0b6577df6d967556b1566d0d44e55610b43183c1edcef668ccda98",
+    "tools/rinse-water-savings-payback-comparator/index.html": "2ac2719d75839e7839dda1511b508246d48674db6c4fdc3c4ba573b2aa5d3580",
+    "tools/monitoring-well-purge-volume-calculator/index.html": "957b4b3413d18a8c68fbdde860fe9afde639a947c551f2e9294162e6da4700fd",
+    "tools/low-flow-sampling-setup-checker/index.html": "8b87567197e4da49aca9b3285e41222a4305edc8a3691c0e15b2b66abaa03d07",
+    "tools/low-flow-equipment-volume-reading-interval-planner/index.html": "6c40f99f50142889814efd317b000e439f411cfdc37bb536949b4a955efefb41",
+    "tools/groundwater-stabilization-log-analyzer/index.html": "0119a620d34f4b0669b1dc0fb5358b6f7136ad1856e0c1dd4ae21ac52167dfe5",
+    "tools/available-water-flow-test-calculator/index.html": "be457ccca6c213faae5c651061addd30fc5473e89ebc9ba8ad9f791c180eacf9",
+    "tools/sprinkler-zone-capacity-planner/index.html": "be78b08ff47a0d6c7479f99a9e6da724cd4063a0243041750367bd005f3e7649",
+    "tools/sprinkler-precipitation-rate-calculator/index.html": "98cfffb15b8476f5d4b663938d9ad6048f645d28b72df1318a7330b5dddf0c31",
+    "tools/irrigation-runtime-water-depth-planner/index.html": "11d668a41f32f2669c043f4d9a5b0009f89ffd1113cbf79539f6fe1fb987c008",
+    "tools/drip-irrigation-flow-zone-calculator/index.html": "f5c887e5fd181fcff14c2e468b71d2285d9bae9bae964559a193eb3160f967c7",
+    "tools/irrigation-pump-zone-matcher/index.html": "fa0b7e8772ed37475eb7d7c7bfe0285035b7e981e3de53da287526311f17af51",
+    "tools/sprinkler-low-pressure-troubleshooter/index.html": "2e2edc61881b9e197f0bfaed6b20a40953c2186bdbe38cc872f5bbcbbba77fbc",
+    "tools/water-softener-sizing-calculator/index.html": "b5469376d7fbb1545a481f870243501c1a043da0d402f5477435855d09bd77bb",
+    "tools/softener-salt-regeneration-planner/index.html": "27b03a3fce71e49130d14a74826040b18fbfdd57edfc1437c7d4fd60c48483fe",
+    "tools/ro-recovery-reject-water-calculator/index.html": "77254669615fbade90e317f0a23f21e885dad8247396f4924f4203a26b7074ec",
+    "tools/ro-production-demand-planner/index.html": "d4948a51509d057964fcebcf876f099e10936923a65a7885c925a43f20835ad3",
+    "tools/media-filter-loading-rate-calculator/index.html": "b8f68217b0f662a5d74e48cb384f5d5c54e4bf11d9ab27c114f0528bf21740c6",
+    "tools/chlorine-dose-solution-volume-calculator/index.html": "0e05aee19d483d4093c18f192a4979dc2cfffe1e748c368d050565cba65ddd29",
+    "tools/disinfection-contact-time-calculator/index.html": "2d3c9c1d2e317f8b6453e8be0a1d8a62444eca87f198487f547e4e68dd08107c",
+    "tools/water-treatment-train-selector/index.html": "39888a15eb8112db23b92a9c74607da89f14c98a4532c7c31ddd47cb1a062eda",
+    "tools/greywater-supply-calculator/index.html": "5b692a3b78ce7b344388ff0b5053980caf9737eb3b1c25741de2ec671d15571a",
+    "tools/greywater-irrigation-demand-planner/index.html": "1fe51b86d8b73e9f66c8b6a129b133916124243d45069fcc6a3a7864e394acc1",
+    "tools/laundry-to-landscape-zone-planner/index.html": "1292ba066154fb1f47560960102dc1cf15beefe85aee5b3ca9593c1140eeb908",
+    "tools/greywater-surge-basin-checker/index.html": "ed2692e20bfe5daec2770dba8e54e078e57705271f9826727ade32ed976d8f81",
+    "tools/greywater-reuse-savings-calculator/index.html": "77070fe5d20826af4636d552538ef70bbee9d8c6d524f9e906b5860498969e66",
+    "tools/vehicle-wash-water-use-audit-calculator/index.html": "5d52afec28e54db000fa622e2008b7d3dc081c3036d2648a47dcdfd6dc26990c",
+    "tools/wash-water-reclaim-balance-planner/index.html": "3ee45ad88bfa073e2d647de94305ec28ab619841f8605751019427131a0ff2d0",
+    "tools/reclaim-buffer-tank-simulator/index.html": "4b22ff7b80c707a09d26f97fdba6e71658907b94a51b3cd5b2f0a347fec595a9",
+    "tools/spot-free-rinse-ro-production-planner/index.html": "6f15e30d0eb3583c41f131f8e8962a12c45a1d593b3aad4406f0c5035d70dff4",
+    "tools/vehicle-wash-reclaim-savings-calculator/index.html": "64807e1f72e100b002b7467f9173c61ea4e933f6ce0ae8394e1faee1d664df05",
+    "guides/how-to-size-a-water-pump/index.html": "89cf12d7392dd898eb26122f2cece4c63a53945fb664d5228593dafd4d52dca6",
+    "guides/how-to-read-a-pump-curve/index.html": "e76b925f8b3797d9e574b38bb6cb4fc7c676eac3bef5addeb4de7e705cb1eb84",
+    "guides/how-to-diagnose-low-water-pressure/index.html": "5d9103bb47f010002b505906b1c64540e15c93a109c4fd4ce8264e40c101d203",
+    "guides/well-borehole-tube-well-terminology/index.html": "22993ed68268f22d5b384f0fc6eded59a6b3b6ebff5913857d70651a0bb4ed42",
+    "guides/complete-well-water-system-planning/index.html": "840bd8bd7ae252f35170b2c4263cc919a27c6cfb1d6728fc35c00092c8962cb9",
+    "guides/pressure-tank-drawdown-short-cycling/index.html": "191ffc9d3723306e31398b66911b32c7e4512df0a7115be7df3917f3f2332f2b",
+    "guides/water-storage-demand-outages-refill/index.html": "46cdc7e03a61c37931de5ee9f1f99ef77c7a20cba092c87bde613b36fb7a4183",
+    "guides/rainwater-harvesting-system-planning/index.html": "afe2446c859089b069a2bcfc01bd0a85a5ee91738fb2f2ae52a540aeef1c8ccd",
+    "guides/reduce-metal-finishing-rinse-water/index.html": "654d10b8ab907d6f87300499a59298c07b9ff074f23279ada1cafa217f0dd744",
+    "guides/measure-irrigation-flow-pressure/index.html": "2ae6406d54b5ab898bbb2e8bc45c811bcb772f246327f5fcdbd8c520e5542730",
+    "guides/split-sprinkler-zones/index.html": "724907c2bfd9de9e7ad94dc5d565d98baa8d2040ef79ff0f72664d0087f7c1c5",
+    "guides/troubleshoot-low-pressure-sprinkler-zone/index.html": "58272197c9819dc6eff9dc65f3c011caca921d1430d1b9a1f81f0b1648dc3390",
+    "guides/read-water-test-report/index.html": "95c690dce04b5ea754ba0c43deb19bfe20b61cb65c97a95d874d47b73078bc29",
+    "guides/filter-softener-ro-uv-comparison/index.html": "605d9f9fa21781c9491fb4885234ab8b59811221ecd80117d1746b21e1d545b8",
+    "guides/build-water-treatment-train/index.html": "fec1db410e1f79b143f2a426bf9b221c21e60c61f4ebde2f6224d4b678a181eb",
+    "guides/plan-home-greywater-reuse-system/index.html": "8e6249ee7868d50f009deeeefb83bf994121abbf96566c00cb2058fb37f6d43c",
+    "guides/troubleshoot-greywater-irrigation/index.html": "6293f0cbc4fcd8273b40c4c32e71618ed4a06c29cd5d50c6561e6de64c0fdbe9",
+    "guides/meter-vehicle-wash-water-use/index.html": "6ec0fd92eb1639af1919166585e74e18f97e9b5d2db252d39442edfafe78eb90",
+    "guides/plan-vehicle-wash-water-reclaim-retrofit/index.html": "1f37b0c4f6129a54d204050ab1c9c8bc37e2eb59e16594ecfa0e64caf592f31e",
+    "guides/plan-monitoring-well-purging-low-flow-sampling/index.html": "c4485f6fef06b9e2e5e3e1e5a6a37b8883ec9d9c2b5f379db6b3dd86ffa47378",
+    "reference/water-flow-pressure-volume-conversions/index.html": "ba1ecbe52517f073ba006a12a80f804e9eb33debb91912ccd0f2674db2900a71",
+    "reference/water-pressure-head-conversion/index.html": "624d60c5e57da7f346c1615f20fd0469904b2f94827e8cda624583166ea2cfd0",
+    "reference/hazen-williams-c-values/index.html": "39b6de631db7704b784b79e2d721183e4e3d8d87f8ce0b8b4ac30dd2fa10074c",
+    "reference/water-pipe-internal-diameters/index.html": "3cf84d28f03e35dadf140ae2adbf1ad150e27975364ba0db6593d9b0d5425f7a",
+    "reference/pump-formulas-hydraulic-terms/index.html": "169edc1fd2d9dc45b4cdab166fbe44e0fc3afbf41c4062e2f63538980d57b3b1",
+    "reference/water-demand-planning-factors/index.html": "1d39ece7efeb5bd1b9e62d342f7ebf820f8be4ce9d6f9a36018ad82acf91a4e4",
+    "reference/metal-finishing-rinse-control-methods/index.html": "2081cc0570c1ee70dbf7de7e7bd91ce52cdbda636ca84094a35b59a5f14f3591",
+    "reference/water-quality-glossary/index.html": "e118d0d0b6011022f13ce6aa951fe139ba877675ae906c108d7b2b7fb54d0639",
+    "reference/water-treatment-comparison-matrix/index.html": "b4d2acc757a473584cf83517dea9e7af9e29eef29cfb54c45d940d9d2cdcc2bd",
+    "reference/greywater-source-use-screening/index.html": "a6a7eb0fc545f8c6c4efa0842d4cf73ecce92303777218a61687aed3684ac19d",
+    "reference/vehicle-wash-water-stream-map/index.html": "415a0285f9cfee20b0c407a3951288ef1f635c76e8bdaabd1d674fe1c52f2283",
+    "reference/groundwater-low-flow-field-parameters/index.html": "a65e76547d36b29673ce4fe413d171756d708d5aafae9e5b8fe08b5330df5391",
+    "systems/water-laboratory-qa/index.html": "0a4a8bf234e3ba0d52c5a913d9a4de6bfdf7294e8a958025a1f7be3e57293193",
+    "tools/bod-seed-correction-bottle-analyzer/index.html": "4031e206648515a24b52e97591ab33c831e9a49ff3ecded7b6bfeec3172b5679",
+    "tools/tss-vss-gravimetric-calculator/index.html": "1baa28660fe7f9b2baa6cf5bf92cf6af3334ae2f1bcc5e03aa332ca9b4675b31",
+    "tools/water-duplicate-rpd-batch-checker/index.html": "11e127875a296e58751df10d3a9e95e48f1c04a54797fbfd63debf54871b6aa1",
+    "tools/matrix-spike-recovery-calculator/index.html": "f3e403d545d4f8aba2354715c6ba236e5fb66e6f6ce1e94fc2aff951be441caa",
+    "guides/review-water-laboratory-calculations/index.html": "616b3237340885a6cd15e907f5962f01d1f5ca0f23df06eb70f476d6048ac4d7",
+    "reference/water-laboratory-qc-calculation-bases/index.html": "e0b4f3c6e844cace5c05c37e8d857e52c348289bdd5545c9ed7aeb06b581144b",
+    "systems/rainfall-records-gauge-networks/index.html": "6a2b8c8a6a5e99e3f78a2699910fd332fa34141b919a9d6c809144432cac085a",
+    "tools/rainfall-counter-to-increments-analyzer/index.html": "89925af8ec7feab967edd9541f242fce81acb917785ca20ba4d406f8abee5585",
+    "tools/rainfall-event-separator/index.html": "8d93873462b9991cf985604ac3212ac6b7dc8ae25b02b62dbee3768e7c49f8d3",
+    "tools/rain-gauge-double-mass-checker/index.html": "8f245f4ec8b70179b3c5a4d81985778b256c954b923cf91eec4d1a61e84e7efd",
+    "tools/areal-rainfall-series-calculator/index.html": "1d3f910bb0a43691d2951a7b4a8c8f8d62e13cc7ae44d997aabbff5fee242be6",
+    "guides/review-rainfall-records-before-analysis/index.html": "ce634a67fbc1af2b29d49a713dddd1eb2b504954f34b8c40fdce506b5cb510d4",
+    "reference/rainfall-record-bases-and-missing-data/index.html": "3c7a57c71bbabdc75f53647635975918c023b52d65e930d331f0d628d6ec7e68",
+    "assets/css/calculator.css": "1c5ebf531433909e4b55c863f321025f8ba6e8fa67ba5978e1d7b99dbede0d09",
+    "assets/css/content.css": "fea50550d97179452b829e6181626427a9eebf7bccef7adecd3ec9ecae2403a8",
+    "assets/css/main.css": "0193a7f8a53a2d74c6bf85d57617cf0d0bff0800cafa3b07897773b4c7a077e5",
+    "assets/css/pressure-tank.css": "2fd8105f82a65c1764ef49b118151038642f5af15e0ef8102cd1487159b28c1f",
+    "assets/css/rainfall-records.css": "64529f0b0a5ba2107a97c40a295e373a7a65ea9a0fb7c72a993602d6154f3ab1",
+    "assets/css/tool-finder.css": "86a6918bc1d39dfcbbcb7222908ece7553ebf03b06125b4883e714fef29ba0a7",
+    "assets/css/water-laboratory.css": "78a48966cb5517ee5976bbf4aefc28c8ca3d06d3f86df7e2939bcb227a4fc575",
+    "assets/js/form-utils.js": "8609ce3c78ae1afbbe13a68d4034558600cd980c31006bbc0c6b1f29bf486b9c",
+    "assets/js/main.js": "318a57c458f786b631358a3a39334d426bf5fac267e64cf08e0ac0c8fe1f20ab",
+    "assets/js/partials.js": "4b0eb7638b260ccffe17c4eb12a9e9809ec76b26c6e19d291006b3b0ce40def0",
+    "assets/js/tool-finder.js": "39e8a72a7b786d9850fda1086b1dc142cad06ae8ca0d40de05bf4ada3c426b03",
+    "assets/js/tools/booster-duty.js": "ac399cf8e8e03f6e683bf5821eb4249fa64509041cc7b1d311626580b5140a1d",
+    "assets/js/tools/first-flush.js": "28dfc0f3ce6b648b5f755b69fb6df403aba06fa8bfe8a483f8c9173ec2739dc6",
+    "assets/js/tools/greywater-tools.js": "31af4ad1e6048fda81a34a205ec30d104f8faf320f1aa2e254f285754d7e4729",
+    "assets/js/tools/irrigation-tools.js": "f2105866a2dc51044cd9edb328cc26e096aee339bbfb112988182950a3ba0f2b",
+    "assets/js/tools/low-pressure.js": "fc1d7ac91e2ffbf1f148f1cc9d886a5c1137744030e8c691004cb5c61eaa2f37",
+    "assets/js/tools/metal-finishing-tools.js": "4151592f8aca38d027d2b19d4fe24b205870a3f0244fd0b2f544874f5aa5734a",
+    "assets/js/tools/monitoring-well-tools.js": "5f59a89595eb2efe8d18bbd62fcface7a9be7446ace778d6533c7fd0799f85fd",
+    "assets/js/tools/npsh.js": "c4effc02f07c792e48a861cc07afe4d0d5f57627afb7292b543fa2fe13e2a472",
+    "assets/js/tools/operating-cost.js": "afff862ce38e18483795c452b97f170d86bbb8972019c4cd71ed71bae819c56d",
+    "assets/js/tools/pipe-friction-loss.js": "6c2c9a46188f89bc8f91b8804c4cd0c1c575bb91e977ae69c9945369f55fc51f",
+    "assets/js/tools/pipe-velocity.js": "42644699d466f35a1d5f7b2143f0fbfd4ded133c625fd44579c0313aa28ecbb8",
+    "assets/js/tools/pressure-tank-sizing.js": "581c1cfcec0fd8487d03695b35a60028de0b828982b22adad2fd0a0eab2f6269",
+    "assets/js/tools/pump-curve.js": "6f379d521b70bac965084297a0410e0d4e7af7f67dcaf079ad8fb9e5eb7a3890",
+    "assets/js/tools/pump-power.js": "de99c06f16d817b7581b163009a43a5608baf70b21a106f161fdfb6e524873bf",
+    "assets/js/tools/rainfall-records-tools.js": "c2cee8feabc406a0643cfe058291e3a65362c2b61c143259d16048cac6138f9f",
+    "assets/js/tools/rainwater-simulator.js": "f859fb70098371955b283dc7461ec8e13b1b76c8e192ddae492ec09f23a7d4d4",
+    "assets/js/tools/rainwater-yield.js": "8d32fbf9f93e77dfb87995dca2741bef0e4ddcfc5de34b8fe40efd52004bebf4",
+    "assets/js/tools/short-cycling.js": "adf3024588f3af6ec800b25b50b73b4a16a64616615cba66318559f0119bec24",
+    "assets/js/tools/storage-tank-sizing.js": "37bfae1ec40b5d45062b856ddf1a5fead7eda9d3ba18bf6b514d10d436df6df3",
+    "assets/js/tools/total-dynamic-head.js": "818da0046298691b45b4b9bea76aab4f6d1967a9582e8fb0b6550d3e6f6377f7",
+    "assets/js/tools/treatment-tools.js": "ed9e6ee85418a2a4dbb336f69cbd371084259c52df6db3f7e765505e5b1667bd",
+    "assets/js/tools/vehicle-wash-tools.js": "b1133eca16932d02ac5208b80198859ebc68bb9ce816015da6eae74d1f864fec",
+    "assets/js/tools/water-laboratory-tools.js": "937635edd8fc0fd1084c4e9580baf6f3c84bccaa4db754d643893ba2fdae62ba",
+    "assets/js/tools/well-pump-sizing.js": "49648d85cce1734473cb85f8efe2a32978b7cbe9d7a582cb73eb500be432d00e",
+    "assets/js/tools/well-yield-demand.js": "a24cd38f9230c011620ad69c53cd8d2adab5355a4e725d95785ed8117e47d02e",
+    "assets/js/unit-conversions.js": "2c0eef340c1e51cc090b28859f74618152ac73637a9f421e55e54b0c20716a35",
+    "partials/header.html": "da465013635e1e62b68d4d7fc97819ee34625d7c20466b7ccdfe51051904da31",
+    "partials/footer.html": "e8a542bfd2ae5389c4cc4a969fe7a153b306b2d8bc153c1c49ee6df55385867a",
+    "sitemap.xml": "2faad8fb70027120e6e0b965fdf80e1389d95f1d69617adc51f129246a1420f5",
+    "robots.txt": "cd1297b5802fa103eecc971a7640e8b0066ce1385750940c67ad8ed465afdb42",
+    "llms.txt": "c8637bb76858642c7fe8f54c6a0b4172a019e8634efc6b5b028ac5f06ea7f489",
+    "tools-qa/generate-site.mjs": "2b01b7852cf3f4154bc2e90b5c4b68167afedc29813825ffb9648b423b296730",
+    "tools-qa/rainfall-records-content.mjs": "674fdfbdf117aafe588d434ce6c960577fd67ae0f367dd3e0e53b79e426cf7cf",
+    "tools-qa/rainfall-records-browser-qa.mjs": "7fc6f5d7b65d73e15f922a6a0116d373bd5f602a031da876427347cbb36634a2"
+  },
+  "browser": "156.0.8078.74",
+  "sourceStableThroughoutRun": true
+}
