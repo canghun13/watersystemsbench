@@ -13,6 +13,7 @@
 - [Metal Finishing Rinse Water Optimization](https://watersystemsbench.com/systems/metal-finishing-rinse-water/)
 - [Monitoring Well Purging & Low-Flow Sampling](https://watersystemsbench.com/systems/monitoring-well-sampling/)
 - [Water Laboratory Calculations & QA](https://watersystemsbench.com/systems/water-laboratory-qa/)
+- [Rainfall Records & Gauge Networks](https://watersystemsbench.com/systems/rainfall-records-gauge-networks/)
 
 ## Tools
 
@@ -71,6 +72,10 @@
 - [TSS & VSS Gravimetric Calculator](https://watersystemsbench.com/tools/tss-vss-gravimetric-calculator/)
 - [Water Duplicate RPD Batch Checker](https://watersystemsbench.com/tools/water-duplicate-rpd-batch-checker/)
 - [Matrix Spike Recovery Calculator](https://watersystemsbench.com/tools/matrix-spike-recovery-calculator/)
+- [Rainfall Counter-to-Increments Analyzer](https://watersystemsbench.com/tools/rainfall-counter-to-increments-analyzer/)
+- [Rainfall Event Separator & Analyzer](https://watersystemsbench.com/tools/rainfall-event-separator/)
+- [Rain Gauge Double-Mass Checker](https://watersystemsbench.com/tools/rain-gauge-double-mass-checker/)
+- [Areal Rainfall Series Calculator](https://watersystemsbench.com/tools/areal-rainfall-series-calculator/)
 
 ## Guides
 
@@ -95,6 +100,7 @@
 - [How to Reduce Metal Finishing Rinse Water](https://watersystemsbench.com/guides/reduce-metal-finishing-rinse-water/)
 - [How to Plan Monitoring-Well Purging & Low-Flow Sampling](https://watersystemsbench.com/guides/plan-monitoring-well-purging-low-flow-sampling/)
 - [How to Review Water Laboratory Calculations](https://watersystemsbench.com/guides/review-water-laboratory-calculations/)
+- [How to Review Rainfall Records Before Analysis](https://watersystemsbench.com/guides/review-rainfall-records-before-analysis/)
 
 ## Reference
 
@@ -111,6 +117,7 @@
 - [Metal Finishing Rinse Control Methods](https://watersystemsbench.com/reference/metal-finishing-rinse-control-methods/)
 - [Groundwater Low-Flow Field Parameters](https://watersystemsbench.com/reference/groundwater-low-flow-field-parameters/)
 - [Water Laboratory QC Calculation Bases](https://watersystemsbench.com/reference/water-laboratory-qc-calculation-bases/)
+- [Rainfall Record Bases & Missing Data](https://watersystemsbench.com/reference/rainfall-record-bases-and-missing-data/)
 
 ## Safety and limitations
 

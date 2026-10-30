@@ -2,7 +2,7 @@
 
 ## Navigation model
 
-The site follows a water-system workflow instead of separating resources only by format. Primary navigation exposes Home, Tools, Guides, Reference and a Systems menu. The Systems menu contains exactly nine implemented hubs:
+The site follows a water-system workflow instead of separating resources only by format. Primary navigation exposes Home, Tools, Guides, Reference and a Systems menu. The Systems menu contains exactly ten implemented hubs:
 
 - Pumps, Pressure & Pipe Flow
 - Wells, Storage & Rainwater
@@ -13,6 +13,7 @@ The site follows a water-system workflow instead of separating resources only by
 - Metal Finishing Rinse Water Optimization
 - Monitoring Well Purging & Low-Flow Sampling
 - Water Laboratory Calculations & QA
+- Rainfall Records & Gauge Networks
 
 About, Contact and Privacy remain available through project navigation. No inactive future system is linked.
 
@@ -98,6 +99,10 @@ The treatment hub is `/systems/water-treatment-quality/`. The obsolete planning-
 ### Water laboratory calculations and QA
 
 The laboratory hub is `/systems/water-laboratory-qa/`: identify sample and method → reconcile units/dilution basis → reduce DO or gravimetric observations → review duplicate precision and spike recovery → retain a qualified review packet. It does not duplicate field stabilization, household treatment selection or activated-sludge process control. Four independent tools and their supporting guide/reference use local data only. No result approves an analysis, method, report, discharge or potable use.
+
+### Rainfall records and gauge networks
+
+The rainfall hub is `/systems/rainfall-records-gauge-networks/`: preserve observations → confirm clock/depth basis → review counter deltas → separate wet groups → compare paired station accumulations → review fixed-network coverage. These are independent data-review entry points, not mandatory conversions of one formula. The cluster does not calibrate tipping buckets, correct rainfall, infer missing values, design drainage or repeat rainwater-harvesting planning. Local CSVs remain local. Unknown event boundaries and incomplete spatial periods remain explicit.
 
 ## Treatment branches
 

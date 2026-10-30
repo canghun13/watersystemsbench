@@ -1,0 +1,37 @@
+/* Rainfall pages only. Existing common forms, buttons, Finder and table rules stay intact. */
+.instrument-panel, .result-panel, .result-report, .result-block { min-width: 0; }
+.result-report { overflow-wrap: anywhere; }
+.rain-input-record { white-space: pre-wrap; overflow-wrap: anywhere; font: .75rem/1.6 var(--font-mono); }
+.rain-print-inputs { display: none; }
+.rain-result-extra { min-width: 0; }
+.rain-result-extra h3 { margin-top: 1.5rem; }
+.rain-result-extra .table-scroll { max-width: 100%; }
+.rain-result-extra table { border-collapse: collapse; font-size: .78rem; }
+.rain-result-extra th, .rain-result-extra td { padding: .65rem; border: 1px solid var(--line); text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.rain-result-extra th { color: var(--white); background: var(--navy-900); }
+.rain-downloads { flex-wrap: wrap; }
+.rain-figure { margin: 1.25rem 0; }
+.rain-chart-region { overflow-x: auto; max-width: 100%; border: 1px solid var(--line); border-radius: .4rem; }
+.rain-chart-region svg { display: block; min-width: 560px; width: 100%; height: auto; background: #f4f8f8; }
+.rain-chart-region text { fill: #123e50; font: 12px sans-serif; }
+.rain-figure figcaption { margin-top: .6rem; font-size: .8rem; line-height: 1.6; }
+.rain-chart-region:focus-visible { outline: 3px solid var(--teal-600, #087e83); outline-offset: 3px; }
+[data-tool-form^="rain-"] .field { min-width: 0; }
+[data-tool-form^="rain-"] label, [data-tool-form^="rain-"] .hint { overflow-wrap: anywhere; }
+[data-tool-form^="rain-"] textarea { white-space: pre; overflow: auto; font-size: .8rem; }
+@media print {
+  .content-layout, .rain-downloads, .result-empty, .result-report[hidden] { display: none !important; }
+  .hero.compact { min-height: 0; padding: .5rem 0; margin-bottom: .5rem; }
+  .hero.compact::after, .hero.compact .eyebrow, .hero.compact .lede, .hero-note { display: none !important; }
+  .hero.compact h1 { font-size: 18pt; }
+  .result-panel { position: static; }
+  .result-panel > .panel-heading { display: none; }
+  .tool-layout:not(:has(.result-report:not([hidden]))) { display: none !important; }
+  .rain-print-inputs { display: block; }
+  .rain-print-inputs pre { max-width: 100%; white-space: pre-wrap; overflow-wrap: anywhere; font: 8pt/1.4 var(--font-mono); }
+  .rain-result-extra .table-scroll, .rain-chart-region { overflow: visible; }
+  .rain-result-extra table { min-width: 0 !important; width: 100%; font-size: 7pt; }
+  .rain-result-extra td, .rain-result-extra th { padding: .25rem; }
+  .rain-chart-region svg { min-width: 0; width: 100%; }
+  .rain-input-record { font-size: 8pt; }
+}

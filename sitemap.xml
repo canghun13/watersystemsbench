@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://watersystemsbench.com/</loc><lastmod>2026-10-16</lastmod></url>
-  <url><loc>https://watersystemsbench.com/tools/</loc><lastmod>2026-10-16</lastmod></url>
-  <url><loc>https://watersystemsbench.com/guides/</loc><lastmod>2026-10-16</lastmod></url>
-  <url><loc>https://watersystemsbench.com/reference/</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://watersystemsbench.com/</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://watersystemsbench.com/tools/</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://watersystemsbench.com/guides/</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://watersystemsbench.com/reference/</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://watersystemsbench.com/about/</loc><lastmod>2026-08-08</lastmod></url>
   <url><loc>https://watersystemsbench.com/contact/</loc><lastmod>2026-07-29</lastmod></url>
   <url><loc>https://watersystemsbench.com/privacy/</loc><lastmod>2026-07-29</lastmod></url>
@@ -105,4 +105,11 @@
   <url><loc>https://watersystemsbench.com/tools/matrix-spike-recovery-calculator/</loc><lastmod>2026-10-16</lastmod></url>
   <url><loc>https://watersystemsbench.com/guides/review-water-laboratory-calculations/</loc><lastmod>2026-10-16</lastmod></url>
   <url><loc>https://watersystemsbench.com/reference/water-laboratory-qc-calculation-bases/</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://watersystemsbench.com/systems/rainfall-records-gauge-networks/</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://watersystemsbench.com/tools/rainfall-counter-to-increments-analyzer/</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://watersystemsbench.com/tools/rainfall-event-separator/</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://watersystemsbench.com/tools/rain-gauge-double-mass-checker/</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://watersystemsbench.com/tools/areal-rainfall-series-calculator/</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://watersystemsbench.com/guides/review-rainfall-records-before-analysis/</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://watersystemsbench.com/reference/rainfall-record-bases-and-missing-data/</loc><lastmod>2026-10-30</lastmod></url>
 </urlset>

@@ -4,18 +4,20 @@
 
 | Primary type | Count |
 | --- | ---: |
-| Calculator | 17 |
-| Planner | 8 |
-| Checker | 3 |
-| Comparator | 3 |
+| Calculator | 24 |
+| Planner | 12 |
+| Checker | 6 |
+| Comparator | 4 |
 | Troubleshooter | 2 |
 | Selector | 1 |
-| Estimator | 1 |
-| Analyzer | 1 |
-| Simulator | 1 |
-| Total | 37 |
+| Estimator | 2 |
+| Analyzer | 6 |
+| Simulator | 2 |
+| Total | 59 |
 
 `RO Production vs Demand Planner` is a planner, not a selector. The Water Treatment Train Selector is the one implemented selector.
+
+Rainfall's four decisions are two analyzers (counter reduction, event separation), one paired-consistency checker and one multi-period areal calculator. Source-unit selection declares the basis of CSV values; it does not rewrite them. Counter resets/gaps, unknown event edges, excluded pairs and incomplete spatial coverage are retained. See `rainfall-records-gauge-networks-expansion.md` for the bounded parser, formulas, precision and independent fixtures. Existing common SI/US behavior is unchanged.
 
 ## Required tool-page content
 

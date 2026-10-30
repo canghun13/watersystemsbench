@@ -2,16 +2,16 @@
 
 ## Status
 
-All 65 pages in the initial plan remain implemented. Greywater Reuse Planning and Vehicle Wash Water Reclaim Planning each add nine validated pages; Metal Finishing Rinse Water Optimization adds eight; Monitoring Well Purging & Low-Flow Sampling adds seven; Water Laboratory Calculations & QA adds seven.
+All 65 pages in the initial plan remain implemented. Greywater Reuse Planning and Vehicle Wash Water Reclaim Planning each add nine validated pages; Metal Finishing Rinse Water Optimization adds eight; Monitoring Well Purging & Low-Flow Sampling adds seven; Water Laboratory Calculations & QA adds seven; Rainfall Records & Gauge Networks adds seven.
 
 | Category | Implemented | Remaining |
 | --- | ---: | ---: |
 | Core pages | 7 | 0 |
-| System hubs | 9 | 0 |
-| Tools | 55 | 0 |
-| Guides | 21 | 0 |
-| References | 13 | 0 |
-| Total public HTML | 105 | 0 |
+| System hubs | 10 | 0 |
+| Tools | 59 | 0 |
+| Guides | 22 | 0 |
+| References | 14 | 0 |
+| Total public HTML | 112 | 0 |
 
 The authoritative Water Treatment & Water Quality hub is `/systems/water-treatment-quality/`. This corrects the earlier planning-only `/tools/water-treatment-quality/` route and aligns the cluster with the other system hubs.
 
@@ -36,6 +36,7 @@ The authoritative Water Treatment & Water Quality hub is `/systems/water-treatme
 - `/systems/metal-finishing-rinse-water/`
 - `/systems/monitoring-well-sampling/`
 - `/systems/water-laboratory-qa/`
+- `/systems/rainfall-records-gauge-networks/`
 
 ## Tools
 
@@ -120,6 +121,10 @@ The authoritative Water Treatment & Water Quality hub is `/systems/water-treatme
 - `/tools/tss-vss-gravimetric-calculator/`
 - `/tools/water-duplicate-rpd-batch-checker/`
 - `/tools/matrix-spike-recovery-calculator/`
+- `/tools/rainfall-counter-to-increments-analyzer/`
+- `/tools/rainfall-event-separator/`
+- `/tools/rain-gauge-double-mass-checker/`
+- `/tools/areal-rainfall-series-calculator/`
 
 ## Guides
 
@@ -144,6 +149,7 @@ The authoritative Water Treatment & Water Quality hub is `/systems/water-treatme
 - `/guides/reduce-metal-finishing-rinse-water/`
 - `/guides/plan-monitoring-well-purging-low-flow-sampling/`
 - `/guides/review-water-laboratory-calculations/`
+- `/guides/review-rainfall-records-before-analysis/`
 
 ## References
 
@@ -160,5 +166,6 @@ The authoritative Water Treatment & Water Quality hub is `/systems/water-treatme
 - `/reference/metal-finishing-rinse-control-methods/`
 - `/reference/groundwater-low-flow-field-parameters/`
 - `/reference/water-laboratory-qc-calculation-bases/`
+- `/reference/rainfall-record-bases-and-missing-data/`
 
 Each public route must remain unique in sitemap, canonical metadata and generated navigation. Future routes require a distinct user task, implemented content and full QA; do not publish empty pages.

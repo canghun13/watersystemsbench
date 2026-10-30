@@ -1,0 +1,180 @@
+{
+  "date": "2026-10-30",
+  "checkedAt": "2026-10-30T07:51:29.196Z",
+  "baseline": "c6bc568cf77ea8d0f5e2baf0e3fc0d80c6c85f21",
+  "expectedRelease": null,
+  "scope": {
+    "unchangedOldPublicHtml": 101,
+    "updatedOldIndexPages": [
+      "index.html",
+      "tools/index.html",
+      "guides/index.html",
+      "reference/index.html"
+    ],
+    "protected": [
+      {
+        "path": "assets/css/calculator.css",
+        "sha256": "1c5ebf531433909e4b55c863f321025f8ba6e8fa67ba5978e1d7b99dbede0d09"
+      },
+      {
+        "path": "assets/css/content.css",
+        "sha256": "fea50550d97179452b829e6181626427a9eebf7bccef7adecd3ec9ecae2403a8"
+      },
+      {
+        "path": "assets/css/main.css",
+        "sha256": "0193a7f8a53a2d74c6bf85d57617cf0d0bff0800cafa3b07897773b4c7a077e5"
+      },
+      {
+        "path": "assets/css/pressure-tank.css",
+        "sha256": "2fd8105f82a65c1764ef49b118151038642f5af15e0ef8102cd1487159b28c1f"
+      },
+      {
+        "path": "assets/css/tool-finder.css",
+        "sha256": "86a6918bc1d39dfcbbcb7222908ece7553ebf03b06125b4883e714fef29ba0a7"
+      },
+      {
+        "path": "assets/css/water-laboratory.css",
+        "sha256": "78a48966cb5517ee5976bbf4aefc28c8ca3d06d3f86df7e2939bcb227a4fc575"
+      },
+      {
+        "path": "assets/js/form-utils.js",
+        "sha256": "8609ce3c78ae1afbbe13a68d4034558600cd980c31006bbc0c6b1f29bf486b9c"
+      },
+      {
+        "path": "assets/js/main.js",
+        "sha256": "318a57c458f786b631358a3a39334d426bf5fac267e64cf08e0ac0c8fe1f20ab"
+      },
+      {
+        "path": "assets/js/partials.js",
+        "sha256": "4b0eb7638b260ccffe17c4eb12a9e9809ec76b26c6e19d291006b3b0ce40def0"
+      },
+      {
+        "path": "assets/js/tool-finder.js",
+        "sha256": "39e8a72a7b786d9850fda1086b1dc142cad06ae8ca0d40de05bf4ada3c426b03"
+      },
+      {
+        "path": "assets/js/tools/booster-duty.js",
+        "sha256": "ac399cf8e8e03f6e683bf5821eb4249fa64509041cc7b1d311626580b5140a1d"
+      },
+      {
+        "path": "assets/js/tools/first-flush.js",
+        "sha256": "28dfc0f3ce6b648b5f755b69fb6df403aba06fa8bfe8a483f8c9173ec2739dc6"
+      },
+      {
+        "path": "assets/js/tools/greywater-tools.js",
+        "sha256": "31af4ad1e6048fda81a34a205ec30d104f8faf320f1aa2e254f285754d7e4729"
+      },
+      {
+        "path": "assets/js/tools/irrigation-tools.js",
+        "sha256": "f2105866a2dc51044cd9edb328cc26e096aee339bbfb112988182950a3ba0f2b"
+      },
+      {
+        "path": "assets/js/tools/low-pressure.js",
+        "sha256": "fc1d7ac91e2ffbf1f148f1cc9d886a5c1137744030e8c691004cb5c61eaa2f37"
+      },
+      {
+        "path": "assets/js/tools/metal-finishing-tools.js",
+        "sha256": "4151592f8aca38d027d2b19d4fe24b205870a3f0244fd0b2f544874f5aa5734a"
+      },
+      {
+        "path": "assets/js/tools/monitoring-well-tools.js",
+        "sha256": "5f59a89595eb2efe8d18bbd62fcface7a9be7446ace778d6533c7fd0799f85fd"
+      },
+      {
+        "path": "assets/js/tools/npsh.js",
+        "sha256": "c4effc02f07c792e48a861cc07afe4d0d5f57627afb7292b543fa2fe13e2a472"
+      },
+      {
+        "path": "assets/js/tools/operating-cost.js",
+        "sha256": "afff862ce38e18483795c452b97f170d86bbb8972019c4cd71ed71bae819c56d"
+      },
+      {
+        "path": "assets/js/tools/pipe-friction-loss.js",
+        "sha256": "6c2c9a46188f89bc8f91b8804c4cd0c1c575bb91e977ae69c9945369f55fc51f"
+      },
+      {
+        "path": "assets/js/tools/pipe-velocity.js",
+        "sha256": "42644699d466f35a1d5f7b2143f0fbfd4ded133c625fd44579c0313aa28ecbb8"
+      },
+      {
+        "path": "assets/js/tools/pressure-tank-sizing.js",
+        "sha256": "581c1cfcec0fd8487d03695b35a60028de0b828982b22adad2fd0a0eab2f6269"
+      },
+      {
+        "path": "assets/js/tools/pump-curve.js",
+        "sha256": "6f379d521b70bac965084297a0410e0d4e7af7f67dcaf079ad8fb9e5eb7a3890"
+      },
+      {
+        "path": "assets/js/tools/pump-power.js",
+        "sha256": "de99c06f16d817b7581b163009a43a5608baf70b21a106f161fdfb6e524873bf"
+      },
+      {
+        "path": "assets/js/tools/rainwater-simulator.js",
+        "sha256": "f859fb70098371955b283dc7461ec8e13b1b76c8e192ddae492ec09f23a7d4d4"
+      },
+      {
+        "path": "assets/js/tools/rainwater-yield.js",
+        "sha256": "8d32fbf9f93e77dfb87995dca2741bef0e4ddcfc5de34b8fe40efd52004bebf4"
+      },
+      {
+        "path": "assets/js/tools/short-cycling.js",
+        "sha256": "adf3024588f3af6ec800b25b50b73b4a16a64616615cba66318559f0119bec24"
+      },
+      {
+        "path": "assets/js/tools/storage-tank-sizing.js",
+        "sha256": "37bfae1ec40b5d45062b856ddf1a5fead7eda9d3ba18bf6b514d10d436df6df3"
+      },
+      {
+        "path": "assets/js/tools/total-dynamic-head.js",
+        "sha256": "818da0046298691b45b4b9bea76aab4f6d1967a9582e8fb0b6550d3e6f6377f7"
+      },
+      {
+        "path": "assets/js/tools/treatment-tools.js",
+        "sha256": "ed9e6ee85418a2a4dbb336f69cbd371084259c52df6db3f7e765505e5b1667bd"
+      },
+      {
+        "path": "assets/js/tools/vehicle-wash-tools.js",
+        "sha256": "b1133eca16932d02ac5208b80198859ebc68bb9ce816015da6eae74d1f864fec"
+      },
+      {
+        "path": "assets/js/tools/water-laboratory-tools.js",
+        "sha256": "937635edd8fc0fd1084c4e9580baf6f3c84bccaa4db754d643893ba2fdae62ba"
+      },
+      {
+        "path": "assets/js/tools/well-pump-sizing.js",
+        "sha256": "49648d85cce1734473cb85f8efe2a32978b7cbe9d7a582cb73eb500be432d00e"
+      },
+      {
+        "path": "assets/js/tools/well-yield-demand.js",
+        "sha256": "a24cd38f9230c011620ad69c53cd8d2adab5355a4e725d95785ed8117e47d02e"
+      },
+      {
+        "path": "assets/js/unit-conversions.js",
+        "sha256": "2c0eef340c1e51cc090b28859f74618152ac73637a9f421e55e54b0c20716a35"
+      },
+      {
+        "path": "_config.yml",
+        "sha256": "4c1e7576c85a4c78999203b7b48e41a82033f97b880bf63863df596901c74ab8"
+      },
+      {
+        "path": "CNAME",
+        "sha256": "ca154f6df4276394b3c20ae49466decb073657429b6cf6a797f8232e0e5f537a"
+      },
+      {
+        "path": "robots.txt",
+        "sha256": "cd1297b5802fa103eecc971a7640e8b0066ce1385750940c67ad8ed465afdb42"
+      }
+    ],
+    "exactFiveBadgeBlock": true,
+    "sitemap": {
+      "old": 105,
+      "current": 112,
+      "onlySevenNewRoutes": true,
+      "oldDetailDatesPreserved": true
+    }
+  },
+  "checks": [],
+  "analyticsExecuted": 0,
+  "complete": true,
+  "productionNotChecked": true
+}

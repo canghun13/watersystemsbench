@@ -7,8 +7,8 @@
     "generate": "node tools-qa/generate-site.mjs",
     "serve": "node tools-qa/server.mjs",
     "qa": "node tools-qa/publish-boundary-qa.mjs && node tools-qa/analytics-qa.mjs && node tools-qa/qa.mjs && node tools-qa/navigation-qa.mjs",
-    "verify:calculations": "node tools-qa/verify-calculations.mjs && node tools-qa/verify-water-laboratory.mjs && node tools-qa/verify-pressure-tank-rating.mjs",
-    "qa:browser": "node tools-qa/water-laboratory-browser-qa.mjs",
+    "verify:calculations": "node tools-qa/verify-calculations.mjs && node tools-qa/verify-water-laboratory.mjs && node tools-qa/verify-pressure-tank-rating.mjs && node tools-qa/verify-rainfall-records.mjs",
+    "qa:browser": "node tools-qa/rainfall-records-browser-qa.mjs",
     "qa:browser:historical": "node tools-qa/browser-qa.mjs"
   },
   "engines": {

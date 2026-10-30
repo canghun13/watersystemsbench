@@ -2,6 +2,7 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { labHub, labTools, labGuides, labReferences, createLabPages } from "./water-laboratory-content.mjs";
+import { rainHub, rainTools, rainGuides, rainReferences, createRainPages } from "./rainfall-records-content.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const domain = "https://watersystemsbench.com";
@@ -236,6 +237,9 @@ const preLabReferenceLinks = [...referenceLinks];
 toolLinks.push(...labTools);
 guideLinks.push(...labGuides);
 referenceLinks.push(...labReferences);
+toolLinks.push(...rainTools);
+guideLinks.push(...rainGuides);
+referenceLinks.push(...rainReferences);
 
 function esc(value) {
   return String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
@@ -260,7 +264,8 @@ function toolFinder() {
     ["vehicle-wash", "Vehicle wash water reclaim", vehicleWashToolLinks],
     ["metal-finishing", "Metal finishing rinse water", metalToolLinks],
     ["monitoring-well", "Monitoring well sampling", monitoringWellToolLinks],
-    ["water-laboratory", "Water laboratory calculations & QA", labTools]
+    ["water-laboratory", "Water laboratory calculations & QA", labTools],
+    ["rainfall-records", "Rainfall records & gauge networks", rainTools]
   ];
   let step = 0;
   const cards = groups.flatMap(([system, systemLabel, items]) => items.map(([href, title, text]) => {
@@ -1063,7 +1068,7 @@ function toolBody(tool) {
 const homeBody = `${hero("Hydraulic field bench", "Plan the water path. Check the duty point.", "Practical tools, field-oriented guides and technical references for pumps, wells, storage, monitoring, irrigation, reuse, industrial rinse water and treatment—from source testing to documented use.", "Built for global use with SI-first calculations and common US customary units. Results support preliminary planning; they are not formal design, sampling authorization, potable-safety or regulatory approval.", '<div class="hero-actions"><a class="button" href="/systems/monitoring-well-sampling/">Plan a monitoring-well run</a><a class="button secondary" href="/tools/">Open all tools</a></div>')}
 <div class="status-strip"><span>Water laboratory workflow live</span><span>55 working tools</span><span>21 field guides</span><span>13 references</span></div>
 <section class="section"><div class="section-heading"><p class="eyebrow">System, not a card catalogue</p><h2>Follow water from source to use</h2><p class="lede">Water-system decisions depend on each other. Storage changes pump duty. Pipe size changes friction. Pressure requirements change power. Treatment and end use shape the whole path.</p></div><div class="flow-line"><span>Source</span><span>Storage</span><span>Pumping</span><span>Pipes</span><span>Treatment</span><span>Use</span></div></section>
-<section class="section"><div class="section-heading"><p class="eyebrow">Nine connected system clusters</p><h2>Start with the system you are planning</h2></div>${cardGrid([["/systems/pumps-pressure-pipe/", "Pumps, Pressure & Pipe Flow", "Build flow, TDH, loss, duty point, power and suction checks."], ["/systems/wells-storage-rainwater/", "Wells, Storage & Rainwater", "Connect source yield, pumping, pressure, stored volume and roof collection."], ["/systems/monitoring-well-sampling/", "Monitoring Well Purging & Sampling", "Plan well volume, low-flow setup, equipment exchange and stabilization evidence."], ["/systems/irrigation-sprinklers/", "Irrigation & Sprinkler Systems", "Measure supply, build zones, set runtime and troubleshoot coverage."], ["/systems/water-treatment-quality/", "Water Treatment & Water Quality", "Test first, identify the problem, sequence treatment and verify performance."], ["/systems/greywater-reuse/", "Greywater Reuse Planning", "Measure reusable supply, match demand, distribute events and check economics."], ["/systems/vehicle-wash-water-reclaim/", "Vehicle Wash Water Reclaim", "Meter use per vehicle, balance reclaim, size buffers and check payback."], ["/systems/metal-finishing-rinse-water/", "Metal Finishing Rinse Water", "Audit flow, quantify drag-out, compare staging and verify savings."], labHub], "Open system")}</section>
+<section class="section"><div class="section-heading"><p class="eyebrow">Ten connected system clusters</p><h2>Start with the system you are planning</h2></div>${cardGrid([["/systems/pumps-pressure-pipe/", "Pumps, Pressure & Pipe Flow", "Build flow, TDH, loss, duty point, power and suction checks."], ["/systems/wells-storage-rainwater/", "Wells, Storage & Rainwater", "Connect source yield, pumping, pressure, stored volume and roof collection."], ["/systems/monitoring-well-sampling/", "Monitoring Well Purging & Sampling", "Plan well volume, low-flow setup, equipment exchange and stabilization evidence."], ["/systems/irrigation-sprinklers/", "Irrigation & Sprinkler Systems", "Measure supply, build zones, set runtime and troubleshoot coverage."], ["/systems/water-treatment-quality/", "Water Treatment & Water Quality", "Test first, identify the problem, sequence treatment and verify performance."], ["/systems/greywater-reuse/", "Greywater Reuse Planning", "Measure reusable supply, match demand, distribute events and check economics."], ["/systems/vehicle-wash-water-reclaim/", "Vehicle Wash Water Reclaim", "Meter use per vehicle, balance reclaim, size buffers and check payback."], ["/systems/metal-finishing-rinse-water/", "Metal Finishing Rinse Water", "Audit flow, quantify drag-out, compare staging and verify savings."], labHub, rainHub], "Open system")}</section>
 <section class="section"><div class="section-heading"><p class="eyebrow">Monitoring well field operations</p><h2>Set up, displace, observe and document</h2></div>${cardGrid([monitoringWellToolLinks[0], monitoringWellToolLinks[1], monitoringWellToolLinks[2], monitoringWellToolLinks[3], monitoringWellGuideLinks[0]], "Open resource")}</section>
 <section class="section"><div class="section-heading"><p class="eyebrow">Three ways in</p><h2>Calculate, understand, verify</h2></div>${cardGrid([["/tools/", "Tools", "Use interactive forms with transparent methods and limitations."], ["/guides/", "Guides", "Work through pump sizing, curves and low-pressure diagnosis."], ["/reference/", "Reference", "Check conversions, pipe data, formulas and hydraulic terms."]])}</section>
 <section class="section"><h2>Evidence-led expansion</h2><p class="lede">Each published cluster has a distinct user decision, repeat-use tools, primary-source methods and a connected workflow. The monitoring-well expansion adds field geometry, equipment displacement and local-log analysis while keeping criteria and authorization with the governing plan.</p><div class="notice"><strong>Use the result as evidence, not approval.</strong> Verify measurements, laboratory results, manufacturer data, certified claims, local rules and qualified requirements for the actual project.</div></section>`;
@@ -1634,10 +1639,10 @@ const contactBody = `${hero("Project contact", "Contact", "Report a calculation 
 const privacyBody = `${hero("Site information", "Privacy", "A plain-language summary of the data practices supported by the current static site.", "This summary describes the present implementation and may change as the site changes. It is general information, not legal advice.")}<p class="meta-line">Last updated: ${reviewed}</p><section class="section content-layout"><article class="article-body"><h2>Current site operation</h2><p>Water Systems Bench has no account system, no contact form and no project-operated user database. Calculator entries are processed in the browser and are not intentionally submitted to Water Systems Bench.</p><h2>Email</h2><p>The contact link opens the user’s email application. Messages are handled by the user’s and recipient’s email providers under their own terms and practices.</p><h2>Google Analytics</h2><p>The site uses Google Analytics 4. It may process general usage and device information such as visited pages, approximate location derived from network information, referrer, browser and interaction data. Google’s services and applicable browser settings govern associated identifiers and controls.</p><h2>External links</h2><p>Links to public agencies, technical bodies, manufacturers and GitHub lead to external services with their own privacy practices.</p><h2>Changes and questions</h2><p>This page may be updated when site functionality or measurement practices change. Questions can be sent to <a href="mailto:canghun13@naver.com">canghun13@naver.com</a>.</p></article><aside class="sidebar"><h2>Site links</h2><ul><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li><li><a href="/">Home</a></li></ul></aside></section>`;
 
 const pages = [
-  { path: "/", title: "Water Systems Bench | Pumps, Reuse & Treatment", h1: "Plan the water path. Check the duty point.", description: "Practical pump, storage, monitoring, irrigation, reuse, industrial and treatment tools for connected water-system planning.", schemaType: "WebPage", crumbs: [["Home", "/"]], body: homeBody, dateModified: "2026-10-16" },
-  { path: "/tools/", title: "Water System Tools | Water Systems Bench", h1: "Tools", description: "Use 55 working tools for hydraulics, wells, monitoring, irrigation, reuse, water treatment and laboratory calculations.", schemaType: "CollectionPage", crumbs: [["Home", "/"], ["Tools", "/tools/"]], body: hubBody("Tools"), pageStyle: "/assets/css/tool-finder.css", pageScript: "/assets/js/tool-finder.js", dateModified: "2026-10-16" },
-  { path: "/guides/", title: "Water System Guides | Water Systems Bench", h1: "Guides", description: "Read 21 practical guides for pump, well, monitoring, storage, irrigation, reuse, treatment and water laboratory workflows.", schemaType: "CollectionPage", crumbs: [["Home", "/"], ["Guides", "/guides/"]], body: hubBody("Guides"), dateModified: "2026-10-16" },
-  { path: "/reference/", title: "Water System Reference | Water Systems Bench", h1: "Reference", description: "Check water conversions, demand factors, reuse stream maps, water-quality terms, pipe values and hydraulic formulas.", schemaType: "CollectionPage", crumbs: [["Home", "/"], ["Reference", "/reference/"]], body: hubBody("Reference"), dateModified: "2026-10-16" },
+  { path: "/", title: "Water Systems Bench | Pumps, Reuse & Treatment", h1: "Plan the water path. Check the duty point.", description: "Practical pump, storage, monitoring, irrigation, reuse, industrial and treatment tools for connected water-system planning.", schemaType: "WebPage", crumbs: [["Home", "/"]], body: homeBody, dateModified: "2026-10-30" },
+  { path: "/tools/", title: "Water System Tools | Water Systems Bench", h1: "Tools", description: "Use 59 working tools for hydraulics, monitoring, reuse, treatment, laboratory calculations and observed rainfall records.", schemaType: "CollectionPage", crumbs: [["Home", "/"], ["Tools", "/tools/"]], body: hubBody("Tools"), pageStyle: "/assets/css/tool-finder.css", pageScript: "/assets/js/tool-finder.js", dateModified: "2026-10-30" },
+  { path: "/guides/", title: "Water System Guides | Water Systems Bench", h1: "Guides", description: "Read 22 practical guides for pump, monitoring, reuse, treatment, laboratory and rainfall-record workflows.", schemaType: "CollectionPage", crumbs: [["Home", "/"], ["Guides", "/guides/"]], body: hubBody("Guides"), dateModified: "2026-10-30" },
+  { path: "/reference/", title: "Water System Reference | Water Systems Bench", h1: "Reference", description: "Check water conversions, demand factors, reuse stream maps, water-quality terms, pipe values and hydraulic formulas.", schemaType: "CollectionPage", crumbs: [["Home", "/"], ["Reference", "/reference/"]], body: hubBody("Reference"), dateModified: "2026-10-30" },
   { path: "/about/", title: "About | Water Systems Bench", h1: "About Water Systems Bench", description: "Learn the purpose, editorial approach and technical structure of Water Systems Bench.", schemaType: "AboutPage", crumbs: [["Home", "/"], ["About", "/about/"]], body: aboutBody, dateModified: "2026-08-08" },
   { path: "/contact/", title: "Contact | Water Systems Bench", h1: "Contact", description: "Contact Water Systems Bench about calculation, source, accessibility or site issues.", schemaType: "ContactPage", crumbs: [["Home", "/"], ["Contact", "/contact/"]], body: contactBody },
   { path: "/privacy/", title: "Privacy | Water Systems Bench", h1: "Privacy", description: "Read how the current static Water Systems Bench site handles calculator inputs, email links, analytics and external links.", schemaType: "WebPage", crumbs: [["Home", "/"], ["Privacy", "/privacy/"]], body: privacyBody },
@@ -1655,7 +1660,8 @@ const pages = [
 ];
 
 pages.push(...createLabPages({ hero, cardGrid, sourceList, related, toolLayout, actions }));
-if (pages.length !== 105) throw new Error(`Expected 105 pages, received ${pages.length}.`);
+pages.push(...createRainPages({ hero, cardGrid, sourceList, related, toolLayout, actions }));
+if (pages.length !== 112) throw new Error(`Expected 112 pages, received ${pages.length}.`);
 
 for (const page of pages) {
   const output = page.path === "/" ? join(root, "index.html") : join(root, page.path.slice(1), "index.html");
@@ -1685,6 +1691,7 @@ await writeFile(join(root, "llms.txt"), `# Water Systems Bench
 - [Metal Finishing Rinse Water Optimization](${domain}/systems/metal-finishing-rinse-water/)
 - [Monitoring Well Purging & Low-Flow Sampling](${domain}/systems/monitoring-well-sampling/)
 - [Water Laboratory Calculations & QA](${domain}/systems/water-laboratory-qa/)
+- [Rainfall Records & Gauge Networks](${domain}/systems/rainfall-records-gauge-networks/)
 
 ## Tools
 

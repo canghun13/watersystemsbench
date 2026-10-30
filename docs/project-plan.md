@@ -1,5 +1,11 @@
 # Project Plan
 
+## Current expansion —2026-10-30
+
+Rainfall Records & Gauge Networks is implemented after external-first discovery:157-family exclusion union,40 fresh primary jobs,12 comparisons and5 finalists. One GO adds four independent tools—counter differencing, event separation, paired double-mass comparison and multi-period fixed-network areal rainfall—plus hub/guide/reference. Inventory112 (7 core/10 hubs/59 tools/22 guides/14 references). No second cluster or redundant existing-page upgrade.
+
+Final local verification passes702 independent assertions and560 browser renders across five widths, with original engines/shared styles/badges preserved. Implementation is not deployment proof: exact-SHA Pages and actual-domain source/browser results are tracked in `weekly-growth-review-2026-10-30.md` and `handover.md`. No future empty routes are published. Earlier phase counts below are historical.
+
 ## First-wave scope complete — 2026-07-29
 
 Water Systems Bench has completed its initial 65-page plan:

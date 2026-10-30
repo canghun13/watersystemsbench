@@ -11,9 +11,9 @@ Water Systems Bench is an English-language, global workflow hub for sizing, chec
 
 ## Current implementation
 
-The initial scope and validated expansions are implemented: 105 public HTML pages comprising 7 core pages, 9 connected system hubs, 55 working tools, 21 guides and 13 references.
+The initial scope and validated expansions are implemented: 112 public HTML pages comprising 7 core pages, 10 connected system hubs, 59 working tools, 22 guides and 14 references.
 
-The nine workflows are:
+The ten workflows are:
 
 1. Pumps, Pressure & Pipe Flow
 2. Wells, Storage & Rainwater
@@ -24,6 +24,7 @@ The nine workflows are:
 7. Metal Finishing Rinse Water Optimization
 8. Monitoring Well Purging & Low-Flow Sampling
 9. Water Laboratory Calculations & QA
+10. Rainfall Records & Gauge Networks
 
 The Water Treatment & Water Quality cluster starts at `/systems/water-treatment-quality/`. Its eight tools use tested or user-supplied values, show their methods and limitations, and do not claim potable-water safety, regulatory compliance or an approved design.
 
@@ -50,11 +51,11 @@ npm run verify:calculations
 npm run qa:browser
 ```
 
-`npm run generate` refreshes committed HTML and machine-readable site files. `npm run qa:browser` runs the current 105-page Chrome matrix and laboratory interactions against the local server (default port4173; override with `WSB_QA_BASE`). Use the already configured Node/Playwright runtime through `NODE_PATH` and installed Chrome; do not install or reset the environment. `WSB_QA_REPORT` and `WSB_QA_IMAGES` select output locations. The old `browser-results.json` remains historical evidence and its validator is available as `npm run qa:browser:historical`; passing that validator is not a fresh browser run.
+`npm run generate` refreshes committed HTML and machine-readable site files. `npm run qa:browser` runs the current112-page Chrome matrix, all59 default results/resets, applicable unit switches and rainfall/protected interactions. Set `WSB_QA_FULL=0` for the explicitly scoped15-page release/protected matrix, or `WSB_QA_INTERACTIONS_ONLY=1` for a development supplement with no render-matrix claim. The runner defaults to port4207; start `server.mjs` with that `PORT` or override `WSB_QA_BASE`. Use the configured Node/Playwright runtime through `NODE_PATH` and installed Chrome; no installation/reset. `WSB_QA_REPORT` and `WSB_QA_IMAGES` select dated evidence locations. Historical reports/runners retain their own release counts; validating old JSON is not a fresh browser run.
 
 The local QA server replaces requests to the six approved analytics hosts with a local no-op response and records intercepted/completed counts. This keeps automated QA out of GA4 while the committed production pages retain `G-7FB08YPX7C` unchanged.
 
-GitHub Pages uses `_config.yml` as the production publication boundary. Repository documentation, planning files, QA tooling and package metadata remain available in Git but are excluded from the deployed artifact; the 105 public routes and their runtime assets remain published.
+GitHub Pages uses `_config.yml` as the production publication boundary. Repository documentation, planning files, QA tooling and package metadata remain available in Git but are excluded from the deployed artifact; the112 public routes and their runtime assets remain published.
 
 ## Repository workflow
 
