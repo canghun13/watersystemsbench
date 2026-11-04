@@ -1,0 +1,223 @@
+{
+  "date": "2026-11-04",
+  "checkedAt": "2026-11-04T06:56:39.707Z",
+  "baseline": "8ebf7cbde3963b81a8d26b6080352eaebb80497c",
+  "expectedRelease": "fe53260160c3c7fdeda229c4b75aa4a605658862",
+  "scope": {
+    "unchangedPublicHtml": 111,
+    "originalSingleFormUnchanged": true,
+    "protectedFiles": 43,
+    "exactFiveBadgeHomepage": true,
+    "onlySelectedSitemapDateChanged": true,
+    "publicPages": 112
+  },
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "sha256": "751c1649c39ada56e1868947d1817dc44c1358a76cef31ad631e70bb20b92f1e"
+    },
+    {
+      "path": "/tools/",
+      "status": 200,
+      "sha256": "00f81a8f3e2054185518a4bf57b1e8dbd333c5db7df1b0d8aed1abc28b4de64b"
+    },
+    {
+      "path": "/tools/matrix-spike-recovery-calculator/",
+      "status": 200,
+      "sha256": "d6a0049f6fc20859295974f90ba22714cc2dd8c10518348c5442e0d206f84351"
+    },
+    {
+      "path": "/tools/bod-seed-correction-bottle-analyzer/",
+      "status": 200,
+      "sha256": "4031e206648515a24b52e97591ab33c831e9a49ff3ecded7b6bfeec3172b5679"
+    },
+    {
+      "path": "/tools/tss-vss-gravimetric-calculator/",
+      "status": 200,
+      "sha256": "1baa28660fe7f9b2baa6cf5bf92cf6af3334ae2f1bcc5e03aa332ca9b4675b31"
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "status": 200,
+      "sha256": "11e127875a296e58751df10d3a9e95e48f1c04a54797fbfd63debf54871b6aa1"
+    },
+    {
+      "path": "/systems/water-laboratory-qa/",
+      "status": 200,
+      "sha256": "0a4a8bf234e3ba0d52c5a913d9a4de6bfdf7294e8a958025a1f7be3e57293193"
+    },
+    {
+      "path": "/systems/rainfall-records-gauge-networks/",
+      "status": 200,
+      "sha256": "6a2b8c8a6a5e99e3f78a2699910fd332fa34141b919a9d6c809144432cac085a"
+    },
+    {
+      "path": "/tools/rainfall-counter-to-increments-analyzer/",
+      "status": 200,
+      "sha256": "89925af8ec7feab967edd9541f242fce81acb917785ca20ba4d406f8abee5585"
+    },
+    {
+      "path": "/tools/rainfall-event-separator/",
+      "status": 200,
+      "sha256": "8d93873462b9991cf985604ac3212ac6b7dc8ae25b02b62dbee3768e7c49f8d3"
+    },
+    {
+      "path": "/tools/rain-gauge-double-mass-checker/",
+      "status": 200,
+      "sha256": "8f245f4ec8b70179b3c5a4d81985778b256c954b923cf91eec4d1a61e84e7efd"
+    },
+    {
+      "path": "/tools/areal-rainfall-series-calculator/",
+      "status": 200,
+      "sha256": "1d3f910bb0a43691d2951a7b4a8c8f8d62e13cc7ae44d997aabbff5fee242be6"
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "status": 200,
+      "sha256": "4112a39bae1de7d128bd1eb1676a97f139971f7d7a9f57aa3382b8bd8e4320f4"
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "status": 200,
+      "sha256": "0119a620d34f4b0669b1dc0fb5358b6f7136ad1856e0c1dd4ae21ac52167dfe5"
+    },
+    {
+      "path": "/assets/js/tools/matrix-spike-batch.js",
+      "status": 200,
+      "sha256": "f2d2cc7acfe4b3cc9fd691b7206ed5cdead94e1c2411950756397f9fc4929c75"
+    },
+    {
+      "path": "/assets/css/matrix-spike-batch.css",
+      "status": 200,
+      "sha256": "3c822d9c09952c1f57a813a0e4feb45b412ad12f5ab9b411b7157b43e9a3925d"
+    },
+    {
+      "path": "/assets/js/tools/water-laboratory-tools.js",
+      "status": 200,
+      "sha256": "937635edd8fc0fd1084c4e9580baf6f3c84bccaa4db754d643893ba2fdae62ba"
+    },
+    {
+      "path": "/assets/css/water-laboratory.css",
+      "status": 200,
+      "sha256": "78a48966cb5517ee5976bbf4aefc28c8ca3d06d3f86df7e2939bcb227a4fc575"
+    },
+    {
+      "path": "/assets/js/tool-finder.js",
+      "status": 200,
+      "sha256": "39e8a72a7b786d9850fda1086b1dc142cad06ae8ca0d40de05bf4ada3c426b03"
+    },
+    {
+      "path": "/assets/css/main.css",
+      "status": 200,
+      "sha256": "0193a7f8a53a2d74c6bf85d57617cf0d0bff0800cafa3b07897773b4c7a077e5"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "sha256": "962b3259c0adf1b90c3c6f98168a73733ea86d9285c04575a275beb65f3eca63"
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "sha256": "cd1297b5802fa103eecc971a7640e8b0066ce1385750940c67ad8ed465afdb42"
+    },
+    {
+      "path": "/partials/header.html",
+      "status": 200,
+      "sha256": "da465013635e1e62b68d4d7fc97819ee34625d7c20466b7ccdfe51051904da31"
+    },
+    {
+      "path": "/partials/footer.html",
+      "status": 200,
+      "sha256": "e8a542bfd2ae5389c4cc4a969fe7a153b306b2d8bc153c1c49ee6df55385867a"
+    },
+    {
+      "path": "/tools/matrix-spike-recovery-calculator/",
+      "status": 200,
+      "sha256": "d6a0049f6fc20859295974f90ba22714cc2dd8c10518348c5442e0d206f84351"
+    },
+    {
+      "path": "/tools/matrix-spike-recovery-calculator/",
+      "status": 200,
+      "sha256": "d6a0049f6fc20859295974f90ba22714cc2dd8c10518348c5442e0d206f84351"
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "status": 200,
+      "sha256": "11e127875a296e58751df10d3a9e95e48f1c04a54797fbfd63debf54871b6aa1"
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "status": 200,
+      "sha256": "11e127875a296e58751df10d3a9e95e48f1c04a54797fbfd63debf54871b6aa1"
+    },
+    {
+      "path": "http://watersystemsbench.com/",
+      "status": 301,
+      "sha256": "6aaad3365c30c4f8d2504e569527e588d33eeae66dd7045bcfeef7413820db2a"
+    },
+    {
+      "path": "/docs/",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/docs/page-inventory.html",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/docs/information-architecture.html",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/docs/project-plan.html",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/docs/weekly-growth-review-2026-11-04.html",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/docs/weekly-growth-review-2026-11-04.md",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/docs/matrix-spike-batch-upgrade-2026-11-04.html",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/docs/matrix-spike-batch-upgrade-2026-11-04.md",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/handover.html",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/tools-qa/matrix-spike-batch-browser-qa.mjs",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/tools-qa/matrix-spike-batch-content.mjs",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/package.json",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    }
+  ],
+  "analyticsExecuted": 0,
+  "complete": true
+}

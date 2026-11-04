@@ -1,6 +1,6 @@
 # Weekly Growth / Search Review —2026-11-04
 
-Working record. **EXISTING-UPGRADE GO — Matrix Spike Recovery Calculator batch review.** Pre-implementation contract in `matrix-spike-batch-upgrade-2026-11-04.md`. Local implementation/deployment are not yet complete.
+Completed record. **EXISTING-UPGRADE GO — Matrix Spike Recovery Calculator batch review.** The existing page is upgraded, deployed and production-verified. Pre-implementation contract in `matrix-spike-batch-upgrade-2026-11-04.md`. New public pages/tools/clusters0.
 
 ## 1. Repository
 
@@ -87,11 +87,17 @@ Local Chrome156.0.8078.80 passed21 selected/related/protected pages ×5 widths=1
 
 Actual results were inspected at all five widths, with mobile/desktop inputs, rightmost mobile columns and print screenshots. A final visual-only print font refinement followed the105-render matrix:one print-media CSS override makes the title24px. A separate5-width print supplement passes, source comparison proves that CSS is the sole difference from the matrix (all other159 fingerprints equal), actual inputs/results/URL/five focused columns visible, controls/nav hidden and error state not printed. Supplement Analytics5 intercepted/0 completed via server delta; actual390/1280 final print images reviewed. Do not claim the105-render local matrix reran after this print-only override. Production will test the final source. Reports:`tools-qa/weekly-growth-2026-11-04-local-results.json`, local-print and scope JSONs.
 
-No historical QA report is relabelled/overwritten; exact-six-host blocker precedes navigation and service workers are blocked. Native OS print dialog/PDF pagination not claimed. Production evidence pending below.
+Final-source production Chrome156.0.8078.80 passed the same explicitly scoped105 renders/130 geometry snapshots/37 interactions/50 tables/22 screenshots, all160 source fingerprints stable and four error lists empty. Unlike the local matrix, this production run includes the final print override. Analytics141 intercepted/0 completed. A separate final production print supplement passed5 widths with24px title, actual source values/results/URL and hidden forms/actions/nav/error state; Analytics5 intercepted/0 completed. Actual production mobile result/rightmost-column and readable desktop print screenshots reviewed. Reports:`tools-qa/weekly-growth-2026-11-04-production-results.json` and production-print JSON.
+
+No historical QA report is relabelled/overwritten; exact-six-host blocker precedes navigation and service workers are blocked. Native OS print dialog/PDF pagination not claimed. No full-site560-render or all59 default/unit UI regression claim; the generator's optional target-only hook is bounded by111 unchanged HTML pages and expanded21-page controls.
 
 ## 12. Deployment
 
-Pending implementation, independent QA, actual screenshot review, commit/push, exact-SHA Pages and real-domain verification. Local output is not deployment proof.
+Implementation:`fe53260160c3c7fdeda229c4b75aa4a605658862`, pushed to main and verified against actual remote. Exact-SHA [Pages run41788774500](https://github.com/canghun13/watersystemsbench/actions/runs/41788774500) succeeded (API updated2026-11-04T06:56:35Z).
+
+Actual-domain release guard passed41 requests:14 public HTML pages,10 assets/partials/robots/sitemap,4 normal/Googlebot responses, HTTP→HTTPS apex301 and12 docs/development404. Checked HTML/JS/CSS/machine-file hashes match local source; canonical/index permission/GA4 and preserved scope pass. Analytics execution0. Evidence:`tools-qa/weekly-growth-2026-11-04-live-results.json`, expected implementation SHA recorded. Actual browser and print checks above also pass.
+
+Follow-up release-record commit changes only excluded documentation/QA evidence, not public runtime. Verify that final commit's own Pages success, clean tree and equal local/fetched/actual main at handoff. No organic/indexing improvement is attributed to the new batch feature from the attached pre-release data.
 
 ## 13. Next state
 
