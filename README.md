@@ -34,6 +34,8 @@ The Vehicle Wash Water Reclaim Planning cluster starts at `/systems/vehicle-wash
 
 The site uses the Hydraulic Field Bench design system, SI-first calculations with common US customary units, unique metadata and canonical URLs, JSON-LD, breadcrumbs, GA4, sitemap, robots and `llms.txt`.
 
+The Matrix Spike Recovery Calculator also reviews local sample/analyte CSV records with per-row SOP limits, explicit uncomputed rows and full audit export/copy. Its original single-record engine/form is preserved. This existing-page upgrade adds no new public URL or acceptance policy.
+
 ## Local preview and QA
 
 Node.js 20 or later is required.
@@ -54,6 +56,8 @@ npm run qa:browser
 `npm run generate` refreshes committed HTML and machine-readable site files. `npm run qa:browser` runs the current112-page Chrome matrix, all59 default results/resets, applicable unit switches and rainfall/protected interactions. Set `WSB_QA_FULL=0` for the explicitly scoped15-page release/protected matrix, or `WSB_QA_INTERACTIONS_ONLY=1` for a development supplement with no render-matrix claim. The runner defaults to port4207; start `server.mjs` with that `PORT` or override `WSB_QA_BASE`. Use the configured Node/Playwright runtime through `NODE_PATH` and installed Chrome; no installation/reset. `WSB_QA_REPORT` and `WSB_QA_IMAGES` select dated evidence locations. Historical reports/runners retain their own release counts; validating old JSON is not a fresh browser run.
 
 The local QA server replaces requests to the six approved analytics hosts with a local no-op response and records intercepted/completed counts. This keeps automated QA out of GA4 while the committed production pages retain `G-7FB08YPX7C` unchanged.
+
+For the November4 Matrix Spike upgrade, use `npm run qa:matrix-spike` with the guarded server on port4211 (or `WSB_QA_BASE`). It checks21 selected/related/protected pages at all five widths and detailed batch/file/export/print plus protected interactions. Choose fresh dated `WSB_QA_REPORT` and `WSB_QA_IMAGES` paths; never overwrite historical evidence. `verify:calculations` includes97 independent batch assertions in addition to702 existing assertions. The target-only generator hook is guarded by111 unchanged public HTML pages and43 preserved assets/configuration files. See `docs/matrix-spike-batch-upgrade-2026-11-04.md` and the weekly review for exact release evidence.
 
 GitHub Pages uses `_config.yml` as the production publication boundary. Repository documentation, planning files, QA tooling and package metadata remain available in Git but are excluded from the deployed artifact; the112 public routes and their runtime assets remain published.
 

@@ -1,0 +1,37 @@
+/* Selected page only; old laboratory/shared assets remain unchanged. */
+.spike-batch, .spike-batch * { min-width: 0; }
+.spike-batch, #single-spike { scroll-margin-top: 100px; }
+.spike-batch-box { padding: clamp(1rem, 3vw, 2rem); border: 1px solid var(--line); border-top: 4px solid var(--teal-600); background: var(--white); }
+.spike-batch .field { margin-block: 1rem; }
+.spike-batch textarea { width: 100%; font: .85rem/1.6 var(--font-mono); }
+.spike-schema, .spike-batch code, .spike-context { overflow-wrap: anywhere; }
+.spike-schema { font: .8rem/1.6 var(--font-mono); }
+.spike-batch-report { margin-top: 2rem; padding-top: 1.5rem; border-top: 2px solid var(--line); }
+.spike-batch-report[hidden] { display: none; }
+.spike-batch-report .primary-reading { margin-block: 1rem; }
+.spike-batch-report .table-scroll { margin-block: 1.5rem; }
+.spike-batch th, .spike-batch td { padding: .7rem; border: 1px solid var(--line); text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.spike-batch th { background: var(--navy-900); color: var(--white); }
+.spike-batch table { border-collapse: collapse; font-size: .85rem; }
+.spike-batch td[data-spike-uncomputed] { font-weight: 700; }
+.spike-method { margin-top: 1.5rem; }
+.spike-method summary { cursor: pointer; font-weight: 700; }
+.spike-print-inputs { display: none; }
+@media print {
+  .spike-batch { margin: 0 !important; padding: 0 !important; }
+  .spike-batch:not(:has([data-spike-printable]:not([hidden]))) { display: none !important; }
+  .spike-batch > h2, .spike-batch > p, .spike-batch form, .spike-actions, .spike-method, .spike-scroll-hint, .spike-export-note { display: none !important; }
+  .spike-batch-box, .spike-batch-report { margin: 0; padding: 0; border: 0; }
+  .spike-batch-report .table-scroll { overflow: visible; }
+  .spike-batch table { min-width: 0 !important; width: 100%; font-size: 8pt; }
+  .spike-batch th:nth-child(2), .spike-batch td:nth-child(2), .spike-batch th:nth-child(3), .spike-batch td:nth-child(3), .spike-batch th:nth-child(4), .spike-batch td:nth-child(4) { display: none; }
+  .spike-batch th, .spike-batch td { padding: 3pt; }
+  .spike-batch th, .spike-batch .primary-reading, .spike-batch .reading-label, .spike-batch .reading-value { color: #000; background: #fff; }
+  .spike-batch .primary-reading { border: 1px solid #777; padding: 8pt; }
+  .spike-print-inputs { display: block; }
+  .spike-print-inputs pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 8pt; }
+  .hero { padding: 0 !important; min-height: 0 !important; }
+  .hero::before, .hero::after, .hero .eyebrow, .hero .lede, .hero-note, .breadcrumbs, .spike-jump { display: none !important; }
+  .hero.compact h1 { font-size: 24px !important; max-width: none !important; margin: 0; }
+  .meta-line { margin: 6pt 0; font-size: 9pt; }
+}

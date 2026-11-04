@@ -370,7 +370,8 @@ function pageTemplate(page) {
   <link rel="stylesheet" href="/assets/css/content.css">
 ${[
   page.toolScript ? '  <link rel="stylesheet" href="/assets/css/calculator.css">' : "",
-  page.pageStyle ? `  <link rel="stylesheet" href="${page.pageStyle}">` : ""
+  page.pageStyle ? `  <link rel="stylesheet" href="${page.pageStyle}">` : "",
+  ...(page.extraStyles || []).map(href => `  <link rel="stylesheet" href="${href}">`)
 ].filter(Boolean).join("\n")}
   ${ga4}
   <script type="application/ld+json">${schemaFor(page)}</script>

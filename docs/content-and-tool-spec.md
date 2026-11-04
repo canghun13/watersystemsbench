@@ -1,5 +1,9 @@
 # Content and Tool Specification
 
+## Matrix Spike existing-page batch review —2026-11-04
+
+The existing Matrix Spike Recovery Calculator retains its original single-record form/engine and adds a local CSV worksheet:unique sample/analyte IDs, per-row SOP limits, matched/physical-volume bases, explicit uncomputed rows, all-row CSV/copy and bounded print. No new Tool/type/URL or analytical acceptance policy. The dedicated module imports the unchanged original engine. Inventory remains59 tools/112 public pages. Contract:`matrix-spike-batch-upgrade-2026-11-04.md`; fresh verification adds97 independent assertions,799 total. Release/QA status is recorded in the dated weekly review.
+
 ## Implemented tool distribution
 
 | Primary type | Count |

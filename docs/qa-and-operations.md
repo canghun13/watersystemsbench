@@ -1,6 +1,14 @@
 # QA and Operations
 
-## Current release evidence — 2026-10-30
+## Current release evidence —2026-11-04
+
+Matrix Spike Recovery batch review is a single existing-page upgrade, not a new cluster. Inventory112 and59 tools unchanged. Original single form/engine and111 other public HTML pages are protected, as are43 old asset/configuration/navigation files and all other sitemap dates. New pure fixtures97 plus702 prior assertions=799. The optional generator stylesheet hook is exercised only by the selected page; exact old-page parity bounds its impact.
+
+Use `npm run qa:matrix-spike` / `matrix-spike-batch-browser-qa.mjs`, existing runtime/Chrome and guarded port4211 or `WSB_QA_BASE`. Final intended scope21 pages ×5 widths=105 renders with batch interactions, three laboratory peers, prior rainfall pages and Finder/stabilization/pressure/table controls. Dated local/production reports distinguish their scope; no fresh560-render/full59-default claim. `matrix-spike-batch-release-qa.mjs --scope-only` checks local preservation without pretending to check production; normal mode checks actual source/bot/docs boundary. Native OS print/PDF pagination not claimed. Exact final metrics and deployment status belong in `weekly-growth-review-2026-11-04.md`.
+
+Local completed scope105 renders/130 geometry snapshots/37 interaction entries/50 tables, source160 stable and errors0, Analytics141 intercepted/0 completed via server. Then one print-only font override was separately verified by `matrix-spike-batch-print-qa.mjs`:5 widths,24px title, actual input values/results/URL, focused columns and hidden controls/error state; Analytics5 intercepted/0 completed. Its source comparison permits only that CSS difference from the local matrix; do not relabel the105 renders as post-refinement. Actual source screenshots reviewed. Production verification remains pending in the dated release record.
+
+## Historical release evidence — 2026-10-30
 
 Inventory112:7 core,10 hubs,59 tools,22 guides,14 references; sitemap112. Rainfall Records & Gauge Networks adds four independent tools and seven routes. Static/publication/Analytics/navigation checks pass; calculation regression702 =391 original +102 laboratory +51 pressure rating +158 rainfall.
 
