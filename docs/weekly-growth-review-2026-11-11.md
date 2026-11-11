@@ -1,6 +1,6 @@
 # Weekly Growth / Search Review —2026-11-11
 
-**EXISTING-UPGRADE GO — TSS & VSS Gravimetric Calculator, TSS-only scope.** Implementation and final local verification complete; deployment evidence will be recorded after execution. No new cluster or URL.
+**EXISTING-UPGRADE GO — TSS & VSS Gravimetric Calculator, TSS-only scope.** Implemented, deployed and verified on the actual domain. No new cluster or URL.
 
 ## 1. Repository
 
@@ -85,9 +85,15 @@ New independent literal fixtures59; total858=799+59. All original suites and112-
 
 Early local matrix completed all75 renders and target/control interactions, then failed a QA-runner assertion that expected direct Analytics interception even though the local server had already intercepted the script. Runner corrected to read the existing server counter, not to loosen the six-host blocker. This is not a website defect. The final-source rerun after the when-to-use clarification also passes75/95/10,7stable fingerprints,all error lists empty,115server-intercepted/0completed; the dated local JSON is that final run. Historical reports untouched. Native OS print/PDF pagination not claimed.
 
+Final production Chrome157.0.8103.39 independently passes75renders/95geometry/10grouped interaction entries/17screenshots at all5widths. All7tracked fingerprints stable, console/page/request/internalHTTP errors0, Analytics115intercepted/0completed. Actual production five-width forms/results, combined ignition record,390/1280print input/result/units/URL and unmeasured-fraction wording inspected. Same scope/state/copy/print/unit/reset and protected controls as local pass. `tools-qa/weekly-growth-2026-11-11-production-results.json` is completed production evidence, not an old report replay or a full-site560-render claim. Earlier paragraph's pending status was pre-deployment; this is the completed result.
+
 ## 12. Deployment
 
-Pending final-source local QA, commit/push, exact-SHA Pages, actual-domain source/browser verification and final clean equal refs. Do not treat this draft as deployment proof.
+Implementation `38f97d16fa61224ca836a8e14244a0c8227d27d6` pushed to main, confirmed against actual remote. Exact-SHA [Pages42963219761](https://github.com/canghun13/watersystemsbench/actions/runs/42963219761) succeeded(API updated2026-11-11T05:04:14Z).
+
+Actual-domain release guard passes38 non-executing requests:13publicHTML+9assets/partials/machine files+4normal/Googlebot responses+HTTP→HTTPS apex301+11docs/development404. Exact checked source hashes/canonical/index permission/GA4 preserved, protected scope passes. `tools-qa/weekly-growth-2026-11-11-live-results.json` records the implementation SHA. JavaScript/Analytics execution0 for these HTTP checks. Final production browser also passes as above. No ranking/indexing gain is attributed to this deployment.
+
+Follow-up release-record commit includes only excluded research/handover/QA evidence, not public runtime. Its identity is the commit containing this completed record; verify its own exact-SHA Pages success, local/fetched/actual main equality,0/0 and clean tree at handoff. Final handoff guard reruns outside Git to avoid a self-referential release-evidence commit loop.
 
 ## 13. Next state
 

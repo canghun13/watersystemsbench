@@ -1,0 +1,208 @@
+{
+  "date": "2026-11-11",
+  "checkedAt": "2026-11-11T05:04:38.719Z",
+  "baseline": "a984e42bfa6a43e08731f7b44d556c0291574f23",
+  "expectedRelease": "38f97d16fa61224ca836a8e14244a0c8227d27d6",
+  "scope": {
+    "unchangedPublicHtml": 111,
+    "exactHomepageAndFiveBadges": true,
+    "protectedAssetsAndConfiguration": 44,
+    "originalCombinedEngineUnchanged": true,
+    "onlyTargetSitemapDateChanged": true,
+    "publicPages": 112
+  },
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "sha256": "751c1649c39ada56e1868947d1817dc44c1358a76cef31ad631e70bb20b92f1e"
+    },
+    {
+      "path": "/tools/",
+      "status": 200,
+      "sha256": "00f81a8f3e2054185518a4bf57b1e8dbd333c5db7df1b0d8aed1abc28b4de64b"
+    },
+    {
+      "path": "/tools/tss-vss-gravimetric-calculator/",
+      "status": 200,
+      "sha256": "5f08e84986aeb5c84fd1da3193235064267aacc30e006d428c133c07a5208d6d"
+    },
+    {
+      "path": "/systems/water-laboratory-qa/",
+      "status": 200,
+      "sha256": "0a4a8bf234e3ba0d52c5a913d9a4de6bfdf7294e8a958025a1f7be3e57293193"
+    },
+    {
+      "path": "/tools/bod-seed-correction-bottle-analyzer/",
+      "status": 200,
+      "sha256": "4031e206648515a24b52e97591ab33c831e9a49ff3ecded7b6bfeec3172b5679"
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "status": 200,
+      "sha256": "11e127875a296e58751df10d3a9e95e48f1c04a54797fbfd63debf54871b6aa1"
+    },
+    {
+      "path": "/tools/matrix-spike-recovery-calculator/",
+      "status": 200,
+      "sha256": "d6a0049f6fc20859295974f90ba22714cc2dd8c10518348c5442e0d206f84351"
+    },
+    {
+      "path": "/guides/review-water-laboratory-calculations/",
+      "status": 200,
+      "sha256": "616b3237340885a6cd15e907f5962f01d1f5ca0f23df06eb70f476d6048ac4d7"
+    },
+    {
+      "path": "/reference/water-laboratory-qc-calculation-bases/",
+      "status": 200,
+      "sha256": "e0b4f3c6e844cace5c05c37e8d857e52c348289bdd5545c9ed7aeb06b581144b"
+    },
+    {
+      "path": "/systems/rainfall-records-gauge-networks/",
+      "status": 200,
+      "sha256": "6a2b8c8a6a5e99e3f78a2699910fd332fa34141b919a9d6c809144432cac085a"
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "status": 200,
+      "sha256": "0119a620d34f4b0669b1dc0fb5358b6f7136ad1856e0c1dd4ae21ac52167dfe5"
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "status": 200,
+      "sha256": "4112a39bae1de7d128bd1eb1676a97f139971f7d7a9f57aa3382b8bd8e4320f4"
+    },
+    {
+      "path": "/reference/greywater-source-use-screening/",
+      "status": 200,
+      "sha256": "a6a7eb0fc545f8c6c4efa0842d4cf73ecce92303777218a61687aed3684ac19d"
+    },
+    {
+      "path": "/assets/js/tools/water-laboratory-tools.js",
+      "status": 200,
+      "sha256": "9faabeec857277fa2e62591b110fada0b387abba95283befca14f4511a02f700"
+    },
+    {
+      "path": "/assets/css/water-laboratory.css",
+      "status": 200,
+      "sha256": "78a48966cb5517ee5976bbf4aefc28c8ca3d06d3f86df7e2939bcb227a4fc575"
+    },
+    {
+      "path": "/assets/js/form-utils.js",
+      "status": 200,
+      "sha256": "8609ce3c78ae1afbbe13a68d4034558600cd980c31006bbc0c6b1f29bf486b9c"
+    },
+    {
+      "path": "/assets/css/main.css",
+      "status": 200,
+      "sha256": "0193a7f8a53a2d74c6bf85d57617cf0d0bff0800cafa3b07897773b4c7a077e5"
+    },
+    {
+      "path": "/assets/js/tools/matrix-spike-batch.js",
+      "status": 200,
+      "sha256": "f2d2cc7acfe4b3cc9fd691b7206ed5cdead94e1c2411950756397f9fc4929c75"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "sha256": "462549bc3ae717a6f2aaa3f0b8a27bc84411a2e82c0bb023ff4a906fe04eb238"
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "sha256": "cd1297b5802fa103eecc971a7640e8b0066ce1385750940c67ad8ed465afdb42"
+    },
+    {
+      "path": "/partials/header.html",
+      "status": 200,
+      "sha256": "da465013635e1e62b68d4d7fc97819ee34625d7c20466b7ccdfe51051904da31"
+    },
+    {
+      "path": "/partials/footer.html",
+      "status": 200,
+      "sha256": "e8a542bfd2ae5389c4cc4a969fe7a153b306b2d8bc153c1c49ee6df55385867a"
+    },
+    {
+      "path": "/tools/tss-vss-gravimetric-calculator/",
+      "status": 200,
+      "sha256": "5f08e84986aeb5c84fd1da3193235064267aacc30e006d428c133c07a5208d6d"
+    },
+    {
+      "path": "/tools/tss-vss-gravimetric-calculator/",
+      "status": 200,
+      "sha256": "5f08e84986aeb5c84fd1da3193235064267aacc30e006d428c133c07a5208d6d"
+    },
+    {
+      "path": "/tools/matrix-spike-recovery-calculator/",
+      "status": 200,
+      "sha256": "d6a0049f6fc20859295974f90ba22714cc2dd8c10518348c5442e0d206f84351"
+    },
+    {
+      "path": "/tools/matrix-spike-recovery-calculator/",
+      "status": 200,
+      "sha256": "d6a0049f6fc20859295974f90ba22714cc2dd8c10518348c5442e0d206f84351"
+    },
+    {
+      "path": "http://watersystemsbench.com/",
+      "status": 301,
+      "sha256": "6aaad3365c30c4f8d2504e569527e588d33eeae66dd7045bcfeef7413820db2a"
+    },
+    {
+      "path": "/docs/",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/docs/page-inventory.html",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/docs/information-architecture.html",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/docs/project-plan.html",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/docs/weekly-growth-review-2026-11-11.html",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/docs/weekly-growth-review-2026-11-11.md",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/docs/solids-scope-upgrade-2026-11-11.html",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/docs/solids-scope-upgrade-2026-11-11.md",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/handover.html",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/tools-qa/solids-scope-browser-qa.mjs",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/package.json",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    }
+  ],
+  "analyticsExecuted": 0,
+  "complete": true
+}

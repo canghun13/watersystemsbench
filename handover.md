@@ -8,7 +8,7 @@
 - Default branch: main
 - Contact: [canghun13@naver.com](mailto:canghun13@naver.com)
 - GA4 measurement ID: `G-7FB08YPX7C`
-- Current phase: November 11 weekly existing-page upgrade — TSS-only scope implemented and locally verified; deployment verification pending
+- Current phase: November 11 weekly existing-page upgrade — TSS-only scope deployed and production-verified
 - Language and audience: English; global
 - Stack and deployment: static HTML/CSS/vanilla JavaScript; GitHub Pages plus Cloudflare
 - Phase 2 starting commit: `3c2b450e361a8a8ea0d351059bdef0e121b95071`
@@ -29,7 +29,10 @@ The latest selected expansion is Rainfall Records & Gauge Networks, following Wa
 - Preimplementation contract:`docs/solids-scope-upgrade-2026-11-11.md`. MPCA primary training section separates TSS before ignition from later VSS. Add explicit TSS-only scope, no fake ash/blank, unmeasured fractions not determined, retained hidden-unit state, stale clearing/copy/print/reset. Original `computeSolids` unchanged; default combined preserved. Only target HTML/content/date and laboratory engine branch change;111otherHTML/44oldassets+configuration/exacthomepage+badges protected. No CSS/form-utils/conversions/navigation/Finder/API/backend/dependency/newURL/tool/cluster changes; inventory112/10hubs/59tools/22guides/14references.
 -59new literal fixtures;858total. Local Chrome157.0.8103.39:75renders/95geometry/10grouped interactions,7source hashes stable,errors0; localserver Analytics115intercepted/0completed. Actual five-width forms/results and390/1280print images inspected. Original combined/TSS-only/units/error/recovery/reset/copy/print plus all3lab peers/Matrix batch/Finder59/stabilization/pressure controls pass. NativeOSprint/PDFpagination/full560renders not claimed. Early runner direct-interception assertion corrected to read existing local server counter, not a site bug. Final-source local rerun and production verification pending; dated baseline/local/scope evidence retained.
 - Next3:matched TSS post-upgrade evidence; Rainfall/laboratory/pressure observation without speculative indexing audits; datedBing/joinedGA4. No automation created.
-- Final-source local rerun after when-to-use clarification also passes75renders/95geometry/10grouped interactions,7stable fingerprints,errors0,Analytics115server-intercepted/0completed. The dated local JSON now represents that final source. Commit/push/exact-SHA Pages and actual production verification follow; not yet a deployment claim.
+- Final-source local rerun after when-to-use clarification also passes75renders/95geometry/10grouped interactions,7stable fingerprints,errors0,Analytics115server-intercepted/0completed. Dated local JSON represents that final source. Earlier pending notes describe pre-deployment state; completed release evidence follows.
+- Implementation:`38f97d16fa61224ca836a8e14244a0c8227d27d6`,pushed and actual remote matched. Exact-SHA [Pages42963219761](https://github.com/canghun13/watersystemsbench/actions/runs/42963219761) succeeded(API updated2026-11-11T05:04:14Z). Actual-domain38HTTP/source/bot/redirect/boundary requests pass,including11docs/development404 and exact checked local/live parity. Analytics execution0.
+- Final production Chrome157.0.8103.39 passes75renders/95geometry/10grouped interactions/17screenshots,7tracked source fingerprints stable,all4error lists empty. Analytics115intercepted/0completed. Actual five-width production input/result layouts and390/1280print inspected. Same target/peer/protected scenarios pass; no nativeOSdialog/PDFpagination/full560-render claim. Evidence:`tools-qa/weekly-growth-2026-11-11-{baseline,local,scope,live,production}-results.json`. No ranking/indexing lift attribution.
+- Final release-record commit changes excluded docs/handover/QA only; public runtime remains the tested implementation. Its identity is the commit containing this record. Verify that commit's own Pages success and local/fetched/actual main equality,0/0,clean at handoff; final source guard reruns outside Git. Own local QA server stopped; no automation or dependency/environment change.
 
 ## Weekly Growth / Search Review —2026-11-04
 
