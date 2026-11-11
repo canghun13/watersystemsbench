@@ -1,0 +1,91 @@
+{
+  "date": "2026-11-11",
+  "checkedAt": "2026-11-11T04:50:41.556Z",
+  "base": "https://watersystemsbench.com",
+  "baseline": true,
+  "widths": [
+    390,
+    1280
+  ],
+  "paths": [
+    "/tools/tss-vss-gravimetric-calculator/",
+    "/tools/matrix-spike-recovery-calculator/"
+  ],
+  "renders": 4,
+  "geometry": [
+    {
+      "path": "/tools/tss-vss-gravimetric-calculator/",
+      "width": 390,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 200.796875,
+      "header": 67,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/matrix-spike-recovery-calculator/",
+      "width": 390,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 200.796875,
+      "header": 67,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/tss-vss-gravimetric-calculator/",
+      "width": 1280,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 272.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/matrix-spike-recovery-calculator/",
+      "width": 1280,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 272.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    }
+  ],
+  "interactions": [
+    {
+      "width": 390,
+      "original300": true,
+      "tssOnlyScopeAbsent": true,
+      "missingAshBlocksTss": true
+    },
+    {
+      "width": 1280,
+      "original300": true,
+      "tssOnlyScopeAbsent": true,
+      "missingAshBlocksTss": true
+    }
+  ],
+  "screenshots": [],
+  "analytics": {
+    "intercepted": 6,
+    "completed": 0
+  },
+  "consoleErrors": [],
+  "pageErrors": [],
+  "requestFailures": [],
+  "httpFailures": [],
+  "complete": true,
+  "sourceHashes": {
+    "assets/js/tools/water-laboratory-tools.js": "937635edd8fc0fd1084c4e9580baf6f3c84bccaa4db754d643893ba2fdae62ba",
+    "tools-qa/water-laboratory-content.mjs": "c19620e91fa7ac3b31937a1aca64805dc12350f3590144403c74465f165819e5",
+    "tools/tss-vss-gravimetric-calculator/index.html": "1baa28660fe7f9b2baa6cf5bf92cf6af3334ae2f1bcc5e03aa332ca9b4675b31",
+    "sitemap.xml": "962b3259c0adf1b90c3c6f98168a73733ea86d9285c04575a275beb65f3eca63",
+    "assets/css/main.css": "0193a7f8a53a2d74c6bf85d57617cf0d0bff0800cafa3b07897773b4c7a077e5",
+    "assets/css/water-laboratory.css": "78a48966cb5517ee5976bbf4aefc28c8ca3d06d3f86df7e2939bcb227a4fc575"
+  },
+  "browser": "157.0.8103.39",
+  "sourceStable": true
+}

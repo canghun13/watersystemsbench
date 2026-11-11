@@ -73,6 +73,14 @@ export function analyzeBod({ mode, bottleMl, minimumDepletion, minimumFinalDo, s
   return { rows, seedRows, unitDemand, eligible: rows.filter(r => r.used).length };
 }
 
+export function computeTss({ tareMg, dryMg, volumeMl, minimumResidueMg }) {
+  [tareMg, dryMg, minimumResidueMg].forEach(n => finite(n, "Mass"));
+  finite(volumeMl, "Filtered volume", true);
+  if (dryMg < tareMg) throw new Error("Dried filter + residue mass must be at least the prepared filter tare mass.");
+  const dryMass = dryMg - tareMg;
+  return { dryMass, tss: dryMass * 1000 / volumeMl, massMet: dryMass + 1e-9 >= minimumResidueMg };
+}
+
 export function computeSolids({ tareMg, dryMg, ashMg, blankLossMg, volumeMl, minimumResidueMg }) {
   [tareMg, dryMg, ashMg, blankLossMg, minimumResidueMg].forEach(n => finite(n, "Mass")); finite(volumeMl, "Filtered volume", true);
   if (dryMg < tareMg || ashMg < tareMg || ashMg > dryMg) throw new Error("Mass order must be tare ≤ ignited filter + ash ≤ dried filter + residue.");
@@ -145,6 +153,14 @@ function syncModes(form) {
   });
 }
 
+function syncSolidsScope(form) {
+  if (form.dataset.toolForm !== "lab-solids") return;
+  const tssOnly = form.elements.solidsScope.value === "tss";
+  const group = form.querySelector("[data-solids-ignition]");
+  group.hidden = tssOnly;
+  group.querySelectorAll("input").forEach(field => { field.disabled = tssOnly; });
+}
+
 function mount(form) {
   const kind = form.dataset.toolForm;
   const n = name => numberValue(form, name, { max: 1e12 });
@@ -161,6 +177,13 @@ function mount(form) {
     } else if (kind === "lab-solids") {
       const massFactor = form.elements.massUnit.value === "g" ? 1000 : 1;
       const volumeFactor = form.elements.volumeUnit.value === "L" ? 1000 : 1;
+      const scope = form.elements.solidsScope.value;
+      if (!["combined", "tss"].includes(scope)) throw new Error("Choose a supported solids result scope.");
+      if (scope === "tss") {
+        const r = computeTss({ tareMg: n("tare") * massFactor, dryMg: n("dry") * massFactor, volumeMl: n("volume") * volumeFactor, minimumResidueMg: n("minimumResidue") * massFactor });
+        report(form, { label: "TSS concentration", primary: `${fmt(r.tss)}<span class="reading-unit"> mg/L</span>`, supporting: ["Result scope: TSS only — no ignition result used.", `Dry residue: ${fmt(r.dryMass)} mg.`, "VSS, fixed suspended solids and VSS / TSS: not determined in TSS-only scope.", `Entered minimum residue mass: ${r.massMet ? "Met" : "Not met"}.`], interpretation: "TSS uses the retained dry residue and original filtered sample volume. No ignition measurement has been used; do not interpret the unmeasured volatile or fixed fractions as zero. The minimum-mass comparison does not approve a laboratory result.", warning });
+        return;
+      }
       const r = computeSolids({ tareMg: n("tare") * massFactor, dryMg: n("dry") * massFactor, ashMg: n("ash") * massFactor, blankLossMg: n("blank") * massFactor, volumeMl: n("volume") * volumeFactor, minimumResidueMg: n("minimumResidue") * massFactor });
       report(form, { label: "TSS concentration", primary: `${fmt(r.tss)}<span class="reading-unit"> mg/L</span>`, supporting: [`VSS: ${fmt(r.vss)} mg/L; fixed suspended fraction: ${fmt(r.fixed)} mg/L.`, `Dry residue: ${fmt(r.dryMass)} mg; corrected ignition loss: ${fmt(r.volatileMass)} mg; fixed mass: ${fmt(r.fixedMass)} mg.`, `VSS / TSS: ${fmt(r.fraction)}${r.fraction == null ? " — zero dry residue" : "%"}.`, `Entered minimum residue mass: ${r.massMet ? "Met" : "Not met"}.`], interpretation: "Net captured mass and method-specific weighing/blank evidence matter independently of the calculated mg/L. Ignition loss is not a direct biomass or organic-carbon measurement.", warning });
     } else if (kind === "lab-rpd") {
@@ -172,10 +195,11 @@ function mount(form) {
       const r = computeSpike({ mode, native: n("native"), spiked: n("spiked"), added: mode === "basis" ? n("added") : undefined, sampleMl: mode === "volume" ? n("sampleMl") : undefined, spikeMl: mode === "volume" ? n("spikeMl") : undefined, stock: mode === "volume" ? n("stock") : undefined, lower: n("lower"), upper: n("upper") });
       report(form, { label: "Matrix-spike recovery", primary: `${fmt(r.recovery)}<span class="reading-unit"> %</span>`, supporting: [`Entered recovery range: ${r.within ? "Within" : "Outside"}.`, `Expected spiked concentration at 100% recovery: ${fmt(r.expected)} mg/L.`, `Native contribution on comparison basis: ${fmt(r.nativeFinal)} mg/L; added analyte: ${fmt(r.addedFinal)} mg/L.`, mode === "volume" ? `Added volume / original sample: ${fmt(r.volumeIncrease)}%. Volume correction does not reverse changes in matrix behavior.` : "All three concentrations must already share the original-sample-equivalent basis."], interpretation: "Investigate low, negative or high recovery with method-specific QC. Do not automatically correct official sample results by dividing by recovery.", warning });
     }
-  }, { afterReset: () => { fileGeneration++; syncModes(form); } });
+  }, { afterReset: () => { fileGeneration++; syncModes(form); syncSolidsScope(form); } });
   form.addEventListener("input", event => { if (event.target.type !== "file") fileGeneration++; clearResult(form); });
   form.addEventListener("change", () => clearResult(form));
   form.elements.mode?.addEventListener("change", () => syncModes(form));
+  form.elements.solidsScope?.addEventListener("change", () => syncSolidsScope(form));
   form.querySelector("[data-lab-example]")?.addEventListener("click", () => {
     fileGeneration++;
     const mode = form.elements.mode.value;
@@ -206,6 +230,7 @@ function mount(form) {
     } catch (error) { if (generation === fileGeneration) form.querySelector("[data-form-error]").textContent = error.message; }
   }));
   syncModes(form);
+  syncSolidsScope(form);
 }
 
 if (typeof document !== "undefined") document.querySelectorAll('[data-tool-form^="lab-"]').forEach(mount);

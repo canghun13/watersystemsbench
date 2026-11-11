@@ -111,8 +111,11 @@ for (const marker of ['name="compareMode"', 'name="ratedDrawdown"', 'name="ratin
 }
 for (const [slug, kind] of [["bod-seed-correction-bottle-analyzer", "lab-bod"], ["tss-vss-gravimetric-calculator", "lab-solids"], ["water-duplicate-rpd-batch-checker", "lab-rpd"], ["matrix-spike-recovery-calculator", "lab-spike"]]) {
   const html = await readFile(join(root, "tools", slug, "index.html"), "utf8");
-  for (const marker of [`data-tool-form="${kind}"`, '/assets/js/tools/water-laboratory-tools.js', '/assets/css/water-laboratory.css', "What this tool does", "Calculation or decision method", "Worked example", "Assumptions", "Limitations", "Sources", "data-copy-result", "data-print-result", "Numeric review only", kind === "lab-spike" ? "November 4, 2026" : "October 16, 2026"]) {
+  for (const marker of [`data-tool-form="${kind}"`, '/assets/js/tools/water-laboratory-tools.js', '/assets/css/water-laboratory.css', "What this tool does", "Calculation or decision method", "Worked example", "Assumptions", "Limitations", "Sources", "data-copy-result", "data-print-result", "Numeric review only", kind === "lab-spike" ? "November 4, 2026" : kind === "lab-solids" ? "November 11, 2026" : "October 16, 2026"]) {
     if (!html.includes(marker)) errors.push(`${slug}: missing laboratory contract ${marker}.`);
+  }
+  if (kind === "lab-solids") for (const marker of ['name="solidsScope"', 'data-solids-ignition', 'TSS only', 'not determined, not zero', '29.2 mg/L']) {
+    if (!html.includes(marker)) errors.push(`${slug}: missing TSS-only contract ${marker}.`);
   }
 }
 const spikeHtml = await readFile(join(root, "tools/matrix-spike-recovery-calculator/index.html"), "utf8");

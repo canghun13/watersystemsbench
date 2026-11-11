@@ -1,5 +1,9 @@
 # QA and Operations
 
+## November11 TSS-only result scope
+
+Inventory112/59 tools unchanged. `verify-solids-scope.mjs` adds59 literal fixtures,858 total. `solids-scope-browser-qa.mjs` (`npm run qa:solids-scope`) tests15 target/related/protected pages at390/768/1024/1280/1440, TSS-only without ignition, original combined, lab peers/Matrix batch, unit round trip/native reset, invalid/recovery, Copy and print hook/media. Existing guarded server4211; new dated `WSB_QA_REPORT` mandatory, optional `WSB_QA_IMAGES`. Production installs exact-six-host blocker before navigation; local server reports its own intercepted counts. No native OS print/PDF-pagination or full560-render claim. `solids-scope-release-qa.mjs --scope-only` checks111 protected public HTML,44 old assets/configuration files, exact homepage/badges, original combined engine and sole selected sitemap date; normal mode additionally probes actual domain. Historical release-specific checkers are not current-baseline guards after public changes. Exact completed evidence and release SHA in `weekly-growth-review-2026-11-11.md`.
+
 ## Current release evidence —2026-11-04
 
 Matrix Spike Recovery batch review is a single existing-page upgrade, not a new cluster. Inventory112 and59 tools unchanged. Original single form/engine and111 other public HTML pages are protected, as are43 old asset/configuration/navigation files and all other sitemap dates. New pure fixtures97 plus702 prior assertions=799. The optional generator stylesheet hook is exercised only by the selected page; exact old-page parity bounds its impact.

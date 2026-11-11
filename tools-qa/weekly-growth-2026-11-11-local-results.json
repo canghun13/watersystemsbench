@@ -1,0 +1,1145 @@
+{
+  "date": "2026-11-11",
+  "checkedAt": "2026-11-11T05:00:18.969Z",
+  "base": "http://127.0.0.1:4211",
+  "baseline": false,
+  "widths": [
+    390,
+    768,
+    1024,
+    1280,
+    1440
+  ],
+  "paths": [
+    "/",
+    "/tools/",
+    "/systems/water-laboratory-qa/",
+    "/tools/tss-vss-gravimetric-calculator/",
+    "/tools/bod-seed-correction-bottle-analyzer/",
+    "/tools/water-duplicate-rpd-batch-checker/",
+    "/tools/matrix-spike-recovery-calculator/",
+    "/guides/review-water-laboratory-calculations/",
+    "/reference/water-laboratory-qc-calculation-bases/",
+    "/systems/rainfall-records-gauge-networks/",
+    "/reference/water-pipe-internal-diameters/",
+    "/guides/how-to-read-a-pump-curve/",
+    "/tools/groundwater-stabilization-log-analyzer/",
+    "/tools/pressure-tank-sizing-calculator/",
+    "/reference/greywater-source-use-screening/"
+  ],
+  "renders": 75,
+  "geometry": [
+    {
+      "path": "/",
+      "width": 390,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 200.796875,
+      "header": 67,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/",
+      "width": 390,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 200.796875,
+      "header": 67,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/systems/water-laboratory-qa/",
+      "width": 390,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 200.796875,
+      "header": 67,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/tss-vss-gravimetric-calculator/",
+      "width": 390,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 200.796875,
+      "header": 67,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/bod-seed-correction-bottle-analyzer/",
+      "width": 390,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 224.15625,
+      "header": 67,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "width": 390,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 200.796875,
+      "header": 67,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/matrix-spike-recovery-calculator/",
+      "width": 390,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 200.796875,
+      "header": 67,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/guides/review-water-laboratory-calculations/",
+      "width": 390,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 224.15625,
+      "header": 67,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/reference/water-laboratory-qc-calculation-bases/",
+      "width": 390,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 224.15625,
+      "header": 67,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/systems/rainfall-records-gauge-networks/",
+      "width": 390,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 200.796875,
+      "header": 67,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/reference/water-pipe-internal-diameters/",
+      "width": 390,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 224.15625,
+      "header": 67,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/guides/how-to-read-a-pump-curve/",
+      "width": 390,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 224.15625,
+      "header": 67,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 390,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 241,
+      "header": 67,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 390,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 217.640625,
+      "header": 67,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/reference/greywater-source-use-screening/",
+      "width": 390,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 224.15625,
+      "header": 67,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/tss-vss-gravimetric-calculator/",
+      "width": 390,
+      "stage": "tss-only",
+      "overflow": 0,
+      "h1": -752.203125,
+      "header": 67,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/bod-seed-correction-bottle-analyzer/",
+      "width": 390,
+      "stage": "peer-result",
+      "overflow": 0,
+      "h1": -1948.84375,
+      "header": 67,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "width": 390,
+      "stage": "peer-result",
+      "overflow": 0,
+      "h1": -1187.203125,
+      "header": 67,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/matrix-spike-recovery-calculator/",
+      "width": 390,
+      "stage": "peer-result",
+      "overflow": 0,
+      "h1": -1059.203125,
+      "header": 67,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/",
+      "width": 768,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 208.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/",
+      "width": 768,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 208.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/systems/water-laboratory-qa/",
+      "width": 768,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 208.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/tss-vss-gravimetric-calculator/",
+      "width": 768,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 208.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/bod-seed-correction-bottle-analyzer/",
+      "width": 768,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 208.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "width": 768,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 208.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/matrix-spike-recovery-calculator/",
+      "width": 768,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 208.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/guides/review-water-laboratory-calculations/",
+      "width": 768,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 208.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/reference/water-laboratory-qc-calculation-bases/",
+      "width": 768,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 208.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/systems/rainfall-records-gauge-networks/",
+      "width": 768,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 208.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/reference/water-pipe-internal-diameters/",
+      "width": 768,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 208.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/guides/how-to-read-a-pump-curve/",
+      "width": 768,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 208.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 768,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 208.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 768,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 208.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/reference/greywater-source-use-screening/",
+      "width": 768,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 208.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/tss-vss-gravimetric-calculator/",
+      "width": 768,
+      "stage": "tss-only",
+      "overflow": 0,
+      "h1": -406.203125,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/bod-seed-correction-bottle-analyzer/",
+      "width": 768,
+      "stage": "peer-result",
+      "overflow": 0,
+      "h1": -1369.203125,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "width": 768,
+      "stage": "peer-result",
+      "overflow": 0,
+      "h1": -844.203125,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/matrix-spike-recovery-calculator/",
+      "width": 768,
+      "stage": "peer-result",
+      "overflow": 0,
+      "h1": -683.203125,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/",
+      "width": 1024,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 247.1875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/",
+      "width": 1024,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 247.1875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/systems/water-laboratory-qa/",
+      "width": 1024,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 247.1875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/tss-vss-gravimetric-calculator/",
+      "width": 1024,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 247.1875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/bod-seed-correction-bottle-analyzer/",
+      "width": 1024,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 247.1875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "width": 1024,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 247.1875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/matrix-spike-recovery-calculator/",
+      "width": 1024,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 247.1875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/guides/review-water-laboratory-calculations/",
+      "width": 1024,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 247.1875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/reference/water-laboratory-qc-calculation-bases/",
+      "width": 1024,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 247.1875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/systems/rainfall-records-gauge-networks/",
+      "width": 1024,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 247.1875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/reference/water-pipe-internal-diameters/",
+      "width": 1024,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 247.1875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/guides/how-to-read-a-pump-curve/",
+      "width": 1024,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 247.1875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 1024,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 247.1875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 1024,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 247.1875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/reference/greywater-source-use-screening/",
+      "width": 1024,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 247.1875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/tss-vss-gravimetric-calculator/",
+      "width": 1024,
+      "stage": "tss-only",
+      "overflow": 0,
+      "h1": -330.8125,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/bod-seed-correction-bottle-analyzer/",
+      "width": 1024,
+      "stage": "peer-result",
+      "overflow": 0,
+      "h1": -1426.8125,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "width": 1024,
+      "stage": "peer-result",
+      "overflow": 0,
+      "h1": -907.8125,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/matrix-spike-recovery-calculator/",
+      "width": 1024,
+      "stage": "peer-result",
+      "overflow": 0,
+      "h1": -666.8125,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/",
+      "width": 1280,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 272.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/",
+      "width": 1280,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 272.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/systems/water-laboratory-qa/",
+      "width": 1280,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 272.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/tss-vss-gravimetric-calculator/",
+      "width": 1280,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 272.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/bod-seed-correction-bottle-analyzer/",
+      "width": 1280,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 272.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "width": 1280,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 272.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/matrix-spike-recovery-calculator/",
+      "width": 1280,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 272.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/guides/review-water-laboratory-calculations/",
+      "width": 1280,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 272.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/reference/water-laboratory-qc-calculation-bases/",
+      "width": 1280,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 272.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/systems/rainfall-records-gauge-networks/",
+      "width": 1280,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 272.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/reference/water-pipe-internal-diameters/",
+      "width": 1280,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 272.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/guides/how-to-read-a-pump-curve/",
+      "width": 1280,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 272.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 1280,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 272.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 1280,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 272.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/reference/greywater-source-use-screening/",
+      "width": 1280,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 272.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/tss-vss-gravimetric-calculator/",
+      "width": 1280,
+      "stage": "tss-only",
+      "overflow": 0,
+      "h1": -379.203125,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/bod-seed-correction-bottle-analyzer/",
+      "width": 1280,
+      "stage": "peer-result",
+      "overflow": 0,
+      "h1": -1398.203125,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "width": 1280,
+      "stage": "peer-result",
+      "overflow": 0,
+      "h1": -837.203125,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/matrix-spike-recovery-calculator/",
+      "width": 1280,
+      "stage": "peer-result",
+      "overflow": 0,
+      "h1": -656.203125,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/",
+      "width": 1440,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 280.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/",
+      "width": 1440,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 280.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/systems/water-laboratory-qa/",
+      "width": 1440,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 280.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/tss-vss-gravimetric-calculator/",
+      "width": 1440,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 280.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/bod-seed-correction-bottle-analyzer/",
+      "width": 1440,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 280.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "width": 1440,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 280.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/matrix-spike-recovery-calculator/",
+      "width": 1440,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 280.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/guides/review-water-laboratory-calculations/",
+      "width": 1440,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 280.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/reference/water-laboratory-qc-calculation-bases/",
+      "width": 1440,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 280.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/systems/rainfall-records-gauge-networks/",
+      "width": 1440,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 280.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/reference/water-pipe-internal-diameters/",
+      "width": 1440,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 280.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/guides/how-to-read-a-pump-curve/",
+      "width": 1440,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 280.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 1440,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 280.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 1440,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 280.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/reference/greywater-source-use-screening/",
+      "width": 1440,
+      "stage": "initial",
+      "overflow": 0,
+      "h1": 280.796875,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/tss-vss-gravimetric-calculator/",
+      "width": 1440,
+      "stage": "tss-only",
+      "overflow": 0,
+      "h1": -398.203125,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/bod-seed-correction-bottle-analyzer/",
+      "width": 1440,
+      "stage": "peer-result",
+      "overflow": 0,
+      "h1": -1417.203125,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "width": 1440,
+      "stage": "peer-result",
+      "overflow": 0,
+      "h1": -856.203125,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    },
+    {
+      "path": "/tools/matrix-spike-recovery-calculator/",
+      "width": 1440,
+      "stage": "peer-result",
+      "overflow": 0,
+      "h1": -675.203125,
+      "header": 75,
+      "broken": [],
+      "controls": []
+    }
+  ],
+  "interactions": [
+    {
+      "width": 390,
+      "originalCombined": true,
+      "tssWithoutIgnition": true,
+      "unmeasuredNotZero": true,
+      "copy": true,
+      "printMediaAndHook": true,
+      "units": true,
+      "blankCombinedError": true,
+      "zeroAndMassOrderError": true,
+      "recovery": true,
+      "nativeResetAndSecondUnitSwitch": true
+    },
+    {
+      "width": 390,
+      "threeLabPeers": true,
+      "matrixBatch": true,
+      "finderNativeReset59": true,
+      "stabilization": true,
+      "pressure": true
+    },
+    {
+      "width": 768,
+      "originalCombined": true,
+      "tssWithoutIgnition": true,
+      "unmeasuredNotZero": true,
+      "copy": true,
+      "printMediaAndHook": true,
+      "units": true,
+      "blankCombinedError": true,
+      "zeroAndMassOrderError": true,
+      "recovery": true,
+      "nativeResetAndSecondUnitSwitch": true
+    },
+    {
+      "width": 768,
+      "threeLabPeers": true,
+      "matrixBatch": true,
+      "finderNativeReset59": true,
+      "stabilization": true,
+      "pressure": true
+    },
+    {
+      "width": 1024,
+      "originalCombined": true,
+      "tssWithoutIgnition": true,
+      "unmeasuredNotZero": true,
+      "copy": true,
+      "printMediaAndHook": true,
+      "units": true,
+      "blankCombinedError": true,
+      "zeroAndMassOrderError": true,
+      "recovery": true,
+      "nativeResetAndSecondUnitSwitch": true
+    },
+    {
+      "width": 1024,
+      "threeLabPeers": true,
+      "matrixBatch": true,
+      "finderNativeReset59": true,
+      "stabilization": true,
+      "pressure": true
+    },
+    {
+      "width": 1280,
+      "originalCombined": true,
+      "tssWithoutIgnition": true,
+      "unmeasuredNotZero": true,
+      "copy": true,
+      "printMediaAndHook": true,
+      "units": true,
+      "blankCombinedError": true,
+      "zeroAndMassOrderError": true,
+      "recovery": true,
+      "nativeResetAndSecondUnitSwitch": true
+    },
+    {
+      "width": 1280,
+      "threeLabPeers": true,
+      "matrixBatch": true,
+      "finderNativeReset59": true,
+      "stabilization": true,
+      "pressure": true
+    },
+    {
+      "width": 1440,
+      "originalCombined": true,
+      "tssWithoutIgnition": true,
+      "unmeasuredNotZero": true,
+      "copy": true,
+      "printMediaAndHook": true,
+      "units": true,
+      "blankCombinedError": true,
+      "zeroAndMassOrderError": true,
+      "recovery": true,
+      "nativeResetAndSecondUnitSwitch": true
+    },
+    {
+      "width": 1440,
+      "threeLabPeers": true,
+      "matrixBatch": true,
+      "finderNativeReset59": true,
+      "stabilization": true,
+      "pressure": true
+    }
+  ],
+  "screenshots": [
+    "390-combined-top",
+    "390-tss-form",
+    "390-tss-report",
+    "390-tss-print",
+    "768-combined-top",
+    "768-tss-form",
+    "768-tss-report",
+    "1024-combined-top",
+    "1024-tss-form",
+    "1024-tss-report",
+    "1280-combined-top",
+    "1280-tss-form",
+    "1280-tss-report",
+    "1280-tss-print",
+    "1440-combined-top",
+    "1440-tss-form",
+    "1440-tss-report"
+  ],
+  "analytics": {
+    "intercepted": 0,
+    "completed": 0
+  },
+  "consoleErrors": [],
+  "pageErrors": [],
+  "requestFailures": [],
+  "httpFailures": [],
+  "complete": true,
+  "sourceHashes": {
+    "assets/js/tools/water-laboratory-tools.js": "9faabeec857277fa2e62591b110fada0b387abba95283befca14f4511a02f700",
+    "tools-qa/water-laboratory-content.mjs": "eb1afbd0da2cf14fc3d0bf2c74a1a4f4c03fc73b4bea6483e865c9170f1ece37",
+    "tools/tss-vss-gravimetric-calculator/index.html": "5f08e84986aeb5c84fd1da3193235064267aacc30e006d428c133c07a5208d6d",
+    "sitemap.xml": "462549bc3ae717a6f2aaa3f0b8a27bc84411a2e82c0bb023ff4a906fe04eb238",
+    "assets/css/main.css": "0193a7f8a53a2d74c6bf85d57617cf0d0bff0800cafa3b07897773b4c7a077e5",
+    "assets/css/water-laboratory.css": "78a48966cb5517ee5976bbf4aefc28c8ca3d06d3f86df7e2939bcb227a4fc575",
+    "tools-qa/solids-scope-browser-qa.mjs": "f772bd204d9f53e08c75e2ed09e31ce78c13704ecb4a2446e742006d17c3d452"
+  },
+  "browser": "157.0.8103.39",
+  "serverAnalytics": {
+    "analyticsBlocking": "passed",
+    "analyticsHosts": [
+      "www.googletagmanager.com",
+      "googletagmanager.com",
+      "www.google-analytics.com",
+      "google-analytics.com",
+      "analytics.google.com",
+      "stats.g.doubleclick.net"
+    ],
+    "analyticsRequestsIntercepted": 115,
+    "analyticsRequestsCompleted": 0,
+    "targets": {
+      "https://www.googletagmanager.com/gtag/js?id=G-7FB08YPX7C": 115
+    }
+  },
+  "sourceStable": true
+}

@@ -8,7 +8,7 @@
 - Default branch: main
 - Contact: [canghun13@naver.com](mailto:canghun13@naver.com)
 - GA4 measurement ID: `G-7FB08YPX7C`
-- Current phase: November 4 weekly existing-page upgrade — Matrix Spike batch review deployed and production-verified
+- Current phase: November 11 weekly existing-page upgrade — TSS-only scope implemented and locally verified; deployment verification pending
 - Language and audience: English; global
 - Stack and deployment: static HTML/CSS/vanilla JavaScript; GitHub Pages plus Cloudflare
 - Phase 2 starting commit: `3c2b450e361a8a8ea0d351059bdef0e121b95071`
@@ -18,6 +18,18 @@
 The repository now contains112 deployed public HTML pages: seven core pages, ten connected system hubs,59 working tools,22 guides and14 references. The October30 expansion adds seven routes to the prior105. Shared design, repeatable QA, social preview, favicons and `CNAME` remain in place.
 
 The latest selected expansion is Rainfall Records & Gauge Networks, following Water Laboratory Calculations & QA. The October23 pressure-tank, October16 terminology and October9 rinse-guide upgrades remain unchanged. Original engines/shared styles/Finder, button/stabilization fixes, five badges and production `/docs/` exclusion are preserved. Rainfall-only assets and discovery/navigation entries add seven routes; no existing URL is renamed.
+
+## Weekly Growth / Search Review —2026-11-11
+
+- Start:clean main, local/cached/fetched/actual main `a984e42bfa6a43e08731f7b44d556c0291574f23`,0/0. Six current attachments accessible, originals unchanged, no directory search/raw-data commit/install/reset/stash/rebase. Full record:`docs/weekly-growth-review-2026-11-11.md`.
+- GSC August9–November8:21clicks/2221impressions/0.9455%/derivedposition25.439. Matched November2–8:4/261 versusOctober26–November1:5/338(−22.78%impressions,tiny clicks); latest28 11/1057 versus6/548(+92.88%). Independent .NET parser reproduces four7/28-day totals. Query/page/daily tables not joined. MS176/2,TSS78/1,RPD72/0,BOD57/2; laboratory7 page rows400/5. Rolling growth is not launch attribution.
+- Coverage chart throughNovember6:23discovered/2crawled. Discovered23 startsOctober24 versus prior stale endpointOctober23/18; not proved current-week+5. Current undated table includes all7 Rainfall routes; do not backdate their memberships toOctober24(before launchOctober30). No Rainfall GSC page row yet; not a new authenticated inspection.1970/validation unknown; legacy docs404. Monitoring Well audit remains closed absent fresh defect.
+- GA4 October14–November10:140active/138new/547events/14.7786sec;Google12/Bing22organic sessions,Direct115,Singapore41/Ashburn21 unjoined. Prior window overlaps21days. Rainfall13 and laboratory18title views not distinct/organic/feature-use proof. Bing page1414/49,keyword995/49,no dates.673keywords preserved via trailing numeric-column parser despite one malformed quote/comma row.
+- No Priority A defect:112 static/publication/Analytics/navigation,799existing assertions,41 baseline live source/HTTP/bot/boundary probes and4 real target/control renders pass; baseline Analytics6blocked/0completed. **EXISTING-UPGRADE GO — TSS/VSS Calculator TSS-only scope**,89(24/18/19/14/14),gatesA–G. Actual missing job:TSS-only tare/dry/volume blocked by required ignition record. PipeID74/PumpCurve73observe; recent upgrades preserved. No full40-family discovery/exclusion reconstruction/expansion NO-GO claimed. Latest new cluster remainsOctober30Rainfall.
+- Preimplementation contract:`docs/solids-scope-upgrade-2026-11-11.md`. MPCA primary training section separates TSS before ignition from later VSS. Add explicit TSS-only scope, no fake ash/blank, unmeasured fractions not determined, retained hidden-unit state, stale clearing/copy/print/reset. Original `computeSolids` unchanged; default combined preserved. Only target HTML/content/date and laboratory engine branch change;111otherHTML/44oldassets+configuration/exacthomepage+badges protected. No CSS/form-utils/conversions/navigation/Finder/API/backend/dependency/newURL/tool/cluster changes; inventory112/10hubs/59tools/22guides/14references.
+-59new literal fixtures;858total. Local Chrome157.0.8103.39:75renders/95geometry/10grouped interactions,7source hashes stable,errors0; localserver Analytics115intercepted/0completed. Actual five-width forms/results and390/1280print images inspected. Original combined/TSS-only/units/error/recovery/reset/copy/print plus all3lab peers/Matrix batch/Finder59/stabilization/pressure controls pass. NativeOSprint/PDFpagination/full560renders not claimed. Early runner direct-interception assertion corrected to read existing local server counter, not a site bug. Final-source local rerun and production verification pending; dated baseline/local/scope evidence retained.
+- Next3:matched TSS post-upgrade evidence; Rainfall/laboratory/pressure observation without speculative indexing audits; datedBing/joinedGA4. No automation created.
+- Final-source local rerun after when-to-use clarification also passes75renders/95geometry/10grouped interactions,7stable fingerprints,errors0,Analytics115server-intercepted/0completed. The dated local JSON now represents that final source. Commit/push/exact-SHA Pages and actual production verification follow; not yet a deployment claim.
 
 ## Weekly Growth / Search Review —2026-11-04
 

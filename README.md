@@ -36,6 +36,8 @@ The site uses the Hydraulic Field Bench design system, SI-first calculations wit
 
 The Matrix Spike Recovery Calculator also reviews local sample/analyte CSV records with per-row SOP limits, explicit uncomputed rows and full audit export/copy. Its original single-record engine/form is preserved. This existing-page upgrade adds no new public URL or acceptance policy.
 
+The TSS & VSS Gravimetric Calculator supports TSS-only records without an ignition measurement. Unmeasured volatile/fixed fractions stay not determined; the original combined calculation remains the default. See `docs/solids-scope-upgrade-2026-11-11.md`. `verify:calculations` now includes59 additional independent scope assertions(858 total). Use `npm run qa:solids-scope` with the existing guarded server on4211, a new dated `WSB_QA_REPORT` and optional `WSB_QA_IMAGES`; its bounded15-page/five-width scope is not a full-site browser rerun.
+
 ## Local preview and QA
 
 Node.js 20 or later is required.

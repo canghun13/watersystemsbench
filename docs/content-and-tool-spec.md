@@ -1,5 +1,9 @@
 # Content and Tool Specification
 
+## TSS-only existing-page scope —2026-11-11
+
+The TSS & VSS Gravimetric Calculator adds an explicit TSS-only scope using tare/dried mass/original filtered volume, without invented ignition/blank values. Unmeasured volatile/fixed fractions remain not determined; combined default and `computeSolids` unchanged. Units, state clearing, relevant input-record/copy/print and reset remain supported. Contract:`solids-scope-upgrade-2026-11-11.md`;59 new independent assertions,858 total. No new Tool/type/URL/cluster. Deployment evidence in the dated weekly review.
+
 ## Matrix Spike existing-page batch review —2026-11-04
 
 The existing Matrix Spike Recovery Calculator retains its original single-record form/engine and adds a local CSV worksheet:unique sample/analyte IDs, per-row SOP limits, matched/physical-volume bases, explicit uncomputed rows, all-row CSV/copy and bounded print. No new Tool/type/URL or analytical acceptance policy. The dedicated module imports the unchanged original engine. Inventory remains59 tools/112 public pages. Contract:`matrix-spike-batch-upgrade-2026-11-04.md`; fresh verification adds97 independent assertions,799 total. Release/QA status is recorded in the dated weekly review.
