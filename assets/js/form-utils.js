@@ -41,6 +41,9 @@ export function clearResult(form) {
 export function setupForm(form, calculate, { afterReset } = {}) {
   form.noValidate = true;
   const error = form.querySelector("[data-form-error]");
+  // Edited inputs no longer describe the previous report or its copy/print packet.
+  form.addEventListener("input", () => clearResult(form));
+  form.addEventListener("change", () => clearResult(form));
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     error.textContent = "";

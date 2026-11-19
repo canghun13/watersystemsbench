@@ -11,6 +11,8 @@ Water Systems Bench is an English-language, global workflow hub for sizing, chec
 
 ## Current implementation
 
+November19 correctness fix:editing a shared tool form now invalidates its previous report and disables Copy/Print until recalculated. Numerical formulas,HTML,CSS and sitemap remain unchanged. `verify:calculations` includes858 prior numeric/basis assertions plus54 result-lifecycle assertions(912 total). The full browser runner accepts `WSB_QA_DATE` only with a fresh `WSB_QA_REPORT`;do not overwrite historical evidence. Dedicated native-edit verification:`tools-qa/result-invalidation-browser-qa.mjs`. Exact scope and release evidence:`docs/weekly-growth-review-2026-11-19.md`.
+
 The initial scope and validated expansions are implemented: 112 public HTML pages comprising 7 core pages, 10 connected system hubs, 59 working tools, 22 guides and 14 references.
 
 The ten workflows are:

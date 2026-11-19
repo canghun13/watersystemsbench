@@ -12,6 +12,9 @@ const { chromium } = createRequire(import.meta.url)("playwright");
 const root = fileURLToPath(new URL("..", import.meta.url));
 const base = process.env.WSB_QA_BASE || "http://127.0.0.1:4207";
 const output = process.env.WSB_QA_REPORT || join(root, "tools-qa/weekly-growth-2026-10-30-local-results.json");
+const evidenceDate = process.env.WSB_QA_DATE || "2026-10-30";
+assert.match(evidenceDate, /^\d{4}-\d{2}-\d{2}$/);
+if (process.env.WSB_QA_DATE) assert.ok(process.env.WSB_QA_REPORT, "A new dated report path is required for a fresh evidence date.");
 const images = process.env.WSB_QA_IMAGES;
 const widths = [390, 768, 1024, 1280, 1440];
 const newPaths = [rainHub, ...rainTools, ...rainGuides, ...rainReferences].map(x => x[0]);
@@ -21,7 +24,7 @@ const full = process.env.WSB_QA_FULL !== "0";
 const matrix = process.env.WSB_QA_INTERACTIONS_ONLY !== "1";
 const paths = full ? fullPaths : [...newPaths, "/", "/tools/", "/systems/wells-storage-rainwater/", "/reference/greywater-source-use-screening/", "/guides/well-borehole-tube-well-terminology/", "/tools/pressure-tank-sizing-calculator/", "/tools/groundwater-stabilization-log-analyzer/", "/tools/water-duplicate-rpd-batch-checker/"];
 const local = ["127.0.0.1", "localhost"].includes(new URL(base).hostname);
-const report = { date: "2026-10-30", base, scope: full ? "Full112-page local render/default/unit regression plus new-tool and protected interactions" : "15-page new-cluster/protected render matrix plus interactions", widths, renders: 0, defaults: 0, resets: 0, unitSwitches: 0, tables: 0, geometry: [], interactions: [], screenshots: [], consoleErrors: [], pageErrors: [], requestFailures: [], internalHttpFailures: [], analytics: { intercepted: 0, completed: 0 }, complete: false };
+const report = { date: evidenceDate, base, scope: full ? "Full112-page render/default/unit regression plus rainfall and protected interactions" : "15-page rainfall/protected render matrix plus interactions", widths, renders: 0, defaults: 0, resets: 0, unitSwitches: 0, tables: 0, geometry: [], interactions: [], screenshots: [], consoleErrors: [], pageErrors: [], requestFailures: [], internalHttpFailures: [], analytics: { intercepted: 0, completed: 0 }, complete: false };
 if (!matrix) report.scope = "Development interactions-only supplement; no render-matrix claim";
 const digest = value => createHash("sha256").update(value.replace(/\r\n/g, "\n")).digest("hex");
 async function assetFiles(dir = "assets") {

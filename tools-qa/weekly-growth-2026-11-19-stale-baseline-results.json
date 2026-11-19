@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-19",
+  "checkedAt": "2026-11-19T04:54:25.697Z",
+  "base": "https://watersystemsbench.com",
+  "cases": [
+    {
+      "path": "/tools/water-storage-tank-sizing-planner/",
+      "width": 390,
+      "name": "dailyDemand",
+      "input": "3000",
+      "before": "3,200 L",
+      "after": "3,200 L",
+      "visible": true,
+      "copyEnabled": true,
+      "printEnabled": true,
+      "copy": "Required nominal storage\r\nREQUIRED NOMINAL STORAGE\r\n3,200 L\r\nSupporting calculations\r\nNo-refill demand: 6,000 L\r\nRefill contribution: 3,600 L\r\nRequired usable volume with reserve: 2,880 L\r\nAdditional nominal capacity after existing volume: 3,200 L\r\nInterpretation\r\n\r\nThe nominal volume converts the net outage demand and reserve through the entered usable fraction.\r\n\r\nSeparate potable-water safety, fire storage, dead storage, turnover, structural loads and local requirements from this volume balance.\r\n\r\nCOPY RESULT\r\nPRINT RESULT"
+    },
+    {
+      "path": "/tools/total-dynamic-head-calculator/",
+      "width": 390,
+      "name": "elevation",
+      "input": "99",
+      "before": "48.46 m",
+      "after": "48.46 m",
+      "visible": true,
+      "copyEnabled": true,
+      "printEnabled": true,
+      "copy": "Total dynamic head\r\nTOTAL DYNAMIC HEAD\r\n48.46 m\r\nSupporting calculations\r\nElevation: 18 m\r\nDelivery pressure: 25.54 m\r\nPipe friction: 6.5 m\r\nMinor loss: 1.2 m\r\nEquipment loss: 0.8 m\r\nAvailable inlet pressure: -3.58 m\r\nEquivalent pressure: 474.41 kPa\r\nLargest influence: Delivery pressure\r\nInterpretation\r\n\r\nUse this head with the required flow to define a preliminary pump duty point.\r\n\r\nTDH is gauge-based system head. Do not mix absolute pressure with gauge pressure, and confirm transient, control-valve and manufacturer requirements separately.\r\n\r\nCOPY RESULT\r\nPRINT RESULT"
+    },
+    {
+      "path": "/tools/tss-vss-gravimetric-calculator/",
+      "width": 390,
+      "name": "dry",
+      "input": "1.2174",
+      "before": "300 mg/L",
+      "after": "300 mg/L",
+      "visible": false,
+      "copyEnabled": false,
+      "printEnabled": false
+    },
+    {
+      "path": "/tools/water-storage-tank-sizing-planner/",
+      "width": 1280,
+      "name": "dailyDemand",
+      "input": "3000",
+      "before": "3,200 L",
+      "after": "3,200 L",
+      "visible": true,
+      "copyEnabled": true,
+      "printEnabled": true,
+      "copy": "Required nominal storage\r\nREQUIRED NOMINAL STORAGE\r\n3,200 L\r\nSupporting calculations\r\nNo-refill demand: 6,000 L\r\nRefill contribution: 3,600 L\r\nRequired usable volume with reserve: 2,880 L\r\nAdditional nominal capacity after existing volume: 3,200 L\r\nInterpretation\r\n\r\nThe nominal volume converts the net outage demand and reserve through the entered usable fraction.\r\n\r\nSeparate potable-water safety, fire storage, dead storage, turnover, structural loads and local requirements from this volume balance.\r\n\r\nCOPY RESULT\r\nPRINT RESULT"
+    },
+    {
+      "path": "/tools/total-dynamic-head-calculator/",
+      "width": 1280,
+      "name": "elevation",
+      "input": "99",
+      "before": "48.46 m",
+      "after": "48.46 m",
+      "visible": true,
+      "copyEnabled": true,
+      "printEnabled": true,
+      "copy": "Total dynamic head\r\nTOTAL DYNAMIC HEAD\r\n48.46 m\r\nSupporting calculations\r\nElevation: 18 m\r\nDelivery pressure: 25.54 m\r\nPipe friction: 6.5 m\r\nMinor loss: 1.2 m\r\nEquipment loss: 0.8 m\r\nAvailable inlet pressure: -3.58 m\r\nEquivalent pressure: 474.41 kPa\r\nLargest influence: Delivery pressure\r\nInterpretation\r\n\r\nUse this head with the required flow to define a preliminary pump duty point.\r\n\r\nTDH is gauge-based system head. Do not mix absolute pressure with gauge pressure, and confirm transient, control-valve and manufacturer requirements separately.\r\n\r\nCOPY RESULT\r\nPRINT RESULT"
+    },
+    {
+      "path": "/tools/tss-vss-gravimetric-calculator/",
+      "width": 1280,
+      "name": "dry",
+      "input": "1.2174",
+      "before": "300 mg/L",
+      "after": "300 mg/L",
+      "visible": false,
+      "copyEnabled": false,
+      "printEnabled": false
+    }
+  ],
+  "analytics": {
+    "intercepted": 6,
+    "completed": 0
+  },
+  "browser": "157.0.8103.79"
+}
