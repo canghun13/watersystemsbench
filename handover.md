@@ -8,7 +8,7 @@
 - Default branch: main
 - Contact: [canghun13@naver.com](mailto:canghun13@naver.com)
 - GA4 measurement ID: `G-7FB08YPX7C`
-- Current phase: November 19 correctness fix — shared edited-input invalidation implemented and locally verified; deployment verification pending
+- Current phase: November 19 correctness fix — shared edited-input invalidation deployed and production-verified
 - Language and audience: English; global
 - Stack and deployment: static HTML/CSS/vanilla JavaScript; GitHub Pages plus Cloudflare
 - Phase 2 starting commit: `3c2b450e361a8a8ea0d351059bdef0e121b95071`
@@ -30,6 +30,9 @@ The latest selected expansion is Rainfall Records & Gauge Networks, following Wa
 -858oldnumeric/basis checks+54newliteral lifecycle/isolation=912pass. Recorded baseline-red/fixed-green uses corrected layout testdouble and does not substitute for native browser evidence. Dedicated local passes104renders/all59native-edit-change-reset paths/35grouped representative entries across5widths,7stable hashes,errors0,serverAnalytics104intercepted/0completed. Actual mobile/desktop edited and7200L recalculated views inspected;copy/print/Matrix single-batch isolation/Finder59pass. Full560-render/default/unit regression and deployment pending. Historical reports untouched;nativeOSprint/PDFpagination not claimed.
 - Next3:real stale-report/copy regression observation;Rainfall tiny discovery signal without speculative audits;separate Storage-timing contract and datedBing/joinedGA4. No automation created.
 - Final full local Chrome157.0.8103.79 passes560renders/59defaults/59resets/46unit switches/615geometry/39interaction entries/165tables/83screenshots,159source hashes stable,all4error lists empty. Fullserver Analytics617intercepted/0completed;dedicated lifecycle server104/0 separately measured. Five-width actual edited/recalculated views inspected;edited390print confirms old numeric report hidden. Legacy explanatory article/empty prompt can still appear in browser-level page print;no template redesign or universal print-packet/nativeOS/PDF-pagination claim. Both own QA servers stopped. All local evidence completed;implementation push/exact-SHA Pages/production checks follow.
+- Implementation:`ef92b4e4f53cd95bf80bebde1ed766f32ece38d4`,pushed and actual remote matched. Exact-SHA [Pages44463472287](https://github.com/canghun13/watersystemsbench/actions/runs/44463472287) succeeded(API updated2026-11-19T05:12:28Z). Actual-domain41HTTP/source/bot/redirect/boundary checks pass,including11docs/development404;helper/newsource and protected old sources match. Analytics execution0.
+- Final production Chrome157.0.8103.79 independently passes104renders/all59native-edit-change-reset paths/35grouped representative entries/89geometry/12screenshots,7stable source hashes,all4error lists empty;Analytics104intercepted/0completed. Actual390/1280edited/recalculated and1440result inspected. No claim of production560renders or new rank/index lift. Evidence:`tools-qa/weekly-growth-2026-11-19-{stale-baseline,scope,lifecycle-local,full-local,live,lifecycle-production}-results.json`. Earlier pending notes are pre-deployment history;release is now verified.
+- Final release-record commit changes excluded docs/handover/QA only;its identity is the commit containing this completed record. Verify its own Pages success and local/fetched/actual main equality,0/0,clean at handoff. Final guard reruns outside Git. No automation,dependency install or environment reset.
 
 ## Weekly Growth / Search Review —2026-11-11
 

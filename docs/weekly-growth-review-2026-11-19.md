@@ -1,6 +1,6 @@
 # Weekly Growth / Search Review —2026-11-19
 
-**FIX — edited inputs retained an exportable previous calculation.** Shared invalidation and full local regression complete; deployment verification pending. No existing-page feature or new cluster released as part of this fix.
+**FIX — edited inputs retained an exportable previous calculation.** Implemented,deployed and verified on the actual domain. No existing-page feature or new cluster released as part of this fix.
 
 ## 1. Repository
 
@@ -83,15 +83,21 @@ Only production change:`assets/js/form-utils.js`,two form-scoped input/change li
 
 Original858numeric/basis/validation assertions pass unchanged;54new independent lifecycle/form-isolation assertions,912total. Corrected test-double layout adapter before recording baseline-red/fixed-green:baseline helper fails the input invalidation assertion,fixed helper passes54. Mock tests do not substitute for native browser evidence.
 
-Dedicated final local Chrome157.0.8103.79 passes104renders:all59tools at1280,then sixrepresentative tools plusStorage/Matrix isolation/Finder cases at all5widths.59native-edit/change/reset packets and35grouped representative entries pass. Source7stable,all4error lists empty,localserver Analytics104intercepted/0completed. Actual390/1280 edited/7200L recalculated views inspected. Copy returns new7200L;edited print media hides the previous report;Matrix single/batch packets remain independent.59dependency consumers verified,not a claim all59were defective before fix. Full560render/default/unit regression pending.
+Dedicated final local Chrome157.0.8103.79 passes104renders:all59tools at1280,then sixrepresentative tools plusStorage/Matrix isolation/Finder cases at all5widths.59native-edit/change/reset packets and35grouped representative entries pass,89geometry snapshots/12screenshots. Source7stable,all4error lists empty,localserver Analytics104intercepted/0completed. Actual390/1280 edited/7200L recalculated views inspected. Copy returns new7200L;edited print media hides the previous report;Matrix single/batch packets remain independent.59dependency consumers verified,not a claim all59were defective before fix. Full560render/default/unit regression also completes below.
 
 Native OS print dialog/PDF pagination not tested. No geometry-only visual claim;UI/CSS/HTML parity and actual representative screenshots bound the visual scope. Report files are dated baseline/scope/lifecycle-local/full-local and later live/production evidence;only completed results delivered.
 
 Final full local Chrome157.0.8103.79 passes560renders(112×5),59defaults/59resets/46applicable SI-US switches,615geometry snapshots,39interaction entries,165table checks/83screenshots.159source fingerprints stable;all4error lists empty. Separate4207server Analytics617intercepted/0completed;the dedicated104interceptions belong to its separate4211server,not an inferred single-counter total. This is fresh dated execution,not historical JSON validation. Full suite preserves rainfall local-file/unknown/boundary/export/print/native fallback and protected Finder/stabilization/pressure/table behavior. Dedicated edited/recalculated layouts inspected at all5widths;edited print390 inspected. Existing browser-level page print can still include the explanatory article/empty prompt;no stale calculated report is visible and result Copy/Print is disabled. No legacy print-template redesign or universal print-packet claim. Both own QA servers stopped after their runs.
 
+Final production Chrome157.0.8103.79 independently passes104renders/all59native-edit-change-reset paths/35grouped representative entries/89geometry/12screenshots.7source hashes stable,all4error lists empty,Analytics104intercepted/0completed. Actual production390/1280edited and7200L recalculated layouts plus1440result inspected;Copy/current report,invalid recovery,print hook/edited report hiding,Finder59 and Matrix single/batch isolation pass at5widths. Evidence:`tools-qa/weekly-growth-2026-11-19-lifecycle-production-results.json`. This is not a claimed560-render production matrix;full560/all59default/unit regression is the separate local run above.
+
 ## 12. Deployment
 
-Pending implementation commit/push,exact-SHA Pages,actual-domain source/browser checks and final clean equal refs. Full local/lifecycle/scope evidence completed above;this draft is not deployment proof.
+Implementation `ef92b4e4f53cd95bf80bebde1ed766f32ece38d4` pushed to main and matched actual remote. Exact-SHA [Pages44463472287](https://github.com/canghun13/watersystemsbench/actions/runs/44463472287) succeeded(API updated2026-11-19T05:12:28Z).
+
+Actual-domain release guard41non-executing requests pass:18publicHTML,7helper/engine/CSS/machine files,4normal/Googlebot responses,HTTP→HTTPS apex301 and11docs/development404. Exact checked public/helper/engine/source parity,GA4/index permission/canonical and protected scope pass. `tools-qa/weekly-growth-2026-11-19-live-results.json` records implementation SHA;Analytics execution0. Production lifecycle also completes above. No search/indexing gain attributed to deployment.
+
+Follow-up release-record commit includes only excluded docs/handover/QA evidence;public runtime remains the verified implementation. Its identity is the commit containing this completed record. Verify its own exact-SHA Pages success,local/fetched/actual main equality,0/0 and clean tree at handoff. Final actual-domain guard runs outside Git to avoid a self-referential evidence-commit loop.
 
 ## 13. Next state
 

@@ -1,0 +1,1395 @@
+{
+  "date": "2026-11-19",
+  "checkedAt": "2026-11-19T05:13:18.491Z",
+  "base": "https://watersystemsbench.com",
+  "renders": 104,
+  "allToolChecks": [
+    {
+      "path": "/tools/total-dynamic-head-calculator/",
+      "control": "elevation",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/pipe-friction-loss-calculator/",
+      "control": "flow",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/water-pipe-size-velocity-checker/",
+      "control": "flow",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/pump-power-efficiency-calculator/",
+      "control": "flow",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/booster-pump-duty-point-estimator/",
+      "control": "inletPressure",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/pump-curve-duty-point-comparator/",
+      "control": "dutyFlow",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/npsh-available-calculator/",
+      "control": "absolutePressure",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/pump-operating-cost-comparator/",
+      "control": "currency",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/low-water-pressure-troubleshooter/",
+      "control": "scope",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/well-borehole-pump-sizing-planner/",
+      "control": "demand",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/well-yield-demand-checker/",
+      "control": "wellYield",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "control": "pumpFlow",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/pump-short-cycling-analyzer/",
+      "control": "starts",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/water-storage-tank-sizing-planner/",
+      "control": "dailyDemand",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/rainwater-harvesting-yield-calculator/",
+      "control": "area",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/rainwater-tank-days-of-supply-simulator/",
+      "control": "capacity",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/first-flush-diverter-sizing-calculator/",
+      "control": "area",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/metal-finishing-rinse-water-audit-calculator/",
+      "control": "startMeter",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/plating-drag-out-loss-estimator/",
+      "control": "retained",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/countercurrent-rinse-flow-planner/",
+      "control": "dragOut",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/rinse-conductivity-log-analyzer/",
+      "control": "logText",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/rinse-water-savings-payback-comparator/",
+      "control": "baseline",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/monitoring-well-purge-volume-calculator/",
+      "control": "internalDiameter",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/low-flow-sampling-setup-checker/",
+      "control": "screenTop",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/low-flow-equipment-volume-reading-interval-planner/",
+      "control": "tubingDiameter",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "control": "logText",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/available-water-flow-test-calculator/",
+      "control": "volume",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/sprinkler-zone-capacity-planner/",
+      "control": "available",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/sprinkler-precipitation-rate-calculator/",
+      "control": "flow",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/irrigation-runtime-water-depth-planner/",
+      "control": "depth",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/drip-irrigation-flow-zone-calculator/",
+      "control": "emitters",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/irrigation-pump-zone-matcher/",
+      "control": "pumpFlow",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/sprinkler-low-pressure-troubleshooter/",
+      "control": "scope",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/water-softener-sizing-calculator/",
+      "control": "hardness",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/softener-salt-regeneration-planner/",
+      "control": "dailyLoad",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/ro-recovery-reject-water-calculator/",
+      "control": "feed",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/ro-production-demand-planner/",
+      "control": "ratedProduction",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/media-filter-loading-rate-calculator/",
+      "control": "flow",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/chlorine-dose-solution-volume-calculator/",
+      "control": "waterVolume",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/disinfection-contact-time-calculator/",
+      "control": "volume",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/water-treatment-train-selector/",
+      "control": "source",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/greywater-supply-calculator/",
+      "control": "occupants",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/greywater-irrigation-demand-planner/",
+      "control": "supply",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/laundry-to-landscape-zone-planner/",
+      "control": "loadVolume",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/greywater-surge-basin-checker/",
+      "control": "eventVolume",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/greywater-reuse-savings-calculator/",
+      "control": "dailyReuse",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/vehicle-wash-water-use-audit-calculator/",
+      "control": "startMeter",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/wash-water-reclaim-balance-planner/",
+      "control": "gross",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/reclaim-buffer-tank-simulator/",
+      "control": "vehiclesPerHour",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/spot-free-rinse-ro-production-planner/",
+      "control": "vehicles",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/vehicle-wash-reclaim-savings-calculator/",
+      "control": "baselineFresh",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/bod-seed-correction-bottle-analyzer/",
+      "control": "bottleMl",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/tss-vss-gravimetric-calculator/",
+      "control": "tare",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "control": "maximumRpd",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/matrix-spike-recovery-calculator/",
+      "control": "native",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/rainfall-counter-to-increments-analyzer/",
+      "control": "stepMinutes",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/rainfall-event-separator/",
+      "control": "stepMinutes",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/rain-gauge-double-mass-checker/",
+      "control": "splitAfter",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    },
+    {
+      "path": "/tools/areal-rainfall-series-calculator/",
+      "control": "weights",
+      "nativeEditClears": true,
+      "changeEventClears": true,
+      "resetAndRerun": true,
+      "copyPacketCleared": true,
+      "actionsDisabled": true
+    }
+  ],
+  "representativeChecks": [
+    {
+      "path": "/tools/water-storage-tank-sizing-planner/",
+      "width": 390,
+      "editReset": true
+    },
+    {
+      "path": "/tools/total-dynamic-head-calculator/",
+      "width": 390,
+      "editReset": true
+    },
+    {
+      "path": "/tools/tss-vss-gravimetric-calculator/",
+      "width": 390,
+      "editReset": true
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 390,
+      "editReset": true
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 390,
+      "editReset": true
+    },
+    {
+      "path": "/tools/matrix-spike-recovery-calculator/",
+      "width": 390,
+      "editReset": true
+    },
+    {
+      "width": 390,
+      "storage3200Edit7200": true,
+      "actualCopy": true,
+      "printHookAndEditedMedia": true,
+      "invalidRecovery": true,
+      "matrixFormIsolation": true,
+      "finder59": true
+    },
+    {
+      "path": "/tools/water-storage-tank-sizing-planner/",
+      "width": 768,
+      "editReset": true
+    },
+    {
+      "path": "/tools/total-dynamic-head-calculator/",
+      "width": 768,
+      "editReset": true
+    },
+    {
+      "path": "/tools/tss-vss-gravimetric-calculator/",
+      "width": 768,
+      "editReset": true
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 768,
+      "editReset": true
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 768,
+      "editReset": true
+    },
+    {
+      "path": "/tools/matrix-spike-recovery-calculator/",
+      "width": 768,
+      "editReset": true
+    },
+    {
+      "width": 768,
+      "storage3200Edit7200": true,
+      "actualCopy": true,
+      "printHookAndEditedMedia": true,
+      "invalidRecovery": true,
+      "matrixFormIsolation": true,
+      "finder59": true
+    },
+    {
+      "path": "/tools/water-storage-tank-sizing-planner/",
+      "width": 1024,
+      "editReset": true
+    },
+    {
+      "path": "/tools/total-dynamic-head-calculator/",
+      "width": 1024,
+      "editReset": true
+    },
+    {
+      "path": "/tools/tss-vss-gravimetric-calculator/",
+      "width": 1024,
+      "editReset": true
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 1024,
+      "editReset": true
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 1024,
+      "editReset": true
+    },
+    {
+      "path": "/tools/matrix-spike-recovery-calculator/",
+      "width": 1024,
+      "editReset": true
+    },
+    {
+      "width": 1024,
+      "storage3200Edit7200": true,
+      "actualCopy": true,
+      "printHookAndEditedMedia": true,
+      "invalidRecovery": true,
+      "matrixFormIsolation": true,
+      "finder59": true
+    },
+    {
+      "path": "/tools/water-storage-tank-sizing-planner/",
+      "width": 1280,
+      "editReset": true
+    },
+    {
+      "path": "/tools/total-dynamic-head-calculator/",
+      "width": 1280,
+      "editReset": true
+    },
+    {
+      "path": "/tools/tss-vss-gravimetric-calculator/",
+      "width": 1280,
+      "editReset": true
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 1280,
+      "editReset": true
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 1280,
+      "editReset": true
+    },
+    {
+      "path": "/tools/matrix-spike-recovery-calculator/",
+      "width": 1280,
+      "editReset": true
+    },
+    {
+      "width": 1280,
+      "storage3200Edit7200": true,
+      "actualCopy": true,
+      "printHookAndEditedMedia": true,
+      "invalidRecovery": true,
+      "matrixFormIsolation": true,
+      "finder59": true
+    },
+    {
+      "path": "/tools/water-storage-tank-sizing-planner/",
+      "width": 1440,
+      "editReset": true
+    },
+    {
+      "path": "/tools/total-dynamic-head-calculator/",
+      "width": 1440,
+      "editReset": true
+    },
+    {
+      "path": "/tools/tss-vss-gravimetric-calculator/",
+      "width": 1440,
+      "editReset": true
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 1440,
+      "editReset": true
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 1440,
+      "editReset": true
+    },
+    {
+      "path": "/tools/matrix-spike-recovery-calculator/",
+      "width": 1440,
+      "editReset": true
+    },
+    {
+      "width": 1440,
+      "storage3200Edit7200": true,
+      "actualCopy": true,
+      "printHookAndEditedMedia": true,
+      "invalidRecovery": true,
+      "matrixFormIsolation": true,
+      "finder59": true
+    }
+  ],
+  "geometry": [
+    {
+      "path": "/tools/total-dynamic-head-calculator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pipe-friction-loss-calculator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/water-pipe-size-velocity-checker/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pump-power-efficiency-calculator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/booster-pump-duty-point-estimator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pump-curve-duty-point-comparator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/npsh-available-calculator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pump-operating-cost-comparator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/low-water-pressure-troubleshooter/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/well-borehole-pump-sizing-planner/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/well-yield-demand-checker/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pump-short-cycling-analyzer/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/water-storage-tank-sizing-planner/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/rainwater-harvesting-yield-calculator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/rainwater-tank-days-of-supply-simulator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/first-flush-diverter-sizing-calculator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/metal-finishing-rinse-water-audit-calculator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/plating-drag-out-loss-estimator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/countercurrent-rinse-flow-planner/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/rinse-conductivity-log-analyzer/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/rinse-water-savings-payback-comparator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/monitoring-well-purge-volume-calculator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/low-flow-sampling-setup-checker/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/low-flow-equipment-volume-reading-interval-planner/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/available-water-flow-test-calculator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/sprinkler-zone-capacity-planner/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/sprinkler-precipitation-rate-calculator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/irrigation-runtime-water-depth-planner/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/drip-irrigation-flow-zone-calculator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/irrigation-pump-zone-matcher/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/sprinkler-low-pressure-troubleshooter/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/water-softener-sizing-calculator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/softener-salt-regeneration-planner/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/ro-recovery-reject-water-calculator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/ro-production-demand-planner/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/media-filter-loading-rate-calculator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/chlorine-dose-solution-volume-calculator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/disinfection-contact-time-calculator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/water-treatment-train-selector/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/greywater-supply-calculator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/greywater-irrigation-demand-planner/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/laundry-to-landscape-zone-planner/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/greywater-surge-basin-checker/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/greywater-reuse-savings-calculator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/vehicle-wash-water-use-audit-calculator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/wash-water-reclaim-balance-planner/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/reclaim-buffer-tank-simulator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/spot-free-rinse-ro-production-planner/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/vehicle-wash-reclaim-savings-calculator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/bod-seed-correction-bottle-analyzer/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/tss-vss-gravimetric-calculator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/water-duplicate-rpd-batch-checker/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/matrix-spike-recovery-calculator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/rainfall-counter-to-increments-analyzer/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/rainfall-event-separator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/rain-gauge-double-mass-checker/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/areal-rainfall-series-calculator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/water-storage-tank-sizing-planner/",
+      "width": 390,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/total-dynamic-head-calculator/",
+      "width": 390,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/tss-vss-gravimetric-calculator/",
+      "width": 390,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 390,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 390,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/matrix-spike-recovery-calculator/",
+      "width": 390,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/water-storage-tank-sizing-planner/",
+      "width": 768,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/total-dynamic-head-calculator/",
+      "width": 768,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/tss-vss-gravimetric-calculator/",
+      "width": 768,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 768,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 768,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/matrix-spike-recovery-calculator/",
+      "width": 768,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/water-storage-tank-sizing-planner/",
+      "width": 1024,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/total-dynamic-head-calculator/",
+      "width": 1024,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/tss-vss-gravimetric-calculator/",
+      "width": 1024,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 1024,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 1024,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/matrix-spike-recovery-calculator/",
+      "width": 1024,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/water-storage-tank-sizing-planner/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/total-dynamic-head-calculator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/tss-vss-gravimetric-calculator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/matrix-spike-recovery-calculator/",
+      "width": 1280,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/water-storage-tank-sizing-planner/",
+      "width": 1440,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/total-dynamic-head-calculator/",
+      "width": 1440,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/tss-vss-gravimetric-calculator/",
+      "width": 1440,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "width": 1440,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "width": 1440,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    },
+    {
+      "path": "/tools/matrix-spike-recovery-calculator/",
+      "width": 1440,
+      "overflow": 0,
+      "badControls": [],
+      "broken": []
+    }
+  ],
+  "screenshots": [
+    "390-storage-edited",
+    "390-edited-print",
+    "390-storage-recalculated",
+    "768-storage-edited",
+    "768-storage-recalculated",
+    "1024-storage-edited",
+    "1024-storage-recalculated",
+    "1280-storage-edited",
+    "1280-edited-print",
+    "1280-storage-recalculated",
+    "1440-storage-edited",
+    "1440-storage-recalculated"
+  ],
+  "analytics": {
+    "intercepted": 104,
+    "completed": 0
+  },
+  "consoleErrors": [],
+  "pageErrors": [],
+  "requestFailures": [],
+  "httpFailures": [],
+  "complete": true,
+  "sourceHashes": {
+    "assets/js/form-utils.js": "af26e523873bae823205b0dd00888386e9b9e031706fa7da8cf63c8aae4f2cd4",
+    "assets/js/unit-conversions.js": "2c0eef340c1e51cc090b28859f74618152ac73637a9f421e55e54b0c20716a35",
+    "assets/css/main.css": "0193a7f8a53a2d74c6bf85d57617cf0d0bff0800cafa3b07897773b4c7a077e5",
+    "assets/css/calculator.css": "1c5ebf531433909e4b55c863f321025f8ba6e8fa67ba5978e1d7b99dbede0d09",
+    "tools-qa/generate-site.mjs": "0193b6b0e672643f2ba7102cd5f32c07d2ec81001354e001c70d4642c25ad146",
+    "sitemap.xml": "462549bc3ae717a6f2aaa3f0b8a27bc84411a2e82c0bb023ff4a906fe04eb238",
+    "tools-qa/result-invalidation-browser-qa.mjs": "1549b22da62f76669f3f7eb92a4c2f137fe673866cd3ed2b74e4d15abb319a5c"
+  },
+  "browser": "157.0.8103.79",
+  "sourceStable": true
+}

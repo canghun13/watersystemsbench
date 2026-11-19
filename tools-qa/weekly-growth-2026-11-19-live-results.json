@@ -1,0 +1,222 @@
+{
+  "date": "2026-11-19",
+  "checkedAt": "2026-11-19T05:13:18.594Z",
+  "baseline": "79f63af9699d70d475ec5093b50e460b8873d91d",
+  "expectedRelease": "ef92b4e4f53cd95bf80bebde1ed766f32ece38d4",
+  "scope": {
+    "unchangedPublicHtml": 112,
+    "exactHomepageAndFiveBadges": true,
+    "unchangedOtherAssets": 38,
+    "unchangedMachineNavigationAndGeneratorFiles": 11,
+    "onlyTwoEventListenersAndComment": true
+  },
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "sha256": "751c1649c39ada56e1868947d1817dc44c1358a76cef31ad631e70bb20b92f1e"
+    },
+    {
+      "path": "/tools/",
+      "status": 200,
+      "sha256": "00f81a8f3e2054185518a4bf57b1e8dbd333c5db7df1b0d8aed1abc28b4de64b"
+    },
+    {
+      "path": "/tools/water-storage-tank-sizing-planner/",
+      "status": 200,
+      "sha256": "2954d6a3f797210086a336e121a5373dfb72de3bafde08df5db0fddc47dfa156"
+    },
+    {
+      "path": "/tools/total-dynamic-head-calculator/",
+      "status": 200,
+      "sha256": "21024ba01fbed0668e581c8b48cb67fe68a924329d21a99eb0160364727aca30"
+    },
+    {
+      "path": "/tools/tss-vss-gravimetric-calculator/",
+      "status": 200,
+      "sha256": "5f08e84986aeb5c84fd1da3193235064267aacc30e006d428c133c07a5208d6d"
+    },
+    {
+      "path": "/tools/matrix-spike-recovery-calculator/",
+      "status": 200,
+      "sha256": "d6a0049f6fc20859295974f90ba22714cc2dd8c10518348c5442e0d206f84351"
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "status": 200,
+      "sha256": "4112a39bae1de7d128bd1eb1676a97f139971f7d7a9f57aa3382b8bd8e4320f4"
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "status": 200,
+      "sha256": "0119a620d34f4b0669b1dc0fb5358b6f7136ad1856e0c1dd4ae21ac52167dfe5"
+    },
+    {
+      "path": "/tools/pump-short-cycling-analyzer/",
+      "status": 200,
+      "sha256": "eb8d26fd75ec07622a9dc3d99076f7af75ef70e9e9f1ffa66822b1bc1fd6856a"
+    },
+    {
+      "path": "/tools/ro-production-demand-planner/",
+      "status": 200,
+      "sha256": "d4948a51509d057964fcebcf876f099e10936923a65a7885c925a43f20835ad3"
+    },
+    {
+      "path": "/guides/complete-well-water-system-planning/",
+      "status": 200,
+      "sha256": "840bd8bd7ae252f35170b2c4263cc919a27c6cfb1d6728fc35c00092c8962cb9"
+    },
+    {
+      "path": "/systems/rainfall-records-gauge-networks/",
+      "status": 200,
+      "sha256": "6a2b8c8a6a5e99e3f78a2699910fd332fa34141b919a9d6c809144432cac085a"
+    },
+    {
+      "path": "/tools/areal-rainfall-series-calculator/",
+      "status": 200,
+      "sha256": "1d3f910bb0a43691d2951a7b4a8c8f8d62e13cc7ae44d997aabbff5fee242be6"
+    },
+    {
+      "path": "/tools/rainfall-event-separator/",
+      "status": 200,
+      "sha256": "8d93873462b9991cf985604ac3212ac6b7dc8ae25b02b62dbee3768e7c49f8d3"
+    },
+    {
+      "path": "/tools/rainfall-counter-to-increments-analyzer/",
+      "status": 200,
+      "sha256": "89925af8ec7feab967edd9541f242fce81acb917785ca20ba4d406f8abee5585"
+    },
+    {
+      "path": "/tools/rain-gauge-double-mass-checker/",
+      "status": 200,
+      "sha256": "8f245f4ec8b70179b3c5a4d81985778b256c954b923cf91eec4d1a61e84e7efd"
+    },
+    {
+      "path": "/guides/review-rainfall-records-before-analysis/",
+      "status": 200,
+      "sha256": "ce634a67fbc1af2b29d49a713dddd1eb2b504954f34b8c40fdce506b5cb510d4"
+    },
+    {
+      "path": "/reference/rainfall-record-bases-and-missing-data/",
+      "status": 200,
+      "sha256": "3c7a57c71bbabdc75f53647635975918c023b52d65e930d331f0d628d6ec7e68"
+    },
+    {
+      "path": "/assets/js/form-utils.js",
+      "status": 200,
+      "sha256": "af26e523873bae823205b0dd00888386e9b9e031706fa7da8cf63c8aae4f2cd4"
+    },
+    {
+      "path": "/assets/js/unit-conversions.js",
+      "status": 200,
+      "sha256": "2c0eef340c1e51cc090b28859f74618152ac73637a9f421e55e54b0c20716a35"
+    },
+    {
+      "path": "/assets/js/tools/storage-tank-sizing.js",
+      "status": 200,
+      "sha256": "37bfae1ec40b5d45062b856ddf1a5fead7eda9d3ba18bf6b514d10d436df6df3"
+    },
+    {
+      "path": "/assets/js/tools/total-dynamic-head.js",
+      "status": 200,
+      "sha256": "818da0046298691b45b4b9bea76aab4f6d1967a9582e8fb0b6550d3e6f6377f7"
+    },
+    {
+      "path": "/assets/css/calculator.css",
+      "status": 200,
+      "sha256": "1c5ebf531433909e4b55c863f321025f8ba6e8fa67ba5978e1d7b99dbede0d09"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "sha256": "462549bc3ae717a6f2aaa3f0b8a27bc84411a2e82c0bb023ff4a906fe04eb238"
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "sha256": "cd1297b5802fa103eecc971a7640e8b0066ce1385750940c67ad8ed465afdb42"
+    },
+    {
+      "path": "/tools/water-storage-tank-sizing-planner/",
+      "status": 200,
+      "sha256": "2954d6a3f797210086a336e121a5373dfb72de3bafde08df5db0fddc47dfa156"
+    },
+    {
+      "path": "/tools/water-storage-tank-sizing-planner/",
+      "status": 200,
+      "sha256": "2954d6a3f797210086a336e121a5373dfb72de3bafde08df5db0fddc47dfa156"
+    },
+    {
+      "path": "/tools/ro-production-demand-planner/",
+      "status": 200,
+      "sha256": "d4948a51509d057964fcebcf876f099e10936923a65a7885c925a43f20835ad3"
+    },
+    {
+      "path": "/tools/ro-production-demand-planner/",
+      "status": 200,
+      "sha256": "d4948a51509d057964fcebcf876f099e10936923a65a7885c925a43f20835ad3"
+    },
+    {
+      "path": "http://watersystemsbench.com/",
+      "status": 301,
+      "sha256": "6aaad3365c30c4f8d2504e569527e588d33eeae66dd7045bcfeef7413820db2a"
+    },
+    {
+      "path": "/docs/",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/docs/page-inventory.html",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/docs/information-architecture.html",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/docs/project-plan.html",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/docs/weekly-growth-review-2026-11-19.html",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/docs/weekly-growth-review-2026-11-19.md",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/docs/stale-result-invalidation-fix-2026-11-19.html",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/docs/stale-result-invalidation-fix-2026-11-19.md",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/handover.html",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/tools-qa/result-invalidation-browser-qa.mjs",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/package.json",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    }
+  ],
+  "analyticsExecuted": 0,
+  "complete": true
+}
