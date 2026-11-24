@@ -97,8 +97,14 @@ Earlier boundary attempts observed503 GitHub/Varnish error pages on weekly-revie
 
 Follow-up release-record commit changes only excluded documentation/QA evidence andprobe pacing. Its identity is the commit containing this completed record;public runtime remains the verifiedimplementation. Verify its ownexact-SHA Pages success,local/fetched/actual main equality,0/0andclean tree at handoff. Final strictguard runsoutsideGit toavoid self-referentialevidence commits. Noautomation/dependency/environment reset.
 
+### Final availability exception — supersedes earlier clean snapshot
+
+Release-record`f9b31468f0d81cb38e221c65e60626acfa9d8ac2` [Pages45349279333](https://github.com/canghun13/watersystemsbench/actions/runs/45349279333) succeeded(APIupdated2026-11-24T07:36:57Z). After that deployment,the strictfinalguard again failed on excluded-URL503 responses. A separate slower1000ms-spaced diagnostic records all37requests without stopping atfirstfailure:26public/runtime/bot/redirectchecks pass,8excluded404,3excluded503. Failedpaths:`/docs/rainwater-result-table-fix-2026-11-24.html`,`/handover.html`,`/package.json`;error titleGitHubUnicorn,notinternaldocuments. Evidence:`tools-qa/weekly-growth-2026-11-24-final-http-results.json` (`complete:false`,allresponsesretained).
+
+**Final all-boundary HTTP PASS is not established.** Earlier37pass/33all404 observations remain true at their times,butdo not establish stableavailability afterfinaldeployment. Nointernaldocument200/contentobserved;exactupstreamcauseunknown. No hosting/configuration mutation or lower404acceptance gate. The shippedmobilecorrection,75productionbrowserrenders andAnalyticscompleted0 are complete;this provider/excluded-URLavailability exception remains open. Do not rerun until a lucky pass anddeclareitfixed. A final exception-record commit updates excluded docs/QAonly,notpublicruntime;itsidentityisthecommitcontainingthisnote. VerifyitsownPages andfinalGitrefs separately.
+
 ## 13. Next state
 
-1. Verify computed Rainwater mobile table no longer widens the page and all12rows/5columns remain accessible.
+1. Diagnose or observe excluded-URL GitHub/Varnish503 recurrence;retain failures anddo not claim a stable404 boundary from one successful snapshot.
 2. Reassess the explicitly deferred Storage refill-window contract,with weakGSC andundatedBing limitations visible.
 3. Observe Rainfall/laboratory search appearances and queues without speculative indexing rewrites;obtain datedBing/joinedGA4 for channel attribution.
