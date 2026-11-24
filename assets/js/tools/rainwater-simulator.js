@@ -37,6 +37,7 @@ export function simulateRainwater({ capacityL, initialL = 0, areaM2, monthlyRain
 
 const form = typeof document === "undefined" ? null : document.querySelector("[data-tool-form='rain-simulator']");
 if (form) {
+  form.closest(".tool-layout").querySelector(".result-panel").style.minWidth = "0";
   setupUnitSystem(form);
   setupForm(form, (current) => {
     const system = current.elements.unitSystem.value;
@@ -50,7 +51,7 @@ if (form) {
       dailyDemandL: toSI(numberValue(current, "dailyDemand", { max: 10000000 }), "volume", system)
     });
     const vu = system === "US" ? "US gal" : "L";
-    const table = `<table class="comparison-table"><thead><tr><th>Month</th><th>Collected</th><th>Overflow</th><th>Unmet</th><th>End storage</th></tr></thead><tbody>${result.monthly.map((row) => `<tr><td>${row.month}</td><td>${formatNumber(fromSI(row.collectedL, "volume", system), 0)}</td><td>${formatNumber(fromSI(row.overflowL, "volume", system), 0)}</td><td>${formatNumber(fromSI(row.unmetL, "volume", system), 0)}</td><td>${formatNumber(fromSI(row.endStorageL, "volume", system), 0)}</td></tr>`).join("")}</tbody></table>`;
+    const table = `<div class="table-scroll" role="region" tabindex="0" aria-label="Monthly water balance (${vu}); scroll for all columns" style="--table-min-width: 420px"><table class="comparison-table"><thead><tr><th>Month</th><th>Collected</th><th>Overflow</th><th>Unmet</th><th>End storage</th></tr></thead><tbody>${result.monthly.map((row) => `<tr><td>${row.month}</td><td>${formatNumber(fromSI(row.collectedL, "volume", system), 0)}</td><td>${formatNumber(fromSI(row.overflowL, "volume", system), 0)}</td><td>${formatNumber(fromSI(row.unmetL, "volume", system), 0)}</td><td>${formatNumber(fromSI(row.endStorageL, "volume", system), 0)}</td></tr>`).join("")}</tbody></table></div>`;
     renderResult(current, {
       label: "Daily demand reliability",
       primary: `${formatNumber(result.reliability * 100, 1)}<span class="reading-unit">%</span>`,

@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-11-24T04:53:55.776Z",
+  "date": "2026-11-24",
+  "analytics": {
+    "intercepted": 4,
+    "completed": 0
+  },
+  "cases": [
+    {
+      "width": 390,
+      "path": "/tools/water-storage-tank-sizing-planner/",
+      "status": 200,
+      "original": "3,200 L",
+      "editedClears": true,
+      "repeatingMode": 0
+    },
+    {
+      "width": 390,
+      "path": "/tools/total-dynamic-head-calculator/",
+      "status": 200,
+      "original": "48.46 m",
+      "editedClears": true,
+      "repeatingMode": 0
+    },
+    {
+      "width": 1280,
+      "path": "/tools/water-storage-tank-sizing-planner/",
+      "status": 200,
+      "original": "3,200 L",
+      "editedClears": true,
+      "repeatingMode": 0
+    },
+    {
+      "width": 1280,
+      "path": "/tools/total-dynamic-head-calculator/",
+      "status": 200,
+      "original": "48.46 m",
+      "editedClears": true,
+      "repeatingMode": 0
+    }
+  ],
+  "browser": "157.0.8103.79",
+  "complete": true
+}

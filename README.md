@@ -11,6 +11,8 @@ Water Systems Bench is an English-language, global workflow hub for sizing, chec
 
 ## Current implementation
 
+November24 selected correction:the Rainwater Tank Days-of-Supply Simulator's computed monthly table now has a focusable local scroll region and a target-only shrinkable result panel. Its numerical engine,all112HTML pages,sharedCSS/helpers andsitemapdates remain unchanged. Existing912assertions remain the delivered fixture total. Dedicated computed-mobile regression:`tools-qa/rainwater-result-table-browser-qa.mjs`;scope/live guard:`tools-qa/rainwater-result-table-release-qa.mjs`. `docs/weekly-growth-review-2026-11-24.md` records completion/deployment status. The provisional Storage refill-window design is explicitly deferred,not shipped as a feature or new cluster.
+
 November19 correctness fix:editing a shared tool form now invalidates its previous report and disables Copy/Print until recalculated. Numerical formulas,HTML,CSS and sitemap remain unchanged. `verify:calculations` includes858 prior numeric/basis assertions plus54 result-lifecycle assertions(912 total). The full browser runner accepts `WSB_QA_DATE` only with a fresh `WSB_QA_REPORT`;do not overwrite historical evidence. Dedicated native-edit verification:`tools-qa/result-invalidation-browser-qa.mjs`. Exact scope and release evidence:`docs/weekly-growth-review-2026-11-19.md`.
 
 The initial scope and validated expansions are implemented: 112 public HTML pages comprising 7 core pages, 10 connected system hubs, 59 working tools, 22 guides and 14 references.

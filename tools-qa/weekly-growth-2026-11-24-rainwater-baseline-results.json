@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-24",
+  "checkedAt": "2026-11-24T05:00:27.266Z",
+  "analytics": {
+    "intercepted": 4,
+    "completed": 0
+  },
+  "cases": [
+    {
+      "width": 390,
+      "path": "/tools/rainwater-tank-days-of-supply-simulator/",
+      "before": 0,
+      "overflow": 34,
+      "instrumentRight": 423.609375,
+      "tableRight": 404.421875,
+      "tableParent": "<li><table class=\"comparison-table\"><thead><tr><th>Month</th><th>Collected</th><th>Overflow</th><th>Unmet</th><th>End storage</th></tr></thead><tbody><tr><td>1</td><td>7,800</td><t",
+      "reading": "100%"
+    },
+    {
+      "width": 390,
+      "path": "/tools/water-storage-tank-sizing-planner/",
+      "before": 0,
+      "overflow": 0,
+      "instrumentRight": 369,
+      "reading": "3,200 L"
+    },
+    {
+      "width": 1280,
+      "path": "/tools/rainwater-tank-days-of-supply-simulator/",
+      "before": 0,
+      "overflow": 0,
+      "instrumentRight": 703.765625,
+      "tableRight": 1187,
+      "tableParent": "<li><table class=\"comparison-table\"><thead><tr><th>Month</th><th>Collected</th><th>Overflow</th><th>Unmet</th><th>End storage</th></tr></thead><tbody><tr><td>1</td><td>7,800</td><t",
+      "reading": "100%"
+    },
+    {
+      "width": 1280,
+      "path": "/tools/water-storage-tank-sizing-planner/",
+      "before": 0,
+      "overflow": 0,
+      "instrumentRight": 703.765625,
+      "reading": "3,200 L"
+    }
+  ],
+  "browser": "157.0.8103.79",
+  "complete": true
+}

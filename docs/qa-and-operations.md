@@ -1,5 +1,9 @@
 # QA and Operations
 
+## November24 Rainwater computed-table regression
+
+`rainwater-result-table-browser-qa.mjs` requires a fresh dated `WSB_QA_REPORT`,optional `WSB_QA_IMAGES`,default guarded4211server or explicit `WSB_QA_BASE`. Tests75renders/85geometry/20tablecases across390/768/1024/1280/1440:target computedSI/US/large/reset,12rows/5columns,rightmost/keyboardscroll,copy,stale/invalid/recovery plusStorage/pressure/TDH/TSS/stabilization/Finder controls. Exact-six-hostblocker before first navigation,completed0. Desktopprint checks onlycurrent table/hook/media,notnativeOS/PDFpagination/universallegacyinputpacket. `rainwater-result-table-release-qa.mjs --scope-only` protects112HTML/38otherassets/12machine-navigation-generator-package sources andpermits onlytargetpanelminimum+tablewrapper;normalmode addsactualdomain/source/bot/docs404 probes. Baseline5353794is fixed historical scope,not a generic future-releaseguard. Full original runner still checks112initialpages×5 andall59defaults at1280;it didnotpreviouslycover this older simulator'scomputed390pxstate. Keep dedicatedregression. Usefullrunner `WSB_QA_DATE=2026-11-24` withnewreport/images andseparate4207server toavoid sharedcounterreset. No newmathfixtures;912priorchecks unchanged. UnshippedStoragefeatureQA/104assertions are not delivered tests.
+
 ## November19 shared result invalidation
 
 Only production change is two form-scoped input/change listeners in `setupForm`,using existing clear/disable behavior. No formula/HTML/CSS/sitemap change.59tool routes consume this dependency through25modules;some already had their own invalidation. `verify-result-invalidation.mjs` has54 literal lifecycle/isolation assertions,912total with858existing. `--baseline` intentionally fails against the pre-fix helper to establish the regression;normal mode must pass. The test double is not native UI proof.

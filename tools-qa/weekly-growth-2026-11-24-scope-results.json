@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-24",
+  "checkedAt": "2026-11-24T05:13:49.423Z",
+  "baseline": "5353794e9414ef54ec5991d8529136e6bc7896e7",
+  "expectedRelease": null,
+  "scope": {
+    "unchangedPublicHtml": 112,
+    "unchangedOtherAssets": 38,
+    "exactHomepageAndFiveBadges": true,
+    "unchangedMachineNavigationGeneratorAndPackage": 12,
+    "onlyTargetPanelMinimumAndMonthlyTableWrapper": true,
+    "pureEngineByteIdentical": true,
+    "baselineRedFixedGreenWrapper": true
+  },
+  "checks": [],
+  "analyticsExecuted": 0,
+  "complete": true,
+  "productionNotChecked": true
+}

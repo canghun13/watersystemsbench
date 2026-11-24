@@ -1,0 +1,19 @@
+# Rainwater Simulator mobile result-table correction — November 24, 2026
+
+## Preimplementation decision: FIX
+
+Target: `/tools/rainwater-tank-days-of-supply-simulator/`, existing annual rainwater storage model, not the October30 rainfall-record tools. Control: existing Storage Planner on the unchanged production deployment. Start `5353794e9414ef54ec5991d8529136e6bc7896e7`.
+
+Reproduction: real Chrome157.0.8103.79, navigate at390px and run the default simulator. Initial document overflow0px; after calculation34px, input panel right423.609px and table right404.422px. Default reliability100%. Storage control stays0px overflow and3,200L. Both at1280px have0px document overflow. Reproduced independently on actual production after observing the same local failure. Analytics4intercepted/0completed. Evidence: `tools-qa/weekly-growth-2026-11-24-rainwater-baseline-results.json`; actual390px result screenshot inspected outsideGit.
+
+Root: the monthly five-column comparison table is inserted directly into the supporting list, without an overflow owner. Its intrinsic width contributes to the single `1fr` grid track's automatic minimum after calculation, widening both result and input panels. Hiding document overflow would clip data. Scope: target renderer only; pure `simulateRainwater` and all other helpers/HTML/CSS/generator/math remain unchanged. Previous full runner checks every page's initial layout and all defaults at1280, but does not check this older simulator's computed390px result. Historical passes did not cover the failing state.
+
+Minimal correction: let this target's result panel shrink with `min-width:0`, set only by its renderer, and reuse the existing `.table-scroll` pattern with a focusable, accessibly named region and an appropriate five-column minimum width. A wrapper alone still propagates the grid automatic minimum, so both constraints are required. Preserve the12monthly rows, displayed values, headings, units, copy/reset/unit behaviors and mathematical engine byte-for-byte. Verify actual keyboard/touch-compatible local scrolling and rightmost column access, not a hidden overflow workaround. No CSS-file edits, URLs, review dates, title/description changes, sitemap dates, generator or navigation modifications. Exact five-badge homepage unchanged.
+
+Priority A supersedes the provisional Storage refill-window feature. All unshipped feature changes were removed with scoped patches; its design contract is explicitly deferred. Final classification is **FIX — Rainwater Simulator mobile monthly table widened the page**. No new cluster or shipped Storage mode. No new expansion funnel/NO-GO conclusion.
+
+## Verification contract
+
+Record baseline-red before changing target renderer; final fixed local and actual-domain results at390/768/1024/1280/1440. Target initial/default/SI-US/reset/edited-stale/invalid-recovery/copy and rightmost scroll positions; normal and large-but-valid displayed numbers. Storage/pressure/TDH/TSS/Finder/stabilization controls. Check actual screenshots, header/H1, horizontal document overflow0, controls withinviewport,12rows/allfivecolumns retained, lastcolumnaccessible, focusedregion, console/network/errors, exact-six-host Analyticscompleted0. Print hook/media checked only to ensure current target table remains rendered at desktopprint; do not claim nativeOSdialog/PDFpagination or redesign its legacy input-record packet. No formula change, rerun912 existing assertions,112static/navigation/publication/Analytics, protected-source parity and fresh full initial/default/unit regression because prior reports missed this state. Add dedicated regression for this computed monthly table rather than claiming the old full runner covered it.
+
+Commit/push main, exact-SHA Pages, actual-domain source/canonical/GA4/redirect/bot/docs404, production five-width browser, complete handover and finalrefs0/0clean. Raw attachments remain local and unchanged; no uploads/install/reset.
