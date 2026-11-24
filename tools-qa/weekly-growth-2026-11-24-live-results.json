@@ -1,0 +1,204 @@
+{
+  "date": "2026-11-24",
+  "checkedAt": "2026-11-24T07:34:26.656Z",
+  "baseline": "5353794e9414ef54ec5991d8529136e6bc7896e7",
+  "expectedRelease": "e84958f5e587bdd015f693a4d04e30344ef7389c",
+  "scope": {
+    "unchangedPublicHtml": 112,
+    "unchangedOtherAssets": 38,
+    "exactHomepageAndFiveBadges": true,
+    "unchangedMachineNavigationGeneratorAndPackage": 12,
+    "onlyTargetPanelMinimumAndMonthlyTableWrapper": true,
+    "pureEngineByteIdentical": true,
+    "baselineRedFixedGreenWrapper": true
+  },
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "sha256": "751c1649c39ada56e1868947d1817dc44c1358a76cef31ad631e70bb20b92f1e"
+    },
+    {
+      "path": "/tools/",
+      "status": 200,
+      "sha256": "00f81a8f3e2054185518a4bf57b1e8dbd333c5db7df1b0d8aed1abc28b4de64b"
+    },
+    {
+      "path": "/tools/rainwater-tank-days-of-supply-simulator/",
+      "status": 200,
+      "sha256": "bb02dab0ceba3e1aa25055a700075c6e627c065fb91218a85d9018c74a4cf55d"
+    },
+    {
+      "path": "/tools/water-storage-tank-sizing-planner/",
+      "status": 200,
+      "sha256": "2954d6a3f797210086a336e121a5373dfb72de3bafde08df5db0fddc47dfa156"
+    },
+    {
+      "path": "/tools/pressure-tank-sizing-calculator/",
+      "status": 200,
+      "sha256": "4112a39bae1de7d128bd1eb1676a97f139971f7d7a9f57aa3382b8bd8e4320f4"
+    },
+    {
+      "path": "/tools/total-dynamic-head-calculator/",
+      "status": 200,
+      "sha256": "21024ba01fbed0668e581c8b48cb67fe68a924329d21a99eb0160364727aca30"
+    },
+    {
+      "path": "/tools/tss-vss-gravimetric-calculator/",
+      "status": 200,
+      "sha256": "5f08e84986aeb5c84fd1da3193235064267aacc30e006d428c133c07a5208d6d"
+    },
+    {
+      "path": "/tools/matrix-spike-recovery-calculator/",
+      "status": 200,
+      "sha256": "d6a0049f6fc20859295974f90ba22714cc2dd8c10518348c5442e0d206f84351"
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "status": 200,
+      "sha256": "0119a620d34f4b0669b1dc0fb5358b6f7136ad1856e0c1dd4ae21ac52167dfe5"
+    },
+    {
+      "path": "/systems/rainfall-records-gauge-networks/",
+      "status": 200,
+      "sha256": "6a2b8c8a6a5e99e3f78a2699910fd332fa34141b919a9d6c809144432cac085a"
+    },
+    {
+      "path": "/tools/pump-short-cycling-analyzer/",
+      "status": 200,
+      "sha256": "eb8d26fd75ec07622a9dc3d99076f7af75ef70e9e9f1ffa66822b1bc1fd6856a"
+    },
+    {
+      "path": "/tools/vehicle-wash-reclaim-savings-calculator/",
+      "status": 200,
+      "sha256": "64807e1f72e100b002b7467f9173c61ea4e933f6ce0ae8394e1faee1d664df05"
+    },
+    {
+      "path": "/tools/ro-production-demand-planner/",
+      "status": 200,
+      "sha256": "d4948a51509d057964fcebcf876f099e10936923a65a7885c925a43f20835ad3"
+    },
+    {
+      "path": "/guides/complete-well-water-system-planning/",
+      "status": 200,
+      "sha256": "840bd8bd7ae252f35170b2c4263cc919a27c6cfb1d6728fc35c00092c8962cb9"
+    },
+    {
+      "path": "/assets/js/tools/rainwater-simulator.js",
+      "status": 200,
+      "sha256": "c785b8efce8b6bc3e18452aac16f583a021eeb70a0e9e3a5b169c0c6f57124b1"
+    },
+    {
+      "path": "/assets/js/tools/storage-tank-sizing.js",
+      "status": 200,
+      "sha256": "37bfae1ec40b5d45062b856ddf1a5fead7eda9d3ba18bf6b514d10d436df6df3"
+    },
+    {
+      "path": "/assets/js/form-utils.js",
+      "status": 200,
+      "sha256": "af26e523873bae823205b0dd00888386e9b9e031706fa7da8cf63c8aae4f2cd4"
+    },
+    {
+      "path": "/assets/css/calculator.css",
+      "status": 200,
+      "sha256": "1c5ebf531433909e4b55c863f321025f8ba6e8fa67ba5978e1d7b99dbede0d09"
+    },
+    {
+      "path": "/assets/css/content.css",
+      "status": 200,
+      "sha256": "fea50550d97179452b829e6181626427a9eebf7bccef7adecd3ec9ecae2403a8"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "sha256": "462549bc3ae717a6f2aaa3f0b8a27bc84411a2e82c0bb023ff4a906fe04eb238"
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "sha256": "cd1297b5802fa103eecc971a7640e8b0066ce1385750940c67ad8ed465afdb42"
+    },
+    {
+      "path": "/tools/rainwater-tank-days-of-supply-simulator/",
+      "status": 200,
+      "sha256": "bb02dab0ceba3e1aa25055a700075c6e627c065fb91218a85d9018c74a4cf55d"
+    },
+    {
+      "path": "/tools/rainwater-tank-days-of-supply-simulator/",
+      "status": 200,
+      "sha256": "bb02dab0ceba3e1aa25055a700075c6e627c065fb91218a85d9018c74a4cf55d"
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "status": 200,
+      "sha256": "0119a620d34f4b0669b1dc0fb5358b6f7136ad1856e0c1dd4ae21ac52167dfe5"
+    },
+    {
+      "path": "/tools/groundwater-stabilization-log-analyzer/",
+      "status": 200,
+      "sha256": "0119a620d34f4b0669b1dc0fb5358b6f7136ad1856e0c1dd4ae21ac52167dfe5"
+    },
+    {
+      "path": "http://watersystemsbench.com/",
+      "status": 301,
+      "sha256": "6aaad3365c30c4f8d2504e569527e588d33eeae66dd7045bcfeef7413820db2a"
+    },
+    {
+      "path": "/docs/",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/docs/page-inventory.html",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/docs/information-architecture.html",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/docs/project-plan.html",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/docs/weekly-growth-review-2026-11-24.html",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/docs/weekly-growth-review-2026-11-24.md",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/docs/rainwater-result-table-fix-2026-11-24.html",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/docs/storage-refill-window-upgrade-2026-11-24.md",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/handover.html",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/tools-qa/rainwater-result-table-browser-qa.mjs",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "/package.json",
+      "status": 404,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    }
+  ],
+  "analyticsExecuted": 0,
+  "complete": true
+}

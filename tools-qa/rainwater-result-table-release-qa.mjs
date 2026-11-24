@@ -7,7 +7,7 @@ const hash=t=>createHash('sha256').update(t.replace(/\r\n/g,'\n')).digest('hex')
 const git=args=>execFileSync('git',['-c','core.safecrlf=false',...args],{encoding:'utf8',maxBuffer:4*1024*1024});
 const output=process.env.WSB_QA_REPORT;assert.ok(output,'Set a new report path.');
 const report={date:'2026-11-24',checkedAt:new Date().toISOString(),baseline,expectedRelease:process.env.WSB_QA_SHA||null,scope:{},checks:[],analyticsExecuted:0,complete:false};
-async function get(p,opts={}){const r=await fetch(p.startsWith('http')?p:domain+p,{signal:AbortSignal.timeout(25000),...opts});const body=await r.text();report.checks.push({path:p,status:r.status,sha256:hash(body)});return{r,body};}
+async function get(p,opts={}){await new Promise(resolve=>setTimeout(resolve,350));const r=await fetch(p.startsWith('http')?p:domain+p,{signal:AbortSignal.timeout(25000),...opts});const body=await r.text();report.checks.push({path:p,status:r.status,sha256:hash(body)});return{r,body};}
 async function parity(p){const v=await get(p);assert.equal(v.r.status,200,p);const f=p==='/'?'index.html':p.endsWith('/')?p.slice(1)+'index.html':p.slice(1);assert.equal(hash(v.body),hash(await readFile(f,'utf8')),p+' parity');return v;}
 try{
  const files=git(['ls-tree','-r','--name-only',baseline]).trim().split(/\r?\n/);

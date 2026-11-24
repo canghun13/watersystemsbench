@@ -1,0 +1,273 @@
+{
+  "date": "2026-11-24",
+  "checkedAt": "2026-11-24T07:33:53.818Z",
+  "purpose": "Separate observed GitHub/Varnish 503 error pages from excluded-document exposure; retain every response",
+  "checks": [
+    {
+      "path": "/docs/",
+      "method": "GET",
+      "status": 404,
+      "server": "GitHub.com",
+      "title": "Page not found &middot; GitHub Pages",
+      "containsInternalReview": false
+    },
+    {
+      "path": "/docs/",
+      "method": "HEAD",
+      "status": 404,
+      "server": "GitHub.com",
+      "title": null,
+      "containsInternalReview": false
+    },
+    {
+      "path": "/docs/",
+      "method": "GET",
+      "status": 404,
+      "server": "GitHub.com",
+      "title": "Page not found &middot; GitHub Pages",
+      "containsInternalReview": false
+    },
+    {
+      "path": "/docs/page-inventory.html",
+      "method": "GET",
+      "status": 404,
+      "server": "GitHub.com",
+      "title": "Page not found &middot; GitHub Pages",
+      "containsInternalReview": false
+    },
+    {
+      "path": "/docs/page-inventory.html",
+      "method": "HEAD",
+      "status": 404,
+      "server": "GitHub.com",
+      "title": null,
+      "containsInternalReview": false
+    },
+    {
+      "path": "/docs/page-inventory.html",
+      "method": "GET",
+      "status": 404,
+      "server": "GitHub.com",
+      "title": "Page not found &middot; GitHub Pages",
+      "containsInternalReview": false
+    },
+    {
+      "path": "/docs/information-architecture.html",
+      "method": "GET",
+      "status": 404,
+      "server": "GitHub.com",
+      "title": "Page not found &middot; GitHub Pages",
+      "containsInternalReview": false
+    },
+    {
+      "path": "/docs/information-architecture.html",
+      "method": "HEAD",
+      "status": 404,
+      "server": "GitHub.com",
+      "title": null,
+      "containsInternalReview": false
+    },
+    {
+      "path": "/docs/information-architecture.html",
+      "method": "GET",
+      "status": 404,
+      "server": "GitHub.com",
+      "title": "Page not found &middot; GitHub Pages",
+      "containsInternalReview": false
+    },
+    {
+      "path": "/docs/project-plan.html",
+      "method": "GET",
+      "status": 404,
+      "server": "GitHub.com",
+      "title": "Page not found &middot; GitHub Pages",
+      "containsInternalReview": false
+    },
+    {
+      "path": "/docs/project-plan.html",
+      "method": "HEAD",
+      "status": 404,
+      "server": "GitHub.com",
+      "title": null,
+      "containsInternalReview": false
+    },
+    {
+      "path": "/docs/project-plan.html",
+      "method": "GET",
+      "status": 404,
+      "server": "GitHub.com",
+      "title": "Page not found &middot; GitHub Pages",
+      "containsInternalReview": false
+    },
+    {
+      "path": "/docs/weekly-growth-review-2026-11-24.html",
+      "method": "GET",
+      "status": 404,
+      "server": "GitHub.com",
+      "title": "Page not found &middot; GitHub Pages",
+      "containsInternalReview": false
+    },
+    {
+      "path": "/docs/weekly-growth-review-2026-11-24.html",
+      "method": "HEAD",
+      "status": 404,
+      "server": "GitHub.com",
+      "title": null,
+      "containsInternalReview": false
+    },
+    {
+      "path": "/docs/weekly-growth-review-2026-11-24.html",
+      "method": "GET",
+      "status": 404,
+      "server": "GitHub.com",
+      "title": "Page not found &middot; GitHub Pages",
+      "containsInternalReview": false
+    },
+    {
+      "path": "/docs/weekly-growth-review-2026-11-24.md",
+      "method": "GET",
+      "status": 404,
+      "server": "GitHub.com",
+      "title": "Page not found &middot; GitHub Pages",
+      "containsInternalReview": false
+    },
+    {
+      "path": "/docs/weekly-growth-review-2026-11-24.md",
+      "method": "HEAD",
+      "status": 404,
+      "server": "GitHub.com",
+      "title": null,
+      "containsInternalReview": false
+    },
+    {
+      "path": "/docs/weekly-growth-review-2026-11-24.md",
+      "method": "GET",
+      "status": 404,
+      "server": "GitHub.com",
+      "title": "Page not found &middot; GitHub Pages",
+      "containsInternalReview": false
+    },
+    {
+      "path": "/docs/rainwater-result-table-fix-2026-11-24.html",
+      "method": "GET",
+      "status": 404,
+      "server": "GitHub.com",
+      "title": "Page not found &middot; GitHub Pages",
+      "containsInternalReview": false
+    },
+    {
+      "path": "/docs/rainwater-result-table-fix-2026-11-24.html",
+      "method": "HEAD",
+      "status": 404,
+      "server": "GitHub.com",
+      "title": null,
+      "containsInternalReview": false
+    },
+    {
+      "path": "/docs/rainwater-result-table-fix-2026-11-24.html",
+      "method": "GET",
+      "status": 404,
+      "server": "GitHub.com",
+      "title": "Page not found &middot; GitHub Pages",
+      "containsInternalReview": false
+    },
+    {
+      "path": "/docs/storage-refill-window-upgrade-2026-11-24.md",
+      "method": "GET",
+      "status": 404,
+      "server": "GitHub.com",
+      "title": "Page not found &middot; GitHub Pages",
+      "containsInternalReview": false
+    },
+    {
+      "path": "/docs/storage-refill-window-upgrade-2026-11-24.md",
+      "method": "HEAD",
+      "status": 404,
+      "server": "GitHub.com",
+      "title": null,
+      "containsInternalReview": false
+    },
+    {
+      "path": "/docs/storage-refill-window-upgrade-2026-11-24.md",
+      "method": "GET",
+      "status": 404,
+      "server": "GitHub.com",
+      "title": "Page not found &middot; GitHub Pages",
+      "containsInternalReview": false
+    },
+    {
+      "path": "/handover.html",
+      "method": "GET",
+      "status": 404,
+      "server": "GitHub.com",
+      "title": "Page not found &middot; GitHub Pages",
+      "containsInternalReview": false
+    },
+    {
+      "path": "/handover.html",
+      "method": "HEAD",
+      "status": 404,
+      "server": "GitHub.com",
+      "title": null,
+      "containsInternalReview": false
+    },
+    {
+      "path": "/handover.html",
+      "method": "GET",
+      "status": 404,
+      "server": "GitHub.com",
+      "title": "Page not found &middot; GitHub Pages",
+      "containsInternalReview": false
+    },
+    {
+      "path": "/tools-qa/rainwater-result-table-browser-qa.mjs",
+      "method": "GET",
+      "status": 404,
+      "server": "GitHub.com",
+      "title": "Page not found &middot; GitHub Pages",
+      "containsInternalReview": false
+    },
+    {
+      "path": "/tools-qa/rainwater-result-table-browser-qa.mjs",
+      "method": "HEAD",
+      "status": 404,
+      "server": "GitHub.com",
+      "title": null,
+      "containsInternalReview": false
+    },
+    {
+      "path": "/tools-qa/rainwater-result-table-browser-qa.mjs",
+      "method": "GET",
+      "status": 404,
+      "server": "GitHub.com",
+      "title": "Page not found &middot; GitHub Pages",
+      "containsInternalReview": false
+    },
+    {
+      "path": "/package.json",
+      "method": "GET",
+      "status": 404,
+      "server": "GitHub.com",
+      "title": "Page not found &middot; GitHub Pages",
+      "containsInternalReview": false
+    },
+    {
+      "path": "/package.json",
+      "method": "HEAD",
+      "status": 404,
+      "server": "GitHub.com",
+      "title": null,
+      "containsInternalReview": false
+    },
+    {
+      "path": "/package.json",
+      "method": "GET",
+      "status": 404,
+      "server": "GitHub.com",
+      "title": "Page not found &middot; GitHub Pages",
+      "containsInternalReview": false
+    }
+  ],
+  "complete": true,
+  "allFinalGets404": true
+}

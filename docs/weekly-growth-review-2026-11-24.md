@@ -85,9 +85,17 @@ Final local Chrome157.0.8103.79 dedicated run passes75renders/85geometry/20table
 
 Final full local run independently passes560renders(112×5),59defaults/59resets/46SI-US switches,615geometry/165tablechecks/39interaction entries/83screenshots,159source fingerprints stable,all4error lists empty. Separate guarded4207server Analytics617intercepted/0completed;dedicated4211counter75/0notcombined/inferred. Fullsuite's original initial/default scope is supplemented by the new dedicated computed-mobile regression. First aborted full run was stopped before final renderer stabilization;onlycompleted final-source evidence is delivered. Both own QAservers stopped. Evidence:`tools-qa/weekly-growth-2026-11-24-{baseline,rainwater-baseline,scope,local,full-local}-results.json`. Sourceattachments rehashed unchanged at end of analysis. Implementation push/exact-SHA Pages/production verification follow.
 
+Final production Chrome157.0.8103.79 independently passes75renders/85geometry/20tablecases/5grouped interaction records/18screenshots,9source hashes stable,all4error lists empty,Analytics75intercepted/0completed. Same computed target/default/SI-US/native reset/large number/invalid recovery/stale/copy/keyboard/rightmost cases andprotectedcontrols pass atall5widths. Actual production390/768/1024/1280/1440screenshots inspected. Production evidence:`tools-qa/weekly-growth-2026-11-24-production-results.json`. This is not a production560-render claim;full560matrix is local. No search or indexing lift attributed to this release.
+
 ## 12. Deployment
 
-Pending completion of final-source QA,push/exact-SHA Pages/production verification. Do not read this predeployment checkpoint as a completed release. Completed evidence will be appended before handoff.
+Implementation `e84958f5e587bdd015f693a4d04e30344ef7389c` pushed to main andmatched actualremote. Exact-SHA [Pages45332098455](https://github.com/canghun13/watersystemsbench/actions/runs/45332098455) succeeded(APIupdated2026-11-24T05:16:42Z). Production browser75-case release completed above.
+
+Actual-domain strict release guard37non-executing requests passes:14publicHTML,7runtime/machine files,4normal/Googlebot,HTTP→HTTPSapex301 and11docs/development404. Source/canonical/indexpermission/GA4/protected scope pass. Evidence:`tools-qa/weekly-growth-2026-11-24-live-results.json`,expectedimplementationSHA recorded,Analytics execution0.
+
+Earlier boundary attempts observed503 GitHub/Varnish error pages on weekly-review.md,inventory.html andinformation-architecture.html,not internal document content. Follow-up normalGET/identifiedQA/HEAD checks returned404without anypublic code/configuration change. Separate11URL GET/HEAD/GET diagnostic33requests all404,allfinalGET404:`tools-qa/weekly-growth-2026-11-24-boundary-diagnostics-results.json`. Strictguard subsequently passes37checks;the only QA adaptation is350ms request spacing,not accepting503,changing expected404,rewritingdeployment or removingprobes. Exact upstream cause not established,andthis UI correction isnot claimed to fix provideravailability. Retain these earlier observations ratherthan describing every attempt aserror-free.
+
+Follow-up release-record commit changes only excluded documentation/QA evidence andprobe pacing. Its identity is the commit containing this completed record;public runtime remains the verifiedimplementation. Verify its ownexact-SHA Pages success,local/fetched/actual main equality,0/0andclean tree at handoff. Final strictguard runsoutsideGit toavoid self-referentialevidence commits. Noautomation/dependency/environment reset.
 
 ## 13. Next state
 
